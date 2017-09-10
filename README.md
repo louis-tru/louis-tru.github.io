@@ -1,5 +1,5 @@
 # louis-tru.github.io
 
-This is [`Avocado Wrbsite`] documents
+This is [`Avocado Website`] and Documents
 
 [`Avocado Website`]: http://avocadojs.org/
