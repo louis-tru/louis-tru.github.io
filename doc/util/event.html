@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/event.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-util-event">lib://util/event</a></span>
+<ul>
+<li>
+<span><a href="#class-notification">Class: Notification</a></span>
+<ul>
+<li>
+<span><a href="#notification-trigger-name-data-">Notification.trigger(name[,data])</a></span>
+</li>
+<li>
+<span><a href="#notification-trigger_with_event-name-event-">Notification.trigger_with_event(name,event)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-eventnoticer">Class: EventNoticer</a></span>
+<ul>
+<li>
+<span><a href="#eventnoticer-constructor-name-sender-">EventNoticer.constructor(name,sender)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-enable">EventNoticer.enable</a></span>
+</li>
+<li>
+<span><a href="#get-eventnoticer-name">Get: EventNoticer.name</a></span>
+</li>
+<li>
+<span><a href="#get-eventnoticer-sender">Get: EventNoticer.sender</a></span>
+</li>
+<li>
+<span><a href="#get-eventnoticer-length">Get: EventNoticer.length</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-on-listen-scope-id-">EventNoticer.on(listen[,scope[,id]])</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-once-listen-scope-id-">EventNoticer.once(listen[,scope[,id]])</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-on2-listen-scope-id-">EventNoticer.on2(listen[,scope[,id]])</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-once2-listen-scope-id-">EventNoticer.once2(listen[,scope[,id]])</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-trigger-data-">EventNoticer.trigger([data])</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-trigger_with_event-event-">EventNoticer.trigger_with_event(event)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-off-">EventNoticer.off()</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-off-id-">EventNoticer.off(id)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-off-scope-">EventNoticer.off(scope)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-off-listen-scope-">EventNoticer.off(listen[,scope])</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-event">Class: Event</a></span>
+<ul>
+<li>
+<span><a href="#event-constructor-data-">Event.constructor([data])</a></span>
+</li>
+<li>
+<span><a href="#get-event-name">Get: Event.name</a></span>
+</li>
+<li>
+<span><a href="#get-event-data">Get: Event.data</a></span>
+</li>
+<li>
+<span><a href="#get-event-sender">Get: Event.sender</a></span>
+</li>
+<li>
+<span><a href="#get-event-noticer">Get: Event.noticer</a></span>
+</li>
+<li>
+<span><a href="#event-return_value">Event.return_value</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#all_noticer-notification-">all_noticer(notification)</a></span>
+</li>
+<li>
+<span><a href="#off_noticer-notification-scope-">off_noticer(notification,scope)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-util-event">
+			<code>lib://util/event</code>
+			<span><a class="mark" href="#lib-util-event" id="lib-util-event">#</a></span>
+		</h1><h2 id="class-notification">
+			<code>Class: Notification</code>
+			<span><a class="mark" href="#class-notification" id="class-notification">#</a></span>
+		</h2><p>这是事件<code>EventNoticer</code>的集合，事件触发与响应中心</p>
+<p>继承于它的派生类型可以使用<code>event</code>关键字来声明成员事件</p>
+<h3 id="notification-trigger-name-data-">
+			Notification.trigger(name[,data])
+			<span><a class="mark" href="#notification-trigger-name-data-" id="notification-trigger-name-data-">#</a></span>
+		</h3><p>通过事件名称触发事件 --&gt; <a href="../util/event.html#eventnoticer-trigger-data-"><code>EventNoticer.trigger(data)</code></a></p>
+<h3 id="notification-trigger_with_event-name-event-">
+			Notification.trigger_with_event(name,event)
+			<span><a class="mark" href="#notification-trigger_with_event-name-event-" id="notification-trigger_with_event-name-event-">#</a></span>
+		</h3><p>通过名称与<a href="../util/event.html#class-event"><code>Event</code></a>触发事件 --&gt; <a href="../util/event.html#eventnoticer-trigger_with_event-event-"><code>EventNoticer.trigger_with_event(event)</code></a></p>
+<p>Example:</p>
+<pre><code class="undefinedjs">class TestNotification extends Notification {
+    event onchange; // 这里必须以on开始以;分号结束
+}
+
+var notification = new TestNotification();
+// Prints: response onchange 0 100
+notification.onchange = function(ev) { // add default listener
+    console.log(&#39;response onchange 0&#39;, ev.data)
+}
+notification.trigger_change(100);
+
+// Prints: 
+// response onchange 0 200
+// response onchange 1
+notification.onchange.on(function(ev) {
+    console.log(&#39;response onchange 1&#39;)    
+})
+notification.trigger_with_event(&#39;change&#39;, new Event(200));
+
+var noticer = notification.onchange;
+noticer.off(0) // delete default listener
+// Prints: response onchange 1
+notification.trigger_change();
+</code></pre>
+<h2 id="class-eventnoticer">
+			<code>Class: EventNoticer</code>
+			<span><a class="mark" href="#class-eventnoticer" id="class-eventnoticer">#</a></span>
+		</h2><p>事件通知者,事件监听器添加与删除、触发与通知都由它实现</p>
+<h3 id="eventnoticer-constructor-name-sender-">
+			EventNoticer.constructor(name,sender)
+			<span><a class="mark" href="#eventnoticer-constructor-name-sender-" id="eventnoticer-constructor-name-sender-">#</a></span>
+		</h3><ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>sender</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="eventnoticer-enable">
+			EventNoticer.enable
+			<span><a class="mark" href="#eventnoticer-enable" id="eventnoticer-enable">#</a></span>
+		</h3><p>事件是否启用,<code>noticer.enable=false</code>可禁用事件的发送,<strong>Default</strong> <code>true</code></p>
+<ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-eventnoticer-name">
+			Get: EventNoticer.name
+			<span><a class="mark" href="#get-eventnoticer-name" id="get-eventnoticer-name">#</a></span>
+		</h3><p>事件的名称</p>
+<ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="get-eventnoticer-sender">
+			Get: EventNoticer.sender
+			<span><a class="mark" href="#get-eventnoticer-sender" id="get-eventnoticer-sender">#</a></span>
+		</h3><p>返回初始化时的<code>sender</code>对像</p>
+<ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="get-eventnoticer-length">
+			Get: EventNoticer.length
+			<span><a class="mark" href="#get-eventnoticer-length" id="get-eventnoticer-length">#</a></span>
+		</h3><p>监听器数量</p>
+<ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="eventnoticer-on-listen-scope-id-">
+			EventNoticer.on(listen[,scope[,id]])
+			<span><a class="mark" href="#eventnoticer-on-listen-scope-id-" id="eventnoticer-on-listen-scope-id-">#</a></span>
+		</h3><p>添加监听器函数,并指定scope<code>this</code></p>
+<ul>
+<li>@arg <code>func</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}        监听器函数</li>
+<li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}        范围<code>this</code>对像</li>
+<li>@arg <code>[id]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}                    指定一个<code>id</code>,如果不指定自动生成一个,如果指定的<code>id</code>已经存在会替换之前的监听器</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return <code>id</code>        返回传入的<code>id</code>或自动生成的<code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var scope = { a:100 }
+var id = util.onuncaught_exception.on(function(ev) {
+// Prints: 100
+    console.log(this.a)
+}, scope)
+// 替换监听器
+util.onuncaught_exception.on(function(ev) {
+// Prints: replace 100
+    console.log(&#39;replace&#39;, this.a)
+}, scope, id)
+</code></pre>
+<h3 id="eventnoticer-once-listen-scope-id-">
+			EventNoticer.once(listen[,scope[,id]])
+			<span><a class="mark" href="#eventnoticer-once-listen-scope-id-" id="eventnoticer-once-listen-scope-id-">#</a></span>
+		</h3><p>添加监听器函数,并指定scope<code>this</code>,只监听一次</p>
+<h3 id="eventnoticer-on2-listen-scope-id-">
+			EventNoticer.on2(listen[,scope[,id]])
+			<span><a class="mark" href="#eventnoticer-on2-listen-scope-id-" id="eventnoticer-on2-listen-scope-id-">#</a></span>
+		</h3><p>添加监听器函数,并指定scope<code>this</code>,与<code>on()</code>仅回调参数不相同</p>
+<p>Example:</p>
+<pre><code class="undefinedjs">var scope = { a:100 }
+var id = util.onuncaught_exception.on2(function(scope, ev) {
+// Prints: 100
+    console.log(scope.a)
+}, scope)
+</code></pre>
+<h3 id="eventnoticer-once2-listen-scope-id-">
+			EventNoticer.once2(listen[,scope[,id]])
+			<span><a class="mark" href="#eventnoticer-once2-listen-scope-id-" id="eventnoticer-once2-listen-scope-id-">#</a></span>
+		</h3><p>添加监听器函数,并指定scope<code>this</code>,只监听一次</p>
+<h3 id="eventnoticer-trigger-data-">
+			EventNoticer.trigger([data])
+			<span><a class="mark" href="#eventnoticer-trigger-data-" id="eventnoticer-trigger-data-">#</a></span>
+		</h3><p>触发事件数据,并发送数据</p>
+<ul>
+<li>@arg <code>[data]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return <a href="../util/event.html#event-return_value"><code>Event.return_value</code></a></li>
+</ul>
+<h3 id="eventnoticer-trigger_with_event-event-">
+			EventNoticer.trigger_with_event(event)
+			<span><a class="mark" href="#eventnoticer-trigger_with_event-event-" id="eventnoticer-trigger_with_event-event-">#</a></span>
+		</h3><p>通过<a href="../util/event.html#class-event"><code>Event</code></a>触发事件</p>
+<ul>
+<li>@arg <code>event</code> {<a href="../util/event.html#class-event"><code>Event</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return <a href="../util/event.html#event-return_value"><code>Event.return_value</code></a></li>
+</ul>
+<h3 id="eventnoticer-off-">
+			EventNoticer.off()
+			<span><a class="mark" href="#eventnoticer-off-" id="eventnoticer-off-">#</a></span>
+		</h3><p>删除所有监听器</p>
+<h3 id="eventnoticer-off-id-">
+			EventNoticer.off(id)
+			<span><a class="mark" href="#eventnoticer-off-id-" id="eventnoticer-off-id-">#</a></span>
+		</h3><p>通过<code>id</code>删除监听器</p>
+<ul>
+<li>@arg <code>id</code>  {<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+</ul>
+<h3 id="eventnoticer-off-scope-">
+			EventNoticer.off(scope)
+			<span><a class="mark" href="#eventnoticer-off-scope-" id="eventnoticer-off-scope-">#</a></span>
+		</h3><p>通过<code>scope</code>删除一个监听器</p>
+<ul>
+<li>@arg <code>scope</code>  {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="eventnoticer-off-listen-scope-">
+			EventNoticer.off(listen[,scope])
+			<span><a class="mark" href="#eventnoticer-off-listen-scope-" id="eventnoticer-off-listen-scope-">#</a></span>
+		</h3><p>通过<code>listen</code>函数与<code>scope</code>删除一个监听器</p>
+<ul>
+<li>@arg <code>listen</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@arg [<code>scope</code>]  {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h2 id="class-event">
+			<code>Class: Event</code>
+			<span><a class="mark" href="#class-event" id="class-event">#</a></span>
+		</h2><p>事件数据上下文</p>
+<h3 id="event-constructor-data-">
+			Event.constructor([data])
+			<span><a class="mark" href="#event-constructor-data-" id="event-constructor-data-">#</a></span>
+		</h3><ul>
+<li>@arg <code>[data]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="get-event-name">
+			Get: Event.name
+			<span><a class="mark" href="#get-event-name" id="get-event-name">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="get-event-data">
+			Get: Event.data
+			<span><a class="mark" href="#get-event-data" id="get-event-data">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="get-event-sender">
+			Get: Event.sender
+			<span><a class="mark" href="#get-event-sender" id="get-event-sender">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="get-event-noticer">
+			Get: Event.noticer
+			<span><a class="mark" href="#get-event-noticer" id="get-event-noticer">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/event.html#class-eventnoticer"><code>EventNoticer</code></a>}</li>
+</ul>
+<h3 id="event-return_value">
+			Event.return_value
+			<span><a class="mark" href="#event-return_value" id="event-return_value">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+</ul>
+<h2 id="all_noticer-notification-">
+			all_noticer(notification)
+			<span><a class="mark" href="#all_noticer-notification-" id="all_noticer-notification-">#</a></span>
+		</h2><p>获取<code>notification</code>上的所有<a href="../util/event.html#class-eventnoticer"><code>EventNoticer</code></a></p>
+<ul>
+<li>@arg <code>notification</code> {<a href="../util/event.html#class-notification"><code>Notification</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} 返回内容为<a href="../util/event.html#class-eventnoticer"><code>EventNoticer</code></a>的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a></li>
+</ul>
+<h2 id="off_noticer-notification-scope-">
+			off_noticer(notification,scope)
+			<span><a class="mark" href="#off_noticer-notification-scope-" id="off_noticer-notification-scope-">#</a></span>
+		</h2><p>卸载<code>notification</code>上所有与<code>scope</code>相关的侦听器</p>
+<p>实际上遍历调用了<a href="../util/event.html#eventnoticer-off-scope-"><code>EventNoticer.off(scope)</code></a>方法</p>
+<ul>
+<li>@arg <code>notification</code> {<a href="../util/event.html#class-notification"><code>Notification</code></a>}</li>
+<li>@arg <code>scope</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

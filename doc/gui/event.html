@@ -1,0 +1,1441 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'gui/event.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-gui-event">lib://gui/event</a></span>
+<ul>
+<li>
+<span><a href="#enum-highlightedstatus">Enum: HighlightedStatus</a></span>
+<ul>
+<li>
+<span><a href="#highlighted_normal">HIGHLIGHTED_NORMAL</a></span>
+</li>
+<li>
+<span><a href="#highlighted_hover">HIGHLIGHTED_HOVER</a></span>
+</li>
+<li>
+<span><a href="#highlighted_down">HIGHLIGHTED_DOWN</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-returnvaluemask">Enum: ReturnValueMask</a></span>
+<ul>
+<li>
+<span><a href="#return_value_mask_default-1-0-">RETURN_VALUE_MASK_DEFAULT = (1<<0)</a></span>
+</li>
+<li>
+<span><a href="#return_value_mask_bubble-1-1-">RETURN_VALUE_MASK_BUBBLE = (1<<1)</a></span>
+</li>
+<li>
+<span><a href="#return_value_mask_all">RETURN_VALUE_MASK_ALL</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#emun-keyboardkeyname">Emun: KeyboardKeyName</a></span>
+<ul>
+<li>
+<span><a href="#keycode_unknown-0">KEYCODE_UNKNOWN          = 0</a></span>
+</li>
+<li>
+<span><a href="#keycode_mouse_left-1">KEYCODE_MOUSE_LEFT       = 1</a></span>
+</li>
+<li>
+<span><a href="#keycode_mouse_center-2">KEYCODE_MOUSE_CENTER     = 2</a></span>
+</li>
+<li>
+<span><a href="#keycode_mouse_right-3">KEYCODE_MOUSE_RIGHT      = 3</a></span>
+</li>
+<li>
+<span><a href="#keycode_back_space-8">KEYCODE_BACK_SPACE       = 8</a></span>
+</li>
+<li>
+<span><a href="#keycode_tab-9">KEYCODE_TAB              = 9</a></span>
+</li>
+<li>
+<span><a href="#keycode_clear-12">KEYCODE_CLEAR            = 12</a></span>
+</li>
+<li>
+<span><a href="#keycode_enter-13">KEYCODE_ENTER            = 13</a></span>
+</li>
+<li>
+<span><a href="#keycode_shift-16">KEYCODE_SHIFT            = 16</a></span>
+</li>
+<li>
+<span><a href="#keycode_ctrl-17">KEYCODE_CTRL             = 17</a></span>
+</li>
+<li>
+<span><a href="#keycode_alt-18">KEYCODE_ALT              = 18</a></span>
+</li>
+<li>
+<span><a href="#keycode_caps_lock-20">KEYCODE_CAPS_LOCK        = 20</a></span>
+</li>
+<li>
+<span><a href="#keycode_esc-27">KEYCODE_ESC              = 27</a></span>
+</li>
+<li>
+<span><a href="#keycode_space-32">KEYCODE_SPACE            = 32</a></span>
+</li>
+<li>
+<span><a href="#keycode_command-91">KEYCODE_COMMAND          = 91</a></span>
+</li>
+<li>
+<span><a href="#keycode_left-37">KEYCODE_LEFT             = 37</a></span>
+</li>
+<li>
+<span><a href="#keycode_up-38">KEYCODE_UP               = 38</a></span>
+</li>
+<li>
+<span><a href="#keycode_right-39">KEYCODE_RIGHT            = 39</a></span>
+</li>
+<li>
+<span><a href="#keycode_down-40">KEYCODE_DOWN             = 40</a></span>
+</li>
+<li>
+<span><a href="#keycode_insert-45">KEYCODE_INSERT           = 45</a></span>
+</li>
+<li>
+<span><a href="#keycode_delete-46">KEYCODE_DELETE           = 46</a></span>
+</li>
+<li>
+<span><a href="#keycode_page_up-33">KEYCODE_PAGE_UP          = 33</a></span>
+</li>
+<li>
+<span><a href="#keycode_page_down-34">KEYCODE_PAGE_DOWN        = 34</a></span>
+</li>
+<li>
+<span><a href="#keycode_move_end-35">KEYCODE_MOVE_END         = 35</a></span>
+</li>
+<li>
+<span><a href="#keycode_move_home-36">KEYCODE_MOVE_HOME        = 36</a></span>
+</li>
+<li>
+<span><a href="#keycode_scroll_lock-145">KEYCODE_SCROLL_LOCK      = 145</a></span>
+</li>
+<li>
+<span><a href="#keycode_break-19">KEYCODE_BREAK            = 19</a></span>
+</li>
+<li>
+<span><a href="#keycode_sysrq-124">KEYCODE_SYSRQ            = 124</a></span>
+</li>
+<li>
+<span><a href="#keycode_0-48">KEYCODE_0                = 48</a></span>
+</li>
+<li>
+<span><a href="#keycode_1-49">KEYCODE_1                = 49</a></span>
+</li>
+<li>
+<span><a href="#keycode_2-50">KEYCODE_2                = 50</a></span>
+</li>
+<li>
+<span><a href="#keycode_3-51">KEYCODE_3                = 51</a></span>
+</li>
+<li>
+<span><a href="#keycode_4-52">KEYCODE_4                = 52</a></span>
+</li>
+<li>
+<span><a href="#keycode_5-53">KEYCODE_5                = 53</a></span>
+</li>
+<li>
+<span><a href="#keycode_6-54">KEYCODE_6                = 54</a></span>
+</li>
+<li>
+<span><a href="#keycode_7-55">KEYCODE_7                = 55</a></span>
+</li>
+<li>
+<span><a href="#keycode_8-56">KEYCODE_8                = 56</a></span>
+</li>
+<li>
+<span><a href="#keycode_9-57">KEYCODE_9                = 57</a></span>
+</li>
+<li>
+<span><a href="#keycode_a-65">KEYCODE_A                = 65</a></span>
+</li>
+<li>
+<span><a href="#keycode_b-66">KEYCODE_B                = 66</a></span>
+</li>
+<li>
+<span><a href="#keycode_c-67">KEYCODE_C                = 67</a></span>
+</li>
+<li>
+<span><a href="#keycode_d-68">KEYCODE_D                = 68</a></span>
+</li>
+<li>
+<span><a href="#keycode_e-69">KEYCODE_E                = 69</a></span>
+</li>
+<li>
+<span><a href="#keycode_f-70">KEYCODE_F                = 70</a></span>
+</li>
+<li>
+<span><a href="#keycode_g-71">KEYCODE_G                = 71</a></span>
+</li>
+<li>
+<span><a href="#keycode_h-72">KEYCODE_H                = 72</a></span>
+</li>
+<li>
+<span><a href="#keycode_i-73">KEYCODE_I                = 73</a></span>
+</li>
+<li>
+<span><a href="#keycode_j-74">KEYCODE_J                = 74</a></span>
+</li>
+<li>
+<span><a href="#keycode_k-75">KEYCODE_K                = 75</a></span>
+</li>
+<li>
+<span><a href="#keycode_l-76">KEYCODE_L                = 76</a></span>
+</li>
+<li>
+<span><a href="#keycode_m-77">KEYCODE_M                = 77</a></span>
+</li>
+<li>
+<span><a href="#keycode_n-78">KEYCODE_N                = 78</a></span>
+</li>
+<li>
+<span><a href="#keycode_o-79">KEYCODE_O                = 79</a></span>
+</li>
+<li>
+<span><a href="#keycode_p-80">KEYCODE_P                = 80</a></span>
+</li>
+<li>
+<span><a href="#keycode_q-81">KEYCODE_Q                = 81</a></span>
+</li>
+<li>
+<span><a href="#keycode_r-82">KEYCODE_R                = 82</a></span>
+</li>
+<li>
+<span><a href="#keycode_s-83">KEYCODE_S                = 83</a></span>
+</li>
+<li>
+<span><a href="#keycode_t-84">KEYCODE_T                = 84</a></span>
+</li>
+<li>
+<span><a href="#keycode_u-85">KEYCODE_U                = 85</a></span>
+</li>
+<li>
+<span><a href="#keycode_v-86">KEYCODE_V                = 86</a></span>
+</li>
+<li>
+<span><a href="#keycode_w-87">KEYCODE_W                = 87</a></span>
+</li>
+<li>
+<span><a href="#keycode_x-88">KEYCODE_X                = 88</a></span>
+</li>
+<li>
+<span><a href="#keycode_y-89">KEYCODE_Y                = 89</a></span>
+</li>
+<li>
+<span><a href="#keycode_z-90">KEYCODE_Z                = 90</a></span>
+</li>
+<li>
+<span><a href="#keycode_num_lock-144">KEYCODE_NUM_LOCK         = 144</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_0-96">KEYCODE_NUMPAD_0         = 96</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_1-97">KEYCODE_NUMPAD_1         = 97</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_2-98">KEYCODE_NUMPAD_2         = 98</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_3-99">KEYCODE_NUMPAD_3         = 99</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_4-100">KEYCODE_NUMPAD_4         = 100</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_5-101">KEYCODE_NUMPAD_5         = 101</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_6-102">KEYCODE_NUMPAD_6         = 102</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_7-103">KEYCODE_NUMPAD_7         = 103</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_8-104">KEYCODE_NUMPAD_8         = 104</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_9-105">KEYCODE_NUMPAD_9         = 105</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_divide-111">KEYCODE_NUMPAD_DIVIDE    = 111</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_multiply-106">KEYCODE_NUMPAD_MULTIPLY  = 106</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_subtract-109">KEYCODE_NUMPAD_SUBTRACT  = 109</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_add-107">KEYCODE_NUMPAD_ADD       = 107</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_dot-110">KEYCODE_NUMPAD_DOT       = 110</a></span>
+</li>
+<li>
+<span><a href="#keycode_numpad_enter-108">KEYCODE_NUMPAD_ENTER     = 108</a></span>
+</li>
+<li>
+<span><a href="#keycode_f1-112">KEYCODE_F1               = 112</a></span>
+</li>
+<li>
+<span><a href="#keycode_f2-113">KEYCODE_F2               = 113</a></span>
+</li>
+<li>
+<span><a href="#keycode_f3-114">KEYCODE_F3               = 114</a></span>
+</li>
+<li>
+<span><a href="#keycode_f4-115">KEYCODE_F4               = 115</a></span>
+</li>
+<li>
+<span><a href="#keycode_f5-116">KEYCODE_F5               = 116</a></span>
+</li>
+<li>
+<span><a href="#keycode_f6-117">KEYCODE_F6               = 117</a></span>
+</li>
+<li>
+<span><a href="#keycode_f7-118">KEYCODE_F7               = 118</a></span>
+</li>
+<li>
+<span><a href="#keycode_f8-119">KEYCODE_F8               = 119</a></span>
+</li>
+<li>
+<span><a href="#keycode_f9-120">KEYCODE_F9               = 120</a></span>
+</li>
+<li>
+<span><a href="#keycode_f10-121">KEYCODE_F10              = 121</a></span>
+</li>
+<li>
+<span><a href="#keycode_f11-122">KEYCODE_F11              = 122</a></span>
+</li>
+<li>
+<span><a href="#keycode_f12-123">KEYCODE_F12              = 123</a></span>
+</li>
+<li>
+<span><a href="#keycode_semicolon-186">KEYCODE_SEMICOLON        = 186</a></span>
+</li>
+<li>
+<span><a href="#keycode_equals-187">KEYCODE_EQUALS           = 187</a></span>
+</li>
+<li>
+<span><a href="#keycode_minus-189">KEYCODE_MINUS            = 189</a></span>
+</li>
+<li>
+<span><a href="#keycode_comma-188">KEYCODE_COMMA            = 188</a></span>
+</li>
+<li>
+<span><a href="#keycode_period-190">KEYCODE_PERIOD           = 190</a></span>
+</li>
+<li>
+<span><a href="#keycode_slash-191">KEYCODE_SLASH            = 191</a></span>
+</li>
+<li>
+<span><a href="#keycode_grave-192">KEYCODE_GRAVE            = 192</a></span>
+</li>
+<li>
+<span><a href="#keycode_left_bracket-219">KEYCODE_LEFT_BRACKET     = 219</a></span>
+</li>
+<li>
+<span><a href="#keycode_back_slash-220">KEYCODE_BACK_SLASH       = 220</a></span>
+</li>
+<li>
+<span><a href="#keycode_right_bracket-221">KEYCODE_RIGHT_BRACKET    = 221</a></span>
+</li>
+<li>
+<span><a href="#keycode_apostrophe-222">KEYCODE_APOSTROPHE       = 222</a></span>
+</li>
+<li>
+<span><a href="#keycode_home-300">KEYCODE_HOME             = 300</a></span>
+</li>
+<li>
+<span><a href="#keycode_back-301">KEYCODE_BACK             = 301</a></span>
+</li>
+<li>
+<span><a href="#keycode_call-302">KEYCODE_CALL             = 302</a></span>
+</li>
+<li>
+<span><a href="#keycode_endcall-303">KEYCODE_ENDCALL          = 303</a></span>
+</li>
+<li>
+<span><a href="#keycode_star-304">KEYCODE_STAR             = 304</a></span>
+</li>
+<li>
+<span><a href="#keycode_pound-305">KEYCODE_POUND            = 305</a></span>
+</li>
+<li>
+<span><a href="#keycode_center-306">KEYCODE_CENTER           = 306</a></span>
+</li>
+<li>
+<span><a href="#keycode_volume_up-307">KEYCODE_VOLUME_UP        = 307</a></span>
+</li>
+<li>
+<span><a href="#keycode_volume_down-308">KEYCODE_VOLUME_DOWN      = 308</a></span>
+</li>
+<li>
+<span><a href="#keycode_power-309">KEYCODE_POWER            = 309</a></span>
+</li>
+<li>
+<span><a href="#keycode_camera-310">KEYCODE_CAMERA           = 310</a></span>
+</li>
+<li>
+<span><a href="#keycode_focus-311">KEYCODE_FOCUS            = 311</a></span>
+</li>
+<li>
+<span><a href="#keycode_menu-312">KEYCODE_MENU             = 312</a></span>
+</li>
+<li>
+<span><a href="#keycode_search-313">KEYCODE_SEARCH           = 313</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_play_pau-314">KEYCODE_MEDIA_PLAY_PAU   = 314</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_stop-315">KEYCODE_MEDIA_STOP       = 315</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_next-316">KEYCODE_MEDIA_NEXT       = 316</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_previous-317">KEYCODE_MEDIA_PREVIOUS   = 317</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_rewind-318">KEYCODE_MEDIA_REWIND     = 318</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_fast_forward-319">KEYCODE_MEDIA_FAST_FORWARD= 319</a></span>
+</li>
+<li>
+<span><a href="#keycode_mute-320">KEYCODE_MUTE             = 320</a></span>
+</li>
+<li>
+<span><a href="#keycode_channel_up-321">KEYCODE_CHANNEL_UP       = 321</a></span>
+</li>
+<li>
+<span><a href="#keycode_channel_down-322">KEYCODE_CHANNEL_DOWN     = 322</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_play-323">KEYCODE_MEDIA_PLAY       = 323</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_pause-324">KEYCODE_MEDIA_PAUSE      = 324</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_close-325">KEYCODE_MEDIA_CLOSE      = 325</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_eject-326">KEYCODE_MEDIA_EJECT      = 326</a></span>
+</li>
+<li>
+<span><a href="#keycode_media_record-327">KEYCODE_MEDIA_RECORD     = 327</a></span>
+</li>
+<li>
+<span><a href="#keycode_volume_mute-328">KEYCODE_VOLUME_MUTE      = 328</a></span>
+</li>
+<li>
+<span><a href="#keycode_music-329">KEYCODE_MUSIC            = 329</a></span>
+</li>
+<li>
+<span><a href="#keycode_explorer-330">KEYCODE_EXPLORER         = 330</a></span>
+</li>
+<li>
+<span><a href="#keycode_envelope-331">KEYCODE_ENVELOPE         = 331</a></span>
+</li>
+<li>
+<span><a href="#keycode_bookmark-332">KEYCODE_BOOKMARK         = 332</a></span>
+</li>
+<li>
+<span><a href="#keycode_zoom_in-333">KEYCODE_ZOOM_IN          = 333</a></span>
+</li>
+<li>
+<span><a href="#keycode_zoom_out-334">KEYCODE_ZOOM_OUT         = 334</a></span>
+</li>
+<li>
+<span><a href="#keycode_help-335">KEYCODE_HELP             = 335</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#object-guitouch">Object: GUITouch</a></span>
+<ul>
+<li>
+<span><a href="#guitouch-id">GUITouch.id</a></span>
+</li>
+<li>
+<span><a href="#guitouch-start_x">GUITouch.start_x</a></span>
+</li>
+<li>
+<span><a href="#guitouch-start_y">GUITouch.start_y</a></span>
+</li>
+<li>
+<span><a href="#guitouch-x">GUITouch.x</a></span>
+</li>
+<li>
+<span><a href="#guitouch-y">GUITouch.y</a></span>
+</li>
+<li>
+<span><a href="#guitouch-force">GUITouch.force</a></span>
+</li>
+<li>
+<span><a href="#guitouch-view">GUITouch.view</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guievent">Class: GUIEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-guievent-origin">Get: GUIEvent.origin</a></span>
+</li>
+<li>
+<span><a href="#get-guievent-timestamp">Get: GUIEvent.timestamp</a></span>
+</li>
+<li>
+<span><a href="#guievent-cancel_default-">GUIEvent.cancel_default()</a></span>
+</li>
+<li>
+<span><a href="#guievent-cancel_bubble-">GUIEvent.cancel_bubble()</a></span>
+</li>
+<li>
+<span><a href="#get-guievent-is_default">Get: GUIEvent.is_default</a></span>
+</li>
+<li>
+<span><a href="#get-guievent-is_bubble">Get: GUIEvent.is_bubble</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guiactionevent">Class: GUIActionEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-guiactionevent-action">Get: GUIActionEvent.action</a></span>
+</li>
+<li>
+<span><a href="#get-guiactionevent-delay">Get: GUIActionEvent.delay</a></span>
+</li>
+<li>
+<span><a href="#get-guiactionevent-frame">Get: GUIActionEvent.frame</a></span>
+</li>
+<li>
+<span><a href="#get-guiactionevent-loop">Get: GUIActionEvent.loop</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guikeyevent">Class: GUIKeyEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-guikeyevent-keycode">Get: GUIKeyEvent.keycode</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-repeat">Get: GUIKeyEvent.repeat</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-shift">Get: GUIKeyEvent.shift</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-ctrl">Get: GUIKeyEvent.ctrl</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-alt">Get: GUIKeyEvent.alt</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-command">Get: GUIKeyEvent.command</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-caps_lock">Get: GUIKeyEvent.caps_lock</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-device">Get: GUIKeyEvent.device</a></span>
+</li>
+<li>
+<span><a href="#get-guikeyevent-source">Get: GUIKeyEvent.source</a></span>
+</li>
+<li>
+<span><a href="#guikeyevent-focus_move">GUIKeyEvent.focus_move</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guiclickevent">Class: GUIClickEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-guiclickevent-x">Get: GUIClickEvent.x</a></span>
+</li>
+<li>
+<span><a href="#get-guiclickevent-y">Get: GUIClickEvent.y</a></span>
+</li>
+<li>
+<span><a href="#get-guiclickevent-count">Get: GUIClickEvent.count</a></span>
+</li>
+<li>
+<span><a href="#get-guiclickevent-keyboard">Get: GUIClickEvent.keyboard</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guihighlightedevent">Class: GUIHighlightedEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-status">Get: status</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guitouchevent">Class:  GUITouchEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-changed_touches">Get: changed_touches</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-guifocusmoveevent">Class: GUIFocusMoveEvent</a></span>
+<ul>
+<li>
+<span><a href="#get-focus">Get: focus</a></span>
+</li>
+<li>
+<span><a href="#get-focus_move">Get: focus_move</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-gui-event">
+			<code>lib://gui/event</code>
+			<span><a class="mark" href="#lib-gui-event" id="lib-gui-event">#</a></span>
+		</h1><h2 id="enum-highlightedstatus">
+			<code>Enum: HighlightedStatus</code>
+			<span><a class="mark" href="#enum-highlightedstatus" id="enum-highlightedstatus">#</a></span>
+		</h2><p><code>View.onhighlighted</code>事件数据的状态枚举类型</p>
+<h3 id="highlighted_normal">
+			HIGHLIGHTED_NORMAL
+			<span><a class="mark" href="#highlighted_normal" id="highlighted_normal">#</a></span>
+		</h3><h3 id="highlighted_hover">
+			HIGHLIGHTED_HOVER
+			<span><a class="mark" href="#highlighted_hover" id="highlighted_hover">#</a></span>
+		</h3><h3 id="highlighted_down">
+			HIGHLIGHTED_DOWN
+			<span><a class="mark" href="#highlighted_down" id="highlighted_down">#</a></span>
+		</h3><h2 id="enum-returnvaluemask">
+			<code>Enum: ReturnValueMask</code>
+			<span><a class="mark" href="#enum-returnvaluemask" id="enum-returnvaluemask">#</a></span>
+		</h2><p>GUI事件数据返回值掩码，如果返回值被设置成<code>0</code>，表示同时取消默认动作与事件冒泡</p>
+<h3 id="return_value_mask_default-1-0-">
+			RETURN_VALUE_MASK_DEFAULT = (1&lt;&lt;0)
+			<span><a class="mark" href="#return_value_mask_default-1-0-" id="return_value_mask_default-1-0-">#</a></span>
+		</h3><h3 id="return_value_mask_bubble-1-1-">
+			RETURN_VALUE_MASK_BUBBLE = (1&lt;&lt;1)
+			<span><a class="mark" href="#return_value_mask_bubble-1-1-" id="return_value_mask_bubble-1-1-">#</a></span>
+		</h3><h3 id="return_value_mask_all">
+			RETURN_VALUE_MASK_ALL
+			<span><a class="mark" href="#return_value_mask_all" id="return_value_mask_all">#</a></span>
+		</h3><h2 id="emun-keyboardkeyname">
+			Emun: KeyboardKeyName
+			<span><a class="mark" href="#emun-keyboardkeyname" id="emun-keyboardkeyname">#</a></span>
+		</h2><p>键盘按键对应的按键代码</p>
+<h3 id="keycode_unknown-0">
+			KEYCODE_UNKNOWN          = 0
+			<span><a class="mark" href="#keycode_unknown-0" id="keycode_unknown-0">#</a></span>
+		</h3><h3 id="keycode_mouse_left-1">
+			KEYCODE_MOUSE_LEFT       = 1
+			<span><a class="mark" href="#keycode_mouse_left-1" id="keycode_mouse_left-1">#</a></span>
+		</h3><h3 id="keycode_mouse_center-2">
+			KEYCODE_MOUSE_CENTER     = 2
+			<span><a class="mark" href="#keycode_mouse_center-2" id="keycode_mouse_center-2">#</a></span>
+		</h3><h3 id="keycode_mouse_right-3">
+			KEYCODE_MOUSE_RIGHT      = 3
+			<span><a class="mark" href="#keycode_mouse_right-3" id="keycode_mouse_right-3">#</a></span>
+		</h3><h3 id="keycode_back_space-8">
+			KEYCODE_BACK_SPACE       = 8
+			<span><a class="mark" href="#keycode_back_space-8" id="keycode_back_space-8">#</a></span>
+		</h3><h3 id="keycode_tab-9">
+			KEYCODE_TAB              = 9
+			<span><a class="mark" href="#keycode_tab-9" id="keycode_tab-9">#</a></span>
+		</h3><h3 id="keycode_clear-12">
+			KEYCODE_CLEAR            = 12
+			<span><a class="mark" href="#keycode_clear-12" id="keycode_clear-12">#</a></span>
+		</h3><h3 id="keycode_enter-13">
+			KEYCODE_ENTER            = 13
+			<span><a class="mark" href="#keycode_enter-13" id="keycode_enter-13">#</a></span>
+		</h3><h3 id="keycode_shift-16">
+			KEYCODE_SHIFT            = 16
+			<span><a class="mark" href="#keycode_shift-16" id="keycode_shift-16">#</a></span>
+		</h3><h3 id="keycode_ctrl-17">
+			KEYCODE_CTRL             = 17
+			<span><a class="mark" href="#keycode_ctrl-17" id="keycode_ctrl-17">#</a></span>
+		</h3><h3 id="keycode_alt-18">
+			KEYCODE_ALT              = 18
+			<span><a class="mark" href="#keycode_alt-18" id="keycode_alt-18">#</a></span>
+		</h3><h3 id="keycode_caps_lock-20">
+			KEYCODE_CAPS_LOCK        = 20
+			<span><a class="mark" href="#keycode_caps_lock-20" id="keycode_caps_lock-20">#</a></span>
+		</h3><h3 id="keycode_esc-27">
+			KEYCODE_ESC              = 27
+			<span><a class="mark" href="#keycode_esc-27" id="keycode_esc-27">#</a></span>
+		</h3><h3 id="keycode_space-32">
+			KEYCODE_SPACE            = 32
+			<span><a class="mark" href="#keycode_space-32" id="keycode_space-32">#</a></span>
+		</h3><h3 id="keycode_command-91">
+			KEYCODE_COMMAND          = 91
+			<span><a class="mark" href="#keycode_command-91" id="keycode_command-91">#</a></span>
+		</h3><h3 id="keycode_left-37">
+			KEYCODE_LEFT             = 37
+			<span><a class="mark" href="#keycode_left-37" id="keycode_left-37">#</a></span>
+		</h3><h3 id="keycode_up-38">
+			KEYCODE_UP               = 38
+			<span><a class="mark" href="#keycode_up-38" id="keycode_up-38">#</a></span>
+		</h3><h3 id="keycode_right-39">
+			KEYCODE_RIGHT            = 39
+			<span><a class="mark" href="#keycode_right-39" id="keycode_right-39">#</a></span>
+		</h3><h3 id="keycode_down-40">
+			KEYCODE_DOWN             = 40
+			<span><a class="mark" href="#keycode_down-40" id="keycode_down-40">#</a></span>
+		</h3><h3 id="keycode_insert-45">
+			KEYCODE_INSERT           = 45
+			<span><a class="mark" href="#keycode_insert-45" id="keycode_insert-45">#</a></span>
+		</h3><h3 id="keycode_delete-46">
+			KEYCODE_DELETE           = 46
+			<span><a class="mark" href="#keycode_delete-46" id="keycode_delete-46">#</a></span>
+		</h3><h3 id="keycode_page_up-33">
+			KEYCODE_PAGE_UP          = 33
+			<span><a class="mark" href="#keycode_page_up-33" id="keycode_page_up-33">#</a></span>
+		</h3><h3 id="keycode_page_down-34">
+			KEYCODE_PAGE_DOWN        = 34
+			<span><a class="mark" href="#keycode_page_down-34" id="keycode_page_down-34">#</a></span>
+		</h3><h3 id="keycode_move_end-35">
+			KEYCODE_MOVE_END         = 35
+			<span><a class="mark" href="#keycode_move_end-35" id="keycode_move_end-35">#</a></span>
+		</h3><h3 id="keycode_move_home-36">
+			KEYCODE_MOVE_HOME        = 36
+			<span><a class="mark" href="#keycode_move_home-36" id="keycode_move_home-36">#</a></span>
+		</h3><h3 id="keycode_scroll_lock-145">
+			KEYCODE_SCROLL_LOCK      = 145
+			<span><a class="mark" href="#keycode_scroll_lock-145" id="keycode_scroll_lock-145">#</a></span>
+		</h3><h3 id="keycode_break-19">
+			KEYCODE_BREAK            = 19
+			<span><a class="mark" href="#keycode_break-19" id="keycode_break-19">#</a></span>
+		</h3><h3 id="keycode_sysrq-124">
+			KEYCODE_SYSRQ            = 124
+			<span><a class="mark" href="#keycode_sysrq-124" id="keycode_sysrq-124">#</a></span>
+		</h3><h3 id="keycode_0-48">
+			KEYCODE_0                = 48
+			<span><a class="mark" href="#keycode_0-48" id="keycode_0-48">#</a></span>
+		</h3><h3 id="keycode_1-49">
+			KEYCODE_1                = 49
+			<span><a class="mark" href="#keycode_1-49" id="keycode_1-49">#</a></span>
+		</h3><h3 id="keycode_2-50">
+			KEYCODE_2                = 50
+			<span><a class="mark" href="#keycode_2-50" id="keycode_2-50">#</a></span>
+		</h3><h3 id="keycode_3-51">
+			KEYCODE_3                = 51
+			<span><a class="mark" href="#keycode_3-51" id="keycode_3-51">#</a></span>
+		</h3><h3 id="keycode_4-52">
+			KEYCODE_4                = 52
+			<span><a class="mark" href="#keycode_4-52" id="keycode_4-52">#</a></span>
+		</h3><h3 id="keycode_5-53">
+			KEYCODE_5                = 53
+			<span><a class="mark" href="#keycode_5-53" id="keycode_5-53">#</a></span>
+		</h3><h3 id="keycode_6-54">
+			KEYCODE_6                = 54
+			<span><a class="mark" href="#keycode_6-54" id="keycode_6-54">#</a></span>
+		</h3><h3 id="keycode_7-55">
+			KEYCODE_7                = 55
+			<span><a class="mark" href="#keycode_7-55" id="keycode_7-55">#</a></span>
+		</h3><h3 id="keycode_8-56">
+			KEYCODE_8                = 56
+			<span><a class="mark" href="#keycode_8-56" id="keycode_8-56">#</a></span>
+		</h3><h3 id="keycode_9-57">
+			KEYCODE_9                = 57
+			<span><a class="mark" href="#keycode_9-57" id="keycode_9-57">#</a></span>
+		</h3><h3 id="keycode_a-65">
+			KEYCODE_A                = 65
+			<span><a class="mark" href="#keycode_a-65" id="keycode_a-65">#</a></span>
+		</h3><h3 id="keycode_b-66">
+			KEYCODE_B                = 66
+			<span><a class="mark" href="#keycode_b-66" id="keycode_b-66">#</a></span>
+		</h3><h3 id="keycode_c-67">
+			KEYCODE_C                = 67
+			<span><a class="mark" href="#keycode_c-67" id="keycode_c-67">#</a></span>
+		</h3><h3 id="keycode_d-68">
+			KEYCODE_D                = 68
+			<span><a class="mark" href="#keycode_d-68" id="keycode_d-68">#</a></span>
+		</h3><h3 id="keycode_e-69">
+			KEYCODE_E                = 69
+			<span><a class="mark" href="#keycode_e-69" id="keycode_e-69">#</a></span>
+		</h3><h3 id="keycode_f-70">
+			KEYCODE_F                = 70
+			<span><a class="mark" href="#keycode_f-70" id="keycode_f-70">#</a></span>
+		</h3><h3 id="keycode_g-71">
+			KEYCODE_G                = 71
+			<span><a class="mark" href="#keycode_g-71" id="keycode_g-71">#</a></span>
+		</h3><h3 id="keycode_h-72">
+			KEYCODE_H                = 72
+			<span><a class="mark" href="#keycode_h-72" id="keycode_h-72">#</a></span>
+		</h3><h3 id="keycode_i-73">
+			KEYCODE_I                = 73
+			<span><a class="mark" href="#keycode_i-73" id="keycode_i-73">#</a></span>
+		</h3><h3 id="keycode_j-74">
+			KEYCODE_J                = 74
+			<span><a class="mark" href="#keycode_j-74" id="keycode_j-74">#</a></span>
+		</h3><h3 id="keycode_k-75">
+			KEYCODE_K                = 75
+			<span><a class="mark" href="#keycode_k-75" id="keycode_k-75">#</a></span>
+		</h3><h3 id="keycode_l-76">
+			KEYCODE_L                = 76
+			<span><a class="mark" href="#keycode_l-76" id="keycode_l-76">#</a></span>
+		</h3><h3 id="keycode_m-77">
+			KEYCODE_M                = 77
+			<span><a class="mark" href="#keycode_m-77" id="keycode_m-77">#</a></span>
+		</h3><h3 id="keycode_n-78">
+			KEYCODE_N                = 78
+			<span><a class="mark" href="#keycode_n-78" id="keycode_n-78">#</a></span>
+		</h3><h3 id="keycode_o-79">
+			KEYCODE_O                = 79
+			<span><a class="mark" href="#keycode_o-79" id="keycode_o-79">#</a></span>
+		</h3><h3 id="keycode_p-80">
+			KEYCODE_P                = 80
+			<span><a class="mark" href="#keycode_p-80" id="keycode_p-80">#</a></span>
+		</h3><h3 id="keycode_q-81">
+			KEYCODE_Q                = 81
+			<span><a class="mark" href="#keycode_q-81" id="keycode_q-81">#</a></span>
+		</h3><h3 id="keycode_r-82">
+			KEYCODE_R                = 82
+			<span><a class="mark" href="#keycode_r-82" id="keycode_r-82">#</a></span>
+		</h3><h3 id="keycode_s-83">
+			KEYCODE_S                = 83
+			<span><a class="mark" href="#keycode_s-83" id="keycode_s-83">#</a></span>
+		</h3><h3 id="keycode_t-84">
+			KEYCODE_T                = 84
+			<span><a class="mark" href="#keycode_t-84" id="keycode_t-84">#</a></span>
+		</h3><h3 id="keycode_u-85">
+			KEYCODE_U                = 85
+			<span><a class="mark" href="#keycode_u-85" id="keycode_u-85">#</a></span>
+		</h3><h3 id="keycode_v-86">
+			KEYCODE_V                = 86
+			<span><a class="mark" href="#keycode_v-86" id="keycode_v-86">#</a></span>
+		</h3><h3 id="keycode_w-87">
+			KEYCODE_W                = 87
+			<span><a class="mark" href="#keycode_w-87" id="keycode_w-87">#</a></span>
+		</h3><h3 id="keycode_x-88">
+			KEYCODE_X                = 88
+			<span><a class="mark" href="#keycode_x-88" id="keycode_x-88">#</a></span>
+		</h3><h3 id="keycode_y-89">
+			KEYCODE_Y                = 89
+			<span><a class="mark" href="#keycode_y-89" id="keycode_y-89">#</a></span>
+		</h3><h3 id="keycode_z-90">
+			KEYCODE_Z                = 90
+			<span><a class="mark" href="#keycode_z-90" id="keycode_z-90">#</a></span>
+		</h3><h3 id="keycode_num_lock-144">
+			KEYCODE_NUM_LOCK         = 144
+			<span><a class="mark" href="#keycode_num_lock-144" id="keycode_num_lock-144">#</a></span>
+		</h3><h3 id="keycode_numpad_0-96">
+			KEYCODE_NUMPAD_0         = 96
+			<span><a class="mark" href="#keycode_numpad_0-96" id="keycode_numpad_0-96">#</a></span>
+		</h3><h3 id="keycode_numpad_1-97">
+			KEYCODE_NUMPAD_1         = 97
+			<span><a class="mark" href="#keycode_numpad_1-97" id="keycode_numpad_1-97">#</a></span>
+		</h3><h3 id="keycode_numpad_2-98">
+			KEYCODE_NUMPAD_2         = 98
+			<span><a class="mark" href="#keycode_numpad_2-98" id="keycode_numpad_2-98">#</a></span>
+		</h3><h3 id="keycode_numpad_3-99">
+			KEYCODE_NUMPAD_3         = 99
+			<span><a class="mark" href="#keycode_numpad_3-99" id="keycode_numpad_3-99">#</a></span>
+		</h3><h3 id="keycode_numpad_4-100">
+			KEYCODE_NUMPAD_4         = 100
+			<span><a class="mark" href="#keycode_numpad_4-100" id="keycode_numpad_4-100">#</a></span>
+		</h3><h3 id="keycode_numpad_5-101">
+			KEYCODE_NUMPAD_5         = 101
+			<span><a class="mark" href="#keycode_numpad_5-101" id="keycode_numpad_5-101">#</a></span>
+		</h3><h3 id="keycode_numpad_6-102">
+			KEYCODE_NUMPAD_6         = 102
+			<span><a class="mark" href="#keycode_numpad_6-102" id="keycode_numpad_6-102">#</a></span>
+		</h3><h3 id="keycode_numpad_7-103">
+			KEYCODE_NUMPAD_7         = 103
+			<span><a class="mark" href="#keycode_numpad_7-103" id="keycode_numpad_7-103">#</a></span>
+		</h3><h3 id="keycode_numpad_8-104">
+			KEYCODE_NUMPAD_8         = 104
+			<span><a class="mark" href="#keycode_numpad_8-104" id="keycode_numpad_8-104">#</a></span>
+		</h3><h3 id="keycode_numpad_9-105">
+			KEYCODE_NUMPAD_9         = 105
+			<span><a class="mark" href="#keycode_numpad_9-105" id="keycode_numpad_9-105">#</a></span>
+		</h3><h3 id="keycode_numpad_divide-111">
+			KEYCODE_NUMPAD_DIVIDE    = 111
+			<span><a class="mark" href="#keycode_numpad_divide-111" id="keycode_numpad_divide-111">#</a></span>
+		</h3><h3 id="keycode_numpad_multiply-106">
+			KEYCODE_NUMPAD_MULTIPLY  = 106
+			<span><a class="mark" href="#keycode_numpad_multiply-106" id="keycode_numpad_multiply-106">#</a></span>
+		</h3><h3 id="keycode_numpad_subtract-109">
+			KEYCODE_NUMPAD_SUBTRACT  = 109
+			<span><a class="mark" href="#keycode_numpad_subtract-109" id="keycode_numpad_subtract-109">#</a></span>
+		</h3><h3 id="keycode_numpad_add-107">
+			KEYCODE_NUMPAD_ADD       = 107
+			<span><a class="mark" href="#keycode_numpad_add-107" id="keycode_numpad_add-107">#</a></span>
+		</h3><h3 id="keycode_numpad_dot-110">
+			KEYCODE_NUMPAD_DOT       = 110
+			<span><a class="mark" href="#keycode_numpad_dot-110" id="keycode_numpad_dot-110">#</a></span>
+		</h3><h3 id="keycode_numpad_enter-108">
+			KEYCODE_NUMPAD_ENTER     = 108
+			<span><a class="mark" href="#keycode_numpad_enter-108" id="keycode_numpad_enter-108">#</a></span>
+		</h3><h3 id="keycode_f1-112">
+			KEYCODE_F1               = 112
+			<span><a class="mark" href="#keycode_f1-112" id="keycode_f1-112">#</a></span>
+		</h3><h3 id="keycode_f2-113">
+			KEYCODE_F2               = 113
+			<span><a class="mark" href="#keycode_f2-113" id="keycode_f2-113">#</a></span>
+		</h3><h3 id="keycode_f3-114">
+			KEYCODE_F3               = 114
+			<span><a class="mark" href="#keycode_f3-114" id="keycode_f3-114">#</a></span>
+		</h3><h3 id="keycode_f4-115">
+			KEYCODE_F4               = 115
+			<span><a class="mark" href="#keycode_f4-115" id="keycode_f4-115">#</a></span>
+		</h3><h3 id="keycode_f5-116">
+			KEYCODE_F5               = 116
+			<span><a class="mark" href="#keycode_f5-116" id="keycode_f5-116">#</a></span>
+		</h3><h3 id="keycode_f6-117">
+			KEYCODE_F6               = 117
+			<span><a class="mark" href="#keycode_f6-117" id="keycode_f6-117">#</a></span>
+		</h3><h3 id="keycode_f7-118">
+			KEYCODE_F7               = 118
+			<span><a class="mark" href="#keycode_f7-118" id="keycode_f7-118">#</a></span>
+		</h3><h3 id="keycode_f8-119">
+			KEYCODE_F8               = 119
+			<span><a class="mark" href="#keycode_f8-119" id="keycode_f8-119">#</a></span>
+		</h3><h3 id="keycode_f9-120">
+			KEYCODE_F9               = 120
+			<span><a class="mark" href="#keycode_f9-120" id="keycode_f9-120">#</a></span>
+		</h3><h3 id="keycode_f10-121">
+			KEYCODE_F10              = 121
+			<span><a class="mark" href="#keycode_f10-121" id="keycode_f10-121">#</a></span>
+		</h3><h3 id="keycode_f11-122">
+			KEYCODE_F11              = 122
+			<span><a class="mark" href="#keycode_f11-122" id="keycode_f11-122">#</a></span>
+		</h3><h3 id="keycode_f12-123">
+			KEYCODE_F12              = 123
+			<span><a class="mark" href="#keycode_f12-123" id="keycode_f12-123">#</a></span>
+		</h3><h3 id="keycode_semicolon-186">
+			KEYCODE_SEMICOLON        = 186
+			<span><a class="mark" href="#keycode_semicolon-186" id="keycode_semicolon-186">#</a></span>
+		</h3><h3 id="keycode_equals-187">
+			KEYCODE_EQUALS           = 187
+			<span><a class="mark" href="#keycode_equals-187" id="keycode_equals-187">#</a></span>
+		</h3><h3 id="keycode_minus-189">
+			KEYCODE_MINUS            = 189
+			<span><a class="mark" href="#keycode_minus-189" id="keycode_minus-189">#</a></span>
+		</h3><h3 id="keycode_comma-188">
+			KEYCODE_COMMA            = 188
+			<span><a class="mark" href="#keycode_comma-188" id="keycode_comma-188">#</a></span>
+		</h3><h3 id="keycode_period-190">
+			KEYCODE_PERIOD           = 190
+			<span><a class="mark" href="#keycode_period-190" id="keycode_period-190">#</a></span>
+		</h3><h3 id="keycode_slash-191">
+			KEYCODE_SLASH            = 191
+			<span><a class="mark" href="#keycode_slash-191" id="keycode_slash-191">#</a></span>
+		</h3><h3 id="keycode_grave-192">
+			KEYCODE_GRAVE            = 192
+			<span><a class="mark" href="#keycode_grave-192" id="keycode_grave-192">#</a></span>
+		</h3><h3 id="keycode_left_bracket-219">
+			KEYCODE_LEFT_BRACKET     = 219
+			<span><a class="mark" href="#keycode_left_bracket-219" id="keycode_left_bracket-219">#</a></span>
+		</h3><h3 id="keycode_back_slash-220">
+			KEYCODE_BACK_SLASH       = 220
+			<span><a class="mark" href="#keycode_back_slash-220" id="keycode_back_slash-220">#</a></span>
+		</h3><h3 id="keycode_right_bracket-221">
+			KEYCODE_RIGHT_BRACKET    = 221
+			<span><a class="mark" href="#keycode_right_bracket-221" id="keycode_right_bracket-221">#</a></span>
+		</h3><h3 id="keycode_apostrophe-222">
+			KEYCODE_APOSTROPHE       = 222
+			<span><a class="mark" href="#keycode_apostrophe-222" id="keycode_apostrophe-222">#</a></span>
+		</h3><h3 id="keycode_home-300">
+			KEYCODE_HOME             = 300
+			<span><a class="mark" href="#keycode_home-300" id="keycode_home-300">#</a></span>
+		</h3><h3 id="keycode_back-301">
+			KEYCODE_BACK             = 301
+			<span><a class="mark" href="#keycode_back-301" id="keycode_back-301">#</a></span>
+		</h3><h3 id="keycode_call-302">
+			KEYCODE_CALL             = 302
+			<span><a class="mark" href="#keycode_call-302" id="keycode_call-302">#</a></span>
+		</h3><h3 id="keycode_endcall-303">
+			KEYCODE_ENDCALL          = 303
+			<span><a class="mark" href="#keycode_endcall-303" id="keycode_endcall-303">#</a></span>
+		</h3><h3 id="keycode_star-304">
+			KEYCODE_STAR             = 304
+			<span><a class="mark" href="#keycode_star-304" id="keycode_star-304">#</a></span>
+		</h3><h3 id="keycode_pound-305">
+			KEYCODE_POUND            = 305
+			<span><a class="mark" href="#keycode_pound-305" id="keycode_pound-305">#</a></span>
+		</h3><h3 id="keycode_center-306">
+			KEYCODE_CENTER           = 306
+			<span><a class="mark" href="#keycode_center-306" id="keycode_center-306">#</a></span>
+		</h3><h3 id="keycode_volume_up-307">
+			KEYCODE_VOLUME_UP        = 307
+			<span><a class="mark" href="#keycode_volume_up-307" id="keycode_volume_up-307">#</a></span>
+		</h3><h3 id="keycode_volume_down-308">
+			KEYCODE_VOLUME_DOWN      = 308
+			<span><a class="mark" href="#keycode_volume_down-308" id="keycode_volume_down-308">#</a></span>
+		</h3><h3 id="keycode_power-309">
+			KEYCODE_POWER            = 309
+			<span><a class="mark" href="#keycode_power-309" id="keycode_power-309">#</a></span>
+		</h3><h3 id="keycode_camera-310">
+			KEYCODE_CAMERA           = 310
+			<span><a class="mark" href="#keycode_camera-310" id="keycode_camera-310">#</a></span>
+		</h3><h3 id="keycode_focus-311">
+			KEYCODE_FOCUS            = 311
+			<span><a class="mark" href="#keycode_focus-311" id="keycode_focus-311">#</a></span>
+		</h3><h3 id="keycode_menu-312">
+			KEYCODE_MENU             = 312
+			<span><a class="mark" href="#keycode_menu-312" id="keycode_menu-312">#</a></span>
+		</h3><h3 id="keycode_search-313">
+			KEYCODE_SEARCH           = 313
+			<span><a class="mark" href="#keycode_search-313" id="keycode_search-313">#</a></span>
+		</h3><h3 id="keycode_media_play_pau-314">
+			KEYCODE_MEDIA_PLAY_PAU   = 314
+			<span><a class="mark" href="#keycode_media_play_pau-314" id="keycode_media_play_pau-314">#</a></span>
+		</h3><h3 id="keycode_media_stop-315">
+			KEYCODE_MEDIA_STOP       = 315
+			<span><a class="mark" href="#keycode_media_stop-315" id="keycode_media_stop-315">#</a></span>
+		</h3><h3 id="keycode_media_next-316">
+			KEYCODE_MEDIA_NEXT       = 316
+			<span><a class="mark" href="#keycode_media_next-316" id="keycode_media_next-316">#</a></span>
+		</h3><h3 id="keycode_media_previous-317">
+			KEYCODE_MEDIA_PREVIOUS   = 317
+			<span><a class="mark" href="#keycode_media_previous-317" id="keycode_media_previous-317">#</a></span>
+		</h3><h3 id="keycode_media_rewind-318">
+			KEYCODE_MEDIA_REWIND     = 318
+			<span><a class="mark" href="#keycode_media_rewind-318" id="keycode_media_rewind-318">#</a></span>
+		</h3><h3 id="keycode_media_fast_forward-319">
+			KEYCODE_MEDIA_FAST_FORWARD= 319
+			<span><a class="mark" href="#keycode_media_fast_forward-319" id="keycode_media_fast_forward-319">#</a></span>
+		</h3><h3 id="keycode_mute-320">
+			KEYCODE_MUTE             = 320
+			<span><a class="mark" href="#keycode_mute-320" id="keycode_mute-320">#</a></span>
+		</h3><h3 id="keycode_channel_up-321">
+			KEYCODE_CHANNEL_UP       = 321
+			<span><a class="mark" href="#keycode_channel_up-321" id="keycode_channel_up-321">#</a></span>
+		</h3><h3 id="keycode_channel_down-322">
+			KEYCODE_CHANNEL_DOWN     = 322
+			<span><a class="mark" href="#keycode_channel_down-322" id="keycode_channel_down-322">#</a></span>
+		</h3><h3 id="keycode_media_play-323">
+			KEYCODE_MEDIA_PLAY       = 323
+			<span><a class="mark" href="#keycode_media_play-323" id="keycode_media_play-323">#</a></span>
+		</h3><h3 id="keycode_media_pause-324">
+			KEYCODE_MEDIA_PAUSE      = 324
+			<span><a class="mark" href="#keycode_media_pause-324" id="keycode_media_pause-324">#</a></span>
+		</h3><h3 id="keycode_media_close-325">
+			KEYCODE_MEDIA_CLOSE      = 325
+			<span><a class="mark" href="#keycode_media_close-325" id="keycode_media_close-325">#</a></span>
+		</h3><h3 id="keycode_media_eject-326">
+			KEYCODE_MEDIA_EJECT      = 326
+			<span><a class="mark" href="#keycode_media_eject-326" id="keycode_media_eject-326">#</a></span>
+		</h3><h3 id="keycode_media_record-327">
+			KEYCODE_MEDIA_RECORD     = 327
+			<span><a class="mark" href="#keycode_media_record-327" id="keycode_media_record-327">#</a></span>
+		</h3><h3 id="keycode_volume_mute-328">
+			KEYCODE_VOLUME_MUTE      = 328
+			<span><a class="mark" href="#keycode_volume_mute-328" id="keycode_volume_mute-328">#</a></span>
+		</h3><h3 id="keycode_music-329">
+			KEYCODE_MUSIC            = 329
+			<span><a class="mark" href="#keycode_music-329" id="keycode_music-329">#</a></span>
+		</h3><h3 id="keycode_explorer-330">
+			KEYCODE_EXPLORER         = 330
+			<span><a class="mark" href="#keycode_explorer-330" id="keycode_explorer-330">#</a></span>
+		</h3><h3 id="keycode_envelope-331">
+			KEYCODE_ENVELOPE         = 331
+			<span><a class="mark" href="#keycode_envelope-331" id="keycode_envelope-331">#</a></span>
+		</h3><h3 id="keycode_bookmark-332">
+			KEYCODE_BOOKMARK         = 332
+			<span><a class="mark" href="#keycode_bookmark-332" id="keycode_bookmark-332">#</a></span>
+		</h3><h3 id="keycode_zoom_in-333">
+			KEYCODE_ZOOM_IN          = 333
+			<span><a class="mark" href="#keycode_zoom_in-333" id="keycode_zoom_in-333">#</a></span>
+		</h3><h3 id="keycode_zoom_out-334">
+			KEYCODE_ZOOM_OUT         = 334
+			<span><a class="mark" href="#keycode_zoom_out-334" id="keycode_zoom_out-334">#</a></span>
+		</h3><h3 id="keycode_help-335">
+			KEYCODE_HELP             = 335
+			<span><a class="mark" href="#keycode_help-335" id="keycode_help-335">#</a></span>
+		</h3><h2 id="object-guitouch">
+			<code>Object: GUITouch</code>
+			<span><a class="mark" href="#object-guitouch" id="object-guitouch">#</a></span>
+		</h2><p>触摸事件返回的数据结构, 这是个<code>Object</code>类型描述并没有实际存在的构造函数</p>
+<h3 id="guitouch-id">
+			GUITouch.id
+			<span><a class="mark" href="#guitouch-id" id="guitouch-id">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="guitouch-start_x">
+			GUITouch.start_x
+			<span><a class="mark" href="#guitouch-start_x" id="guitouch-start_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="guitouch-start_y">
+			GUITouch.start_y
+			<span><a class="mark" href="#guitouch-start_y" id="guitouch-start_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="guitouch-x">
+			GUITouch.x
+			<span><a class="mark" href="#guitouch-x" id="guitouch-x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="guitouch-y">
+			GUITouch.y
+			<span><a class="mark" href="#guitouch-y" id="guitouch-y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="guitouch-force">
+			GUITouch.force
+			<span><a class="mark" href="#guitouch-force" id="guitouch-force">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="guitouch-view">
+			GUITouch.view
+			<span><a class="mark" href="#guitouch-view" id="guitouch-view">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+</ul>
+<h2 id="class-guievent">
+			<code>Class: GUIEvent</code>
+			<span><a class="mark" href="#class-guievent" id="class-guievent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> <a href="../util/event.html#class-event"><code>Event</code></a></li>
+</ul>
+<p>GUI事件数据上下文，构造函数为私有不能访问</p>
+<h3 id="get-guievent-origin">
+			Get: GUIEvent.origin
+			<span><a class="mark" href="#get-guievent-origin" id="get-guievent-origin">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+</ul>
+<h3 id="get-guievent-timestamp">
+			Get: GUIEvent.timestamp
+			<span><a class="mark" href="#get-guievent-timestamp" id="get-guievent-timestamp">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="guievent-cancel_default-">
+			GUIEvent.cancel_default()
+			<span><a class="mark" href="#guievent-cancel_default-" id="guievent-cancel_default-">#</a></span>
+		</h3><p>取消默认动作</p>
+<p><code>return_value &amp;= ~RETURN_VALUE_MASK_DEFAULT</code></p>
+<h3 id="guievent-cancel_bubble-">
+			GUIEvent.cancel_bubble()
+			<span><a class="mark" href="#guievent-cancel_bubble-" id="guievent-cancel_bubble-">#</a></span>
+		</h3><p>取消事件冒泡</p>
+<p><code>return_value &amp;= ~RETURN_VALUE_MASK_BUBBLE</code></p>
+<h3 id="get-guievent-is_default">
+			Get: GUIEvent.is_default
+			<span><a class="mark" href="#get-guievent-is_default" id="get-guievent-is_default">#</a></span>
+		</h3><p><code>return_value &amp; RETURN_VALUE_MASK_DEFAULT</code></p>
+<ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guievent-is_bubble">
+			Get: GUIEvent.is_bubble
+			<span><a class="mark" href="#get-guievent-is_bubble" id="get-guievent-is_bubble">#</a></span>
+		</h3><p><code>return_value &amp; RETURN_VALUE_MASK_BUBBLE</code></p>
+<ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="class-guiactionevent">
+			<code>Class: GUIActionEvent</code>
+			<span><a class="mark" href="#class-guiactionevent" id="class-guiactionevent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> {<a href="../gui/event.html#class-guievent"><code>GUIEvent</code></a>}</li>
+</ul>
+<h3 id="get-guiactionevent-action">
+			Get: GUIActionEvent.action
+			<span><a class="mark" href="#get-guiactionevent-action" id="get-guiactionevent-action">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+</ul>
+<h3 id="get-guiactionevent-delay">
+			Get: GUIActionEvent.delay
+			<span><a class="mark" href="#get-guiactionevent-delay" id="get-guiactionevent-delay">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="get-guiactionevent-frame">
+			Get: GUIActionEvent.frame
+			<span><a class="mark" href="#get-guiactionevent-frame" id="get-guiactionevent-frame">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="get-guiactionevent-loop">
+			Get: GUIActionEvent.loop
+			<span><a class="mark" href="#get-guiactionevent-loop" id="get-guiactionevent-loop">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h2 id="class-guikeyevent">
+			<code>Class: GUIKeyEvent</code>
+			<span><a class="mark" href="#class-guikeyevent" id="class-guikeyevent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> {<a href="../gui/event.html#class-guievent"><code>GUIEvent</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-keycode">
+			Get: GUIKeyEvent.keycode
+			<span><a class="mark" href="#get-guikeyevent-keycode" id="get-guikeyevent-keycode">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/event.html#enum-keyboardkeyname"><code>KeyboardKeyName</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-repeat">
+			Get: GUIKeyEvent.repeat
+			<span><a class="mark" href="#get-guikeyevent-repeat" id="get-guikeyevent-repeat">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#int"><code>int</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-shift">
+			Get: GUIKeyEvent.shift
+			<span><a class="mark" href="#get-guikeyevent-shift" id="get-guikeyevent-shift">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-ctrl">
+			Get: GUIKeyEvent.ctrl
+			<span><a class="mark" href="#get-guikeyevent-ctrl" id="get-guikeyevent-ctrl">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-alt">
+			Get: GUIKeyEvent.alt
+			<span><a class="mark" href="#get-guikeyevent-alt" id="get-guikeyevent-alt">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-command">
+			Get: GUIKeyEvent.command
+			<span><a class="mark" href="#get-guikeyevent-command" id="get-guikeyevent-command">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-caps_lock">
+			Get: GUIKeyEvent.caps_lock
+			<span><a class="mark" href="#get-guikeyevent-caps_lock" id="get-guikeyevent-caps_lock">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-device">
+			Get: GUIKeyEvent.device
+			<span><a class="mark" href="#get-guikeyevent-device" id="get-guikeyevent-device">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#int"><code>int</code></a>}</li>
+</ul>
+<h3 id="get-guikeyevent-source">
+			Get: GUIKeyEvent.source
+			<span><a class="mark" href="#get-guikeyevent-source" id="get-guikeyevent-source">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#int"><code>int</code></a>}</li>
+</ul>
+<h3 id="guikeyevent-focus_move">
+			GUIKeyEvent.focus_move
+			<span><a class="mark" href="#guikeyevent-focus_move" id="guikeyevent-focus_move">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+</ul>
+<h2 id="class-guiclickevent">
+			<code>Class: GUIClickEvent</code>
+			<span><a class="mark" href="#class-guiclickevent" id="class-guiclickevent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> {<a href="../gui/event.html#class-guievent"><code>GUIEvent</code></a>}</li>
+</ul>
+<h3 id="get-guiclickevent-x">
+			Get: GUIClickEvent.x
+			<span><a class="mark" href="#get-guiclickevent-x" id="get-guiclickevent-x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="get-guiclickevent-y">
+			Get: GUIClickEvent.y
+			<span><a class="mark" href="#get-guiclickevent-y" id="get-guiclickevent-y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="get-guiclickevent-count">
+			Get: GUIClickEvent.count
+			<span><a class="mark" href="#get-guiclickevent-count" id="get-guiclickevent-count">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="get-guiclickevent-keyboard">
+			Get: GUIClickEvent.keyboard
+			<span><a class="mark" href="#get-guiclickevent-keyboard" id="get-guiclickevent-keyboard">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="class-guihighlightedevent">
+			<code>Class: GUIHighlightedEvent</code>
+			<span><a class="mark" href="#class-guihighlightedevent" id="class-guihighlightedevent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> {<a href="../gui/event.html#class-guievent"><code>GUIEvent</code></a>}</li>
+</ul>
+<h3 id="get-status">
+			Get: status
+			<span><a class="mark" href="#get-status" id="get-status">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/event.html#enum-highlightedstatus"><code>HighlightedStatus</code></a>}</li>
+</ul>
+<h2 id="class-guitouchevent">
+			<code>Class:  GUITouchEvent</code>
+			<span><a class="mark" href="#class-guitouchevent" id="class-guitouchevent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> {<a href="../gui/event.html#class-guievent"><code>GUIEvent</code></a>}</li>
+</ul>
+<h3 id="get-changed_touches">
+			Get: changed_touches
+			<span><a class="mark" href="#get-changed_touches" id="get-changed_touches">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>&lt;<a href="../gui/event.html#object-guitouch"><code>GUITouch</code></a>&gt;}</li>
+</ul>
+<h2 id="class-guifocusmoveevent">
+			<code>Class: GUIFocusMoveEvent</code>
+			<span><a class="mark" href="#class-guifocusmoveevent" id="class-guifocusmoveevent">#</a></span>
+		</h2><ul>
+<li><code>extends</code> {<a href="../gui/event.html#class-guievent"><code>GUIEvent</code></a>}</li>
+</ul>
+<h3 id="get-focus">
+			Get: focus
+			<span><a class="mark" href="#get-focus" id="get-focus">#</a></span>
+		</h3><p>变化前的焦点视图</p>
+<ul>
+<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+</ul>
+<h3 id="get-focus_move">
+			Get: focus_move
+			<span><a class="mark" href="#get-focus_move" id="get-focus_move">#</a></span>
+		</h3><p>变化后的焦点视图</p>
+<ul>
+<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

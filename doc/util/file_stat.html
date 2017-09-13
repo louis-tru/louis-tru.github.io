@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/file_stat.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-util-fs-and-stat">lib://util/fs and Stat</a></span>
+<ul>
+<li>
+<span><a href="#enum-filetype">Enum: FileType</a></span>
+<ul>
+<li>
+<span><a href="#file_unknown">FILE_UNKNOWN</a></span>
+</li>
+<li>
+<span><a href="#file_file">FILE_FILE</a></span>
+</li>
+<li>
+<span><a href="#file_dir">FILE_DIR</a></span>
+</li>
+<li>
+<span><a href="#file_link">FILE_LINK</a></span>
+</li>
+<li>
+<span><a href="#file_fifo">FILE_FIFO</a></span>
+</li>
+<li>
+<span><a href="#file_socket">FILE_SOCKET</a></span>
+</li>
+<li>
+<span><a href="#file_char">FILE_CHAR</a></span>
+</li>
+<li>
+<span><a href="#file_block">FILE_BLOCK</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#object-dirent">Object: Dirent</a></span>
+<ul>
+<li>
+<span><a href="#dirent-name">Dirent.name</a></span>
+</li>
+<li>
+<span><a href="#dirent-pathname">Dirent.pathname</a></span>
+</li>
+<li>
+<span><a href="#dirent-type">Dirent.type</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-filestat">Class: FileStat</a></span>
+<ul>
+<li>
+<span><a href="#filestat-constructor-path-">FileStat.constructor(path)</a></span>
+</li>
+<li>
+<span><a href="#filestat-is_valid-">FileStat.is_valid()</a></span>
+</li>
+<li>
+<span><a href="#filestat-is_file-">FileStat.is_file()</a></span>
+</li>
+<li>
+<span><a href="#filestat-is_dir-">FileStat.is_dir()</a></span>
+</li>
+<li>
+<span><a href="#filestat-is_link-">FileStat.is_link()</a></span>
+</li>
+<li>
+<span><a href="#filestat-is_sock-">FileStat.is_sock()</a></span>
+</li>
+<li>
+<span><a href="#filestat-mode-">FileStat.mode()</a></span>
+</li>
+<li>
+<span><a href="#filestat-type-">FileStat.type()</a></span>
+</li>
+<li>
+<span><a href="#filestat-group-">FileStat.group()</a></span>
+</li>
+<li>
+<span><a href="#filestat-owner-">FileStat.owner()</a></span>
+</li>
+<li>
+<span><a href="#filestat-size-">FileStat.size()</a></span>
+</li>
+<li>
+<span><a href="#filestat-nlink-">FileStat.nlink()</a></span>
+</li>
+<li>
+<span><a href="#filestat-ino-">FileStat.ino()</a></span>
+</li>
+<li>
+<span><a href="#filestat-blksize-">FileStat.blksize()</a></span>
+</li>
+<li>
+<span><a href="#filestat-blocks-">FileStat.blocks()</a></span>
+</li>
+<li>
+<span><a href="#filestat-flags-">FileStat.flags()</a></span>
+</li>
+<li>
+<span><a href="#filestat-gen-">FileStat.gen()</a></span>
+</li>
+<li>
+<span><a href="#filestat-dev-">FileStat.dev()</a></span>
+</li>
+<li>
+<span><a href="#filestat-rdev-">FileStat.rdev()</a></span>
+</li>
+<li>
+<span><a href="#filestat-atime-">FileStat.atime()</a></span>
+</li>
+<li>
+<span><a href="#filestat-mtime-">FileStat.mtime()</a></span>
+</li>
+<li>
+<span><a href="#filestat-ctime-">FileStat.ctime()</a></span>
+</li>
+<li>
+<span><a href="#filestat-birthtime-">FileStat.birthtime()</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-util-fs-and-stat">
+			<code>lib://util/fs</code> and Stat
+			<span><a class="mark" href="#lib-util-fs-and-stat" id="lib-util-fs-and-stat">#</a></span>
+		</h1><h2 id="enum-filetype">
+			<code>Enum: FileType</code>
+			<span><a class="mark" href="#enum-filetype" id="enum-filetype">#</a></span>
+		</h2><p>文件的类型,枚举类型都为<code>int</code>整数</p>
+<h3 id="file_unknown">
+			FILE_UNKNOWN
+			<span><a class="mark" href="#file_unknown" id="file_unknown">#</a></span>
+		</h3><h3 id="file_file">
+			FILE_FILE
+			<span><a class="mark" href="#file_file" id="file_file">#</a></span>
+		</h3><h3 id="file_dir">
+			FILE_DIR
+			<span><a class="mark" href="#file_dir" id="file_dir">#</a></span>
+		</h3><h3 id="file_link">
+			FILE_LINK
+			<span><a class="mark" href="#file_link" id="file_link">#</a></span>
+		</h3><h3 id="file_fifo">
+			FILE_FIFO
+			<span><a class="mark" href="#file_fifo" id="file_fifo">#</a></span>
+		</h3><h3 id="file_socket">
+			FILE_SOCKET
+			<span><a class="mark" href="#file_socket" id="file_socket">#</a></span>
+		</h3><h3 id="file_char">
+			FILE_CHAR
+			<span><a class="mark" href="#file_char" id="file_char">#</a></span>
+		</h3><h3 id="file_block">
+			FILE_BLOCK
+			<span><a class="mark" href="#file_block" id="file_block">#</a></span>
+		</h3><h2 id="object-dirent">
+			<code>Object: Dirent</code>
+			<span><a class="mark" href="#object-dirent" id="object-dirent">#</a></span>
+		</h2><p>读取目录时返回的结构类型, 这是个<code>Object</code>类型描述并没有实际存在的构造函数</p>
+<h3 id="dirent-name">
+			Dirent.name
+			<span><a class="mark" href="#dirent-name" id="dirent-name">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 文件名称</li>
+</ul>
+<h3 id="dirent-pathname">
+			Dirent.pathname
+			<span><a class="mark" href="#dirent-pathname" id="dirent-pathname">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 文件路径</li>
+</ul>
+<h3 id="dirent-type">
+			Dirent.type
+			<span><a class="mark" href="#dirent-type" id="dirent-type">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/file_stat.html#enum-filetype"><code>FileType</code></a>} 文件类型枚举值 <code>FileType</code></li>
+</ul>
+<h2 id="class-filestat">
+			<code>Class: FileStat</code>
+			<span><a class="mark" href="#class-filestat" id="class-filestat">#</a></span>
+		</h2><p>文件描述类,通过这个类型可以访问文件的诸多信息,</p>
+<h3 id="filestat-constructor-path-">
+			FileStat.constructor(path)
+			<span><a class="mark" href="#filestat-constructor-path-" id="filestat-constructor-path-">#</a></span>
+		</h3><p>传入具体的文件路径<code>path</code>来创建一个<code>FileStat</code>实体</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// {
+//   is_valid: true,
+//   is_file: true,
+//   is_dir: false,
+//   is_link: false,
+//   is_sock: false,
+//   mode: 33263,
+//   type: 1,
+//   group: 501,
+//   owner: 501,
+//   size: 61,
+//   nlink: 1,
+//   ino: 4.30823e+09,
+//   blksize: 4194304,
+//   blocks: 8,
+//   flags: 0,
+//   gen: 0,
+//   dev: 16777219,
+//   rdev: 0,
+//   atime: 1.50161e+12,
+//   mtime: 1.50161e+12,
+//   ctime: 1.50161e+12,
+//   birthtime: 1.50161e+12
+// }
+var stat = new fs.FileStat(path);
+console.log({
+    is_valid: stat.is_valid(),
+    is_file: stat.is_file(),
+    is_dir: stat.is_dir(),
+    is_link: stat.is_link(),
+    is_sock: stat.is_sock(),
+    mode: stat.mode(),
+    type: stat.type(),
+    group: stat.group(),
+    owner: stat.owner(),
+    size: stat.size(),
+    nlink: stat.nlink(),
+    ino: stat.ino(),
+    blksize: stat.blksize(),
+    blocks: stat.blocks(),
+    flags: stat.flags(),
+    gen: stat.gen(),
+    dev: stat.dev(),
+    rdev: stat.rdev(),
+    atime: stat.atime(),
+    mtime: stat.mtime(),
+    ctime: stat.ctime(),
+    birthtime: stat.birthtime(),
+})
+</code></pre>
+<h3 id="filestat-is_valid-">
+			FileStat.is_valid()
+			<span><a class="mark" href="#filestat-is_valid-" id="filestat-is_valid-">#</a></span>
+		</h3><p>这个状态信息是否有效</p>
+<ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="filestat-is_file-">
+			FileStat.is_file()
+			<span><a class="mark" href="#filestat-is_file-" id="filestat-is_file-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="filestat-is_dir-">
+			FileStat.is_dir()
+			<span><a class="mark" href="#filestat-is_dir-" id="filestat-is_dir-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="filestat-is_link-">
+			FileStat.is_link()
+			<span><a class="mark" href="#filestat-is_link-" id="filestat-is_link-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="filestat-is_sock-">
+			FileStat.is_sock()
+			<span><a class="mark" href="#filestat-is_sock-" id="filestat-is_sock-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="filestat-mode-">
+			FileStat.mode()
+			<span><a class="mark" href="#filestat-mode-" id="filestat-mode-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-type-">
+			FileStat.type()
+			<span><a class="mark" href="#filestat-type-" id="filestat-type-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/file_stat.html#enum-filetype"><code>FileType</code></a>}</li>
+</ul>
+<h3 id="filestat-group-">
+			FileStat.group()
+			<span><a class="mark" href="#filestat-group-" id="filestat-group-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-owner-">
+			FileStat.owner()
+			<span><a class="mark" href="#filestat-owner-" id="filestat-owner-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-size-">
+			FileStat.size()
+			<span><a class="mark" href="#filestat-size-" id="filestat-size-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-nlink-">
+			FileStat.nlink()
+			<span><a class="mark" href="#filestat-nlink-" id="filestat-nlink-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-ino-">
+			FileStat.ino()
+			<span><a class="mark" href="#filestat-ino-" id="filestat-ino-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-blksize-">
+			FileStat.blksize()
+			<span><a class="mark" href="#filestat-blksize-" id="filestat-blksize-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-blocks-">
+			FileStat.blocks()
+			<span><a class="mark" href="#filestat-blocks-" id="filestat-blocks-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-flags-">
+			FileStat.flags()
+			<span><a class="mark" href="#filestat-flags-" id="filestat-flags-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-gen-">
+			FileStat.gen()
+			<span><a class="mark" href="#filestat-gen-" id="filestat-gen-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-dev-">
+			FileStat.dev()
+			<span><a class="mark" href="#filestat-dev-" id="filestat-dev-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-rdev-">
+			FileStat.rdev()
+			<span><a class="mark" href="#filestat-rdev-" id="filestat-rdev-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-atime-">
+			FileStat.atime()
+			<span><a class="mark" href="#filestat-atime-" id="filestat-atime-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-mtime-">
+			FileStat.mtime()
+			<span><a class="mark" href="#filestat-mtime-" id="filestat-mtime-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-ctime-">
+			FileStat.ctime()
+			<span><a class="mark" href="#filestat-ctime-" id="filestat-ctime-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<h3 id="filestat-birthtime-">
+			FileStat.birthtime()
+			<span><a class="mark" href="#filestat-birthtime-" id="filestat-birthtime-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/http.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-util-http">lib://util/http</a></span>
+<ul>
+<li>
+<span><a href="#enum-httpmethod">Enum: HttpMethod</a></span>
+<ul>
+<li>
+<span><a href="#http_method_get">HTTP_METHOD_GET</a></span>
+</li>
+<li>
+<span><a href="#http_method_post">HTTP_METHOD_POST</a></span>
+</li>
+<li>
+<span><a href="#http_method_head">HTTP_METHOD_HEAD</a></span>
+</li>
+<li>
+<span><a href="#http_method_delete">HTTP_METHOD_DELETE</a></span>
+</li>
+<li>
+<span><a href="#http_method_put">HTTP_METHOD_PUT</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-httpreadystate">Enum: HttpReadyState</a></span>
+<ul>
+<li>
+<span><a href="#http_ready_state_initial">HTTP_READY_STATE_INITIAL</a></span>
+</li>
+<li>
+<span><a href="#http_ready_state_ready">HTTP_READY_STATE_READY</a></span>
+</li>
+<li>
+<span><a href="#http_ready_state_sending">HTTP_READY_STATE_SENDING</a></span>
+</li>
+<li>
+<span><a href="#http_ready_state_response">HTTP_READY_STATE_RESPONSE</a></span>
+</li>
+<li>
+<span><a href="#http_ready_state_completed">HTTP_READY_STATE_COMPLETED</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-httpclientrequest">Class: HttpClientRequest</a></span>
+<ul>
+<li>
+<span><a href="#httpclientrequest-onerror">HttpClientRequest.onerror</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onwrite">HttpClientRequest.onwrite</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onheader">HttpClientRequest.onheader</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-ondata">HttpClientRequest.ondata</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onend">HttpClientRequest.onend</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onreadystate_change">HttpClientRequest.onreadystate_change</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-ontimeout">HttpClientRequest.ontimeout</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onabort">HttpClientRequest.onabort</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-constructor-">HttpClientRequest.constructor()</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_method-method-">HttpClientRequest.set_method(method)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_url-url-">HttpClientRequest.set_url(url)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_save_path-path-">HttpClientRequest.set_save_path(path)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_username-username-">HttpClientRequest.set_username(username)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_password-password-">HttpClientRequest.set_password(password)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-disable_cache-disable-">HttpClientRequest.disable_cache(disable)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-disable_cookie-disable-">HttpClientRequest.disable_cookie(disable)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-disable_send_cookie-disable-">HttpClientRequest.disable_send_cookie(disable)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-disable_ssl_verify-disable-">HttpClientRequest.disable_ssl_verify(disable)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_request_header-header_name-value-">HttpClientRequest.set_request_header(header_name, value)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_form-form_name-value-">HttpClientRequest.set_form(form_name, value)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_upload_file-form_name-local_path-">HttpClientRequest.set_upload_file(form_name, local_path)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-clear_request_header-">HttpClientRequest.clear_request_header()</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-clear_form_data-">HttpClientRequest.clear_form_data()</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-get_response_header-header_name-">HttpClientRequest.get_response_header(header_name)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-get_all_response_headers-">HttpClientRequest.get_all_response_headers()</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_keep_alive-keep_alive-">HttpClientRequest.set_keep_alive(keep_alive)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-set_timeout-time-">HttpClientRequest.set_timeout(time)</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-send-data-">HttpClientRequest.send([data])</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-pause-">HttpClientRequest.pause()</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-resume-">HttpClientRequest.resume()</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-abort-">HttpClientRequest.abort()</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-upload_total">Get: HttpClientRequest.upload_total</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-upload_size">Get: HttpClientRequest.upload_size</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-download_total">Get: HttpClientRequest.download_total</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-download_size">Get: HttpClientRequest.download_size</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-ready_state">Get: HttpClientRequest.ready_state</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-status_code">Get: HttpClientRequest.status_code</a></span>
+</li>
+<li>
+<span><a href="#get-httpclientrequest-url">Get: HttpClientRequest.url</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#object-requestoptions">Object: RequestOptions</a></span>
+<ul>
+<li>
+<span><a href="#requestoptions-url">RequestOptions.url</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-method">RequestOptions.method</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-headers">RequestOptions.headers</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-post_data">RequestOptions.post_data</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-save">RequestOptions.save</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-upload">RequestOptions.upload</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-disable_ssl_verify">RequestOptions.disable_ssl_verify</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-disable_cache">RequestOptions.disable_cache</a></span>
+</li>
+<li>
+<span><a href="#requestoptions-disable_cookie">RequestOptions.disable_cookie</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#request-options-cb-">request(options[,cb])</a></span>
+</li>
+<li>
+<span><a href="#request_stream-options-cb-">request_stream(options[,cb])</a></span>
+</li>
+<li>
+<span><a href="#request_sync-options-">request_sync(options)</a></span>
+</li>
+<li>
+<span><a href="#download-url-save-cb-">download(url,save[,cb])</a></span>
+</li>
+<li>
+<span><a href="#upload-url-local_path-cb-">upload(url,local_path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#get-url-cb-">get(url[,cb])</a></span>
+</li>
+<li>
+<span><a href="#post-url-data-cb-">post(url,data[,cb])</a></span>
+</li>
+<li>
+<span><a href="#get_sync-url-">get_sync(url)</a></span>
+</li>
+<li>
+<span><a href="#post_sync-url-data-">post_sync(url,data)</a></span>
+</li>
+<li>
+<span><a href="#abort-id-">abort(id)</a></span>
+</li>
+<li>
+<span><a href="#user_agent-">user_agent()</a></span>
+</li>
+<li>
+<span><a href="#set_user_agent-user_agent-">set_user_agent(user_agent)</a></span>
+</li>
+<li>
+<span><a href="#ssl_cacert_file-">ssl_cacert_file()</a></span>
+</li>
+<li>
+<span><a href="#set_ssl_cacert_file-path-">set_ssl_cacert_file(path)</a></span>
+</li>
+<li>
+<span><a href="#cache_path-">cache_path()</a></span>
+</li>
+<li>
+<span><a href="#set_cache_path-path-">set_cache_path(path)</a></span>
+</li>
+<li>
+<span><a href="#clear_cache-">clear_cache()</a></span>
+</li>
+<li>
+<span><a href="#clear_cookie-">clear_cookie()</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-util-http">
+			<code>lib://util/http</code>
+			<span><a class="mark" href="#lib-util-http" id="lib-util-http">#</a></span>
+		</h1><p>提供<code>http</code>与<code>https</code>协议的客服端支持</p>
+<p>可以使用<code>get</code>方式访问服务端数据，并可很方便的将这些数据保存到本地</p>
+<p>也可使用<code>post</code>方式发送数据或上传文件到服务器</p>
+<h2 id="enum-httpmethod">
+			<code>Enum: HttpMethod</code>
+			<span><a class="mark" href="#enum-httpmethod" id="enum-httpmethod">#</a></span>
+		</h2><p>发送http的方法</p>
+<h3 id="http_method_get">
+			HTTP_METHOD_GET
+			<span><a class="mark" href="#http_method_get" id="http_method_get">#</a></span>
+		</h3><h3 id="http_method_post">
+			HTTP_METHOD_POST
+			<span><a class="mark" href="#http_method_post" id="http_method_post">#</a></span>
+		</h3><h3 id="http_method_head">
+			HTTP_METHOD_HEAD
+			<span><a class="mark" href="#http_method_head" id="http_method_head">#</a></span>
+		</h3><h3 id="http_method_delete">
+			HTTP_METHOD_DELETE
+			<span><a class="mark" href="#http_method_delete" id="http_method_delete">#</a></span>
+		</h3><h3 id="http_method_put">
+			HTTP_METHOD_PUT
+			<span><a class="mark" href="#http_method_put" id="http_method_put">#</a></span>
+		</h3><h2 id="enum-httpreadystate">
+			<code>Enum: HttpReadyState</code>
+			<span><a class="mark" href="#enum-httpreadystate" id="enum-httpreadystate">#</a></span>
+		</h2><p><code>HttpClientRequest</code>请求状态，状态的变化触发<code>onreadystate_change</code></p>
+<h3 id="http_ready_state_initial">
+			HTTP_READY_STATE_INITIAL
+			<span><a class="mark" href="#http_ready_state_initial" id="http_ready_state_initial">#</a></span>
+		</h3><p>未初始化，未调用<code>send()</code>或一个请求完成后</p>
+<h3 id="http_ready_state_ready">
+			HTTP_READY_STATE_READY
+			<span><a class="mark" href="#http_ready_state_ready" id="http_ready_state_ready">#</a></span>
+		</h3><p>准备发送状态，调用完<code>send()</code>后的正在建立连接或打开本地缓存</p>
+<h3 id="http_ready_state_sending">
+			HTTP_READY_STATE_SENDING
+			<span><a class="mark" href="#http_ready_state_sending" id="http_ready_state_sending">#</a></span>
+		</h3><p>连接已经建立开始发送请求与数据，如果使用本地缓存，这个状态不会被触发</p>
+<p>触发这个状态后会连续触发<code>onwrite</code>事件直到数据发送完成</p>
+<h3 id="http_ready_state_response">
+			HTTP_READY_STATE_RESPONSE
+			<span><a class="mark" href="#http_ready_state_response" id="http_ready_state_response">#</a></span>
+		</h3><p>请求发送完成，开始接收响应数据</p>
+<p>触发这个状态后会连续触发<code>ondata</code>事件直到响应完成</p>
+<h3 id="http_ready_state_completed">
+			HTTP_READY_STATE_COMPLETED
+			<span><a class="mark" href="#http_ready_state_completed" id="http_ready_state_completed">#</a></span>
+		</h3><p>完成请求，如果是一个没有异常的请求，会触发<code>onend</code>事件</p>
+<h2 id="class-httpclientrequest">
+			<code>Class: HttpClientRequest</code>
+			<span><a class="mark" href="#class-httpclientrequest" id="class-httpclientrequest">#</a></span>
+		</h2><p>Http客服端请求类</p>
+<h3 id="httpclientrequest-onerror">
+			HttpClientRequest.onerror
+			<span><a class="mark" href="#httpclientrequest-onerror" id="httpclientrequest-onerror">#</a></span>
+		</h3><p>请求出现异常时触发,触发异常一般会接着触发<code>onabort</code>.</p>
+<p>返回的事件数据为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a>类型</p>
+<h3 id="httpclientrequest-onwrite">
+			HttpClientRequest.onwrite
+			<span><a class="mark" href="#httpclientrequest-onwrite" id="httpclientrequest-onwrite">#</a></span>
+		</h3><p>发送数据时连续触发,直到数据发送完成</p>
+<h3 id="httpclientrequest-onheader">
+			HttpClientRequest.onheader
+			<span><a class="mark" href="#httpclientrequest-onheader" id="httpclientrequest-onheader">#</a></span>
+		</h3><p>接收响应头完成触发</p>
+<h3 id="httpclientrequest-ondata">
+			HttpClientRequest.ondata
+			<span><a class="mark" href="#httpclientrequest-ondata" id="httpclientrequest-ondata">#</a></span>
+		</h3><p>接收响应数据时连续触发,直到数据接收完成,事件数据为主体响应片段<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a></p>
+<h3 id="httpclientrequest-onend">
+			HttpClientRequest.onend
+			<span><a class="mark" href="#httpclientrequest-onend" id="httpclientrequest-onend">#</a></span>
+		</h3><p>请求完成触发</p>
+<h3 id="httpclientrequest-onreadystate_change">
+			HttpClientRequest.onreadystate_change
+			<span><a class="mark" href="#httpclientrequest-onreadystate_change" id="httpclientrequest-onreadystate_change">#</a></span>
+		</h3><p>状态变化时触发</p>
+<h3 id="httpclientrequest-ontimeout">
+			HttpClientRequest.ontimeout
+			<span><a class="mark" href="#httpclientrequest-ontimeout" id="httpclientrequest-ontimeout">#</a></span>
+		</h3><p>超时时触发，<a href="../util/http.html#httpclientrequest-set_timeout-time-"><code>HttpClientRequest.set_timeout()</code></a> 设置超时时间</p>
+<h3 id="httpclientrequest-onabort">
+			HttpClientRequest.onabort
+			<span><a class="mark" href="#httpclientrequest-onabort" id="httpclientrequest-onabort">#</a></span>
+		</h3><p>请求被中止时触发</p>
+<p>Example:</p>
+<pre><code class="undefinedjs">var cl = new HttpClientRequest()
+// Prints: Error: Network error
+cl.onerror = function(ev) { console.log(ev.data) }
+// Prints: &lt;Buffer 00 aa cf 67&gt;
+cl.ondata = function(ev) { console.log(ev.data) }
+// Prints: 4 200
+cl.onreadystate_change = function() { console.log(this.ready_state, this.status_code) }
+</code></pre>
+<h3 id="httpclientrequest-constructor-">
+			HttpClientRequest.constructor()
+			<span><a class="mark" href="#httpclientrequest-constructor-" id="httpclientrequest-constructor-">#</a></span>
+		</h3><h3 id="httpclientrequest-set_method-method-">
+			HttpClientRequest.set_method(method)
+			<span><a class="mark" href="#httpclientrequest-set_method-method-" id="httpclientrequest-set_method-method-">#</a></span>
+		</h3><p>设置请求方法默认为<a href="../util/http.html#http_method_get"><code>HTTP_METHOD_GET</code></a>方法</p>
+<ul>
+<li>@arg <code>method</code> {<a href="../util/http.html#enum-httpmethod"><code>HttpMethod</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_url-url-">
+			HttpClientRequest.set_url(url)
+			<span><a class="mark" href="#httpclientrequest-set_url-url-" id="httpclientrequest-set_url-url-">#</a></span>
+		</h3><ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_save_path-path-">
+			HttpClientRequest.set_save_path(path)
+			<span><a class="mark" href="#httpclientrequest-set_save_path-path-" id="httpclientrequest-set_save_path-path-">#</a></span>
+		</h3><p>设置一个路径将数据保存到本地</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_username-username-">
+			HttpClientRequest.set_username(username)
+			<span><a class="mark" href="#httpclientrequest-set_username-username-" id="httpclientrequest-set_username-username-">#</a></span>
+		</h3><p>http请求头<code>Authorization</code>用户名</p>
+<ul>
+<li>@arg <code>username</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_password-password-">
+			HttpClientRequest.set_password(password)
+			<span><a class="mark" href="#httpclientrequest-set_password-password-" id="httpclientrequest-set_password-password-">#</a></span>
+		</h3><p>http请求头<code>Authorization</code>密码</p>
+<ul>
+<li>@arg <code>password</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-disable_cache-disable-">
+			HttpClientRequest.disable_cache(disable)
+			<span><a class="mark" href="#httpclientrequest-disable_cache-disable-" id="httpclientrequest-disable_cache-disable-">#</a></span>
+		</h3><p>禁用缓存,既不保存下载的数据也不读取本地缓存数据</p>
+<ul>
+<li>@arg <code>disable</code> {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-disable_cookie-disable-">
+			HttpClientRequest.disable_cookie(disable)
+			<span><a class="mark" href="#httpclientrequest-disable_cookie-disable-" id="httpclientrequest-disable_cookie-disable-">#</a></span>
+		</h3><p>完全禁用cookie,不保存也不读取</p>
+<ul>
+<li>@arg <code>disable</code> {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-disable_send_cookie-disable-">
+			HttpClientRequest.disable_send_cookie(disable)
+			<span><a class="mark" href="#httpclientrequest-disable_send_cookie-disable-" id="httpclientrequest-disable_send_cookie-disable-">#</a></span>
+		</h3><p>只是不发送本地保存的cookie,但保存服务器设置的cookie</p>
+<ul>
+<li>@arg <code>disable</code> {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-disable_ssl_verify-disable-">
+			HttpClientRequest.disable_ssl_verify(disable)
+			<span><a class="mark" href="#httpclientrequest-disable_ssl_verify-disable-" id="httpclientrequest-disable_ssl_verify-disable-">#</a></span>
+		</h3><p>禁用ssl认证,如果站点没有合法的证书,默认请求会发送失败,但可以设置禁用忽略认证</p>
+<ul>
+<li>@arg <code>disable</code> {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_request_header-header_name-value-">
+			HttpClientRequest.set_request_header(header_name, value)
+			<span><a class="mark" href="#httpclientrequest-set_request_header-header_name-value-" id="httpclientrequest-set_request_header-header_name-value-">#</a></span>
+		</h3><ul>
+<li>@arg <code>header_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} ascii string</li>
+<li>@arg <code>value</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_form-form_name-value-">
+			HttpClientRequest.set_form(form_name, value)
+			<span><a class="mark" href="#httpclientrequest-set_form-form_name-value-" id="httpclientrequest-set_form-form_name-value-">#</a></span>
+		</h3><p>设置表单数据</p>
+<p>待发送请求时会自动添加请求头 <code>Content-Type: application/x-www-form-urlencoded; charset=utf-8</code></p>
+<p>必须使用<a href="../util/http.html#http_method_post"><code>HTTP_METHOD_POST</code></a>方法发送请求否则会忽略表单</p>
+<ul>
+<li>@arg <code>form_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>value</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_upload_file-form_name-local_path-">
+			HttpClientRequest.set_upload_file(form_name, local_path)
+			<span><a class="mark" href="#httpclientrequest-set_upload_file-form_name-local_path-" id="httpclientrequest-set_upload_file-form_name-local_path-">#</a></span>
+		</h3><p>上传本地文件设置以<code>multipart/form-data</code>形式, 并在发送请求时自动添加请求头</p>
+<p><code>Content-Type: multipart/form-data; boundary=----AvocadoFormBoundaryrGKCBY7qhFd3TrwA</code></p>
+<p>必须使用<a href="../util/http.html#http_method_post"><code>HTTP_METHOD_POST</code></a>方法发送请求否则会忽略表单</p>
+<ul>
+<li>@arg <code>form_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>local_path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-clear_request_header-">
+			HttpClientRequest.clear_request_header()
+			<span><a class="mark" href="#httpclientrequest-clear_request_header-" id="httpclientrequest-clear_request_header-">#</a></span>
+		</h3><p>清空原先设置的请示头</p>
+<h3 id="httpclientrequest-clear_form_data-">
+			HttpClientRequest.clear_form_data()
+			<span><a class="mark" href="#httpclientrequest-clear_form_data-" id="httpclientrequest-clear_form_data-">#</a></span>
+		</h3><p>清空原先设置的表单</p>
+<h3 id="httpclientrequest-get_response_header-header_name-">
+			HttpClientRequest.get_response_header(header_name)
+			<span><a class="mark" href="#httpclientrequest-get_response_header-header_name-" id="httpclientrequest-get_response_header-header_name-">#</a></span>
+		</h3><ul>
+<li>@arg <code>header_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-get_all_response_headers-">
+			HttpClientRequest.get_all_response_headers()
+			<span><a class="mark" href="#httpclientrequest-get_all_response_headers-" id="httpclientrequest-get_all_response_headers-">#</a></span>
+		</h3><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_keep_alive-keep_alive-">
+			HttpClientRequest.set_keep_alive(keep_alive)
+			<span><a class="mark" href="#httpclientrequest-set_keep_alive-keep_alive-" id="httpclientrequest-set_keep_alive-keep_alive-">#</a></span>
+		</h3><p>设置为<code>true</code>保持这个http连接,如果下次有这个服务器的请求会直接使用需无需再重新建立socket连接</p>
+<p>当然这个功能需要服务器支持,如果服务完成请求后立即断开连接,那就是无效的。</p>
+<p><strong>默认为<code>true</code></strong></p>
+<ul>
+<li>@arg <code>keep_alive</code> {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-set_timeout-time-">
+			HttpClientRequest.set_timeout(time)
+			<span><a class="mark" href="#httpclientrequest-set_timeout-time-" id="httpclientrequest-set_timeout-time-">#</a></span>
+		</h3><p>设置一个超时时间,达到超时时间还未完成请求客户端会立即主动中止这个请求,并触发<code>ontimeout</code>与<code>onabort</code>事件</p>
+<p>默认为<code>0</code>表示永远不超时,单位为毫秒<code>ms</code></p>
+<ul>
+<li>@arg <code>time</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} ms</li>
+</ul>
+<h3 id="httpclientrequest-send-data-">
+			HttpClientRequest.send([data])
+			<span><a class="mark" href="#httpclientrequest-send-data-" id="httpclientrequest-send-data-">#</a></span>
+		</h3><p>发送请求与数据,如果要发送数据这个请求必须为<a href="../util/http.html#http_method_post"><code>HTTP_METHOD_POST</code></a>方式,否则会忽略这些数据</p>
+<p>如果在这里设置数据，那么之前设置的表单数据将被完全忽略</p>
+<p>如果发送的是<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>类型数据, 传入<code>buffer</code>后内部数据指针会被夺走成为空壳，相当于调用<a href="../util/buffer.html#buffer-collapse-"><code>Buffer.collapse()</code></a></p>
+<ul>
+<li>@arg <code>[data]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+</ul>
+<h3 id="httpclientrequest-pause-">
+			HttpClientRequest.pause()
+			<span><a class="mark" href="#httpclientrequest-pause-" id="httpclientrequest-pause-">#</a></span>
+		</h3><p>暂停请求</p>
+<h3 id="httpclientrequest-resume-">
+			HttpClientRequest.resume()
+			<span><a class="mark" href="#httpclientrequest-resume-" id="httpclientrequest-resume-">#</a></span>
+		</h3><p>恢复暂停的请求</p>
+<h3 id="httpclientrequest-abort-">
+			HttpClientRequest.abort()
+			<span><a class="mark" href="#httpclientrequest-abort-" id="httpclientrequest-abort-">#</a></span>
+		</h3><p>中止请求</p>
+<h3 id="get-httpclientrequest-upload_total">
+			Get: HttpClientRequest.upload_total
+			<span><a class="mark" href="#get-httpclientrequest-upload_total" id="get-httpclientrequest-upload_total">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="get-httpclientrequest-upload_size">
+			Get: HttpClientRequest.upload_size
+			<span><a class="mark" href="#get-httpclientrequest-upload_size" id="get-httpclientrequest-upload_size">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="get-httpclientrequest-download_total">
+			Get: HttpClientRequest.download_total
+			<span><a class="mark" href="#get-httpclientrequest-download_total" id="get-httpclientrequest-download_total">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="get-httpclientrequest-download_size">
+			Get: HttpClientRequest.download_size
+			<span><a class="mark" href="#get-httpclientrequest-download_size" id="get-httpclientrequest-download_size">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="get-httpclientrequest-ready_state">
+			Get: HttpClientRequest.ready_state
+			<span><a class="mark" href="#get-httpclientrequest-ready_state" id="get-httpclientrequest-ready_state">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/http.html#enum-httpreadystate"><code>HttpReadyState</code></a>}</li>
+</ul>
+<h3 id="get-httpclientrequest-status_code">
+			Get: HttpClientRequest.status_code
+			<span><a class="mark" href="#get-httpclientrequest-status_code" id="get-httpclientrequest-status_code">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+</ul>
+<h3 id="get-httpclientrequest-url">
+			Get: HttpClientRequest.url
+			<span><a class="mark" href="#get-httpclientrequest-url" id="get-httpclientrequest-url">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var cl = new http.HttpClientRequest()
+cl.set_url(&#39;https://www.baidu.com/&#39;)
+cl2.set_save_path(path.documents(&#39;baidu.html&#39;));
+// Prints: 
+// &lt;Buffer 3c 68 74 6d 6c 3e 0d ... &gt;
+// &lt;Buffer 3c 21 44 4f 43 54 59 ... &gt; 
+// ...
+cl.ondata = function(ev) {
+    console.log(ev.data);
+}
+cl.onend = function() {
+    // Prints:
+    // true
+    // 4 200
+    console.log(fs.exists_sync(path.documents(&#39;baidu.html&#39;)))
+    console.log(this.ready_state, this.status_code)
+}
+cl.send();
+
+var cl2 = new http.HttpClientRequest()
+cl2.set_url(&#39;http://192.168.1.100:1026/Tools/upload_file&#39;)
+cl2.set_method(http.HTTP_METHOD_POST);
+cl2.set_upload_file(&#39;upload_file&#39;, path.resources(&#39;util/http.js&#39;))
+cl2.onend = function() {
+    // Prints: complete
+    console.log(&#39;complete&#39;)
+}
+cl2.send();
+</code></pre>
+<h2 id="object-requestoptions">
+			<code>Object: RequestOptions</code>
+			<span><a class="mark" href="#object-requestoptions" id="object-requestoptions">#</a></span>
+		</h2><p>调用<code>request()</code>or<code>request_sync()</code>时使用的选项数据, 这是个<code>Object</code>类型描述并没有实际存在的构造函数</p>
+<h3 id="requestoptions-url">
+			RequestOptions.url
+			<span><a class="mark" href="#requestoptions-url" id="requestoptions-url">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="requestoptions-method">
+			RequestOptions.method
+			<span><a class="mark" href="#requestoptions-method" id="requestoptions-method">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/http.html#enum-httpmethod"><code>HttpMethod</code></a>}</li>
+</ul>
+<h3 id="requestoptions-headers">
+			RequestOptions.headers
+			<span><a class="mark" href="#requestoptions-headers" id="requestoptions-headers">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h3 id="requestoptions-post_data">
+			RequestOptions.post_data
+			<span><a class="mark" href="#requestoptions-post_data" id="requestoptions-post_data">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="requestoptions-save">
+			RequestOptions.save
+			<span><a class="mark" href="#requestoptions-save" id="requestoptions-save">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="requestoptions-upload">
+			RequestOptions.upload
+			<span><a class="mark" href="#requestoptions-upload" id="requestoptions-upload">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="requestoptions-disable_ssl_verify">
+			RequestOptions.disable_ssl_verify
+			<span><a class="mark" href="#requestoptions-disable_ssl_verify" id="requestoptions-disable_ssl_verify">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="requestoptions-disable_cache">
+			RequestOptions.disable_cache
+			<span><a class="mark" href="#requestoptions-disable_cache" id="requestoptions-disable_cache">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="requestoptions-disable_cookie">
+			RequestOptions.disable_cookie
+			<span><a class="mark" href="#requestoptions-disable_cookie" id="requestoptions-disable_cookie">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// uploat file and save body data
+var opts = {
+    url: &#39;http://192.168.1.100:1026/Tools/upload_file&#39;,
+    method: http.HTTP_METHOD_POST,
+    headers: { test: &#39;test&#39; },
+    // post_data: &#39;a=A&#39;,
+    save: path.documents(&#39;upload_file.html&#39;),
+    upload: path.resources(&#39;util/http.js&#39;),
+    disable_ssl_verify: false,
+    disable_cache: true,
+    disable_cookie: false,
+};
+http.request(opts, function(buff){ 
+    // Prints: &lt;Buffer ...&gt;
+    console.log(buff)
+}.catch(e=&gt;{ /*Fail*/ }))
+</code></pre>
+<h2 id="request-options-cb-">
+			request(options[,cb])
+			<span><a class="mark" href="#request-options-cb-" id="request-options-cb-">#</a></span>
+		</h2><p>发送http请通过<a href="../util/http.html#object-requestoptions"><code>RequestOptions</code></a>参数，并返回中止<code>id</code>失败抛出异常</p>
+<p>成功通过回调返回<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a></p>
+<p>Callback: <code>cb(buff)</code> (buff:<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>)</p>
+<ul>
+<li>@arg <code>options</code> {<a href="../util/http.html#object-requestoptions"><code>RequestOptions</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var abortid = http.request({
+    url: &#39;http://192.168.1.100:1026/&#39;,
+}, function(buff){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }))
+</code></pre>
+<h2 id="request_stream-options-cb-">
+			request_stream(options[,cb])
+			<span><a class="mark" href="#request_stream-options-cb-" id="request_stream-options-cb-">#</a></span>
+		</h2><p>发送http请通过<a href="../util/http.html#object-requestoptions"><code>RequestOptions</code></a>参数，并返回中止<code>id</code>失败抛出异常</p>
+<p>成功通过回调返回<a href="../util/fs.html#object-streamdata"><code>StreamData</code></a></p>
+<p>Callback: <code>cb(data)</code> (data:<a href="../util/fs.html#object-streamdata"><code>StreamData</code></a>)</p>
+<ul>
+<li>@arg <code>options</code> {<a href="../util/http.html#object-requestoptions"><code>RequestOptions</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var abortid = http.request_stream({ 
+    url: &#39;http://192.168.1.100:1026/&#39; 
+}, function(d){ 
+    // Prints: &lt;Buffer ...&gt;
+    console.log(d.data) 
+}.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+<h2 id="request_sync-options-">
+			request_sync(options)
+			<span><a class="mark" href="#request_sync-options-" id="request_sync-options-">#</a></span>
+		</h2><p>同步发送http请求通过<a href="../util/http.html#object-requestoptions"><code>RequestOptions</code></a>参数，失败抛出异常</p>
+<p>成功返回主体<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>数据</p>
+<ul>
+<li>@arg <code>options</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: &lt;Buffer ...&gt;
+try {
+    console.log(http.request_sync({ url: &#39;http://192.168.1.100:1026/&#39; }));
+} catch(e) { /*Fail*/ }
+</code></pre>
+<h2 id="download-url-save-cb-">
+			download(url,save[,cb])
+			<span><a class="mark" href="#download-url-save-cb-" id="download-url-save-cb-">#</a></span>
+		</h2><p>下载并保存文件，返回中止<code>id</code>失败抛出异常</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}            请求的<code>url</code></li>
+<li>@arg <code>save</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        本地保存路径</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<h2 id="upload-url-local_path-cb-">
+			upload(url,local_path[,cb])
+			<span><a class="mark" href="#upload-url-local_path-cb-" id="upload-url-local_path-cb-">#</a></span>
+		</h2><p>上传本地文件到服务器，返回中止<code>id</code>失败抛出异常</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        请求有<code>url</code></li>
+<li>@arg <code>local_path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    要上传的本地文件路径</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<h2 id="get-url-cb-">
+			get(url[,cb])
+			<span><a class="mark" href="#get-url-cb-" id="get-url-cb-">#</a></span>
+		</h2><p>发送<a href="../util/http.html#http_method_get"><code>HTTP_METHOD_GET</code></a>请求，返回中止<code>id</code>失败抛出异常</p>
+<p>成功通过回调返回响应数据</p>
+<p>Callback <code>cb(buff)</code> cb(buff:<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>)</p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<h2 id="post-url-data-cb-">
+			post(url,data[,cb])
+			<span><a class="mark" href="#post-url-data-cb-" id="post-url-data-cb-">#</a></span>
+		</h2><p>发送<a href="../util/http.html#http_method_post"><code>HTTP_METHOD_POST</code></a>请求，返回中止<code>id</code>失败抛出异常</p>
+<p>成功通过回调返回响应数据</p>
+<p>Callback <code>cb(buff)</code> cb(buff:<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>)</p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>data</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<h2 id="get_sync-url-">
+			get_sync(url)
+			<span><a class="mark" href="#get_sync-url-" id="get_sync-url-">#</a></span>
+		</h2><p>同步发送<a href="../util/http.html#http_method_get"><code>HTTP_METHOD_GET</code></a>请求，成功返回数据<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>，失败抛出异常</p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+</ul>
+<h2 id="post_sync-url-data-">
+			post_sync(url,data)
+			<span><a class="mark" href="#post_sync-url-data-" id="post_sync-url-data-">#</a></span>
+		</h2><p>同步发送<a href="../util/http.html#http_method_post"><code>HTTP_METHOD_POST</code></a>请求，成功返回数据<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>，失败抛出异常</p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>data</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+</ul>
+<h2 id="abort-id-">
+			abort(id)
+			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
+		</h2><p>通过传入中止<code>id</code>强制中止异步任务与之相似的方法有<a href="../util/fs.html#abort-id-"><code>fs.abort()</code></a> or <a href="../util/reader.html#abort-id-"><code>reader.abort()</code></a></p>
+<ul>
+<li>@arg <code>id</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} abort id</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id0 = http.download(&#39;http://192.168.1.100:1026/libs/util/http.js&#39;);
+var id1 = http.upload(&#39;http://192.168.1.100:1026/Tools/upload_file&#39;, path.resources(&#39;util/http.js&#39;));
+// force abort task
+http.abort(id0);
+http.abort(id1);
+</code></pre>
+<h2 id="user_agent-">
+			user_agent()
+			<span><a class="mark" href="#user_agent-" id="user_agent-">#</a></span>
+		</h2><p>返回 <strong>User Agent</strong></p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="set_user_agent-user_agent-">
+			set_user_agent(user_agent)
+			<span><a class="mark" href="#set_user_agent-user_agent-" id="set_user_agent-user_agent-">#</a></span>
+		</h2><p>设置 <strong>User Agent</strong></p>
+<ul>
+<li>@arg user_agent {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="ssl_cacert_file-">
+			ssl_cacert_file()
+			<span><a class="mark" href="#ssl_cacert_file-" id="ssl_cacert_file-">#</a></span>
+		</h2><p>返回 ssl CA证书文件路径</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} return cacert file path</li>
+</ul>
+<h2 id="set_ssl_cacert_file-path-">
+			set_ssl_cacert_file(path)
+			<span><a class="mark" href="#set_ssl_cacert_file-path-" id="set_ssl_cacert_file-path-">#</a></span>
+		</h2><p>设置 ssl CA证书文件</p>
+<ul>
+<li>@arg path {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="cache_path-">
+			cache_path()
+			<span><a class="mark" href="#cache_path-" id="cache_path-">#</a></span>
+		</h2><p>返回缓存路径</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="set_cache_path-path-">
+			set_cache_path(path)
+			<span><a class="mark" href="#set_cache_path-path-" id="set_cache_path-path-">#</a></span>
+		</h2><p>设置缓存路径</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="clear_cache-">
+			clear_cache()
+			<span><a class="mark" href="#clear_cache-" id="clear_cache-">#</a></span>
+		</h2><p>清空缓存数据文件</p>
+<h2 id="clear_cookie-">
+			clear_cookie()
+			<span><a class="mark" href="#clear_cookie-" id="clear_cookie-">#</a></span>
+		</h2><p>清空cookie</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

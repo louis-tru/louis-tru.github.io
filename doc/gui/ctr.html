@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'gui/ctr.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-gui-ctr">lib://gui/ctr</a></span>
+<ul>
+<li>
+<span><a href="#empty">empty</a></span>
+</li>
+<li>
+<span><a href="#is_empty-vx-">is_empty(vx)</a></span>
+</li>
+<li>
+<span><a href="#new-vx-parent-args-">New(vx[,parent[,...args]])</a></span>
+</li>
+<li>
+<span><a href="#new-vx-args-">New(vx[,...args])</a></span>
+</li>
+<li>
+<span><a href="#class-viewcontroller">Class: ViewController</a></span>
+<ul>
+<li>
+<span><a href="#viewcontroller-onload_view">ViewController.onload_view</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onvdata_change">ViewController.onvdata_change</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onremove_view">ViewController.onremove_view</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-constructor-msg-">ViewController.constructor([msg])</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-find-id-">ViewController.find(id)</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-message">ViewController.message</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-vdata">ViewController.vdata</a></span>
+</li>
+<li>
+<span><a href="#get-viewcontroller-parent">Get: ViewController.parent</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-view">ViewController.view</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-id">ViewController.id</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-load_view-vx-">ViewController.load_view(vx)</a></span>
+</li>
+<li>
+<span><a href="#view-proxy-events">View proxy events</a></span>
+<ul>
+<li>
+<span><a href="#viewcontroller-onback">ViewController.onback</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onclick">ViewController.onclick</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-ontouchstart">ViewController.ontouchstart</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-ontouchmove">ViewController.ontouchmove</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-ontouchend">ViewController.ontouchend</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-ontouchcancel">ViewController.ontouchcancel</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onkeydown">ViewController.onkeydown</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onkeypress">ViewController.onkeypress</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onkeyup">ViewController.onkeyup</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onkeyenter">ViewController.onkeyenter</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onfocus">ViewController.onfocus</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onblur">ViewController.onblur</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onhighlighted">ViewController.onhighlighted</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onfocus_move">ViewController.onfocus_move</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onscroll">ViewController.onscroll</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onaction_keyframe">ViewController.onaction_keyframe</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onaction_loop">ViewController.onaction_loop</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onwait_buffer">ViewController.onwait_buffer</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onready">ViewController.onready</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onstart_play">ViewController.onstart_play</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onerror">ViewController.onerror</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onsource_eof">ViewController.onsource_eof</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onpause">ViewController.onpause</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onresume">ViewController.onresume</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onstop">ViewController.onstop</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-onseek">ViewController.onseek</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#view-proxy-methods-and-properties">View proxy methods and properties</a></span>
+<ul>
+<li>
+<span><a href="#viewcontroller-action">ViewController.action</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-style">ViewController.style</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-visible">ViewController.visible</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-receive">ViewController.receive</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-class">ViewController.class</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-transition-style-delay-cb-">ViewController.transition(style[,delay[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-transition-style-cb-">ViewController.transition(style[,cb])</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-show-">ViewController.show()</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-hide-">ViewController.hide()</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-add_class-name-">ViewController.add_class(name)</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-remove_class-name-">ViewController.remove_class(name)</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-toggle_class-name-">ViewController.toggle_class(name)</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-remove-">ViewController.remove()</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-gui-ctr">
+			<code>lib://gui/ctr</code>
+			<span><a class="mark" href="#lib-gui-ctr" id="lib-gui-ctr">#</a></span>
+		</h1><h2 id="empty">
+			empty
+			<span><a class="mark" href="#empty" id="empty">#</a></span>
+		</h2><ul>
+<li>这是一个常量空<code>view xml</code>，描述一个无子视图的<a href="../gui/gui.html#class-view"><code>View</code></a></li>
+</ul>
+<h2 id="is_empty-vx-">
+			is_empty(vx)
+			<span><a class="mark" href="#is_empty-vx-" id="is_empty-vx-">#</a></span>
+		</h2><ul>
+<li><code>vx</code>是否等于<code>empty</code>空视图数据</li>
+</ul>
+<h2 id="new-vx-parent-args-">
+			New(vx[,parent[,...args]])
+			<span><a class="mark" href="#new-vx-parent-args-" id="new-vx-parent-args-">#</a></span>
+		</h2><h2 id="new-vx-args-">
+			New(vx[,...args])
+			<span><a class="mark" href="#new-vx-args-" id="new-vx-args-">#</a></span>
+		</h2><ul>
+<li><p>通过<code>vx</code>描述数据创建视图或视图控制器</p>
+</li>
+<li><p>@arg <code>vx</code> {Object}             <code>view xml</code>描述数据</p>
+</li>
+<li>@arg <code>[parent]</code> {View}     传入父视图时将新创建的视图加入到它的结尾</li>
+<li>@arg <code>[...args]</code>                视图的构造参数</li>
+<li>@ret {<a href="../gui/gui.html#class-view"><code>View</code></a>|<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">import { GUIApplication, ViewController, Root, Div } from &#39;:gui&#39;
+import &#39;:util/http&#39;
+class MyCtr extends ViewController {
+    load_view() {
+        http.get(&#39;http://192.168.1.100:1026/README.md?param=&#39; + this.message.param, bf=&gt;{
+            super.load_view(
+                &lt;Div width=100 height=100 background_color=&quot;#f00&quot;&gt;
+                    ${bf.to_string(&#39;utf8&#39;)}
+                &lt;/Div&gt;
+            )
+        })
+    }
+}
+new GUIApplication().start(
+    &lt;Root&gt;
+        &lt;ViewController vdata={ div_width: 200, div_con: &#39;Hello&#39; }&gt;
+            &lt;Div width=%{vd.div_width} height=100 background_color=&quot;#000&quot;&gt;
+                %{vd.div_con}
+            &lt;/Div&gt;
+        &lt;/ViewController&gt;
+        &lt;MyCtr message={param:10} /&gt;
+    &lt;/Root&gt;
+);
+</code></pre>
+<h2 id="class-viewcontroller">
+			<code>Class: ViewController</code>
+			<span><a class="mark" href="#class-viewcontroller" id="class-viewcontroller">#</a></span>
+		</h2><ul>
+<li><code>extends</code> <a href="../util/event.html#class-notification"><code>Notification</code></a></li>
+</ul>
+<p>视图控制器，与视图绑定后视图变成关键视图，当前控制器有可称为成员视图控制器，</p>
+<p>关键视图下面所有后代视图以及子视图控制器都属于这个作用域中的成员，</p>
+<p>成员视图的<code>top</code>属性都指向当前绑定的关键视图,成员视图的<code>top_ctr</code>以及子视图控制器的<code>parent</code>都指向当前视图控制器，</p>
+<p>如果这些成员有具名的<code>id</code>,可以通过当前视图控制器<code>find(id)</code>找到这些成员</p>
+<h3 id="viewcontroller-onload_view">
+			ViewController.onload_view
+			<span><a class="mark" href="#viewcontroller-onload_view" id="viewcontroller-onload_view">#</a></span>
+		</h3><ul>
+<li>载入视图完成时触发</li>
+</ul>
+<h3 id="viewcontroller-onvdata_change">
+			ViewController.onvdata_change
+			<span><a class="mark" href="#viewcontroller-onvdata_change" id="viewcontroller-onvdata_change">#</a></span>
+		</h3><ul>
+<li>视图数据变化时触发，如果有视图关注这个数据，那么它也会发生改变</li>
+</ul>
+<h3 id="viewcontroller-onremove_view">
+			ViewController.onremove_view
+			<span><a class="mark" href="#viewcontroller-onremove_view" id="viewcontroller-onremove_view">#</a></span>
+		</h3><ul>
+<li>绑定的视图从父视图删除时触发</li>
+</ul>
+<h3 id="viewcontroller-constructor-msg-">
+			ViewController.constructor([msg])
+			<span><a class="mark" href="#viewcontroller-constructor-msg-" id="viewcontroller-constructor-msg-">#</a></span>
+		</h3><ul>
+<li><p>构造函数</p>
+</li>
+<li><p>@arg <code>[msg]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 传入可选的消息对像</p>
+</li>
+</ul>
+<h3 id="viewcontroller-find-id-">
+			ViewController.find(id)
+			<span><a class="mark" href="#viewcontroller-find-id-" id="viewcontroller-find-id-">#</a></span>
+		</h3><ul>
+<li><p>通过<code>id</code>查找成员视图或成员控制器</p>
+</li>
+<li><p>@arg <code>id</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+<li>@ret {<a href="../gui/gui.html#class-view"><code>View</code></a>|<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>)</li>
+</ul>
+<h3 id="viewcontroller-message">
+			ViewController.message
+			<span><a class="mark" href="#viewcontroller-message" id="viewcontroller-message">#</a></span>
+		</h3><ul>
+<li><p>控制器消息对像</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<h3 id="viewcontroller-vdata">
+			ViewController.vdata
+			<span><a class="mark" href="#viewcontroller-vdata" id="viewcontroller-vdata">#</a></span>
+		</h3><ul>
+<li><p>控制器视图数据</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<h3 id="get-viewcontroller-parent">
+			Get: ViewController.parent
+			<span><a class="mark" href="#get-viewcontroller-parent" id="get-viewcontroller-parent">#</a></span>
+		</h3><ul>
+<li><p>获取父控制器</p>
+</li>
+<li><p>{<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>}</p>
+</li>
+</ul>
+<h3 id="viewcontroller-view">
+			ViewController.view
+			<span><a class="mark" href="#viewcontroller-view" id="viewcontroller-view">#</a></span>
+		</h3><ul>
+<li><p>获取或设置当前控制器绑定的视图</p>
+</li>
+<li><p>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</p>
+</li>
+</ul>
+<h3 id="viewcontroller-id">
+			ViewController.id
+			<span><a class="mark" href="#viewcontroller-id" id="viewcontroller-id">#</a></span>
+		</h3><ul>
+<li><p>获取或设置一个<code>id</code>，这个<code>id</code>在同一个作用域中不能重复</p>
+</li>
+<li><p>可通过<code>id</code>在父视图控制器中查询子控制器</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+</ul>
+<h3 id="viewcontroller-load_view-vx-">
+			ViewController.load_view(vx)
+			<span><a class="mark" href="#viewcontroller-load_view-vx-" id="viewcontroller-load_view-vx-">#</a></span>
+		</h3><ul>
+<li><p>通过<code>vx</code>数据载入视图，这是个相当重要的方法，所有<code>gui</code>视图载入创建以及视图数据的绑定都在这个方法中完成，</p>
+<p>  重写<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>类与该方法来实现自定义组件。</p>
+</li>
+<li><p>这个方法调用完成会触发<code>onload_view</code>事件</p>
+</li>
+<li><p>@arg <code>vx</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<h3 id="view-proxy-events">
+			<code>View proxy events</code>
+			<span><a class="mark" href="#view-proxy-events" id="view-proxy-events">#</a></span>
+		</h3><ul>
+<li>这些事件都为代理视图的快捷方式，需要绑定的视图支持这些事件</li>
+</ul>
+<h4 id="viewcontroller-onback">
+			ViewController.onback
+			<span><a class="mark" href="#viewcontroller-onback" id="viewcontroller-onback">#</a></span>
+		</h4><h4 id="viewcontroller-onclick">
+			ViewController.onclick
+			<span><a class="mark" href="#viewcontroller-onclick" id="viewcontroller-onclick">#</a></span>
+		</h4><h4 id="viewcontroller-ontouchstart">
+			ViewController.ontouchstart
+			<span><a class="mark" href="#viewcontroller-ontouchstart" id="viewcontroller-ontouchstart">#</a></span>
+		</h4><h4 id="viewcontroller-ontouchmove">
+			ViewController.ontouchmove
+			<span><a class="mark" href="#viewcontroller-ontouchmove" id="viewcontroller-ontouchmove">#</a></span>
+		</h4><h4 id="viewcontroller-ontouchend">
+			ViewController.ontouchend
+			<span><a class="mark" href="#viewcontroller-ontouchend" id="viewcontroller-ontouchend">#</a></span>
+		</h4><h4 id="viewcontroller-ontouchcancel">
+			ViewController.ontouchcancel
+			<span><a class="mark" href="#viewcontroller-ontouchcancel" id="viewcontroller-ontouchcancel">#</a></span>
+		</h4><h4 id="viewcontroller-onkeydown">
+			ViewController.onkeydown
+			<span><a class="mark" href="#viewcontroller-onkeydown" id="viewcontroller-onkeydown">#</a></span>
+		</h4><h4 id="viewcontroller-onkeypress">
+			ViewController.onkeypress
+			<span><a class="mark" href="#viewcontroller-onkeypress" id="viewcontroller-onkeypress">#</a></span>
+		</h4><h4 id="viewcontroller-onkeyup">
+			ViewController.onkeyup
+			<span><a class="mark" href="#viewcontroller-onkeyup" id="viewcontroller-onkeyup">#</a></span>
+		</h4><h4 id="viewcontroller-onkeyenter">
+			ViewController.onkeyenter
+			<span><a class="mark" href="#viewcontroller-onkeyenter" id="viewcontroller-onkeyenter">#</a></span>
+		</h4><h4 id="viewcontroller-onfocus">
+			ViewController.onfocus
+			<span><a class="mark" href="#viewcontroller-onfocus" id="viewcontroller-onfocus">#</a></span>
+		</h4><h4 id="viewcontroller-onblur">
+			ViewController.onblur
+			<span><a class="mark" href="#viewcontroller-onblur" id="viewcontroller-onblur">#</a></span>
+		</h4><h4 id="viewcontroller-onhighlighted">
+			ViewController.onhighlighted
+			<span><a class="mark" href="#viewcontroller-onhighlighted" id="viewcontroller-onhighlighted">#</a></span>
+		</h4><h4 id="viewcontroller-onfocus_move">
+			ViewController.onfocus_move
+			<span><a class="mark" href="#viewcontroller-onfocus_move" id="viewcontroller-onfocus_move">#</a></span>
+		</h4><h4 id="viewcontroller-onscroll">
+			ViewController.onscroll
+			<span><a class="mark" href="#viewcontroller-onscroll" id="viewcontroller-onscroll">#</a></span>
+		</h4><h4 id="viewcontroller-onaction_keyframe">
+			ViewController.onaction_keyframe
+			<span><a class="mark" href="#viewcontroller-onaction_keyframe" id="viewcontroller-onaction_keyframe">#</a></span>
+		</h4><h4 id="viewcontroller-onaction_loop">
+			ViewController.onaction_loop
+			<span><a class="mark" href="#viewcontroller-onaction_loop" id="viewcontroller-onaction_loop">#</a></span>
+		</h4><h4 id="viewcontroller-onwait_buffer">
+			ViewController.onwait_buffer
+			<span><a class="mark" href="#viewcontroller-onwait_buffer" id="viewcontroller-onwait_buffer">#</a></span>
+		</h4><h4 id="viewcontroller-onready">
+			ViewController.onready
+			<span><a class="mark" href="#viewcontroller-onready" id="viewcontroller-onready">#</a></span>
+		</h4><h4 id="viewcontroller-onstart_play">
+			ViewController.onstart_play
+			<span><a class="mark" href="#viewcontroller-onstart_play" id="viewcontroller-onstart_play">#</a></span>
+		</h4><h4 id="viewcontroller-onerror">
+			ViewController.onerror
+			<span><a class="mark" href="#viewcontroller-onerror" id="viewcontroller-onerror">#</a></span>
+		</h4><h4 id="viewcontroller-onsource_eof">
+			ViewController.onsource_eof
+			<span><a class="mark" href="#viewcontroller-onsource_eof" id="viewcontroller-onsource_eof">#</a></span>
+		</h4><h4 id="viewcontroller-onpause">
+			ViewController.onpause
+			<span><a class="mark" href="#viewcontroller-onpause" id="viewcontroller-onpause">#</a></span>
+		</h4><h4 id="viewcontroller-onresume">
+			ViewController.onresume
+			<span><a class="mark" href="#viewcontroller-onresume" id="viewcontroller-onresume">#</a></span>
+		</h4><h4 id="viewcontroller-onstop">
+			ViewController.onstop
+			<span><a class="mark" href="#viewcontroller-onstop" id="viewcontroller-onstop">#</a></span>
+		</h4><h4 id="viewcontroller-onseek">
+			ViewController.onseek
+			<span><a class="mark" href="#viewcontroller-onseek" id="viewcontroller-onseek">#</a></span>
+		</h4><h3 id="view-proxy-methods-and-properties">
+			<code>View proxy methods and properties</code>
+			<span><a class="mark" href="#view-proxy-methods-and-properties" id="view-proxy-methods-and-properties">#</a></span>
+		</h3><ul>
+<li>代理视图的快捷方法与属性</li>
+</ul>
+<h4 id="viewcontroller-action">
+			ViewController.action
+			<span><a class="mark" href="#viewcontroller-action" id="viewcontroller-action">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#get-view-action"><code>View.action</code></a></li>
+</ul>
+<h4 id="viewcontroller-style">
+			ViewController.style
+			<span><a class="mark" href="#viewcontroller-style" id="viewcontroller-style">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-style"><code>View.style</code></a></li>
+</ul>
+<h4 id="viewcontroller-visible">
+			ViewController.visible
+			<span><a class="mark" href="#viewcontroller-visible" id="viewcontroller-visible">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-visible"><code>View.visible</code></a></li>
+</ul>
+<h4 id="viewcontroller-receive">
+			ViewController.receive
+			<span><a class="mark" href="#viewcontroller-receive" id="viewcontroller-receive">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-receive"><code>View.receive</code></a></li>
+</ul>
+<h4 id="viewcontroller-class">
+			ViewController.class
+			<span><a class="mark" href="#viewcontroller-class" id="viewcontroller-class">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#get-view-class"><code>View.class</code></a></li>
+</ul>
+<h4 id="viewcontroller-transition-style-delay-cb-">
+			ViewController.transition(style[,delay[,cb]])
+			<span><a class="mark" href="#viewcontroller-transition-style-delay-cb-" id="viewcontroller-transition-style-delay-cb-">#</a></span>
+		</h4><h4 id="viewcontroller-transition-style-cb-">
+			ViewController.transition(style[,cb])
+			<span><a class="mark" href="#viewcontroller-transition-style-cb-" id="viewcontroller-transition-style-cb-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-transition-style-delay-cb-"><code>View.transition()</code></a></li>
+</ul>
+<h4 id="viewcontroller-show-">
+			ViewController.show()
+			<span><a class="mark" href="#viewcontroller-show-" id="viewcontroller-show-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-show-"><code>View.show()</code></a></li>
+</ul>
+<h4 id="viewcontroller-hide-">
+			ViewController.hide()
+			<span><a class="mark" href="#viewcontroller-hide-" id="viewcontroller-hide-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-hide-"><code>View.hide()</code></a></li>
+</ul>
+<h4 id="viewcontroller-add_class-name-">
+			ViewController.add_class(name)
+			<span><a class="mark" href="#viewcontroller-add_class-name-" id="viewcontroller-add_class-name-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-add_class-name-"><code>View.add_class()</code></a></li>
+</ul>
+<h4 id="viewcontroller-remove_class-name-">
+			ViewController.remove_class(name)
+			<span><a class="mark" href="#viewcontroller-remove_class-name-" id="viewcontroller-remove_class-name-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-remove_class-name-"><code>View.remove_class()</code></a></li>
+</ul>
+<h4 id="viewcontroller-toggle_class-name-">
+			ViewController.toggle_class(name)
+			<span><a class="mark" href="#viewcontroller-toggle_class-name-" id="viewcontroller-toggle_class-name-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-toggle_class-name-"><code>View.toggle_class()</code></a></li>
+</ul>
+<h4 id="viewcontroller-remove-">
+			ViewController.remove()
+			<span><a class="mark" href="#viewcontroller-remove-" id="viewcontroller-remove-">#</a></span>
+		</h4><ul>
+<li>--&gt; <a href="../gui/gui.html#view-remove-"><code>View.remove()</code></a></li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/global.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#global-domain">Global Domain</a></span>
+<ul>
+<li>
+<span><a href="#global">global</a></span>
+</li>
+<li>
+<span><a href="#exports">exports</a></span>
+</li>
+<li>
+<span><a href="#__dirname">__dirname</a></span>
+</li>
+<li>
+<span><a href="#__filename">__filename</a></span>
+</li>
+<li>
+<span><a href="#__lib">__lib</a></span>
+</li>
+<li>
+<span><a href="#__lib_path">__lib_path</a></span>
+</li>
+<li>
+<span><a href="#__lib_src">__lib_src</a></span>
+</li>
+<li>
+<span><a href="#__lib_name">__lib_name</a></span>
+</li>
+<li>
+<span><a href="#__lib_config">__lib_config</a></span>
+</li>
+<li>
+<span><a href="#__path-path-">__path(path)</a></span>
+</li>
+<li>
+<span><a href="#-path-">$(path)</a></span>
+</li>
+<li>
+<span><a href="#__req-path-">__req(path)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="global-domain">
+			<code>Global Domain</code>
+			<span><a class="mark" href="#global-domain" id="global-domain">#</a></span>
+		</h1><h2 id="global">
+			global
+			<span><a class="mark" href="#global" id="global">#</a></span>
+		</h2><ul>
+<li><p>全局对像</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<h2 id="exports">
+			exports
+			<span><a class="mark" href="#exports" id="exports">#</a></span>
+		</h2><ul>
+<li><p>当前脚本的导出对像</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<h2 id="__dirname">
+			__dirname
+			<span><a class="mark" href="#__dirname" id="__dirname">#</a></span>
+		</h2><ul>
+<li><p>包内当前目录名</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+</ul>
+<h2 id="__filename">
+			__filename
+			<span><a class="mark" href="#__filename" id="__filename">#</a></span>
+		</h2><ul>
+<li><p>包内当前文件名称</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+</ul>
+<h2 id="__lib">
+			__lib
+			<span><a class="mark" href="#__lib" id="__lib">#</a></span>
+		</h2><ul>
+<li>当前<code>library</code>的上下文对像</li>
+</ul>
+<h2 id="__lib_path">
+			__lib_path
+			<span><a class="mark" href="#__lib_path" id="__lib_path">#</a></span>
+		</h2><ul>
+<li><p>当前<code>library</code>的路径</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+</ul>
+<h2 id="__lib_src">
+			__lib_src
+			<span><a class="mark" href="#__lib_src" id="__lib_src">#</a></span>
+		</h2><ul>
+<li><p>当前<code>library</code>的<code>src</code>目录路径</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+</ul>
+<h2 id="__lib_name">
+			__lib_name
+			<span><a class="mark" href="#__lib_name" id="__lib_name">#</a></span>
+		</h2><ul>
+<li><p>当前<code>library</code>的名称</p>
+</li>
+<li><p>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+<li><p>当前<code>library</code>的配置<code>lib.keys</code>文件数据</p>
+</li>
+</ul>
+<h2 id="__lib_config">
+			__lib_config
+			<span><a class="mark" href="#__lib_config" id="__lib_config">#</a></span>
+		</h2><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<h2 id="__path-path-">
+			__path(path)
+			<span><a class="mark" href="#__path-path-" id="__path-path-">#</a></span>
+		</h2><h2 id="-path-">
+			$(path)
+			<span><a class="mark" href="#-path-" id="-path-">#</a></span>
+		</h2><ul>
+<li><p>通过包内相对路径获取完整的路径</p>
+</li>
+<li><p>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+</ul>
+<h2 id="__req-path-">
+			__req(path)
+			<span><a class="mark" href="#__req-path-" id="__req-path-">#</a></span>
+		</h2><p>请求<code>avocado</code>库并返回，<code>import</code>语法的别名函数</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

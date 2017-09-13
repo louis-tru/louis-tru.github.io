@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'gui/css.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-gui-css">lib://gui/css</a></span>
+<ul>
+<li>
+<span><a href="#create-sheets-">create(sheets)</a></span>
+</li>
+<li>
+<span><a href="#check-css_name-">check(css_name)</a></span>
+</li>
+<li>
+<span><a href="#css-sheets-">CSS(sheets)</a></span>
+</li>
+<li>
+<span><a href="#enum-propertyname">Enum PropertyName</a></span>
+<ul>
+<li>
+<span><a href="#property_x">PROPERTY_X</a></span>
+</li>
+<li>
+<span><a href="#property_y">PROPERTY_Y</a></span>
+</li>
+<li>
+<span><a href="#property_scale_x">PROPERTY_SCALE_X</a></span>
+</li>
+<li>
+<span><a href="#property_scale_y">PROPERTY_SCALE_Y</a></span>
+</li>
+<li>
+<span><a href="#property_skew_x">PROPERTY_SKEW_X</a></span>
+</li>
+<li>
+<span><a href="#property_skew_y">PROPERTY_SKEW_Y</a></span>
+</li>
+<li>
+<span><a href="#property_rotate_z">PROPERTY_ROTATE_Z</a></span>
+</li>
+<li>
+<span><a href="#property_origin_x">PROPERTY_ORIGIN_X</a></span>
+</li>
+<li>
+<span><a href="#property_origin_y">PROPERTY_ORIGIN_Y</a></span>
+</li>
+<li>
+<span><a href="#property_opacity">PROPERTY_OPACITY</a></span>
+</li>
+<li>
+<span><a href="#property_visible">PROPERTY_VISIBLE</a></span>
+</li>
+<li>
+<span><a href="#property_width">PROPERTY_WIDTH</a></span>
+</li>
+<li>
+<span><a href="#property_height">PROPERTY_HEIGHT</a></span>
+</li>
+<li>
+<span><a href="#property_margin_left">PROPERTY_MARGIN_LEFT</a></span>
+</li>
+<li>
+<span><a href="#property_margin_top">PROPERTY_MARGIN_TOP</a></span>
+</li>
+<li>
+<span><a href="#property_margin_right">PROPERTY_MARGIN_RIGHT</a></span>
+</li>
+<li>
+<span><a href="#property_margin_bottom">PROPERTY_MARGIN_BOTTOM</a></span>
+</li>
+<li>
+<span><a href="#property_border_left">PROPERTY_BORDER_LEFT</a></span>
+</li>
+<li>
+<span><a href="#property_border_top">PROPERTY_BORDER_TOP</a></span>
+</li>
+<li>
+<span><a href="#property_border_right">PROPERTY_BORDER_RIGHT</a></span>
+</li>
+<li>
+<span><a href="#property_border_bottom">PROPERTY_BORDER_BOTTOM</a></span>
+</li>
+<li>
+<span><a href="#property_border_left_width">PROPERTY_BORDER_LEFT_WIDTH</a></span>
+</li>
+<li>
+<span><a href="#property_border_top_width">PROPERTY_BORDER_TOP_WIDTH</a></span>
+</li>
+<li>
+<span><a href="#property_border_right_width">PROPERTY_BORDER_RIGHT_WIDTH</a></span>
+</li>
+<li>
+<span><a href="#property_border_bottom_width">PROPERTY_BORDER_BOTTOM_WIDTH</a></span>
+</li>
+<li>
+<span><a href="#property_border_left_color">PROPERTY_BORDER_LEFT_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_border_top_color">PROPERTY_BORDER_TOP_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_border_right_color">PROPERTY_BORDER_RIGHT_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_border_bottom_color">PROPERTY_BORDER_BOTTOM_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_border_radius_left_top">PROPERTY_BORDER_RADIUS_LEFT_TOP</a></span>
+</li>
+<li>
+<span><a href="#property_border_radius_right_top">PROPERTY_BORDER_RADIUS_RIGHT_TOP</a></span>
+</li>
+<li>
+<span><a href="#property_border_radius_right_bottom">PROPERTY_BORDER_RADIUS_RIGHT_BOTTOM</a></span>
+</li>
+<li>
+<span><a href="#property_border_radius_left_bottom">PROPERTY_BORDER_RADIUS_LEFT_BOTTOM</a></span>
+</li>
+<li>
+<span><a href="#property_background_color">PROPERTY_BACKGROUND_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_newline">PROPERTY_NEWLINE</a></span>
+</li>
+<li>
+<span><a href="#property_content_align">PROPERTY_CONTENT_ALIGN</a></span>
+</li>
+<li>
+<span><a href="#property_text_align">PROPERTY_TEXT_ALIGN</a></span>
+</li>
+<li>
+<span><a href="#property_max_width">PROPERTY_MAX_WIDTH</a></span>
+</li>
+<li>
+<span><a href="#property_max_height">PROPERTY_MAX_HEIGHT</a></span>
+</li>
+<li>
+<span><a href="#property_start_x">PROPERTY_START_X</a></span>
+</li>
+<li>
+<span><a href="#property_start_y">PROPERTY_START_Y</a></span>
+</li>
+<li>
+<span><a href="#property_ratio_x">PROPERTY_RATIO_X</a></span>
+</li>
+<li>
+<span><a href="#property_ratio_y">PROPERTY_RATIO_Y</a></span>
+</li>
+<li>
+<span><a href="#property_repeat">PROPERTY_REPEAT</a></span>
+</li>
+<li>
+<span><a href="#property_text_background_color">PROPERTY_TEXT_BACKGROUND_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_text_color">PROPERTY_TEXT_COLOR</a></span>
+</li>
+<li>
+<span><a href="#property_text_size">PROPERTY_TEXT_SIZE</a></span>
+</li>
+<li>
+<span><a href="#property_text_style">PROPERTY_TEXT_STYLE</a></span>
+</li>
+<li>
+<span><a href="#property_text_family">PROPERTY_TEXT_FAMILY</a></span>
+</li>
+<li>
+<span><a href="#property_text_line_height">PROPERTY_TEXT_LINE_HEIGHT</a></span>
+</li>
+<li>
+<span><a href="#property_text_shadow">PROPERTY_TEXT_SHADOW</a></span>
+</li>
+<li>
+<span><a href="#property_text_decoration">PROPERTY_TEXT_DECORATION</a></span>
+</li>
+<li>
+<span><a href="#property_text_overflow">PROPERTY_TEXT_OVERFLOW</a></span>
+</li>
+<li>
+<span><a href="#property_text_white_space">PROPERTY_TEXT_WHITE_SPACE</a></span>
+</li>
+<li>
+<span><a href="#property_align_x">PROPERTY_ALIGN_X</a></span>
+</li>
+<li>
+<span><a href="#property_align_y">PROPERTY_ALIGN_Y</a></span>
+</li>
+<li>
+<span><a href="#property_shadow">PROPERTY_SHADOW</a></span>
+</li>
+<li>
+<span><a href="#property_src">PROPERTY_SRC</a></span>
+</li>
+<li>
+<span><a href="#property_background_image">PROPERTY_BACKGROUND_IMAGE</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-gui-css">
+			<code>lib://gui/css</code>
+			<span><a class="mark" href="#lib-gui-css" id="lib-gui-css">#</a></span>
+		</h1><ul>
+<li><p><code>css</code>样式表类似于html <code>css</code>样式表，支持使用多级样式表，但只支持<code>class</code>类</p>
+</li>
+<li><p>支持<code>3</code>种伪类型<code>normal</code>、<code>hover</code>、<code>down</code></p>
+<p>  对应<a href="../gui/gui.html#view-onhighlighted"><code>View.onhighlighted</code></a>事件中的 <a href="../gui/gui.html#highlighted_normal"><code>HIGHLIGHTED_NORMAL</code></a> 、<a href="../gui/gui.html#highlighted_hover"><code>HIGHLIGHTED_HOVER</code></a>、<a href="../gui/gui.html#highlighted_down"><code>HIGHLIGHTED_DOWN</code></a></p>
+</li>
+<li><p>这里的样式表没有权重的概念，使用直接赋值的方式与使用样式表权重都相同，</p>
+<p>  但需要注意先后顺序小心直接赋值会被样式表覆盖，</p>
+<p>  因为每次修改的样式表不会立即生效都会在渲染前才应用到视图。</p>
+</li>
+<li><p>样式表级数越多越复杂也表示需要更多的时间查询与处理。</p>
+</li>
+</ul>
+<h2 id="create-sheets-">
+			create(sheets)
+			<span><a class="mark" href="#create-sheets-" id="create-sheets-">#</a></span>
+		</h2><ul>
+<li><p>创建样式表</p>
+</li>
+<li><p>@arg <code>sheets</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<h2 id="check-css_name-">
+			check(css_name)
+			<span><a class="mark" href="#check-css_name-" id="check-css_name-">#</a></span>
+		</h2><ul>
+<li><p>检查样式名称是否有效</p>
+</li>
+<li><p>@arg <code>css_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</p>
+</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="css-sheets-">
+			CSS(sheets)
+			<span><a class="mark" href="#css-sheets-" id="css-sheets-">#</a></span>
+		</h2><ul>
+<li><p>创建样式表，在调式状态时会检查样式名称是否有效</p>
+</li>
+<li><p>@arg <code>sheets</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">import CSS from &#39;:gui/css&#39;
+import { GUIApplication, Root, Div } from &#39;:gui&#39;
+import &#39;:gui/dialog&#39;
+// 样式表都是全局的
+CSS({
+    &#39;.test&#39;: {
+        width: &#39;50%&#39;,
+        height: &#39;50%&#39;,
+        background_color: &#39;#00f&#39;,
+    },
+    &#39;.test .a&#39;: {
+        width: 50,
+        height: 50,
+    },
+    &#39;.test .a.b&#39;: { // 这种选择器会优先级会更高
+        height: 60,
+    },
+    // 应用这些伪类到目标，要使用它们对目标生效，需目标视图能够接收事件
+    &#39;.test:normal .a&#39;: {
+        background_color: &#39;#0000&#39;,
+    },
+    &#39;.test:hover&#39;: {
+        background_color: &#39;#f0f&#39;,
+    },
+    &#39;.test:hover .a&#39;: {
+        background_color: &#39;#f00&#39;,
+    },
+})
+new GUIApplication().start(
+    // 需要注意jsx语法只能存在于.jsx文件中
+    &lt;Root&gt;
+        &lt;Div class=&quot;test&quot; onclick=(e=&gt;{ dialog.alert(&#39;Hello!&#39;) })&gt;
+            &lt;Div class=&quot;a b&quot; /&gt;
+        &lt;/Div&gt;
+    &lt;/Root&gt;
+)
+</code></pre>
+<h2 id="enum-propertyname">
+			<code>Enum PropertyName</code>
+			<span><a class="mark" href="#enum-propertyname" id="enum-propertyname">#</a></span>
+		</h2><ul>
+<li><p>以下是所有支持的样式表属性</p>
+</li>
+<li><p>这也是<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a>中<a href="../gui/action.html#class-frame"><code>Frame</code></a>所支持的所有动作属性</p>
+</li>
+</ul>
+<h3 id="property_x">
+			PROPERTY_X
+			<span><a class="mark" href="#property_x" id="property_x">#</a></span>
+		</h3><h3 id="property_y">
+			PROPERTY_Y
+			<span><a class="mark" href="#property_y" id="property_y">#</a></span>
+		</h3><h3 id="property_scale_x">
+			PROPERTY_SCALE_X
+			<span><a class="mark" href="#property_scale_x" id="property_scale_x">#</a></span>
+		</h3><h3 id="property_scale_y">
+			PROPERTY_SCALE_Y
+			<span><a class="mark" href="#property_scale_y" id="property_scale_y">#</a></span>
+		</h3><h3 id="property_skew_x">
+			PROPERTY_SKEW_X
+			<span><a class="mark" href="#property_skew_x" id="property_skew_x">#</a></span>
+		</h3><h3 id="property_skew_y">
+			PROPERTY_SKEW_Y
+			<span><a class="mark" href="#property_skew_y" id="property_skew_y">#</a></span>
+		</h3><h3 id="property_rotate_z">
+			PROPERTY_ROTATE_Z
+			<span><a class="mark" href="#property_rotate_z" id="property_rotate_z">#</a></span>
+		</h3><h3 id="property_origin_x">
+			PROPERTY_ORIGIN_X
+			<span><a class="mark" href="#property_origin_x" id="property_origin_x">#</a></span>
+		</h3><h3 id="property_origin_y">
+			PROPERTY_ORIGIN_Y
+			<span><a class="mark" href="#property_origin_y" id="property_origin_y">#</a></span>
+		</h3><h3 id="property_opacity">
+			PROPERTY_OPACITY
+			<span><a class="mark" href="#property_opacity" id="property_opacity">#</a></span>
+		</h3><h3 id="property_visible">
+			PROPERTY_VISIBLE
+			<span><a class="mark" href="#property_visible" id="property_visible">#</a></span>
+		</h3><h3 id="property_width">
+			PROPERTY_WIDTH
+			<span><a class="mark" href="#property_width" id="property_width">#</a></span>
+		</h3><h3 id="property_height">
+			PROPERTY_HEIGHT
+			<span><a class="mark" href="#property_height" id="property_height">#</a></span>
+		</h3><h3 id="property_margin_left">
+			PROPERTY_MARGIN_LEFT
+			<span><a class="mark" href="#property_margin_left" id="property_margin_left">#</a></span>
+		</h3><h3 id="property_margin_top">
+			PROPERTY_MARGIN_TOP
+			<span><a class="mark" href="#property_margin_top" id="property_margin_top">#</a></span>
+		</h3><h3 id="property_margin_right">
+			PROPERTY_MARGIN_RIGHT
+			<span><a class="mark" href="#property_margin_right" id="property_margin_right">#</a></span>
+		</h3><h3 id="property_margin_bottom">
+			PROPERTY_MARGIN_BOTTOM
+			<span><a class="mark" href="#property_margin_bottom" id="property_margin_bottom">#</a></span>
+		</h3><h3 id="property_border_left">
+			PROPERTY_BORDER_LEFT
+			<span><a class="mark" href="#property_border_left" id="property_border_left">#</a></span>
+		</h3><h3 id="property_border_top">
+			PROPERTY_BORDER_TOP
+			<span><a class="mark" href="#property_border_top" id="property_border_top">#</a></span>
+		</h3><h3 id="property_border_right">
+			PROPERTY_BORDER_RIGHT
+			<span><a class="mark" href="#property_border_right" id="property_border_right">#</a></span>
+		</h3><h3 id="property_border_bottom">
+			PROPERTY_BORDER_BOTTOM
+			<span><a class="mark" href="#property_border_bottom" id="property_border_bottom">#</a></span>
+		</h3><h3 id="property_border_left_width">
+			PROPERTY_BORDER_LEFT_WIDTH
+			<span><a class="mark" href="#property_border_left_width" id="property_border_left_width">#</a></span>
+		</h3><h3 id="property_border_top_width">
+			PROPERTY_BORDER_TOP_WIDTH
+			<span><a class="mark" href="#property_border_top_width" id="property_border_top_width">#</a></span>
+		</h3><h3 id="property_border_right_width">
+			PROPERTY_BORDER_RIGHT_WIDTH
+			<span><a class="mark" href="#property_border_right_width" id="property_border_right_width">#</a></span>
+		</h3><h3 id="property_border_bottom_width">
+			PROPERTY_BORDER_BOTTOM_WIDTH
+			<span><a class="mark" href="#property_border_bottom_width" id="property_border_bottom_width">#</a></span>
+		</h3><h3 id="property_border_left_color">
+			PROPERTY_BORDER_LEFT_COLOR
+			<span><a class="mark" href="#property_border_left_color" id="property_border_left_color">#</a></span>
+		</h3><h3 id="property_border_top_color">
+			PROPERTY_BORDER_TOP_COLOR
+			<span><a class="mark" href="#property_border_top_color" id="property_border_top_color">#</a></span>
+		</h3><h3 id="property_border_right_color">
+			PROPERTY_BORDER_RIGHT_COLOR
+			<span><a class="mark" href="#property_border_right_color" id="property_border_right_color">#</a></span>
+		</h3><h3 id="property_border_bottom_color">
+			PROPERTY_BORDER_BOTTOM_COLOR
+			<span><a class="mark" href="#property_border_bottom_color" id="property_border_bottom_color">#</a></span>
+		</h3><h3 id="property_border_radius_left_top">
+			PROPERTY_BORDER_RADIUS_LEFT_TOP
+			<span><a class="mark" href="#property_border_radius_left_top" id="property_border_radius_left_top">#</a></span>
+		</h3><h3 id="property_border_radius_right_top">
+			PROPERTY_BORDER_RADIUS_RIGHT_TOP
+			<span><a class="mark" href="#property_border_radius_right_top" id="property_border_radius_right_top">#</a></span>
+		</h3><h3 id="property_border_radius_right_bottom">
+			PROPERTY_BORDER_RADIUS_RIGHT_BOTTOM
+			<span><a class="mark" href="#property_border_radius_right_bottom" id="property_border_radius_right_bottom">#</a></span>
+		</h3><h3 id="property_border_radius_left_bottom">
+			PROPERTY_BORDER_RADIUS_LEFT_BOTTOM
+			<span><a class="mark" href="#property_border_radius_left_bottom" id="property_border_radius_left_bottom">#</a></span>
+		</h3><h3 id="property_background_color">
+			PROPERTY_BACKGROUND_COLOR
+			<span><a class="mark" href="#property_background_color" id="property_background_color">#</a></span>
+		</h3><h3 id="property_newline">
+			PROPERTY_NEWLINE
+			<span><a class="mark" href="#property_newline" id="property_newline">#</a></span>
+		</h3><h3 id="property_content_align">
+			PROPERTY_CONTENT_ALIGN
+			<span><a class="mark" href="#property_content_align" id="property_content_align">#</a></span>
+		</h3><h3 id="property_text_align">
+			PROPERTY_TEXT_ALIGN
+			<span><a class="mark" href="#property_text_align" id="property_text_align">#</a></span>
+		</h3><h3 id="property_max_width">
+			PROPERTY_MAX_WIDTH
+			<span><a class="mark" href="#property_max_width" id="property_max_width">#</a></span>
+		</h3><h3 id="property_max_height">
+			PROPERTY_MAX_HEIGHT
+			<span><a class="mark" href="#property_max_height" id="property_max_height">#</a></span>
+		</h3><h3 id="property_start_x">
+			PROPERTY_START_X
+			<span><a class="mark" href="#property_start_x" id="property_start_x">#</a></span>
+		</h3><h3 id="property_start_y">
+			PROPERTY_START_Y
+			<span><a class="mark" href="#property_start_y" id="property_start_y">#</a></span>
+		</h3><h3 id="property_ratio_x">
+			PROPERTY_RATIO_X
+			<span><a class="mark" href="#property_ratio_x" id="property_ratio_x">#</a></span>
+		</h3><h3 id="property_ratio_y">
+			PROPERTY_RATIO_Y
+			<span><a class="mark" href="#property_ratio_y" id="property_ratio_y">#</a></span>
+		</h3><h3 id="property_repeat">
+			PROPERTY_REPEAT
+			<span><a class="mark" href="#property_repeat" id="property_repeat">#</a></span>
+		</h3><h3 id="property_text_background_color">
+			PROPERTY_TEXT_BACKGROUND_COLOR
+			<span><a class="mark" href="#property_text_background_color" id="property_text_background_color">#</a></span>
+		</h3><h3 id="property_text_color">
+			PROPERTY_TEXT_COLOR
+			<span><a class="mark" href="#property_text_color" id="property_text_color">#</a></span>
+		</h3><h3 id="property_text_size">
+			PROPERTY_TEXT_SIZE
+			<span><a class="mark" href="#property_text_size" id="property_text_size">#</a></span>
+		</h3><h3 id="property_text_style">
+			PROPERTY_TEXT_STYLE
+			<span><a class="mark" href="#property_text_style" id="property_text_style">#</a></span>
+		</h3><h3 id="property_text_family">
+			PROPERTY_TEXT_FAMILY
+			<span><a class="mark" href="#property_text_family" id="property_text_family">#</a></span>
+		</h3><h3 id="property_text_line_height">
+			PROPERTY_TEXT_LINE_HEIGHT
+			<span><a class="mark" href="#property_text_line_height" id="property_text_line_height">#</a></span>
+		</h3><h3 id="property_text_shadow">
+			PROPERTY_TEXT_SHADOW
+			<span><a class="mark" href="#property_text_shadow" id="property_text_shadow">#</a></span>
+		</h3><h3 id="property_text_decoration">
+			PROPERTY_TEXT_DECORATION
+			<span><a class="mark" href="#property_text_decoration" id="property_text_decoration">#</a></span>
+		</h3><h3 id="property_text_overflow">
+			PROPERTY_TEXT_OVERFLOW
+			<span><a class="mark" href="#property_text_overflow" id="property_text_overflow">#</a></span>
+		</h3><h3 id="property_text_white_space">
+			PROPERTY_TEXT_WHITE_SPACE
+			<span><a class="mark" href="#property_text_white_space" id="property_text_white_space">#</a></span>
+		</h3><h3 id="property_align_x">
+			PROPERTY_ALIGN_X
+			<span><a class="mark" href="#property_align_x" id="property_align_x">#</a></span>
+		</h3><h3 id="property_align_y">
+			PROPERTY_ALIGN_Y
+			<span><a class="mark" href="#property_align_y" id="property_align_y">#</a></span>
+		</h3><h3 id="property_shadow">
+			PROPERTY_SHADOW
+			<span><a class="mark" href="#property_shadow" id="property_shadow">#</a></span>
+		</h3><h3 id="property_src">
+			PROPERTY_SRC
+			<span><a class="mark" href="#property_src" id="property_src">#</a></span>
+		</h3><h3 id="property_background_image">
+			PROPERTY_BACKGROUND_IMAGE
+			<span><a class="mark" href="#property_background_image" id="property_background_image">#</a></span>
+		</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

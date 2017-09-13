@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/native_types.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#native-types">Native Types</a></span>
+<ul>
+<li>
+<span><a href="#int">int</a></span>
+</li>
+<li>
+<span><a href="#uint">uint</a></span>
+</li>
+<li>
+<span><a href="#int16">int16</a></span>
+</li>
+<li>
+<span><a href="#uint16">uint16</a></span>
+</li>
+<li>
+<span><a href="#int64">int64</a></span>
+</li>
+<li>
+<span><a href="#uint64">uint64</a></span>
+</li>
+<li>
+<span><a href="#float">float</a></span>
+</li>
+<li>
+<span><a href="#double">double</a></span>
+</li>
+<li>
+<span><a href="#bool">bool</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="native-types">
+			<code>Native Types</code>
+			<span><a class="mark" href="#native-types" id="native-types">#</a></span>
+		</h1><p>int/uint/int16/uint16/int64/uint64/float/double/bool</p>
+<h2 id="int">
+			int
+			<span><a class="mark" href="#int" id="int">#</a></span>
+		</h2><p>有符号32bit整数</p>
+<p>JavaScript中为不超过32bit的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="uint">
+			uint
+			<span><a class="mark" href="#uint" id="uint">#</a></span>
+		</h2><p>无符号32bit整数</p>
+<p>JavaScript中为不超过32bit的非负数<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="int16">
+			int16
+			<span><a class="mark" href="#int16" id="int16">#</a></span>
+		</h2><p>有符号16bit整数</p>
+<p>JavaScript中为不超过16bit的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="uint16">
+			uint16
+			<span><a class="mark" href="#uint16" id="uint16">#</a></span>
+		</h2><p>无符号16bit整数</p>
+<p>JavaScript中为不超过16bit的非负数<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="int64">
+			int64
+			<span><a class="mark" href="#int64" id="int64">#</a></span>
+		</h2><p>有符号64bit整数</p>
+<p>JavaScript中为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="uint64">
+			uint64
+			<span><a class="mark" href="#uint64" id="uint64">#</a></span>
+		</h2><p>无符642bit整数</p>
+<p>JavaScript中为非负数<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="float">
+			float
+			<span><a class="mark" href="#float" id="float">#</a></span>
+		</h2><p>32bit浮点数</p>
+<p>JavaScript中为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="double">
+			double
+			<span><a class="mark" href="#double" id="double">#</a></span>
+		</h2><p>64bit浮点数</p>
+<p>JavaScript中为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>类型</p>
+<h2 id="bool">
+			bool
+			<span><a class="mark" href="#bool" id="bool">#</a></span>
+		</h2><p>布尔类型</p>
+<p>JavaScript中为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>类型</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'gui/action.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-gui-action">lib://gui/action</a></span>
+<ul>
+<li>
+<span><a href="#create-json-parent-">create(json[,parent])</a></span>
+</li>
+<li>
+<span><a href="#transition-view-style-delay-cb-">transition(view,style[,delay[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#transition-view-style-cb-">transition(view,style[,cb])</a></span>
+</li>
+<li>
+<span><a href="#class-action">Class: Action</a></span>
+<ul>
+<li>
+<span><a href="#action-play-">Action.play()</a></span>
+</li>
+<li>
+<span><a href="#action-stop-">Action.stop()</a></span>
+</li>
+<li>
+<span><a href="#action-seek-time-">Action.seek(time)</a></span>
+</li>
+<li>
+<span><a href="#action-seek_play-time-">Action.seek_play(time)</a></span>
+</li>
+<li>
+<span><a href="#action-seek_stop-time-">Action.seek_stop(time)</a></span>
+</li>
+<li>
+<span><a href="#action-clear-">Action.clear()</a></span>
+</li>
+<li>
+<span><a href="#action-loop">Action.loop</a></span>
+</li>
+<li>
+<span><a href="#get-action-loopd">Get: Action.loopd</a></span>
+</li>
+<li>
+<span><a href="#action-delay">Action.delay</a></span>
+</li>
+<li>
+<span><a href="#get-action-delayd">Get: Action.delayd</a></span>
+</li>
+<li>
+<span><a href="#action-speed">Action.speed</a></span>
+</li>
+<li>
+<span><a href="#action-playing">Action.playing</a></span>
+</li>
+<li>
+<span><a href="#get-action-duration">Get: Action.duration</a></span>
+</li>
+<li>
+<span><a href="#get-action-parent">Get: Action.parent</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-groupaction">Class: GroupAction</a></span>
+<ul>
+<li>
+<span><a href="#get-groupaction-length">Get: GroupAction.length</a></span>
+</li>
+<li>
+<span><a href="#groupaction-append-child-">GroupAction.append(child)</a></span>
+</li>
+<li>
+<span><a href="#groupaction-insert-index-child-">GroupAction.insert(index, child)</a></span>
+</li>
+<li>
+<span><a href="#groupaction-remove_child-index-">GroupAction.remove_child(index)</a></span>
+</li>
+<li>
+<span><a href="#groupaction-children-index-">GroupAction.children(index)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-spawnaction">Class: SpawnAction</a></span>
+<ul>
+<li>
+<span><a href="#spawnaction-spawn-index-">SpawnAction.spawn(index)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-sequenceaction">Class: SequenceAction</a></span>
+<ul>
+<li>
+<span><a href="#sequenceaction-seq-index-">SequenceAction.seq(index)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-keyframeaction">Class: KeyframeAction</a></span>
+<ul>
+<li>
+<span><a href="#keyframeaction-has_property-name-">KeyframeAction.has_property(name)</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-match_property-name-">KeyframeAction.match_property(name)</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-frame-index-">KeyframeAction.frame(index)</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-add-time-curve-">KeyframeAction.add([time[,curve]])</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-add-style-">KeyframeAction.add([style])</a></span>
+</li>
+<li>
+<span><a href="#get-keyframeaction-first">Get: KeyframeAction.first</a></span>
+</li>
+<li>
+<span><a href="#get-keyframeaction-last">Get: KeyframeAction.last</a></span>
+</li>
+<li>
+<span><a href="#get-keyframeaction-length">Get: KeyframeAction.length</a></span>
+</li>
+<li>
+<span><a href="#get-keyframeaction-position">Get: KeyframeAction.position</a></span>
+</li>
+<li>
+<span><a href="#get-keyframeaction-time">Get: KeyframeAction.time</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-frame">Class: Frame</a></span>
+<ul>
+<li>
+<span><a href="#frame-fetch-view-">Frame.fetch([view])</a></span>
+</li>
+<li>
+<span><a href="#frame-flush-">Frame.flush()</a></span>
+</li>
+<li>
+<span><a href="#get-frame-index">Get: Frame.index</a></span>
+</li>
+<li>
+<span><a href="#frame-time">Frame.time</a></span>
+</li>
+<li>
+<span><a href="#get-frame-host">Get: Frame.host</a></span>
+</li>
+<li>
+<span><a href="#frame-curve">Frame.curve</a></span>
+</li>
+<li>
+<span><a href="#frame-translate">Frame.translate</a></span>
+</li>
+<li>
+<span><a href="#frame-scale">Frame.scale</a></span>
+</li>
+<li>
+<span><a href="#frame-skew">Frame.skew</a></span>
+</li>
+<li>
+<span><a href="#frame-origin">Frame.origin</a></span>
+</li>
+<li>
+<span><a href="#frame-margin">Frame.margin</a></span>
+</li>
+<li>
+<span><a href="#frame-border">Frame.border</a></span>
+</li>
+<li>
+<span><a href="#frame-border_width">Frame.border_width</a></span>
+</li>
+<li>
+<span><a href="#frame-border_color">Frame.border_color</a></span>
+</li>
+<li>
+<span><a href="#frame-border_radius">Frame.border_radius</a></span>
+</li>
+<li>
+<span><a href="#frame-min_width">Frame.min_width</a></span>
+</li>
+<li>
+<span><a href="#frame-min_height">Frame.min_height</a></span>
+</li>
+<li>
+<span><a href="#frame-start">Frame.start</a></span>
+</li>
+<li>
+<span><a href="#frame-ratio">Frame.ratio</a></span>
+</li>
+<li>
+<span><a href="#frame-width">Frame.width</a></span>
+</li>
+<li>
+<span><a href="#frame-height">Frame.height</a></span>
+</li>
+<li>
+<span><a href="#frame-x">Frame.x</a></span>
+</li>
+<li>
+<span><a href="#frame-y">Frame.y</a></span>
+</li>
+<li>
+<span><a href="#frame-scale_x">Frame.scale_x</a></span>
+</li>
+<li>
+<span><a href="#frame-scale_y">Frame.scale_y</a></span>
+</li>
+<li>
+<span><a href="#frame-skew_x">Frame.skew_x</a></span>
+</li>
+<li>
+<span><a href="#frame-skew_y">Frame.skew_y</a></span>
+</li>
+<li>
+<span><a href="#frame-origin_x">Frame.origin_x</a></span>
+</li>
+<li>
+<span><a href="#frame-origin_y">Frame.origin_y</a></span>
+</li>
+<li>
+<span><a href="#frame-rotate_z">Frame.rotate_z</a></span>
+</li>
+<li>
+<span><a href="#frame-opacity">Frame.opacity</a></span>
+</li>
+<li>
+<span><a href="#frame-visible">Frame.visible</a></span>
+</li>
+<li>
+<span><a href="#frame-margin_left">Frame.margin_left</a></span>
+</li>
+<li>
+<span><a href="#frame-margin_top">Frame.margin_top</a></span>
+</li>
+<li>
+<span><a href="#frame-margin_right">Frame.margin_right</a></span>
+</li>
+<li>
+<span><a href="#frame-margin_bottom">Frame.margin_bottom</a></span>
+</li>
+<li>
+<span><a href="#frame-border_left">Frame.border_left</a></span>
+</li>
+<li>
+<span><a href="#frame-border_top">Frame.border_top</a></span>
+</li>
+<li>
+<span><a href="#frame-border_right">Frame.border_right</a></span>
+</li>
+<li>
+<span><a href="#frame-border_bottom">Frame.border_bottom</a></span>
+</li>
+<li>
+<span><a href="#frame-border_left_width">Frame.border_left_width</a></span>
+</li>
+<li>
+<span><a href="#frame-border_top_width">Frame.border_top_width</a></span>
+</li>
+<li>
+<span><a href="#frame-border_right_width">Frame.border_right_width</a></span>
+</li>
+<li>
+<span><a href="#frame-border_bottom_width">Frame.border_bottom_width</a></span>
+</li>
+<li>
+<span><a href="#frame-border_left_color">Frame.border_left_color</a></span>
+</li>
+<li>
+<span><a href="#frame-border_top_color">Frame.border_top_color</a></span>
+</li>
+<li>
+<span><a href="#frame-border_right_color">Frame.border_right_color</a></span>
+</li>
+<li>
+<span><a href="#frame-border_bottom_color">Frame.border_bottom_color</a></span>
+</li>
+<li>
+<span><a href="#frame-border_radius_left_top">Frame.border_radius_left_top</a></span>
+</li>
+<li>
+<span><a href="#frame-border_radius_right_top">Frame.border_radius_right_top</a></span>
+</li>
+<li>
+<span><a href="#frame-border_radius_right_bottom">Frame.border_radius_right_bottom</a></span>
+</li>
+<li>
+<span><a href="#frame-border_radius_left_bottom">Frame.border_radius_left_bottom</a></span>
+</li>
+<li>
+<span><a href="#frame-background_color">Frame.background_color</a></span>
+</li>
+<li>
+<span><a href="#frame-newline">Frame.newline</a></span>
+</li>
+<li>
+<span><a href="#frame-content_align">Frame.content_align</a></span>
+</li>
+<li>
+<span><a href="#frame-text_align">Frame.text_align</a></span>
+</li>
+<li>
+<span><a href="#frame-max_width">Frame.max_width</a></span>
+</li>
+<li>
+<span><a href="#frame-max_height">Frame.max_height</a></span>
+</li>
+<li>
+<span><a href="#frame-start_x">Frame.start_x</a></span>
+</li>
+<li>
+<span><a href="#frame-start_y">Frame.start_y</a></span>
+</li>
+<li>
+<span><a href="#frame-ratio_x">Frame.ratio_x</a></span>
+</li>
+<li>
+<span><a href="#frame-ratio_y">Frame.ratio_y</a></span>
+</li>
+<li>
+<span><a href="#frame-repeat">Frame.repeat</a></span>
+</li>
+<li>
+<span><a href="#frame-text_background_color">Frame.text_background_color</a></span>
+</li>
+<li>
+<span><a href="#frame-text_color">Frame.text_color</a></span>
+</li>
+<li>
+<span><a href="#frame-text_size">Frame.text_size</a></span>
+</li>
+<li>
+<span><a href="#frame-text_style">Frame.text_style</a></span>
+</li>
+<li>
+<span><a href="#frame-text_family">Frame.text_family</a></span>
+</li>
+<li>
+<span><a href="#frame-text_line_height">Frame.text_line_height</a></span>
+</li>
+<li>
+<span><a href="#frame-text_shadow">Frame.text_shadow</a></span>
+</li>
+<li>
+<span><a href="#frame-text_decoration">Frame.text_decoration</a></span>
+</li>
+<li>
+<span><a href="#frame-text_overflow">Frame.text_overflow</a></span>
+</li>
+<li>
+<span><a href="#frame-text_white_space">Frame.text_white_space</a></span>
+</li>
+<li>
+<span><a href="#frame-align_x">Frame.align_x</a></span>
+</li>
+<li>
+<span><a href="#frame-align_y">Frame.align_y</a></span>
+</li>
+<li>
+<span><a href="#frame-shadow">Frame.shadow</a></span>
+</li>
+<li>
+<span><a href="#frame-src">Frame.src</a></span>
+</li>
+<li>
+<span><a href="#frame-background_image">Frame.background_image</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#linear">LINEAR</a></span>
+</li>
+<li>
+<span><a href="#ease">EASE</a></span>
+</li>
+<li>
+<span><a href="#ease_in">EASE_IN</a></span>
+</li>
+<li>
+<span><a href="#ease_out">EASE_OUT</a></span>
+</li>
+<li>
+<span><a href="#ease_in_out">EASE_IN_OUT</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-gui-action">
+			<code>lib://gui/action</code>
+			<span><a class="mark" href="#lib-gui-action" id="lib-gui-action">#</a></span>
+		</h1><h2 id="create-json-parent-">
+			create(json[,parent])
+			<span><a class="mark" href="#create-json-parent-" id="create-json-parent-">#</a></span>
+		</h2><ul>
+<li><p>通过<code>json</code>数据创建动作，如果传入的<code>json</code>为<a href="../gui/action.html#class-action"><code>Action</code></a>跳过创建过程</p>
+<p>  如果传入父动作，创建完成追加新创建的动作到<code>parent</code>结尾</p>
+</li>
+<li><p>如果传入的数据是一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>创建<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a>并使用这个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>创建<a href="../gui/action.html#class-frame"><code>Frame</code></a></p>
+</li>
+<li><p>如果传入的数据里有<code>seq</code>属性创建<a href="../gui/action.html#class-sequenceaction"><code>SequenceAction</code></a></p>
+</li>
+<li><p>如果传入的数据里有<code>spawn</code>属性创建<a href="../gui/action.html#class-spawnaction"><code>SpawnAction</code></a></p>
+</li>
+<li><p>如果传入的数据里没有<code>seq</code>也没<code>spawn</code>创建<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a>，</p>
+<p>  对像的内部属性<code>frame</code>如果为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>，那么用这个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>创建<a href="../gui/action.html#class-frame"><code>Frame</code></a></p>
+</li>
+<li><p>@arg <code>json</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+<li>@arg <code>[parent]</code> {<a href="../gui/action.html#class-groupaction"><code>GroupAction</code></a>} </li>
+<li>@ret {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var act1 = action.create([
+    { time:0, x:0 },
+    { time:1000, x:100 },
+]);
+var act1 = action.create({
+    delay: 1000,
+    frame: [
+        { time:0, x:0, curve: &#39;linear&#39;, },
+        { time:1000, x:100 },
+    ]
+});
+// 创建SequenceAction并有两子KeyframeAction
+var act2 = action.create({
+    loop: -1,
+    seq: [
+        {
+            frame: [
+                { time:0, x: 0 },
+                { time:1000, x: 100 },
+            ]
+        },
+        [
+            { time:0, x: 100 },
+            { time:1000, x: 0 },
+        ]
+    ]
+})
+</code></pre>
+<h2 id="transition-view-style-delay-cb-">
+			transition(view,style[,delay[,cb]])
+			<span><a class="mark" href="#transition-view-style-delay-cb-" id="transition-view-style-delay-cb-">#</a></span>
+		</h2><h2 id="transition-view-style-cb-">
+			transition(view,style[,cb])
+			<span><a class="mark" href="#transition-view-style-cb-" id="transition-view-style-cb-">#</a></span>
+		</h2><ul>
+<li>通过样式创建视图样式过渡动作并播放这个动作，完成后回调</li>
+</ul>
+<p>Callback: cb()</p>
+<ul>
+<li>@arg <code>view</code>     {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>style</code>  {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@arg <code>[delay]</code>  {<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
+<li>@arg <code>[cb]</code>     {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// 1秒后过渡完成并回调
+action.transition(view, {
+    time: 1000,
+    y: 100, 
+    x: 100,
+}, ()={
+    console.log(&#39;view transition end&#39;);
+})
+// 延时1秒后开始播放，并使用线性过渡
+action.transition(view2, {
+    time: 1000,
+    curve: &#39;linear&#39;,
+    y: 100, 
+    x: 100,
+}, 1000)
+</code></pre>
+<h2 id="class-action">
+			<code>Class: Action</code>
+			<span><a class="mark" href="#class-action" id="class-action">#</a></span>
+		</h2><ul>
+<li><p><code>abstract class</code></p>
+</li>
+<li><p>动作基础类型，这是个抽象类型没有构造函数</p>
+</li>
+</ul>
+<h3 id="action-play-">
+			Action.play()
+			<span><a class="mark" href="#action-play-" id="action-play-">#</a></span>
+		</h3><ul>
+<li>播放动作</li>
+</ul>
+<h3 id="action-stop-">
+			Action.stop()
+			<span><a class="mark" href="#action-stop-" id="action-stop-">#</a></span>
+		</h3><ul>
+<li>停止动作</li>
+</ul>
+<h3 id="action-seek-time-">
+			Action.seek(time)
+			<span><a class="mark" href="#action-seek-time-" id="action-seek-time-">#</a></span>
+		</h3><ul>
+<li><p>跳转到目标<code>time</code>时间，调用后会重置<code>loopd</code></p>
+</li>
+<li><p>不包含延时时间，如果想在延时之前，可传入负数<code>time</code></p>
+</li>
+<li><p>@arg <code>time</code> {<a href="../util/native_types.html#int"><code>int</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="action-seek_play-time-">
+			Action.seek_play(time)
+			<span><a class="mark" href="#action-seek_play-time-" id="action-seek_play-time-">#</a></span>
+		</h3><ul>
+<li><p>跳转到目标<code>time</code>时间，并开始播放，调用后会重置<code>loopd</code></p>
+</li>
+<li><p>@arg <code>time</code> {<a href="../util/native_types.html#int"><code>int</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="action-seek_stop-time-">
+			Action.seek_stop(time)
+			<span><a class="mark" href="#action-seek_stop-time-" id="action-seek_stop-time-">#</a></span>
+		</h3><ul>
+<li><p>跳转到目标<code>time</code>时间，并停止播放，调用后会重置<code>loopd</code></p>
+</li>
+<li><p>@arg <code>time</code> {<a href="../util/native_types.html#int"><code>int</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="action-clear-">
+			Action.clear()
+			<span><a class="mark" href="#action-clear-" id="action-clear-">#</a></span>
+		</h3><ul>
+<li>清空动作,清空动作后会立即停止动作</li>
+</ul>
+<h3 id="action-loop">
+			Action.loop
+			<span><a class="mark" href="#action-loop" id="action-loop">#</a></span>
+		</h3><ul>
+<li><p>动作循环播放的次数，<code>-1</code>表示无限循环</p>
+</li>
+<li><p>{<a href="../util/native_types.html#int"><code>int</code></a>}</p>
+</li>
+</ul>
+<h3 id="get-action-loopd">
+			Get: Action.loopd
+			<span><a class="mark" href="#get-action-loopd" id="get-action-loopd">#</a></span>
+		</h3><ul>
+<li><p>当前动作已经循环播放的次数</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+</ul>
+<h3 id="action-delay">
+			Action.delay
+			<span><a class="mark" href="#action-delay" id="action-delay">#</a></span>
+		</h3><ul>
+<li><p>延时播放</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="get-action-delayd">
+			Get: Action.delayd
+			<span><a class="mark" href="#get-action-delayd" id="get-action-delayd">#</a></span>
+		</h3><ul>
+<li><p>延时过去的时间</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="action-speed">
+			Action.speed
+			<span><a class="mark" href="#action-speed" id="action-speed">#</a></span>
+		</h3><ul>
+<li><p>播放速率，默认为<code>1.0</code>，可设置的范围在<code>0.1</code>到<code>10.0</code>之间</p>
+</li>
+<li><p>{<a href="../util/native_types.html#float"><code>float</code></a>} <code>0.1-10</code></p>
+</li>
+</ul>
+<h3 id="action-playing">
+			Action.playing
+			<span><a class="mark" href="#action-playing" id="action-playing">#</a></span>
+		</h3><ul>
+<li><p>是否播放中，设置<code>action.playing = true</code>相当调用<code>action.play()</code></p>
+</li>
+<li><p>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</p>
+</li>
+</ul>
+<h3 id="get-action-duration">
+			Get: Action.duration
+			<span><a class="mark" href="#get-action-duration" id="get-action-duration">#</a></span>
+		</h3><ul>
+<li><p>当前动作的时长不包括延时，对于<a href="../gui/action.html#class-spawnaction"><code>SpawnAction</code></a>取最长的子动作</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="get-action-parent">
+			Get: Action.parent
+			<span><a class="mark" href="#get-action-parent" id="get-action-parent">#</a></span>
+		</h3><ul>
+<li><p>父动作，如果没有父动作返回<code>null</code></p>
+</li>
+<li><p>{<a href="../gui/action.html#class-groupaction"><code>GroupAction</code></a>}</p>
+</li>
+</ul>
+<h2 id="class-groupaction">
+			<code>Class: GroupAction</code>
+			<span><a class="mark" href="#class-groupaction" id="class-groupaction">#</a></span>
+		</h2><ul>
+<li><code>abstract class</code></li>
+<li><p><code>extends</code> <a href="../gui/action.html#class-action"><code>Action</code></a></p>
+</li>
+<li><p>动作集合，这是个抽象类型没有构造函数</p>
+</li>
+</ul>
+<h3 id="get-groupaction-length">
+			Get: GroupAction.length
+			<span><a class="mark" href="#get-groupaction-length" id="get-groupaction-length">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<h3 id="groupaction-append-child-">
+			GroupAction.append(child)
+			<span><a class="mark" href="#groupaction-append-child-" id="groupaction-append-child-">#</a></span>
+		</h3><ul>
+<li><p>追加子动作到结尾</p>
+</li>
+<li><p>@arg <code>child</code> {<a href="../gui/action.html#class-action"><code>Action</code></a>}</p>
+</li>
+</ul>
+<h3 id="groupaction-insert-index-child-">
+			GroupAction.insert(index, child)
+			<span><a class="mark" href="#groupaction-insert-index-child-" id="groupaction-insert-index-child-">#</a></span>
+		</h3><ul>
+<li><p>插入子动作到<code>index</code>的位置</p>
+</li>
+<li><p>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}    </p>
+</li>
+<li>@arg <code>child</code> {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+</ul>
+<h3 id="groupaction-remove_child-index-">
+			GroupAction.remove_child(index)
+			<span><a class="mark" href="#groupaction-remove_child-index-" id="groupaction-remove_child-index-">#</a></span>
+		</h3><ul>
+<li><p>通过<code>index</code>删除子动作</p>
+</li>
+<li><p>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+</ul>
+<h3 id="groupaction-children-index-">
+			GroupAction.children(index)
+			<span><a class="mark" href="#groupaction-children-index-" id="groupaction-children-index-">#</a></span>
+		</h3><ul>
+<li><p>获取子动作</p>
+</li>
+<li><p>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+<li>@ret {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+</ul>
+<h2 id="class-spawnaction">
+			<code>Class: SpawnAction</code>
+			<span><a class="mark" href="#class-spawnaction" id="class-spawnaction">#</a></span>
+		</h2><ul>
+<li><p><code>extends</code> <a href="../gui/action.html#class-groupaction"><code>GroupAction</code></a></p>
+</li>
+<li><p>并行子动作实现，所有的动作并行一起播放</p>
+</li>
+</ul>
+<h3 id="spawnaction-spawn-index-">
+			SpawnAction.spawn(index)
+			<span><a class="mark" href="#spawnaction-spawn-index-" id="spawnaction-spawn-index-">#</a></span>
+		</h3><ul>
+<li><p>返回子动作<code>children(index)</code>的别名函数</p>
+</li>
+<li><p>@arg <code>index</code> {uint}</p>
+</li>
+<li>@ret {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+</ul>
+<h2 id="class-sequenceaction">
+			<code>Class: SequenceAction</code>
+			<span><a class="mark" href="#class-sequenceaction" id="class-sequenceaction">#</a></span>
+		</h2><ul>
+<li><p><code>extends</code> <a href="../gui/action.html#class-groupaction"><code>GroupAction</code></a></p>
+</li>
+<li><p>串行子动作实现，子动作一个接一个串行播放</p>
+</li>
+</ul>
+<h3 id="sequenceaction-seq-index-">
+			SequenceAction.seq(index)
+			<span><a class="mark" href="#sequenceaction-seq-index-" id="sequenceaction-seq-index-">#</a></span>
+		</h3><ul>
+<li><p>返回子动作<code>children(index)</code>的别名函数</p>
+</li>
+<li><p>@arg <code>index</code> {uint}</p>
+</li>
+<li>@ret {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+</ul>
+<h2 id="class-keyframeaction">
+			<code>Class: KeyframeAction</code>
+			<span><a class="mark" href="#class-keyframeaction" id="class-keyframeaction">#</a></span>
+		</h2><ul>
+<li><p><code>extends</code> <a href="../gui/action.html#class-action"><code>Action</code></a></p>
+</li>
+<li><p>关键帧动作, 不能包含子动作</p>
+</li>
+</ul>
+<h3 id="keyframeaction-has_property-name-">
+			KeyframeAction.has_property(name)
+			<span><a class="mark" href="#keyframeaction-has_property-name-" id="keyframeaction-has_property-name-">#</a></span>
+		</h3><ul>
+<li><p>测试当前是否添加了属性名<code>name</code></p>
+</li>
+<li><p>@arg <code>name</code> {<a href="../gui/css.html#enum-propertyname"><code>PropertyName</code></a>} </p>
+</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="keyframeaction-match_property-name-">
+			KeyframeAction.match_property(name)
+			<span><a class="mark" href="#keyframeaction-match_property-name-" id="keyframeaction-match_property-name-">#</a></span>
+		</h3><ul>
+<li><p>测试属性名称是否与当前绑定的视图匹配</p>
+</li>
+<li><p>@arg <code>name</code> {<a href="../gui/css.html#enum-propertyname"><code>PropertyName</code></a>} </p>
+</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="keyframeaction-frame-index-">
+			KeyframeAction.frame(index)
+			<span><a class="mark" href="#keyframeaction-frame-index-" id="keyframeaction-frame-index-">#</a></span>
+		</h3><ul>
+<li><p>通过索引获取关键帧</p>
+</li>
+<li><p>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+<li>@ret {<a href="../gui/action.html#class-frame"><code>Frame</code></a>}</li>
+</ul>
+<h3 id="keyframeaction-add-time-curve-">
+			KeyframeAction.add([time[,curve]])
+			<span><a class="mark" href="#keyframeaction-add-time-curve-" id="keyframeaction-add-time-curve-">#</a></span>
+		</h3><ul>
+<li><p>通过<code>time</code>时间与曲线<code>curve</code>添加关键帧，并返回关键帧</p>
+</li>
+<li><p>arg <code>[time=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 不传入<code>time</code>默认为<code>0</code></p>
+</li>
+<li><p>arg <code>[curve=&#39;ease&#39;]</code> {<a href="../gui/value.html#class-curve"><code>Curve</code></a>} 不传入<code>curve</code>默认为<a href="../gui/action.html#ease"><code>EASE</code></a></p>
+<p>  可使用 <a href="../gui/action.html#linear"><code>LINEAR</code></a>、<a href="../gui/action.html#ease"><code>EASE</code></a>、<a href="../gui/action.html#ease_in"><code>EASE_IN</code></a>、<a href="../gui/action.html#ease_out"><code>EASE_OUT</code></a>、<a href="../gui/action.html#ease_in_out"><code>EASE_IN_OUT</code></a></p>
+<p>  或     <code>&#39;linear&#39;</code>、<code>&#39;ease&#39;</code>、<code>&#39;ease_in&#39;</code>、<code>&#39;ease_out&#39;</code>、<code>&#39;ease_in_out&#39;</code> 做为参数。</p>
+</li>
+<li><p>@ret {<a href="../gui/action.html#class-frame"><code>Frame</code></a>}</p>
+</li>
+</ul>
+<h3 id="keyframeaction-add-style-">
+			KeyframeAction.add([style])
+			<span><a class="mark" href="#keyframeaction-add-style-" id="keyframeaction-add-style-">#</a></span>
+		</h3><ul>
+<li><p>通过<code>style</code>对像属性添加关键帧，并返回关键帧</p>
+</li>
+<li><p>arg <code>[style]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
+</li>
+<li>@ret {<a href="../gui/action.html#class-frame"><code>Frame</code></a>}</li>
+</ul>
+<h3 id="get-keyframeaction-first">
+			Get: KeyframeAction.first
+			<span><a class="mark" href="#get-keyframeaction-first" id="get-keyframeaction-first">#</a></span>
+		</h3><ul>
+<li><p>第一个关键帧</p>
+</li>
+<li><p>{<a href="../gui/action.html#class-frame"><code>Frame</code></a>}</p>
+</li>
+</ul>
+<h3 id="get-keyframeaction-last">
+			Get: KeyframeAction.last
+			<span><a class="mark" href="#get-keyframeaction-last" id="get-keyframeaction-last">#</a></span>
+		</h3><ul>
+<li><p>最后一个关键帧</p>
+</li>
+<li><p>{<a href="../gui/action.html#class-frame"><code>Frame</code></a>}</p>
+</li>
+</ul>
+<h3 id="get-keyframeaction-length">
+			Get: KeyframeAction.length
+			<span><a class="mark" href="#get-keyframeaction-length" id="get-keyframeaction-length">#</a></span>
+		</h3><ul>
+<li><p>关键帧数量</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+</ul>
+<h3 id="get-keyframeaction-position">
+			Get: KeyframeAction.position
+			<span><a class="mark" href="#get-keyframeaction-position" id="get-keyframeaction-position">#</a></span>
+		</h3><ul>
+<li><p>当前关键帧的播放位置，<code>-1</code>表示还未开始播放</p>
+</li>
+<li><p>{<a href="../util/native_types.html#int"><code>int</code></a>} </p>
+</li>
+</ul>
+<h3 id="get-keyframeaction-time">
+			Get: KeyframeAction.time
+			<span><a class="mark" href="#get-keyframeaction-time" id="get-keyframeaction-time">#</a></span>
+		</h3><ul>
+<li><p>当前播放时间<code>time</code></p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h2 id="class-frame">
+			<code>Class: Frame</code>
+			<span><a class="mark" href="#class-frame" id="class-frame">#</a></span>
+		</h2><ul>
+<li>关键帧</li>
+</ul>
+<h3 id="frame-fetch-view-">
+			Frame.fetch([view])
+			<span><a class="mark" href="#frame-fetch-view-" id="frame-fetch-view-">#</a></span>
+		</h3><ul>
+<li><p>通过视图抓取样式属性填充到当前<code>frame</code></p>
+<p>  如果不传入视图抓取当前绑定的视图样式属性</p>
+</li>
+<li><p>@arg <code>[view]</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</p>
+</li>
+</ul>
+<h3 id="frame-flush-">
+			Frame.flush()
+			<span><a class="mark" href="#frame-flush-" id="frame-flush-">#</a></span>
+		</h3><ul>
+<li>恢复当前关键帧样式属性为默认值</li>
+</ul>
+<h3 id="get-frame-index">
+			Get: Frame.index
+			<span><a class="mark" href="#get-frame-index" id="get-frame-index">#</a></span>
+		</h3><ul>
+<li><p>关键帧所在的动作中的索引位置</p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</p>
+</li>
+</ul>
+<h3 id="frame-time">
+			Frame.time
+			<span><a class="mark" href="#frame-time" id="frame-time">#</a></span>
+		</h3><ul>
+<li><p>关键帧的所在动作中的时间<code>time</code></p>
+</li>
+<li><p>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
+</li>
+</ul>
+<h3 id="get-frame-host">
+			Get: Frame.host
+			<span><a class="mark" href="#get-frame-host" id="get-frame-host">#</a></span>
+		</h3><ul>
+<li><p>关键帧所在的动作<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a></p>
+</li>
+<li><p>{<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a>}</p>
+</li>
+</ul>
+<h3 id="frame-curve">
+			Frame.curve
+			<span><a class="mark" href="#frame-curve" id="frame-curve">#</a></span>
+		</h3><ul>
+<li><p>当前关键帧到下一个关键帧的过渡曲线</p>
+<p>  可使用 <a href="../gui/action.html#linear"><code>LINEAR</code></a>、<a href="../gui/action.html#ease"><code>EASE</code></a>、<a href="../gui/action.html#ease_in"><code>EASE_IN</code></a>、<a href="../gui/action.html#ease_out"><code>EASE_OUT</code></a>、<a href="../gui/action.html#ease_in_out"><code>EASE_IN_OUT</code></a></p>
+<p>  或     <code>&#39;linear&#39;</code>、<code>&#39;ease&#39;</code>、<code>&#39;ease_in&#39;</code>、<code>&#39;ease_out&#39;</code>、<code>&#39;ease_in_out&#39;</code> 做为值设置。</p>
+</li>
+<li><p>{<a href="../gui/value.html#class-curve"><code>Curve</code></a>}</p>
+</li>
+</ul>
+<h3 id="frame-translate">
+			Frame.translate
+			<span><a class="mark" href="#frame-translate" id="frame-translate">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+</ul>
+<h3 id="frame-scale">
+			Frame.scale
+			<span><a class="mark" href="#frame-scale" id="frame-scale">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+</ul>
+<h3 id="frame-skew">
+			Frame.skew
+			<span><a class="mark" href="#frame-skew" id="frame-skew">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+</ul>
+<h3 id="frame-origin">
+			Frame.origin
+			<span><a class="mark" href="#frame-origin" id="frame-origin">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+</ul>
+<h3 id="frame-margin">
+			Frame.margin
+			<span><a class="mark" href="#frame-margin" id="frame-margin">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-border">
+			Frame.border
+			<span><a class="mark" href="#frame-border" id="frame-border">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+</ul>
+<h3 id="frame-border_width">
+			Frame.border_width
+			<span><a class="mark" href="#frame-border_width" id="frame-border_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_color">
+			Frame.border_color
+			<span><a class="mark" href="#frame-border_color" id="frame-border_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+</ul>
+<h3 id="frame-border_radius">
+			Frame.border_radius
+			<span><a class="mark" href="#frame-border_radius" id="frame-border_radius">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-min_width">
+			Frame.min_width
+			<span><a class="mark" href="#frame-min_width" id="frame-min_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-min_height">
+			Frame.min_height
+			<span><a class="mark" href="#frame-min_height" id="frame-min_height">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-start">
+			Frame.start
+			<span><a class="mark" href="#frame-start" id="frame-start">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+</ul>
+<h3 id="frame-ratio">
+			Frame.ratio
+			<span><a class="mark" href="#frame-ratio" id="frame-ratio">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+</ul>
+<h3 id="frame-width">
+			Frame.width
+			<span><a class="mark" href="#frame-width" id="frame-width">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>|<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-height">
+			Frame.height
+			<span><a class="mark" href="#frame-height" id="frame-height">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>|<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-x">
+			Frame.x
+			<span><a class="mark" href="#frame-x" id="frame-x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-y">
+			Frame.y
+			<span><a class="mark" href="#frame-y" id="frame-y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-scale_x">
+			Frame.scale_x
+			<span><a class="mark" href="#frame-scale_x" id="frame-scale_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-scale_y">
+			Frame.scale_y
+			<span><a class="mark" href="#frame-scale_y" id="frame-scale_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-skew_x">
+			Frame.skew_x
+			<span><a class="mark" href="#frame-skew_x" id="frame-skew_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-skew_y">
+			Frame.skew_y
+			<span><a class="mark" href="#frame-skew_y" id="frame-skew_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-origin_x">
+			Frame.origin_x
+			<span><a class="mark" href="#frame-origin_x" id="frame-origin_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-origin_y">
+			Frame.origin_y
+			<span><a class="mark" href="#frame-origin_y" id="frame-origin_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-rotate_z">
+			Frame.rotate_z
+			<span><a class="mark" href="#frame-rotate_z" id="frame-rotate_z">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-opacity">
+			Frame.opacity
+			<span><a class="mark" href="#frame-opacity" id="frame-opacity">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-visible">
+			Frame.visible
+			<span><a class="mark" href="#frame-visible" id="frame-visible">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="frame-margin_left">
+			Frame.margin_left
+			<span><a class="mark" href="#frame-margin_left" id="frame-margin_left">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-margin_top">
+			Frame.margin_top
+			<span><a class="mark" href="#frame-margin_top" id="frame-margin_top">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-margin_right">
+			Frame.margin_right
+			<span><a class="mark" href="#frame-margin_right" id="frame-margin_right">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-margin_bottom">
+			Frame.margin_bottom
+			<span><a class="mark" href="#frame-margin_bottom" id="frame-margin_bottom">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-border_left">
+			Frame.border_left
+			<span><a class="mark" href="#frame-border_left" id="frame-border_left">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+</ul>
+<h3 id="frame-border_top">
+			Frame.border_top
+			<span><a class="mark" href="#frame-border_top" id="frame-border_top">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+</ul>
+<h3 id="frame-border_right">
+			Frame.border_right
+			<span><a class="mark" href="#frame-border_right" id="frame-border_right">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+</ul>
+<h3 id="frame-border_bottom">
+			Frame.border_bottom
+			<span><a class="mark" href="#frame-border_bottom" id="frame-border_bottom">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+</ul>
+<h3 id="frame-border_left_width">
+			Frame.border_left_width
+			<span><a class="mark" href="#frame-border_left_width" id="frame-border_left_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_top_width">
+			Frame.border_top_width
+			<span><a class="mark" href="#frame-border_top_width" id="frame-border_top_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_right_width">
+			Frame.border_right_width
+			<span><a class="mark" href="#frame-border_right_width" id="frame-border_right_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_bottom_width">
+			Frame.border_bottom_width
+			<span><a class="mark" href="#frame-border_bottom_width" id="frame-border_bottom_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_left_color">
+			Frame.border_left_color
+			<span><a class="mark" href="#frame-border_left_color" id="frame-border_left_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+</ul>
+<h3 id="frame-border_top_color">
+			Frame.border_top_color
+			<span><a class="mark" href="#frame-border_top_color" id="frame-border_top_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+</ul>
+<h3 id="frame-border_right_color">
+			Frame.border_right_color
+			<span><a class="mark" href="#frame-border_right_color" id="frame-border_right_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+</ul>
+<h3 id="frame-border_bottom_color">
+			Frame.border_bottom_color
+			<span><a class="mark" href="#frame-border_bottom_color" id="frame-border_bottom_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+</ul>
+<h3 id="frame-border_radius_left_top">
+			Frame.border_radius_left_top
+			<span><a class="mark" href="#frame-border_radius_left_top" id="frame-border_radius_left_top">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_radius_right_top">
+			Frame.border_radius_right_top
+			<span><a class="mark" href="#frame-border_radius_right_top" id="frame-border_radius_right_top">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_radius_right_bottom">
+			Frame.border_radius_right_bottom
+			<span><a class="mark" href="#frame-border_radius_right_bottom" id="frame-border_radius_right_bottom">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-border_radius_left_bottom">
+			Frame.border_radius_left_bottom
+			<span><a class="mark" href="#frame-border_radius_left_bottom" id="frame-border_radius_left_bottom">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-background_color">
+			Frame.background_color
+			<span><a class="mark" href="#frame-background_color" id="frame-background_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+</ul>
+<h3 id="frame-newline">
+			Frame.newline
+			<span><a class="mark" href="#frame-newline" id="frame-newline">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="frame-content_align">
+			Frame.content_align
+			<span><a class="mark" href="#frame-content_align" id="frame-content_align">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-contentalign"><code>ContentAlign</code></a>}</li>
+</ul>
+<h3 id="frame-text_align">
+			Frame.text_align
+			<span><a class="mark" href="#frame-text_align" id="frame-text_align">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textalign"><code>TextAlign</code></a>}</li>
+</ul>
+<h3 id="frame-max_width">
+			Frame.max_width
+			<span><a class="mark" href="#frame-max_width" id="frame-max_width">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-max_height">
+			Frame.max_height
+			<span><a class="mark" href="#frame-max_height" id="frame-max_height">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+</ul>
+<h3 id="frame-start_x">
+			Frame.start_x
+			<span><a class="mark" href="#frame-start_x" id="frame-start_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-start_y">
+			Frame.start_y
+			<span><a class="mark" href="#frame-start_y" id="frame-start_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-ratio_x">
+			Frame.ratio_x
+			<span><a class="mark" href="#frame-ratio_x" id="frame-ratio_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-ratio_y">
+			Frame.ratio_y
+			<span><a class="mark" href="#frame-ratio_y" id="frame-ratio_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+</ul>
+<h3 id="frame-repeat">
+			Frame.repeat
+			<span><a class="mark" href="#frame-repeat" id="frame-repeat">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-repeat"><code>Repeat</code></a>}</li>
+</ul>
+<h3 id="frame-text_background_color">
+			Frame.text_background_color
+			<span><a class="mark" href="#frame-text_background_color" id="frame-text_background_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textcolor"><code>TextColor</code></a>}</li>
+</ul>
+<h3 id="frame-text_color">
+			Frame.text_color
+			<span><a class="mark" href="#frame-text_color" id="frame-text_color">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textcolor"><code>TextColor</code></a>}</li>
+</ul>
+<h3 id="frame-text_size">
+			Frame.text_size
+			<span><a class="mark" href="#frame-text_size" id="frame-text_size">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textsize"><code>TextSize</code></a>}</li>
+</ul>
+<h3 id="frame-text_style">
+			Frame.text_style
+			<span><a class="mark" href="#frame-text_style" id="frame-text_style">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textstyle"><code>TextStyle</code></a>}</li>
+</ul>
+<h3 id="frame-text_family">
+			Frame.text_family
+			<span><a class="mark" href="#frame-text_family" id="frame-text_family">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textfamily"><code>TextFamily</code></a>}</li>
+</ul>
+<h3 id="frame-text_line_height">
+			Frame.text_line_height
+			<span><a class="mark" href="#frame-text_line_height" id="frame-text_line_height">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textlineheight"><code>TextLineHeight</code></a>}</li>
+</ul>
+<h3 id="frame-text_shadow">
+			Frame.text_shadow
+			<span><a class="mark" href="#frame-text_shadow" id="frame-text_shadow">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textshadow"><code>TextShadow</code></a>}</li>
+</ul>
+<h3 id="frame-text_decoration">
+			Frame.text_decoration
+			<span><a class="mark" href="#frame-text_decoration" id="frame-text_decoration">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textdecoration"><code>TextDecoration</code></a>}</li>
+</ul>
+<h3 id="frame-text_overflow">
+			Frame.text_overflow
+			<span><a class="mark" href="#frame-text_overflow" id="frame-text_overflow">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textoverflow"><code>TextOverflow</code></a>}</li>
+</ul>
+<h3 id="frame-text_white_space">
+			Frame.text_white_space
+			<span><a class="mark" href="#frame-text_white_space" id="frame-text_white_space">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-textwhitespace"><code>TextWhiteSpace</code></a>}</li>
+</ul>
+<h3 id="frame-align_x">
+			Frame.align_x
+			<span><a class="mark" href="#frame-align_x" id="frame-align_x">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-align"><code>Align</code></a>}</li>
+</ul>
+<h3 id="frame-align_y">
+			Frame.align_y
+			<span><a class="mark" href="#frame-align_y" id="frame-align_y">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-align"><code>Align</code></a>}</li>
+</ul>
+<h3 id="frame-shadow">
+			Frame.shadow
+			<span><a class="mark" href="#frame-shadow" id="frame-shadow">#</a></span>
+		</h3><ul>
+<li>{<a href="../gui/value.html#class-shadow"><code>Shadow</code></a>}</li>
+</ul>
+<h3 id="frame-src">
+			Frame.src
+			<span><a class="mark" href="#frame-src" id="frame-src">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="frame-background_image">
+			Frame.background_image
+			<span><a class="mark" href="#frame-background_image" id="frame-background_image">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="linear">
+			LINEAR
+			<span><a class="mark" href="#linear" id="linear">#</a></span>
+		</h2><h2 id="ease">
+			EASE
+			<span><a class="mark" href="#ease" id="ease">#</a></span>
+		</h2><h2 id="ease_in">
+			EASE_IN
+			<span><a class="mark" href="#ease_in" id="ease_in">#</a></span>
+		</h2><h2 id="ease_out">
+			EASE_OUT
+			<span><a class="mark" href="#ease_out" id="ease_out">#</a></span>
+		</h2><h2 id="ease_in_out">
+			EASE_IN_OUT
+			<span><a class="mark" href="#ease_in_out" id="ease_in_out">#</a></span>
+		</h2>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

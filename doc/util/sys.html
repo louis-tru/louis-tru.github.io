@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/sys.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-util-sys">lib://util/sys</a></span>
+<ul>
+<li>
+<span><a href="#time-">time()</a></span>
+</li>
+<li>
+<span><a href="#time_monotonic-">time_monotonic()</a></span>
+</li>
+<li>
+<span><a href="#name-">name()</a></span>
+</li>
+<li>
+<span><a href="#info-">info()</a></span>
+</li>
+<li>
+<span><a href="#version-">version()</a></span>
+</li>
+<li>
+<span><a href="#brand-">brand()</a></span>
+</li>
+<li>
+<span><a href="#subsystem-">subsystem()</a></span>
+</li>
+<li>
+<span><a href="#language-">language()</a></span>
+</li>
+<li>
+<span><a href="#is_wifi-">is_wifi()</a></span>
+</li>
+<li>
+<span><a href="#is_mobile-">is_mobile()</a></span>
+</li>
+<li>
+<span><a href="#network_status-">network_status()</a></span>
+</li>
+<li>
+<span><a href="#is_ac_power-">is_ac_power()</a></span>
+</li>
+<li>
+<span><a href="#is_battery-">is_battery()</a></span>
+</li>
+<li>
+<span><a href="#battery_level-">battery_level()</a></span>
+</li>
+<li>
+<span><a href="#memory-">memory()</a></span>
+</li>
+<li>
+<span><a href="#used_memory-">used_memory()</a></span>
+</li>
+<li>
+<span><a href="#available_memory-">available_memory()</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-util-sys">
+			<code>lib://util/sys</code>
+			<span><a class="mark" href="#lib-util-sys" id="lib-util-sys">#</a></span>
+		</h1><p>与操作系统相关的api</p>
+<p><code>下面的实例均为在ios系统中运行结果</code></p>
+<h2 id="time-">
+			time()
+			<span><a class="mark" href="#time-" id="time-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>} ms</li>
+</ul>
+<p>获取当前系统时间戳(毫秒)</p>
+<h2 id="time_monotonic-">
+			time_monotonic()
+			<span><a class="mark" href="#time_monotonic-" id="time_monotonic-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>} ms</li>
+</ul>
+<p>获取从系统启动时开始记录的单调时间戳(毫秒),这个时间不受外部修改影响</p>
+<h2 id="name-">
+			name()
+			<span><a class="mark" href="#name-" id="name-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>获取系统名称,这个值包括 <code>&#39;iOS&#39;</code>|<code>&#39;Android&#39;</code>|<code>&#39;Linux&#39;</code>|<code>&#39;MacOSX&#39;</code></p>
+<h2 id="info-">
+			info()
+			<span><a class="mark" href="#info-" id="info-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>获取系统信息</p>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// host: Louis-iPhone
+// sys: Darwin
+// machine: iPhone7,2
+// nodename: Louis-iPhone
+// version: Darwin Kernel Version 16.6.0: Mon Apr 17 17:33:35 PDT 2017; root:xnu-3789.60.24~24/RELEASE_ARM64_T7000
+// release: 16.6.0
+console.log(sys.info());
+</code></pre>
+<h2 id="version-">
+			version()
+			<span><a class="mark" href="#version-" id="version-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>获取系统版本字符串</p>
+<p>Example:</p>
+<pre><code>// Prints: 10.3.2
+console.log(sys.version());
+</code></pre><h2 id="brand-">
+			brand()
+			<span><a class="mark" href="#brand-" id="brand-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>获取设备品牌名称</p>
+<p>Example:</p>
+<pre><code>// Prints: Apple
+console.log(sys.brand());
+</code></pre><h2 id="subsystem-">
+			subsystem()
+			<span><a class="mark" href="#subsystem-" id="subsystem-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>获取子系统名称</p>
+<p>Example:</p>
+<pre><code>// Prints: iPhone
+console.log(sys.subsystem());
+</code></pre><h2 id="language-">
+			language()
+			<span><a class="mark" href="#language-" id="language-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>获取当前系统语言字符串,可能的值 <code>&#39;en-us&#39;</code>|<code>&#39;zh-cn&#39;</code>|<code>&#39;zh-tw&#39;</code></p>
+<p>Example:</p>
+<pre><code>// Prints: zh-Hans-CN
+console.log(sys.subsystem());
+</code></pre><h2 id="is_wifi-">
+			is_wifi()
+			<span><a class="mark" href="#is_wifi-" id="is_wifi-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>获取当前是否为wifi网络并且网络为有效状态,如果网络为无效状态会返回<code>false</code></p>
+<h2 id="is_mobile-">
+			is_mobile()
+			<span><a class="mark" href="#is_mobile-" id="is_mobile-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} ms</li>
+</ul>
+<p>获取当前是否为移动网络并且网络为有效状态,如果网络为无效状态会返回<code>false</code></p>
+<h2 id="network_status-">
+			network_status()
+			<span><a class="mark" href="#network_status-" id="network_status-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+</ul>
+<p>获取当前网络状态</p>
+<p>@ret</p>
+<ul>
+<li>等于<code>=0</code> - 无网络</li>
+<li>等于<code>=1</code> - 有线网络</li>
+<li>等于<code>=2</code> - 无线网络</li>
+<li>等于或大于<code>&gt;=3</code> - 移动网络</li>
+</ul>
+<h2 id="is_ac_power-">
+			is_ac_power()
+			<span><a class="mark" href="#is_ac_power-" id="is_ac_power-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>获取是否连接外部电源,连接外部电源返回<code>true</code></p>
+<h2 id="is_battery-">
+			is_battery()
+			<span><a class="mark" href="#is_battery-" id="is_battery-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>获取这个设备是否已连接电池设备,如果已连接电池返回<code>true</code></p>
+<h2 id="battery_level-">
+			battery_level()
+			<span><a class="mark" href="#battery_level-" id="battery_level-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#float"><code>float</code></a>} <code>0-1</code></li>
+</ul>
+<p>获取电池电量等级,返回为<code>0-1</code>的浮点值,如果没有电池返回<code>0</code></p>
+<h2 id="memory-">
+			memory()
+			<span><a class="mark" href="#memory-" id="memory-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<p>获取系统内存总量,单位为字节</p>
+<h2 id="used_memory-">
+			used_memory()
+			<span><a class="mark" href="#used_memory-" id="used_memory-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<p>获取当前应用已经使用的内存</p>
+<h2 id="available_memory-">
+			available_memory()
+			<span><a class="mark" href="#available_memory-" id="available_memory-">#</a></span>
+		</h2><ul>
+<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+</ul>
+<p>获取当前应用可用的内存</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

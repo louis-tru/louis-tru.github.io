@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'gui/font.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-gui-font">lib://gui/font</a></span>
+<ul>
+<li>
+<span><a href="#set_default_fonts-fonts-">set_default_fonts(fonts)</a></span>
+</li>
+<li>
+<span><a href="#default_font_names-">default_font_names()</a></span>
+</li>
+<li>
+<span><a href="#family_names-">family_names()</a></span>
+</li>
+<li>
+<span><a href="#font_names-family-">font_names(family)</a></span>
+</li>
+<li>
+<span><a href="#test-name-">test(name)</a></span>
+</li>
+<li>
+<span><a href="#register_font-font_data-alias-">register_font(font_data[,alias])</a></span>
+</li>
+<li>
+<span><a href="#register_font_file-path-alias-">register_font_file(path[,alias])</a></span>
+</li>
+<li>
+<span><a href="#set_family_alias-family-alias-">set_family_alias(family, alias)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-gui-font">
+			<code>lib://gui/font</code>
+			<span><a class="mark" href="#lib-gui-font" id="lib-gui-font">#</a></span>
+		</h1><h2 id="set_default_fonts-fonts-">
+			set_default_fonts(fonts)
+			<span><a class="mark" href="#set_default_fonts-fonts-" id="set_default_fonts-fonts-">#</a></span>
+		</h2><p>设置默认字体列表，使用字符时多个字体名称使用逗号分隔，字体必须是已经注册过的否则无效。</p>
+<ul>
+<li>@arg <code>fonts</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>}</li>
+</ul>
+<h2 id="default_font_names-">
+			default_font_names()
+			<span><a class="mark" href="#default_font_names-" id="default_font_names-">#</a></span>
+		</h2><p>返回当前有效的默认字体列表</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>}</li>
+</ul>
+<h2 id="family_names-">
+			family_names()
+			<span><a class="mark" href="#family_names-" id="family_names-">#</a></span>
+		</h2><p>获取当前注册的所有字体家族名称列表</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>}</li>
+</ul>
+<h2 id="font_names-family-">
+			font_names(family)
+			<span><a class="mark" href="#font_names-family-" id="font_names-family-">#</a></span>
+		</h2><p>通过字体家族名称返回字体列表</p>
+<ul>
+<li>@arg <code>family</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>}</li>
+</ul>
+<h2 id="test-name-">
+			test(name)
+			<span><a class="mark" href="#test-name-" id="test-name-">#</a></span>
+		</h2><p>测试当前注册过的字体家族或字体</p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} font name or family name</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="register_font-font_data-alias-">
+			register_font(font_data[,alias])
+			<span><a class="mark" href="#register_font-font_data-alias-" id="register_font-font_data-alias-">#</a></span>
+		</h2><p>通过字体数据<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>注册，成功返回<code>true</code></p>
+<p>这个方法会将比<code>register_font_file()</code>消耗更多的内存，如果文件在本地最好使用<code>register_font_file()</code></p>
+<ul>
+<li>@arg <code>font_data</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 字体数据</li>
+<li>@arg <code>[alias]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}  设置一个可选的别名</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="register_font_file-path-alias-">
+			register_font_file(path[,alias])
+			<span><a class="mark" href="#register_font_file-path-alias-" id="register_font_file-path-alias-">#</a></span>
+		</h2><p>通过本地文件路径注册，成功返回<code>true</code></p>
+<p>注意：这个路径只能为本地文件路径，如<code>file:///var/data/font.ttf</code> 或 <code>/var/data/font.ttf</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}   本地字体文件路径</li>
+<li>@arg <code>alias</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}     设置一个可选的别名</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="set_family_alias-family-alias-">
+			set_family_alias(family, alias)
+			<span><a class="mark" href="#set_family_alias-family-alias-" id="set_family_alias-family-alias-">#</a></span>
+		</h2><p>设置字体家族别名</p>
+<ul>
+<li>@arg <code>family</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 当前注册的字体家族名</li>
+<li>@arg <code>alias</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}     不能根现有的家族与字体名称重复，但可以替换现有的别名</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

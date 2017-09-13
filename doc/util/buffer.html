@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/buffer.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-util-buffer">lib://util/buffer</a></span>
+<ul>
+<li>
+<span><a href="#buffers-and-character-encodings">Buffers and Character Encodings</a></span>
+</li>
+<li>
+<span><a href="#class-buffer">Class: Buffer</a></span>
+<ul>
+<li>
+<span><a href="#constructor-length-fill-">constructor([length[,fill]])</a></span>
+</li>
+<li>
+<span><a href="#constructor-string-encoding-">constructor(string[,encoding])</a></span>
+</li>
+<li>
+<span><a href="#constructor-buffer-">constructor(buffer)</a></span>
+</li>
+<li>
+<span><a href="#get-buffer-length">Get: Buffer.length</a></span>
+</li>
+<li>
+<span><a href="#indexed-buffer-index-">Indexed: Buffer[index]</a></span>
+</li>
+<li>
+<span><a href="#buffer-copy-">Buffer.copy()</a></span>
+</li>
+<li>
+<span><a href="#buffer-is_null-">Buffer.is_null()</a></span>
+</li>
+<li>
+<span><a href="#buffer-write-buffer-to-size-form-">Buffer.write(buffer[,to[,size[,form]]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-write-string-to-encoding-">Buffer.write(string[,to[,encoding]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-write-string-encoding-">Buffer.write(string[,encoding])</a></span>
+</li>
+<li>
+<span><a href="#buffer-to_string-encoding-start-end-">Buffer.to_string([encoding[,start[,end]]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-tostring-encoding-start-end-">Buffer.toString([encoding[,start[,end]]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-to_string-start-end-">Buffer.to_string([start[,end]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-tostring-start-end-">Buffer.toString([start[,end]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-collapse-">Buffer.collapse()</a></span>
+</li>
+<li>
+<span><a href="#buffer-slice-start-end-">Buffer.slice([start,[end]])</a></span>
+</li>
+<li>
+<span><a href="#buffer-clear-">Buffer.clear()</a></span>
+</li>
+<li>
+<span><a href="#buffer-tojson-">Buffer.toJSON()</a></span>
+</li>
+<li>
+<span><a href="#buffer-fill-integer-">Buffer.fill(integer)</a></span>
+</li>
+<li>
+<span><a href="#buffer-for_each-cb-scope-">Buffer.for_each(cb[,scope])</a></span>
+</li>
+<li>
+<span><a href="#buffer-foreach-cb-scope-">Buffer.forEach(cb[,scope])</a></span>
+</li>
+<li>
+<span><a href="#buffer-filter-cb-scope-">Buffer.filter(cb[,scope])</a></span>
+</li>
+<li>
+<span><a href="#buffer-map-cb-scope-">Buffer.map(cb[,scope])</a></span>
+</li>
+<li>
+<span><a href="#buffer-some-cb-scope-">Buffer.some(cb[,scope])</a></span>
+</li>
+<li>
+<span><a href="#buffer-every-cb-scope-">Buffer.every(cb[,scope])</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-util-buffer">
+			<code>lib://util/buffer</code>
+			<span><a class="mark" href="#lib-util-buffer" id="lib-util-buffer">#</a></span>
+		</h1><h2 id="buffers-and-character-encodings">
+			Buffers and Character Encodings
+			<span><a class="mark" href="#buffers-and-character-encodings" id="buffers-and-character-encodings">#</a></span>
+		</h2><p>“缓冲区”实例通常用于表示编码字符序列。
+如UTF-8，UCS2，base64或偶数的十六进制编码数据。
+通过使用一个明确的字符编码
+在缓冲区实例和普通JavaScript字符串之间来回转换。</p>
+<p>Encodings 在JavaScript中使用字符串表示: <code>&#39;binary&#39;</code> <code>&#39;ascii&#39;</code> <code>&#39;utf8&#39;</code> <code>&#39;ucs2&#39;</code> <code>&#39;base64&#39;</code> <code>&#39;hex&#39;</code> <code>&#39;utf32&#39;</code></p>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer(&#39;hello world&#39;, &#39;ascii&#39;);
+
+// Prints: 68656c6c6f20776f726c64
+console.log(buf.to_string(&#39;hex&#39;));
+
+// Prints: aGVsbG8gd29ybGQ=
+console.log(buf.to_string(&#39;base64&#39;));
+</code></pre>
+<p>目前支持的字符编码：</p>
+<ul>
+<li><p><code>&#39;binary&#39;</code> - A way of encoding the <code>Buffer</code> into a one-byte encoded string
+(as defined by the IANA in <a href="https://tools.ietf.org/html/rfc1345">RFC1345</a>,
+page 63, to be the Latin-1 supplement block and C0/C1 control codes).</p>
+</li>
+<li><p><code>&#39;ascii&#39;</code> - for 7-bit ASCII data only. This encoding is fast and will strip
+the high bit if set.</p>
+</li>
+<li><p><code>&#39;utf8&#39;</code> - Multibyte encoded Unicode characters. Many web pages and other
+document formats use UTF-8.</p>
+</li>
+<li><p><code>&#39;ucs2&#39;</code> - 2 bytes, encoded Unicode characters.</p>
+</li>
+<li><p><code>&#39;base64&#39;</code> - Base64 encoding. When creating a <code>Buffer</code> from a string,
+this encoding will also correctly accept &quot;URL and Filename Safe Alphabet&quot; as
+specified in <a href="https://tools.ietf.org/html/rfc4648#section-5">RFC4648, Section 5</a>.</p>
+</li>
+<li><p><code>&#39;hex&#39;</code> - Encode each byte as two hexadecimal characters.</p>
+</li>
+<li><p><code>&#39;utf32&#39;</code> - 4 bytes, encoded Unicode characters.</p>
+</li>
+</ul>
+<h2 id="class-buffer">
+			<code>Class: Buffer</code>
+			<span><a class="mark" href="#class-buffer" id="class-buffer">#</a></span>
+		</h2><p>这是一个可以自动变长的数据缓冲区,提供类似Array的操作数据的方法,数据项占用一个字节0-255</p>
+<h3 id="constructor-length-fill-">
+			constructor([length[,fill]])
+			<span><a class="mark" href="#constructor-length-fill-" id="constructor-length-fill-">#</a></span>
+		</h3><h3 id="constructor-string-encoding-">
+			constructor(string[,encoding])
+			<span><a class="mark" href="#constructor-string-encoding-" id="constructor-string-encoding-">#</a></span>
+		</h3><h3 id="constructor-buffer-">
+			constructor(buffer)
+			<span><a class="mark" href="#constructor-buffer-" id="constructor-buffer-">#</a></span>
+		</h3><p>构造函数,可以使用、字符串、内容为数字的数组、<code>ArrayBuffer</code>、或指定一个容量来初始化<code>Buffer</code>.</p>
+<p>或不传入任何参数构造一个空Buffer</p>
+<ul>
+<li>@arg <code>[length=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 使用长度初始化<code>Buffer</code></li>
+<li>@arg <code>[fill=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 使用长度初始化时指定初始填充值</li>
+<li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 使用字符串初始化<code>Buffer</code></li>
+<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 使用字符串初始化时指定字符串的编码</li>
+<li>@arg <code>buffer</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} 使用数组与<code>ArrayBuffer</code>初始化<code>Buffer</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// 通过指定容量填充值创建Buffer
+// Prints: &lt;Buffer 00 00 00 00 00&gt;
+console.log(new Buffer(5, 1));
+
+// 通过字符串创建
+// Prints: &lt;Buffer 41 42 43 44 ef bc 81&gt;
+console.log(new Buffer(&#39;ABCD！&#39;));
+
+// 通过数组创建
+// Prints: &lt;Buffer 00 01 02 03 04 05 06&gt;
+console.log(new Buffer([0,1,2,3,4,5,6]));
+
+// 通过ArrayBuffer创建
+// Printf:  &lt;Buffer 00 01 02 03 04 05 06&gt;
+var arrayBuffer = new Buffer(&#39;ABCD！&#39;).collapse();
+console.log(new Buffer(arrayBuffer));
+
+// 通过字符串指定编码创建
+// Prints: &lt;Buffer 60 7d 21&gt;
+console.log(new Buffer(&#39;你好!&#39;, &#39;binary&#39;), &#39;binary&#39;);
+// Prints: &lt;Buffer 60 7d 21&gt;
+console.log(new Buffer(&#39;你好!&#39;, &#39;ascii&#39;), &#39;ascii&#39;);
+// Prints: &lt;Buffer e4 bd a0 e5 a5 bd 21&gt;
+console.log(new Buffer(&#39;5L2g5aW9IQ==&#39;, &#39;base64&#39;), &#39;base64&#39;);
+// Prints: &lt;Buffer e4 bd a0 e5 a5 bd 21&gt;
+console.log(new Buffer(&#39;e4bda0e5a5bd21&#39;, &#39;hex&#39;), &#39;hex&#39;);
+// Prints: &lt;Buffer e4 bd a0 e5 a5 bd 21&gt;
+console.log(new Buffer(&#39;你好!&#39;, &#39;utf8&#39;), &#39;utf8&#39;);
+// Prints: &lt;Buffer 60 4f 7d 59 21 00&gt;
+console.log(new Buffer(&#39;你好!&#39;, &#39;ucs2&#39;), &#39;ucs2&#39;);
+// Prints: &lt;Buffer 60 4f 00 00 7d 59 00 00 21 00 00 00&gt;
+console.log(new Buffer(&#39;你好!&#39;, &#39;utf32&#39;), &#39;utf32&#39;);
+</code></pre>
+<h3 id="get-buffer-length">
+			Get: Buffer.length
+			<span><a class="mark" href="#get-buffer-length" id="get-buffer-length">#</a></span>
+		</h3><p>获取Buffer容量长度</p>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: 14
+console.log(new Buffer(&#39;ABCDEFG你好!&#39;).length);
+</code></pre>
+<h3 id="indexed-buffer-index-">
+			Indexed: Buffer[index]
+			<span><a class="mark" href="#indexed-buffer-index-" id="indexed-buffer-index-">#</a></span>
+		</h3><p>索引访问器,可能通过<code>index</code>索引下标访问Buffer上的项,
+<code>index</code>不能超过Buffer的容量长度,也为能为负数否则会抛出异常</p>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: 14
+var buff = new Buffer(6);
+buff[0] = 11;
+buff[1] = 12;
+// Prints: 
+// 1 10
+// &lt;Buffer 0a 0b 00 00 00 00&gt;
+console.log(buff[0], buff[1]);
+console.log(buff);
+</code></pre>
+<h3 id="buffer-copy-">
+			Buffer.copy()
+			<span><a class="mark" href="#buffer-copy-" id="buffer-copy-">#</a></span>
+		</h3><p>copy buffer</p>
+<ul>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 返回新Buffer</li>
+</ul>
+<h3 id="buffer-is_null-">
+			Buffer.is_null()
+			<span><a class="mark" href="#buffer-is_null-" id="buffer-is_null-">#</a></span>
+		</h3><p>是否为空的Buffer</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>} 返回<code>true</code>时表示没有任何数据</li>
+</ul>
+<h3 id="buffer-write-buffer-to-size-form-">
+			Buffer.write(buffer[,to[,size[,form]]])
+			<span><a class="mark" href="#buffer-write-buffer-to-size-form-" id="buffer-write-buffer-to-size-form-">#</a></span>
+		</h3><h3 id="buffer-write-string-to-encoding-">
+			Buffer.write(string[,to[,encoding]])
+			<span><a class="mark" href="#buffer-write-string-to-encoding-" id="buffer-write-string-to-encoding-">#</a></span>
+		</h3><h3 id="buffer-write-string-encoding-">
+			Buffer.write(string[,encoding])
+			<span><a class="mark" href="#buffer-write-string-encoding-" id="buffer-write-string-encoding-">#</a></span>
+		</h3><p>写入数据到Buffer,类似文件IO的写入方法,这个方法会自动调整Buffer的容量长度</p>
+<ul>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} 写入<code>buffer</code>与<code>Array</code></li>
+<li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    写入<code>String</code></li>
+<li>@arg <code>[to=-1]</code>   {<a href="../util/native_types.html#int"><code>int</code></a>}  指定一个开始写入的位置,<code>-1</code>从结尾开始写入</li>
+<li>@arg <code>[size=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}  需要写入项目数量,超过要写入数据的长度自动取写入数据长度,<code>-1</code>取源长度</li>
+<li>@arg <code>[form=0]</code>  {<a href="../util/native_types.html#uint"><code>uint</code></a>} 从要写入数据的form位置开始取数据,默认从<code>0</code>开始读取源</li>
+<li>@arg <code>[encoding=utf8]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 可用的值为 <code>binary|ascii|base64|hex|utf8|ucs2|utf32</code></li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} 返回写入的长度</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer(4);
+// Prints: 
+// 1
+// &lt;Buffer 00 00 00 00 41&gt;
+console.log(buf.write(&#39;A&#39;)); // 写入结尾
+console.log(buf);
+
+// Prints: &lt;Buffer 41 00 00 00 41&gt;
+console.log(buf.write(&#39;A&#39;, 0)); // 写入到开始位置
+console.log(buf);
+
+var buf2 = new Buffer(&#39;-2345虎789-&#39;);
+// Prints:
+// 6
+// &lt;Buffer 41 00 00 00 41 33 34 35 e8 99 8e&gt;
+console.log(buf.write(buf2, 5, 6, 2)); // 从2开始写入6项到5的位置
+console.log(buf);
+
+// Prints:
+// 3
+// &lt;Buffer 41 00 00 00 41 33 34 35 e8 99 8e 50 41 43&gt;
+console.log(buf.write([80, 65, 67])); // 写入数组到结尾
+console.log(buf);
+
+// Prints:
+// 6
+// &lt;Buffer 41 00 00 00 41 33 34 35 e8 99 8e 50 41 43 e4 bd a0 e5 a5 bd&gt;
+console.log(buf.write(&#39;你好&#39;)); // 写入字符串到结尾默认为utf8编码
+console.log(buf);
+
+// Prints: AA345虎PAC你好
+console.log(buf.to_string()); // to string
+</code></pre>
+<h3 id="buffer-to_string-encoding-start-end-">
+			Buffer.to_string([encoding[,start[,end]]])
+			<span><a class="mark" href="#buffer-to_string-encoding-start-end-" id="buffer-to_string-encoding-start-end-">#</a></span>
+		</h3><h3 id="buffer-tostring-encoding-start-end-">
+			Buffer.toString([encoding[,start[,end]]])
+			<span><a class="mark" href="#buffer-tostring-encoding-start-end-" id="buffer-tostring-encoding-start-end-">#</a></span>
+		</h3><h3 id="buffer-to_string-start-end-">
+			Buffer.to_string([start[,end]])
+			<span><a class="mark" href="#buffer-to_string-start-end-" id="buffer-to_string-start-end-">#</a></span>
+		</h3><h3 id="buffer-tostring-start-end-">
+			Buffer.toString([start[,end]])
+			<span><a class="mark" href="#buffer-tostring-start-end-" id="buffer-tostring-start-end-">#</a></span>
+		</h3><p>转换到javascript字符串</p>
+<ul>
+<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 编码参数 <code>binary|ascii|base64|hex|utf8|ucs2|utf32</code></li>
+<li>@arg <code>[start=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 转换的开始位置  <strong>默认为</strong><code>0</code></li>
+<li>@arg <code>[end]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}    转换的结束位置 <strong>默认为</strong><code>buffer.length</code>使用Buffer的长度</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 返回javascript字符串</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer(&#39;hello world&#39;, &#39;ascii&#39;);
+
+// Prints: hello world
+console.log(buf.to_string());
+
+// Prints: 68656c6c6f20776f726c64
+console.log(buf.to_string(&#39;hex&#39;));
+
+// Prints: aGVsbG8gd29ybGQ=
+console.log(buf.to_string(&#39;base64&#39;));
+</code></pre>
+<h3 id="buffer-collapse-">
+			Buffer.collapse()
+			<span><a class="mark" href="#buffer-collapse-" id="buffer-collapse-">#</a></span>
+		</h3><p>崩坏当前buffer. 把当前buffer的数据转移给新的<code>ArrayBuffer</code>,执行方法后数据容量长度变为<code>0</code>数据被移走</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> 可在创建<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray"><code>TypedArray</code></a>包装对像类型时做为数据使用,详情请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">JavaScript ES6</a>的官方文档</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>} 返回新的·<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>类型实体</li>
+</ul>
+<h3 id="buffer-slice-start-end-">
+			Buffer.slice([start,[end]])
+			<span><a class="mark" href="#buffer-slice-start-end-" id="buffer-slice-start-end-">#</a></span>
+		</h3><p>切片并拷贝到新Buffer,与copy功能相似,如果不传入任何参数拷贝全部数据</p>
+<ul>
+<li>@arg <code>[start=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 拷贝数据的开始位置 <strong>默认为<code>0</code></strong></li>
+<li>@arg <code>[end=-1]</code>    {<a href="../util/native_types.html#int"><code>int</code></a>} 拷贝数据的结束位置 <strong>默认为<code>-1</code></strong>使用buffer.length值</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 返回新Buffer</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer(&#39;ABCD&#39;);
+var buf2 = buf.slice(2);
+// Prints: 
+// ABCD
+// CD
+console.log(buf.to_string());
+console.log(buf2.to_string());
+</code></pre>
+<h3 id="buffer-clear-">
+			Buffer.clear()
+			<span><a class="mark" href="#buffer-clear-" id="buffer-clear-">#</a></span>
+		</h3><p>清空Buffer数据</p>
+<ul>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 返回自己</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer(&#39;ABCD&#39;);
+// Prints:
+// &lt;Buffer 41 42 43 44&gt;
+// &lt;Buffer &gt;
+console.log(buf);
+buf.clear();
+console.log(buf);
+</code></pre>
+<h3 id="buffer-tojson-">
+			Buffer.toJSON()
+			<span><a class="mark" href="#buffer-tojson-" id="buffer-tojson-">#</a></span>
+		</h3><p>转换为普通json对像</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// {
+//   type: &quot;Buffer&quot;,
+//   data: [
+//     65,
+//     66,
+//     67,
+//     68
+//   ]
+// }
+// {&quot;type&quot;:&quot;Buffer&quot;,&quot;data&quot;:[65,66,67,68]}
+var buf = new Buffer(&#39;ABCD&#39;);
+console.log(buf.toJSON());
+console.log(JSON.stringify(buf));
+</code></pre>
+<h3 id="buffer-fill-integer-">
+			Buffer.fill(integer)
+			<span><a class="mark" href="#buffer-fill-integer-" id="buffer-fill-integer-">#</a></span>
+		</h3><p>重置所有的数据项目值为integer</p>
+<ul>
+<li>@arg <code>integer</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 要填充的整数值</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} return self</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// &lt;Buffer 41 42 43 44&gt;
+// &lt;Buffer 00 00 00 00&gt;
+var buf = new Buffer(&#39;ABCD&#39;);
+console.log(buf);
+buf.fill(0);
+console.log(buf);
+</code></pre>
+<h3 id="buffer-for_each-cb-scope-">
+			Buffer.for_each(cb[,scope])
+			<span><a class="mark" href="#buffer-for_each-cb-scope-" id="buffer-for_each-cb-scope-">#</a></span>
+		</h3><h3 id="buffer-foreach-cb-scope-">
+			Buffer.forEach(cb[,scope])
+			<span><a class="mark" href="#buffer-foreach-cb-scope-" id="buffer-foreach-cb-scope-">#</a></span>
+		</h3><p>遍历Buffer项, 回调原型 <code>cb.apply(scope, [item, index, buffer])</code></p>
+<ul>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
+<li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// 65
+// 66
+// 67
+// 68
+new Buffer(&#39;ABCD&#39;).for_each(function(c){ console.log(c) });
+</code></pre>
+<h3 id="buffer-filter-cb-scope-">
+			Buffer.filter(cb[,scope])
+			<span><a class="mark" href="#buffer-filter-cb-scope-" id="buffer-filter-cb-scope-">#</a></span>
+		</h3><p>遍历过滤Buffer项,返回新实体,回调原型 <code>cb.apply(scope, [item, index, buffer])</code></p>
+<ul>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
+<li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
+// Prints: &lt;Buffer 41 42 43 44&gt;
+console.log(buf.filter(function (c) {
+    return c != 0;
+}));
+</code></pre>
+<h3 id="buffer-map-cb-scope-">
+			Buffer.map(cb[,scope])
+			<span><a class="mark" href="#buffer-map-cb-scope-" id="buffer-map-cb-scope-">#</a></span>
+		</h3><p>遍历并创建自定义Buffer,回调原型 <code>cb.apply(scope, [item, index, buffer])</code></p>
+<ul>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
+<li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
+// Prints:  &lt;Buffer 41 42 43 44 ff ff&gt;
+console.log(buf.map(function (c) {
+    return c == 0 ? 0xff : c;
+}));
+</code></pre>
+<h3 id="buffer-some-cb-scope-">
+			Buffer.some(cb[,scope])
+			<span><a class="mark" href="#buffer-some-cb-scope-" id="buffer-some-cb-scope-">#</a></span>
+		</h3><p>遍历Buffer,回调返回<code>true</code>终止遍历新返回<code>true</code>否则直到遍历结束返回<code>false</code></p>
+<p>回调原型 <code>cb.apply(scope, [item, index, buffer])</code></p>
+<ul>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
+<li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
+// Prints:  
+// 65
+// 66
+// 67
+// 68
+// 0
+// true
+console.log(buf.some(function (c) {
+    console.log(c);
+    if ( c == 0 ) {
+        return true; //  finish
+    }
+    return false;
+}));
+</code></pre>
+<h3 id="buffer-every-cb-scope-">
+			Buffer.every(cb[,scope])
+			<span><a class="mark" href="#buffer-every-cb-scope-" id="buffer-every-cb-scope-">#</a></span>
+		</h3><p>遍历Buffer,回调返回<code>false</code>终止遍历新返回<code>false</code>否则直到遍历结束返回<code>true</code></p>
+<p>回调原型 <code>cb.apply(scope, [item, index, buffer])</code></p>
+<ul>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
+<li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
+// Prints:  
+// 65
+// 66
+// 67
+// 68
+// 0
+// false
+console.log(buf.every(function (c) {
+    console.log(c);
+    if ( c == 0 ) {
+        return false; //  abort
+    }
+    return true;
+}));
+</code></pre>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

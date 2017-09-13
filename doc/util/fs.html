@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'util/fs.html';
+    var relative = '../';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          AvocadoJS
+        </a>
+      </div>
+
+      <ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="util">
+			Util
+			<span><a class="mark" href="#util" id="util">#</a></span>
+		</h1><ul>
+<li><a href="util/util.html"><code>lib://util</code></a></li>
+<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
+<li><a href="util/event.html"><code>lib://util/event</code></a></li>
+<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
+<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
+<li><a href="util/http.html"><code>lib://util/http</code></a></li>
+<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
+<li><a href="util/path.html"><code>lib://util/path</code></a></li>
+<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
+<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
+<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
+<li><a href="util/global.html"><code>Global</code></a></li>
+<li><a href="util/native_types.html"><code>Native Types</code></a></li>
+</ul>
+<h1 id="gui">
+			GUI
+			<span><a class="mark" href="#gui" id="gui">#</a></span>
+		</h1><ul>
+<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
+<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
+<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
+<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
+<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
+<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
+<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
+<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
+<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
+<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#lib-util-fs">lib://util/fs</a></span>
+<ul>
+<li>
+<span><a href="#default_mode">DEFAULT_MODE</a></span>
+</li>
+<li>
+<span><a href="#enum-fileopenmode">Enum: FileOpenMode</a></span>
+<ul>
+<li>
+<span><a href="#fopen_read">FOPEN_READ</a></span>
+</li>
+<li>
+<span><a href="#fopen_write">FOPEN_WRITE</a></span>
+</li>
+<li>
+<span><a href="#fopen_append">FOPEN_APPEND</a></span>
+</li>
+<li>
+<span><a href="#fopen_read_plus">FOPEN_READ_PLUS</a></span>
+</li>
+<li>
+<span><a href="#fopen_write_plus">FOPEN_WRITE_PLUS</a></span>
+</li>
+<li>
+<span><a href="#fopen_append_plus">FOPEN_APPEND_PLUS</a></span>
+</li>
+<li>
+<span><a href="#fopen_r">FOPEN_R</a></span>
+</li>
+<li>
+<span><a href="#fopen_w">FOPEN_W</a></span>
+</li>
+<li>
+<span><a href="#fopen_a">FOPEN_A</a></span>
+</li>
+<li>
+<span><a href="#fopen_rp">FOPEN_RP</a></span>
+</li>
+<li>
+<span><a href="#fopen_wp">FOPEN_WP</a></span>
+</li>
+<li>
+<span><a href="#fopen_ap">FOPEN_AP</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#object-streamdata">Object: StreamData</a></span>
+<ul>
+<li>
+<span><a href="#streamdata-data">StreamData.data</a></span>
+</li>
+<li>
+<span><a href="#streamdata-complete">StreamData.complete</a></span>
+</li>
+<li>
+<span><a href="#streamdata-size">StreamData.size</a></span>
+</li>
+<li>
+<span><a href="#streamdata-total">StreamData.total</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#abort-id-">abort(id)</a></span>
+</li>
+<li>
+<span><a href="#chmod-path-mode-cb-">chmod(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#chmod-path-cb-">chmod(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#chmod_r-path-mode-cb-">chmod_r(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#chmod_r-path-cb-">chmod_r(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#chmod_sync-path-mode-">chmod_sync(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#chmod_r_sync-path-mode-">chmod_r_sync(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#chown-path-owner-group-cb-">chown(path, owner, group[,cb])</a></span>
+</li>
+<li>
+<span><a href="#chown_r-path-owner-group-cb-">chown_r(path, owner, group[,cb])</a></span>
+</li>
+<li>
+<span><a href="#chown_sync-path-owner-group-">chown_sync(path, owner, group)</a></span>
+</li>
+<li>
+<span><a href="#chown_r_sync-path-owner-group-">chown_r_sync(path, owner, group)</a></span>
+</li>
+<li>
+<span><a href="#mkdir-path-mode-cb-">mkdir(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#mkdir-path-cb-">mkdir(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#mkdir_sync-path-mode-">mkdir_sync(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#mkdir_p-path-mode-cb-">mkdir_p(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#mkdir_p-path-cb-">mkdir_p(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#mkdir_p_sync-path-mode-">mkdir_p_sync(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#rename-name-new_name-cb-">rename(name,new_name[,cb])</a></span>
+</li>
+<li>
+<span><a href="#mv-name-new_name-cb-">mv(name,new_name[,cb])</a></span>
+</li>
+<li>
+<span><a href="#rename_sync-name-new_name-">rename_sync(name,new_name)</a></span>
+</li>
+<li>
+<span><a href="#mv_sync-name-new_name-">mv_sync(name,new_name)</a></span>
+</li>
+<li>
+<span><a href="#unlink-path-cb-">unlink(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#unlink_sync-path-">unlink_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#rmdir-path-cb-">rmdir(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#rmdir_sync-path-">rmdir_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#rm_r-path-cb-">rm_r(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#rm_r_sync-path-">rm_r_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#cp-path-target-cb-">cp(path,target[,cb])</a></span>
+</li>
+<li>
+<span><a href="#cp_r-path-target-cb-">cp_r(path, target[,cb])</a></span>
+</li>
+<li>
+<span><a href="#cp_sync-path-target-">cp_sync(path, target)</a></span>
+</li>
+<li>
+<span><a href="#cp_r_sync-path-target-">cp_r_sync(path, target)</a></span>
+</li>
+<li>
+<span><a href="#readdir-path-cb-">readdir(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#ls-path-cb-">ls(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#readdir_sync-path-">readdir_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#ls_sync-path-">ls_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#exists_file-path-cb-">exists_file(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#exists_file_sync-path-">exists_file_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#exists_dir-path-cb-">exists_dir(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#exists_dir_sync-path-">exists_dir_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#stat-path-cb-">stat(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#stat_sync-path-">stat_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#exists-path-cb-">exists(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#exists_sync-path-">exists_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#readable-path-cb-">readable(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#readable_sync-path-">readable_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#writable-path-cb-">writable(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#writable_sync-path-">writable_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#executable-path-cb-">executable(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#executable_sync-path-">executable_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#read_stream-path-cb-">read_stream(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#write_file_sync-path-buffer-size-">write_file_sync(path,buffer[,size])</a></span>
+</li>
+<li>
+<span><a href="#write_file_sync-path-string-encoding-">write_file_sync(path,string[,encoding])</a></span>
+</li>
+<li>
+<span><a href="#write_file-path-buffer-cb-">write_file(path,buffer[,cb])</a></span>
+</li>
+<li>
+<span><a href="#write_file-path-buffer-size-cb-">write_file(path,buffer[,size[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#write_file-path-string-encoding-cb-">write_file(path,string[,encoding[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#read_file_sync-path-">read_file_sync(path)</a></span>
+</li>
+<li>
+<span><a href="#read_file-path-cb-">read_file(path,cb)</a></span>
+</li>
+<li>
+<span><a href="#open_sync-path-mode-">open_sync(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#open-path-mode-cb-">open(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#open-path-cb-">open(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#close_sync-fd-">close_sync(fd)</a></span>
+</li>
+<li>
+<span><a href="#close-fd-cb-">close(fd[,cb])</a></span>
+</li>
+<li>
+<span><a href="#read_sync-fd-buffer-size-offset-">read_sync(fd,buffer[,size[,offset]])</a></span>
+</li>
+<li>
+<span><a href="#read-fd-buffer-size-offset-cb-">read(fd,buffer[,size[,offset[,cb]]])</a></span>
+</li>
+<li>
+<span><a href="#read-fd-buffer-size-cb-">read(fd,buffer[,size[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#read-fd-buffer-cb-">read(fd,buffer[,cb])</a></span>
+</li>
+<li>
+<span><a href="#write_sync-fd-buffer-size-offset-">write_sync(fd,buffer[,size[,offset]])</a></span>
+</li>
+<li>
+<span><a href="#write_sync-fd-string-encoding-offset-">write_sync(fd,string[,encoding[,offset]])</a></span>
+</li>
+<li>
+<span><a href="#write-fd-buffer-size-offset-cb-">write(fd,buffer[,size[,offset[,cb]]])</a></span>
+</li>
+<li>
+<span><a href="#write-fd-buffer-size-cb-">write(fd,buffer[,size[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#write-fd-buffer-cb-">write(fd,buffer[,cb])</a></span>
+</li>
+<li>
+<span><a href="#write-fd-string-encoding-offset-cb-">write(fd,string[,encoding[,offset[,cb]]])</a></span>
+</li>
+<li>
+<span><a href="#write-fd-string-encoding-cb-">write(fd,string[,encoding[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#write-fd-string-cb-">write(fd,string[,cb])</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="lib-util-fs">
+			<code>lib://util/fs</code>
+			<span><a class="mark" href="#lib-util-fs" id="lib-util-fs">#</a></span>
+		</h1><h2 id="default_mode">
+			DEFAULT_MODE
+			<span><a class="mark" href="#default_mode" id="default_mode">#</a></span>
+		</h2><p>创建与设置文件的默认<code>mode</code>值,这与文件的权限相关,这是一个<code>int</code>整数类型值</p>
+<h2 id="enum-fileopenmode">
+			<code>Enum: FileOpenMode</code>
+			<span><a class="mark" href="#enum-fileopenmode" id="enum-fileopenmode">#</a></span>
+		</h2><p>文件打开模式,枚举类型都为<code>int</code>整数</p>
+<h3 id="fopen_read">
+			FOPEN_READ
+			<span><a class="mark" href="#fopen_read" id="fopen_read">#</a></span>
+		</h3><p><code>r</code> 以只读方式打开文件，该文件必须存在。</p>
+<h3 id="fopen_write">
+			FOPEN_WRITE
+			<span><a class="mark" href="#fopen_write" id="fopen_write">#</a></span>
+		</h3><p><code>w</code> 打开只写文件，若文件存在则文件长度清为零，即该文件内容会消失。若文件不存在则建立该文件。</p>
+<h3 id="fopen_append">
+			FOPEN_APPEND
+			<span><a class="mark" href="#fopen_append" id="fopen_append">#</a></span>
+		</h3><p><code>a</code> 以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，
+写入的数据会被加到文件尾，即文件原先的内容会被保留。</p>
+<h3 id="fopen_read_plus">
+			FOPEN_READ_PLUS
+			<span><a class="mark" href="#fopen_read_plus" id="fopen_read_plus">#</a></span>
+		</h3><p><code>r+</code> 以可读写方式打开文件，该文件必须存在。</p>
+<h3 id="fopen_write_plus">
+			FOPEN_WRITE_PLUS
+			<span><a class="mark" href="#fopen_write_plus" id="fopen_write_plus">#</a></span>
+		</h3><p><code>w+</code> 打开可读写文件，若文件存在则文件长度清为零，即该文件内容会消失。若文件不存在则建立该文件。</p>
+<h3 id="fopen_append_plus">
+			FOPEN_APPEND_PLUS
+			<span><a class="mark" href="#fopen_append_plus" id="fopen_append_plus">#</a></span>
+		</h3><p><code>a+</code>    以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，
+写入的数据会被加到文件尾后，即文件原先的内容会被保留。</p>
+<h3 id="fopen_r">
+			FOPEN_R
+			<span><a class="mark" href="#fopen_r" id="fopen_r">#</a></span>
+		</h3><p><code>r</code> <code>FOPEN_READ</code>的别名</p>
+<h3 id="fopen_w">
+			FOPEN_W
+			<span><a class="mark" href="#fopen_w" id="fopen_w">#</a></span>
+		</h3><p><code>w</code> <code>FOPEN_WRITE</code>的别名</p>
+<h3 id="fopen_a">
+			FOPEN_A
+			<span><a class="mark" href="#fopen_a" id="fopen_a">#</a></span>
+		</h3><p><code>a</code> <code>FOPEN_APPEND</code>的别名</p>
+<h3 id="fopen_rp">
+			FOPEN_RP
+			<span><a class="mark" href="#fopen_rp" id="fopen_rp">#</a></span>
+		</h3><p><code>r+</code> <code>FOPEN_READ_PLUS</code>的别名</p>
+<h3 id="fopen_wp">
+			FOPEN_WP
+			<span><a class="mark" href="#fopen_wp" id="fopen_wp">#</a></span>
+		</h3><p><code>w+</code> <code>FOPEN_WRITE_PLUS</code>的别名</p>
+<h3 id="fopen_ap">
+			FOPEN_AP
+			<span><a class="mark" href="#fopen_ap" id="fopen_ap">#</a></span>
+		</h3><p><code>a+</code> <code>FOPEN_APPEND_PLUS</code>的别名</p>
+<h2 id="object-streamdata">
+			<code>Object: StreamData</code>
+			<span><a class="mark" href="#object-streamdata" id="object-streamdata">#</a></span>
+		</h2><p>读取文件流时返回的结构类型, 这是个<code>Object</code>类型描述并没有实际存在的构造函数</p>
+<h3 id="streamdata-data">
+			StreamData.data
+			<span><a class="mark" href="#streamdata-data" id="streamdata-data">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 当前读取到的Buffer数据</li>
+</ul>
+<h3 id="streamdata-complete">
+			StreamData.complete
+			<span><a class="mark" href="#streamdata-complete" id="streamdata-complete">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>} 读取是否完成</li>
+</ul>
+<h3 id="streamdata-size">
+			StreamData.size
+			<span><a class="mark" href="#streamdata-size" id="streamdata-size">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>} 已经读取到的数据总量</li>
+</ul>
+<h3 id="streamdata-total">
+			StreamData.total
+			<span><a class="mark" href="#streamdata-total" id="streamdata-total">#</a></span>
+		</h3><ul>
+<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>} 全部数据源的总大小,有可能是<code>0</code>,为<code>0</code>表示数据大小未知,可能为无限大比如为视频直播数据流</li>
+</ul>
+<h2 id="abort-id-">
+			abort(id)
+			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
+		</h2><p>通过<code>id</code>强制中止运行中的异步任务</p>
+<p>如果传入无意义的<code>id</code>或<code>id</code>所属的任务已经完成，不做任何处理</p>
+<ul>
+<li>@arg <code>id</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id0 = fs.chmod_r(mypath, 755);
+var id1 = fs.chown_r(mypath, 501, 501);
+var id2 = fs.cp(mypath, newpath);
+// force abort task
+fs.abort(id0);
+fs.abort(id1);
+fs.abort(id2);
+</code></pre>
+<h2 id="chmod-path-mode-cb-">
+			chmod(path[,mode[,cb]])
+			<span><a class="mark" href="#chmod-path-mode-cb-" id="chmod-path-mode-cb-">#</a></span>
+		</h2><h2 id="chmod-path-cb-">
+			chmod(path[,cb])
+			<span><a class="mark" href="#chmod-path-cb-" id="chmod-path-cb-">#</a></span>
+		</h2><p>异步设置文件的mode属性,如果文件不存在或没有权限给抛出异常。Callback:<code>cb()</code></p>
+<p>所有的回调异常都使用<code>func.catch(e=&gt;{ })</code>进行捕获 or <code>func.err(func2)</code>转交给<code>func2</code>处理</p>
+<p>不设置捕获函数默认会抛出到最顶层域,并触发<code>util.onuncaught_exception</code>事件。</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 文件路径,可以为文件也可以为目录</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 默认使用<strong><a href="../util/fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="chmod_r-path-mode-cb-">
+			chmod_r(path[,mode[,cb]])
+			<span><a class="mark" href="#chmod_r-path-mode-cb-" id="chmod_r-path-mode-cb-">#</a></span>
+		</h2><h2 id="chmod_r-path-cb-">
+			chmod_r(path[,cb])
+			<span><a class="mark" href="#chmod_r-path-cb-" id="chmod_r-path-cb-">#</a></span>
+		</h2><p>递归设置文件或目录<code>mode</code>属性,并返回中止<code>id</code>,可通过这个<code>id</code>强制中止任务</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// `mypath`为文件路径,可以为文件也可以为目录
+fs.chmod(mypath, 0755, function(){
+    console.log(&#39;Success&#39;);
+}.catch(e=&gt;{
+    console.log(&#39;Fail&#39;);
+}));
+var id = fs.chmod_r(mydir, 0775);
+fs.abort(id);
+</code></pre>
+<h2 id="chmod_sync-path-mode-">
+			chmod_sync(path[,mode])
+			<span><a class="mark" href="#chmod_sync-path-mode-" id="chmod_sync-path-mode-">#</a></span>
+		</h2><h2 id="chmod_r_sync-path-mode-">
+			chmod_r_sync(path[,mode])
+			<span><a class="mark" href="#chmod_r_sync-path-mode-" id="chmod_r_sync-path-mode-">#</a></span>
+		</h2><p>同步设置文件的mode属性,设置成功返回<code>true</code></p>
+<p>递归<code>chmod_r_sync()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <strong><a href="../util/fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: true
+console.log(fs.chmod_sync(mypath, 0755));
+</code></pre>
+<h2 id="chown-path-owner-group-cb-">
+			chown(path, owner, group[,cb])
+			<span><a class="mark" href="#chown-path-owner-group-cb-" id="chown-path-owner-group-cb-">#</a></span>
+		</h2><p>异步设置文件<code>owner</code>与<code>group</code>属性。Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}    操作系统用户id    </li>
+<li>@arg <code>group</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 操作系统组id</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="chown_r-path-owner-group-cb-">
+			chown_r(path, owner, group[,cb])
+			<span><a class="mark" href="#chown_r-path-owner-group-cb-" id="chown_r-path-owner-group-cb-">#</a></span>
+		</h2><p>递归设置文件或目录<code>owner</code>与<code>group</code>属性。并返回中止<code>id</code>,可通过这个<code>id</code>强制中止任务</p>
+<p>Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>group</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">chown(mypath, 501, 501, ()=&gt;{ });
+var id = chown_r(mypath, 501, 501, ()=&gt;{ });
+fs.abort(id); // force abort task
+</code></pre>
+<h2 id="chown_sync-path-owner-group-">
+			chown_sync(path, owner, group)
+			<span><a class="mark" href="#chown_sync-path-owner-group-" id="chown_sync-path-owner-group-">#</a></span>
+		</h2><h2 id="chown_r_sync-path-owner-group-">
+			chown_r_sync(path, owner, group)
+			<span><a class="mark" href="#chown_r_sync-path-owner-group-" id="chown_r_sync-path-owner-group-">#</a></span>
+		</h2><p>同步设置文件owner与group属性。成功返回<code>true</code></p>
+<p>递归<code>chown_r_sync()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 操作系统用户id    </li>
+<li>@arg <code>group</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 操作系统组id</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="mkdir-path-mode-cb-">
+			mkdir(path[,mode[,cb]])
+			<span><a class="mark" href="#mkdir-path-mode-cb-" id="mkdir-path-mode-cb-">#</a></span>
+		</h2><h2 id="mkdir-path-cb-">
+			mkdir(path[,cb])
+			<span><a class="mark" href="#mkdir-path-cb-" id="mkdir-path-cb-">#</a></span>
+		</h2><p>创建目录，如果目录已经存在或父级目录不存在或其它任何原因造成目录创建不成功都会抛出异常。</p>
+<p>Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <strong><a href="../util/fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">fs.mkdir(mypath, function(){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+<h2 id="mkdir_sync-path-mode-">
+			mkdir_sync(path[,mode])
+			<span><a class="mark" href="#mkdir_sync-path-mode-" id="mkdir_sync-path-mode-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <strong><a href="../util/fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="mkdir_p-path-mode-cb-">
+			mkdir_p(path[,mode[,cb]])
+			<span><a class="mark" href="#mkdir_p-path-mode-cb-" id="mkdir_p-path-mode-cb-">#</a></span>
+		</h2><h2 id="mkdir_p-path-cb-">
+			mkdir_p(path[,cb])
+			<span><a class="mark" href="#mkdir_p-path-cb-" id="mkdir_p-path-cb-">#</a></span>
+		</h2><p>创建目录，这个方法会依次创建目录树,目录存在也不会抛出异常</p>
+<p>Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <strong><a href="../util/fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">fs.mkdir_p(mypath, function(){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+<h2 id="mkdir_p_sync-path-mode-">
+			mkdir_p_sync(path[,mode])
+			<span><a class="mark" href="#mkdir_p_sync-path-mode-" id="mkdir_p_sync-path-mode-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <strong><a href="../util/fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="rename-name-new_name-cb-">
+			rename(name,new_name[,cb])
+			<span><a class="mark" href="#rename-name-new_name-cb-" id="rename-name-new_name-cb-">#</a></span>
+		</h2><h2 id="mv-name-new_name-cb-">
+			mv(name,new_name[,cb])
+			<span><a class="mark" href="#mv-name-new_name-cb-" id="mv-name-new_name-cb-">#</a></span>
+		</h2><p>重命名文件或目录,不成功抛出异常</p>
+<p>Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>new_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">fs.rename(name, new_name, function(){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+<h2 id="rename_sync-name-new_name-">
+			rename_sync(name,new_name)
+			<span><a class="mark" href="#rename_sync-name-new_name-" id="rename_sync-name-new_name-">#</a></span>
+		</h2><h2 id="mv_sync-name-new_name-">
+			mv_sync(name,new_name)
+			<span><a class="mark" href="#mv_sync-name-new_name-" id="mv_sync-name-new_name-">#</a></span>
+		</h2><ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>new_name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="unlink-path-cb-">
+			unlink(path[,cb])
+			<span><a class="mark" href="#unlink-path-cb-" id="unlink-path-cb-">#</a></span>
+		</h2><p>删除文件,不成功抛出异常</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="unlink_sync-path-">
+			unlink_sync(path)
+			<span><a class="mark" href="#unlink_sync-path-" id="unlink_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="rmdir-path-cb-">
+			rmdir(path[,cb])
+			<span><a class="mark" href="#rmdir-path-cb-" id="rmdir-path-cb-">#</a></span>
+		</h2><p>删除目录,不成功抛出异常</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">fs.rmdir(mypath, function(){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+<h2 id="rmdir_sync-path-">
+			rmdir_sync(path)
+			<span><a class="mark" href="#rmdir_sync-path-" id="rmdir_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="rm_r-path-cb-">
+			rm_r(path[,cb])
+			<span><a class="mark" href="#rm_r-path-cb-" id="rm_r-path-cb-">#</a></span>
+		</h2><p>递归删除文件与目录,并返回一个中止id,如果不成功会抛出异常</p>
+<p>使用这个id可以强制中止任务 <code>abort(id)</code></p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id = fs.rm_r(mypath, function(){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }));
+// 通过id可中止删除任务
+fs.abort(id);
+</code></pre>
+<h2 id="rm_r_sync-path-">
+			rm_r_sync(path)
+			<span><a class="mark" href="#rm_r_sync-path-" id="rm_r_sync-path-">#</a></span>
+		</h2><p>同步递归删除目录或文件,在javascript中谨慎使用这个方法,有可能会造成线程长时间被柱塞</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="cp-path-target-cb-">
+			cp(path,target[,cb])
+			<span><a class="mark" href="#cp-path-target-cb-" id="cp-path-target-cb-">#</a></span>
+		</h2><h2 id="cp_r-path-target-cb-">
+			cp_r(path, target[,cb])
+			<span><a class="mark" href="#cp_r-path-target-cb-" id="cp_r-path-target-cb-">#</a></span>
+		</h2><p>拷贝文件,并返回一个中止id,如果不成功会抛出异常</p>
+<p>使用这个id可以强制中止拷贝任务 <code>abort(id)</code></p>
+<p>递归拷贝文件与目录<code>cp_r()</code> 这个方法与<code>cp()</code>区别在于，<code>cp()</code>只能拷贝单个文件</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} return <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id = fs.cp(source, target, function(){ /*Success*/ }.catch(e=&gt;{ /*Fail*/ }));
+// 通过id可中止任务
+fs.abort(id);
+</code></pre>
+<h2 id="cp_sync-path-target-">
+			cp_sync(path, target)
+			<span><a class="mark" href="#cp_sync-path-target-" id="cp_sync-path-target-">#</a></span>
+		</h2><h2 id="cp_r_sync-path-target-">
+			cp_r_sync(path, target)
+			<span><a class="mark" href="#cp_r_sync-path-target-" id="cp_r_sync-path-target-">#</a></span>
+		</h2><p>同步拷贝文件,在javascript中谨慎使用这个方法,有可能会造成线程长时间被柱塞</p>
+<p>递归拷贝文件与目录<code>cp_r_sync()</code> </p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="readdir-path-cb-">
+			readdir(path[,cb])
+			<span><a class="mark" href="#readdir-path-cb-" id="readdir-path-cb-">#</a></span>
+		</h2><h2 id="ls-path-cb-">
+			ls(path[,cb])
+			<span><a class="mark" href="#ls-path-cb-" id="ls-path-cb-">#</a></span>
+		</h2><p>读取目录列表信息，失败抛出异常,成功返回<a href="../util/file_stat.html#class-dirent"><code>Dirent</code></a>的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a></p>
+<p>Callback: <code>cb(dirents)</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// {
+//   name: &quot;cp.txt&quot;,
+//   pathname: &quot;file:///var/mobile/Containers/Data/Application/64DAC3FC-A4FD-4274-A2E7-B834EE4930B4/Documents/test/cp.txt&quot;,
+//   type: 1
+// }
+fs.readdir(mydir, function(dirents){
+    for (var dirent of dirents) {
+        // TODO...
+        console.log(dirent);
+    }
+    console.log(dirent);
+}.catch(e=&gt;{ /*Fail*/ });
+</code></pre>
+<h2 id="readdir_sync-path-">
+			readdir_sync(path)
+			<span><a class="mark" href="#readdir_sync-path-" id="readdir_sync-path-">#</a></span>
+		</h2><h2 id="ls_sync-path-">
+			ls_sync(path)
+			<span><a class="mark" href="#ls_sync-path-" id="ls_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} return Array<Dirent>    </li>
+</ul>
+<h2 id="exists_file-path-cb-">
+			exists_file(path[,cb])
+			<span><a class="mark" href="#exists_file-path-cb-" id="exists_file-path-cb-">#</a></span>
+		</h2><p>测试是否为一个文件，成功返回<a href="../util/native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="../util/native_types.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg path {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="exists_file_sync-path-">
+			exists_file_sync(path)
+			<span><a class="mark" href="#exists_file_sync-path-" id="exists_file_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="exists_dir-path-cb-">
+			exists_dir(path[,cb])
+			<span><a class="mark" href="#exists_dir-path-cb-" id="exists_dir-path-cb-">#</a></span>
+		</h2><p>测试是否为一个目录，成功返回<a href="../util/native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="../util/native_types.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="exists_dir_sync-path-">
+			exists_dir_sync(path)
+			<span><a class="mark" href="#exists_dir_sync-path-" id="exists_dir_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="stat-path-cb-">
+			stat(path[,cb])
+			<span><a class="mark" href="#stat-path-cb-" id="stat-path-cb-">#</a></span>
+		</h2><p>获取文件stat，成功返回<a href="../util/file_stat.html#class-filestat"><code>FileStat</code></a>类型值</p>
+<p>Callback: <code>cb(stat)</code> (stat:<a href="../util/file_stat.html#class-filestat"><code>FileStat</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="stat_sync-path-">
+			stat_sync(path)
+			<span><a class="mark" href="#stat_sync-path-" id="stat_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/file_stat.html#class-filestat"><code>FileStat</code></a>}</li>
+</ul>
+<h2 id="exists-path-cb-">
+			exists(path[,cb])
+			<span><a class="mark" href="#exists-path-cb-" id="exists-path-cb-">#</a></span>
+		</h2><p>测试文件或目录是否存在，返回<a href="../util/native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="../util/native_types.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="exists_sync-path-">
+			exists_sync(path)
+			<span><a class="mark" href="#exists_sync-path-" id="exists_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="readable-path-cb-">
+			readable(path[,cb])
+			<span><a class="mark" href="#readable-path-cb-" id="readable-path-cb-">#</a></span>
+		</h2><p>测试文件是否可读，返回<a href="../util/native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="../util/native_types.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="readable_sync-path-">
+			readable_sync(path)
+			<span><a class="mark" href="#readable_sync-path-" id="readable_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="writable-path-cb-">
+			writable(path[,cb])
+			<span><a class="mark" href="#writable-path-cb-" id="writable-path-cb-">#</a></span>
+		</h2><p>测试文件是否可写，返回<a href="../util/native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="../util/native_types.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="writable_sync-path-">
+			writable_sync(path)
+			<span><a class="mark" href="#writable_sync-path-" id="writable_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="executable-path-cb-">
+			executable(path[,cb])
+			<span><a class="mark" href="#executable-path-cb-" id="executable-path-cb-">#</a></span>
+		</h2><p>测试文件是否可执行，返回<a href="../util/native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="../util/native_types.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="executable_sync-path-">
+			executable_sync(path)
+			<span><a class="mark" href="#executable_sync-path-" id="executable_sync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="read_stream-path-cb-">
+			read_stream(path[,cb])
+			<span><a class="mark" href="#read_stream-path-cb-" id="read_stream-path-cb-">#</a></span>
+		</h2><p>异步读取文件流，成功返回<a href="../util/fs.html#object-streamdata"><code>StreamData</code></a>类型数据</p>
+<p>Callback: <code>cb(data)</code> (data:<a href="../util/fs.html#object-streamdata"><code>StreamData</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// 65536 false 65536 196600
+// 65536 false 131072 196600
+// 65528 false 196600 196600
+// 0 true 196600 196600
+fs.read_stream(mypath, function(data) {
+    console.log(data.data.length, data.complete, data.size, data.total);
+}.catch(e=&gt;{ /* Fail */ }));
+</code></pre>
+<h2 id="write_file_sync-path-buffer-size-">
+			write_file_sync(path,buffer[,size])
+			<span><a class="mark" href="#write_file_sync-path-buffer-size-" id="write_file_sync-path-buffer-size-">#</a></span>
+		</h2><h2 id="write_file_sync-path-string-encoding-">
+			write_file_sync(path,string[,encoding])
+			<span><a class="mark" href="#write_file_sync-path-string-encoding-" id="write_file_sync-path-string-encoding-">#</a></span>
+		</h2><p>同步写入数据到文件,成功返回写入的数据量,失败返回<code>&lt;0</code>的整数</p>
+<p>使用<a href="../util/fs.html#fopen_write"><code>FOPEN_WRITE</code></a>模式写入</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}   文件路径</li>
+<li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 写入字符串</li>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>} 写入<code>Buffer</code></li>
+<li>@arg <code>[size]</code> {<a href="../util/native_types.html#int"><code>int</code></a>} 写入数据的大小</li>
+<li>@arg <code>[encoding=utf8]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 写入字符串时指定编码</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return write size or error code</li>
+</ul>
+<h2 id="write_file-path-buffer-cb-">
+			write_file(path,buffer[,cb])
+			<span><a class="mark" href="#write_file-path-buffer-cb-" id="write_file-path-buffer-cb-">#</a></span>
+		</h2><h2 id="write_file-path-buffer-size-cb-">
+			write_file(path,buffer[,size[,cb]])
+			<span><a class="mark" href="#write_file-path-buffer-size-cb-" id="write_file-path-buffer-size-cb-">#</a></span>
+		</h2><h2 id="write_file-path-string-encoding-cb-">
+			write_file(path,string[,encoding[,cb]])
+			<span><a class="mark" href="#write_file-path-string-encoding-cb-" id="write_file-path-string-encoding-cb-">#</a></span>
+		</h2><p>异步写入数据到文件,失败抛出异常</p>
+<p>使用<a href="../util/fs.html#fopen_write"><code>FOPEN_WRITE</code></a>模式写入</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        文件路径</li>
+<li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    写入字符串</li>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>}    写入<code>Buffer</code></li>
+<li>@arg <code>[size]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}            写入<code>Buffer</code>时指定数据的大小</li>
+<li>@arg <code>[encoding=utf8]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>}    写入字符串时指定编码</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}    </li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var mypath = path.documents(&#39;my.txt&#39;);
+var mypath1 = path.documents(&#39;my1.txt&#39;);
+var mypath2 = path.documents(&#39;my2.txt&#39;);
+
+// write String
+fs.write_file(mypath, &#39;ABCDEFG&#39;, function(){ 
+    // Prints: ABCDEFG
+    console.log(fs.read_file_sync(mypath).toString());
+}.catch(e=&gt;{ /*Fail*/ }]);
+
+// write Buffer
+fs.write_file(mypath1, new Buffer(&#39;ABCDEFG&#39;), 3, function(){ 
+    // Prints: ABC
+    console.log(fs.read_file_sync(mypath1).toString());
+}.catch(e=&gt;{ /*Fail*/ });
+
+// write ArrayBuffer
+
+fs.write_file(mypath2, new Buffer(&#39;ABCDEFG&#39;).collapse(), function(){ 
+    // Prints: ABCDEFG
+    console.log(fs.read_file_sync(mypath2).toString());
+}.catch(e=&gt;{ /*Fail*/ });
+
+// write String sync
+// Prints:
+// 4
+// AAAA
+// 4
+// AAAA
+// 3
+// AAA
+// write String sync
+console.log(fs.write_file_sync(mypath, &#39;AAAA&#39;));
+console.log(fs.read_file_sync(mypath).toString());
+// write Buffer sync
+console.log(fs.write_file_sync(mypath1, new Buffer(&#39;AAAA&#39;)));
+console.log(fs.read_file_sync(mypath1).toString());
+// write ArrayBuffer sync
+console.log(fs.write_file_sync(mypath2, new Buffer(&#39;AAAAAAAA&#39;).collapse(), 3));
+console.log(fs.read_file_sync(mypath2).toString());
+</code></pre>
+<h2 id="read_file_sync-path-">
+			read_file_sync(path)
+			<span><a class="mark" href="#read_file_sync-path-" id="read_file_sync-path-">#</a></span>
+		</h2><p>同步读取文件数据,成功返回<code>Buffer</code>,失败返回长度为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} return file buffer</li>
+</ul>
+<h2 id="read_file-path-cb-">
+			read_file(path,cb)
+			<span><a class="mark" href="#read_file-path-cb-" id="read_file-path-cb-">#</a></span>
+		</h2><p>异步读取文件数据,成功返回<code>Buffer</code>,失败抛出异常</p>
+<p>Callback: <code>cb(buffer)</code> (buffer:<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="open_sync-path-mode-">
+			open_sync(path[,mode])
+			<span><a class="mark" href="#open_sync-path-mode-" id="open_sync-path-mode-">#</a></span>
+		</h2><p>同步方式打开文件,成功返回<a href="../util/native_types.html#int"><code>int</code></a>类型文件句柄,失败返回&lt;0的异常代码</p>
+<p>文件使用完成后一定要调用<code>close(fd)</code> or <code>close_sync(fd)</code> 关闭文件</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    文件路径</li>
+<li>@arg <code>[mode=FOPEN_R]</code> {<a href="#enum-fileopenmode"><code>FileOpenMode</code></a>} 打开文件的模式 <strong>Default</strong> <a href="../util/fs.html#fopen_read"><code>FOPEN_READ</code></a></li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return file handle <code>success &gt;= 0</code></li>
+</ul>
+<h2 id="open-path-mode-cb-">
+			open(path[,mode[,cb]])
+			<span><a class="mark" href="#open-path-mode-cb-" id="open-path-mode-cb-">#</a></span>
+		</h2><h2 id="open-path-cb-">
+			open(path[,cb])
+			<span><a class="mark" href="#open-path-cb-" id="open-path-cb-">#</a></span>
+		</h2><p>异步打开文件,成功返回句柄,失败抛出异常</p>
+<p>完成后可调用<code>close(fd)</code> or <code>close_sync(fd)</code> 关闭文件</p>
+<p>Callback: <code>cb(fd)</code> (fd:<a href="../util/native_types.html#int"><code>int</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=FOPEN_R]</code> {<a href="#enum-fileopenmode"><code>FileOpenMode</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="close_sync-fd-">
+			close_sync(fd)
+			<span><a class="mark" href="#close_sync-fd-" id="close_sync-fd-">#</a></span>
+		</h2><p>关闭文件成功返回<code>0</code>,失败返回<code>&lt;0</code>的异常代码</p>
+<ul>
+<li>@arg <code>path</code> {<a href="../util/native_types.html#int"><code>int</code></a>} file handle id</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return err code <code>success == 0</code></li>
+</ul>
+<h2 id="close-fd-cb-">
+			close(fd[,cb])
+			<span><a class="mark" href="#close-fd-cb-" id="close-fd-cb-">#</a></span>
+		</h2><p>异步关闭文件,失败抛出异常</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>fd</code> {<a href="../util/native_types.html#int"><code>int</code></a>} file handle id</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: 
+// 20
+// 0
+var fd = fs.open_sync(path.documents(&#39;my.txt&#39;), fs.FOPEN_W);
+console.log(fs.close_sync(fd));
+// async
+fs.open(path.documents(&#39;my.txt&#39;), function(fd) {
+    // Prints: 20
+    console.log(fd);
+    fs.close(fd, function() { /*Success*/ }.catch(e=&gt;{ /*Fail*/ }))
+}.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+<h2 id="read_sync-fd-buffer-size-offset-">
+			read_sync(fd,buffer[,size[,offset]])
+			<span><a class="mark" href="#read_sync-fd-buffer-size-offset-" id="read_sync-fd-buffer-size-offset-">#</a></span>
+		</h2><p>同步读取文件数据,读取的数据存储在参数<code>buffer</code>中，并返回实际读取到的数据大小,</p>
+<p>失败会返回<code>&lt;0</code>的错误代码</p>
+<ul>
+<li>@arg <code>fd</code> {<a href="../util/native_types.html#int"><code>int</code></a>} file handle</li>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}         输出数据<code>Buffer</code></li>
+<li>@arg <code>[size=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}        指定读取数据的大小<code>-1</code>表示使用<code>buffer</code>容量长度</li>
+<li>@arg <code>[offset=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}    从指定文件的偏移位置开始读取,<strong>Default</strong><code>-1</code>表示从上次读取或写入结尾开始读取</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return err code <code>success &gt;= 0</code></li>
+</ul>
+<h2 id="read-fd-buffer-size-offset-cb-">
+			read(fd,buffer[,size[,offset[,cb]]])
+			<span><a class="mark" href="#read-fd-buffer-size-offset-cb-" id="read-fd-buffer-size-offset-cb-">#</a></span>
+		</h2><h2 id="read-fd-buffer-size-cb-">
+			read(fd,buffer[,size[,cb]])
+			<span><a class="mark" href="#read-fd-buffer-size-cb-" id="read-fd-buffer-size-cb-">#</a></span>
+		</h2><h2 id="read-fd-buffer-cb-">
+			read(fd,buffer[,cb])
+			<span><a class="mark" href="#read-fd-buffer-cb-" id="read-fd-buffer-cb-">#</a></span>
+		</h2><p>异步读取文件数据,成功返回实际读取的数据量,失败抛出异常</p>
+<p>Callback: <code>cb(size)</code> (size:<a href="../util/native_types.html#int"><code>int</code></a>)</p>
+<ul>
+<li>@arg <code>fd</code> {<a href="../util/native_types.html#int"><code>int</code></a>} file handle</li>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} output buffer</li>
+<li>@arg <code>[size=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>} </li>
+<li>@arg <code>[offset=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="write_sync-fd-buffer-size-offset-">
+			write_sync(fd,buffer[,size[,offset]])
+			<span><a class="mark" href="#write_sync-fd-buffer-size-offset-" id="write_sync-fd-buffer-size-offset-">#</a></span>
+		</h2><h2 id="write_sync-fd-string-encoding-offset-">
+			write_sync(fd,string[,encoding[,offset]])
+			<span><a class="mark" href="#write_sync-fd-string-encoding-offset-" id="write_sync-fd-string-encoding-offset-">#</a></span>
+		</h2><p>同步写入数据到文件,成功返回写入大小</p>
+<p>失败会返回<code>&lt;0</code>的错误代码</p>
+<ul>
+<li>@arg <code>fd</code> {<a href="../util/native_types.html#int"><code>int</code></a>} file handle 文件句柄,调用<code>open()</code> or <code>open_sync()</code> 获得</li>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>} 写入<code>Buffer</code>数据</li>
+<li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 写入字符串</li>
+<li>@arg <code>[size=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>} 写入<code>Buffer</code>时指定写入数据的大小,<strong>Default</strong><code>-1</code>表示写入全部</li>
+<li>@arg <code>[offset=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}    写入文件的偏移位置<strong>Default</strong><code>-1</code>表示从结尾写入</li>
+<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 写入字符串时指定的编码</li>
+<li>@ret {<a href="../util/native_types.html#int"><code>int</code></a>} return err code <code>success &gt;= 0</code></li>
+</ul>
+<h2 id="write-fd-buffer-size-offset-cb-">
+			write(fd,buffer[,size[,offset[,cb]]])
+			<span><a class="mark" href="#write-fd-buffer-size-offset-cb-" id="write-fd-buffer-size-offset-cb-">#</a></span>
+		</h2><h2 id="write-fd-buffer-size-cb-">
+			write(fd,buffer[,size[,cb]])
+			<span><a class="mark" href="#write-fd-buffer-size-cb-" id="write-fd-buffer-size-cb-">#</a></span>
+		</h2><h2 id="write-fd-buffer-cb-">
+			write(fd,buffer[,cb])
+			<span><a class="mark" href="#write-fd-buffer-cb-" id="write-fd-buffer-cb-">#</a></span>
+		</h2><h2 id="write-fd-string-encoding-offset-cb-">
+			write(fd,string[,encoding[,offset[,cb]]])
+			<span><a class="mark" href="#write-fd-string-encoding-offset-cb-" id="write-fd-string-encoding-offset-cb-">#</a></span>
+		</h2><h2 id="write-fd-string-encoding-cb-">
+			write(fd,string[,encoding[,cb]])
+			<span><a class="mark" href="#write-fd-string-encoding-cb-" id="write-fd-string-encoding-cb-">#</a></span>
+		</h2><h2 id="write-fd-string-cb-">
+			write(fd,string[,cb])
+			<span><a class="mark" href="#write-fd-string-cb-" id="write-fd-string-cb-">#</a></span>
+		</h2><p>异步写入数据到文件,失败会抛出异常</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>fd</code> {<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>}</li>
+<li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[size=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+<li>@arg <code>[offset=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}</li>
+<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// new storage buffer
+var output = new Buffer(256);
+// sync open file in `w+` mode
+var fd = fs.open_sync(path.documents(&#39;my.txt&#39;), fs.FOPEN_WP);
+var size;
+// sync
+// Prints: 7
+console.log(fs.write_sync(fd, &#39;ABCDEFG&#39;)); 
+size = fs.read_sync(fd, output, -1, 0);
+// Prints: ABCDEFG
+console.log(output.toString(0,size));
+size = fs.read_sync(fd, output, -1, 4);
+// Prints: EFG
+console.log(output.toString(0,size));
+// Prints: 7
+console.log(fs.write_sync(fd, &#39;-String&#39;)); // write String
+// Prints: 7
+console.log(fs.write_sync(fd, new Buffer(&#39;-Buffer-&#39;), 7)); // write Buffer
+// Prints: 12
+console.log(fs.write_sync(fd, new Buffer(&#39;ArrayBuffer-&#39;).collapse(), -1, 0)); // write ArrayBuffer
+size = fs.read_sync(fd, output, -1, 0);
+// Prints: ArrayBuffer-ng-Buffer
+console.log(output.toString(0,size));
+// async
+fs.read(fd, output, -1, 5, function(size) {
+    // Prints: Buffer-ng-Buffer
+    console.log(output.toString(0,size));
+    fs.write(fd, &#39;---------------------&#39;, 0, function() {
+        // Prints: ---------------------
+        console.log(fs.read_file_sync(path.documents(&#39;my.txt&#39;)).toString());
+        fs.close(fd); // close file, 文件句柄一定不能忘记关闭
+    }.catch(e=&gt;{ /*Fail*/ }))
+}.catch(e=&gt;{ /*Fail*/ }));
+</code></pre>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative;
+    document.getElementById('home').href = relative + '..';
+    document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>
