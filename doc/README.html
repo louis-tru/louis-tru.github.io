@@ -164,7 +164,7 @@ new GUIApplication().start(
 <li><p>Open <code>Terminal</code> and execute the following command：</p>
 </li>
 </ul>
-<pre><code class="undefinedsh">## shell
+<pre><code class="undefinedsh"># shell
 $ sudo npm install -g avocado-tools
 </code></pre>
 <ul>
@@ -190,7 +190,7 @@ $ avocado init
 		</h2><p>This step compresses and packages the JavaScript code and resource files inside the project,
 If this is a new project, you can skip this step and go directly to the next step</p>
 <pre><code class="undefinedjs"># shell
-avocado build
+$ avocado build
 </code></pre>
 <h2 id="export-project">
 			Export project
@@ -198,9 +198,9 @@ avocado build
 		</h2><p>This step exports <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> or <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a> project，because you eventually publish the program that be a <code>.apk</code> or <code>.ipa</code></p>
 <pre><code class="undefinedjs"># shell
 # export xcode ios project
-avocado export ios
+$ avocado export ios
 # export android studio project
-avocado export android
+$ avocado export android
 </code></pre>
 <p>After exporting the project, next you can open it using <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> and <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a></p>
 <h2 id="avocado-debug-server">
@@ -209,7 +209,7 @@ avocado export android
 		</h2><p><code>Avocado Tools</code> provides a remote debugger server, each time you change the <code>js</code> or <code>jsx</code> code, you don&#39;t have to reinstall every time.</p>
 <p>Execute the following code to start it：</p>
 <pre><code class="undefinedjs"># shell
-avocado
+$ avocado
 </code></pre>
 <h1 id="downloads">
 			Downloads

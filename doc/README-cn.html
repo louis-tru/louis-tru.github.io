@@ -164,7 +164,7 @@ new GUIApplication().start(
 <li><p>打开<code>Terminal</code>并执行以下命令：</p>
 </li>
 </ul>
-<pre><code class="undefinedsh">## shell
+<pre><code class="undefinedsh"># shell
 $ sudo npm install -g avocado-tools
 </code></pre>
 <ul>
@@ -189,7 +189,7 @@ $ avocado init
 			<span><a class="mark" href="#build-project" id="build-project">#</a></span>
 		</h2><p>这一步会把工程里面的javascript代码以及资源文件进行压缩并打包，如果这是一个新的工程可以跳过这一步骤直接到下一步</p>
 <pre><code class="undefinedjs"># shell
-avocado build
+$ avocado build
 </code></pre>
 <h2 id="export-project">
 			Export project
@@ -197,9 +197,9 @@ avocado build
 		</h2><p>这一步导出<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a>或<a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a>工程，因为你最终要发布程序将会是一个<code>.apk</code>或<code>.ipa</code></p>
 <pre><code class="undefinedjs"># shell
 # export xcode ios project
-avocado export ios
+$ avocado export ios
 # export android studio project
-avocado export android
+$ avocado export android
 </code></pre>
 <p>导出工程后，接下来你可以使用<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a>与<a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a>打开它</p>
 <h2 id="avocado-debug-server">
@@ -208,7 +208,7 @@ avocado export android
 		</h2><p><code>Avocado Tools</code>提供了一个远程调式的服务器，你不需要每次修改完<code>js</code>或<code>jsx</code>代码都进行重新安装</p>
 <p>执行下面的代码可以启动它：</p>
 <pre><code class="undefinedjs"># shell
-avocado
+$ avocado
 </code></pre>
 <h1 id="downloads">
 			Downloads
