@@ -5,7 +5,7 @@
   <title>Avocado API Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
   <script>
-    var src = 'README.html';
+    var src = 'README-cn.html';
     var relative = '';
     document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
     document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
@@ -131,18 +131,18 @@
         <h1 id="avocado">
 			Avocado
 			<span><a class="mark" href="#avocado" id="avocado">#</a></span>
-		</h1><p>Used C/C++/OpenGL/javascript to implement a GUI typesetting display engine and cross platform GUI application development framework</p>
-<p>Goal: developing GUI applications on this basis can take into account both the simplicity and speed of developing WEB applications, as well as the performance and experience of Native applications.</p>
+		</h1><p>使用C/C++/OpenGL/javascript实现的一个GUI排版显示引擎与跨平台GUI应用开发框架</p>
+<p>目标：在此基础上开发GUI应用程序可拥有开发WEB应用般简单与速度同时兼顾Native应用程序的性能与体验</p>
 <ul>
-<li><p>Only <code>iOS</code> and <code>Android</code> systems are supported for the time being, this does not include <code>AndroidTV</code>, because <code>TV</code> applications are very different from mobile applications</p>
+<li><p>暂时只支持<code>iOS</code>与<code>Android</code>系统，并不包含<code>AndroidTV</code>因为<code>TV</code>应用与手机应用有很大的不同</p>
 </li>
-<li><p>From here, <a href="index.html"><code>Go API Index</code></a> can go to <code>API Documents</code></p>
+<li><p>从这里<a href="index.html"><code>Go API Index</code></a>可以到 <code>API Documents</code></p>
 </li>
 </ul>
 <h1 id="examples">
 			Examples
 			<span><a class="mark" href="#examples" id="examples">#</a></span>
-		</h1><p>This is a simple program to display Hello word on the screen, and you can get more detailed Examples from here, <a href="https://github.com/louis-tru/avocado-demo"><code>https://github.com/louis-tru/avocado-demo</code></a></p>
+		</h1><p>这是一个简单的在屏幕上显示<code>hello word!</code>的程序，从这里<a href="https://github.com/louis-tru/avocado-demo"><code>https://github.com/louis-tru/avocado-demo</code></a>你可以获取到更加详细的<code>Examples</code></p>
 <pre><code class="undefinedjsx">import { GUIApplication, Text } from &#39;:gui&#39;
 new GUIApplication().start(
     &lt;Text&gt;hello word!&lt;/Text&gt;
@@ -151,11 +151,11 @@ new GUIApplication().start(
 <h1 id="start-usage">
 			Start Usage
 			<span><a class="mark" href="#start-usage" id="start-usage">#</a></span>
-		</h1><p>If you&#39;ve never used AvocadoJS before, you can start from here and build your AvocadoJS program step by step.</p>
+		</h1><p>如果你从来没有使用过<code>AvocadoJS</code>你可以从这里开始，一步步创建你的<code>AvocadoJS</code>程序。</p>
 <h2 id="install-avocado-tools">
 			Install Avocado Tools
 			<span><a class="mark" href="#install-avocado-tools" id="install-avocado-tools">#</a></span>
-		</h2><p>First, you need to install the toolkit provided by <code>AvocadoJS</code></p>
+		</h2><p>首先你需要安装<code>AvocadoJS</code>提供的工具包</p>
 <ul>
 <li><p>Install <code>avocado tools</code> using nodejs <code>npm</code> </p>
 </li>
@@ -166,17 +166,17 @@ new GUIApplication().start(
 $ sudo npm install -g avocado-tools
 </code></pre>
 <ul>
-<li><p>Or download from <a href="https://github.com/louis-tru/avocado-tools"><code>https://github.com/louis-tru/avocado-tools</code></a></p>
+<li><p>或从<a href="https://github.com/louis-tru/avocado-tools"><code>https://github.com/louis-tru/avocado-tools</code></a>下载</p>
 </li>
-<li><p>Running <code>Avocado Tools</code> requires dependency on <code>nodejs</code> and <code>python2.7</code></p>
+<li><p>运行<code>Avocado Tools</code> 需要依赖<code>nodejs</code>与<code>python2.7</code></p>
 </li>
-<li><p>And now do not support the <code>windows</code> system, you need to use it under <code>mac</code> or <code>linux</code></p>
+<li><p>并且不能运行在<code>windows</code>系统, 暂时只能在<code>mac</code>或<code>linux</code>下使用</p>
 </li>
 </ul>
 <h2 id="create-new-project">
 			Create new project
 			<span><a class="mark" href="#create-new-project" id="create-new-project">#</a></span>
-		</h2><p>Create a new <code>AvocadoJS</code> project using the following <code>shell</code> command：</p>
+		</h2><p>使用下面的<code>shell</code>命令创建一个新的<code>AvocadoJS</code>工程：</p>
 <pre><code class="undefinedsh"># shell
 $ mkdir myproject
 $ cd myproject
@@ -185,27 +185,26 @@ $ avocado init
 <h2 id="build-project">
 			Build project
 			<span><a class="mark" href="#build-project" id="build-project">#</a></span>
-		</h2><p>This step compresses and packages the JavaScript code and resource files inside the project,
-If this is a new project, you can skip this step and go directly to the next step</p>
+		</h2><p>这一步会把工程里面的javascript代码以及资源文件进行压缩并打包，如果这是一个新的工程可以跳过这一步骤直接到下一步</p>
 <pre><code class="undefinedjs"># shell
 avocado build
 </code></pre>
 <h2 id="export-project">
 			Export project
 			<span><a class="mark" href="#export-project" id="export-project">#</a></span>
-		</h2><p>This step exports <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> or <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a> project，because you eventually publish the program that be a <code>.apk</code> or <code>.ipa</code></p>
+		</h2><p>这一步导出<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a>或<a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a>工程，因为你最终要发布程序将会是一个<code>.apk</code>或<code>.ipa</code></p>
 <pre><code class="undefinedjs"># shell
 # export xcode ios project
 avocado export ios
 # export android studio project
 avocado export android
 </code></pre>
-<p>After exporting the project, next you can open it using <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> and <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a></p>
+<p>导出工程后，接下来你可以使用<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a>与<a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a>打开它</p>
 <h2 id="avocado-debug-server">
 			Avocado debug server
 			<span><a class="mark" href="#avocado-debug-server" id="avocado-debug-server">#</a></span>
-		</h2><p><code>Avocado Tools</code> provides a remote debugger server, each time you change the <code>js</code> or <code>jsx</code> code, you don&#39;t have to reinstall every time.</p>
-<p>Execute the following code to start it：</p>
+		</h2><p><code>Avocado Tools</code>提供了一个远程调式的服务器，你不需要每次修改完<code>js</code>或<code>jsx</code>代码都进行重新安装</p>
+<p>执行下面的代码可以启动它：</p>
 <pre><code class="undefinedjs"># shell
 avocado
 </code></pre>
@@ -227,6 +226,7 @@ avocado
     }
     -->
 </script>
+
 
       </div>
 
