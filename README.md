@@ -1,5 +1,5 @@
 # louis-tru.github.io
 
-This is [`Avocado Website`] and Documents
+This is [`Ngui Website`] and Documents
 
-[`Avocado Website`]: http://avocadojs.org/
+[`Ngui Website`]: http://nodegui.org/
