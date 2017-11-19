@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Avocado API Documentation</title>
+  <title>Ngui API Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
   <script>
-    var src = 'gui/media.html';
-    var relative = '../';
+    var src = 'media.html';
+    var relative = '';
     document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
     document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
   </script>
@@ -34,50 +34,42 @@
 
       <!--div id="intro" class="interior">
         <a href="/" id="home2" title="Go back to the home page">
-          AvocadoJS
+          NGUI
         </a>
       </div-->
 
-      <h1 id="-avocadojs-">
-			<a href="http://avocadojs.org/"><code>AvocadoJS</code></a>
-			<span><a class="mark" href="#-avocadojs-" id="-avocadojs-">#</a></span>
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>Ngui</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/ngui-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/demo"><code>Examples</code></a></li>
 </ul>
-<h1 id="util">
-			Util
-			<span><a class="mark" href="#util" id="util">#</a></span>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="util/util.html"><code>lib://util</code></a></li>
-<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
-<li><a href="util/event.html"><code>lib://util/event</code></a></li>
-<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
-<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
-<li><a href="util/http.html"><code>lib://util/http</code></a></li>
-<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
-<li><a href="util/path.html"><code>lib://util/path</code></a></li>
-<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
-<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
-<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
-<li><a href="util/global.html"><code>Global</code></a></li>
-<li><a href="util/native_types.html"><code>Native Types</code></a></li>
-</ul>
-<h1 id="gui">
-			GUI
-			<span><a class="mark" href="#gui" id="gui">#</a></span>
-		</h1><ul>
-<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
-<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
-<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
-<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
-<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
-<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
-<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
-<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
-<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
-<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="pkg.html"><code>pkg</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
 
@@ -85,7 +77,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <h1>Ngui v0.1.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -99,43 +91,43 @@
         <h2>Table of Contents</h2>
         <ul>
 <li>
-<span><a href="#lib-gui-media">lib://gui/media</a></span>
+<span><a href="#ngui-media">ngui/media</a></span>
 <ul>
 <li>
 <span><a href="#class-video">Class: Video</a></span>
 <ul>
 <li>
-<span><a href="#video-onwait_buffer">Video.onwait_buffer</a></span>
+<span><a href="#video-onwaitbuffer">Video.onWaitBuffer</a></span>
 </li>
 <li>
-<span><a href="#video-onready">Video.onready</a></span>
+<span><a href="#video-onready">Video.onReady</a></span>
 </li>
 <li>
-<span><a href="#video-onstart_play">Video.onstart_play</a></span>
+<span><a href="#video-onstartplay">Video.onStartPlay</a></span>
 </li>
 <li>
-<span><a href="#video-onerror">Video.onerror</a></span>
+<span><a href="#video-onerror">Video.onError</a></span>
 </li>
 <li>
-<span><a href="#video-onsource_eof">Video.onsource_eof</a></span>
+<span><a href="#video-onsourceeof">Video.onSourceEof</a></span>
 </li>
 <li>
-<span><a href="#video-onpause">Video.onpause</a></span>
+<span><a href="#video-onpause">Video.onPause</a></span>
 </li>
 <li>
-<span><a href="#video-onresume">Video.onresume</a></span>
+<span><a href="#video-onresume">Video.onResume</a></span>
 </li>
 <li>
-<span><a href="#video-onstop">Video.onstop</a></span>
+<span><a href="#video-onstop">Video.onStop</a></span>
 </li>
 <li>
-<span><a href="#video-onseek">Video.onseek</a></span>
+<span><a href="#video-onseek">Video.onSeek</a></span>
 </li>
 <li>
-<span><a href="#video-auto_play">Video.auto_play</a></span>
+<span><a href="#video-autoplay">Video.autoPlay</a></span>
 </li>
 <li>
-<span><a href="#get-video-source_status">Get: Video.source_status</a></span>
+<span><a href="#get-video-sourcestatus">Get: Video.sourceStatus</a></span>
 </li>
 <li>
 <span><a href="#get-video-status">Get: Video.status</a></span>
@@ -156,22 +148,22 @@
 <span><a href="#get-video-duration">Get: Video.duration</a></span>
 </li>
 <li>
-<span><a href="#get-video-audio_track_index">Get: Video.audio_track_index</a></span>
+<span><a href="#get-video-audiotrackindex">Get: Video.audioTrackIndex</a></span>
 </li>
 <li>
-<span><a href="#get-video-audio_track_count">Get: Video.audio_track_count</a></span>
+<span><a href="#get-video-audiotrackcount">Get: Video.audioTrackCount</a></span>
 </li>
 <li>
-<span><a href="#video-disable_wait_buffer">Video.disable_wait_buffer</a></span>
+<span><a href="#video-disablewaitbuffer">Video.disableWaitBuffer</a></span>
 </li>
 <li>
-<span><a href="#video-select_audio_track-index-">Video.select_audio_track(index)</a></span>
+<span><a href="#video-selectaudiotrack-index-">Video.selectAudioTrack(index)</a></span>
 </li>
 <li>
-<span><a href="#video-audio_track-index-">Video.audio_track([index])</a></span>
+<span><a href="#video-audiotrack-index-">Video.audioTrack([index])</a></span>
 </li>
 <li>
-<span><a href="#video-video_track-">Video.video_track()</a></span>
+<span><a href="#video-videotrack-">Video.videoTrack()</a></span>
 </li>
 <li>
 <span><a href="#video-start-">Video.start()</a></span>
@@ -193,40 +185,40 @@
 <span><a href="#class-audioplayer">Class: AudioPlayer</a></span>
 <ul>
 <li>
-<span><a href="#audioplayer-onwait_buffer">AudioPlayer.onwait_buffer</a></span>
+<span><a href="#audioplayer-onwaitbuffer">AudioPlayer.onWaitBuffer</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onready">AudioPlayer.onready</a></span>
+<span><a href="#audioplayer-onready">AudioPlayer.onReady</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onstart_play">AudioPlayer.onstart_play</a></span>
+<span><a href="#audioplayer-onstartplay">AudioPlayer.onStartPlay</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onerror">AudioPlayer.onerror</a></span>
+<span><a href="#audioplayer-onerror">AudioPlayer.onError</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onsource_eof">AudioPlayer.onsource_eof</a></span>
+<span><a href="#audioplayer-onsourceeof">AudioPlayer.onSourceEof</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onpause">AudioPlayer.onpause</a></span>
+<span><a href="#audioplayer-onpause">AudioPlayer.onPause</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onresume">AudioPlayer.onresume</a></span>
+<span><a href="#audioplayer-onresume">AudioPlayer.onResume</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onstop">AudioPlayer.onstop</a></span>
+<span><a href="#audioplayer-onstop">AudioPlayer.onStop</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-onseek">AudioPlayer.onseek</a></span>
+<span><a href="#audioplayer-onseek">AudioPlayer.onSeek</a></span>
 </li>
 <li>
 <span><a href="#audioplayer-constructor-src-">AudioPlayer.constructor([src])</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-auto_play">AudioPlayer.auto_play</a></span>
+<span><a href="#audioplayer-autoplay">AudioPlayer.autoPlay</a></span>
 </li>
 <li>
-<span><a href="#get-audioplayer-source_status">Get: AudioPlayer.source_status</a></span>
+<span><a href="#get-audioplayer-sourcestatus">Get: AudioPlayer.sourceStatus</a></span>
 </li>
 <li>
 <span><a href="#get-audioplayer-status">Get: AudioPlayer.status</a></span>
@@ -247,16 +239,16 @@
 <span><a href="#get-audioplayer-duration">Get: AudioPlayer.duration</a></span>
 </li>
 <li>
-<span><a href="#get-audioplayer-track_index">Get: AudioPlayer.track_index</a></span>
+<span><a href="#get-audioplayer-trackindex">Get: AudioPlayer.trackIndex</a></span>
 </li>
 <li>
-<span><a href="#get-audioplayer-track_count">Get: AudioPlayer.track_count</a></span>
+<span><a href="#get-audioplayer-trackcount">Get: AudioPlayer.trackCount</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-disable_wait_buffer">AudioPlayer.disable_wait_buffer</a></span>
+<span><a href="#audioplayer-disablewaitbuffer">AudioPlayer.disableWaitBuffer</a></span>
 </li>
 <li>
-<span><a href="#audioplayer-select_track-index-">AudioPlayer.select_track(index)</a></span>
+<span><a href="#audioplayer-selecttrack-index-">AudioPlayer.selectTrack(index)</a></span>
 </li>
 <li>
 <span><a href="#audioplayer-track-index-">AudioPlayer.track([index])</a></span>
@@ -299,16 +291,16 @@
 <span><a href="#trackinfo-bitrate">TrackInfo.bitrate</a></span>
 </li>
 <li>
-<span><a href="#trackinfo-sample_rate">TrackInfo.sample_rate</a></span>
+<span><a href="#trackinfo-samplerate">TrackInfo.sampleRate</a></span>
 </li>
 <li>
-<span><a href="#trackinfo-channel_count">TrackInfo.channel_count</a></span>
+<span><a href="#trackinfo-channelcount">TrackInfo.channelCount</a></span>
 </li>
 <li>
-<span><a href="#trackinfo-channel_layout">TrackInfo.channel_layout</a></span>
+<span><a href="#trackinfo-channellayout">TrackInfo.channelLayout</a></span>
 </li>
 <li>
-<span><a href="#trackinfo-frame_interval">TrackInfo.frame_interval</a></span>
+<span><a href="#trackinfo-frameinterval">TrackInfo.frameInterval</a></span>
 </li>
 </ul>
 <li>
@@ -446,91 +438,91 @@
       </div>
 
       <div id="apicontent">
-        <h1 id="lib-gui-media">
-			<code>lib://gui/media</code>
-			<span><a class="mark" href="#lib-gui-media" id="lib-gui-media">#</a></span>
+        <h1 id="ngui-media">
+			<code>ngui/media</code>
+			<span><a class="mark" href="#ngui-media" id="ngui-media">#</a></span>
 		</h1><h2 id="class-video">
 			<code>Class: Video</code>
 			<span><a class="mark" href="#class-video" id="class-video">#</a></span>
 		</h2><ul>
-<li><p><code>extends</code> <a href="../gui/gui.html#class-image"><code>Image</code></a></p>
+<li><p><code>extends</code> <a href="ngui.html#class-image"><code>Image</code></a></p>
 </li>
-<li><p>继承于<a href="../gui/gui.html#class-image"><code>Image</code></a>需要加入到<code>gui</code>视图树中才可正常工作</p>
+<li><p>继承于<a href="ngui.html#class-image"><code>Image</code></a>需要加入到<code>gui</code>视图树中才可正常工作</p>
 </li>
-<li><p>如果只需要单独播放音频，可使用<a href="../gui/media.html#class-audioplayer"><code>AudioPlayer</code></a></p>
+<li><p>如果只需要单独播放音频，可使用<a href="media.html#class-audioplayer"><code>AudioPlayer</code></a></p>
 </li>
 </ul>
-<h3 id="video-onwait_buffer">
-			Video.onwait_buffer
-			<span><a class="mark" href="#video-onwait_buffer" id="video-onwait_buffer">#</a></span>
-		</h3><p>缓冲等待时触发, 事件数据为<code>0.0-1.0</code><a href="../util/native_types.html#float"><code>float</code></a>数，<code>1.0</code>表示缓冲完成</p>
+<h3 id="video-onwaitbuffer">
+			Video.onWaitBuffer
+			<span><a class="mark" href="#video-onwaitbuffer" id="video-onwaitbuffer">#</a></span>
+		</h3><p>缓冲等待时触发, 事件数据为<code>0.0-1.0</code><a href="nativeTypes.html#float"><code>float</code></a>数，<code>1.0</code>表示缓冲完成</p>
 <h3 id="video-onready">
-			Video.onready
+			Video.onReady
 			<span><a class="mark" href="#video-onready" id="video-onready">#</a></span>
 		</h3><p>数据源准备完成，可以开始播放时触发</p>
-<h3 id="video-onstart_play">
-			Video.onstart_play
-			<span><a class="mark" href="#video-onstart_play" id="video-onstart_play">#</a></span>
+<h3 id="video-onstartplay">
+			Video.onStartPlay
+			<span><a class="mark" href="#video-onstartplay" id="video-onstartplay">#</a></span>
 		</h3><p>真正开始播放时触发</p>
 <h3 id="video-onerror">
-			Video.onerror
+			Video.onError
 			<span><a class="mark" href="#video-onerror" id="video-onerror">#</a></span>
 		</h3><p>异常时触发</p>
-<h3 id="video-onsource_eof">
-			Video.onsource_eof
-			<span><a class="mark" href="#video-onsource_eof" id="video-onsource_eof">#</a></span>
+<h3 id="video-onsourceeof">
+			Video.onSourceEof
+			<span><a class="mark" href="#video-onsourceeof" id="video-onsourceeof">#</a></span>
 		</h3><p>数据源结束时触发，但可能播放还未结束，因为缓冲区与解码缓冲中还有数据</p>
 <h3 id="video-onpause">
-			Video.onpause
+			Video.onPause
 			<span><a class="mark" href="#video-onpause" id="video-onpause">#</a></span>
 		</h3><p>播放暂停时触发</p>
 <h3 id="video-onresume">
-			Video.onresume
+			Video.onResume
 			<span><a class="mark" href="#video-onresume" id="video-onresume">#</a></span>
 		</h3><p>从暂停中恢复时触发</p>
 <h3 id="video-onstop">
-			Video.onstop
+			Video.onStop
 			<span><a class="mark" href="#video-onstop" id="video-onstop">#</a></span>
 		</h3><p>播放停止时触发</p>
 <h3 id="video-onseek">
-			Video.onseek
+			Video.onSeek
 			<span><a class="mark" href="#video-onseek" id="video-onseek">#</a></span>
 		</h3><p><code>seek</code>时触发</p>
-<h3 id="video-auto_play">
-			Video.auto_play
-			<span><a class="mark" href="#video-auto_play" id="video-auto_play">#</a></span>
+<h3 id="video-autoplay">
+			Video.autoPlay
+			<span><a class="mark" href="#video-autoplay" id="video-autoplay">#</a></span>
 		</h3><p><strong>Default</strong> <code>true</code></p>
 <p>在数据源准备好时是否自动开始播放，<code>false</code>需要调用<code>start()</code>开始播放</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="get-video-source_status">
-			Get: Video.source_status
-			<span><a class="mark" href="#get-video-source_status" id="get-video-source_status">#</a></span>
+<h3 id="get-video-sourcestatus">
+			Get: Video.sourceStatus
+			<span><a class="mark" href="#get-video-sourcestatus" id="get-video-sourcestatus">#</a></span>
 		</h3><p>当前数据源状态</p>
 <ul>
-<li>{<a href="../gui/media.html#enum-multimediasourcestatus"><code>MultimediaSourceStatus</code></a>}</li>
+<li>{<a href="media.html#enum-multimediasourcestatus"><code>MultimediaSourceStatus</code></a>}</li>
 </ul>
 <h3 id="get-video-status">
 			Get: Video.status
 			<span><a class="mark" href="#get-video-status" id="get-video-status">#</a></span>
 		</h3><p>当前播放状态</p>
 <ul>
-<li>{<a href="../gui/media.html#enum-playerstatus"><code>PlayerStatus</code></a>}</li>
+<li>{<a href="media.html#enum-playerstatus"><code>PlayerStatus</code></a>}</li>
 </ul>
 <h3 id="video-mute">
 			Video.mute
 			<span><a class="mark" href="#video-mute" id="video-mute">#</a></span>
 		</h3><p>是否静音</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="video-volume">
 			Video.volume
 			<span><a class="mark" href="#video-volume" id="video-volume">#</a></span>
 		</h3><p>音频音量<code>0-100</code>之间</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>0-100</code></li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>0-100</code></li>
 </ul>
 <h3 id="video-src">
 			Video.src
@@ -544,57 +536,57 @@
 			<span><a class="mark" href="#get-video-time" id="get-video-time">#</a></span>
 		</h3><p>视频当前播放的时间毫秒数</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
 <h3 id="get-video-duration">
 			Get: Video.duration
 			<span><a class="mark" href="#get-video-duration" id="get-video-duration">#</a></span>
 		</h3><p>视频的总长度毫秒数</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
-<h3 id="get-video-audio_track_index">
-			Get: Video.audio_track_index
-			<span><a class="mark" href="#get-video-audio_track_index" id="get-video-audio_track_index">#</a></span>
+<h3 id="get-video-audiotrackindex">
+			Get: Video.audioTrackIndex
+			<span><a class="mark" href="#get-video-audiotrackindex" id="get-video-audiotrackindex">#</a></span>
 		</h3><p>当前音频轨道索引</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="get-video-audio_track_count">
-			Get: Video.audio_track_count
-			<span><a class="mark" href="#get-video-audio_track_count" id="get-video-audio_track_count">#</a></span>
+<h3 id="get-video-audiotrackcount">
+			Get: Video.audioTrackCount
+			<span><a class="mark" href="#get-video-audiotrackcount" id="get-video-audiotrackcount">#</a></span>
 		</h3><p>支持音频轨道数</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="video-disable_wait_buffer">
-			Video.disable_wait_buffer
-			<span><a class="mark" href="#video-disable_wait_buffer" id="video-disable_wait_buffer">#</a></span>
+<h3 id="video-disablewaitbuffer">
+			Video.disableWaitBuffer
+			<span><a class="mark" href="#video-disablewaitbuffer" id="video-disablewaitbuffer">#</a></span>
 		</h3><p>禁用等待数据缓冲，只要有数据立即呈现，不等待</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="video-select_audio_track-index-">
-			Video.select_audio_track(index)
-			<span><a class="mark" href="#video-select_audio_track-index-" id="video-select_audio_track-index-">#</a></span>
+<h3 id="video-selectaudiotrack-index-">
+			Video.selectAudioTrack(index)
+			<span><a class="mark" href="#video-selectaudiotrack-index-" id="video-selectaudiotrack-index-">#</a></span>
 		</h3><p>选择音频轨道</p>
 <ul>
-<li>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} audio track index</li>
+<li>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} audio track index</li>
 </ul>
-<h3 id="video-audio_track-index-">
-			Video.audio_track([index])
-			<span><a class="mark" href="#video-audio_track-index-" id="video-audio_track-index-">#</a></span>
+<h3 id="video-audiotrack-index-">
+			Video.audioTrack([index])
+			<span><a class="mark" href="#video-audiotrack-index-" id="video-audiotrack-index-">#</a></span>
 		</h3><p>获取音频轨道信息，不传入<code>index</code>返回当前选择的轨道</p>
 <ul>
-<li>@arg <code>[track]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
-<li>@ret {<a href="../gui/media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
+<li>@arg <code>[track]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@ret {<a href="media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
 </ul>
-<h3 id="video-video_track-">
-			Video.video_track()
-			<span><a class="mark" href="#video-video_track-" id="video-video_track-">#</a></span>
+<h3 id="video-videotrack-">
+			Video.videoTrack()
+			<span><a class="mark" href="#video-videotrack-" id="video-videotrack-">#</a></span>
 		</h3><p>获取视频轨道信息</p>
 <ul>
-<li>@ret {<a href="../gui/media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
+<li>@ret {<a href="media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
 </ul>
 <h3 id="video-start-">
 			Video.start()
@@ -605,8 +597,8 @@
 			<span><a class="mark" href="#video-seek-time-" id="video-seek-time-">#</a></span>
 		</h3><p>跳转到目标<code>time</code>位置</p>
 <ul>
-<li>@arg <code>time</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code>  毫秒</li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}  success return <code>true</code></li>
+<li>@arg <code>time</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code>  毫秒</li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}  success return <code>true</code></li>
 </ul>
 <h3 id="video-pause-">
 			Video.pause()
@@ -624,35 +616,35 @@
 			<code>Class: AudioPlayer</code>
 			<span><a class="mark" href="#class-audioplayer" id="class-audioplayer">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../util/event.html#class-notification"><code>Notification</code></a></li>
+<li><code>extends</code> <a href="event.html#class-notification"><code>Notification</code></a></li>
 </ul>
 <p>音频播放器与视频播放器的成员几乎完全相同</p>
-<h3 id="audioplayer-onwait_buffer">
-			AudioPlayer.onwait_buffer
-			<span><a class="mark" href="#audioplayer-onwait_buffer" id="audioplayer-onwait_buffer">#</a></span>
+<h3 id="audioplayer-onwaitbuffer">
+			AudioPlayer.onWaitBuffer
+			<span><a class="mark" href="#audioplayer-onwaitbuffer" id="audioplayer-onwaitbuffer">#</a></span>
 		</h3><h3 id="audioplayer-onready">
-			AudioPlayer.onready
+			AudioPlayer.onReady
 			<span><a class="mark" href="#audioplayer-onready" id="audioplayer-onready">#</a></span>
-		</h3><h3 id="audioplayer-onstart_play">
-			AudioPlayer.onstart_play
-			<span><a class="mark" href="#audioplayer-onstart_play" id="audioplayer-onstart_play">#</a></span>
+		</h3><h3 id="audioplayer-onstartplay">
+			AudioPlayer.onStartPlay
+			<span><a class="mark" href="#audioplayer-onstartplay" id="audioplayer-onstartplay">#</a></span>
 		</h3><h3 id="audioplayer-onerror">
-			AudioPlayer.onerror
+			AudioPlayer.onError
 			<span><a class="mark" href="#audioplayer-onerror" id="audioplayer-onerror">#</a></span>
-		</h3><h3 id="audioplayer-onsource_eof">
-			AudioPlayer.onsource_eof
-			<span><a class="mark" href="#audioplayer-onsource_eof" id="audioplayer-onsource_eof">#</a></span>
+		</h3><h3 id="audioplayer-onsourceeof">
+			AudioPlayer.onSourceEof
+			<span><a class="mark" href="#audioplayer-onsourceeof" id="audioplayer-onsourceeof">#</a></span>
 		</h3><h3 id="audioplayer-onpause">
-			AudioPlayer.onpause
+			AudioPlayer.onPause
 			<span><a class="mark" href="#audioplayer-onpause" id="audioplayer-onpause">#</a></span>
 		</h3><h3 id="audioplayer-onresume">
-			AudioPlayer.onresume
+			AudioPlayer.onResume
 			<span><a class="mark" href="#audioplayer-onresume" id="audioplayer-onresume">#</a></span>
 		</h3><h3 id="audioplayer-onstop">
-			AudioPlayer.onstop
+			AudioPlayer.onStop
 			<span><a class="mark" href="#audioplayer-onstop" id="audioplayer-onstop">#</a></span>
 		</h3><h3 id="audioplayer-onseek">
-			AudioPlayer.onseek
+			AudioPlayer.onSeek
 			<span><a class="mark" href="#audioplayer-onseek" id="audioplayer-onseek">#</a></span>
 		</h3><h3 id="audioplayer-constructor-src-">
 			AudioPlayer.constructor([src])
@@ -661,35 +653,35 @@
 <ul>
 <li>@arg <code>[src]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
-<h3 id="audioplayer-auto_play">
-			AudioPlayer.auto_play
-			<span><a class="mark" href="#audioplayer-auto_play" id="audioplayer-auto_play">#</a></span>
+<h3 id="audioplayer-autoplay">
+			AudioPlayer.autoPlay
+			<span><a class="mark" href="#audioplayer-autoplay" id="audioplayer-autoplay">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="get-audioplayer-source_status">
-			Get: AudioPlayer.source_status
-			<span><a class="mark" href="#get-audioplayer-source_status" id="get-audioplayer-source_status">#</a></span>
+<h3 id="get-audioplayer-sourcestatus">
+			Get: AudioPlayer.sourceStatus
+			<span><a class="mark" href="#get-audioplayer-sourcestatus" id="get-audioplayer-sourcestatus">#</a></span>
 		</h3><ul>
-<li>{<a href="../gui/media.html#enum-multimediasourcestatus"><code>MultimediaSourceStatus</code></a>}</li>
+<li>{<a href="media.html#enum-multimediasourcestatus"><code>MultimediaSourceStatus</code></a>}</li>
 </ul>
 <h3 id="get-audioplayer-status">
 			Get: AudioPlayer.status
 			<span><a class="mark" href="#get-audioplayer-status" id="get-audioplayer-status">#</a></span>
 		</h3><ul>
-<li>{<a href="../gui/media.html#enum-playerstatus"><code>PlayerStatus</code></a>}</li>
+<li>{<a href="media.html#enum-playerstatus"><code>PlayerStatus</code></a>}</li>
 </ul>
 <h3 id="audioplayer-mute">
 			AudioPlayer.mute
 			<span><a class="mark" href="#audioplayer-mute" id="audioplayer-mute">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="audioplayer-volume">
 			AudioPlayer.volume
 			<span><a class="mark" href="#audioplayer-volume" id="audioplayer-volume">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>0-100</code></li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>0-100</code></li>
 </ul>
 <h3 id="audioplayer-src">
 			AudioPlayer.src
@@ -701,46 +693,46 @@
 			Get: AudioPlayer.time
 			<span><a class="mark" href="#get-audioplayer-time" id="get-audioplayer-time">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
 <h3 id="get-audioplayer-duration">
 			Get: AudioPlayer.duration
 			<span><a class="mark" href="#get-audioplayer-duration" id="get-audioplayer-duration">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
-<h3 id="get-audioplayer-track_index">
-			Get: AudioPlayer.track_index
-			<span><a class="mark" href="#get-audioplayer-track_index" id="get-audioplayer-track_index">#</a></span>
+<h3 id="get-audioplayer-trackindex">
+			Get: AudioPlayer.trackIndex
+			<span><a class="mark" href="#get-audioplayer-trackindex" id="get-audioplayer-trackindex">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="get-audioplayer-track_count">
-			Get: AudioPlayer.track_count
-			<span><a class="mark" href="#get-audioplayer-track_count" id="get-audioplayer-track_count">#</a></span>
+<h3 id="get-audioplayer-trackcount">
+			Get: AudioPlayer.trackCount
+			<span><a class="mark" href="#get-audioplayer-trackcount" id="get-audioplayer-trackcount">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="audioplayer-disable_wait_buffer">
-			AudioPlayer.disable_wait_buffer
-			<span><a class="mark" href="#audioplayer-disable_wait_buffer" id="audioplayer-disable_wait_buffer">#</a></span>
+<h3 id="audioplayer-disablewaitbuffer">
+			AudioPlayer.disableWaitBuffer
+			<span><a class="mark" href="#audioplayer-disablewaitbuffer" id="audioplayer-disablewaitbuffer">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="audioplayer-select_track-index-">
-			AudioPlayer.select_track(index)
-			<span><a class="mark" href="#audioplayer-select_track-index-" id="audioplayer-select_track-index-">#</a></span>
+<h3 id="audioplayer-selecttrack-index-">
+			AudioPlayer.selectTrack(index)
+			<span><a class="mark" href="#audioplayer-selecttrack-index-" id="audioplayer-selecttrack-index-">#</a></span>
 		</h3><p>选择音播放的频轨道</p>
 <ul>
-<li>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} audio track index</li>
+<li>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} audio track index</li>
 </ul>
 <h3 id="audioplayer-track-index-">
 			AudioPlayer.track([index])
 			<span><a class="mark" href="#audioplayer-track-index-" id="audioplayer-track-index-">#</a></span>
 		</h3><p>不传入<code>index</code>默认返回当前播放的轨道信息</p>
 <ul>
-<li>@arg <code>[track]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} </li>
-<li>@ret {<a href="../gui/media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
+<li>@arg <code>[track]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} </li>
+<li>@ret {<a href="media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
 </ul>
 <h3 id="audioplayer-start-">
 			AudioPlayer.start()
@@ -749,8 +741,8 @@
 			AudioPlayer.seek(time)
 			<span><a class="mark" href="#audioplayer-seek-time-" id="audioplayer-seek-time-">#</a></span>
 		</h3><ul>
-<li>@arg <code>time</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>} success return <code>true</code></li>
+<li>@arg <code>time</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} success return <code>true</code></li>
 </ul>
 <h3 id="audioplayer-pause-">
 			AudioPlayer.pause()
@@ -770,7 +762,7 @@
 			<span><a class="mark" href="#trackinfo-type" id="trackinfo-type">#</a></span>
 		</h3><p>轨道类型，声音或视频</p>
 <ul>
-<li>{<a href="../gui/media.html#enum-mediatype"><code>MediaType</code></a>}</li>
+<li>{<a href="media.html#enum-mediatype"><code>MediaType</code></a>}</li>
 </ul>
 <h3 id="trackinfo-mime">
 			TrackInfo.mime
@@ -784,14 +776,14 @@
 			<span><a class="mark" href="#trackinfo-width" id="trackinfo-width">#</a></span>
 		</h3><p>输出图像宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-height">
 			TrackInfo.height
 			<span><a class="mark" href="#trackinfo-height" id="trackinfo-height">#</a></span>
 		</h3><p>输出图像高度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-language">
 			TrackInfo.language
@@ -805,35 +797,35 @@
 			<span><a class="mark" href="#trackinfo-bitrate" id="trackinfo-bitrate">#</a></span>
 		</h3><p>码率</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="trackinfo-sample_rate">
-			TrackInfo.sample_rate
-			<span><a class="mark" href="#trackinfo-sample_rate" id="trackinfo-sample_rate">#</a></span>
+<h3 id="trackinfo-samplerate">
+			TrackInfo.sampleRate
+			<span><a class="mark" href="#trackinfo-samplerate" id="trackinfo-samplerate">#</a></span>
 		</h3><p>声音采样率</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="trackinfo-channel_count">
-			TrackInfo.channel_count
-			<span><a class="mark" href="#trackinfo-channel_count" id="trackinfo-channel_count">#</a></span>
+<h3 id="trackinfo-channelcount">
+			TrackInfo.channelCount
+			<span><a class="mark" href="#trackinfo-channelcount" id="trackinfo-channelcount">#</a></span>
 		</h3><p>声音声道数量</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h3 id="trackinfo-channel_layout">
-			TrackInfo.channel_layout
-			<span><a class="mark" href="#trackinfo-channel_layout" id="trackinfo-channel_layout">#</a></span>
-		</h3><p>音频声道布局掩码 <a href="../gui/media.html#enum-audiochannelmask"><code>AudioChannelMask</code></a></p>
+<h3 id="trackinfo-channellayout">
+			TrackInfo.channelLayout
+			<span><a class="mark" href="#trackinfo-channellayout" id="trackinfo-channellayout">#</a></span>
+		</h3><p>音频声道布局掩码 <a href="media.html#enum-audiochannelmask"><code>AudioChannelMask</code></a></p>
 <ul>
-<li>{<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>}</li>
 </ul>
-<h3 id="trackinfo-frame_interval">
-			TrackInfo.frame_interval
-			<span><a class="mark" href="#trackinfo-frame_interval" id="trackinfo-frame_interval">#</a></span>
+<h3 id="trackinfo-frameinterval">
+			TrackInfo.frameInterval
+			<span><a class="mark" href="#trackinfo-frameinterval" id="trackinfo-frameinterval">#</a></span>
 		</h3><p>图像帧时间间隔 <code>ms</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h2 id="enum-mediatype">
 			<code>Enum: MediaType</code>

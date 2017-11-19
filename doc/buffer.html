@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Avocado API Documentation</title>
+  <title>NGUI API Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
   <script>
-    var src = 'util/buffer.html';
-    var relative = '../';
+    var src = 'buffer.html';
+    var relative = '';
     document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
     document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
   </script>
@@ -34,50 +34,41 @@
 
       <!--div id="intro" class="interior">
         <a href="/" id="home2" title="Go back to the home page">
-          AvocadoJS
+          NGUI
         </a>
       </div-->
 
-      <h1 id="-avocadojs-">
-			<a href="http://avocadojs.org/"><code>AvocadoJS</code></a>
-			<span><a class="mark" href="#-avocadojs-" id="-avocadojs-">#</a></span>
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>NGUI</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui-dev"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui-demo"><code>Examples</code></a></li>
 </ul>
-<h1 id="util">
-			Util
-			<span><a class="mark" href="#util" id="util">#</a></span>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="util/util.html"><code>lib://util</code></a></li>
-<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
-<li><a href="util/event.html"><code>lib://util/event</code></a></li>
-<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
-<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
-<li><a href="util/http.html"><code>lib://util/http</code></a></li>
-<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
-<li><a href="util/path.html"><code>lib://util/path</code></a></li>
-<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
-<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
-<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
-<li><a href="util/global.html"><code>Global</code></a></li>
-<li><a href="util/native_types.html"><code>Native Types</code></a></li>
-</ul>
-<h1 id="gui">
-			GUI
-			<span><a class="mark" href="#gui" id="gui">#</a></span>
-		</h1><ul>
-<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
-<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
-<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
-<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
-<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
-<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
-<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
-<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
-<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
-<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+<li><a href="gui.html"><code>ngui</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
 
@@ -85,7 +76,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <h1>NGUI v0.2.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -249,10 +240,10 @@ specified in <a href="https://tools.ietf.org/html/rfc4648#section-5">RFC4648, Se
 		</h3><p>构造函数,可以使用、字符串、内容为数字的数组、<code>ArrayBuffer</code>、或指定一个容量来初始化<code>Buffer</code>.</p>
 <p>或不传入任何参数构造一个空Buffer</p>
 <ul>
-<li>@arg <code>[length=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 使用长度初始化<code>Buffer</code></li>
-<li>@arg <code>[fill=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 使用长度初始化时指定初始填充值</li>
+<li>@arg <code>[length=0]</code> {<a href="native_types.html#uint"><code>uint</code></a>} 使用长度初始化<code>Buffer</code></li>
+<li>@arg <code>[fill=0]</code> {<a href="native_types.html#uint"><code>uint</code></a>} 使用长度初始化时指定初始填充值</li>
 <li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 使用字符串初始化<code>Buffer</code></li>
-<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 使用字符串初始化时指定字符串的编码</li>
+<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 使用字符串初始化时指定字符串的编码</li>
 <li>@arg <code>buffer</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} 使用数组与<code>ArrayBuffer</code>初始化<code>Buffer</code></li>
 </ul>
 <p>Example:</p>
@@ -318,7 +309,7 @@ console.log(buff);
 			<span><a class="mark" href="#buffer-copy-" id="buffer-copy-">#</a></span>
 		</h3><p>copy buffer</p>
 <ul>
-<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 返回新Buffer</li>
+<li>@ret {<a href="buffer.html#class-buffer"><code>Buffer</code></a>} 返回新Buffer</li>
 </ul>
 <h3 id="buffer-is_null-">
 			Buffer.is_null()
@@ -338,13 +329,13 @@ console.log(buff);
 			<span><a class="mark" href="#buffer-write-string-encoding-" id="buffer-write-string-encoding-">#</a></span>
 		</h3><p>写入数据到Buffer,类似文件IO的写入方法,这个方法会自动调整Buffer的容量长度</p>
 <ul>
-<li>@arg <code>buffer</code> {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} 写入<code>buffer</code>与<code>Array</code></li>
+<li>@arg <code>buffer</code> {<a href="buffer.html#class-buffer"><code>Buffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} 写入<code>buffer</code>与<code>Array</code></li>
 <li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    写入<code>String</code></li>
-<li>@arg <code>[to=-1]</code>   {<a href="../util/native_types.html#int"><code>int</code></a>}  指定一个开始写入的位置,<code>-1</code>从结尾开始写入</li>
-<li>@arg <code>[size=-1]</code> {<a href="../util/native_types.html#int"><code>int</code></a>}  需要写入项目数量,超过要写入数据的长度自动取写入数据长度,<code>-1</code>取源长度</li>
-<li>@arg <code>[form=0]</code>  {<a href="../util/native_types.html#uint"><code>uint</code></a>} 从要写入数据的form位置开始取数据,默认从<code>0</code>开始读取源</li>
-<li>@arg <code>[encoding=utf8]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 可用的值为 <code>binary|ascii|base64|hex|utf8|ucs2|utf32</code></li>
-<li>@ret {<a href="../util/native_types.html#uint"><code>uint</code></a>} 返回写入的长度</li>
+<li>@arg <code>[to=-1]</code>   {<a href="native_types.html#int"><code>int</code></a>}  指定一个开始写入的位置,<code>-1</code>从结尾开始写入</li>
+<li>@arg <code>[size=-1]</code> {<a href="native_types.html#int"><code>int</code></a>}  需要写入项目数量,超过要写入数据的长度自动取写入数据长度,<code>-1</code>取源长度</li>
+<li>@arg <code>[form=0]</code>  {<a href="native_types.html#uint"><code>uint</code></a>} 从要写入数据的form位置开始取数据,默认从<code>0</code>开始读取源</li>
+<li>@arg <code>[encoding=utf8]</code> {<a href="buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 可用的值为 <code>binary|ascii|base64|hex|utf8|ucs2|utf32</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} 返回写入的长度</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer(4);
@@ -394,9 +385,9 @@ console.log(buf.to_string()); // to string
 			<span><a class="mark" href="#buffer-tostring-start-end-" id="buffer-tostring-start-end-">#</a></span>
 		</h3><p>转换到javascript字符串</p>
 <ul>
-<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="../util/buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 编码参数 <code>binary|ascii|base64|hex|utf8|ucs2|utf32</code></li>
-<li>@arg <code>[start=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 转换的开始位置  <strong>默认为</strong><code>0</code></li>
-<li>@arg <code>[end]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}    转换的结束位置 <strong>默认为</strong><code>buffer.length</code>使用Buffer的长度</li>
+<li>@arg <code>[encoding=&#39;utf8&#39;]</code> {<a href="buffer.html#buffers-and-character-encodings"><code>Encodings</code></a>} 编码参数 <code>binary|ascii|base64|hex|utf8|ucs2|utf32</code></li>
+<li>@arg <code>[start=0]</code> {<a href="native_types.html#uint"><code>uint</code></a>} 转换的开始位置  <strong>默认为</strong><code>0</code></li>
+<li>@arg <code>[end]</code> {<a href="native_types.html#uint"><code>uint</code></a>}    转换的结束位置 <strong>默认为</strong><code>buffer.length</code>使用Buffer的长度</li>
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 返回javascript字符串</li>
 </ul>
 <p>Example:</p>
@@ -424,9 +415,9 @@ console.log(buf.to_string(&#39;base64&#39;));
 			<span><a class="mark" href="#buffer-slice-start-end-" id="buffer-slice-start-end-">#</a></span>
 		</h3><p>切片并拷贝到新Buffer,与copy功能相似,如果不传入任何参数拷贝全部数据</p>
 <ul>
-<li>@arg <code>[start=0]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 拷贝数据的开始位置 <strong>默认为<code>0</code></strong></li>
-<li>@arg <code>[end=-1]</code>    {<a href="../util/native_types.html#int"><code>int</code></a>} 拷贝数据的结束位置 <strong>默认为<code>-1</code></strong>使用buffer.length值</li>
-<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 返回新Buffer</li>
+<li>@arg <code>[start=0]</code> {<a href="native_types.html#uint"><code>uint</code></a>} 拷贝数据的开始位置 <strong>默认为<code>0</code></strong></li>
+<li>@arg <code>[end=-1]</code>    {<a href="native_types.html#int"><code>int</code></a>} 拷贝数据的结束位置 <strong>默认为<code>-1</code></strong>使用buffer.length值</li>
+<li>@ret {<a href="buffer.html#class-buffer"><code>Buffer</code></a>} 返回新Buffer</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer(&#39;ABCD&#39;);
@@ -442,7 +433,7 @@ console.log(buf2.to_string());
 			<span><a class="mark" href="#buffer-clear-" id="buffer-clear-">#</a></span>
 		</h3><p>清空Buffer数据</p>
 <ul>
-<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} 返回自己</li>
+<li>@ret {<a href="buffer.html#class-buffer"><code>Buffer</code></a>} 返回自己</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer(&#39;ABCD&#39;);
@@ -481,8 +472,8 @@ console.log(JSON.stringify(buf));
 			<span><a class="mark" href="#buffer-fill-integer-" id="buffer-fill-integer-">#</a></span>
 		</h3><p>重置所有的数据项目值为integer</p>
 <ul>
-<li>@arg <code>integer</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} 要填充的整数值</li>
-<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>} return self</li>
+<li>@arg <code>integer</code> {<a href="native_types.html#uint"><code>uint</code></a>} 要填充的整数值</li>
+<li>@ret {<a href="buffer.html#class-buffer"><code>Buffer</code></a>} return self</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints:
@@ -519,7 +510,7 @@ new Buffer(&#39;ABCD&#39;).for_each(function(c){ console.log(c) });
 <ul>
 <li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
 <li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
-<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+<li>@ret {<a href="buffer.html#class-buffer"><code>Buffer</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
@@ -535,7 +526,7 @@ console.log(buf.filter(function (c) {
 <ul>
 <li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
 <li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
-<li>@ret {<a href="../util/buffer.html#class-buffer"><code>Buffer</code></a>}</li>
+<li>@ret {<a href="buffer.html#class-buffer"><code>Buffer</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
@@ -552,7 +543,7 @@ console.log(buf.map(function (c) {
 <ul>
 <li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
 <li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);
@@ -579,7 +570,7 @@ console.log(buf.some(function (c) {
 <ul>
 <li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>} 回调函数</li>
 <li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 函数回调的this对像</li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var buf = new Buffer([0x41, 0x42, 0x43, 0x44, 0x00, 0x00]);

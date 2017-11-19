@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Avocado API Documentation</title>
+  <title>NGUI API Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
   <script>
-    var src = 'util/file_stat.html';
-    var relative = '../';
+    var src = 'file_stat.html';
+    var relative = '';
     document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
     document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
   </script>
@@ -34,50 +34,41 @@
 
       <!--div id="intro" class="interior">
         <a href="/" id="home2" title="Go back to the home page">
-          AvocadoJS
+          NGUI
         </a>
       </div-->
 
-      <h1 id="-avocadojs-">
-			<a href="http://avocadojs.org/"><code>AvocadoJS</code></a>
-			<span><a class="mark" href="#-avocadojs-" id="-avocadojs-">#</a></span>
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>NGUI</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui-dev"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui-demo"><code>Examples</code></a></li>
 </ul>
-<h1 id="util">
-			Util
-			<span><a class="mark" href="#util" id="util">#</a></span>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="util/util.html"><code>lib://util</code></a></li>
-<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
-<li><a href="util/event.html"><code>lib://util/event</code></a></li>
-<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
-<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
-<li><a href="util/http.html"><code>lib://util/http</code></a></li>
-<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
-<li><a href="util/path.html"><code>lib://util/path</code></a></li>
-<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
-<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
-<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
-<li><a href="util/global.html"><code>Global</code></a></li>
-<li><a href="util/native_types.html"><code>Native Types</code></a></li>
-</ul>
-<h1 id="gui">
-			GUI
-			<span><a class="mark" href="#gui" id="gui">#</a></span>
-		</h1><ul>
-<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
-<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
-<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
-<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
-<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
-<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
-<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
-<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
-<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
-<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+<li><a href="gui.html"><code>ngui</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
 
@@ -85,7 +76,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <h1>NGUI v0.2.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -99,7 +90,7 @@
         <h2>Table of Contents</h2>
         <ul>
 <li>
-<span><a href="#lib-util-fs-and-stat">lib://util/fs and Stat</a></span>
+<span><a href="#ngui-fs-and-stat">ngui/fs and Stat</a></span>
 <ul>
 <li>
 <span><a href="#enum-filetype">Enum: FileType</a></span>
@@ -222,9 +213,9 @@
       </div>
 
       <div id="apicontent">
-        <h1 id="lib-util-fs-and-stat">
-			<code>lib://util/fs</code> and Stat
-			<span><a class="mark" href="#lib-util-fs-and-stat" id="lib-util-fs-and-stat">#</a></span>
+        <h1 id="ngui-fs-and-stat">
+			<code>ngui/fs</code> and Stat
+			<span><a class="mark" href="#ngui-fs-and-stat" id="ngui-fs-and-stat">#</a></span>
 		</h1><h2 id="enum-filetype">
 			<code>Enum: FileType</code>
 			<span><a class="mark" href="#enum-filetype" id="enum-filetype">#</a></span>
@@ -273,7 +264,7 @@
 			Dirent.type
 			<span><a class="mark" href="#dirent-type" id="dirent-type">#</a></span>
 		</h3><ul>
-<li>{<a href="../util/file_stat.html#enum-filetype"><code>FileType</code></a>} 文件类型枚举值 <code>FileType</code></li>
+<li>{<a href="file_stat.html#enum-filetype"><code>FileType</code></a>} 文件类型枚举值 <code>FileType</code></li>
 </ul>
 <h2 id="class-filestat">
 			<code>Class: FileStat</code>
@@ -343,133 +334,133 @@ console.log({
 			<span><a class="mark" href="#filestat-is_valid-" id="filestat-is_valid-">#</a></span>
 		</h3><p>这个状态信息是否有效</p>
 <ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="filestat-is_file-">
 			FileStat.is_file()
 			<span><a class="mark" href="#filestat-is_file-" id="filestat-is_file-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="filestat-is_dir-">
 			FileStat.is_dir()
 			<span><a class="mark" href="#filestat-is_dir-" id="filestat-is_dir-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="filestat-is_link-">
 			FileStat.is_link()
 			<span><a class="mark" href="#filestat-is_link-" id="filestat-is_link-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="filestat-is_sock-">
 			FileStat.is_sock()
 			<span><a class="mark" href="#filestat-is_sock-" id="filestat-is_sock-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="filestat-mode-">
 			FileStat.mode()
 			<span><a class="mark" href="#filestat-mode-" id="filestat-mode-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-type-">
 			FileStat.type()
 			<span><a class="mark" href="#filestat-type-" id="filestat-type-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/file_stat.html#enum-filetype"><code>FileType</code></a>}</li>
+<li>@ret {<a href="file_stat.html#enum-filetype"><code>FileType</code></a>}</li>
 </ul>
 <h3 id="filestat-group-">
 			FileStat.group()
 			<span><a class="mark" href="#filestat-group-" id="filestat-group-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-owner-">
 			FileStat.owner()
 			<span><a class="mark" href="#filestat-owner-" id="filestat-owner-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-size-">
 			FileStat.size()
 			<span><a class="mark" href="#filestat-size-" id="filestat-size-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-nlink-">
 			FileStat.nlink()
 			<span><a class="mark" href="#filestat-nlink-" id="filestat-nlink-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-ino-">
 			FileStat.ino()
 			<span><a class="mark" href="#filestat-ino-" id="filestat-ino-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-blksize-">
 			FileStat.blksize()
 			<span><a class="mark" href="#filestat-blksize-" id="filestat-blksize-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-blocks-">
 			FileStat.blocks()
 			<span><a class="mark" href="#filestat-blocks-" id="filestat-blocks-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-flags-">
 			FileStat.flags()
 			<span><a class="mark" href="#filestat-flags-" id="filestat-flags-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-gen-">
 			FileStat.gen()
 			<span><a class="mark" href="#filestat-gen-" id="filestat-gen-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-dev-">
 			FileStat.dev()
 			<span><a class="mark" href="#filestat-dev-" id="filestat-dev-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-rdev-">
 			FileStat.rdev()
 			<span><a class="mark" href="#filestat-rdev-" id="filestat-rdev-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-atime-">
 			FileStat.atime()
 			<span><a class="mark" href="#filestat-atime-" id="filestat-atime-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-mtime-">
 			FileStat.mtime()
 			<span><a class="mark" href="#filestat-mtime-" id="filestat-mtime-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-ctime-">
 			FileStat.ctime()
 			<span><a class="mark" href="#filestat-ctime-" id="filestat-ctime-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="filestat-birthtime-">
 			FileStat.birthtime()
 			<span><a class="mark" href="#filestat-birthtime-" id="filestat-birthtime-">#</a></span>
 		</h3><ul>
-<li>@ret {<a href="../util/native_types.html#uint64"><code>uint64</code></a>}</li>
+<li>@ret {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 
       </div>

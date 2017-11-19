@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Avocado API Documentation</title>
+  <title>NGUI API Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
   <script>
-    var src = 'gui/gui.html';
-    var relative = '../';
+    var src = 'gui.html';
+    var relative = '';
     document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
     document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
   </script>
@@ -34,50 +34,41 @@
 
       <!--div id="intro" class="interior">
         <a href="/" id="home2" title="Go back to the home page">
-          AvocadoJS
+          NGUI
         </a>
       </div-->
 
-      <h1 id="-avocadojs-">
-			<a href="http://avocadojs.org/"><code>AvocadoJS</code></a>
-			<span><a class="mark" href="#-avocadojs-" id="-avocadojs-">#</a></span>
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>NGUI</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-tools"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/avocado-demo"><code>Examples</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui-demo"><code>Examples</code></a></li>
 </ul>
-<h1 id="util">
-			Util
-			<span><a class="mark" href="#util" id="util">#</a></span>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="util/util.html"><code>lib://util</code></a></li>
-<li><a href="util/buffer.html"><code>lib://util/buffer</code></a></li>
-<li><a href="util/event.html"><code>lib://util/event</code></a></li>
-<li><a href="util/fs.html"><code>lib://util/fs</code></a></li>
-<li><a href="util/file_stat.html"><code>lib://util/fs and Stat</code></a></li>
-<li><a href="util/http.html"><code>lib://util/http</code></a></li>
-<li><a href="util/keys.html"><code>lib://util/keys</code></a></li>
-<li><a href="util/path.html"><code>lib://util/path</code></a></li>
-<li><a href="util/reader.html"><code>lib://util/reader</code></a></li>
-<li><a href="util/storage.html"><code>lib://util/storage</code></a></li>
-<li><a href="util/sys.html"><code>lib://util/sys</code></a></li>
-<li><a href="util/global.html"><code>Global</code></a></li>
-<li><a href="util/native_types.html"><code>Native Types</code></a></li>
-</ul>
-<h1 id="gui">
-			GUI
-			<span><a class="mark" href="#gui" id="gui">#</a></span>
-		</h1><ul>
-<li><a href="gui/gui.html"><code>lib://gui</code></a></li>
-<li><a href="gui/action.html"><code>lib://gui/action</code></a></li>
-<li><a href="gui/app.html"><code>lib://gui/app</code></a></li>
-<li><a href="gui/css.html"><code>lib://gui/css</code></a></li>
-<li><a href="gui/ctr.html"><code>lib://gui/ctr</code></a></li>
-<li><a href="gui/display_port.html"><code>lib://gui/display_port</code></a></li>
-<li><a href="gui/event.html"><code>lib://gui/event</code></a></li>
-<li><a href="gui/font.html"><code>lib://gui/font</code></a></li>
-<li><a href="gui/media.html"><code>lib://gui/media</code></a></li>
-<li><a href="gui/value.html"><code>lib://gui/value</code></a></li>
+<li><a href="gui.html"><code>ngui</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
 
@@ -85,7 +76,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>AvocadoJS v0.1.0 Documentation</h1>
+        <h1>NGUI v0.2.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -99,7 +90,7 @@
         <h2>Table of Contents</h2>
         <ul>
 <li>
-<span><a href="#lib-gui">lib://gui</a></span>
+<span><a href="#ngui">ngui</a></span>
 <ul>
 <li>
 <span><a href="#class-guiapplication">Class: GUIApplication</a></span>
@@ -892,7 +883,7 @@
 </li>
 </ul>
 <li>
-<span><a href="#class-textlayout-">Class: TextLayout </a></span>
+<span><a href="#class-textlayout">Class: TextLayout</a></span>
 <ul>
 <li>
 <span><a href="#view-text_overflow">View.text_overflow</a></span>
@@ -908,32 +899,32 @@
       </div>
 
       <div id="apicontent">
-        <h1 id="lib-gui">
-			<code>lib://gui</code>
-			<span><a class="mark" href="#lib-gui" id="lib-gui">#</a></span>
+        <h1 id="ngui">
+			<code>ngui</code>
+			<span><a class="mark" href="#ngui" id="ngui">#</a></span>
 		</h1><h2 id="class-guiapplication">
 			<code>Class: GUIApplication</code>
 			<span><a class="mark" href="#class-guiapplication" id="class-guiapplication">#</a></span>
-		</h2><p>快捷方式 --&gt; <a href="../gui/app.html#class-guiapplication"><code>GUIApplication</code></a></p>
+		</h2><p>快捷方式 --&gt; <a href="app.html#class-guiapplication"><code>GUIApplication</code></a></p>
 <h2 id="class-viewcontroller">
 			<code>Class: ViewController</code>
 			<span><a class="mark" href="#class-viewcontroller" id="class-viewcontroller">#</a></span>
-		</h2><p>快捷方式 --&gt; <a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a></p>
+		</h2><p>快捷方式 --&gt; <a href="ctr.html#class-viewcontroller"><code>ViewController</code></a></p>
 <h2 id="next_frame-cb-">
 			next_frame(cb)
 			<span><a class="mark" href="#next_frame-cb-" id="next_frame-cb-">#</a></span>
-		</h2><p>渲染下一帧画面后执行，快捷方式 --&gt; <a href="../gui/display_port.html#next_frame-cb-"><code>next_frame(cb)</code></a></p>
+		</h2><p>渲染下一帧画面后执行，快捷方式 --&gt; <a href="display_port.html#next_frame-cb-"><code>next_frame(cb)</code></a></p>
 <h2 id="new-vx-parent-args-">
 			New(vx[,parent[,...args]])
 			<span><a class="mark" href="#new-vx-parent-args-" id="new-vx-parent-args-">#</a></span>
 		</h2><h2 id="new-vx-args-">
 			New(vx[,...args])
 			<span><a class="mark" href="#new-vx-args-" id="new-vx-args-">#</a></span>
-		</h2><p>通过<code>vx</code>描述数据创建视图或视图控制器，快捷方式 --&gt; <a href="../gui/ctr.html#new-vx-parent-args-"><code>New()</code></a></p>
+		</h2><p>通过<code>vx</code>描述数据创建视图或视图控制器，快捷方式 --&gt; <a href="ctr.html#new-vx-parent-args-"><code>New()</code></a></p>
 <h2 id="css-sheets-">
 			CSS(sheets)
 			<span><a class="mark" href="#css-sheets-" id="css-sheets-">#</a></span>
-		</h2><p>定义样式表，快捷方式 --&gt; <a href="../gui/css.html#css-sheets-"><code>CSS()</code></a></p>
+		</h2><p>定义样式表，快捷方式 --&gt; <a href="css.html#css-sheets-"><code>CSS()</code></a></p>
 <h2 id="is_view_xml-vx-type-">
 			is_view_xml(vx[,type])
 			<span><a class="mark" href="#is_view_xml-vx-type-" id="is_view_xml-vx-type-">#</a></span>
@@ -942,48 +933,48 @@
 <ul>
 <li>@arg <code>vx</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 <li>@arg <code>[type]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"><code>Class</code></a>}</li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="get-app">
 			Get: app
 			<span><a class="mark" href="#get-app" id="get-app">#</a></span>
 		</h2><p>获取当前<code>GUIApplication</code>实例</p>
 <ul>
-<li>{<a href="../gui/app.html#class-guiapplication"><code>GUIApplication</code></a>}</li>
+<li>{<a href="app.html#class-guiapplication"><code>GUIApplication</code></a>}</li>
 </ul>
 <h2 id="get-root">
 			Get: root
 			<span><a class="mark" href="#get-root" id="get-root">#</a></span>
 		</h2><p>获取当前<code>Root</code>实例</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-root"><code>Root</code></a>} </li>
+<li>{<a href="gui.html#class-root"><code>Root</code></a>} </li>
 </ul>
 <h2 id="get-root_ctr">
 			Get: root_ctr
 			<span><a class="mark" href="#get-root_ctr" id="get-root_ctr">#</a></span>
 		</h2><p>获取当前根<code>ViewController</code>实例</p>
 <ul>
-<li>{<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>} </li>
+<li>{<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>} </li>
 </ul>
 <h2 id="get-display_port">
 			Get: display_port
 			<span><a class="mark" href="#get-display_port" id="get-display_port">#</a></span>
 		</h2><p>获取当前<code>DisplayPort</code>实例</p>
 <ul>
-<li>{<a href="../gui/display_port.html#class-displayport"><code>DisplayPort</code></a>} </li>
+<li>{<a href="display_port.html#class-displayport"><code>DisplayPort</code></a>} </li>
 </ul>
 <h2 id="get-atom_px">
 			Get: atom_px
 			<span><a class="mark" href="#get-atom_px" id="get-atom_px">#</a></span>
-		</h2><p>屏幕原子像素尺寸，快捷方式 --&gt; <a href="../gui/display_port.html#get-atom_px"><code>atom_px</code></a></p>
+		</h2><p>屏幕原子像素尺寸，快捷方式 --&gt; <a href="display_port.html#get-atom_px"><code>atom_px</code></a></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-view">
 			<code>Class: View</code>
 			<span><a class="mark" href="#class-view" id="class-view">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../util/event.html#class-notification"><code>Notification</code></a></li>
+<li><code>extends</code> <a href="event.html#class-notification"><code>Notification</code></a></li>
 </ul>
 <p><code>gui</code>核心部件,用它来描述屏幕上所有可见的元素,它是所有视图的基础类型</p>
 <p>它也是事件的响应者，这些事件由硬件以及操作系统触发</p>
@@ -1039,7 +1030,7 @@
 		</h3><h3 id="view-constructor-">
 			View.constructor()
 			<span><a class="mark" href="#view-constructor-" id="view-constructor-">#</a></span>
-		</h3><p>构造函数调用前必需先创建<a href="../gui/app.html#class-guiapplication"><code>GUIApplication</code></a>否则抛出异常</p>
+		</h3><p>构造函数调用前必需先创建<a href="app.html#class-guiapplication"><code>GUIApplication</code></a>否则抛出异常</p>
 <p>Example:</p>
 <pre><code class="undefinedjs">import { View, Div } from &#39;:gui&#39;
 import &#39;:gui&#39;
@@ -1058,62 +1049,62 @@ v2.onclick.on(function(ev) {
 <h3 id="view-first_button-">
 			View.first_button()
 			<span><a class="mark" href="#view-first_button-" id="view-first_button-">#</a></span>
-		</h3><p>查询内部的第一个<a href="../gui/gui.html#class-button"><code>Button</code></a></p>
+		</h3><p>查询内部的第一个<a href="gui.html#class-button"><code>Button</code></a></p>
 <ul>
-<li>@ret {<a href="../gui/gui.html#class-button"><code>Button</code></a>}</li>
+<li>@ret {<a href="gui.html#class-button"><code>Button</code></a>}</li>
 </ul>
 <h3 id="has_child-view-">
 			has_child(view)
 			<span><a class="mark" href="#has_child-view-" id="has_child-view-">#</a></span>
 		</h3><p>测试<code>view</code>视图是否为当前视图的后代视图</p>
 <ul>
-<li>@arg <code>view</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>view</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-prepend-child-">
 			View.prepend(child)
 			<span><a class="mark" href="#view-prepend-child-" id="view-prepend-child-">#</a></span>
 		</h3><p>前置子视图</p>
 <ul>
-<li>@arg <code>child</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>child</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-append-child-">
 			View.append(child)
 			<span><a class="mark" href="#view-append-child-" id="view-append-child-">#</a></span>
 		</h3><p>追加子视图</p>
 <ul>
-<li>@arg <code>child</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>child</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-append_text-text-">
 			View.append_text(text)
 			<span><a class="mark" href="#view-append_text-text-" id="view-append_text-text-">#</a></span>
 		</h3><p>追击文本字符串到结尾,不同的视图追加到结尾的最终结果不同</p>
-<p>如: <a href="../gui/gui.html#class-view"><code>View</code></a>会追加成<a href="../gui/gui.html#class-label"><code>Label</code></a>, <a href="../gui/gui.html#class-div"><code>Div</code></a>会追加成<a href="../gui/gui.html#class-text"><code>Text</code></a>, 而<a href="../gui/gui.html#class-hybrid"><code>Hybrid</code></a>则会追加成<a href="../gui/gui.html#class-textnode"><code>TextNode</code></a></p>
+<p>如: <a href="gui.html#class-view"><code>View</code></a>会追加成<a href="gui.html#class-label"><code>Label</code></a>, <a href="gui.html#class-div"><code>Div</code></a>会追加成<a href="gui.html#class-text"><code>Text</code></a>, 而<a href="gui.html#class-hybrid"><code>Hybrid</code></a>则会追加成<a href="gui.html#class-textnode"><code>TextNode</code></a></p>
 <p>但追加到结尾的都为叶子视图</p>
 <ul>
 <li>@arg <code>text</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@ret {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-append_to-parent-">
 			View.append_to(parent)
 			<span><a class="mark" href="#view-append_to-parent-" id="view-append_to-parent-">#</a></span>
 		</h3><p>追加到父视图结尾</p>
 <ul>
-<li>@arg <code>parent</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>parent</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-before-prev-">
 			View.before(prev)
 			<span><a class="mark" href="#view-before-prev-" id="view-before-prev-">#</a></span>
 		</h3><p>插入到前面</p>
 <ul>
-<li>@arg <code>prev</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>prev</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-after-next-">
 			View.after(next)
 			<span><a class="mark" href="#view-after-next-" id="view-after-next-">#</a></span>
 		</h3><p>插入到后面</p>
 <ul>
-<li>@arg <code>next</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>next</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-move_to_before-">
 			View.move_to_before();
@@ -1144,22 +1135,22 @@ v2.onclick.on(function(ev) {
 			<span><a class="mark" href="#view-focus-" id="view-focus-">#</a></span>
 		</h3><p>获取焦点成功返回<code>true</code></p>
 <ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-blur-">
 			View.blur()
 			<span><a class="mark" href="#view-blur-" id="view-blur-">#</a></span>
 		</h3><p>辞去焦点成功返回<code>true</code></p>
 <ul>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-layout_offset-">
 			View.layout_offset()
 			<span><a class="mark" href="#view-layout_offset-" id="view-layout_offset-">#</a></span>
 		</h3><p>获取当前视图与父视图之间的偏移量,不包括<code>x</code>与<code>y</code>值</p>
-<p>只有<a href="../gui/gui.html#class-layout"><code>Layout</code></a>才有此值其它非布局视图都为<code>vec2(0,0)</code></p>
+<p>只有<a href="gui.html#class-layout"><code>Layout</code></a>才有此值其它非布局视图都为<code>vec2(0,0)</code></p>
 <ul>
-<li>@ret {<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>@ret {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="view-layout_offset_from-upper-">
 			View.layout_offset_from([upper])
@@ -1167,45 +1158,45 @@ v2.onclick.on(function(ev) {
 		</h3><p>获取当前视图与<code>upper</code>视图之间的布局偏移量,不包括<code>x</code>与<code>y</code>值,<code>upper</code>必需为父级视图</p>
 <p>如果不传入<code>upper</code>默认为<code>parent</code></p>
 <ul>
-<li>@arg <code>[upper=parent]</code> {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
-<li>@ret {<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>@arg <code>[upper=parent]</code> {<a href="gui.html#class-view"><code>View</code></a>}</li>
+<li>@ret {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="view-children-index-">
 			View.children(index)
 			<span><a class="mark" href="#view-children-index-" id="view-children-index-">#</a></span>
 		</h3><p>通过索引获取子视图</p>
 <ul>
-<li>@arg <code>index</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
-<li>@ret {<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
+<li>@ret {<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-get_action-">
 			View.get_action()
 			<span><a class="mark" href="#view-get_action-" id="view-get_action-">#</a></span>
 		</h3><p>获取当前视图动作</p>
 <ul>
-<li>@ret {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+<li>@ret {<a href="action.html#class-action"><code>Action</code></a>}</li>
 </ul>
 <h3 id="view-set_action-action-">
 			View.set_action(action)
 			<span><a class="mark" href="#view-set_action-action-" id="view-set_action-action-">#</a></span>
 		</h3><p>设置动作</p>
 <ul>
-<li>@arg <code>action</code> {<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+<li>@arg <code>action</code> {<a href="action.html#class-action"><code>Action</code></a>}</li>
 </ul>
 <h3 id="get-view-action">
 			Get: View.action
 			<span><a class="mark" href="#get-view-action" id="get-view-action">#</a></span>
 		</h3><p>获取动作,与<code>get_action()</code>功能相同</p>
 <ul>
-<li>{<a href="../gui/action.html#class-action"><code>Action</code></a>}</li>
+<li>{<a href="action.html#class-action"><code>Action</code></a>}</li>
 </ul>
 <h3 id="set-view-action">
 			Set: View.action
 			<span><a class="mark" href="#set-view-action" id="set-view-action">#</a></span>
 		</h3><p>设置动作,可选的值为<code>Action</code>或可用于创建<code>Action</code>的<code>json</code>描述<code>Object</code></p>
-<p>原型为: view.set_action(<a href="../gui/action.html#create-json-parent-"><code>action.create(json)</code></a>)</p>
+<p>原型为: view.set_action(<a href="action.html#create-json-parent-"><code>action.create(json)</code></a>)</p>
 <ul>
-<li>{<a href="../gui/action.html#class-action"><code>Action</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>{<a href="action.html#class-action"><code>Action</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 </ul>
 <h3 id="view-transition-style-delay-cb-">
 			View.transition(style[,delay[,cb]])
@@ -1213,15 +1204,15 @@ v2.onclick.on(function(ev) {
 		</h3><h3 id="view-transition-style-cb-">
 			View.transition(style[,cb])
 			<span><a class="mark" href="#view-transition-style-cb-" id="view-transition-style-cb-">#</a></span>
-		</h3><p>创建过度动画动作并立即开始播放并返回<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a></p>
-<p>原型为: <a href="../gui/action.html#transition-view-style-delay-cb-"><code>action.transition(view,style,delay,cb)</code></a></p>
+		</h3><p>创建过度动画动作并立即开始播放并返回<a href="action.html#class-keyframeaction"><code>KeyframeAction</code></a></p>
+<p>原型为: <a href="action.html#transition-view-style-delay-cb-"><code>action.transition(view,style,delay,cb)</code></a></p>
 <p>播放结束回调</p>
 <p>Callback: cb()</p>
 <ul>
 <li>@arg <code>style</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
-<li>@arg <code>[delay]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
+<li>@arg <code>[delay]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="../gui/action.html#class-keyframeaction"><code>KeyframeAction</code></a>}</li>
+<li>@ret {<a href="action.html#class-keyframeaction"><code>KeyframeAction</code></a>}</li>
 </ul>
 <h3 id="view-show-">
 			View.show()
@@ -1234,40 +1225,40 @@ v2.onclick.on(function(ev) {
 <h3 id="view-screen_rect-">
 			View.screen_rect()
 			<span><a class="mark" href="#view-screen_rect-" id="view-screen_rect-">#</a></span>
-		</h3><p>获取视图实际在屏幕中最小左上角与最大右下角所形成的矩形，注意<a href="../gui/gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
+		</h3><p>获取视图实际在屏幕中最小左上角与最大右下角所形成的矩形，注意<a href="gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
 <ul>
-<li>@ret {<a href="../gui/value.html#class-rect"><code>Rect</code></a>}</li>
+<li>@ret {<a href="value.html#class-rect"><code>Rect</code></a>}</li>
 </ul>
 <h3 id="view-final_matrix-">
 			View.final_matrix()
 			<span><a class="mark" href="#view-final_matrix-" id="view-final_matrix-">#</a></span>
-		</h3><p>基础矩阵与父视图最终矩阵的乘积，注意<a href="../gui/gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
+		</h3><p>基础矩阵与父视图最终矩阵的乘积，注意<a href="gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
 <ul>
-<li>@ret {<a href="../gui/value.html#class-mat"><code>Mat</code></a>}</li>
+<li>@ret {<a href="value.html#class-mat"><code>Mat</code></a>}</li>
 </ul>
 <h3 id="view-final_opacity-">
 			View.final_opacity()
 			<span><a class="mark" href="#view-final_opacity-" id="view-final_opacity-">#</a></span>
 		</h3><p>当前视图的不透明度与父视图的最终不透明度的乘积</p>
 <ul>
-<li>@ret {<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>@ret {<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-position-">
 			View.position()
 			<span><a class="mark" href="#view-position-" id="view-position-">#</a></span>
-		</h3><p>获取视图最终在屏幕上的位置，注意<a href="../gui/gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
+		</h3><p>获取视图最终在屏幕上的位置，注意<a href="gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
 <p>实际上这个方法返回的是<code>view.final_matrix()</code>最终矩阵中的<code>translate</code>位移分量</p>
 <ul>
-<li>@ret {<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>@ret {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="trap-in-layout">
 			Trap in Layout
 			<span><a class="mark" href="#trap-in-layout" id="trap-in-layout">#</a></span>
 		</h3><ul>
-<li><p>对于<a href="../gui/gui.html#class-layout"><code>Layout</code></a>视图而言,如果当前视图或相关视图有更改过与布局相关的属性，</p>
+<li><p>对于<a href="gui.html#class-layout"><code>Layout</code></a>视图而言,如果当前视图或相关视图有更改过与布局相关的属性，</p>
 <p>  这时如果立即获取与屏幕位置相关的属性值或方法调用结果可能会不准确,</p>
-<p>  因为布局视图始终都在渲染前才进行更新，这时应该使用到<a href="../gui/display_port.html#next_frame-cb-"><code>next_frame(cb)</code></a>这个函数, </p>
-<p>  <a href="../gui/display_port.html#next_frame-cb-"><code>next_frame(cb)</code></a>总是在渲染完帧后执行</p>
+<p>  因为布局视图始终都在渲染前才进行更新，这时应该使用到<a href="display_port.html#next_frame-cb-"><code>next_frame(cb)</code></a>这个函数, </p>
+<p>  <a href="display_port.html#next_frame-cb-"><code>next_frame(cb)</code></a>总是在渲染完帧后执行</p>
 </li>
 </ul>
 <h3 id="view-overlap_test-point-">
@@ -1275,8 +1266,8 @@ v2.onclick.on(function(ev) {
 			<span><a class="mark" href="#view-overlap_test-point-" id="view-overlap_test-point-">#</a></span>
 		</h3><p>给定一个屏幕中上的座标点测试是否被视图包围</p>
 <ul>
-<li>@arg <code>point</code> {<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
-<li>@ret {<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>point</code> {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-add_class-name-">
 			View.add_class(name)
@@ -1304,7 +1295,7 @@ v2.onclick.on(function(ev) {
 			<span><a class="mark" href="#get-view-children_count" id="get-view-children_count">#</a></span>
 		</h3><p>返回子视图数量</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="view-inner_text">
 			View.inner_text
@@ -1328,188 +1319,188 @@ v2.onclick.on(function(ev) {
 		</h3><h3 id="get-view-ctr">
 			Get: View.ctr
 			<span><a class="mark" href="#get-view-ctr" id="get-view-ctr">#</a></span>
-		</h3><p>如果这个视图拥有<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>可通过<code>ctr</code>或<code>controller</code>获取它，</p>
-<p>这个视图称之为关键视图，<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>称之为成员视图控制器，</p>
+		</h3><p>如果这个视图拥有<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>可通过<code>ctr</code>或<code>controller</code>获取它，</p>
+<p>这个视图称之为关键视图，<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>称之为成员视图控制器，</p>
 <p>关键视图下面所有后代视图以及子视图控制器都属于这个作用域中的成员，</p>
 <p>成员视图的<code>top</code>属性都指向当前关键视图,成员视图的<code>top_ctr</code>以及子视图控制器的<code>parent</code>都指向成员视图控制器属性，</p>
 <p>如果这些成员有具名的<code>id</code>,可以通过成员视图控制器<code>ViewController.find(id)</code>找到这些成员</p>
 <ul>
-<li>{<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
+<li>{<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
 </ul>
 <h3 id="get-view-top">
 			Get: View.top
 			<span><a class="mark" href="#get-view-top" id="get-view-top">#</a></span>
 		</h3><p>指向关键视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-view-top_ctr">
 			Get: View.top_ctr
 			<span><a class="mark" href="#get-view-top_ctr" id="get-view-top_ctr">#</a></span>
 		</h3><p>指向成员视图控制器</p>
 <ul>
-<li>{<a href="../gui/ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
+<li>{<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
 </ul>
 <h3 id="get-view-parent">
 			Get: View.parent
 			<span><a class="mark" href="#get-view-parent" id="get-view-parent">#</a></span>
-		</h3><p>返回父视图,<a href="../gui/gui.html#class-root"><code>Root</code></a>没有父视图</p>
+		</h3><p>返回父视图,<a href="gui.html#class-root"><code>Root</code></a>没有父视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-view-prev">
 			Get: View.prev
 			<span><a class="mark" href="#get-view-prev" id="get-view-prev">#</a></span>
 		</h3><p>上一个兄弟视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-view-next">
 			Get: View.next
 			<span><a class="mark" href="#get-view-next" id="get-view-next">#</a></span>
 		</h3><p>下一个兄弟视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-view-first">
 			Get: View.first
 			<span><a class="mark" href="#get-view-first" id="get-view-first">#</a></span>
 		</h3><p>第一个子视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-view-last">
 			Get: View.last
 			<span><a class="mark" href="#get-view-last" id="get-view-last">#</a></span>
 		</h3><p>最后一个子视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="gui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-x">
 			View.x
 			<span><a class="mark" href="#view-x" id="view-x">#</a></span>
 		</h3><p>矩阵变换中的位移<code>translate.x</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-y">
 			View.y
 			<span><a class="mark" href="#view-y" id="view-y">#</a></span>
 		</h3><p>矩阵变换中的位移<code>translate.y</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-scale_x">
 			View.scale_x
 			<span><a class="mark" href="#view-scale_x" id="view-scale_x">#</a></span>
 		</h3><p>矩阵变换缩放<code>x</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-scale_y">
 			View.scale_y
 			<span><a class="mark" href="#view-scale_y" id="view-scale_y">#</a></span>
 		</h3><p>矩阵变换缩放<code>y</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-rotate_z">
 			View.rotate_z
 			<span><a class="mark" href="#view-rotate_z" id="view-rotate_z">#</a></span>
 		</h3><p>矩阵变换旋转<code>z</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-skew_x">
 			View.skew_x
 			<span><a class="mark" href="#view-skew_x" id="view-skew_x">#</a></span>
 		</h3><p>矩阵变换斜歪<code>x</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-skew_y">
 			View.skew_y
 			<span><a class="mark" href="#view-skew_y" id="view-skew_y">#</a></span>
 		</h3><p>矩阵变换斜歪<code>y</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-opacity">
 			View.opacity
 			<span><a class="mark" href="#view-opacity" id="view-opacity">#</a></span>
 		</h3><p>不透明度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-visible">
 			View.visible
 			<span><a class="mark" href="#view-visible" id="view-visible">#</a></span>
-		</h3><p>显示与隐藏<code>true</code>为显示<code>false</code>隐藏,<a href="../gui/gui.html#class-layout"><code>Layout</code></a>不占用位置</p>
+		</h3><p>显示与隐藏<code>true</code>为显示<code>false</code>隐藏,<a href="gui.html#class-layout"><code>Layout</code></a>不占用位置</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-view-final_visible">
 			Get: View.final_visible
 			<span><a class="mark" href="#get-view-final_visible" id="get-view-final_visible">#</a></span>
 		</h3><p>最终是否显示或隐藏，受父视图影响</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-translate">
 			View.translate
 			<span><a class="mark" href="#view-translate" id="view-translate">#</a></span>
 		</h3><p>矩阵变换位移</p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="view-scale">
 			View.scale
 			<span><a class="mark" href="#view-scale" id="view-scale">#</a></span>
 		</h3><p>矩阵变换缩放</p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="view-skew">
 			View.skew
 			<span><a class="mark" href="#view-skew" id="view-skew">#</a></span>
 		</h3><p>矩阵变换斜歪</p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="view-origin_x">
 			View.origin_x
 			<span><a class="mark" href="#view-origin_x" id="view-origin_x">#</a></span>
 		</h3><p>矩阵变换的原点<code>x</code>,默认为<code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-origin_y">
 			View.origin_y
 			<span><a class="mark" href="#view-origin_y" id="view-origin_y">#</a></span>
 		</h3><p>矩阵变换的原点<code>x</code>,默认为<code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-origin">
 			View.origin
 			<span><a class="mark" href="#view-origin" id="view-origin">#</a></span>
 		</h3><p>矩阵变换的原点,默认为<code>vec2(0,0)</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="get-view-matrix">
 			Get: View.matrix
 			<span><a class="mark" href="#get-view-matrix" id="get-view-matrix">#</a></span>
-		</h3><p>基础矩阵,通过计算从父视图矩阵开始的位移,缩放,旋转,歪斜得到的矩阵。注意<a href="../gui/gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
+		</h3><p>基础矩阵,通过计算从父视图矩阵开始的位移,缩放,旋转,歪斜得到的矩阵。注意<a href="gui.html#trap-in-layout"><code>Trap in Layout</code></a></p>
 <ul>
-<li>{<a href="../gui/value.html#class-mat"><code>Mat</code></a>}</li>
+<li>{<a href="value.html#class-mat"><code>Mat</code></a>}</li>
 </ul>
 <h3 id="get-view-level">
 			Get: View.level
 			<span><a class="mark" href="#get-view-level" id="get-view-level">#</a></span>
-		</h3><p>在<code>gui</code>视图树中的等级<code>level</code>, <a href="../gui/gui.html#class-root"><code>Root</code></a>视图为<code>1</code>, 如果为<code>0</code>表示这个视图还没有父视图</p>
+		</h3><p>在<code>gui</code>视图树中的等级<code>level</code>, <a href="gui.html#class-root"><code>Root</code></a>视图为<code>1</code>, 如果为<code>0</code>表示这个视图还没有父视图</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="view-need_draw">
 			View.need_draw
@@ -1519,9 +1510,9 @@ v2.onclick.on(function(ev) {
 <p>如果这个值为<code>false</code>在渲染优化中会忽略没有在屏幕范围内的视图元素,</p>
 <p>以及这个视图下的所有后代视图不管这些后代视图是否在屏幕范围内部,</p>
 <p>当这个值为<code>true</code>时会强制绘制这个视图不管是否在屏幕范围内外。</p>
-<p><a href="../gui/gui.html#class-view"><code>View</code></a>默认为<code>true</code>,那些可见的视图默认都为<code>false</code>如:<a href="../gui/gui.html#class-div"><code>Div</code></a>/<a href="../gui/gui.html#class-sprite"><code>Sprite</code></a>/<a href="../gui/gui.html#class-hybrid"><code>Hybrid</code></a></p>
+<p><a href="gui.html#class-view"><code>View</code></a>默认为<code>true</code>,那些可见的视图默认都为<code>false</code>如:<a href="gui.html#class-div"><code>Div</code></a>/<a href="gui.html#class-sprite"><code>Sprite</code></a>/<a href="gui.html#class-hybrid"><code>Hybrid</code></a></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-receive">
 			View.receive
@@ -1529,21 +1520,21 @@ v2.onclick.on(function(ev) {
 		</h3><p>是否响应接收事件,默认为<code>false</code>不接收,事件会穿透到最底层直到有视图接收并处理该事件，</p>
 <p>但当有事件监听时会自动设置为<code>true</code>，当然你可以手动关闭它。</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-is_focus">
 			View.is_focus
 			<span><a class="mark" href="#view-is_focus" id="view-is_focus">#</a></span>
 		</h3><p>是否为焦点状态,焦点状态可以响应键盘事件,以及非触屏与非鼠标事件,当然你要确保<code>receive</code>为打开状态</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-view-view_type">
 			Get: View.view_type
 			<span><a class="mark" href="#get-view-view_type" id="get-view-view_type">#</a></span>
 		</h3><p>返回视图类型的<code>id</code>不同的视图都有唯一的值</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="view-style">
 			View.style
@@ -1578,16 +1569,16 @@ console.log(view.class);
 			<code>Class: Sprite</code>
 			<span><a class="mark" href="#class-sprite" id="class-sprite">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-view"><code>View</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-view"><code>View</code></a></li>
 </ul>
-<p>图像精灵类型,非<a href="../gui/gui.html#class-layout"><code>Layout</code></a>视图, 任何变化都不会激活局部布局或连锁布局反应，</p>
+<p>图像精灵类型,非<a href="gui.html#class-layout"><code>Layout</code></a>视图, 任何变化都不会激活局部布局或连锁布局反应，</p>
 <p>通过此它可以选取图像任意位置大小显示到屏幕，</p>
-<p>在需要更高性能的地方可考虑使用它代替<a href="../gui/gui.html#class-hybrid"><code>Image</code></a>视图</p>
+<p>在需要更高性能的地方可考虑使用它代替<a href="gui.html#class-image"><code>Image</code></a>视图</p>
 <h3 id="sprite-src">
 			Sprite.src
 			<span><a class="mark" href="#sprite-src" id="sprite-src">#</a></span>
-		</h3><p>图像路径，<a href="../util/reader.md"><code>reader</code></a>中支持的路径协议都可以</p>
-<p>或者使用<a href="../util/global.html#__path-path-"><code>$(path)</code></a>函数读取包内路径文件</p>
+		</h3><p>图像路径，<a href="reader.md"><code>reader</code></a>中支持的路径协议都可以</p>
+<p>或者使用<a href="global.html#__path-path-"><code>$(path)</code></a>函数读取包内路径文件</p>
 <ul>
 <li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
@@ -1596,11 +1587,11 @@ console.log(view.class);
 			<span><a class="mark" href="#sprite-width" id="sprite-width">#</a></span>
 		</h3><p><strong>Default</strong><code>0</code></p>
 <ul>
-<li><p>浮点类型的宽度,这里的单位并非为像素,这要参照<a href="../gui/display_port.html#class-displayport"><code>DisplayPort</code></a>设置的尺寸与屏幕的缩放</p>
+<li><p>浮点类型的宽度,这里的单位并非为像素,这要参照<a href="display_port.html#class-displayport"><code>DisplayPort</code></a>设置的尺寸与屏幕的缩放</p>
 </li>
 <li><p>这个值也表示选取图像的宽度，当然这个值会受<code>ratio</code>影响,<code>ratio</code>越小实际选取的图像范围越大</p>
 </li>
-<li><p>{<a href="../util/native_types.html#float"><code>float</code></a>}</p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>}</p>
 </li>
 </ul>
 <h3 id="sprite-height">
@@ -1608,7 +1599,7 @@ console.log(view.class);
 			<span><a class="mark" href="#sprite-height" id="sprite-height">#</a></span>
 		</h3><p>浮点类型的高度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-start">
 			Sprite.start
@@ -1623,21 +1614,21 @@ console.log(view.class);
 </ul>
 <p><strong>Default</strong><code>vec2(0,0)</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="sprite-start_x">
 			Sprite.start_x
 			<span><a class="mark" href="#sprite-start_x" id="sprite-start_x">#</a></span>
 		</h3><p>选取图像有开始位置<code>x</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-start_y">
 			Sprite.start_y
 			<span><a class="mark" href="#sprite-start_y" id="sprite-start_y">#</a></span>
 		</h3><p>选取图像有开始位置<code>y</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-ratio">
 			Sprite.ratio
@@ -1645,39 +1636,39 @@ console.log(view.class);
 		</h3><p>图像本身的缩放比例尺，这个值越小显示的图像范围越大，实际反应在屏幕上图像比例会变得更小</p>
 <p><strong>Default</strong><code>vec2(1,1)</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="sprite-ratio_x">
 			Sprite.ratio_x
 			<span><a class="mark" href="#sprite-ratio_x" id="sprite-ratio_x">#</a></span>
 		</h3><p>图像比例尺<code>x</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-ratio_y">
 			Sprite.ratio_y
 			<span><a class="mark" href="#sprite-ratio_y" id="sprite-ratio_y">#</a></span>
 		</h3><p>图像比例尺<code>y</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-repeat">
 			Sprite.repeat
 			<span><a class="mark" href="#sprite-repeat" id="sprite-repeat">#</a></span>
-		</h3><p>图像是否重复,默认为不重复<code>none</code>, 可选的值参见<a href="../gui/value.html#class-repeat"><code>Repeat</code></a></p>
+		</h3><p>图像是否重复,默认为不重复<code>none</code>, 可选的值参见<a href="value.html#class-repeat"><code>Repeat</code></a></p>
 <ul>
 <li><p>运行在<code>OpenGLES 2.0</code>模式时这里设置为重复时，可能会出现图像不显示的情况，</p>
 <p>  因为<code>gles2.0</code>建议使用非2^n尺寸图像，这有利于性能优化，现在还有很多低端<code>Android</code>设备运行<code>gles2.0</code>，</p>
 <p>  所以需要尽量注意在这些设备上使用非2^n尺寸图像</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-repeat"><code>Repeat</code></a>}</p>
+<li><p>{<a href="value.html#class-repeat"><code>Repeat</code></a>}</p>
 </li>
 </ul>
 <h2 id="class-label">
 			<code>Class: Label</code>
 			<span><a class="mark" href="#class-label" id="class-label">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-view"><code>View</code></a>,<a href="../gui/gui.html#class-textfont"><code>TextFont</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-view"><code>View</code></a>,<a href="gui.html#class-textfont"><code>TextFont</code></a></li>
 </ul>
 <p>标签文本视图对像,具备简单的文本布局，任何变化都不会激活联锁布局计算，在要尔更高性能的地方可考虑使用</p>
 <h3 id="get-label-length">
@@ -1685,7 +1676,7 @@ console.log(view.class);
 			<span><a class="mark" href="#get-label-length" id="get-label-length">#</a></span>
 		</h3><p>获取标签视图文本内容长度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="label-value">
 			Label.value
@@ -1706,7 +1697,7 @@ console.log(view.class);
 			<span><a class="mark" href="#get-label-text_height" id="get-label-text_height">#</a></span>
 		</h3><p>文本顶部与底部的距离</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="label-text_align">
 			Label.text_align
@@ -1726,7 +1717,7 @@ console.log(view.class);
 </li>
 <li><p><code>center_reverse</code> - 从<code>右到左</code>排列并且以<code>居中</code>对齐</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textalign"><code>TextAlign</code></a>}</p>
+<li><p>{<a href="value.html#class-textalign"><code>TextAlign</code></a>}</p>
 </li>
 </ul>
 <h2 id="class-layout">
@@ -1734,7 +1725,7 @@ console.log(view.class);
 			<span><a class="mark" href="#class-layout" id="class-layout">#</a></span>
 		</h2><ul>
 <li><code>abstract class</code></li>
-<li><p><code>extends</code> <a href="../gui/gui.html#class-view"><code>View</code></a></p>
+<li><p><code>extends</code> <a href="gui.html#class-view"><code>View</code></a></p>
 </li>
 <li><p>所有布局视图的基础类型,这是个抽象类型并没有构造函数，</p>
 </li>
@@ -1748,31 +1739,31 @@ console.log(view.class);
 <h3 id="get-layout-client_width">
 			Get: Layout.client_width
 			<span><a class="mark" href="#get-layout-client_width" id="get-layout-client_width">#</a></span>
-		</h3><p>布局的client_width宽度，在<a href="../gui/gui.html#class-box"><code>Box</code></a>中这个值包含<code>final_margin</code></p>
+		</h3><p>布局的client_width宽度，在<a href="gui.html#class-box"><code>Box</code></a>中这个值包含<code>final_margin</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-layout-client_height">
 			Get: Layout.client_height
 			<span><a class="mark" href="#get-layout-client_height" id="get-layout-client_height">#</a></span>
-		</h3><p>布局的client_height高度，在<a href="../gui/gui.html#class-box"><code>Box</code></a>中这个值包含<code>final_margin</code></p>
+		</h3><p>布局的client_height高度，在<a href="gui.html#class-box"><code>Box</code></a>中这个值包含<code>final_margin</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-span">
 			<code>Class: Span</code>
 			<span><a class="mark" href="#class-span" id="class-span">#</a></span>
 		</h2><ul>
-<li><p><code>extends</code> <a href="../gui/gui.html#class-layout"><code>Layout</code></a>,<a href="../gui/gui.html#class-textlayout"><code>TextLayout</code></a></p>
+<li><p><code>extends</code> <a href="gui.html#class-layout"><code>Layout</code></a>,<a href="gui.html#class-textlayout"><code>TextLayout</code></a></p>
 </li>
-<li><p>这个视图一般用来包裹<a href="../gui/gui.html#class-textnode"><code>TextNode</code></a>并设置其文本样式，因为<a href="../gui/gui.html#class-textlayout"><code>TextLayout</code></a>属性具有继承性质</p>
+<li><p>这个视图一般用来包裹<a href="gui.html#class-textnode"><code>TextNode</code></a>并设置其文本样式，因为<a href="gui.html#class-textlayout"><code>TextLayout</code></a>属性具有继承性质</p>
 </li>
 </ul>
 <h2 id="class-textnode">
 			<code>Class: TextNode</code>
 			<span><a class="mark" href="#class-textnode" id="class-textnode">#</a></span>
 		</h2><ul>
-<li><p><code>extends</code> <a href="../gui/gui.html#class-span"><code>Span</code></a></p>
+<li><p><code>extends</code> <a href="gui.html#class-span"><code>Span</code></a></p>
 </li>
 <li><p>文本布局的叶子视图，它不能再存在子视图</p>
 </li>
@@ -1782,7 +1773,7 @@ console.log(view.class);
 			<span><a class="mark" href="#get-textnode-length" id="get-textnode-length">#</a></span>
 		</h3><p>文本字符串的长度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="textnode-value">
 			TextNode.value
@@ -1796,21 +1787,21 @@ console.log(view.class);
 			<span><a class="mark" href="#get-textnode-text_hori_bearing" id="get-textnode-text_hori_bearing">#</a></span>
 		</h3><p>文本基线距离文本顶部的距离,不同字体与不同尺寸字号会不相同</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-textnode-text_height">
 			Get: TextNode.text_height
 			<span><a class="mark" href="#get-textnode-text_height" id="get-textnode-text_height">#</a></span>
 		</h3><p>文本顶部与底部的距离</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-box">
 			<code>Class: Box</code>
 			<span><a class="mark" href="#class-box" id="class-box">#</a></span>
 		</h2><ul>
 <li><code>abstract class</code></li>
-<li><code>extends</code> <a href="../gui/gui.html#class-layout"><code>Layout</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-layout"><code>Layout</code></a></li>
 </ul>
 <p>盒子模型,布局的核心部件,这是个抽象类型并没有构造函数</p>
 <h3 id="box-width">
@@ -1827,7 +1818,7 @@ console.log(view.class);
 <p>  使用这个类型的值时，如果父视图没有<code>明确</code>宽度值，会导致最长最复杂的迭代运算。</p>
 </li>
 <li><p><code>pixel</code> - <code>明确</code>的像素数值并非真正就义上的像素，使用浮点数表示但在这里不能为负，</p>
-<p>  <code>1</code>代表屏幕的多少像素需要参照<a href="../gui/display_port.html#class-displayport"><code>DisplayPort</code></a>中设置的尺寸与屏幕的缩放</p>
+<p>  <code>1</code>代表屏幕的多少像素需要参照<a href="display_port.html#class-displayport"><code>DisplayPort</code></a>中设置的尺寸与屏幕的缩放</p>
 </li>
 <li><p><code>percent</code> - 百分比值使用<code>10%</code>形式表示，取父视图<code>width</code>的百分比值，需要父视图有<code>明确</code>的<code>width</code>，</p>
 <p>  否则百分比值不会生效，为<code>模糊</code>值与<code>auto</code>无异</p>
@@ -1835,7 +1826,7 @@ console.log(view.class);
 <li><p><code>minus</code> - 减小值用<code>10!</code>形式表示，使用父视图的最终<code>width</code>减去这个值得到的值，</p>
 <p>  与百分比一样需要父视图有<code>明确</code>的<code>width</code>值，否则减小值不会生效，为<code>模糊</code>值与<code>auto</code>无异</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</p>
+<li><p>{<a href="value.html#class-value"><code>Value</code></a>}</p>
 </li>
 </ul>
 <h3 id="box-height">
@@ -1843,7 +1834,7 @@ console.log(view.class);
 			<span><a class="mark" href="#box-height" id="box-height">#</a></span>
 		</h3><p>盒子的高度，可选值参考<code>height</code> <strong>Default</strong><code>auto</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="box-margin_left">
 			Box.margin_left
@@ -1862,7 +1853,7 @@ console.log(view.class);
 </li>
 <li><p><code>minus</code> - 使用父视图的最终<code>width</code>减去这个值得到的值，父视图需要有明确宽度，否则无效</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</p>
+<li><p>{<a href="value.html#class-value"><code>Value</code></a>}</p>
 </li>
 </ul>
 <h3 id="box-margin_top">
@@ -1870,233 +1861,233 @@ console.log(view.class);
 			<span><a class="mark" href="#box-margin_top" id="box-margin_top">#</a></span>
 		</h3><p>顶部的外边距 可选值参考<code>margin_left</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="box-margin_right">
 			Box.margin_right
 			<span><a class="mark" href="#box-margin_right" id="box-margin_right">#</a></span>
 		</h3><p>右边的外边距 可选值参考<code>margin_left</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="box-margin_bottom">
 			Box.margin_bottom
 			<span><a class="mark" href="#box-margin_bottom" id="box-margin_bottom">#</a></span>
 		</h3><p>底部的外边距 可选值参考<code>margin_left</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="box-border_left">
 			Box.border_left
 			<span><a class="mark" href="#box-border_left" id="box-border_left">#</a></span>
 		</h3><p>左边框 <strong>Default</strong><code>0 #000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+<li>{<a href="value.html#class-border"><code>Border</code></a>}</li>
 </ul>
 <h3 id="box-border_top">
 			Box.border_top
 			<span><a class="mark" href="#box-border_top" id="box-border_top">#</a></span>
 		</h3><p>上边框 <strong>Default</strong><code>0 #000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+<li>{<a href="value.html#class-border"><code>Border</code></a>}</li>
 </ul>
 <h3 id="box-border_right">
 			Box.border_right
 			<span><a class="mark" href="#box-border_right" id="box-border_right">#</a></span>
 		</h3><p>右边框 <strong>Default</strong><code>0 #000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+<li>{<a href="value.html#class-border"><code>Border</code></a>}</li>
 </ul>
 <h3 id="box-border_bottom">
 			Box.border_bottom
 			<span><a class="mark" href="#box-border_bottom" id="box-border_bottom">#</a></span>
 		</h3><p>下边框 <strong>Default</strong><code>0 #000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+<li>{<a href="value.html#class-border"><code>Border</code></a>}</li>
 </ul>
 <h3 id="box-border_left_width">
 			Box.border_left_width
 			<span><a class="mark" href="#box-border_left_width" id="box-border_left_width">#</a></span>
 		</h3><p>左边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_top_width">
 			Box.border_top_width
 			<span><a class="mark" href="#box-border_top_width" id="box-border_top_width">#</a></span>
 		</h3><p>上边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_right_width">
 			Box.border_right_width
 			<span><a class="mark" href="#box-border_right_width" id="box-border_right_width">#</a></span>
 		</h3><p>右边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_bottom_width">
 			Box.border_bottom_width
 			<span><a class="mark" href="#box-border_bottom_width" id="box-border_bottom_width">#</a></span>
 		</h3><p>下边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_left_color">
 			Box.border_left_color
 			<span><a class="mark" href="#box-border_left_color" id="box-border_left_color">#</a></span>
 		</h3><p>左边框颜色 <strong>Default</strong><code>#000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="box-border_top_color">
 			Box.border_top_color
 			<span><a class="mark" href="#box-border_top_color" id="box-border_top_color">#</a></span>
 		</h3><p>上边框颜色 <strong>Default</strong><code>#000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="box-border_right_color">
 			Box.border_right_color
 			<span><a class="mark" href="#box-border_right_color" id="box-border_right_color">#</a></span>
 		</h3><p>右边框颜色  <strong>Default</strong><code>#000000ff</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="box-border_bottom_color">
 			Box.border_bottom_color
 			<span><a class="mark" href="#box-border_bottom_color" id="box-border_bottom_color">#</a></span>
 		</h3><p>下边框颜色 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="box-border_radius_left_top">
 			Box.border_radius_left_top
 			<span><a class="mark" href="#box-border_radius_left_top" id="box-border_radius_left_top">#</a></span>
 		</h3><p>左上圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_radius_right_top">
 			Box.border_radius_right_top
 			<span><a class="mark" href="#box-border_radius_right_top" id="box-border_radius_right_top">#</a></span>
 		</h3><p>右上圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_radius_right_bottom">
 			Box.border_radius_right_bottom
 			<span><a class="mark" href="#box-border_radius_right_bottom" id="box-border_radius_right_bottom">#</a></span>
 		</h3><p>右下圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-border_radius_left_bottom">
 			Box.border_radius_left_bottom
 			<span><a class="mark" href="#box-border_radius_left_bottom" id="box-border_radius_left_bottom">#</a></span>
 		</h3><p>左下圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-background_color">
 			Box.background_color
 			<span><a class="mark" href="#box-background_color" id="box-background_color">#</a></span>
 		</h3><p>背景颜色 <strong>Default</strong> <code>#0000</code> 不透明度为<code>0</code>的黑色</p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="box-newline">
 			Box.newline
 			<span><a class="mark" href="#box-newline" id="box-newline">#</a></span>
 		</h3><p>是否在新行开始布局 <strong>Default</strong> <code>false</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-box-final_width">
 			Get: Box.final_width
 			<span><a class="mark" href="#get-box-final_width" id="get-box-final_width">#</a></span>
 		</h3><p>获取最终宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-final_height">
 			Get: Box.final_height
 			<span><a class="mark" href="#get-box-final_height" id="get-box-final_height">#</a></span>
 		</h3><p>获取最高度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-final_margin_left">
 			Get: Box.final_margin_left
 			<span><a class="mark" href="#get-box-final_margin_left" id="get-box-final_margin_left">#</a></span>
 		</h3><p>获取最终布局后的左外边距宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-final_margin_top">
 			Get: Box.final_margin_top
 			<span><a class="mark" href="#get-box-final_margin_top" id="get-box-final_margin_top">#</a></span>
 		</h3><p>获取最终布局后的上外边距宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-final_margin_right">
 			Get: Box.final_margin_right
 			<span><a class="mark" href="#get-box-final_margin_right" id="get-box-final_margin_right">#</a></span>
 		</h3><p>获取最终布局后的右外边距宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-final_margin_bottom">
 			Get: Box.final_margin_bottom
 			<span><a class="mark" href="#get-box-final_margin_bottom" id="get-box-final_margin_bottom">#</a></span>
 		</h3><p>获取最终布局后的下外边距宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="set-box-margin">
 			Set: Box.margin
 			<span><a class="mark" href="#set-box-margin" id="set-box-margin">#</a></span>
 		</h3><p>同时设置全部外边距</p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="set-box-border">
 			Set: Box.border
 			<span><a class="mark" href="#set-box-border" id="set-box-border">#</a></span>
 		</h3><p>同时设置全部边框</p>
 <ul>
-<li>{<a href="../gui/value.html#class-border"><code>Border</code></a>}</li>
+<li>{<a href="value.html#class-border"><code>Border</code></a>}</li>
 </ul>
 <h3 id="set-box-border_width">
 			Set: Box.border_width
 			<span><a class="mark" href="#set-box-border_width" id="set-box-border_width">#</a></span>
 		</h3><p>同时设置全部的边框宽度值</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="set-box-border_color">
 			Set: Box.border_color
 			<span><a class="mark" href="#set-box-border_color" id="set-box-border_color">#</a></span>
 		</h3><p>同时设置全部的边框颜色值</p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="set-box-border_radius">
 			Set: Box.border_radius
 			<span><a class="mark" href="#set-box-border_radius" id="set-box-border_radius">#</a></span>
 		</h3><p>同时设置全部的边圆角值</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-div">
 			<code>Class: Div</code>
 			<span><a class="mark" href="#class-div" id="class-div">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-box"><code>Box</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-box"><code>Box</code></a></li>
 </ul>
-<p>盒子模型的一种实现,定义内部<a href="../gui/gui.html#class-box"><code>Box</code></a>的对齐与排列方式，</p>
-<p>并且会忽略非<a href="../gui/gui.html#class-box"><code>Box</code></a>内容的布局,不对其进行布局计算</p>
+<p>盒子模型的一种实现,定义内部<a href="gui.html#class-box"><code>Box</code></a>的对齐与排列方式，</p>
+<p>并且会忽略非<a href="gui.html#class-box"><code>Box</code></a>内容的布局,不对其进行布局计算</p>
 <h3 id="div-content_align">
 			Div.content_align
 			<span><a class="mark" href="#div-content_align" id="div-content_align">#</a></span>
@@ -2110,43 +2101,43 @@ console.log(view.class);
 </li>
 <li><p><code>bottom</code> - 垂直布局，从下到上排列布局，溢出往右换行</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-contentalign"><code>ContentAlign</code></a>}</p>
+<li><p>{<a href="value.html#class-contentalign"><code>ContentAlign</code></a>}</p>
 </li>
 </ul>
 <h2 id="class-hybrid">
 			<code>Class: Hybrid</code>
 			<span><a class="mark" href="#class-hybrid" id="class-hybrid">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-box"><code>Box</code></a>,<a href="../gui/gui.html#class-textlayout"><code>TextLayout</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-box"><code>Box</code></a>,<a href="gui.html#class-textlayout"><code>TextLayout</code></a></li>
 </ul>
-<p>盒子模型的一种实现,定义内部<a href="../gui/gui.html#class-layout"><code>Layout</code></a>的对齐与排列方式，</p>
-<p>并且会忽略非<a href="../gui/gui.html#class-layout"><code>Layout</code></a>内容的布局,不对其进行布局计算</p>
+<p>盒子模型的一种实现,定义内部<a href="gui.html#class-layout"><code>Layout</code></a>的对齐与排列方式，</p>
+<p>并且会忽略非<a href="gui.html#class-layout"><code>Layout</code></a>内容的布局,不对其进行布局计算</p>
 <h3 id="hybrid-text_align">
 			Hybrid.text_align
 			<span><a class="mark" href="#hybrid-text_align" id="hybrid-text_align">#</a></span>
 		</h3><p>内容以及文本的对齐与排列方式 <strong>Default</strong> <code>left</code></p>
 <p>混合视图只能使用水平布局：</p>
 <ul>
-<li><p><code>left</code> - 从<code>左到右</code>排列并且以<code>左边</code>对齐</p>
+<li><p><code>left</code> - 内容从<code>左到右</code>排列并且以<code>左边</code>对齐</p>
 </li>
-<li><p><code>right</code> - 从<code>左到右</code>排列并且以<code>右边</code>对齐</p>
+<li><p><code>right</code> - 内容从<code>左到右</code>排列并且以<code>右边</code>对齐</p>
 </li>
-<li><p><code>center</code> - 从<code>左到右</code>排列并且以<code>居中</code>对齐</p>
+<li><p><code>center</code> - 内容从<code>左到右</code>排列并且以<code>居中</code>对齐</p>
 </li>
-<li><p><code>left_reverse</code> - 从<code>右到左</code>排列并且以<code>左边</code>对齐</p>
+<li><p><code>left_reverse</code> - 内容从<code>右到左</code>排列并且以<code>左边</code>对齐</p>
 </li>
-<li><p><code>right_reverse</code> - 从<code>右到左</code>排列并且以<code>右边</code>对齐</p>
+<li><p><code>right_reverse</code> - 内容从<code>右到左</code>排列并且以<code>右边</code>对齐</p>
 </li>
-<li><p><code>center_reverse</code> - 从<code>右到左</code>排列并且以<code>居中</code>对齐</p>
+<li><p><code>center_reverse</code> - 内容从<code>右到左</code>排列并且以<code>居中</code>对齐</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textalign"><code>TextAlign</code></a>}</p>
+<li><p>{<a href="value.html#class-textalign"><code>TextAlign</code></a>}</p>
 </li>
 </ul>
 <h2 id="class-limit">
 			<code>Class: Limit</code>
 			<span><a class="mark" href="#class-limit" id="class-limit">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-div"><code>Div</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-div"><code>Div</code></a></li>
 </ul>
 <p>限制盒子，限制盒子的最小尺寸与最大尺寸</p>
 <h3 id="limit-min_width">
@@ -2156,7 +2147,7 @@ console.log(view.class);
 <p>最小宽度不会超过<code>max_width</code>最大宽度的限制，如果超过取<code>max_width</code>值</p>
 <p><strong>Default</strong> <code>auto</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="limit-min_height">
 			Limit.min_height
@@ -2165,27 +2156,27 @@ console.log(view.class);
 <p>最小高度不会超过<code>max_height</code>最大高度的限制，如果超过取<code>max_height</code>值</p>
 <p><strong>Default</strong> <code>auto</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="limit-max_width">
 			Limit.max_width
 			<span><a class="mark" href="#limit-max_width" id="limit-max_width">#</a></span>
 		</h3><p>限制最大宽度 <strong>Default</strong> <code>auto</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="limit-max_height">
 			Limit.max_height
 			<span><a class="mark" href="#limit-max_height" id="limit-max_height">#</a></span>
 		</h3><p>限制最大高度 <strong>Default</strong> <code>auto</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h2 id="class-indep">
 			<code>Class: Indep</code>
 			<span><a class="mark" href="#class-indep" id="class-indep">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-div"><code>Div</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-div"><code>Div</code></a></li>
 </ul>
 <p>独立的盒子视图，它的偏移位置不受布局方式的影响，布局方式以自身的对齐方式为准</p>
 <h3 id="indep-align_x">
@@ -2199,7 +2190,7 @@ console.log(view.class);
 </li>
 <li><p><code>right</code> - 水平右对齐</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-align"><code>Align</code></a>}</p>
+<li><p>{<a href="value.html#class-align"><code>Align</code></a>}</p>
 </li>
 </ul>
 <h3 id="indep-align_y">
@@ -2213,49 +2204,49 @@ console.log(view.class);
 </li>
 <li><p><code>bottom</code> - 垂直底部对齐</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-align"><code>Align</code></a>}</p>
+<li><p>{<a href="value.html#class-align"><code>Align</code></a>}</p>
 </li>
 </ul>
 <h2 id="class-limitindep">
 			<code>Class: LimitIndep</code>
 			<span><a class="mark" href="#class-limitindep" id="class-limitindep">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-indep"><code>Indep</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-indep"><code>Indep</code></a></li>
 </ul>
 <p>独立的限制盒子视图，顾名思义兼具独立盒子与限制盒子的特性</p>
 <h3 id="indep-min_width">
 			Indep.min_width
 			<span><a class="mark" href="#indep-min_width" id="indep-min_width">#</a></span>
-		</h3><p>实为<code>width</code>别名，但这里做为限制最小宽度使用 --&gt; <a href="../gui/gui.html#limit-min_width"><code>Limit.min_width</code></a></p>
+		</h3><p>实为<code>width</code>别名，但这里做为限制最小宽度使用 --&gt; <a href="gui.html#limit-min_width"><code>Limit.min_width</code></a></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="indep-min_height">
 			Indep.min_height
 			<span><a class="mark" href="#indep-min_height" id="indep-min_height">#</a></span>
-		</h3><p>实为<code>height</code>别名，但这里做为限制最小高度使用 --&gt; <a href="../gui/gui.html#limit-min_height"><code>Limit.min_height</code></a></p>
+		</h3><p>实为<code>height</code>别名，但这里做为限制最小高度使用 --&gt; <a href="gui.html#limit-min_height"><code>Limit.min_height</code></a></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="indep-max_width">
 			Indep.max_width
 			<span><a class="mark" href="#indep-max_width" id="indep-max_width">#</a></span>
-		</h3><p>限制最大宽度 --&gt; <a href="../gui/gui.html#limit-max_width"><code>Limit.max_width</code></a></p>
+		</h3><p>限制最大宽度 --&gt; <a href="gui.html#limit-max_width"><code>Limit.max_width</code></a></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h3 id="indep-max_height">
 			Indep.max_height
 			<span><a class="mark" href="#indep-max_height" id="indep-max_height">#</a></span>
-		</h3><p>限制最大高度 --&gt; <a href="../gui/gui.html#limit-max_height"><code>Limit.max_height</code></a></p>
+		</h3><p>限制最大高度 --&gt; <a href="gui.html#limit-max_height"><code>Limit.max_height</code></a></p>
 <ul>
-<li>{<a href="../gui/value.html#class-value"><code>Value</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>}</li>
 </ul>
 <h2 id="class-image">
 			<code>Class: Image</code>
 			<span><a class="mark" href="#class-image" id="class-image">#</a></span>
 		</h2><ul>
-<li><p><code>extends</code> <a href="../gui/gui.html#class-div"><code>Div</code></a></p>
+<li><p><code>extends</code> <a href="gui.html#class-div"><code>Div</code></a></p>
 </li>
 <li><p>图像视图的尺寸设置为<code>auto</code>时会使用源图像的像素尺寸并不会受内部挤压，这与<code>Div</code>不同</p>
 </li>
@@ -2266,8 +2257,8 @@ console.log(view.class);
 <h3 id="image-src">
 			Image.src
 			<span><a class="mark" href="#image-src" id="image-src">#</a></span>
-		</h3><p>源图像路径，<a href="../util/reader.md"><code>reader</code></a>中支持的路径协议都可以</p>
-<p>或者使用<a href="../util/global.html#__path-path-"><code>$(path)</code></a>函数读取包内路径文件</p>
+		</h3><p>源图像路径，<a href="reader.md"><code>reader</code></a>中支持的路径协议都可以</p>
+<p>或者使用<a href="global.html#__path-path-"><code>$(path)</code></a>函数读取包内路径文件</p>
 <ul>
 <li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
@@ -2283,75 +2274,75 @@ console.log(view.class);
 			<span><a class="mark" href="#get-image-source_width" id="get-image-source_width">#</a></span>
 		</h3><p>源图像的像素宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-image-source_height">
 			Get: Image.source_height
 			<span><a class="mark" href="#get-image-source_height" id="get-image-source_height">#</a></span>
 		</h3><p>源图像的像素高度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h2 id="class-selectpanel">
 			<code>Class: SelectPanel</code>
 			<span><a class="mark" href="#class-selectpanel" id="class-selectpanel">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-div"><code>Div</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-div"><code>Div</code></a></li>
 </ul>
-<p>按钮面板视图，它对<a href="../gui/gui.html#class-button"><code>Button</code></a>有特别的作用，专门针对<code>tv</code>设备遥控器操作而设计</p>
-<p>需要与<a href="../gui/gui.html#class-button"><code>Button</code></a>配合使用，否则与<a href="../gui/gui.html#class-div"><code>Div</code></a>无异</p>
+<p>按钮面板视图，它对<a href="gui.html#class-button"><code>Button</code></a>有特别的作用，专门针对<code>tv</code>设备遥控器操作而设计</p>
+<p>需要与<a href="gui.html#class-button"><code>Button</code></a>配合使用，否则与<a href="gui.html#class-div"><code>Div</code></a>无异</p>
 <p><strong><code>以下所说的切换都为按下遥控器或键盘时</code></strong></p>
 <h3 id="selectpanel-onfocus_move">
 			SelectPanel.onfocus_move
 			<span><a class="mark" href="#selectpanel-onfocus_move" id="selectpanel-onfocus_move">#</a></span>
-		</h3><p>内部<a href="../gui/gui.html#class-button"><code>Button</code></a>焦点切换时触发</p>
+		</h3><p>内部<a href="gui.html#class-button"><code>Button</code></a>焦点切换时触发</p>
 <h3 id="selectpanel-allow_leave">
 			SelectPanel.allow_leave
 			<span><a class="mark" href="#selectpanel-allow_leave" id="selectpanel-allow_leave">#</a></span>
-		</h3><p>是否允许内部<a href="../gui/gui.html#class-button"><code>Button</code></a>按钮将焦点切换到外部</p>
+		</h3><p>是否允许内部<a href="gui.html#class-button"><code>Button</code></a>按钮将焦点切换到外部</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="selectpanel-allow_entry">
 			SelectPanel.allow_entry
 			<span><a class="mark" href="#selectpanel-allow_entry" id="selectpanel-allow_entry">#</a></span>
-		</h3><p>是否允许外部<a href="../gui/gui.html#class-button"><code>Button</code></a>按钮将焦点切换到内部</p>
+		</h3><p>是否允许外部<a href="gui.html#class-button"><code>Button</code></a>按钮将焦点切换到内部</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="selectpanel-interval_time">
 			SelectPanel.interval_time
 			<span><a class="mark" href="#selectpanel-interval_time" id="selectpanel-interval_time">#</a></span>
 		</h3><p>切换的时间限制，离上一次切换时间不到<code>interval_time</code>不允许切换</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>} ms</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} ms</li>
 </ul>
 <h3 id="selectpanel-enable_select">
 			SelectPanel.enable_select
 			<span><a class="mark" href="#selectpanel-enable_select" id="selectpanel-enable_select">#</a></span>
-		</h3><p>是否允许内部<a href="../gui/gui.html#class-button"><code>Button</code></a>切换焦点</p>
+		</h3><p>是否允许内部<a href="gui.html#class-button"><code>Button</code></a>切换焦点</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-selectpanel-is_activity">
 			Get: SelectPanel.is_activity
 			<span><a class="mark" href="#get-selectpanel-is_activity" id="get-selectpanel-is_activity">#</a></span>
-		</h3><p>是否激活状态，当内部<a href="../gui/gui.html#class-button"><code>Button</code></a>拥有焦点时为激活状态</p>
+		</h3><p>是否激活状态，当内部<a href="gui.html#class-button"><code>Button</code></a>拥有焦点时为激活状态</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-selectpanel-parent_panel">
 			Get: SelectPanel.parent_panel
 			<span><a class="mark" href="#get-selectpanel-parent_panel" id="get-selectpanel-parent_panel">#</a></span>
-		</h3><p>父<a href="../gui/gui.html#class-panel"><code>SelectPanel</code></a>视图</p>
+		</h3><p>父<a href="gui.html#class-panel"><code>SelectPanel</code></a>视图</p>
 <ul>
-<li>{<a href="../gui/gui.html#class-panel"><code>SelectPanel</code></a>}</li>
+<li>{<a href="gui.html#class-panel"><code>SelectPanel</code></a>}</li>
 </ul>
 <h2 id="class-button">
 			<code>Class: Button</code>
 			<span><a class="mark" href="#class-button" id="class-button">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-hybrid"><code>Hybrid</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-hybrid"><code>Hybrid</code></a></li>
 </ul>
 <p>按钮视图，这个视图默认绑定<code>click</code>后使用高亮样式</p>
 <h3 id="button-default_highlighted">
@@ -2359,34 +2350,34 @@ console.log(view.class);
 			<span><a class="mark" href="#button-default_highlighted" id="button-default_highlighted">#</a></span>
 		</h3><p>是否使用高亮样式默认，<strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="button-set_highlighted-status-">
 			Button.set_highlighted(status)
 			<span><a class="mark" href="#button-set_highlighted-status-" id="button-set_highlighted-status-">#</a></span>
 		</h3><p>设置高亮</p>
 <ul>
-<li>@arg <code>status</code> {<a href="../gui/event.html#enum-highlightedstatus"><code>HighlightedStatus</code></a>}</li>
+<li>@arg <code>status</code> {<a href="event.html#enum-highlightedstatus"><code>HighlightedStatus</code></a>}</li>
 </ul>
 <h3 id="button-find_next_button-direction-">
 			Button.find_next_button(direction)
 			<span><a class="mark" href="#button-find_next_button-direction-" id="button-find_next_button-direction-">#</a></span>
-		</h3><p>查找指定方向相邻的按钮,按钮必需在<a href="../gui/gui.html#class-panel"><code>SelectPanel</code></a>才能查找，找不到返回<code>null</code></p>
+		</h3><p>查找指定方向相邻的按钮,按钮必需在<a href="gui.html#class-panel"><code>SelectPanel</code></a>才能查找，找不到返回<code>null</code></p>
 <ul>
-<li>@arg <code>direction</code> {<a href="../gui/value.html#class-direction"><code>Direction</code></a>} </li>
+<li>@arg <code>direction</code> {<a href="value.html#class-direction"><code>Direction</code></a>} </li>
 <li>@ret <code>{[</code>Button<code>]}</code></li>
 </ul>
 <h3 id="get-button-panel">
 			Get: Button.panel
 			<span><a class="mark" href="#get-button-panel" id="get-button-panel">#</a></span>
 		</h3><ul>
-<li>{<a href="../gui/gui.html#class-panel"><code>SelectPanel</code></a>}</li>
+<li>{<a href="gui.html#class-panel"><code>SelectPanel</code></a>}</li>
 </ul>
 <h2 id="class-root">
 			<code>Class: Root</code>
 			<span><a class="mark" href="#class-root" id="class-root">#</a></span>
 		</h2><ul>
-<li><p><code>extends</code> <a href="../gui/gui.html#class-panel"><code>SelectPanel</code></a></p>
+<li><p><code>extends</code> <a href="gui.html#class-panel"><code>SelectPanel</code></a></p>
 </li>
 <li><p>根视图，这个视图暂时只能是唯一的但未来可能会变化</p>
 </li>
@@ -2403,9 +2394,9 @@ console.log(view.class);
 			<span><a class="mark" href="#basicscroll-scroll_to-scroll-duration-curve-" id="basicscroll-scroll_to-scroll-duration-curve-">#</a></span>
 		</h3><p>滚动到指定位置，并可指定滚动动画的时间与曲线</p>
 <ul>
-<li>@arg <code>scroll</code> {<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
-<li>@arg <code>[duration]</code> {<a href="../util/native_types.html#uint"><code>uint</code></a>} <code>ms</code>, 过渡时间，不传入参数使用<code>default_scroll_duration</code>值</li>
-<li>@arg <code>[curve]</code> {<a href="../gui/value.html#class-curve"><code>Curve</code></a>} 过渡的曲线，不传入参数使用<code>default_scroll_curve</code>值</li>
+<li>@arg <code>scroll</code> {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>@arg <code>[duration]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code>, 过渡时间，不传入参数使用<code>default_scroll_duration</code>值</li>
+<li>@arg <code>[curve]</code> {<a href="value.html#class-curve"><code>Curve</code></a>} 过渡的曲线，不传入参数使用<code>default_scroll_curve</code>值</li>
 </ul>
 <h3 id="basicscroll-terminate-">
 			BasicScroll.terminate()
@@ -2416,56 +2407,56 @@ console.log(view.class);
 			<span><a class="mark" href="#basicscroll-scroll" id="basicscroll-scroll">#</a></span>
 		</h3><p>滚动到指定位置</p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scroll_x">
 			BasicScroll.scroll_x
 			<span><a class="mark" href="#basicscroll-scroll_x" id="basicscroll-scroll_x">#</a></span>
 		</h3><p>滚动到指定<code>x</code>位置</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scroll_y">
 			BasicScroll.scroll_y
 			<span><a class="mark" href="#basicscroll-scroll_y" id="basicscroll-scroll_y">#</a></span>
 		</h3><p>滚动到指定<code>y</code>位置</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scroll_width">
 			BasicScroll.scroll_width
 			<span><a class="mark" href="#basicscroll-scroll_width" id="basicscroll-scroll_width">#</a></span>
 		</h3><p>可滚动内容宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scroll_height">
 			BasicScroll.scroll_height
 			<span><a class="mark" href="#basicscroll-scroll_height" id="basicscroll-scroll_height">#</a></span>
 		</h3><p>可滚动内容高度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollbar">
 			BasicScroll.scrollbar
 			<span><a class="mark" href="#basicscroll-scrollbar" id="basicscroll-scrollbar">#</a></span>
 		</h3><p>是否显示滚动条</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-resistance">
 			BasicScroll.resistance
 			<span><a class="mark" href="#basicscroll-resistance" id="basicscroll-resistance">#</a></span>
 		</h3><p>惯性滚动阻力，最小<code>0.5</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>} <code>0.5-...</code></li>
+<li>{<a href="native_types.html#float"><code>float</code></a>} <code>0.5-...</code></li>
 </ul>
 <h3 id="basicscroll-bounce">
 			BasicScroll.bounce
 			<span><a class="mark" href="#basicscroll-bounce" id="basicscroll-bounce">#</a></span>
 		</h3><p>是否使用反弹 <strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-bounce_lock">
 			BasicScroll.bounce_lock
@@ -2473,21 +2464,21 @@ console.log(view.class);
 		</h3><p>是否锁定反弹 <strong>Default</strong> <code>true</code> </p>
 <p>当内容尺寸小于当前<code>Scroll</code>尺寸时是否可以拖拽并反弹，<code>true</code>表示不能被拖拽</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-momentum">
 			BasicScroll.momentum
 			<span><a class="mark" href="#basicscroll-momentum" id="basicscroll-momentum">#</a></span>
 		</h3><p>拖拽是否引发惯性运动</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-lock_direction">
 			BasicScroll.lock_direction
 			<span><a class="mark" href="#basicscroll-lock_direction" id="basicscroll-lock_direction">#</a></span>
 		</h3><p>是否锁定方向,只能往一个轴向滚动</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-catch_position_x">
 			BasicScroll.catch_position_x
@@ -2500,7 +2491,7 @@ console.log(view.class);
 </li>
 <li><p>小于<code>1</code>表示捕获当前<code>Scroll</code>视图的<code>final_width</code></p>
 </li>
-<li><p>{<a href="../util/native_types.html#float"><code>float</code></a>}</p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>}</p>
 </li>
 </ul>
 <h3 id="basicscroll-catch_position_y">
@@ -2510,7 +2501,7 @@ console.log(view.class);
 <ul>
 <li><p>捕获位置<code>y</code>，小于<code>1</code>表示捕获当前<code>Scroll</code>视图的<code>final_height</code></p>
 </li>
-<li><p>{<a href="../util/native_types.html#float"><code>float</code></a>}</p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>}</p>
 </li>
 </ul>
 <h3 id="basicscroll-scrollbar_color">
@@ -2518,55 +2509,55 @@ console.log(view.class);
 			<span><a class="mark" href="#basicscroll-scrollbar_color" id="basicscroll-scrollbar_color">#</a></span>
 		</h3><p>滚动条的颜色</p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="get-basicscroll-h_scrollbar">
 			Get: BasicScroll.h_scrollbar
 			<span><a class="mark" href="#get-basicscroll-h_scrollbar" id="get-basicscroll-h_scrollbar">#</a></span>
 		</h3><p>当前是否显示<code>h_scrollbar</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-basicscroll-v_scrollbar">
 			Get: BasicScroll.v_scrollbar
 			<span><a class="mark" href="#get-basicscroll-v_scrollbar" id="get-basicscroll-v_scrollbar">#</a></span>
 		</h3><p>当前是否显示<code>v_scrollbar</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollbar_width">
 			BasicScroll.scrollbar_width
 			<span><a class="mark" href="#basicscroll-scrollbar_width" id="basicscroll-scrollbar_width">#</a></span>
 		</h3><p>滚动条的宽度</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollbar_margin">
 			BasicScroll.scrollbar_margin
 			<span><a class="mark" href="#basicscroll-scrollbar_margin" id="basicscroll-scrollbar_margin">#</a></span>
 		</h3><p>滚动条的边距</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-default_scroll_duration">
 			BasicScroll.default_scroll_duration
 			<span><a class="mark" href="#basicscroll-default_scroll_duration" id="basicscroll-default_scroll_duration">#</a></span>
 		</h3><p>调用<code>scroll_to</code> 或设置<code>scroll</code>时的默认滚动过渡时间，<strong>Default</strong> <code>0</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>} ms</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} ms</li>
 </ul>
 <h3 id="basicscroll-default_scroll_curve">
 			BasicScroll.default_scroll_curve
 			<span><a class="mark" href="#basicscroll-default_scroll_curve" id="basicscroll-default_scroll_curve">#</a></span>
 		</h3><p>默认滚动曲线 <strong>Default</strong> <code>ease_out</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-curve"><code>Curve</code></a>}</li>
+<li>{<a href="value.html#class-curve"><code>Curve</code></a>}</li>
 </ul>
 <h2 id="class-scroll">
 			<code>Class: Scroll</code>
 			<span><a class="mark" href="#class-scroll" id="class-scroll">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-panel"><code>SelectPanel</code></a>,<a href="../gui/gui.html#class-basicscroll"><code>BasicScroll</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-panel"><code>SelectPanel</code></a>,<a href="gui.html#class-basicscroll"><code>BasicScroll</code></a></li>
 </ul>
 <p>滚动条的实现</p>
 <h3 id="scroll-onscroll">
@@ -2578,62 +2569,62 @@ console.log(view.class);
 			<span><a class="mark" href="#scroll-focus_margin_left" id="scroll-focus_margin_left">#</a></span>
 		</h3><p>内部按钮切换时滚动的左边距</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focus_margin_right">
 			Scroll.focus_margin_right
 			<span><a class="mark" href="#scroll-focus_margin_right" id="scroll-focus_margin_right">#</a></span>
 		</h3><p>内部按钮切换时滚动的右边距</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focus_margin_top">
 			Scroll.focus_margin_top
 			<span><a class="mark" href="#scroll-focus_margin_top" id="scroll-focus_margin_top">#</a></span>
 		</h3><p>内部按钮切换时滚动的上边距</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focus_margin_bottom">
 			Scroll.focus_margin_bottom
 			<span><a class="mark" href="#scroll-focus_margin_bottom" id="scroll-focus_margin_bottom">#</a></span>
 		</h3><p>内部按钮切换时滚动的下边距</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focus_align_x">
 			Scroll.focus_align_x
 			<span><a class="mark" href="#scroll-focus_align_x" id="scroll-focus_align_x">#</a></span>
 		</h3><p>内部按钮切换时<code>x</code>轴滚动对齐方式</p>
 <ul>
-<li>{<a href="../gui/value.html#class-align"><code>Align</code></a>}</li>
+<li>{<a href="value.html#class-align"><code>Align</code></a>}</li>
 </ul>
 <h3 id="scroll-focus_align_y">
 			Scroll.focus_align_y
 			<span><a class="mark" href="#scroll-focus_align_y" id="scroll-focus_align_y">#</a></span>
 		</h3><p>内部按钮切换时<code>y</code>轴滚动对齐方式</p>
 <ul>
-<li>{<a href="../gui/value.html#class-align"><code>Align</code></a>}</li>
+<li>{<a href="value.html#class-align"><code>Align</code></a>}</li>
 </ul>
 <h3 id="scroll-enable_focus_align">
 			Scroll.enable_focus_align
 			<span><a class="mark" href="#scroll-enable_focus_align" id="scroll-enable_focus_align">#</a></span>
 		</h3><p>内部按钮切换时是否滚动可见位置 <strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="scroll-enable_fixed_scroll_size">
 			Scroll.enable_fixed_scroll_size
 			<span><a class="mark" href="#scroll-enable_fixed_scroll_size" id="scroll-enable_fixed_scroll_size">#</a></span>
 		</h3><p>设置并启用固定滚动大小，当设置值为<code>vec2(0,0)</code>时禁用固定滚动尺寸，使用实际内容的滚动尺寸</p>
 <ul>
-<li>{<a href="../gui/value.html#class-vec2"><code>Vec2</code></a>}</li>
+<li>{<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
 </ul>
 <h2 id="class-text">
 			<code>Class: Text</code>
 			<span><a class="mark" href="#class-text" id="class-text">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-hybrid"><code>Hybrid</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-hybrid"><code>Hybrid</code></a></li>
 </ul>
 <p>文本叶子视图</p>
 <h3 id="get-text-length">
@@ -2641,34 +2632,34 @@ console.log(view.class);
 			<span><a class="mark" href="#get-text-length" id="get-text-length">#</a></span>
 		</h3><p>文本字符串长度</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="text-value">
 			Text.value
 			<span><a class="mark" href="#text-value" id="text-value">#</a></span>
 		</h3><p>获取或设置文本字符串</p>
 <ul>
-<li>{<a href="../util/native_types.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-text-text_hori_bearing">
 			Get: Text.text_hori_bearing
 			<span><a class="mark" href="#get-text-text_hori_bearing" id="get-text-text_hori_bearing">#</a></span>
 		</h3><p>文本基线距离文本顶部的距离,不同字体与不同尺寸字号会不相同</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-text-text_height">
 			Get: Text.text_height
 			<span><a class="mark" href="#get-text-text_height" id="get-text-text_height">#</a></span>
 		</h3><p>文本顶部与底部的距离</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-input">
 			<code>Class: Input</code>
 			<span><a class="mark" href="#class-input" id="class-input">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-text"><code>Text</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-text"><code>Text</code></a></li>
 </ul>
 <p>单行文本输入框</p>
 <h3 id="text-type">
@@ -2689,7 +2680,7 @@ console.log(view.class);
 <li><code>web_search</code>    -</li>
 <li><p><code>ascii_numner_pad</code>    -</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-Keyboardtype"><code>KeyboardType</code></a>}</p>
+<li><p>{<a href="value.html#class-Keyboardtype"><code>KeyboardType</code></a>}</p>
 </li>
 </ul>
 <h3 id="text-return_type">
@@ -2708,7 +2699,7 @@ console.log(view.class);
 <li><code>emergency_call</code>    -    </li>
 <li><p><code>continue</code>    -    </p>
 </li>
-<li><p>{<a href="../gui/value.html#class-keyboardreturntype"><code>KeyboardReturnType</code></a>}</p>
+<li><p>{<a href="value.html#class-keyboardreturntype"><code>KeyboardReturnType</code></a>}</p>
 </li>
 </ul>
 <h3 id="text-placeholder">
@@ -2723,34 +2714,34 @@ console.log(view.class);
 			<span><a class="mark" href="#text-placeholder_color" id="text-placeholder_color">#</a></span>
 		</h3><p>占位字符颜色</p>
 <ul>
-<li>{<a href="../gui/value.html#class-color"><code>Color</code></a>}</li>
+<li>{<a href="value.html#class-color"><code>Color</code></a>}</li>
 </ul>
 <h3 id="text-security">
 			Text.security
 			<span><a class="mark" href="#text-security" id="text-security">#</a></span>
 		</h3><p>是否将文本显示为安全模式</p>
 <ul>
-<li>{<a href="../util/native_types.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="text-text_margin">
 			Text.text_margin
 			<span><a class="mark" href="#text-text_margin" id="text-text_margin">#</a></span>
 		</h3><p>文本内容显示的左右边距</p>
 <ul>
-<li>{<a href="../util/native_types.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-textarea">
 			<code>Class: Textarea</code>
 			<span><a class="mark" href="#class-textarea" id="class-textarea">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-input"><code>Input</code></a>,<a href="../gui/gui.html#class-basicscroll"><code>BasicScroll</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-input"><code>Input</code></a>,<a href="gui.html#class-basicscroll"><code>BasicScroll</code></a></li>
 </ul>
 <p>多行文本输入框</p>
 <h2 id="class-clip">
 			<code>Class: Clip</code>
 			<span><a class="mark" href="#class-clip" id="class-clip">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="../gui/gui.html#class-div"><code>Div</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-div"><code>Div</code></a></li>
 </ul>
 <p>裁剪视图，可以将溢出盒子外部的内容裁剪掉</p>
 <h2 id="class-textfont">
@@ -2765,21 +2756,21 @@ console.log(view.class);
 			<span><a class="mark" href="#view-text_background_color" id="view-text_background_color">#</a></span>
 		</h3><p>文本背景颜色 <strong>Default</strong> <code>inherit</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-textcolor"><code>TextColor</code></a>}</li>
+<li>{<a href="value.html#class-textcolor"><code>TextColor</code></a>}</li>
 </ul>
 <h3 id="view-text_color">
 			View.text_color
 			<span><a class="mark" href="#view-text_color" id="view-text_color">#</a></span>
 		</h3><p>文本颜色 <strong>Default</strong> <code>inherit</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-textcolor"><code>TextColor</code></a>}</li>
+<li>{<a href="value.html#class-textcolor"><code>TextColor</code></a>}</li>
 </ul>
 <h3 id="view-text_size">
 			View.text_size
 			<span><a class="mark" href="#view-text_size" id="view-text_size">#</a></span>
 		</h3><p>文本字号大小 <strong>Default</strong> <code>inherit</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-textsize"><code>TextSize</code></a>}</li>
+<li>{<a href="value.html#class-textsize"><code>TextSize</code></a>}</li>
 </ul>
 <h3 id="view-text_style">
 			View.text_style
@@ -2792,7 +2783,7 @@ console.log(view.class);
 <li><code>bold</code>    -    粗体</li>
 <li><p><code>...</code></p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textstyle"><code>TextStyle</code></a>}</p>
+<li><p>{<a href="value.html#class-textstyle"><code>TextStyle</code></a>}</p>
 </li>
 </ul>
 <h3 id="view-text_family">
@@ -2800,14 +2791,14 @@ console.log(view.class);
 			<span><a class="mark" href="#view-text_family" id="view-text_family">#</a></span>
 		</h3><p>文本字体家族名称列表字符串，多个使用逗号分割 <strong>Default</strong> <code>inherit</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-textfamily"><code>TextFamily</code></a>}</li>
+<li>{<a href="value.html#class-textfamily"><code>TextFamily</code></a>}</li>
 </ul>
 <h3 id="view-text_shadow">
 			View.text_shadow
 			<span><a class="mark" href="#view-text_shadow" id="view-text_shadow">#</a></span>
 		</h3><p>文本阴影 <strong>Default</strong> <code>inherit</code></p>
 <ul>
-<li>{<a href="../gui/value.html#class-textshadow"><code>TextShadow</code></a>}</li>
+<li>{<a href="value.html#class-textshadow"><code>TextShadow</code></a>}</li>
 </ul>
 <h3 id="view-text_line_height">
 			View.text_line_height
@@ -2819,7 +2810,7 @@ console.log(view.class);
 <li><code>auto</code> - 使用字体文件中的默认值</li>
 <li><p><code>xxx</code> - 具体数值</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textlineheight"><code>TextLineHeight</code></a>}</p>
+<li><p>{<a href="value.html#class-textlineheight"><code>TextLineHeight</code></a>}</p>
 </li>
 </ul>
 <h3 id="view-text_decoration">
@@ -2833,15 +2824,15 @@ console.log(view.class);
 <li><code>line_through</code>    -    中划线</li>
 <li><p><code>underline</code>    -    下划线</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textwecoration"><code>TextDecoration</code></a>}</p>
+<li><p>{<a href="value.html#class-textwecoration"><code>TextDecoration</code></a>}</p>
 </li>
 </ul>
-<h2 id="class-textlayout-">
+<h2 id="class-textlayout">
 			<code>Class: TextLayout</code>
-			<span><a class="mark" href="#class-textlayout-" id="class-textlayout-">#</a></span>
+			<span><a class="mark" href="#class-textlayout" id="class-textlayout">#</a></span>
 		</h2><ul>
 <li><code>abstract class</code></li>
-<li><code>extends</code> <a href="../gui/gui.html#class-textfont"><code>TextFont</code></a></li>
+<li><code>extends</code> <a href="gui.html#class-textfont"><code>TextFont</code></a></li>
 </ul>
 <p>布局文本字体属性,这是个抽象类型并没有构造函数</p>
 <h3 id="view-text_overflow">
@@ -2855,7 +2846,7 @@ console.log(view.class);
 <li><code>ellipsis</code> - 修剪并在文本末尾显示省略号</li>
 <li><p><code>center_ellipsis</code> - 修剪并在文本中间显示省略号</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textoverflow"><code>TextOverflow</code></a>}</p>
+<li><p>{<a href="value.html#class-textoverflow"><code>TextOverflow</code></a>}</p>
 </li>
 </ul>
 <h3 id="view-text_white_space">
@@ -2870,7 +2861,7 @@ console.log(view.class);
 <li><code>pre</code>    - 保留所有空白,不使用自动wrap</li>
 <li><p><code>pre_line</code>    - 合并空白符序列,但保留换行符,使用自动wrap</p>
 </li>
-<li><p>{<a href="../gui/value.html#class-textwhitespace"><code>TextWhiteSpace</code></a>}</p>
+<li><p>{<a href="value.html#class-textwhitespace"><code>TextWhiteSpace</code></a>}</p>
 </li>
 </ul>
 

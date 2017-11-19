@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Ngui API Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'app.html';
+    var relative = '';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <!--div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          NGUI
+        </a>
+      </div-->
+
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>Ngui</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/ngui-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="pkg.html"><code>pkg</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>Ngui v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Documentation Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#ngui-app">ngui/app</a></span>
+<ul>
+<li>
+<span><a href="#class-guiapplication">Class: GUIApplication</a></span>
+<ul>
+<li>
+<span><a href="#guiapplication-onload">GUIApplication.onLoad</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-onunload">GUIApplication.onUnload</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-onbackground">GUIApplication.onBackground</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-onforeground">GUIApplication.onForeground</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-onpause">GUIApplication.onPause</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-onresume">GUIApplication.onResume</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-onmemorywarning">GUIApplication.onMemorywarning</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-constructor-options-">GUIApplication.constructor([options])</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-start-vx-">GUIApplication.start(vx)</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-clear-">GUIApplication.clear()</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-openurl-url-">GUIApplication.openUrl(url)</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-sendemail-recipient-subject-cc-bcc-body-">GUIApplication.sendEmail(recipient,subject[,cc[,bcc[,body]]])</a></span>
+</li>
+<li>
+<span><a href="#get-guiapplication-isload">Get: GUIApplication.isLoad</a></span>
+</li>
+<li>
+<span><a href="#get-guiapplication-displayport">Get: GUIApplication.displayPort</a></span>
+</li>
+<li>
+<span><a href="#get-guiapplication-root">Get: GUIApplication.root</a></span>
+</li>
+<li>
+<span><a href="#get-guiapplication-focusview">Get: GUIApplication.focusView</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextbackgroundcolor">GUIApplication.defaultTextBackgroundColor</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextcolor">GUIApplication.defaultTextColor</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextsize">GUIApplication.defaultTextSize</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextstyle">GUIApplication.defaultTextStyle</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextfamily">GUIApplication.defaultTextFamily</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextshadow">GUIApplication.defaultTextShadow</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextlineheight">GUIApplication.defaultTextLineHeight</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextdecoration">GUIApplication.defaultTextDecoration</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextoverflow">GUIApplication.defaultTextOverflow</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-defaulttextwhitespace">GUIApplication.defaultTextWhiteSpace</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#object-options">Object: Options</a></span>
+<ul>
+<li>
+<span><a href="#anisotropic">anisotropic</a></span>
+</li>
+<li>
+<span><a href="#mipmap">mipmap</a></span>
+</li>
+<li>
+<span><a href="#multisample">multisample</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="ngui-app">
+			<code>ngui/app</code>
+			<span><a class="mark" href="#ngui-app" id="ngui-app">#</a></span>
+		</h1><h2 id="class-guiapplication">
+			<code>Class: GUIApplication</code>
+			<span><a class="mark" href="#class-guiapplication" id="class-guiapplication">#</a></span>
+		</h2><ul>
+<li><code>extends</code> <a href="event.html#class-notification"><code>Notification</code></a></li>
+</ul>
+<h3 id="guiapplication-onload">
+			GUIApplication.onLoad
+			<span><a class="mark" href="#guiapplication-onload" id="guiapplication-onload">#</a></span>
+		</h3><h3 id="guiapplication-onunload">
+			GUIApplication.onUnload
+			<span><a class="mark" href="#guiapplication-onunload" id="guiapplication-onunload">#</a></span>
+		</h3><h3 id="guiapplication-onbackground">
+			GUIApplication.onBackground
+			<span><a class="mark" href="#guiapplication-onbackground" id="guiapplication-onbackground">#</a></span>
+		</h3><h3 id="guiapplication-onforeground">
+			GUIApplication.onForeground
+			<span><a class="mark" href="#guiapplication-onforeground" id="guiapplication-onforeground">#</a></span>
+		</h3><h3 id="guiapplication-onpause">
+			GUIApplication.onPause
+			<span><a class="mark" href="#guiapplication-onpause" id="guiapplication-onpause">#</a></span>
+		</h3><h3 id="guiapplication-onresume">
+			GUIApplication.onResume
+			<span><a class="mark" href="#guiapplication-onresume" id="guiapplication-onresume">#</a></span>
+		</h3><h3 id="guiapplication-onmemorywarning">
+			GUIApplication.onMemorywarning
+			<span><a class="mark" href="#guiapplication-onmemorywarning" id="guiapplication-onmemorywarning">#</a></span>
+		</h3><p>内存不足时触发，触发后会自动调用<a href="app.html#guiapplication-clear"><code>clear()</code></a>进行资源清理并执行<code>js</code>垃圾收集</p>
+<h3 id="guiapplication-constructor-options-">
+			GUIApplication.constructor([options])
+			<span><a class="mark" href="#guiapplication-constructor-options-" id="guiapplication-constructor-options-">#</a></span>
+		</h3><ul>
+<li>@arg <code>[options]</code> {<a href="app.html#object-options"><code>Options</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">import GUIApplication from &#39;ngui/app&#39;
+import Root from &#39;ngui&#39;
+
+var opts = { anisotropic: true, mipmap: true, multisample: 2 };
+
+// 注意: jsx语法只能出现在.jsx文件中
+new GUIApplication(opts).start(&lt;Root&gt;Hello&lt;/Root&gt;).onLoad = function () {
+    // my code ...
+    console.log(&#39;Hello!&#39;);
+};
+</code></pre>
+<h3 id="guiapplication-start-vx-">
+			GUIApplication.start(vx)
+			<span><a class="mark" href="#guiapplication-start-vx-" id="guiapplication-start-vx-">#</a></span>
+		</h3><p>通过<code>vx</code>视图xml数据启动应用程序</p>
+<ul>
+<li>@arg <code>vx</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@ret {<a href="app.html#class-guiapplication"><code>GUIApplication</code></a>}</li>
+</ul>
+<h3 id="guiapplication-clear-">
+			GUIApplication.clear()
+			<span><a class="mark" href="#guiapplication-clear-" id="guiapplication-clear-">#</a></span>
+		</h3><p>清理释放一些不常用到的资源</p>
+<h3 id="guiapplication-openurl-url-">
+			GUIApplication.openUrl(url)
+			<span><a class="mark" href="#guiapplication-openurl-url-" id="guiapplication-openurl-url-">#</a></span>
+		</h3><p>调用后会打开系统浏览器并跳转到<code>url</code></p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="guiapplication-sendemail-recipient-subject-cc-bcc-body-">
+			GUIApplication.sendEmail(recipient,subject[,cc[,bcc[,body]]])
+			<span><a class="mark" href="#guiapplication-sendemail-recipient-subject-cc-bcc-body-" id="guiapplication-sendemail-recipient-subject-cc-bcc-body-">#</a></span>
+		</h3><p>调用后会打开系统邮件邮件客户端的发送界面,并填充传入的参数。</p>
+<p>多个接收人使用逗号分割。</p>
+<ul>
+<li>@arg <code>recipient</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>subject</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cc]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[bcc]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[body]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="get-guiapplication-isload">
+			Get: GUIApplication.isLoad
+			<span><a class="mark" href="#get-guiapplication-isload" id="get-guiapplication-isload">#</a></span>
+		</h3><p>是否已载入完成</p>
+<ul>
+<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h3 id="get-guiapplication-displayport">
+			Get: GUIApplication.displayPort
+			<span><a class="mark" href="#get-guiapplication-displayport" id="get-guiapplication-displayport">#</a></span>
+		</h3><ul>
+<li>{<a href="displayPort.html#class-displayport"><code>DisplayPort</code></a>}</li>
+</ul>
+<h3 id="get-guiapplication-root">
+			Get: GUIApplication.root
+			<span><a class="mark" href="#get-guiapplication-root" id="get-guiapplication-root">#</a></span>
+		</h3><ul>
+<li>{<a href="ngui.html#class-root"><code>Root</code></a>}</li>
+</ul>
+<h3 id="get-guiapplication-focusview">
+			Get: GUIApplication.focusView
+			<span><a class="mark" href="#get-guiapplication-focusview" id="get-guiapplication-focusview">#</a></span>
+		</h3><p>获取第一响应者，即当前焦点</p>
+<ul>
+<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextbackgroundcolor">
+			GUIApplication.defaultTextBackgroundColor
+			<span><a class="mark" href="#guiapplication-defaulttextbackgroundcolor" id="guiapplication-defaulttextbackgroundcolor">#</a></span>
+		</h3><p>默认文本背景颜色</p>
+<ul>
+<li>{<a href="value.html#class-textcolor"><code>TextColor</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextcolor">
+			GUIApplication.defaultTextColor
+			<span><a class="mark" href="#guiapplication-defaulttextcolor" id="guiapplication-defaulttextcolor">#</a></span>
+		</h3><p>默认文本颜色</p>
+<ul>
+<li>{<a href="value.html#class-textcolor"><code>TextColor</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextsize">
+			GUIApplication.defaultTextSize
+			<span><a class="mark" href="#guiapplication-defaulttextsize" id="guiapplication-defaulttextsize">#</a></span>
+		</h3><p>默认文本尺寸</p>
+<ul>
+<li>{<a href="value.html#class-textsize"><code>TextSize</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextstyle">
+			GUIApplication.defaultTextStyle
+			<span><a class="mark" href="#guiapplication-defaulttextstyle" id="guiapplication-defaulttextstyle">#</a></span>
+		</h3><p>默认文本样式</p>
+<ul>
+<li>{<a href="value.html#class-textstyle"><code>TextStyle</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextfamily">
+			GUIApplication.defaultTextFamily
+			<span><a class="mark" href="#guiapplication-defaulttextfamily" id="guiapplication-defaulttextfamily">#</a></span>
+		</h3><p>默认文本字体家族</p>
+<ul>
+<li>{<a href="value.html#class-textfamily"><code>TextFamily</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextshadow">
+			GUIApplication.defaultTextShadow
+			<span><a class="mark" href="#guiapplication-defaulttextshadow" id="guiapplication-defaulttextshadow">#</a></span>
+		</h3><p>默认文本阴影</p>
+<ul>
+<li>{<a href="value.html#class-textshadow"><code>TextShadow</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextlineheight">
+			GUIApplication.defaultTextLineHeight
+			<span><a class="mark" href="#guiapplication-defaulttextlineheight" id="guiapplication-defaulttextlineheight">#</a></span>
+		</h3><p>默认文本行高</p>
+<ul>
+<li>{<a href="value.html#class-textlineheight"><code>TextLineHeight</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextdecoration">
+			GUIApplication.defaultTextDecoration
+			<span><a class="mark" href="#guiapplication-defaulttextdecoration" id="guiapplication-defaulttextdecoration">#</a></span>
+		</h3><p>默认文本装饰</p>
+<ul>
+<li>{<a href="value.html#class-textdecoration"><code>TextDecoration</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextoverflow">
+			GUIApplication.defaultTextOverflow
+			<span><a class="mark" href="#guiapplication-defaulttextoverflow" id="guiapplication-defaulttextoverflow">#</a></span>
+		</h3><p>默认文本溢出选项</p>
+<ul>
+<li>{<a href="value.html#class-textoverflow"><code>TextOverflow</code></a>}</li>
+</ul>
+<h3 id="guiapplication-defaulttextwhitespace">
+			GUIApplication.defaultTextWhiteSpace
+			<span><a class="mark" href="#guiapplication-defaulttextwhitespace" id="guiapplication-defaulttextwhitespace">#</a></span>
+		</h3><p>默认文本处理空格方式</p>
+<ul>
+<li>{<a href="value.html#class-textwhitespace"><code>TextWhiteSpace</code></a>}</li>
+</ul>
+<h2 id="object-options">
+			<code>Object: Options</code>
+			<span><a class="mark" href="#object-options" id="object-options">#</a></span>
+		</h2><ul>
+<li>创建<code>GUIApplication</code>的选项，这是个<code>Object</code>类型描述并没有实际存在的构造函数</li>
+</ul>
+<h3 id="anisotropic">
+			anisotropic
+			<span><a class="mark" href="#anisotropic" id="anisotropic">#</a></span>
+		</h3><ul>
+<li><p>启用图像各项异性 <code>anisotropic</code></p>
+</li>
+<li><p>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</p>
+</li>
+</ul>
+<h3 id="mipmap">
+			mipmap
+			<span><a class="mark" href="#mipmap" id="mipmap">#</a></span>
+		</h3><ul>
+<li><p>启用mipmap图像 <code>mipmap</code></p>
+</li>
+<li><p>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</p>
+</li>
+</ul>
+<h3 id="multisample">
+			multisample
+			<span><a class="mark" href="#multisample" id="multisample">#</a></span>
+		</h3><ul>
+<li><p>0-4 Level 启用多重采样抗锯齿 <code>0</code>不启用，<code>4</code>为最大</p>
+</li>
+<li><p>启用后有非常明显的抗锯齿效果，但会消耗非常多的绘图性能</p>
+</li>
+<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>} </p>
+</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative + '.';
+    document.getElementById('home').href = relative + '..';
+    // document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

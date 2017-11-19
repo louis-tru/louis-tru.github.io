@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Ngui API Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'fs.html';
+    var relative = '';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <!--div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          NGUI
+        </a>
+      </div-->
+
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>Ngui</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/ngui-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="pkg.html"><code>pkg</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>Ngui v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Documentation Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#ngui-fs">ngui/fs</a></span>
+<ul>
+<li>
+<span><a href="#default_mode">DEFAULT_MODE</a></span>
+</li>
+<li>
+<span><a href="#enum-filetype">Enum: FileType</a></span>
+<ul>
+<li>
+<span><a href="#file_unknown">FILE_UNKNOWN</a></span>
+</li>
+<li>
+<span><a href="#file_file">FILE_FILE</a></span>
+</li>
+<li>
+<span><a href="#file_dir">FILE_DIR</a></span>
+</li>
+<li>
+<span><a href="#file_link">FILE_LINK</a></span>
+</li>
+<li>
+<span><a href="#file_fifo">FILE_FIFO</a></span>
+</li>
+<li>
+<span><a href="#file_socket">FILE_SOCKET</a></span>
+</li>
+<li>
+<span><a href="#file_char">FILE_CHAR</a></span>
+</li>
+<li>
+<span><a href="#file_block">FILE_BLOCK</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#object-dirent">Object: Dirent</a></span>
+<ul>
+<li>
+<span><a href="#dirent-name">Dirent.name</a></span>
+</li>
+<li>
+<span><a href="#dirent-pathname">Dirent.pathname</a></span>
+</li>
+<li>
+<span><a href="#dirent-type">Dirent.type</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#abort-id-">abort(id)</a></span>
+</li>
+<li>
+<span><a href="#chmodr-path-mode-cb-">chmodR(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#chmodr-path-cb-">chmodR(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#chmodsyncr-path-mode-">chmodSyncR(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#chownr-path-owner-group-cb-">chownR(path, owner, group[,cb])</a></span>
+</li>
+<li>
+<span><a href="#chownsyncr-path-owner-group-">chownSyncR(path, owner, group)</a></span>
+</li>
+<li>
+<span><a href="#mkdirp-path-mode-cb-">mkdirP(path[,mode[,cb]])</a></span>
+</li>
+<li>
+<span><a href="#mkdirp-path-cb-">mkdirP(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#mkdirsyncp-path-mode-">mkdirSyncP(path[,mode])</a></span>
+</li>
+<li>
+<span><a href="#remover-path-cb-">removeR(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#removesyncr-path-">removeSyncR(path)</a></span>
+</li>
+<li>
+<span><a href="#copy-path-target-cb-">copy(path,target[,cb])</a></span>
+</li>
+<li>
+<span><a href="#copyr-path-target-cb-">copyR(path, target[,cb])</a></span>
+</li>
+<li>
+<span><a href="#copysync-path-target-">copySync(path, target)</a></span>
+</li>
+<li>
+<span><a href="#copysyncr-path-target-">copySyncR(path, target)</a></span>
+</li>
+<li>
+<span><a href="#readdir-path-cb-">readdir(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#readdirsync-path-">readdirSync(path)</a></span>
+</li>
+<li>
+<span><a href="#isfile-path-cb-">isFile(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#isfilesync-path-">isFileSync(path)</a></span>
+</li>
+<li>
+<span><a href="#isdirectory-path-cb-">isDirectory(path[,cb])</a></span>
+</li>
+<li>
+<span><a href="#isdirectorysync-path-">isDirectorySync(path)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="ngui-fs">
+			<code>ngui/fs</code>
+			<span><a class="mark" href="#ngui-fs" id="ngui-fs">#</a></span>
+		</h1><p>这里提供的是nodejs文件的扩展函数</p>
+<h2 id="default_mode">
+			DEFAULT_MODE
+			<span><a class="mark" href="#default_mode" id="default_mode">#</a></span>
+		</h2><p>创建与设置文件的默认<code>mode</code>值,这与文件的权限相关,这是一个<code>int</code>整数类型值</p>
+<h2 id="enum-filetype">
+			<code>Enum: FileType</code>
+			<span><a class="mark" href="#enum-filetype" id="enum-filetype">#</a></span>
+		</h2><p>文件的类型,枚举类型都为<code>int</code>整数</p>
+<h3 id="file_unknown">
+			FILE_UNKNOWN
+			<span><a class="mark" href="#file_unknown" id="file_unknown">#</a></span>
+		</h3><h3 id="file_file">
+			FILE_FILE
+			<span><a class="mark" href="#file_file" id="file_file">#</a></span>
+		</h3><h3 id="file_dir">
+			FILE_DIR
+			<span><a class="mark" href="#file_dir" id="file_dir">#</a></span>
+		</h3><h3 id="file_link">
+			FILE_LINK
+			<span><a class="mark" href="#file_link" id="file_link">#</a></span>
+		</h3><h3 id="file_fifo">
+			FILE_FIFO
+			<span><a class="mark" href="#file_fifo" id="file_fifo">#</a></span>
+		</h3><h3 id="file_socket">
+			FILE_SOCKET
+			<span><a class="mark" href="#file_socket" id="file_socket">#</a></span>
+		</h3><h3 id="file_char">
+			FILE_CHAR
+			<span><a class="mark" href="#file_char" id="file_char">#</a></span>
+		</h3><h3 id="file_block">
+			FILE_BLOCK
+			<span><a class="mark" href="#file_block" id="file_block">#</a></span>
+		</h3><h2 id="object-dirent">
+			<code>Object: Dirent</code>
+			<span><a class="mark" href="#object-dirent" id="object-dirent">#</a></span>
+		</h2><p>读取目录时返回的结构类型, 这是个<code>Object</code>类型描述并没有实际存在的构造函数</p>
+<h3 id="dirent-name">
+			Dirent.name
+			<span><a class="mark" href="#dirent-name" id="dirent-name">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 文件名称</li>
+</ul>
+<h3 id="dirent-pathname">
+			Dirent.pathname
+			<span><a class="mark" href="#dirent-pathname" id="dirent-pathname">#</a></span>
+		</h3><ul>
+<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 文件路径</li>
+</ul>
+<h3 id="dirent-type">
+			Dirent.type
+			<span><a class="mark" href="#dirent-type" id="dirent-type">#</a></span>
+		</h3><ul>
+<li>{<a href="fs.html#enum-filetype"><code>FileType</code></a>} 文件类型枚举值 <code>FileType</code></li>
+</ul>
+<h2 id="abort-id-">
+			abort(id)
+			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
+		</h2><p>通过<code>id</code>强制中止运行中的异步任务</p>
+<p>如果传入无意义的<code>id</code>或<code>id</code>所属的任务已经完成，不做任何处理</p>
+<ul>
+<li>@arg <code>id</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id0 = fs.chmodR(mypath, 755);
+var id1 = fs.chownR(mypath, 501, 501);
+var id2 = fs.cp(mypath, newpath);
+// force abort task
+fs.abort(id0);
+fs.abort(id1);
+fs.abort(id2);
+</code></pre>
+<h2 id="chmodr-path-mode-cb-">
+			chmodR(path[,mode[,cb]])
+			<span><a class="mark" href="#chmodr-path-mode-cb-" id="chmodr-path-mode-cb-">#</a></span>
+		</h2><h2 id="chmodr-path-cb-">
+			chmodR(path[,cb])
+			<span><a class="mark" href="#chmodr-path-cb-" id="chmodr-path-cb-">#</a></span>
+		</h2><p>递归设置文件或目录<code>mode</code>属性,并返回中止<code>id</code>,可通过这个<code>id</code>强制中止任务</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// `mypath`为文件路径,可以为文件也可以为目录
+fs.chmodR(mypath, 0755, function(err){
+    if (err)
+        console.log(&#39;Fail&#39;);
+    else
+        console.log(&#39;Success&#39;);
+});
+var id = fs.chmodR(mydir, 0775);
+fs.abort(id);
+</code></pre>
+<h2 id="chmodsyncr-path-mode-">
+			chmodSyncR(path[,mode])
+			<span><a class="mark" href="#chmodsyncr-path-mode-" id="chmodsyncr-path-mode-">#</a></span>
+		</h2><p>同步设置文件的mode属性,设置成功返回<code>true</code></p>
+<p>递归<code>chmodSyncR()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: true
+console.log(fs.chmodSyncR(mypath, 0755));
+</code></pre>
+<h2 id="chownr-path-owner-group-cb-">
+			chownR(path, owner, group[,cb])
+			<span><a class="mark" href="#chownr-path-owner-group-cb-" id="chownr-path-owner-group-cb-">#</a></span>
+		</h2><p>异步递归设置文件或目录<code>owner</code>与<code>group</code>属性。并返回中止<code>id</code>,可通过这个<code>id</code>强制中止任务</p>
+<p>Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>group</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id = chownR(mypath, 501, 501, (err)=&gt;{ });
+fs.abort(id); // force abort task
+</code></pre>
+<h2 id="chownsyncr-path-owner-group-">
+			chownSyncR(path, owner, group)
+			<span><a class="mark" href="#chownsyncr-path-owner-group-" id="chownsyncr-path-owner-group-">#</a></span>
+		</h2><p>同步设置文件owner与group属性。成功返回<code>true</code></p>
+<p>递归<code>chownSyncR()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} 操作系统用户id    </li>
+<li>@arg <code>group</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} 操作系统组id</li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="mkdirp-path-mode-cb-">
+			mkdirP(path[,mode[,cb]])
+			<span><a class="mark" href="#mkdirp-path-mode-cb-" id="mkdirp-path-mode-cb-">#</a></span>
+		</h2><h2 id="mkdirp-path-cb-">
+			mkdirP(path[,cb])
+			<span><a class="mark" href="#mkdirp-path-cb-" id="mkdirp-path-cb-">#</a></span>
+		</h2><p>创建目录，这个方法会依次创建目录树,目录存在也不会抛出异常</p>
+<p>Callback:<code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">fs.mkdirP(mypath, function(err){ 
+    if (err) {
+        /*Success*/ 
+    } else {
+        /*Fail*/ 
+    }
+});
+</code></pre>
+<h2 id="mkdirsyncp-path-mode-">
+			mkdirSyncP(path[,mode])
+			<span><a class="mark" href="#mkdirsyncp-path-mode-" id="mkdirsyncp-path-mode-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="remover-path-cb-">
+			removeR(path[,cb])
+			<span><a class="mark" href="#remover-path-cb-" id="remover-path-cb-">#</a></span>
+		</h2><p>递归删除文件与目录,并返回一个中止id,如果不成功会抛出异常</p>
+<p>使用这个id可以强制中止任务 <code>abort(id)</code></p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id = fs.removeR(mypath, function(err) { 
+    if (err) {
+        /*Success*/ 
+    } else {
+        /*Fail*/ 
+    }
+});
+// 通过id可中止删除任务
+fs.abort(id);
+</code></pre>
+<h2 id="removesyncr-path-">
+			removeSyncR(path)
+			<span><a class="mark" href="#removesyncr-path-" id="removesyncr-path-">#</a></span>
+		</h2><p>同步递归删除目录或文件,在javascript中谨慎使用这个方法,有可能会造成线程长时间被柱塞</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="copy-path-target-cb-">
+			copy(path,target[,cb])
+			<span><a class="mark" href="#copy-path-target-cb-" id="copy-path-target-cb-">#</a></span>
+		</h2><h2 id="copyr-path-target-cb-">
+			copyR(path, target[,cb])
+			<span><a class="mark" href="#copyr-path-target-cb-" id="copyr-path-target-cb-">#</a></span>
+		</h2><p>拷贝文件,并返回一个中止id,如果不成功会抛出异常</p>
+<p>使用这个id可以强制中止拷贝任务 <code>abort(id)</code></p>
+<p>递归拷贝文件与目录<code>copyR()</code> 这个方法与<code>copy()</code>区别在于，<code>copy()</code>只能拷贝单个文件</p>
+<p>Callback: <code>cb()</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var id = fs.copy(source, target, function(err) { 
+    if (err) {
+        /*Success*/ 
+    } else {
+        /*Fail*/ 
+    }
+});
+// 通过id可中止任务
+fs.abort(id);
+</code></pre>
+<h2 id="copysync-path-target-">
+			copySync(path, target)
+			<span><a class="mark" href="#copysync-path-target-" id="copysync-path-target-">#</a></span>
+		</h2><h2 id="copysyncr-path-target-">
+			copySyncR(path, target)
+			<span><a class="mark" href="#copysyncr-path-target-" id="copysyncr-path-target-">#</a></span>
+		</h2><p>同步拷贝文件,在javascript中谨慎使用这个方法,有可能会造成线程长时间被柱塞</p>
+<p>递归拷贝文件与目录<code>copySyncR()</code> </p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+</ul>
+<h2 id="readdir-path-cb-">
+			readdir(path[,cb])
+			<span><a class="mark" href="#readdir-path-cb-" id="readdir-path-cb-">#</a></span>
+		</h2><p>读取目录列表信息，失败抛出异常,成功返回<a href="fs.html#class-dirent"><code>Dirent</code></a>的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a></p>
+<p>Callback: <code>cb(dirents)</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// {
+//   name: &quot;cp.txt&quot;,
+//   pathname: &quot;file:///var/mobile/Containers/Data/Application/64DAC3FC-A4FD-4274-A2E7-B834EE4930B4/Documents/test/cp.txt&quot;,
+//   type: 1
+// }
+fs.readdir(mydir, function(err, dirents) {
+    if (err) {
+        /*Fail*/
+    } else {
+        for (var dirent of dirents) {
+            // TODO...
+            console.log(dirent);
+        }
+    }
+    console.log(dirent);
+});
+</code></pre>
+<h2 id="readdirsync-path-">
+			readdirSync(path)
+			<span><a class="mark" href="#readdirsync-path-" id="readdirsync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>} return Array<Dirent>    </li>
+</ul>
+<h2 id="isfile-path-cb-">
+			isFile(path[,cb])
+			<span><a class="mark" href="#isfile-path-cb-" id="isfile-path-cb-">#</a></span>
+		</h2><p>测试是否为一个文件，成功返回<a href="nativeTypes.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="nativeTypes.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg path {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="isfilesync-path-">
+			isFileSync(path)
+			<span><a class="mark" href="#isfilesync-path-" id="isfilesync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+</ul>
+<h2 id="isdirectory-path-cb-">
+			isDirectory(path[,cb])
+			<span><a class="mark" href="#isdirectory-path-cb-" id="isdirectory-path-cb-">#</a></span>
+		</h2><p>测试是否为一个目录，成功返回<a href="nativeTypes.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="nativeTypes.html#bool"><code>bool</code></a>)</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<h2 id="isdirectorysync-path-">
+			isDirectorySync(path)
+			<span><a class="mark" href="#isdirectorysync-path-" id="isdirectorysync-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative + '.';
+    document.getElementById('home').href = relative + '..';
+    // document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>

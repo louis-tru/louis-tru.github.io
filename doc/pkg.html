@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Ngui API Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+  <script>
+    var src = 'pkg.html';
+    var relative = '';
+    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+  </script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+  <style>  
+    #column1.interior {
+      overflow-wrap: break-word;
+    }
+  
+    .on {
+      color: #43853d !important;
+      border-radius: 0;
+      border-bottom: 1px solid #43853d;
+      background: none;
+    }
+
+  </style>
+  
+  <div id="content" class="clearfix">
+
+    <div id="column2" class="interior">
+
+      <!--div id="intro" class="interior">
+        <a href="/" id="home2" title="Go back to the home page">
+          NGUI
+        </a>
+      </div-->
+
+      <h1 id="-ngui-">
+			<a href="http://nodegui.org/"><code>Ngui</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/ngui-tools"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/demo"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="pkg.html"><code>pkg</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
+</ul>
+
+
+    </div>
+    
+    <div id="column1" data-id="documentation" class="interior">
+      <header>
+        <h1>Ngui v0.1.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="/doc" id="index">Documentation Index</a> |
+            <a href="/" id="home">Home</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li>
+<span><a href="#pkg">pkg</a></span>
+<ul>
+<li>
+<span><a href="#get-mainpackage">Get: mainPackage</a></span>
+</li>
+<li>
+<span><a href="#get-main">Get: main</a></span>
+</li>
+<li>
+<span><a href="#get-pkgs">Get: pkgs</a></span>
+</li>
+<li>
+<span><a href="#haspackage-name-">hasPackage(name)</a></span>
+</li>
+<li>
+<span><a href="#getpackage-name-">getPackage(name)</a></span>
+</li>
+<li>
+<span><a href="#getpackagewithabsolutepath-path-">getPackageWithAbsolutePath(path)</a></span>
+</li>
+<li>
+<span><a href="#addnodepath-node_modules-">addNodePath(node_modules)</a></span>
+</li>
+<li>
+<span><a href="#addpackage-packagepath-">addPackage(packagePath)</a></span>
+</li>
+<li>
+<span><a href="#setorigin-path-origin-">setOrigin(path[,origin])</a></span>
+</li>
+<li>
+<span><a href="#disableorigin-path-">disableOrigin(path)</a></span>
+</li>
+<li>
+<span><a href="#load-packagenames-cb-">load(packageNames, cb)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+      </div>
+
+      <div id="apicontent">
+        <h1 id="pkg">
+			<code>pkg</code>
+			<span><a class="mark" href="#pkg" id="pkg">#</a></span>
+		</h1><h2 id="get-mainpackage">
+			Get: mainPackage
+			<span><a class="mark" href="#get-mainpackage" id="get-mainpackage">#</a></span>
+		</h2><h2 id="get-main">
+			Get: main
+			<span><a class="mark" href="#get-main" id="get-main">#</a></span>
+		</h2><p>主启动运行文件路径</p>
+<h2 id="get-pkgs">
+			Get: pkgs
+			<span><a class="mark" href="#get-pkgs" id="get-pkgs">#</a></span>
+		</h2><p>获取package名称列表</p>
+<h2 id="haspackage-name-">
+			hasPackage(name)
+			<span><a class="mark" href="#haspackage-name-" id="haspackage-name-">#</a></span>
+		</h2><p>是否有这个pkg</p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="getpackage-name-">
+			getPackage(name)
+			<span><a class="mark" href="#getpackage-name-" id="getpackage-name-">#</a></span>
+		</h2><p>通过名称获取pkg实体</p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="getpackagewithabsolutepath-path-">
+			getPackageWithAbsolutePath(path)
+			<span><a class="mark" href="#getpackagewithabsolutepath-path-" id="getpackagewithabsolutepath-path-">#</a></span>
+		</h2><p>通过绝对路径获取pkg内部相对路径,没有找到返回null</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="addnodepath-node_modules-">
+			addNodePath(node_modules)
+			<span><a class="mark" href="#addnodepath-node_modules-" id="addnodepath-node_modules-">#</a></span>
+		</h2><ul>
+<li>@arg <code>node_modules</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="addpackage-packagepath-">
+			addPackage(packagePath)
+			<span><a class="mark" href="#addpackage-packagepath-" id="addpackage-packagepath-">#</a></span>
+		</h2><ul>
+<li>@arg <code>packagePath</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="setorigin-path-origin-">
+			setOrigin(path[,origin])
+			<span><a class="mark" href="#setorigin-path-origin-" id="setorigin-path-origin-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>[origin]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="disableorigin-path-">
+			disableOrigin(path)
+			<span><a class="mark" href="#disableorigin-path-" id="disableorigin-path-">#</a></span>
+		</h2><ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="load-packagenames-cb-">
+			load(packageNames, cb)
+			<span><a class="mark" href="#load-packagenames-cb-" id="load-packagenames-cb-">#</a></span>
+		</h2><ul>
+<li>@arg <code>packageNames</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
+<p>Asynchronous mode load packages info and ready</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+  </script>
+
+  <script>
+    highlight(undefined, undefined, 'pre');
+    
+    var column2 = document.getElementById('column2');
+    var a = column2.querySelector('li > a[href="' + src + '"]')
+    if ( a ) {
+      a.className += ' on';
+    }
+    if ( relative ) {
+      column2.querySelectorAll('li > a').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if ( !href.match(/^(\/|https?:\/\/)/) ) {
+          a.setAttribute('href', relative + href);
+        }
+      });
+    }
+    document.getElementById('index').href = relative + '.';
+    document.getElementById('home').href = relative + '..';
+    // document.getElementById('home2').href = relative + '..';
+  </script>
+
+</body>
+</html>
