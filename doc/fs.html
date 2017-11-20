@@ -270,7 +270,7 @@
 		</h2><p>通过<code>id</code>强制中止运行中的异步任务</p>
 <p>如果传入无意义的<code>id</code>或<code>id</code>所属的任务已经完成，不做任何处理</p>
 <ul>
-<li>@arg <code>id</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>id</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var id0 = fs.chmodR(mypath, 755);
@@ -291,9 +291,9 @@ fs.abort(id2);
 <p>Callback: <code>cb()</code></p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// `mypath`为文件路径,可以为文件也可以为目录
@@ -313,8 +313,8 @@ fs.abort(id);
 <p>递归<code>chmodSyncR()</code></p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: true
@@ -327,10 +327,10 @@ console.log(fs.chmodSyncR(mypath, 0755));
 <p>Callback:<code>cb()</code></p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@arg <code>owner</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
-<li>@arg <code>group</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>group</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var id = chownR(mypath, 501, 501, (err)=&gt;{ });
@@ -343,9 +343,9 @@ fs.abort(id); // force abort task
 <p>递归<code>chownSyncR()</code></p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@arg <code>owner</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} 操作系统用户id    </li>
-<li>@arg <code>group</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} 操作系统组id</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>owner</code> {<a href="native_types.html#uint"><code>uint</code></a>} 操作系统用户id    </li>
+<li>@arg <code>group</code> {<a href="native_types.html#uint"><code>uint</code></a>} 操作系统组id</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="mkdirp-path-mode-cb-">
 			mkdirP(path[,mode[,cb]])
@@ -357,7 +357,7 @@ fs.abort(id); // force abort task
 <p>Callback:<code>cb()</code></p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
 </ul>
 <p>Example:</p>
@@ -374,8 +374,8 @@ fs.abort(id); // force abort task
 			<span><a class="mark" href="#mkdirsyncp-path-mode-" id="mkdirsyncp-path-mode-">#</a></span>
 		</h2><ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+<li>@arg <code>[mode=DEFAULT_MODE]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <strong><a href="fs.html#default_mode"><code>DEFAULT_MODE</code></a></strong></li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
 </ul>
 <h2 id="remover-path-cb-">
 			removeR(path[,cb])
@@ -386,7 +386,7 @@ fs.abort(id); // force abort task
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return <code>id</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return <code>id</code></li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var id = fs.removeR(mypath, function(err) { 
@@ -405,7 +405,7 @@ fs.abort(id);
 		</h2><p>同步递归删除目录或文件,在javascript中谨慎使用这个方法,有可能会造成线程长时间被柱塞</p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
 </ul>
 <h2 id="copy-path-target-cb-">
 			copy(path,target[,cb])
@@ -421,7 +421,7 @@ fs.abort(id);
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return <code>id</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return <code>id</code></li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var id = fs.copy(source, target, function(err) { 
@@ -445,7 +445,7 @@ fs.abort(id);
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>} Success return <code>true</code></li>
 </ul>
 <h2 id="readdir-path-cb-">
 			readdir(path[,cb])
@@ -485,8 +485,8 @@ fs.readdir(mydir, function(err, dirents) {
 <h2 id="isfile-path-cb-">
 			isFile(path[,cb])
 			<span><a class="mark" href="#isfile-path-cb-" id="isfile-path-cb-">#</a></span>
-		</h2><p>测试是否为一个文件，成功返回<a href="nativeTypes.html#bool"><code>bool</code></a>类型值</p>
-<p>Callback: <code>cb(ok)</code> (ok:<a href="nativeTypes.html#bool"><code>bool</code></a>)</p>
+		</h2><p>测试是否为一个文件，成功返回<a href="native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="native_types.html#bool"><code>bool</code></a>)</p>
 <ul>
 <li>@arg path {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg [cb] {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
@@ -496,13 +496,13 @@ fs.readdir(mydir, function(err, dirents) {
 			<span><a class="mark" href="#isfilesync-path-" id="isfilesync-path-">#</a></span>
 		</h2><ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="isdirectory-path-cb-">
 			isDirectory(path[,cb])
 			<span><a class="mark" href="#isdirectory-path-cb-" id="isdirectory-path-cb-">#</a></span>
-		</h2><p>测试是否为一个目录，成功返回<a href="nativeTypes.html#bool"><code>bool</code></a>类型值</p>
-<p>Callback: <code>cb(ok)</code> (ok:<a href="nativeTypes.html#bool"><code>bool</code></a>)</p>
+		</h2><p>测试是否为一个目录，成功返回<a href="native_types.html#bool"><code>bool</code></a>类型值</p>
+<p>Callback: <code>cb(ok)</code> (ok:<a href="native_types.html#bool"><code>bool</code></a>)</p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
@@ -512,7 +512,7 @@ fs.readdir(mydir, function(err, dirents) {
 			<span><a class="mark" href="#isdirectorysync-path-" id="isdirectorysync-path-">#</a></span>
 		</h2><ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 
       </div>

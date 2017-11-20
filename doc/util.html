@@ -209,7 +209,7 @@
 		</h2><p>获取字符串的哈希代码值</p>
 <ul>
 <li>@arg <code>string</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>@ret {<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h2 id="hash-string-">
 			hash(string)
@@ -316,7 +316,7 @@ throw e;
 		</h2><p>测试回调函数的异常处理函数是否为默认</p>
 <ul>
 <li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: true
@@ -377,9 +377,9 @@ console.log(that.a.b);
 			<span><a class="mark" href="#random-start-end-" id="random-start-end-">#</a></span>
 		</h2><p>获取在<code>start</code>到<code>end</code>之间的随机数</p>
 <ul>
-<li>@arg <code>[start=0]</code> {<a href="nativeTypes.html#int"><code>int</code></a>}</li>
-<li>@arg <code>[end=1e8]</code> {<a href="nativeTypes.html#int"><code>int</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>@arg <code>[start=0]</code> {<a href="native_types.html#int"><code>int</code></a>}</li>
+<li>@arg <code>[end=1e8]</code> {<a href="native_types.html#int"><code>int</code></a>}</li>
+<li>@ret {<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h2 id="fixrandom-chance-chances-">
 			fixRandom(chance[,...chances])
@@ -387,9 +387,9 @@ console.log(that.a.b);
 		</h2><p>通过概率随机获取从<code>0</code>到传入概率数量<code>arguments.length</code>的随机数</p>
 <p>传入的概率之和不能为<code>0</code></p>
 <ul>
-<li>@arg <code>chance</code> {<a href="nativeTypes.html#float"><code>float</code></a>}</li>
-<li>@arg <code>[...chances]</code> {<a href="nativeTypes.html#float"><code>float</code></a>}</li>
-<li>@arg {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>chance</code> {<a href="native_types.html#float"><code>float</code></a>}</li>
+<li>@arg <code>[...chances]</code> {<a href="native_types.html#float"><code>float</code></a>}</li>
+<li>@arg {<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: 3 5 9
@@ -438,7 +438,7 @@ util.extendClass(B, { test3: function() { } })
 <ul>
 <li>@arg <code>subclass</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"><code>Class</code></a>}</li>
 <li>@arg <code>baseclass</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"><code>Class</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="select-default-value-">
 			select(default,value)
@@ -457,7 +457,7 @@ util.extendClass(B, { test3: function() { } })
 <ul>
 <li>@arg <code>obj</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 <li>@arg <code>filters</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>}</li>
-<li>@arg <code>[non=false]</code> {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>[non=false]</code> {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 </ul>
 <p>Example:</p>
@@ -489,7 +489,7 @@ console.log(util.filter(obj, [&#39;a&#39;, &#39;c&#39;], true)
 			<span><a class="mark" href="#dev" id="dev">#</a></span>
 		</h2><p>是否为开发状态</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="config">
 			config
@@ -503,7 +503,7 @@ console.log(util.filter(obj, [&#39;a&#39;, &#39;c&#39;], true)
 			<span><a class="mark" href="#timezone" id="timezone">#</a></span>
 		</h2><p>获取当前时区</p>
 <ul>
-<li>{<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>{<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 
       </div>

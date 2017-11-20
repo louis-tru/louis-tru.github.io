@@ -455,7 +455,7 @@
 <h3 id="video-onwaitbuffer">
 			Video.onWaitBuffer
 			<span><a class="mark" href="#video-onwaitbuffer" id="video-onwaitbuffer">#</a></span>
-		</h3><p>缓冲等待时触发, 事件数据为<code>0.0-1.0</code><a href="nativeTypes.html#float"><code>float</code></a>数，<code>1.0</code>表示缓冲完成</p>
+		</h3><p>缓冲等待时触发, 事件数据为<code>0.0-1.0</code><a href="native_types.html#float"><code>float</code></a>数，<code>1.0</code>表示缓冲完成</p>
 <h3 id="video-onready">
 			Video.onReady
 			<span><a class="mark" href="#video-onready" id="video-onready">#</a></span>
@@ -494,7 +494,7 @@
 		</h3><p><strong>Default</strong> <code>true</code></p>
 <p>在数据源准备好时是否自动开始播放，<code>false</code>需要调用<code>start()</code>开始播放</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-video-sourcestatus">
 			Get: Video.sourceStatus
@@ -515,14 +515,14 @@
 			<span><a class="mark" href="#video-mute" id="video-mute">#</a></span>
 		</h3><p>是否静音</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="video-volume">
 			Video.volume
 			<span><a class="mark" href="#video-volume" id="video-volume">#</a></span>
 		</h3><p>音频音量<code>0-100</code>之间</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>0-100</code></li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} <code>0-100</code></li>
 </ul>
 <h3 id="video-src">
 			Video.src
@@ -536,49 +536,49 @@
 			<span><a class="mark" href="#get-video-time" id="get-video-time">#</a></span>
 		</h3><p>视频当前播放的时间毫秒数</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
 <h3 id="get-video-duration">
 			Get: Video.duration
 			<span><a class="mark" href="#get-video-duration" id="get-video-duration">#</a></span>
 		</h3><p>视频的总长度毫秒数</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
 <h3 id="get-video-audiotrackindex">
 			Get: Video.audioTrackIndex
 			<span><a class="mark" href="#get-video-audiotrackindex" id="get-video-audiotrackindex">#</a></span>
 		</h3><p>当前音频轨道索引</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-video-audiotrackcount">
 			Get: Video.audioTrackCount
 			<span><a class="mark" href="#get-video-audiotrackcount" id="get-video-audiotrackcount">#</a></span>
 		</h3><p>支持音频轨道数</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="video-disablewaitbuffer">
 			Video.disableWaitBuffer
 			<span><a class="mark" href="#video-disablewaitbuffer" id="video-disablewaitbuffer">#</a></span>
 		</h3><p>禁用等待数据缓冲，只要有数据立即呈现，不等待</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="video-selectaudiotrack-index-">
 			Video.selectAudioTrack(index)
 			<span><a class="mark" href="#video-selectaudiotrack-index-" id="video-selectaudiotrack-index-">#</a></span>
 		</h3><p>选择音频轨道</p>
 <ul>
-<li>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} audio track index</li>
+<li>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>} audio track index</li>
 </ul>
 <h3 id="video-audiotrack-index-">
 			Video.audioTrack([index])
 			<span><a class="mark" href="#video-audiotrack-index-" id="video-audiotrack-index-">#</a></span>
 		</h3><p>获取音频轨道信息，不传入<code>index</code>返回当前选择的轨道</p>
 <ul>
-<li>@arg <code>[track]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>[track]</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
 <li>@ret {<a href="media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
 </ul>
 <h3 id="video-videotrack-">
@@ -597,8 +597,8 @@
 			<span><a class="mark" href="#video-seek-time-" id="video-seek-time-">#</a></span>
 		</h3><p>跳转到目标<code>time</code>位置</p>
 <ul>
-<li>@arg <code>time</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code>  毫秒</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}  success return <code>true</code></li>
+<li>@arg <code>time</code> {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code>  毫秒</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}  success return <code>true</code></li>
 </ul>
 <h3 id="video-pause-">
 			Video.pause()
@@ -657,7 +657,7 @@
 			AudioPlayer.autoPlay
 			<span><a class="mark" href="#audioplayer-autoplay" id="audioplayer-autoplay">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-audioplayer-sourcestatus">
 			Get: AudioPlayer.sourceStatus
@@ -675,13 +675,13 @@
 			AudioPlayer.mute
 			<span><a class="mark" href="#audioplayer-mute" id="audioplayer-mute">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="audioplayer-volume">
 			AudioPlayer.volume
 			<span><a class="mark" href="#audioplayer-volume" id="audioplayer-volume">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>0-100</code></li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} <code>0-100</code></li>
 </ul>
 <h3 id="audioplayer-src">
 			AudioPlayer.src
@@ -693,45 +693,45 @@
 			Get: AudioPlayer.time
 			<span><a class="mark" href="#get-audioplayer-time" id="get-audioplayer-time">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
 <h3 id="get-audioplayer-duration">
 			Get: AudioPlayer.duration
 			<span><a class="mark" href="#get-audioplayer-duration" id="get-audioplayer-duration">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>} <code>ms</code></li>
 </ul>
 <h3 id="get-audioplayer-trackindex">
 			Get: AudioPlayer.trackIndex
 			<span><a class="mark" href="#get-audioplayer-trackindex" id="get-audioplayer-trackindex">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-audioplayer-trackcount">
 			Get: AudioPlayer.trackCount
 			<span><a class="mark" href="#get-audioplayer-trackcount" id="get-audioplayer-trackcount">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="audioplayer-disablewaitbuffer">
 			AudioPlayer.disableWaitBuffer
 			<span><a class="mark" href="#audioplayer-disablewaitbuffer" id="audioplayer-disablewaitbuffer">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="audioplayer-selecttrack-index-">
 			AudioPlayer.selectTrack(index)
 			<span><a class="mark" href="#audioplayer-selecttrack-index-" id="audioplayer-selecttrack-index-">#</a></span>
 		</h3><p>选择音播放的频轨道</p>
 <ul>
-<li>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} audio track index</li>
+<li>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>} audio track index</li>
 </ul>
 <h3 id="audioplayer-track-index-">
 			AudioPlayer.track([index])
 			<span><a class="mark" href="#audioplayer-track-index-" id="audioplayer-track-index-">#</a></span>
 		</h3><p>不传入<code>index</code>默认返回当前播放的轨道信息</p>
 <ul>
-<li>@arg <code>[track]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} </li>
+<li>@arg <code>[track]</code> {<a href="native_types.html#uint"><code>uint</code></a>} </li>
 <li>@ret {<a href="media.html#object-trackinfo"><code>TrackInfo</code></a>}</li>
 </ul>
 <h3 id="audioplayer-start-">
@@ -741,8 +741,8 @@
 			AudioPlayer.seek(time)
 			<span><a class="mark" href="#audioplayer-seek-time-" id="audioplayer-seek-time-">#</a></span>
 		</h3><ul>
-<li>@arg <code>time</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>} success return <code>true</code></li>
+<li>@arg <code>time</code> {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>} success return <code>true</code></li>
 </ul>
 <h3 id="audioplayer-pause-">
 			AudioPlayer.pause()
@@ -776,14 +776,14 @@
 			<span><a class="mark" href="#trackinfo-width" id="trackinfo-width">#</a></span>
 		</h3><p>输出图像宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-height">
 			TrackInfo.height
 			<span><a class="mark" href="#trackinfo-height" id="trackinfo-height">#</a></span>
 		</h3><p>输出图像高度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-language">
 			TrackInfo.language
@@ -797,35 +797,35 @@
 			<span><a class="mark" href="#trackinfo-bitrate" id="trackinfo-bitrate">#</a></span>
 		</h3><p>码率</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-samplerate">
 			TrackInfo.sampleRate
 			<span><a class="mark" href="#trackinfo-samplerate" id="trackinfo-samplerate">#</a></span>
 		</h3><p>声音采样率</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-channelcount">
 			TrackInfo.channelCount
 			<span><a class="mark" href="#trackinfo-channelcount" id="trackinfo-channelcount">#</a></span>
 		</h3><p>声音声道数量</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="trackinfo-channellayout">
 			TrackInfo.channelLayout
 			<span><a class="mark" href="#trackinfo-channellayout" id="trackinfo-channellayout">#</a></span>
 		</h3><p>音频声道布局掩码 <a href="media.html#enum-audiochannelmask"><code>AudioChannelMask</code></a></p>
 <ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>}</li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="trackinfo-frameinterval">
 			TrackInfo.frameInterval
 			<span><a class="mark" href="#trackinfo-frameinterval" id="trackinfo-frameinterval">#</a></span>
 		</h3><p>图像帧时间间隔 <code>ms</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h2 id="enum-mediatype">
 			<code>Enum: MediaType</code>

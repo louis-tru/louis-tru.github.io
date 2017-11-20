@@ -473,28 +473,28 @@ cl.onReadystateChange = function() { console.log(this.readyState, this.statusCod
 			<span><a class="mark" href="#httpclientrequest-disablecache-disable-" id="httpclientrequest-disablecache-disable-">#</a></span>
 		</h3><p>禁用缓存,既不保存下载的数据也不读取本地缓存数据</p>
 <ul>
-<li>@arg <code>disable</code> {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>disable</code> {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="httpclientrequest-disablecookie-disable-">
 			HttpClientRequest.disableCookie(disable)
 			<span><a class="mark" href="#httpclientrequest-disablecookie-disable-" id="httpclientrequest-disablecookie-disable-">#</a></span>
 		</h3><p>完全禁用cookie,不保存也不读取</p>
 <ul>
-<li>@arg <code>disable</code> {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>disable</code> {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="httpclientrequest-disablesendcookie-disable-">
 			HttpClientRequest.disableSendCookie(disable)
 			<span><a class="mark" href="#httpclientrequest-disablesendcookie-disable-" id="httpclientrequest-disablesendcookie-disable-">#</a></span>
 		</h3><p>只是不发送本地保存的cookie,但保存服务器设置的cookie</p>
 <ul>
-<li>@arg <code>disable</code> {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>disable</code> {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="httpclientrequest-disablesslverify-disable-">
 			HttpClientRequest.disableSslVerify(disable)
 			<span><a class="mark" href="#httpclientrequest-disablesslverify-disable-" id="httpclientrequest-disablesslverify-disable-">#</a></span>
 		</h3><p>禁用ssl认证,如果站点没有合法的证书,默认请求会发送失败,但可以设置禁用忽略认证</p>
 <ul>
-<li>@arg <code>disable</code> {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>disable</code> {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="httpclientrequest-setrequestheader-headername-value-">
 			HttpClientRequest.setRequestHeader(headerName, value)
@@ -551,7 +551,7 @@ cl.onReadystateChange = function() { console.log(this.readyState, this.statusCod
 <p>当然这个功能需要服务器支持,如果服务完成请求后立即断开连接,那就是无效的。</p>
 <p><strong>默认为<code>true</code></strong></p>
 <ul>
-<li>@arg <code>keepAlive</code> {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@arg <code>keepAlive</code> {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="httpclientrequest-settimeout-time-">
 			HttpClientRequest.setTimeout(time)
@@ -559,7 +559,7 @@ cl.onReadystateChange = function() { console.log(this.readyState, this.statusCod
 		</h3><p>设置一个超时时间,达到超时时间还未完成请求客户端会立即主动中止这个请求,并触发<code>onTimeout</code>与<code>onAbort</code>事件</p>
 <p>默认为<code>0</code>表示永远不超时,单位为毫秒<code>ms</code></p>
 <ul>
-<li>@arg <code>time</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} ms</li>
+<li>@arg <code>time</code> {<a href="native_types.html#uint"><code>uint</code></a>} ms</li>
 </ul>
 <h3 id="httpclientrequest-send-data-">
 			HttpClientRequest.send([data])
@@ -585,25 +585,25 @@ cl.onReadystateChange = function() { console.log(this.readyState, this.statusCod
 			Get: HttpClientRequest.uploadTotal
 			<span><a class="mark" href="#get-httpclientrequest-uploadtotal" id="get-httpclientrequest-uploadtotal">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-httpclientrequest-uploadsize">
 			Get: HttpClientRequest.uploadSize
 			<span><a class="mark" href="#get-httpclientrequest-uploadsize" id="get-httpclientrequest-uploadsize">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-httpclientrequest-downloadtotal">
 			Get: HttpClientRequest.downloadTotal
 			<span><a class="mark" href="#get-httpclientrequest-downloadtotal" id="get-httpclientrequest-downloadtotal">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-httpclientrequest-downloadsize">
 			Get: HttpClientRequest.downloadSize
 			<span><a class="mark" href="#get-httpclientrequest-downloadsize" id="get-httpclientrequest-downloadsize">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-httpclientrequest-readystate">
 			Get: HttpClientRequest.readyState
@@ -615,7 +615,7 @@ cl.onReadystateChange = function() { console.log(this.readyState, this.statusCod
 			Get: HttpClientRequest.statusCode
 			<span><a class="mark" href="#get-httpclientrequest-statuscode" id="get-httpclientrequest-statuscode">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>{<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h3 id="get-httpclientrequest-url">
 			Get: HttpClientRequest.url
@@ -697,19 +697,19 @@ cl2.send();
 			RequestOptions.disableSslVerify
 			<span><a class="mark" href="#requestoptions-disablesslverify" id="requestoptions-disablesslverify">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="requestoptions-disablecache">
 			RequestOptions.disableCache
 			<span><a class="mark" href="#requestoptions-disablecache" id="requestoptions-disablecache">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="requestoptions-disablecookie">
 			RequestOptions.disableCookie
 			<span><a class="mark" href="#requestoptions-disablecookie" id="requestoptions-disablecookie">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// uploat file and save body data
@@ -738,7 +738,7 @@ http.request(opts, function(buff){
 <ul>
 <li>@arg <code>options</code> {<a href="http.html#object-requestoptions"><code>RequestOptions</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return req id</li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var abortid = http.request({
@@ -754,7 +754,7 @@ http.request(opts, function(buff){
 <ul>
 <li>@arg <code>options</code> {<a href="http.html#object-requestoptions"><code>RequestOptions</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return req id</li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var abortid = http.requestStream({ 
@@ -788,7 +788,7 @@ try {
 <li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}            请求的<code>url</code></li>
 <li>@arg <code>save</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        本地保存路径</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return req id</li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
 <h2 id="upload-url-localpath-cb-">
 			upload(url,localPath[,cb])
@@ -799,7 +799,7 @@ try {
 <li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        请求有<code>url</code></li>
 <li>@arg <code>localPath</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    要上传的本地文件路径</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return req id</li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
 <h2 id="get-url-cb-">
 			get(url[,cb])
@@ -810,7 +810,7 @@ try {
 <ul>
 <li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return req id</li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
 <h2 id="post-url-data-cb-">
 			post(url,data[,cb])
@@ -822,7 +822,7 @@ try {
 <li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>data</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>|<a href="https://nodejs.org/dist/latest-v8.x/docs/api/buffer.html"><code>Buffer</code></a>}</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return req id</li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
 <h2 id="getsync-url-">
 			getSync(url)
@@ -846,7 +846,7 @@ try {
 			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
 		</h2><p>通过传入中止<code>id</code>强制中止异步任务与之相似的方法有<a href="fs.html#abort-id-"><code>fs.abort()</code></a> or <a href="reader.html#abort-id-"><code>reader.abort()</code></a></p>
 <ul>
-<li>@arg <code>id</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} abort id</li>
+<li>@arg <code>id</code> {<a href="native_types.html#uint"><code>uint</code></a>} abort id</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var id0 = http.download(&#39;http://192.168.1.100:1026/libs/util/http.js&#39;);

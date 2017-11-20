@@ -1235,37 +1235,37 @@
 			GUITouch.id
 			<span><a class="mark" href="#guitouch-id" id="guitouch-id">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="guitouch-startx">
 			GUITouch.startX
 			<span><a class="mark" href="#guitouch-startx" id="guitouch-startx">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="guitouch-starty">
 			GUITouch.startY
 			<span><a class="mark" href="#guitouch-starty" id="guitouch-starty">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="guitouch-x">
 			GUITouch.x
 			<span><a class="mark" href="#guitouch-x" id="guitouch-x">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="guitouch-y">
 			GUITouch.y
 			<span><a class="mark" href="#guitouch-y" id="guitouch-y">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="guitouch-force">
 			GUITouch.force
 			<span><a class="mark" href="#guitouch-force" id="guitouch-force">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="guitouch-view">
 			GUITouch.view
@@ -1344,7 +1344,7 @@ notification.triggerChange();
 			<span><a class="mark" href="#eventnoticer-enable" id="eventnoticer-enable">#</a></span>
 		</h3><p>事件是否启用,<code>noticer.enable=false</code>可禁用事件的发送,<strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-eventnoticer-name">
 			Get: EventNoticer.name
@@ -1365,7 +1365,7 @@ notification.triggerChange();
 			<span><a class="mark" href="#get-eventnoticer-length" id="get-eventnoticer-length">#</a></span>
 		</h3><p>监听器数量</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="eventnoticer-on-listen-scope-id-">
 			EventNoticer.on(listen[,scope[,id]])
@@ -1374,8 +1374,8 @@ notification.triggerChange();
 <ul>
 <li>@arg <code>func</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}        监听器函数</li>
 <li>@arg <code>[scope]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}        范围<code>this</code>对像</li>
-<li>@arg <code>[id]</code> {<a href="nativeTypes.html#int"><code>int</code></a>}                    指定一个<code>id</code>,如果不指定自动生成一个,如果指定的<code>id</code>已经存在会替换之前的监听器</li>
-<li>@ret {<a href="nativeTypes.html#int"><code>int</code></a>} return <code>id</code>        返回传入的<code>id</code>或自动生成的<code>id</code></li>
+<li>@arg <code>[id]</code> {<a href="native_types.html#int"><code>int</code></a>}                    指定一个<code>id</code>,如果不指定自动生成一个,如果指定的<code>id</code>已经存在会替换之前的监听器</li>
+<li>@ret {<a href="native_types.html#int"><code>int</code></a>} return <code>id</code>        返回传入的<code>id</code>或自动生成的<code>id</code></li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">var scope = { a:100 }
@@ -1414,7 +1414,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 		</h3><p>触发事件数据,并发送数据</p>
 <ul>
 <li>@arg <code>[data]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#int"><code>int</code></a>} return <a href="event.html#event-returnvalue"><code>Event.returnValue</code></a></li>
+<li>@ret {<a href="native_types.html#int"><code>int</code></a>} return <a href="event.html#event-returnvalue"><code>Event.returnValue</code></a></li>
 </ul>
 <h3 id="eventnoticer-triggerwithevent-event-">
 			EventNoticer.triggerWithEvent(event)
@@ -1422,7 +1422,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 		</h3><p>通过<a href="event.html#class-event"><code>Event</code></a>触发事件</p>
 <ul>
 <li>@arg <code>event</code> {<a href="event.html#class-event"><code>Event</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#int"><code>int</code></a>} return <a href="event.html#event-returnvalue"><code>Event.returnValue</code></a></li>
+<li>@ret {<a href="native_types.html#int"><code>int</code></a>} return <a href="event.html#event-returnvalue"><code>Event.returnValue</code></a></li>
 </ul>
 <h3 id="eventnoticer-off-">
 			EventNoticer.off()
@@ -1433,7 +1433,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			<span><a class="mark" href="#eventnoticer-off-id-" id="eventnoticer-off-id-">#</a></span>
 		</h3><p>通过<code>id</code>删除监听器</p>
 <ul>
-<li>@arg <code>id</code>  {<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>@arg <code>id</code>  {<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h3 id="eventnoticer-off-scope-">
 			EventNoticer.off(scope)
@@ -1488,7 +1488,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			Event.returnValue
 			<span><a class="mark" href="#event-returnvalue" id="event-returnvalue">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>{<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h2 id="class-guievent">
 			<code>Class: GUIEvent</code>
@@ -1507,7 +1507,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			Get: GUIEvent.timestamp
 			<span><a class="mark" href="#get-guievent-timestamp" id="get-guievent-timestamp">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>}</li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="guievent-canceldefault-">
 			GUIEvent.cancelDefault()
@@ -1524,14 +1524,14 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			<span><a class="mark" href="#get-guievent-isdefault" id="get-guievent-isdefault">#</a></span>
 		</h3><p><code>returnValue &amp; RETURN_VALUE_MASK_DEFAULT</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-guievent-isbubble">
 			Get: GUIEvent.isBubble
 			<span><a class="mark" href="#get-guievent-isbubble" id="get-guievent-isbubble">#</a></span>
 		</h3><p><code>returnValue &amp; RETURN_VALUE_MASK_BUBBLE</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="class-guiactionevent">
 			<code>Class: GUIActionEvent</code>
@@ -1549,19 +1549,19 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			Get: GUIActionEvent.delay
 			<span><a class="mark" href="#get-guiactionevent-delay" id="get-guiactionevent-delay">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint64"><code>uint64</code></a>}</li>
+<li>{<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
 <h3 id="get-guiactionevent-frame">
 			Get: GUIActionEvent.frame
 			<span><a class="mark" href="#get-guiactionevent-frame" id="get-guiactionevent-frame">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-guiactionevent-loop">
 			Get: GUIActionEvent.loop
 			<span><a class="mark" href="#get-guiactionevent-loop" id="get-guiactionevent-loop">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h2 id="class-guikeyevent">
 			<code>Class: GUIKeyEvent</code>
@@ -1579,49 +1579,49 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			Get: GUIKeyEvent.repeat
 			<span><a class="mark" href="#get-guikeyevent-repeat" id="get-guikeyevent-repeat">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>{<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-shift">
 			Get: GUIKeyEvent.shift
 			<span><a class="mark" href="#get-guikeyevent-shift" id="get-guikeyevent-shift">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-ctrl">
 			Get: GUIKeyEvent.ctrl
 			<span><a class="mark" href="#get-guikeyevent-ctrl" id="get-guikeyevent-ctrl">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-alt">
 			Get: GUIKeyEvent.alt
 			<span><a class="mark" href="#get-guikeyevent-alt" id="get-guikeyevent-alt">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-command">
 			Get: GUIKeyEvent.command
 			<span><a class="mark" href="#get-guikeyevent-command" id="get-guikeyevent-command">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-capslock">
 			Get: GUIKeyEvent.capsLock
 			<span><a class="mark" href="#get-guikeyevent-capslock" id="get-guikeyevent-capslock">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-device">
 			Get: GUIKeyEvent.device
 			<span><a class="mark" href="#get-guikeyevent-device" id="get-guikeyevent-device">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>{<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h3 id="get-guikeyevent-source">
 			Get: GUIKeyEvent.source
 			<span><a class="mark" href="#get-guikeyevent-source" id="get-guikeyevent-source">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#int"><code>int</code></a>}</li>
+<li>{<a href="native_types.html#int"><code>int</code></a>}</li>
 </ul>
 <h3 id="guikeyevent-focusmove">
 			GUIKeyEvent.focusMove
@@ -1639,25 +1639,25 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			Get: GUIClickEvent.x
 			<span><a class="mark" href="#get-guiclickevent-x" id="get-guiclickevent-x">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-guiclickevent-y">
 			Get: GUIClickEvent.y
 			<span><a class="mark" href="#get-guiclickevent-y" id="get-guiclickevent-y">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-guiclickevent-count">
 			Get: GUIClickEvent.count
 			<span><a class="mark" href="#get-guiclickevent-count" id="get-guiclickevent-count">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-guiclickevent-keyboard">
 			Get: GUIClickEvent.keyboard
 			<span><a class="mark" href="#get-guiclickevent-keyboard" id="get-guiclickevent-keyboard">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="class-guihighlightedevent">
 			<code>Class: GUIHighlightedEvent</code>

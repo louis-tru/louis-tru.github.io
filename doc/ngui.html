@@ -914,7 +914,7 @@
 <h2 id="nextframe-cb-">
 			nextFrame(cb)
 			<span><a class="mark" href="#nextframe-cb-" id="nextframe-cb-">#</a></span>
-		</h2><p>渲染下一帧画面后执行，快捷方式 --&gt; <a href="displayPort.html#nextFrame-cb-"><code>nextFrame(cb)</code></a></p>
+		</h2><p>渲染下一帧画面后执行，快捷方式 --&gt; <a href="display_port.html#nextFrame-cb-"><code>nextFrame(cb)</code></a></p>
 <h2 id="new-vx-parent-args-">
 			New(vx[,parent[,...args]])
 			<span><a class="mark" href="#new-vx-parent-args-" id="new-vx-parent-args-">#</a></span>
@@ -934,7 +934,7 @@
 <ul>
 <li>@arg <code>vx</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 <li>@arg <code>[type]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"><code>Class</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="get-app">
 			Get: app
@@ -962,14 +962,14 @@
 			<span><a class="mark" href="#get-displayport" id="get-displayport">#</a></span>
 		</h2><p>获取当前<code>DisplayPort</code>实例</p>
 <ul>
-<li>{<a href="displayPort.html#class-displayport"><code>DisplayPort</code></a>} </li>
+<li>{<a href="display_port.html#class-displayport"><code>DisplayPort</code></a>} </li>
 </ul>
 <h2 id="get-atompixel">
 			Get: atomPixel
 			<span><a class="mark" href="#get-atompixel" id="get-atompixel">#</a></span>
-		</h2><p>屏幕原子像素尺寸，快捷方式 --&gt; <a href="displayPort.html#get-atomPixel"><code>atomPixel</code></a></p>
+		</h2><p>屏幕原子像素尺寸，快捷方式 --&gt; <a href="display_port.html#get-atompixel"><code>atomPixel</code></a></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-view">
 			<code>Class: View</code>
@@ -1059,7 +1059,7 @@ v2.onClick.on(function(ev) {
 		</h3><p>测试<code>view</code>视图是否为当前视图的后代视图</p>
 <ul>
 <li>@arg <code>view</code> {<a href="ngui.html#class-view"><code>View</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-prepend-child-">
 			View.prepend(child)
@@ -1135,14 +1135,14 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#view-focus-" id="view-focus-">#</a></span>
 		</h3><p>获取焦点成功返回<code>true</code></p>
 <ul>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-blur-">
 			View.blur()
 			<span><a class="mark" href="#view-blur-" id="view-blur-">#</a></span>
 		</h3><p>辞去焦点成功返回<code>true</code></p>
 <ul>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-layoutoffset-">
 			View.layoutOffset()
@@ -1166,7 +1166,7 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#view-children-index-" id="view-children-index-">#</a></span>
 		</h3><p>通过索引获取子视图</p>
 <ul>
-<li>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
 <li>@ret {<a href="ngui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-getaction-">
@@ -1210,7 +1210,7 @@ v2.onClick.on(function(ev) {
 <p>Callback: cb()</p>
 <ul>
 <li>@arg <code>style</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
-<li>@arg <code>[delay]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></li>
+<li>@arg <code>[delay]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
 <li>@ret {<a href="action.html#class-keyframeaction"><code>KeyframeAction</code></a>}</li>
 </ul>
@@ -1241,7 +1241,7 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#view-finalopacity-" id="view-finalopacity-">#</a></span>
 		</h3><p>当前视图的不透明度与父视图的最终不透明度的乘积</p>
 <ul>
-<li>@ret {<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>@ret {<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-position-">
 			View.position()
@@ -1257,8 +1257,8 @@ v2.onClick.on(function(ev) {
 		</h3><ul>
 <li><p>对于<a href="ngui.html#class-layout"><code>Layout</code></a>视图而言,如果当前视图或相关视图有更改过与布局相关的属性，</p>
 <p>  这时如果立即获取与屏幕位置相关的属性值或方法调用结果可能会不准确,</p>
-<p>  因为布局视图始终都在渲染前才进行更新，这时应该使用到<a href="displayPort.html#nextFrame-cb-"><code>nextFrame(cb)</code></a>这个函数, </p>
-<p>  <a href="displayPort.html#nextFrame-cb-"><code>nextFrame(cb)</code></a>总是在渲染完帧后执行</p>
+<p>  因为布局视图始终都在渲染前才进行更新，这时应该使用到<a href="display_port.html#nextFrame-cb-"><code>nextFrame(cb)</code></a>这个函数, </p>
+<p>  <a href="display_port.html#nextFrame-cb-"><code>nextFrame(cb)</code></a>总是在渲染完帧后执行</p>
 </li>
 </ul>
 <h3 id="view-overlaptest-point-">
@@ -1267,7 +1267,7 @@ v2.onClick.on(function(ev) {
 		</h3><p>给定一个屏幕中上的座标点测试是否被视图包围</p>
 <ul>
 <li>@arg <code>point</code> {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-addclass-name-">
 			View.addClass(name)
@@ -1295,7 +1295,7 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#get-view-childrencount" id="get-view-childrencount">#</a></span>
 		</h3><p>返回子视图数量</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="view-innertext">
 			View.innerText
@@ -1381,70 +1381,70 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#view-x" id="view-x">#</a></span>
 		</h3><p>矩阵变换中的位移<code>translate.x</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-y">
 			View.y
 			<span><a class="mark" href="#view-y" id="view-y">#</a></span>
 		</h3><p>矩阵变换中的位移<code>translate.y</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-scalex">
 			View.scaleX
 			<span><a class="mark" href="#view-scalex" id="view-scalex">#</a></span>
 		</h3><p>矩阵变换缩放<code>x</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-scaley">
 			View.scaleY
 			<span><a class="mark" href="#view-scaley" id="view-scaley">#</a></span>
 		</h3><p>矩阵变换缩放<code>y</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-rotatez">
 			View.rotateZ
 			<span><a class="mark" href="#view-rotatez" id="view-rotatez">#</a></span>
 		</h3><p>矩阵变换旋转<code>z</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-skewx">
 			View.skewX
 			<span><a class="mark" href="#view-skewx" id="view-skewx">#</a></span>
 		</h3><p>矩阵变换斜歪<code>x</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-skewy">
 			View.skewY
 			<span><a class="mark" href="#view-skewy" id="view-skewy">#</a></span>
 		</h3><p>矩阵变换斜歪<code>y</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-opacity">
 			View.opacity
 			<span><a class="mark" href="#view-opacity" id="view-opacity">#</a></span>
 		</h3><p>不透明度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-visible">
 			View.visible
 			<span><a class="mark" href="#view-visible" id="view-visible">#</a></span>
 		</h3><p>显示与隐藏<code>true</code>为显示<code>false</code>隐藏,<a href="ngui.html#class-layout"><code>Layout</code></a>不占用位置</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-view-finalvisible">
 			Get: View.finalVisible
 			<span><a class="mark" href="#get-view-finalvisible" id="get-view-finalvisible">#</a></span>
 		</h3><p>最终是否显示或隐藏，受父视图影响</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-translate">
 			View.translate
@@ -1472,14 +1472,14 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#view-originx" id="view-originx">#</a></span>
 		</h3><p>矩阵变换的原点<code>x</code>,默认为<code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-originy">
 			View.originY
 			<span><a class="mark" href="#view-originy" id="view-originy">#</a></span>
 		</h3><p>矩阵变换的原点<code>x</code>,默认为<code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="view-origin">
 			View.origin
@@ -1500,7 +1500,7 @@ v2.onClick.on(function(ev) {
 			<span><a class="mark" href="#get-view-level" id="get-view-level">#</a></span>
 		</h3><p>在<code>gui</code>视图树中的等级<code>level</code>, <a href="ngui.html#class-root"><code>Root</code></a>视图为<code>1</code>, 如果为<code>0</code>表示这个视图还没有父视图</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="view-needdraw">
 			View.needDraw
@@ -1512,7 +1512,7 @@ v2.onClick.on(function(ev) {
 <p>当这个值为<code>true</code>时会强制绘制这个视图不管是否在屏幕范围内外。</p>
 <p><a href="ngui.html#class-view"><code>View</code></a>默认为<code>true</code>,那些可见的视图默认都为<code>false</code>如:<a href="ngui.html#class-div"><code>Div</code></a>/<a href="ngui.html#class-sprite"><code>Sprite</code></a>/<a href="ngui.html#class-hybrid"><code>Hybrid</code></a></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-receive">
 			View.receive
@@ -1520,21 +1520,21 @@ v2.onClick.on(function(ev) {
 		</h3><p>是否响应接收事件,默认为<code>false</code>不接收,事件会穿透到最底层直到有视图接收并处理该事件，</p>
 <p>但当有事件监听时会自动设置为<code>true</code>，当然你可以手动关闭它。</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="view-isfocus">
 			View.isFocus
 			<span><a class="mark" href="#view-isfocus" id="view-isfocus">#</a></span>
 		</h3><p>是否为焦点状态,焦点状态可以响应键盘事件,以及非触屏与非鼠标事件,当然你要确保<code>receive</code>为打开状态</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-view-viewtype">
 			Get: View.viewType
 			<span><a class="mark" href="#get-view-viewtype" id="get-view-viewtype">#</a></span>
 		</h3><p>返回视图类型的<code>id</code>不同的视图都有唯一的值</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="view-style">
 			View.style
@@ -1587,11 +1587,11 @@ console.log(view.class);
 			<span><a class="mark" href="#sprite-width" id="sprite-width">#</a></span>
 		</h3><p><strong>Default</strong><code>0</code></p>
 <ul>
-<li><p>浮点类型的宽度,这里的单位并非为像素,这要参照<a href="displayPort.html#class-displayport"><code>DisplayPort</code></a>设置的尺寸与屏幕的缩放</p>
+<li><p>浮点类型的宽度,这里的单位并非为像素,这要参照<a href="display_port.html#class-displayport"><code>DisplayPort</code></a>设置的尺寸与屏幕的缩放</p>
 </li>
 <li><p>这个值也表示选取图像的宽度，当然这个值会受<code>ratio</code>影响,<code>ratio</code>越小实际选取的图像范围越大</p>
 </li>
-<li><p>{<a href="nativeTypes.html#float"><code>float</code></a>}</p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>}</p>
 </li>
 </ul>
 <h3 id="sprite-height">
@@ -1599,7 +1599,7 @@ console.log(view.class);
 			<span><a class="mark" href="#sprite-height" id="sprite-height">#</a></span>
 		</h3><p>浮点类型的高度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-start">
 			Sprite.start
@@ -1621,14 +1621,14 @@ console.log(view.class);
 			<span><a class="mark" href="#sprite-startx" id="sprite-startx">#</a></span>
 		</h3><p>选取图像有开始位置<code>x</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-starty">
 			Sprite.startY
 			<span><a class="mark" href="#sprite-starty" id="sprite-starty">#</a></span>
 		</h3><p>选取图像有开始位置<code>y</code> <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-ratio">
 			Sprite.ratio
@@ -1643,14 +1643,14 @@ console.log(view.class);
 			<span><a class="mark" href="#sprite-ratiox" id="sprite-ratiox">#</a></span>
 		</h3><p>图像比例尺<code>x</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-ratioy">
 			Sprite.ratioY
 			<span><a class="mark" href="#sprite-ratioy" id="sprite-ratioy">#</a></span>
 		</h3><p>图像比例尺<code>y</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="sprite-repeat">
 			Sprite.repeat
@@ -1676,7 +1676,7 @@ console.log(view.class);
 			<span><a class="mark" href="#get-label-length" id="get-label-length">#</a></span>
 		</h3><p>获取标签视图文本内容长度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="label-value">
 			Label.value
@@ -1697,7 +1697,7 @@ console.log(view.class);
 			<span><a class="mark" href="#get-label-textheight" id="get-label-textheight">#</a></span>
 		</h3><p>文本顶部与底部的距离</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="label-textalign">
 			Label.textAlign
@@ -1741,14 +1741,14 @@ console.log(view.class);
 			<span><a class="mark" href="#get-layout-clientwidth" id="get-layout-clientwidth">#</a></span>
 		</h3><p>布局的clientWidth宽度，在<a href="ngui.html#class-box"><code>Box</code></a>中这个值包含<code>finalMargin</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-layout-clientheight">
 			Get: Layout.clientHeight
 			<span><a class="mark" href="#get-layout-clientheight" id="get-layout-clientheight">#</a></span>
 		</h3><p>布局的clientHeight高度，在<a href="ngui.html#class-box"><code>Box</code></a>中这个值包含<code>finalMargin</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-span">
 			<code>Class: Span</code>
@@ -1773,7 +1773,7 @@ console.log(view.class);
 			<span><a class="mark" href="#get-textnode-length" id="get-textnode-length">#</a></span>
 		</h3><p>文本字符串的长度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="textnode-value">
 			TextNode.value
@@ -1787,14 +1787,14 @@ console.log(view.class);
 			<span><a class="mark" href="#get-textnode-texthoribearing" id="get-textnode-texthoribearing">#</a></span>
 		</h3><p>文本基线距离文本顶部的距离,不同字体与不同尺寸字号会不相同</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-textnode-textheight">
 			Get: TextNode.textHeight
 			<span><a class="mark" href="#get-textnode-textheight" id="get-textnode-textheight">#</a></span>
 		</h3><p>文本顶部与底部的距离</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-box">
 			<code>Class: Box</code>
@@ -1818,7 +1818,7 @@ console.log(view.class);
 <p>  使用这个类型的值时，如果父视图没有<code>明确</code>宽度值，会导致最长最复杂的迭代运算。</p>
 </li>
 <li><p><code>pixel</code> - <code>明确</code>的像素数值并非真正就义上的像素，使用浮点数表示但在这里不能为负，</p>
-<p>  <code>1</code>代表屏幕的多少像素需要参照<a href="displayPort.html#class-displayport"><code>DisplayPort</code></a>中设置的尺寸与屏幕的缩放</p>
+<p>  <code>1</code>代表屏幕的多少像素需要参照<a href="display_port.html#class-displayport"><code>DisplayPort</code></a>中设置的尺寸与屏幕的缩放</p>
 </li>
 <li><p><code>percent</code> - 百分比值使用<code>10%</code>形式表示，取父视图<code>width</code>的百分比值，需要父视图有<code>明确</code>的<code>width</code>，</p>
 <p>  否则百分比值不会生效，为<code>模糊</code>值与<code>auto</code>无异</p>
@@ -1910,28 +1910,28 @@ console.log(view.class);
 			<span><a class="mark" href="#box-borderleftwidth" id="box-borderleftwidth">#</a></span>
 		</h3><p>左边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-bordertopwidth">
 			Box.borderTopWidth
 			<span><a class="mark" href="#box-bordertopwidth" id="box-bordertopwidth">#</a></span>
 		</h3><p>上边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-borderrightwidth">
 			Box.borderRightWidth
 			<span><a class="mark" href="#box-borderrightwidth" id="box-borderrightwidth">#</a></span>
 		</h3><p>右边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-borderbottomwidth">
 			Box.borderBottomWidth
 			<span><a class="mark" href="#box-borderbottomwidth" id="box-borderbottomwidth">#</a></span>
 		</h3><p>下边框宽度 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-borderleftcolor">
 			Box.borderLeftColor
@@ -1966,28 +1966,28 @@ console.log(view.class);
 			<span><a class="mark" href="#box-borderradiuslefttop" id="box-borderradiuslefttop">#</a></span>
 		</h3><p>左上圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-borderradiusrighttop">
 			Box.borderRadiusRightTop
 			<span><a class="mark" href="#box-borderradiusrighttop" id="box-borderradiusrighttop">#</a></span>
 		</h3><p>右上圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-borderradiusrightbottom">
 			Box.borderRadiusRightBottom
 			<span><a class="mark" href="#box-borderradiusrightbottom" id="box-borderradiusrightbottom">#</a></span>
 		</h3><p>右下圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-borderradiusleftbottom">
 			Box.borderRadiusLeftBottom
 			<span><a class="mark" href="#box-borderradiusleftbottom" id="box-borderradiusleftbottom">#</a></span>
 		</h3><p>左下圆角尺寸 <strong>Default</strong><code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="box-backgroundcolor">
 			Box.backgroundColor
@@ -2001,49 +2001,49 @@ console.log(view.class);
 			<span><a class="mark" href="#box-newline" id="box-newline">#</a></span>
 		</h3><p>是否在新行开始布局 <strong>Default</strong> <code>false</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-box-finalwidth">
 			Get: Box.finalWidth
 			<span><a class="mark" href="#get-box-finalwidth" id="get-box-finalwidth">#</a></span>
 		</h3><p>获取最终宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-finalheight">
 			Get: Box.finalHeight
 			<span><a class="mark" href="#get-box-finalheight" id="get-box-finalheight">#</a></span>
 		</h3><p>获取最高度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-finalmarginleft">
 			Get: Box.finalMarginLeft
 			<span><a class="mark" href="#get-box-finalmarginleft" id="get-box-finalmarginleft">#</a></span>
 		</h3><p>获取最终布局后的左外边距宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-finalmargintop">
 			Get: Box.finalMarginTop
 			<span><a class="mark" href="#get-box-finalmargintop" id="get-box-finalmargintop">#</a></span>
 		</h3><p>获取最终布局后的上外边距宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-finalmarginright">
 			Get: Box.finalMarginRight
 			<span><a class="mark" href="#get-box-finalmarginright" id="get-box-finalmarginright">#</a></span>
 		</h3><p>获取最终布局后的右外边距宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-box-finalmarginbottom">
 			Get: Box.finalMarginBottom
 			<span><a class="mark" href="#get-box-finalmarginbottom" id="get-box-finalmarginbottom">#</a></span>
 		</h3><p>获取最终布局后的下外边距宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="set-box-margin">
 			Set: Box.margin
@@ -2064,7 +2064,7 @@ console.log(view.class);
 			<span><a class="mark" href="#set-box-borderwidth" id="set-box-borderwidth">#</a></span>
 		</h3><p>同时设置全部的边框宽度值</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="set-box-bordercolor">
 			Set: Box.borderColor
@@ -2078,7 +2078,7 @@ console.log(view.class);
 			<span><a class="mark" href="#set-box-borderradius" id="set-box-borderradius">#</a></span>
 		</h3><p>同时设置全部的边圆角值</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-div">
 			<code>Class: Div</code>
@@ -2274,14 +2274,14 @@ console.log(view.class);
 			<span><a class="mark" href="#get-image-sourcewidth" id="get-image-sourcewidth">#</a></span>
 		</h3><p>源图像的像素宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-image-sourceheight">
 			Get: Image.sourceHeight
 			<span><a class="mark" href="#get-image-sourceheight" id="get-image-sourceheight">#</a></span>
 		</h3><p>源图像的像素高度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h2 id="class-selectpanel">
 			<code>Class: SelectPanel</code>
@@ -2301,35 +2301,35 @@ console.log(view.class);
 			<span><a class="mark" href="#selectpanel-allowleave" id="selectpanel-allowleave">#</a></span>
 		</h3><p>是否允许内部<a href="ngui.html#class-button"><code>Button</code></a>按钮将焦点切换到外部</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="selectpanel-allowentry">
 			SelectPanel.allowEntry
 			<span><a class="mark" href="#selectpanel-allowentry" id="selectpanel-allowentry">#</a></span>
 		</h3><p>是否允许外部<a href="ngui.html#class-button"><code>Button</code></a>按钮将焦点切换到内部</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="selectpanel-intervaltime">
 			SelectPanel.intervalTime
 			<span><a class="mark" href="#selectpanel-intervaltime" id="selectpanel-intervaltime">#</a></span>
 		</h3><p>切换的时间限制，离上一次切换时间不到<code>intervalTime</code>不允许切换</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} ms</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} ms</li>
 </ul>
 <h3 id="selectpanel-enableselect">
 			SelectPanel.enableSelect
 			<span><a class="mark" href="#selectpanel-enableselect" id="selectpanel-enableselect">#</a></span>
 		</h3><p>是否允许内部<a href="ngui.html#class-button"><code>Button</code></a>切换焦点</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-selectpanel-isactivity">
 			Get: SelectPanel.isActivity
 			<span><a class="mark" href="#get-selectpanel-isactivity" id="get-selectpanel-isactivity">#</a></span>
 		</h3><p>是否激活状态，当内部<a href="ngui.html#class-button"><code>Button</code></a>拥有焦点时为激活状态</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-selectpanel-parentpanel">
 			Get: SelectPanel.parentPanel
@@ -2350,7 +2350,7 @@ console.log(view.class);
 			<span><a class="mark" href="#button-defaulthighlighted" id="button-defaulthighlighted">#</a></span>
 		</h3><p>是否使用高亮样式默认，<strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="button-sethighlighted-status-">
 			Button.setHighlighted(status)
@@ -2395,7 +2395,7 @@ console.log(view.class);
 		</h3><p>滚动到指定位置，并可指定滚动动画的时间与曲线</p>
 <ul>
 <li>@arg <code>scroll</code> {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
-<li>@arg <code>[duration]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code>, 过渡时间，不传入参数使用<code>defaultScrollDuration</code>值</li>
+<li>@arg <code>[duration]</code> {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code>, 过渡时间，不传入参数使用<code>defaultScrollDuration</code>值</li>
 <li>@arg <code>[curve]</code> {<a href="value.html#class-curve"><code>Curve</code></a>} 过渡的曲线，不传入参数使用<code>defaultScrollCurve</code>值</li>
 </ul>
 <h3 id="basicscroll-terminate-">
@@ -2414,49 +2414,49 @@ console.log(view.class);
 			<span><a class="mark" href="#basicscroll-scrollx" id="basicscroll-scrollx">#</a></span>
 		</h3><p>滚动到指定<code>x</code>位置</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrolly">
 			BasicScroll.scrollY
 			<span><a class="mark" href="#basicscroll-scrolly" id="basicscroll-scrolly">#</a></span>
 		</h3><p>滚动到指定<code>y</code>位置</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollwidth">
 			BasicScroll.scrollWidth
 			<span><a class="mark" href="#basicscroll-scrollwidth" id="basicscroll-scrollwidth">#</a></span>
 		</h3><p>可滚动内容宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollheight">
 			BasicScroll.scrollHeight
 			<span><a class="mark" href="#basicscroll-scrollheight" id="basicscroll-scrollheight">#</a></span>
 		</h3><p>可滚动内容高度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollbar">
 			BasicScroll.scrollbar
 			<span><a class="mark" href="#basicscroll-scrollbar" id="basicscroll-scrollbar">#</a></span>
 		</h3><p>是否显示滚动条</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-resistance">
 			BasicScroll.resistance
 			<span><a class="mark" href="#basicscroll-resistance" id="basicscroll-resistance">#</a></span>
 		</h3><p>惯性滚动阻力，最小<code>0.5</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>} <code>0.5-...</code></li>
+<li>{<a href="native_types.html#float"><code>float</code></a>} <code>0.5-...</code></li>
 </ul>
 <h3 id="basicscroll-bounce">
 			BasicScroll.bounce
 			<span><a class="mark" href="#basicscroll-bounce" id="basicscroll-bounce">#</a></span>
 		</h3><p>是否使用反弹 <strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-bouncelock">
 			BasicScroll.bounceLock
@@ -2464,21 +2464,21 @@ console.log(view.class);
 		</h3><p>是否锁定反弹 <strong>Default</strong> <code>true</code> </p>
 <p>当内容尺寸小于当前<code>Scroll</code>尺寸时是否可以拖拽并反弹，<code>true</code>表示不能被拖拽</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-momentum">
 			BasicScroll.momentum
 			<span><a class="mark" href="#basicscroll-momentum" id="basicscroll-momentum">#</a></span>
 		</h3><p>拖拽是否引发惯性运动</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-lockdirection">
 			BasicScroll.lockDirection
 			<span><a class="mark" href="#basicscroll-lockdirection" id="basicscroll-lockdirection">#</a></span>
 		</h3><p>是否锁定方向,只能往一个轴向滚动</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-catchpositionx">
 			BasicScroll.catchPositionX
@@ -2491,7 +2491,7 @@ console.log(view.class);
 </li>
 <li><p>小于<code>1</code>表示捕获当前<code>Scroll</code>视图的<code>finalWidth</code></p>
 </li>
-<li><p>{<a href="nativeTypes.html#float"><code>float</code></a>}</p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>}</p>
 </li>
 </ul>
 <h3 id="basicscroll-catchpositiony">
@@ -2501,7 +2501,7 @@ console.log(view.class);
 <ul>
 <li><p>捕获位置<code>y</code>，小于<code>1</code>表示捕获当前<code>Scroll</code>视图的<code>finalHeight</code></p>
 </li>
-<li><p>{<a href="nativeTypes.html#float"><code>float</code></a>}</p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>}</p>
 </li>
 </ul>
 <h3 id="basicscroll-scrollbarcolor">
@@ -2516,35 +2516,35 @@ console.log(view.class);
 			<span><a class="mark" href="#get-basicscroll-hscrollbar" id="get-basicscroll-hscrollbar">#</a></span>
 		</h3><p>当前是否显示<code>hScrollbar</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="get-basicscroll-vscrollbar">
 			Get: BasicScroll.vScrollbar
 			<span><a class="mark" href="#get-basicscroll-vscrollbar" id="get-basicscroll-vscrollbar">#</a></span>
 		</h3><p>当前是否显示<code>vScrollbar</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollbarwidth">
 			BasicScroll.scrollbarWidth
 			<span><a class="mark" href="#basicscroll-scrollbarwidth" id="basicscroll-scrollbarwidth">#</a></span>
 		</h3><p>滚动条的宽度</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-scrollbarmargin">
 			BasicScroll.scrollbarMargin
 			<span><a class="mark" href="#basicscroll-scrollbarmargin" id="basicscroll-scrollbarmargin">#</a></span>
 		</h3><p>滚动条的边距</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="basicscroll-defaultscrollduration">
 			BasicScroll.defaultScrollDuration
 			<span><a class="mark" href="#basicscroll-defaultscrollduration" id="basicscroll-defaultscrollduration">#</a></span>
 		</h3><p>调用<code>scrollTo</code> 或设置<code>scroll</code>时的默认滚动过渡时间，<strong>Default</strong> <code>0</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} ms</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} ms</li>
 </ul>
 <h3 id="basicscroll-defaultscrollcurve">
 			BasicScroll.defaultScrollCurve
@@ -2569,28 +2569,28 @@ console.log(view.class);
 			<span><a class="mark" href="#scroll-focusmarginleft" id="scroll-focusmarginleft">#</a></span>
 		</h3><p>内部按钮切换时滚动的左边距</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focusmarginright">
 			Scroll.focusMarginRight
 			<span><a class="mark" href="#scroll-focusmarginright" id="scroll-focusmarginright">#</a></span>
 		</h3><p>内部按钮切换时滚动的右边距</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focusmargintop">
 			Scroll.focusMarginTop
 			<span><a class="mark" href="#scroll-focusmargintop" id="scroll-focusmargintop">#</a></span>
 		</h3><p>内部按钮切换时滚动的上边距</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focusmarginbottom">
 			Scroll.focusMarginBottom
 			<span><a class="mark" href="#scroll-focusmarginbottom" id="scroll-focusmarginbottom">#</a></span>
 		</h3><p>内部按钮切换时滚动的下边距</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="scroll-focusalignx">
 			Scroll.focusAlignX
@@ -2611,7 +2611,7 @@ console.log(view.class);
 			<span><a class="mark" href="#scroll-enablefocusalign" id="scroll-enablefocusalign">#</a></span>
 		</h3><p>内部按钮切换时是否滚动可见位置 <strong>Default</strong> <code>true</code></p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="scroll-enablefixedscrollsize">
 			Scroll.enableFixedScrollSize
@@ -2632,28 +2632,28 @@ console.log(view.class);
 			<span><a class="mark" href="#get-text-length" id="get-text-length">#</a></span>
 		</h3><p>文本字符串长度</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="text-value">
 			Text.value
 			<span><a class="mark" href="#text-value" id="text-value">#</a></span>
 		</h3><p>获取或设置文本字符串</p>
 <ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="get-text-texthoribearing">
 			Get: Text.textHoriBearing
 			<span><a class="mark" href="#get-text-texthoribearing" id="get-text-texthoribearing">#</a></span>
 		</h3><p>文本基线距离文本顶部的距离,不同字体与不同尺寸字号会不相同</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="get-text-textheight">
 			Get: Text.textHeight
 			<span><a class="mark" href="#get-text-textheight" id="get-text-textheight">#</a></span>
 		</h3><p>文本顶部与底部的距离</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-input">
 			<code>Class: Input</code>
@@ -2721,14 +2721,14 @@ console.log(view.class);
 			<span><a class="mark" href="#text-security" id="text-security">#</a></span>
 		</h3><p>是否将文本显示为安全模式</p>
 <ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="text-textmargin">
 			Text.textMargin
 			<span><a class="mark" href="#text-textmargin" id="text-textmargin">#</a></span>
 		</h3><p>文本内容显示的左右边距</p>
 <ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h2 id="class-textarea">
 			<code>Class: Textarea</code>

@@ -168,19 +168,19 @@
 			StreamData.complete
 			<span><a class="mark" href="#streamdata-complete" id="streamdata-complete">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>} 读取是否完成</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>} 读取是否完成</li>
 </ul>
 <h3 id="streamdata-size">
 			StreamData.size
 			<span><a class="mark" href="#streamdata-size" id="streamdata-size">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} 已经读取到的数据总量</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} 已经读取到的数据总量</li>
 </ul>
 <h3 id="streamdata-total">
 			StreamData.total
 			<span><a class="mark" href="#streamdata-total" id="streamdata-total">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>} 全部数据源的总大小,有可能是<code>0</code>,为<code>0</code>表示数据大小未知,可能为无限大比如为视频直播数据流</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>} 全部数据源的总大小,有可能是<code>0</code>,为<code>0</code>表示数据大小未知,可能为无限大比如为视频直播数据流</li>
 </ul>
 <h2 id="readstream-path-cb-">
 			readStream(path[,cb])
@@ -192,7 +192,7 @@
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    要读取的文件路径</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
 </ul>
 <h2 id="read-path-cb-">
 			read(path[,cb])
@@ -203,7 +203,7 @@
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        </li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
+<li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// async read file stream 
@@ -249,7 +249,7 @@ reader.read(&#39;lib:///util/util.js&#39;, function(d){
 <p>这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code></p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="isfilesync-path-">
 			isFileSync(path)
@@ -257,7 +257,7 @@ reader.read(&#39;lib:///util/util.js&#39;, function(d){
 		</h2><p>测试文件是否存在</p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="isdirectorysync-path-">
 			isDirectorySync(path)
@@ -265,14 +265,14 @@ reader.read(&#39;lib:///util/util.js&#39;, function(d){
 		</h2><p>测试目录是否存在</p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h2 id="abort-id-">
 			abort(id)
 			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
 		</h2><p>通过<code>id</code>中止异步任务，与<a href="fs.html#abort-id-"><code>fs.abort</code></a>功能相同</p>
 <ul>
-<li>@arg id {<a href="nativeTypes.html#uint"><code>uint</code></a>} 传入的中止<code>id</code></li>
+<li>@arg id {<a href="native_types.html#uint"><code>uint</code></a>} 传入的中止<code>id</code></li>
 </ul>
 
       </div>

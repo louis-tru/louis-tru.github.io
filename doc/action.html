@@ -540,7 +540,7 @@ var act2 = action.create({
 <ul>
 <li>@arg <code>view</code>     {<a href="ngui.html#class-view"><code>View</code></a>}</li>
 <li>@arg <code>style</code>  {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
-<li>@arg <code>[delay]</code>  {<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></li>
+<li>@arg <code>[delay]</code>  {<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></li>
 <li>@arg <code>[cb]</code>     {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
 <li>@ret {<a href="action.html#class-keyframeaction"><code>KeyframeAction</code></a>}</li>
 </ul>
@@ -590,7 +590,7 @@ action.transition(view2, {
 </li>
 <li><p>不包含延时时间，如果想在延时之前，可传入负数<code>time</code></p>
 </li>
-<li><p>@arg <code>time</code> {<a href="nativeTypes.html#int"><code>int</code></a>} <code>ms</code></p>
+<li><p>@arg <code>time</code> {<a href="native_types.html#int"><code>int</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="action-seekplay-time-">
@@ -599,7 +599,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>跳转到目标<code>time</code>时间，并开始播放，调用后会重置<code>loopd</code></p>
 </li>
-<li><p>@arg <code>time</code> {<a href="nativeTypes.html#int"><code>int</code></a>} <code>ms</code></p>
+<li><p>@arg <code>time</code> {<a href="native_types.html#int"><code>int</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="action-seekstop-time-">
@@ -608,7 +608,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>跳转到目标<code>time</code>时间，并停止播放，调用后会重置<code>loopd</code></p>
 </li>
-<li><p>@arg <code>time</code> {<a href="nativeTypes.html#int"><code>int</code></a>} <code>ms</code></p>
+<li><p>@arg <code>time</code> {<a href="native_types.html#int"><code>int</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="action-clear-">
@@ -623,7 +623,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>动作循环播放的次数，<code>-1</code>表示无限循环</p>
 </li>
-<li><p>{<a href="nativeTypes.html#int"><code>int</code></a>}</p>
+<li><p>{<a href="native_types.html#int"><code>int</code></a>}</p>
 </li>
 </ul>
 <h3 id="get-action-loopd">
@@ -632,7 +632,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>当前动作已经循环播放的次数</p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>}</p>
 </li>
 </ul>
 <h3 id="action-delay">
@@ -641,7 +641,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>延时播放</p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="get-action-delayd">
@@ -650,7 +650,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>延时过去的时间</p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="action-speed">
@@ -659,7 +659,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>播放速率，默认为<code>1.0</code>，可设置的范围在<code>0.1</code>到<code>10.0</code>之间</p>
 </li>
-<li><p>{<a href="nativeTypes.html#float"><code>float</code></a>} <code>0.1-10</code></p>
+<li><p>{<a href="native_types.html#float"><code>float</code></a>} <code>0.1-10</code></p>
 </li>
 </ul>
 <h3 id="action-playing">
@@ -668,7 +668,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>是否播放中，设置<code>action.playing = true</code>相当调用<code>action.play()</code></p>
 </li>
-<li><p>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</p>
+<li><p>{<a href="native_types.html#bool"><code>bool</code></a>}</p>
 </li>
 </ul>
 <h3 id="get-action-duration">
@@ -677,7 +677,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>当前动作的时长不包括延时，对于<a href="action.html#class-spawnaction"><code>SpawnAction</code></a>取最长的子动作</p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="get-action-parent">
@@ -703,7 +703,7 @@ action.transition(view2, {
 			Get: GroupAction.length
 			<span><a class="mark" href="#get-groupaction-length" id="get-groupaction-length">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</li>
+<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
 <h3 id="groupaction-append-child-">
 			GroupAction.append(child)
@@ -720,7 +720,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>插入子动作到<code>index</code>的位置</p>
 </li>
-<li><p>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}    </p>
+<li><p>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}    </p>
 </li>
 <li>@arg <code>child</code> {<a href="action.html#class-action"><code>Action</code></a>}</li>
 </ul>
@@ -730,7 +730,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>通过<code>index</code>删除子动作</p>
 </li>
-<li><p>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</p>
+<li><p>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}</p>
 </li>
 </ul>
 <h3 id="groupaction-children-index-">
@@ -739,7 +739,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>获取子动作</p>
 </li>
-<li><p>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</p>
+<li><p>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}</p>
 </li>
 <li>@ret {<a href="action.html#class-action"><code>Action</code></a>}</li>
 </ul>
@@ -798,7 +798,7 @@ action.transition(view2, {
 </li>
 <li><p>@arg <code>name</code> {<a href="css.html#enum-propertyname"><code>PropertyName</code></a>} </p>
 </li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="keyframeaction-matchproperty-name-">
 			KeyframeAction.matchProperty(name)
@@ -808,7 +808,7 @@ action.transition(view2, {
 </li>
 <li><p>@arg <code>name</code> {<a href="css.html#enum-propertyname"><code>PropertyName</code></a>} </p>
 </li>
-<li>@ret {<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="keyframeaction-frame-index-">
 			KeyframeAction.frame(index)
@@ -816,7 +816,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>通过索引获取关键帧</p>
 </li>
-<li><p>@arg <code>index</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>}</p>
+<li><p>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}</p>
 </li>
 <li>@ret {<a href="action.html#class-frame"><code>Frame</code></a>}</li>
 </ul>
@@ -826,7 +826,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>通过<code>time</code>时间与曲线<code>curve</code>添加关键帧，并返回关键帧</p>
 </li>
-<li><p>arg <code>[time=0]</code> {<a href="nativeTypes.html#uint"><code>uint</code></a>} 不传入<code>time</code>默认为<code>0</code></p>
+<li><p>arg <code>[time=0]</code> {<a href="native_types.html#uint"><code>uint</code></a>} 不传入<code>time</code>默认为<code>0</code></p>
 </li>
 <li><p>arg <code>[curve=&#39;ease&#39;]</code> {<a href="value.html#class-curve"><code>Curve</code></a>} 不传入<code>curve</code>默认为<a href="action.html#ease"><code>EASE</code></a></p>
 <p>  可使用 <a href="action.html#linear"><code>LINEAR</code></a>、<a href="action.html#ease"><code>EASE</code></a>、<a href="action.html#ease_in"><code>EASE_IN</code></a>、<a href="action.html#ease_out"><code>EASE_OUT</code></a>、<a href="action.html#ease_in_out"><code>EASE_IN_OUT</code></a></p>
@@ -869,7 +869,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>关键帧数量</p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>}</p>
 </li>
 </ul>
 <h3 id="get-keyframeaction-position">
@@ -878,7 +878,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>当前关键帧的播放位置，<code>-1</code>表示还未开始播放</p>
 </li>
-<li><p>{<a href="nativeTypes.html#int"><code>int</code></a>} </p>
+<li><p>{<a href="native_types.html#int"><code>int</code></a>} </p>
 </li>
 </ul>
 <h3 id="get-keyframeaction-time">
@@ -887,7 +887,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>当前播放时间<code>time</code></p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h2 id="class-frame">
@@ -918,7 +918,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>关键帧所在的动作中的索引位置</p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>}</p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>}</p>
 </li>
 </ul>
 <h3 id="frame-time">
@@ -927,7 +927,7 @@ action.transition(view2, {
 		</h3><ul>
 <li><p>关键帧的所在动作中的时间<code>time</code></p>
 </li>
-<li><p>{<a href="nativeTypes.html#uint"><code>uint</code></a>} <code>ms</code></p>
+<li><p>{<a href="native_types.html#uint"><code>uint</code></a>} <code>ms</code></p>
 </li>
 </ul>
 <h3 id="get-frame-host">
@@ -990,7 +990,7 @@ action.transition(view2, {
 			Frame.borderWidth
 			<span><a class="mark" href="#frame-borderwidth" id="frame-borderwidth">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-bordercolor">
 			Frame.borderColor
@@ -1002,7 +1002,7 @@ action.transition(view2, {
 			Frame.borderWadius
 			<span><a class="mark" href="#frame-borderwadius" id="frame-borderwadius">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-minwidth">
 			Frame.minWidth
@@ -1032,79 +1032,79 @@ action.transition(view2, {
 			Frame.width
 			<span><a class="mark" href="#frame-width" id="frame-width">#</a></span>
 		</h3><ul>
-<li>{<a href="value.html#class-value"><code>Value</code></a>|<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>|<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-height">
 			Frame.height
 			<span><a class="mark" href="#frame-height" id="frame-height">#</a></span>
 		</h3><ul>
-<li>{<a href="value.html#class-value"><code>Value</code></a>|<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="value.html#class-value"><code>Value</code></a>|<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-x">
 			Frame.x
 			<span><a class="mark" href="#frame-x" id="frame-x">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-y">
 			Frame.y
 			<span><a class="mark" href="#frame-y" id="frame-y">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-scalex">
 			Frame.scaleX
 			<span><a class="mark" href="#frame-scalex" id="frame-scalex">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-scaley">
 			Frame.scaleY
 			<span><a class="mark" href="#frame-scaley" id="frame-scaley">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-skewx">
 			Frame.skewX
 			<span><a class="mark" href="#frame-skewx" id="frame-skewx">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-skewy">
 			Frame.skewY
 			<span><a class="mark" href="#frame-skewy" id="frame-skewy">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-originx">
 			Frame.originX
 			<span><a class="mark" href="#frame-originx" id="frame-originx">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-originy">
 			Frame.originY
 			<span><a class="mark" href="#frame-originy" id="frame-originy">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-rotatez">
 			Frame.rotateZ
 			<span><a class="mark" href="#frame-rotatez" id="frame-rotatez">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-opacity">
 			Frame.opacity
 			<span><a class="mark" href="#frame-opacity" id="frame-opacity">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-visible">
 			Frame.visible
 			<span><a class="mark" href="#frame-visible" id="frame-visible">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="frame-marginleft">
 			Frame.marginLeft
@@ -1158,25 +1158,25 @@ action.transition(view2, {
 			Frame.borderLeftWidth
 			<span><a class="mark" href="#frame-borderleftwidth" id="frame-borderleftwidth">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-bordertopwidth">
 			Frame.borderTopWidth
 			<span><a class="mark" href="#frame-bordertopwidth" id="frame-bordertopwidth">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-borderrightwidth">
 			Frame.borderRightWidth
 			<span><a class="mark" href="#frame-borderrightwidth" id="frame-borderrightwidth">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-borderbottomwidth">
 			Frame.borderBottomWidth
 			<span><a class="mark" href="#frame-borderbottomwidth" id="frame-borderbottomwidth">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-borderleftcolor">
 			Frame.borderLeftColor
@@ -1206,25 +1206,25 @@ action.transition(view2, {
 			Frame.borderRadiusLeftTop
 			<span><a class="mark" href="#frame-borderradiuslefttop" id="frame-borderradiuslefttop">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-borderradiusrighttop">
 			Frame.borderRadiusRightTop
 			<span><a class="mark" href="#frame-borderradiusrighttop" id="frame-borderradiusrighttop">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-borderradiusrightbottom">
 			Frame.borderRadiusRightBottom
 			<span><a class="mark" href="#frame-borderradiusrightbottom" id="frame-borderradiusrightbottom">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-borderradiusleftbottom">
 			Frame.borderRadiusLeftBottom
 			<span><a class="mark" href="#frame-borderradiusleftbottom" id="frame-borderradiusleftbottom">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-backgroundcolor">
 			Frame.backgroundColor
@@ -1236,7 +1236,7 @@ action.transition(view2, {
 			Frame.newline
 			<span><a class="mark" href="#frame-newline" id="frame-newline">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#bool"><code>bool</code></a>}</li>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
 <h3 id="frame-contentalign">
 			Frame.contentAlign
@@ -1266,25 +1266,25 @@ action.transition(view2, {
 			Frame.startX
 			<span><a class="mark" href="#frame-startx" id="frame-startx">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-starty">
 			Frame.startY
 			<span><a class="mark" href="#frame-starty" id="frame-starty">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-ratiox">
 			Frame.ratioX
 			<span><a class="mark" href="#frame-ratiox" id="frame-ratiox">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-ratioy">
 			Frame.ratioY
 			<span><a class="mark" href="#frame-ratioy" id="frame-ratioy">#</a></span>
 		</h3><ul>
-<li>{<a href="nativeTypes.html#float"><code>float</code></a>}</li>
+<li>{<a href="native_types.html#float"><code>float</code></a>}</li>
 </ul>
 <h3 id="frame-repeat">
 			Frame.repeat
