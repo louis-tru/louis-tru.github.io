@@ -483,7 +483,7 @@
 <li><p>如果传入的数据里有<code>spawn</code>属性创建<a href="action.html#class-spawnaction"><code>SpawnAction</code></a></p>
 </li>
 <li><p>如果传入的数据里没有<code>seq</code>也没<code>spawn</code>创建<a href="action.html#class-keyframeaction"><code>KeyframeAction</code></a>，</p>
-<p>  对像的内部属性<code>frame</code>如果为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>，那么用这个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>创建<a href="action.html#class-frame"><code>Frame</code></a></p>
+<p>  对像的内部属性<code>keyframe</code>如果为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>，那么用这个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>创建<a href="action.html#class-frame"><code>Frame</code></a></p>
 </li>
 <li><p>@arg <code>json</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</p>
 </li>
@@ -497,7 +497,7 @@
 ]);
 var act1 = action.create({
     delay: 1000,
-    frame: [
+    keyframe: [
         { time:0, x:0, curve: &#39;linear&#39;, },
         { time:1000, x:100 },
     ]
@@ -507,7 +507,7 @@ var act2 = action.create({
     loop: -1,
     seq: [
         {
-            frame: [
+            keyframe: [
                 { time:0, x: 0 },
                 { time:1000, x: 100 },
             ]
