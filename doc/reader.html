@@ -213,13 +213,11 @@ reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
     /*Success*/ 
     console.log(d.data.length, d.complete);
 }));
-reader.readStream(&#39;lib:///util/util.js&#39;, function(d){ }));
 
 // async read file
 reader.read(&#39;http://www.baidu.com&#39;, function(d){ }));
 reader.read(&#39;file:///var/data/test.txt&#39;, function(d){ }));
-reader.read(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){ }));
-reader.read(&#39;lib:///util/util.js&#39;, function(d){ 
+reader.read(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){ 
     /*Success*/ 
     console.log(d.length);
 }.catch(e=&gt;{ /*Fail*/ }));
