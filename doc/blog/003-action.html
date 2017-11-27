@@ -77,7 +77,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.1.0 Documentation</h1>
+        <h1>Ngui v0.1.2 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -91,7 +91,10 @@
         <h2>Table of Contents</h2>
         <ul>
 <li>
-<span><a href="#-action-">动作(Action)系统简介</a></span>
+<span><a href="#ngui-">Ngui简介</a></span>
+</li>
+<li>
+<span><a href="#-action-">什么是Action动作</a></span>
 </li>
 <li>
 <span><a href="#-">动作是什么原理</a></span>
@@ -128,8 +131,27 @@
       </div>
 
       <div id="apicontent">
-        <h1 id="-action-">
-			动作(Action)系统简介
+        <h1 id="ngui-">
+			Ngui简介
+			<span><a class="mark" href="#ngui-" id="ngui-">#</a></span>
+		</h1><p>这是一个GUI的排版显示引擎和跨平台的GUI应用程序开发框架，基于NodeJS/OpenGL，这也是第一个在移动端Android/iOS融合NodeJS的前端GUI项目，至此JavaScript成为了真正意义上前后端通吃的语言。</p>
+<p>Ngui的目标：在此基础上开发GUI应用程序可拥有开发WEB应用般简单与速度同时兼顾Native应用程序的性能与体验。</p>
+<ul>
+<li><p><a href="http://www.jianshu.com/p/2104b885eae6"><code>开源跨平台移动项目Ngui【简介】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/b21bf5380c7f"><code>开源跨平台移动项目Ngui【入门】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/4e9d927c3724"><code>开源跨平台移动项目Ngui【视图与布局系统】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/01064b100315"><code>开源跨平台移动项目Ngui【Action动作系统】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/fb86b020554b"><code>开源跨平台移动项目Ngui【CSS样式表规则及用法】</code></a></p>
+</li>
+<li><p><a href="http://nodegui.org/doc/"><code>Ngui API 文档</code></a></p>
+</li>
+</ul>
+<h1 id="-action-">
+			什么是Action动作
 			<span><a class="mark" href="#-action-" id="-action-">#</a></span>
 		</h1><p>什么是动作呢？顾名思义它是管理运行环境中所有动作的中枢，通俗点讲就是动画。它也是总个框架核心组件之一，它提供动作的创建、删除、插入，以及提供对关键帧与过渡的诸多操作。关键帧的过渡可以使用三次贝塞尔曲线，或内置的曲线  linear/ease/ease_in/ease_out/ease_in_out，这也和大多数主流框架以及游戏引擎类似。</p>
 <h1 id="-">

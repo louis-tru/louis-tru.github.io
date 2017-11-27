@@ -77,7 +77,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.1.0 Documentation</h1>
+        <h1>Ngui v0.1.2 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -90,6 +90,9 @@
       <div id="toc">
         <h2>Table of Contents</h2>
         <ul>
+<li>
+<span><a href="#ngui-">Ngui简介</a></span>
+</li>
 <li>
 <span><a href="#-view">视图View</a></span>
 <ul>
@@ -127,10 +130,29 @@
       </div>
 
       <div id="apicontent">
-        <h1 id="-view">
+        <h1 id="ngui-">
+			Ngui简介
+			<span><a class="mark" href="#ngui-" id="ngui-">#</a></span>
+		</h1><p>这是一个GUI的排版显示引擎和跨平台的GUI应用程序开发框架，基于NodeJS/OpenGL，这也是第一个在移动端Android/iOS融合NodeJS的前端GUI项目，至此JavaScript成为了真正意义上前后端通吃的语言。</p>
+<p>Ngui的目标：在此基础上开发GUI应用程序可拥有开发WEB应用般简单与速度同时兼顾Native应用程序的性能与体验。</p>
+<ul>
+<li><p><a href="http://www.jianshu.com/p/2104b885eae6"><code>开源跨平台移动项目Ngui【简介】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/b21bf5380c7f"><code>开源跨平台移动项目Ngui【入门】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/4e9d927c3724"><code>开源跨平台移动项目Ngui【视图与布局系统】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/01064b100315"><code>开源跨平台移动项目Ngui【Action动作系统】</code></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/fb86b020554b"><code>开源跨平台移动项目Ngui【CSS样式表规则及用法】</code></a></p>
+</li>
+<li><p><a href="http://nodegui.org/doc/"><code>Ngui API 文档</code></a></p>
+</li>
+</ul>
+<h1 id="-view">
 			视图View
 			<span><a class="mark" href="#-view" id="-view">#</a></span>
-		</h1><p>在上一篇中我已经为大家讲了<a href="http://blog.csdn.net/weixin_39880732/article/details/77994682"><code>Ngui入门</code></a>，今天我就来介绍<code>ngui</code>的核心部分（视图与布局）。</p>
+		</h1><p>在上一篇中我已经为大家讲了<a href="http://www.jianshu.com/p/b21bf5380c7f"><code>Ngui入门</code></a>，今天我就来介绍<code>ngui</code>的核心部分（视图与布局）。</p>
 <p><a href="http://nodegui.org/doc/ngui.html#class-view">View</a>为<code>gui</code>核心部件派生为<a href="http://nodegui.org/doc/event.html#class-notification">Notification</a>。
 用它来描述屏幕上所有可见的元素,它是所有视图的基础类型它也是事件的响应者，这些事件由硬件以及操作系统触发。详细的API文档讲大家去<a href="http://nodegui.org/doc/ngui.html#class-view"><code>这里</code></a>查阅。</p>
 <p>下面是<code>ngui</code>现在提供的所有<a href="http://nodegui.org/doc/ngui.html#class-view">View</a>继承关系图：
@@ -208,16 +230,16 @@
 <ul>
 <li>x</li>
 <li>y</li>
-<li>scale_x</li>
-<li>scale_y</li>
-<li>rotate_z</li>
-<li>skew_x</li>
-<li>skew_y</li>
+<li>scaleX</li>
+<li>scaleY</li>
+<li>rotateZ</li>
+<li>skewX</li>
+<li>skewY</li>
 </ul>
 <p>你可以通过<code>matrix</code>属性得到这个矩阵但它是只读的，只能通过<code>x</code>与<code>y</code>这个方式对它进行设置。</p>
 <p>调用final_matrix()函数得到的是父视图的<code>final_matrix</code>与当前视图的<code>matrix</code>乘积。对这就是这个视图在屏幕是的真实位置，确切的讲是这个<a href="http://nodegui.org/doc/ngui.html#class-view">View</a>.origin在屏幕上的确切位置，因为严谨的说一张图片或一个矩形在屏幕上是由4个点组成的一个面。</p>
 <p>注意：
-频繁的交替设置<code>transform</code>与调用<code>matrix</code>/<code>final_matrix</code>会带来不必要的性能消耗，<code>ngui</code>的渲染逻辑是在渲染画面前不对任何<code>gui</code>属性设置做额外的计算只做存储并该标记属性的改变，等待准备渲染前才做统一的计算。当一个视图的<code>transform</code>改变时如果这时你要获取<code>matrix</code>与<code>final_matrix</code>那么直接返回<code>matrix</code>或<code>final_matrix</code>那一定是不正确的，幸好系统会做检测当发生了改变你要强取些值会提前对这些值做运算，返回一个正确的值给你，但如果你频繁的设置与获取，那就会频繁的做些运算。并且这只仅限于非布局视图，在布局视图上这样做并不会返回正确的值参见<a href="http://nodegui.org/doc/ngui.html#trap-in-layout">Trap in Layout</a></p>
+频繁的交替设置<code>transform</code>与调用<code>matrix</code>/<code>finalMatrix</code>会带来不必要的性能消耗，<code>ngui</code>的渲染逻辑是在渲染画面前不对任何视图属性设置做额外的计算只做存储并该标记属性的改变，等待准备渲染前才做统一的计算。当一个视图的<code>transform</code>改变时如果这时你要获取<code>matrix</code>与<code>finalMatrix</code>那么直接返回<code>matrix</code>或<code>finalMatrix</code>那一定是不正确的，幸好系统会做检测当发生了改变你要强取些值会提前对这些值做运算，返回一个正确的值给你，但如果你频繁的设置与获取，那就会频繁的做些运算。并且这只仅限于非布局视图，在布局视图上这样做并不会返回正确的值参见<a href="http://nodegui.org/doc/ngui.html#trap-in-layout">Trap in Layout</a></p>
 <h2 id="-">
 			布局视图
 			<span><a class="mark" href="#-" id="-">#</a></span>
@@ -230,8 +252,8 @@
 <h3 id="div">
 			Div
 			<span><a class="mark" href="#div" id="div">#</a></span>
-		</h3><p>从API文档上看见<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>只有一个属性<code>content_align</code>, 那么这里重点讲述就是这个属性，因为它是与浏览器完全不相同有的地方，至于基础类型<a href="http://nodegui.org/doc/ngui.html#class-box">Box</a>大家可以参与API文档会有详细说明，注意<code>padding</code>这个属性在<code>ngui</code>里是没有的，因为这个导致系统复杂性上升，但以后要不要加待定。</p>
-<p>在<code>ngui</code>中<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>并没有自己单独的浮动方式这个属性。但<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>能设置它的<code>content_align</code>对它的内容对齐方式做出更改，这个属性可选的值有4个，默认为<code>left</code>左对齐</p>
+		</h3><p>从API文档上看见<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>只有一个属性<code>contentAlign</code>, 那么这里重点讲述就是这个属性，因为它是与浏览器完全不相同有的地方，至于基础类型<a href="http://nodegui.org/doc/ngui.html#class-box">Box</a>大家可以参与API文档会有详细说明，注意<code>padding</code>这个属性在<code>ngui</code>里是没有的，因为这个导致系统复杂性上升，但以后要不要加待定。</p>
+<p>在<code>ngui</code>中<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>并没有自己单独的浮动方式这个属性。但<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>能设置它的<code>contentAlign</code>对它的内容对齐方式做出更改，这个属性可选的值有4个，默认为<code>left</code>左对齐</p>
 <ul>
 <li>left</li>
 <li>right</li>
@@ -247,7 +269,7 @@
 <h3 id="hybrid">
 			Hybrid
 			<span><a class="mark" href="#hybrid" id="hybrid">#</a></span>
-		</h3><p>与<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>一样它也只有一个属性<code>text_align</code>但它可以对任何<a href="http://nodegui.org/doc/ngui.html#class-layout">Layout</a>内容做排版处理这当然也包括<a href="http://nodegui.org/doc/ngui.html#class-span">Span</a>与<a href="http://nodegui.org/doc/ngui.html#class-textnode">TextNode</a>。</p>
+		</h3><p>与<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>一样它也只有一个属性<code>textAlign</code>但它可以对任何<a href="http://nodegui.org/doc/ngui.html#class-layout">Layout</a>内容做排版处理这当然也包括<a href="http://nodegui.org/doc/ngui.html#class-span">Span</a>与<a href="http://nodegui.org/doc/ngui.html#class-textnode">TextNode</a>。</p>
 <p>与<a href="http://nodegui.org/doc/ngui.html#class-div">Div</a>的区别<a href="http://nodegui.org/doc/ngui.html#class-hybrid">Hybrid</a>的内容方式的不同，<a href="http://nodegui.org/doc/ngui.html#class-hybrid">Hybrid</a>把它的所有内容都当成文本进行处理。它的可选有6个，默认为<code>left</code></p>
 <ul>
 <li>left</li>
@@ -294,7 +316,7 @@
 <h3 id="limit-indeplimit">
 			Limit，IndepLimit
 			<span><a class="mark" href="#limit-indeplimit" id="limit-indeplimit">#</a></span>
-		</h3><p>限制的盒子，min_width, max_width，min_height，max_height，这些属性能限制盒子的尺寸，这与html中的限制很相似。</p>
+		</h3><p>限制的盒子，minWidth, maxWidth，minHeight，maxHeight，这些属性能限制盒子的尺寸，这与html中的限制很相似。</p>
 <h3 id="root">
 			Root
 			<span><a class="mark" href="#root" id="root">#</a></span>
@@ -315,25 +337,25 @@
 new App().start(
     &lt;Root&gt;
         &lt;Div margin=20 width=&quot;full&quot; height=100
-         background_color=&quot;#f00&quot;&gt;
+         backgroundColor=&quot;#f00&quot;&gt;
             &lt;Indep width=50 height=50 
-            background_color=&quot;#f0f&quot; 
-            align_x=&quot;center&quot;
-            align_y=&quot;center&quot; /&gt;
+            backgroundColor=&quot;#f0f&quot; 
+            alignX=&quot;center&quot;
+            alignY=&quot;center&quot; /&gt;
             &lt;Div width=50 height=&quot;50&quot; 
-            background_color=&quot;#00f&quot; /&gt;
+            backgroundColor=&quot;#00f&quot; /&gt;
         &lt;/Div&gt;
         &lt;Hybrid margin=20 width=&quot;full&quot; height=100 
-        background_color=&quot;#f00&quot; text_color=&quot;#ff0&quot; 
-        text_background_color=&quot;#00f6&quot;&gt;
+        backgroundColor=&quot;#f00&quot; textColor=&quot;#ff0&quot; 
+        textBackgroundColor=&quot;#00f6&quot;&gt;
             Hello 
-            &lt;TextNode text_color=&quot;#000&quot;&gt;
+            &lt;TextNode textColor=&quot;#000&quot;&gt;
                 Ngui!
             &lt;/TextNode&gt;
         &lt;/Hybrid&gt;
         &lt;Hybrid margin=20 width=&quot;full&quot; height=100 
-        background_color=&quot;#f00&quot; 
-        text_align=&quot;center_reverse&quot;&gt;
+        backgroundColor=&quot;#f00&quot; 
+        textAlign=&quot;center_reverse&quot;&gt;
             Hello Ngui!
         &lt;/Hybrid&gt;
     &lt;/Root&gt;
