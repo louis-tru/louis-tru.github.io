@@ -86,7 +86,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.1.7 Documentation</h1>
+        <h1>Ngui v0.1.9 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -302,7 +302,13 @@
 <span><a href="#download-url-save-cb-">download(url,save[,cb])</a></span>
 </li>
 <li>
+<span><a href="#downloadsync-url-save-">downloadSync(url,save)</a></span>
+</li>
+<li>
 <span><a href="#upload-url-localpath-cb-">upload(url,localPath[,cb])</a></span>
+</li>
+<li>
+<span><a href="#uploadsync-url-local_path-">uploadSync(url,local_path)</a></span>
 </li>
 <li>
 <span><a href="#get-url-cb-">get(url[,cb])</a></span>
@@ -799,6 +805,14 @@ try {
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
 <li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
 </ul>
+<h2 id="downloadsync-url-save-">
+			downloadSync(url,save)
+			<span><a class="mark" href="#downloadsync-url-save-" id="downloadsync-url-save-">#</a></span>
+		</h2><p>同步下载并保存文件，失败抛出异常</p>
+<ul>
+<li>@arg <code>url</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}            请求的<code>url</code></li>
+<li>@arg <code>save</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}        本地保存路径</li>
+</ul>
 <h2 id="upload-url-localpath-cb-">
 			upload(url,localPath[,cb])
 			<span><a class="mark" href="#upload-url-localpath-cb-" id="upload-url-localpath-cb-">#</a></span>
@@ -809,6 +823,14 @@ try {
 <li>@arg <code>localPath</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}    要上传的本地文件路径</li>
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
 <li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return req id</li>
+</ul>
+<h2 id="uploadsync-url-local_path-">
+			uploadSync(url,local_path)
+			<span><a class="mark" href="#uploadsync-url-local_path-" id="uploadsync-url-local_path-">#</a></span>
+		</h2><p>同步上传文件，失败抛出异常</p>
+<ul>
+<li>@arg url {String}</li>
+<li>@arg local_path {String}</li>
 </ul>
 <h2 id="get-url-cb-">
 			get(url[,cb])
