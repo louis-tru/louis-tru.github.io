@@ -86,7 +86,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.1.9 Documentation</h1>
+        <h1>Ngui v0.1.12 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -122,10 +122,10 @@
 <span><a href="#readstream-path-cb-">readStream(path[,cb])</a></span>
 </li>
 <li>
-<span><a href="#read-path-cb-">read(path[,cb])</a></span>
+<span><a href="#readfile-path-cb-">readFile(path[,cb])</a></span>
 </li>
 <li>
-<span><a href="#readsync-path-">readSync(path)</a></span>
+<span><a href="#readfilesync-path-">readFileSync(path)</a></span>
 </li>
 <li>
 <span><a href="#readdirsync-path-">readdirSync(path)</a></span>
@@ -203,9 +203,9 @@
 <li>@arg <code>[cb]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
 <li>@ret {<a href="native_types.html#uint"><code>uint</code></a>} return abort <code>id</code></li>
 </ul>
-<h2 id="read-path-cb-">
-			read(path[,cb])
-			<span><a class="mark" href="#read-path-cb-" id="read-path-cb-">#</a></span>
+<h2 id="readfile-path-cb-">
+			readFile(path[,cb])
+			<span><a class="mark" href="#readfile-path-cb-" id="readfile-path-cb-">#</a></span>
 		</h2><p>异步读取文件，并返回中止<code>id</code>,通过中止<code>id</code>可强制取消当前的读取任务</p>
 <p>成功后通过回调返回<a href="https://nodejs.org/dist/latest-v8.x/docs/api/buffer.html"><code>Buffer</code></a>数据</p>
 <p>Callback: <code>cb(data)</code> (data:<a href="https://nodejs.org/dist/latest-v8.x/docs/api/buffer.html"><code>Buffer</code></a>)</p>
@@ -231,9 +231,9 @@ reader.read(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
     console.log(d.length);
 }.catch(e=&gt;{ /*Fail*/ }));
 </code></pre>
-<h2 id="readsync-path-">
-			readSync(path)
-			<span><a class="mark" href="#readsync-path-" id="readsync-path-">#</a></span>
+<h2 id="readfilesync-path-">
+			readFileSync(path)
+			<span><a class="mark" href="#readfilesync-path-" id="readfilesync-path-">#</a></span>
 		</h2><p>同步读取文件,成功返回文件<code>Buffer</code>失败会抛出异常</p>
 <ul>
 <li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>

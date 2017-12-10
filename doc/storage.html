@@ -86,7 +86,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.1.9 Documentation</h1>
+        <h1>Ngui v0.1.12 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -122,6 +122,9 @@
 </li>
 <li>
 <span><a href="#claer-">claer()</a></span>
+</li>
+<li>
+<span><a href="#transaction-cb-">transaction(cb)</a></span>
 </li>
 </ul>
 </li>
@@ -183,6 +186,13 @@
 			claer()
 			<span><a class="mark" href="#claer-" id="claer-">#</a></span>
 		</h2><p>删除所有本地值,包括普通数据与json数据</p>
+<h2 id="transaction-cb-">
+			transaction(cb)
+			<span><a class="mark" href="#transaction-cb-" id="transaction-cb-">#</a></span>
+		</h2><p>使用sqlite事物, 启用最高速度访问本地存储接口api, 事件结束将数据保存到本地</p>
+<ul>
+<li>@arg <code>cb</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>}</li>
+</ul>
 
       </div>
 
