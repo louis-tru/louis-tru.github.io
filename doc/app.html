@@ -86,7 +86,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.1.12 Documentation</h1>
+        <h1>Ngui v0.2.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -140,6 +140,15 @@
 </li>
 <li>
 <span><a href="#guiapplication-sendemail-recipient-subject-cc-bcc-body-">GUIApplication.sendEmail(recipient,subject[,cc[,bcc[,body]]])</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-maxtexturememorylimit-">GUIApplication.maxTextureMemoryLimit()</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-setmaxtexturememorylimit-limit-">GUIApplication.setMaxTextureMemoryLimit(limit)</a></span>
+</li>
+<li>
+<span><a href="#guiapplication-usedtexturememory-">GUIApplication.usedTextureMemory()</a></span>
 </li>
 <li>
 <span><a href="#get-guiapplication-isload">Get: GUIApplication.isLoad</a></span>
@@ -283,6 +292,27 @@ new GUIApplication(opts).start(&lt;Root&gt;Hello&lt;/Root&gt;).onLoad = function
 <li>@arg <code>[cc]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>[bcc]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 <li>@arg <code>[body]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h3 id="guiapplication-maxtexturememorylimit-">
+			GUIApplication.maxTextureMemoryLimit()
+			<span><a class="mark" href="#guiapplication-maxtexturememorylimit-" id="guiapplication-maxtexturememorylimit-">#</a></span>
+		</h3><p>获取纹理数据的最大内存限制值</p>
+<ul>
+<li>@ret {[<code>uin64</code>]}</li>
+</ul>
+<h3 id="guiapplication-setmaxtexturememorylimit-limit-">
+			GUIApplication.setMaxTextureMemoryLimit(limit)
+			<span><a class="mark" href="#guiapplication-setmaxtexturememorylimit-limit-" id="guiapplication-setmaxtexturememorylimit-limit-">#</a></span>
+		</h3><p>设置纹理数据的最大内存限制值</p>
+<ul>
+<li>@arg <code>limit</code> {[<code>uin64</code>]}</li>
+</ul>
+<h3 id="guiapplication-usedtexturememory-">
+			GUIApplication.usedTextureMemory()
+			<span><a class="mark" href="#guiapplication-usedtexturememory-" id="guiapplication-usedtexturememory-">#</a></span>
+		</h3><p>返回纹理数据使用的内存大小，这包括字体纹理数据与图像纹理数据</p>
+<ul>
+<li>@ret {[<code>uin64</code>]}</li>
 </ul>
 <h3 id="get-guiapplication-isload">
 			Get: GUIApplication.isLoad
