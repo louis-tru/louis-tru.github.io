@@ -303,7 +303,7 @@ new GUIApplication(opts).start(&lt;Root&gt;Hello&lt;/Root&gt;).onLoad = function
 <h3 id="guiapplication-setmaxtexturememorylimit-limit-">
 			GUIApplication.setMaxTextureMemoryLimit(limit)
 			<span><a class="mark" href="#guiapplication-setmaxtexturememorylimit-limit-" id="guiapplication-setmaxtexturememorylimit-limit-">#</a></span>
-		</h3><p>设置纹理数据的最大内存限制值</p>
+		</h3><p>设置纹理数据的最大内存限制值，系统初始化默认为<code>512MB</code>，当纹理数据内存占用超过这个值，会根据数据的使用频率进行清理。</p>
 <ul>
 <li>@arg <code>limit</code> {<a href="native_types.html#uint64"><code>uint64</code></a>}</li>
 </ul>
