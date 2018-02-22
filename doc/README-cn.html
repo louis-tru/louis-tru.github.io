@@ -86,7 +86,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.2.1 Documentation</h1>
+        <h1>Ngui v0.2.3 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -142,13 +142,27 @@
 <li><p>从这里<a href="http://nodegui.org/doc/"><code>Go API Index</code></a>可以到 <code>API Documents Index</code></p>
 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th><img src="http://nodegui.org/img/0x0ss.jpg" alt=""></th>
+<th><img src="http://nodegui.org/img/0x0ss_3.jpg" alt=""></th>
+<th><img src="http://nodegui.org/img/0x0ss_4.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h1 id="simple-examples">
 			Simple Examples
 			<span><a class="mark" href="#simple-examples" id="simple-examples">#</a></span>
 		</h1><p>这是一个简单的在屏幕上显示<code>hello world!</code>的程序</p>
-<pre><code class="undefinedjsx">import { GUIApplication, Root } from &#39;ngui&#39;
+<pre><code class="undefinedjsx">import { GUIApplication, Text } from &#39;ngui&#39;
 new GUIApplication().start(
-    &lt;Root&gt;hello world!&lt;/Root&gt;
+    &lt;Text&gt;hello world!&lt;/Text&gt;
 )
 </code></pre>
 <p>你可以获取到更加详细的<a href="https://github.com/louis-tru/ngui/tree/master/demo">Examples</a></p>
@@ -172,7 +186,7 @@ $ sudo npm install -g ngui-tools
 <ul>
 <li><p>运行<code>ngui-tools</code> 需要依赖<code>nodejs</code>与<code>python2.7</code></p>
 </li>
-<li><p>并且不能运行在<code>windows</code>系统, 暂时只能在<code>mac</code>下使用</p>
+<li><p>并且不能运行在<code>windows</code>系统, 暂时只能在<code>mac</code>或<code>linux</code>下使用</p>
 </li>
 </ul>
 <h2 id="create-new-project">
@@ -237,6 +251,11 @@ $ ngui
     }
     -->
 </script>
+
+
+
+
+
 
 
       </div>
