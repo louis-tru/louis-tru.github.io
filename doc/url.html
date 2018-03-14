@@ -43,7 +43,7 @@
       </div-->
 
       <h1 id="-ngui-">
-			<a href="http://nodegui.org/"><code>Ngui</code></a>
+			<a href="http://ngui.io/"><code>Ngui</code></a>
 			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
@@ -372,7 +372,7 @@ console.log(url.fallback(&#39;file:///var/data/test.js&#39;));
 // true
 // false
 console.log(url.isAbsolute(&#39;/var/kk&#39;));
-console.log(url.isAbsolute(&#39;http://nodegui.org/&#39;));
+console.log(url.isAbsolute(&#39;http://ngui.io/&#39;));
 console.log(url.isAbsolute(&#39;index.jsx&#39;));
 </code></pre>
 <h2 id="resolve-path-partpaths-">
@@ -385,8 +385,8 @@ console.log(url.isAbsolute(&#39;index.jsx&#39;));
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <p>Example:</p>
-<pre><code class="undefinedjs">// Prints: http://nodegui.org/A/C/test.js
-console.log(url.resolve(&#39;http://nodegui.org/home&#39;, &quot;..&quot;, &quot;A&quot;, &quot;B&quot;, &quot;..&quot;, &quot;C&quot;, &quot;test.js&quot;));
+<pre><code class="undefinedjs">// Prints: http://ngui.io/A/C/test.js
+console.log(url.resolve(&#39;http://ngui.io/home&#39;, &quot;..&quot;, &quot;A&quot;, &quot;B&quot;, &quot;..&quot;, &quot;C&quot;, &quot;test.js&quot;));
 // Prints: 
 // true
 // file:///var/data/aaa/cc/ddd/kk.jpg
@@ -409,12 +409,12 @@ console.log(url.resolve(&#39;aaa/bbb/../cc/.///ddd/kk.jpg&#39;));
 // Prints: file:///var/data/index.js
 var uri = new URL(&#39;index.js&#39;);
 console.log(uri.href);
-// Prints: http://nodegui.org/index.html?args=0
-var uri2 = new URL(&#39;http://nodegui.org/home/../index.html?args=0&#39;)
+// Prints: http://ngui.io/index.html?args=0
+var uri2 = new URL(&#39;http://ngui.io/home/../index.html?args=0&#39;)
 console.log(uri2.href);
 // Prints: 
 // Error: Parse uri error, Illegal URL
-new URL(&#39;http://nodegui.org:&#39;).href
+new URL(&#39;http://ngui.io:&#39;).href
 </code></pre>
 <h3 id="get-url-href">
 			Get: URL.href
@@ -424,8 +424,8 @@ new URL(&#39;http://nodegui.org:&#39;).href
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <p>Example:</p>
-<pre><code class="undefinedjs">// Prints: http://nodegui.org/
-console.log(new URL(&#39;http://nodegui.org/&#39;).href);
+<pre><code class="undefinedjs">// Prints: http://ngui.io/
+console.log(new URL(&#39;http://ngui.io/&#39;).href);
 </code></pre>
 <h3 id="get-url-filename">
 			Get: URL.filename
@@ -435,7 +435,7 @@ console.log(new URL(&#39;http://nodegui.org/&#39;).href);
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <pre><code class="undefinedjs">// Prints: /aaa/bbbb/ccc/test.js
-console.log(new URL(&#39;http://nodegui.org/aaa/bbbb/ccc/test.js&#39;).filename);
+console.log(new URL(&#39;http://ngui.io/aaa/bbbb/ccc/test.js&#39;).filename);
 </code></pre>
 <h3 id="get-url-dirname">
 			Get: URL.dirname
@@ -443,7 +443,7 @@ console.log(new URL(&#39;http://nodegui.org/aaa/bbbb/ccc/test.js&#39;).filename)
 		</h3><p>获取目录名称</p>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: /aaa/bbbb/ccc
-console.log(new URL(&#39;http://nodegui.org/aaa/bbbb/ccc/test.js&#39;).dirname);
+console.log(new URL(&#39;http://ngui.io/aaa/bbbb/ccc/test.js&#39;).dirname);
 </code></pre>
 <h3 id="get-url-search">
 			Get: URL.search
@@ -454,7 +454,7 @@ console.log(new URL(&#39;http://nodegui.org/aaa/bbbb/ccc/test.js&#39;).dirname);
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: ?a=A&amp;b=B
-console.log(new URL(&#39;http://nodegui.org/?a=A&amp;b=B&#39;).search);
+console.log(new URL(&#39;http://ngui.io/?a=A&amp;b=B&#39;).search);
 </code></pre>
 <h3 id="get-url-hash">
 			Get: URL.hash
@@ -465,7 +465,7 @@ console.log(new URL(&#39;http://nodegui.org/?a=A&amp;b=B&#39;).search);
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: #c=C&amp;d=D
-console.log(new URL(&#39;http://nodegui.org/?a=A&amp;b=B#c=C&amp;d=D&#39;).hash);
+console.log(new URL(&#39;http://ngui.io/?a=A&amp;b=B#c=C&amp;d=D&#39;).hash);
 </code></pre>
 <h3 id="get-url-host">
 			Get: URL.host
@@ -475,8 +475,8 @@ console.log(new URL(&#39;http://nodegui.org/?a=A&amp;b=B#c=C&amp;d=D&#39;).hash)
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <p>Example:</p>
-<pre><code class="undefinedjs">// Prints: nodegui.org:80
-console.log(new URL(&#39;http://nodegui.org:81/&#39;).host);
+<pre><code class="undefinedjs">// Prints: ngui.io:80
+console.log(new URL(&#39;http://ngui.io:81/&#39;).host);
 </code></pre>
 <h3 id="get-url-hostname">
 			Get: URL.hostname
@@ -486,8 +486,8 @@ console.log(new URL(&#39;http://nodegui.org:81/&#39;).host);
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <p>Example:</p>
-<pre><code class="undefinedjs">// Prints: nodegui.org
-console.log(new URL(&#39;http://nodegui.org:81/&#39;).host);
+<pre><code class="undefinedjs">// Prints: ngui.io
+console.log(new URL(&#39;http://ngui.io:81/&#39;).host);
 </code></pre>
 <h3 id="get-url-origin">
 			Get: URL.origin
@@ -497,8 +497,8 @@ console.log(new URL(&#39;http://nodegui.org:81/&#39;).host);
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <p>Example:</p>
-<pre><code class="undefinedjs">// Prints: http://nodegui.org:81
-console.log(new URL(&#39;http://nodegui.org:81/host/index.html&#39;).host);
+<pre><code class="undefinedjs">// Prints: http://ngui.io:81
+console.log(new URL(&#39;http://ngui.io:81/host/index.html&#39;).host);
 // Prints: file://
 console.log(new URL(&#39;file:///var/data/index.html&#39;).host);
 </code></pre>
@@ -533,9 +533,9 @@ console.log(new URL(&#39;file:///var/data/index.html&#39;).extname);
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
 <pre><code class="undefinedjs">// Prints: 81
-console.log(new URL(&#39;http://nodegui.org:81&#39;).port);
+console.log(new URL(&#39;http://ngui.io:81&#39;).port);
 // Prints 没有端口号会返回空字符串: &quot;&quot;
-console.log(new URL(&#39;http://nodegui.org&#39;).port);
+console.log(new URL(&#39;http://ngui.io&#39;).port);
 </code></pre>
 <h3 id="get-url-protocol">
 			Get: URL.protocol
@@ -554,7 +554,7 @@ console.log(new URL(&#39;http://nodegui.org&#39;).port);
 //   a: &quot;100&quot;,
 //   b: &quot;test&quot;
 // }
-console.log(new URL(&#39;http://nodegui.org/?a=100&amp;b=test&#39;).params);
+console.log(new URL(&#39;http://ngui.io/?a=100&amp;b=test&#39;).params);
 </code></pre>
 <h3 id="get-url-hashparams">
 			Get: URL.hashParams
@@ -569,7 +569,7 @@ console.log(new URL(&#39;http://nodegui.org/?a=100&amp;b=test&#39;).params);
 //   a: &quot;200&quot;,
 //   b: &quot;300&quot;
 // }
-console.log(new URL(&#39;http://nodegui.org/#a=200&amp;b=300&#39;).hashParams);
+console.log(new URL(&#39;http://ngui.io/#a=200&amp;b=300&#39;).hashParams);
 </code></pre>
 <h3 id="url-getparam-name-">
 			URL.getParam(name)
@@ -581,7 +581,7 @@ console.log(new URL(&#39;http://nodegui.org/#a=200&amp;b=300&#39;).hashParams);
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: ok
-console.log(new URL(&#39;http://nodegui.org/?args=ok&#39;).getParam(&#39;args&#39;));
+console.log(new URL(&#39;http://ngui.io/?args=ok&#39;).getParam(&#39;args&#39;));
 </code></pre>
 <h3 id="url-setparam-name-value-">
 			URL.setParam(name, value)
@@ -629,10 +629,10 @@ console.log(new URL(&#39;http://nodegui.org/?args=ok&#39;).getParam(&#39;args&#3
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: ../A/B/C/test.js
-var uri = new URL(&#39;http://nodegui.org/home/&#39;);
-console.log(uri.relative(&#39;http://nodegui.org/A/B/C/test.js&#39;));
+var uri = new URL(&#39;http://ngui.io/home/&#39;);
+console.log(uri.relative(&#39;http://ngui.io/A/B/C/test.js&#39;));
 // Prints: file:///var/data/A/B/C/test.js
-var uri2 = new URL(&#39;http://nodegui.org/home/&#39;);
+var uri2 = new URL(&#39;http://ngui.io/home/&#39;);
 console.log(uri2.relative(&#39;file:///var/data/A/B/C/test.js&#39;));
 </code></pre>
 <h2 id="-url-url-">
