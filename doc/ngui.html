@@ -58,6 +58,7 @@
 <li><a href="blog/002.html"><code>View and layout</code></a></li>
 <li><a href="blog/003-action.html"><code>Action</code></a></li>
 <li><a href="blog/004-css.html"><code>CSS</code></a></li>
+<li><a href="https://www.jianshu.com/p/e702af75a0c6"><code>Benchmark</code></a></li>
 </ul>
 <h1 id="modules">
 			Modules
@@ -90,7 +91,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.3.1 Documentation</h1>
+        <h1>Ngui v0.4.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -371,6 +372,9 @@
 <span><a href="#get-view-finalvisible">Get: View.finalVisible</a></span>
 </li>
 <li>
+<span><a href="#get-view-screenvisible">Get: View.screenVisible</a></span>
+</li>
+<li>
 <span><a href="#view-translate">View.translate</a></span>
 </li>
 <li>
@@ -574,6 +578,9 @@
 <span><a href="#box-newline">Box.newline</a></span>
 </li>
 <li>
+<span><a href="#box-clip">Box.clip</a></span>
+</li>
+<li>
 <span><a href="#get-box-finalwidth">Get: Box.finalWidth</a></span>
 </li>
 <li>
@@ -670,9 +677,6 @@
 <span><a href="#image-src">Image.src</a></span>
 </li>
 <li>
-<span><a href="#image-backgroundimage">Image.backgroundImage</a></span>
-</li>
-<li>
 <span><a href="#get-image-sourcewidth">Get: Image.sourceWidth</a></span>
 </li>
 <li>
@@ -680,28 +684,28 @@
 </li>
 </ul>
 <li>
-<span><a href="#class-selectpanel">Class: SelectPanel</a></span>
+<span><a href="#class-panel">Class: Panel</a></span>
 <ul>
 <li>
-<span><a href="#selectpanel-onfocusmove">SelectPanel.onFocusMove</a></span>
+<span><a href="#panel-onfocusmove">Panel.onFocusMove</a></span>
 </li>
 <li>
-<span><a href="#selectpanel-allowleave">SelectPanel.allowLeave</a></span>
+<span><a href="#panel-allowleave">Panel.allowLeave</a></span>
 </li>
 <li>
-<span><a href="#selectpanel-allowentry">SelectPanel.allowEntry</a></span>
+<span><a href="#panel-allowentry">Panel.allowEntry</a></span>
 </li>
 <li>
-<span><a href="#selectpanel-intervaltime">SelectPanel.intervalTime</a></span>
+<span><a href="#panel-intervaltime">Panel.intervalTime</a></span>
 </li>
 <li>
-<span><a href="#selectpanel-enableselect">SelectPanel.enableSelect</a></span>
+<span><a href="#panel-enableselect">Panel.enableSelect</a></span>
 </li>
 <li>
-<span><a href="#get-selectpanel-isactivity">Get: SelectPanel.isActivity</a></span>
+<span><a href="#get-panel-isactivity">Get: Panel.isActivity</a></span>
 </li>
 <li>
-<span><a href="#get-selectpanel-parentpanel">Get: SelectPanel.parentPanel</a></span>
+<span><a href="#get-panel-parentpanel">Get: Panel.parentPanel</a></span>
 </li>
 </ul>
 <li>
@@ -1459,6 +1463,13 @@ v2.onClick.on(function(ev) {
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
+<h3 id="get-view-screenvisible">
+			Get: View.screenVisible
+			<span><a class="mark" href="#get-view-screenvisible" id="get-view-screenvisible">#</a></span>
+		</h3><p>该状态标识视图是否在屏幕或区域范围内,这个状态会忽略<code>visible</code>值</p>
+<ul>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
 <h3 id="view-translate">
 			View.translate
 			<span><a class="mark" href="#view-translate" id="view-translate">#</a></span>
@@ -2016,6 +2027,13 @@ console.log(view.class);
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
+<h3 id="box-clip">
+			Box.clip
+			<span><a class="mark" href="#box-clip" id="box-clip">#</a></span>
+		</h3><p>是否修剪溢出的子视图内容 <strong>Default</strong> <code>false</code></p>
+<ul>
+<li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
 <h3 id="get-box-finalwidth">
 			Get: Box.finalWidth
 			<span><a class="mark" href="#get-box-finalwidth" id="get-box-finalwidth">#</a></span>
@@ -2275,13 +2293,6 @@ console.log(view.class);
 <ul>
 <li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
-<h3 id="image-backgroundimage">
-			Image.backgroundImage
-			<span><a class="mark" href="#image-backgroundimage" id="image-backgroundimage">#</a></span>
-		</h3><p>背景图像，这个属性是为了在<code>src</code>图像还在载入中时这个可以做为临时图像源使用</p>
-<ul>
-<li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
-</ul>
 <h3 id="get-image-sourcewidth">
 			Get: Image.sourceWidth
 			<span><a class="mark" href="#get-image-sourcewidth" id="get-image-sourcewidth">#</a></span>
@@ -2296,60 +2307,60 @@ console.log(view.class);
 <ul>
 <li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
 </ul>
-<h2 id="class-selectpanel">
-			<code>Class: SelectPanel</code>
-			<span><a class="mark" href="#class-selectpanel" id="class-selectpanel">#</a></span>
+<h2 id="class-panel">
+			<code>Class: Panel</code>
+			<span><a class="mark" href="#class-panel" id="class-panel">#</a></span>
 		</h2><ul>
 <li><code>extends</code> <a href="ngui.html#class-div"><code>Div</code></a></li>
 </ul>
 <p>按钮面板视图，它对<a href="ngui.html#class-button"><code>Button</code></a>有特别的作用，专门针对<code>tv</code>设备遥控器操作而设计</p>
 <p>需要与<a href="ngui.html#class-button"><code>Button</code></a>配合使用，否则与<a href="ngui.html#class-div"><code>Div</code></a>无异</p>
 <p><strong><code>以下所说的切换都为按下遥控器或键盘时</code></strong></p>
-<h3 id="selectpanel-onfocusmove">
-			SelectPanel.onFocusMove
-			<span><a class="mark" href="#selectpanel-onfocusmove" id="selectpanel-onfocusmove">#</a></span>
+<h3 id="panel-onfocusmove">
+			Panel.onFocusMove
+			<span><a class="mark" href="#panel-onfocusmove" id="panel-onfocusmove">#</a></span>
 		</h3><p>内部<a href="ngui.html#class-button"><code>Button</code></a>焦点切换时触发</p>
-<h3 id="selectpanel-allowleave">
-			SelectPanel.allowLeave
-			<span><a class="mark" href="#selectpanel-allowleave" id="selectpanel-allowleave">#</a></span>
+<h3 id="panel-allowleave">
+			Panel.allowLeave
+			<span><a class="mark" href="#panel-allowleave" id="panel-allowleave">#</a></span>
 		</h3><p>是否允许内部<a href="ngui.html#class-button"><code>Button</code></a>按钮将焦点切换到外部</p>
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="selectpanel-allowentry">
-			SelectPanel.allowEntry
-			<span><a class="mark" href="#selectpanel-allowentry" id="selectpanel-allowentry">#</a></span>
+<h3 id="panel-allowentry">
+			Panel.allowEntry
+			<span><a class="mark" href="#panel-allowentry" id="panel-allowentry">#</a></span>
 		</h3><p>是否允许外部<a href="ngui.html#class-button"><code>Button</code></a>按钮将焦点切换到内部</p>
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="selectpanel-intervaltime">
-			SelectPanel.intervalTime
-			<span><a class="mark" href="#selectpanel-intervaltime" id="selectpanel-intervaltime">#</a></span>
+<h3 id="panel-intervaltime">
+			Panel.intervalTime
+			<span><a class="mark" href="#panel-intervaltime" id="panel-intervaltime">#</a></span>
 		</h3><p>切换的时间限制，离上一次切换时间不到<code>intervalTime</code>不允许切换</p>
 <ul>
 <li>{<a href="native_types.html#uint"><code>uint</code></a>} ms</li>
 </ul>
-<h3 id="selectpanel-enableselect">
-			SelectPanel.enableSelect
-			<span><a class="mark" href="#selectpanel-enableselect" id="selectpanel-enableselect">#</a></span>
+<h3 id="panel-enableselect">
+			Panel.enableSelect
+			<span><a class="mark" href="#panel-enableselect" id="panel-enableselect">#</a></span>
 		</h3><p>是否允许内部<a href="ngui.html#class-button"><code>Button</code></a>切换焦点</p>
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="get-selectpanel-isactivity">
-			Get: SelectPanel.isActivity
-			<span><a class="mark" href="#get-selectpanel-isactivity" id="get-selectpanel-isactivity">#</a></span>
+<h3 id="get-panel-isactivity">
+			Get: Panel.isActivity
+			<span><a class="mark" href="#get-panel-isactivity" id="get-panel-isactivity">#</a></span>
 		</h3><p>是否激活状态，当内部<a href="ngui.html#class-button"><code>Button</code></a>拥有焦点时为激活状态</p>
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="get-selectpanel-parentpanel">
-			Get: SelectPanel.parentPanel
-			<span><a class="mark" href="#get-selectpanel-parentpanel" id="get-selectpanel-parentpanel">#</a></span>
-		</h3><p>父<a href="ngui.html#class-panel"><code>SelectPanel</code></a>视图</p>
+<h3 id="get-panel-parentpanel">
+			Get: Panel.parentPanel
+			<span><a class="mark" href="#get-panel-parentpanel" id="get-panel-parentpanel">#</a></span>
+		</h3><p>父<a href="ngui.html#class-panel"><code>Panel</code></a>视图</p>
 <ul>
-<li>{<a href="ngui.html#class-panel"><code>SelectPanel</code></a>}</li>
+<li>{<a href="ngui.html#class-panel"><code>Panel</code></a>}</li>
 </ul>
 <h2 id="class-button">
 			<code>Class: Button</code>
@@ -2375,7 +2386,7 @@ console.log(view.class);
 <h3 id="button-findnextbutton-direction-">
 			Button.findNextButton(direction)
 			<span><a class="mark" href="#button-findnextbutton-direction-" id="button-findnextbutton-direction-">#</a></span>
-		</h3><p>查找指定方向相邻的按钮,按钮必需在<a href="ngui.html#class-panel"><code>SelectPanel</code></a>才能查找，找不到返回<code>null</code></p>
+		</h3><p>查找指定方向相邻的按钮,按钮必需在<a href="ngui.html#class-panel"><code>Panel</code></a>才能查找，找不到返回<code>null</code></p>
 <ul>
 <li>@arg <code>direction</code> {<a href="value.html#class-direction"><code>Direction</code></a>} </li>
 <li>@ret <code>{[</code>Button<code>]}</code></li>
@@ -2384,13 +2395,13 @@ console.log(view.class);
 			Get: Button.panel
 			<span><a class="mark" href="#get-button-panel" id="get-button-panel">#</a></span>
 		</h3><ul>
-<li>{<a href="ngui.html#class-panel"><code>SelectPanel</code></a>}</li>
+<li>{<a href="ngui.html#class-panel"><code>Panel</code></a>}</li>
 </ul>
 <h2 id="class-root">
 			<code>Class: Root</code>
 			<span><a class="mark" href="#class-root" id="class-root">#</a></span>
 		</h2><ul>
-<li><p><code>extends</code> <a href="ngui.html#class-panel"><code>SelectPanel</code></a></p>
+<li><p><code>extends</code> <a href="ngui.html#class-panel"><code>Panel</code></a></p>
 </li>
 <li><p>根视图，这个视图暂时只能是唯一的但未来可能会变化</p>
 </li>
@@ -2570,7 +2581,7 @@ console.log(view.class);
 			<code>Class: Scroll</code>
 			<span><a class="mark" href="#class-scroll" id="class-scroll">#</a></span>
 		</h2><ul>
-<li><code>extends</code> <a href="ngui.html#class-panel"><code>SelectPanel</code></a>,<a href="ngui.html#class-basicscroll"><code>BasicScroll</code></a></li>
+<li><code>extends</code> <a href="ngui.html#class-panel"><code>Panel</code></a>,<a href="ngui.html#class-basicscroll"><code>BasicScroll</code></a></li>
 </ul>
 <p>滚动条的实现</p>
 <h3 id="scroll-onscroll">

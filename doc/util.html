@@ -58,6 +58,7 @@
 <li><a href="blog/002.html"><code>View and layout</code></a></li>
 <li><a href="blog/003-action.html"><code>Action</code></a></li>
 <li><a href="blog/004-css.html"><code>CSS</code></a></li>
+<li><a href="https://www.jianshu.com/p/e702af75a0c6"><code>Benchmark</code></a></li>
 </ul>
 <h1 id="modules">
 			Modules
@@ -90,7 +91,7 @@
     
     <div id="column1" data-id="documentation" class="interior">
       <header>
-        <h1>Ngui v0.3.1 Documentation</h1>
+        <h1>Ngui v0.4.0 Documentation</h1>
         <div id="gtoc">
           <p>
             <a href="/doc" id="index">Documentation Index</a> |
@@ -137,7 +138,13 @@
 <span><a href="#noop-">noop()</a></span>
 </li>
 <li>
-<span><a href="#extend-obj-extd-">extend(obj, extd)</a></span>
+<span><a href="#extendentries-obj-extd-">extendEntries(obj, extd)</a></span>
+</li>
+<li>
+<span><a href="#assign-obj-extd-">assign(obj, ...extd)</a></span>
+</li>
+<li>
+<span><a href="#extend-obj-extd-">extend(obj, ...extd)</a></span>
 </li>
 <li>
 <span><a href="#update-obj-extd-">update(obj, extd)</a></span>
@@ -280,13 +287,31 @@
 			noop()
 			<span><a class="mark" href="#noop-" id="noop-">#</a></span>
 		</h2><p>空操作,调用后什么也不会做</p>
-<h2 id="extend-obj-extd-">
-			extend(obj, extd)
-			<span><a class="mark" href="#extend-obj-extd-" id="extend-obj-extd-">#</a></span>
-		</h2><p>把<code>extd</code>是的属性扩展到<code>obj</code>对像上</p>
+<h2 id="extendentries-obj-extd-">
+			extendEntries(obj, extd)
+			<span><a class="mark" href="#extendentries-obj-extd-" id="extendentries-obj-extd-">#</a></span>
+		</h2><p>递归<code>extd</code>对像属性并扩展到<code>obj</code>对像上</p>
 <ul>
 <li>@arg <code>obj</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 <li>@arg <code>extd</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 返回<code>obj</code>对像</li>
+</ul>
+<h2 id="assign-obj-extd-">
+			assign(obj, ...extd)
+			<span><a class="mark" href="#assign-obj-extd-" id="assign-obj-extd-">#</a></span>
+		</h2><p>把<code>extd</code>是的属性扩展到<code>obj</code>对像上</p>
+<ul>
+<li>@arg <code>obj</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@arg <code>...extd</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 返回<code>obj</code>对像</li>
+</ul>
+<h2 id="extend-obj-extd-">
+			extend(obj, ...extd)
+			<span><a class="mark" href="#extend-obj-extd-" id="extend-obj-extd-">#</a></span>
+		</h2><p>把<code>extd</code>是的属性扩展到<code>obj</code>对像上,assign相同,但这个函数能扩展属性访问器</p>
+<ul>
+<li>@arg <code>obj</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+<li>@arg <code>...extd</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>} 返回<code>obj</code>对像</li>
 </ul>
 <h2 id="update-obj-extd-">
