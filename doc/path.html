@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>QuickGR API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'path.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					qgr
+				</a>
+			</div-->
+
+			<h1 id="-qgr-">
+			<a href="http://quickgr.org/"><code>Qgr</code></a>
+			<span><a class="mark" href="#-qgr-" id="-qgr-">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/qgr/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="course">
+			Course
+			<span><a class="mark" href="#course" id="course">#</a></span>
+		</h1><ul>
+<li><a href="blog/001.html"><code>Synopsis</code></a></li>
+<li><a href="blog/002.html"><code>View and layout</code></a></li>
+<li><a href="blog/003-action.html"><code>Action</code></a></li>
+<li><a href="blog/004-css.html"><code>CSS</code></a></li>
+<li><a href="https://www.jianshu.com/p/e702af75a0c6"><code>Benchmark</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="qgr.html"><code>qgr</code></a></li>
+<li><a href="pkg.html"><code>pkg</code></a></li>
+<li><a href="action.html"><code>qgr/action</code></a></li>
+<li><a href="app.html"><code>qgr/app</code></a></li>
+<li><a href="css.html"><code>qgr/css</code></a></li>
+<li><a href="ctr.html"><code>qgr/ctr</code></a></li>
+<li><a href="display_port.html"><code>qgr/display_port</code></a></li>
+<li><a href="font.html"><code>qgr/font</code></a></li>
+<li><a href="media.html"><code>qgr/media</code></a></li>
+<li><a href="value.html"><code>qgr/value</code></a></li>
+<li><a href="util.html"><code>qgr/util</code></a></li>
+<li><a href="event.html"><code>qgr/event</code></a></li>
+<li><a href="fs.html"><code>qgr/fs</code></a></li>
+<li><a href="http.html"><code>qgr/http</code></a></li>
+<li><a href="keys.html"><code>qgr/keys</code></a></li>
+<li><a href="path.html"><code>qgr/path</code></a></li>
+<li><a href="reader.html"><code>qgr/reader</code></a></li>
+<li><a href="storage.html"><code>qgr/storage</code></a></li>
+<li><a href="sys.html"><code>qgr/sys</code></a></li>
+<li><a href="native_types.html"><code>Native Types</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Qgr v0.5.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#qgr-path">qgr/path</a></span>
+<ul>
+<li>
+<span><a href="#executable-">executable()</a></span>
+</li>
+<li>
+<span><a href="#documents-appendpath-">documents([appendPath])</a></span>
+</li>
+<li>
+<span><a href="#temp-appendpath-">temp([appendPath])</a></span>
+</li>
+<li>
+<span><a href="#resources-appendpath-">resources([appendPath])</a></span>
+</li>
+<li>
+<span><a href="#fallback-path-">fallback(path)</a></span>
+</li>
+<li>
+<span><a href="#cwd-">cwd()</a></span>
+</li>
+<li>
+<span><a href="#chdir-path-">chdir(path)</a></span>
+</li>
+<li>
+<span><a href="#isabsolute-path-">isAbsolute(path)</a></span>
+</li>
+<li>
+<span><a href="#resolve-path-partpaths-">resolve(path,[...partPaths])</a></span>
+</li>
+<li>
+<span><a href="#class-url">Class: URL</a></span>
+<ul>
+<li>
+<span><a href="#url-constructor-path-">URL.constructor([path])</a></span>
+</li>
+<li>
+<span><a href="#get-url-href">Get: URL.href</a></span>
+</li>
+<li>
+<span><a href="#get-url-filename">Get: URL.filename</a></span>
+</li>
+<li>
+<span><a href="#get-url-path">Get: URL.path</a></span>
+</li>
+<li>
+<span><a href="#get-url-dirname">Get: URL.dirname</a></span>
+</li>
+<li>
+<span><a href="#get-url-search">Get: URL.search</a></span>
+</li>
+<li>
+<span><a href="#get-url-hash">Get: URL.hash</a></span>
+</li>
+<li>
+<span><a href="#get-url-host">Get: URL.host</a></span>
+</li>
+<li>
+<span><a href="#get-url-hostname">Get: URL.hostname</a></span>
+</li>
+<li>
+<span><a href="#get-url-origin">Get: URL.origin</a></span>
+</li>
+<li>
+<span><a href="#get-url-basename">Get: URL.basename</a></span>
+</li>
+<li>
+<span><a href="#get-url-extname">Get: URL.extname</a></span>
+</li>
+<li>
+<span><a href="#get-url-port">Get: URL.port</a></span>
+</li>
+<li>
+<span><a href="#get-url-protocol">Get: URL.protocol</a></span>
+</li>
+<li>
+<span><a href="#get-url-params">Get: URL.params</a></span>
+</li>
+<li>
+<span><a href="#get-url-hashparams">Get: URL.hashParams</a></span>
+</li>
+<li>
+<span><a href="#url-getparam-name-">URL.getParam(name)</a></span>
+</li>
+<li>
+<span><a href="#url-setparam-name-value-">URL.setParam(name, value)</a></span>
+</li>
+<li>
+<span><a href="#url-deleteparam-name-">URL.deleteParam(name)</a></span>
+</li>
+<li>
+<span><a href="#url-clearparam-">URL.clearParam()</a></span>
+</li>
+<li>
+<span><a href="#url-gethash-name-">URL.getHash(name)</a></span>
+</li>
+<li>
+<span><a href="#url-sethash-name-value-">URL.setHash(name, value)</a></span>
+</li>
+<li>
+<span><a href="#url-deletehash-name-">URL.deleteHash(name)</a></span>
+</li>
+<li>
+<span><a href="#url-clearhash-">URL.clearHash()</a></span>
+</li>
+<li>
+<span><a href="#url-relative-target-">URL.relative(target)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#-url-url-">下面为URL快捷函数,其中第一个参数都为创建URL对像用到的路径</a></span>
+</li>
+<li>
+<span><a href="#filename-path-">filename(path)</a></span>
+</li>
+<li>
+<span><a href="#path-path-">path(path)</a></span>
+</li>
+<li>
+<span><a href="#dirname-path-">dirname(path)</a></span>
+</li>
+<li>
+<span><a href="#search-path-">search(path)</a></span>
+</li>
+<li>
+<span><a href="#hash-path-">hash(path)</a></span>
+</li>
+<li>
+<span><a href="#host-path-">host(path)</a></span>
+</li>
+<li>
+<span><a href="#hostname-path-">hostname(path)</a></span>
+</li>
+<li>
+<span><a href="#origin-path-">origin(path)</a></span>
+</li>
+<li>
+<span><a href="#basename-path-">basename(path)</a></span>
+</li>
+<li>
+<span><a href="#extname-path-">extname(path)</a></span>
+</li>
+<li>
+<span><a href="#port-path-">port(path)</a></span>
+</li>
+<li>
+<span><a href="#protocol-path-">protocol(path)</a></span>
+</li>
+<li>
+<span><a href="#params-path-">params(path)</a></span>
+</li>
+<li>
+<span><a href="#hashparams-path-">hashParams(path)</a></span>
+</li>
+<li>
+<span><a href="#getparam-path-name-">getParam(path, name)</a></span>
+</li>
+<li>
+<span><a href="#setparam-path-name-value-">setParam(path, name, value)</a></span>
+</li>
+<li>
+<span><a href="#delparam-path-name-">delParam(path, name)</a></span>
+</li>
+<li>
+<span><a href="#clearparam-path-">clearParam(path)</a></span>
+</li>
+<li>
+<span><a href="#gethash-path-name-">getHash(path, name)</a></span>
+</li>
+<li>
+<span><a href="#sethash-path-name-value-">setHash(path, name, value)</a></span>
+</li>
+<li>
+<span><a href="#deletehash-path-name-">deleteHash(path, name)</a></span>
+</li>
+<li>
+<span><a href="#clearhash-path-">clearHash(path)</a></span>
+</li>
+<li>
+<span><a href="#relative-path-target-">relative(path, target)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="qgr-path">
+			<code>qgr/path</code>
+			<span><a class="mark" href="#qgr-path" id="qgr-path">#</a></span>
+		</h1><h2 id="executable-">
+			executable()
+			<span><a class="mark" href="#executable-" id="executable-">#</a></span>
+		</h2><p>获取当前应用程序的二进制执行文件路径</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// file:///var/containers/Bundle/Application/4F1BD659-601D-4932-8484-D0D1F978F0BE/test.app/test
+console.log(path.executable());
+</code></pre>
+<h2 id="documents-appendpath-">
+			documents([appendPath])
+			<span><a class="mark" href="#documents-appendpath-" id="documents-appendpath-">#</a></span>
+		</h2><p>获取当前应用程序的文档存储路径</p>
+<ul>
+<li>@arg <code>[appendPath=&#39;&#39;]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 追加到文档路径后面</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// file:///var/mobile/Containers/Data/Application/89A576FE-7BB9-4F26-A456-E9D7F8AD053D/Documents
+console.log(path.documents());
+// Prints 设置追加路径参数的结果:
+// file:///var/mobile/Containers/Data/Application/89A576FE-7BB9-4F26-A456-E9D7F8AD053D/Documents/aa.jpeg
+console.log(path.documents(&#39;aa.jpeg&#39;));
+</code></pre>
+<h2 id="temp-appendpath-">
+			temp([appendPath])
+			<span><a class="mark" href="#temp-appendpath-" id="temp-appendpath-">#</a></span>
+		</h2><p>获取应用程序临时目录</p>
+<ul>
+<li>@arg <code>[appendPath=&#39;&#39;]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="resources-appendpath-">
+			resources([appendPath])
+			<span><a class="mark" href="#resources-appendpath-" id="resources-appendpath-">#</a></span>
+		</h2><p>获取应用程序资源目录</p>
+<ul>
+<li>@arg <code>[appendPath=&#39;&#39;]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="fallback-path-">
+			fallback(path)
+			<span><a class="mark" href="#fallback-path-" id="fallback-path-">#</a></span>
+		</h2><p>恢复路径为操作系统可以识别的路径,一般不需要使用该函数,除非直接调用非<code>Qgr</code>提供的Native/C/C++函数</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: /var/data/test.js
+console.log(path.fallback(&#39;file:///var/data/test.js&#39;));
+</code></pre>
+<h2 id="cwd-">
+			cwd()
+			<span><a class="mark" href="#cwd-" id="cwd-">#</a></span>
+		</h2><p>获取当前工作目录</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<h2 id="chdir-path-">
+			chdir(path)
+			<span><a class="mark" href="#chdir-path-" id="chdir-path-">#</a></span>
+		</h2><p>设置当前工作目录,成功后返回<code>true</code></p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>} </li>
+</ul>
+<h2 id="isabsolute-path-">
+			isAbsolute(path)
+			<span><a class="mark" href="#isabsolute-path-" id="isabsolute-path-">#</a></span>
+		</h2><p>测试路径是否为一个绝对路径</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// true
+// true
+// false
+console.log(path.isAbsolute(&#39;/var/kk&#39;));
+console.log(path.isAbsolute(&#39;http://quickgr.org/&#39;));
+console.log(path.isAbsolute(&#39;index.jsx&#39;));
+</code></pre>
+<h2 id="resolve-path-partpaths-">
+			resolve(path,[...partPaths])
+			<span><a class="mark" href="#resolve-path-partpaths-" id="resolve-path-partpaths-">#</a></span>
+		</h2><p>格式化传入的路径为标准绝对路径</p>
+<ul>
+<li>@arg <code>path</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 传入路径</li>
+<li>@arg <code>[...partPaths]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 可选的分部路径</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: http://quickgr.org/A/C/test.js
+console.log(path.resolve(&#39;http://quickgr.org/home&#39;, &quot;..&quot;, &quot;A&quot;, &quot;B&quot;, &quot;..&quot;, &quot;C&quot;, &quot;test.js&quot;));
+// Prints: 
+// true
+// file:///var/data/aaa/cc/ddd/kk.jpg
+console.log(path.chdir(&#39;/var/data&#39;));
+console.log(path.resolve(&#39;aaa/bbb/../cc/.///ddd/kk.jpg&#39;));
+</code></pre>
+<h2 id="class-url">
+			<code>Class: URL</code>
+			<span><a class="mark" href="#class-url" id="class-url">#</a></span>
+		</h2><p>url与path处理类</p>
+<h3 id="url-constructor-path-">
+			URL.constructor([path])
+			<span><a class="mark" href="#url-constructor-path-" id="url-constructor-path-">#</a></span>
+		</h3><p>构造函数，如果传入非法路径会抛出异常</p>
+<ul>
+<li>@arg <code>[path=&#39;&#39;]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 字符串路径,传入相对路径或决对路径</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// cwd: file:///var/data
+// Prints: file:///var/data/index.js
+var uri = new URL(&#39;index.js&#39;);
+console.log(uri.href);
+// Prints: http://quickgr.org/index.html?args=0
+var uri2 = new URL(&#39;http://quickgr.org/home/../index.html?args=0&#39;)
+console.log(uri2.href);
+// Prints: 
+// Error: Parse uri error, Illegal URL
+new URL(&#39;http://quickgr.org:&#39;).href
+</code></pre>
+<h3 id="get-url-href">
+			Get: URL.href
+			<span><a class="mark" href="#get-url-href" id="get-url-href">#</a></span>
+		</h3><p>获取uri完整的href,包括参数</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: http://quickgr.org/
+console.log(new URL(&#39;http://quickgr.org/&#39;).href);
+</code></pre>
+<h3 id="get-url-filename">
+			Get: URL.filename
+			<span><a class="mark" href="#get-url-filename" id="get-url-filename">#</a></span>
+		</h3><p>获取文件名称</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<pre><code class="undefinedjs">// Prints: /aaa/bbbb/ccc/test.js
+console.log(new URL(&#39;http://quickgr.org/aaa/bbbb/ccc/test.js&#39;).filename);
+</code></pre>
+<h3 id="get-url-path">
+			Get: URL.path
+			<span><a class="mark" href="#get-url-path" id="get-url-path">#</a></span>
+		</h3><p>获取路径包含参数部分</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<pre><code class="undefinedjs">// Prints: /aaa/bbbb/ccc/test.js?asas=asas
+console.log(new URL(&#39;http://quickgr.org/aaa/bbbb/ccc/test.js?asas=asas&#39;).path);
+</code></pre>
+<h3 id="get-url-dirname">
+			Get: URL.dirname
+			<span><a class="mark" href="#get-url-dirname" id="get-url-dirname">#</a></span>
+		</h3><p>获取目录名称</p>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: /aaa/bbbb/ccc
+console.log(new URL(&#39;http://quickgr.org/aaa/bbbb/ccc/test.js&#39;).dirname);
+</code></pre>
+<h3 id="get-url-search">
+			Get: URL.search
+			<span><a class="mark" href="#get-url-search" id="get-url-search">#</a></span>
+		</h3><p>获取uri查询参数</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: ?a=A&amp;b=B
+console.log(new URL(&#39;http://quickgr.org/?a=A&amp;b=B&#39;).search);
+</code></pre>
+<h3 id="get-url-hash">
+			Get: URL.hash
+			<span><a class="mark" href="#get-url-hash" id="get-url-hash">#</a></span>
+		</h3><p>获取hash参数</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: #c=C&amp;d=D
+console.log(new URL(&#39;http://quickgr.org/?a=A&amp;b=B#c=C&amp;d=D&#39;).hash);
+</code></pre>
+<h3 id="get-url-host">
+			Get: URL.host
+			<span><a class="mark" href="#get-url-host" id="get-url-host">#</a></span>
+		</h3><p>获取主机,返回一个带端口号的主机名称</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: quickgr.org:80
+console.log(new URL(&#39;http://quickgr.org:81/&#39;).host);
+</code></pre>
+<h3 id="get-url-hostname">
+			Get: URL.hostname
+			<span><a class="mark" href="#get-url-hostname" id="get-url-hostname">#</a></span>
+		</h3><p>获取主机名称,不会返回端口号</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: quickgr.org
+console.log(new URL(&#39;http://quickgr.org:81/&#39;).host);
+</code></pre>
+<h3 id="get-url-origin">
+			Get: URL.origin
+			<span><a class="mark" href="#get-url-origin" id="get-url-origin">#</a></span>
+		</h3><p>获取uri起源,protocol+host</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: http://quickgr.org:81
+console.log(new URL(&#39;http://quickgr.org:81/host/index.html&#39;).host);
+// Prints: file://
+console.log(new URL(&#39;file:///var/data/index.html&#39;).host);
+</code></pre>
+<h3 id="get-url-basename">
+			Get: URL.basename
+			<span><a class="mark" href="#get-url-basename" id="get-url-basename">#</a></span>
+		</h3><p>获取基础文件名称</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: index.html
+console.log(new URL(&#39;file:///var/data/index.html&#39;).basename);
+</code></pre>
+<h3 id="get-url-extname">
+			Get: URL.extname
+			<span><a class="mark" href="#get-url-extname" id="get-url-extname">#</a></span>
+		</h3><p>获取文件扩展名称</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: .html
+console.log(new URL(&#39;file:///var/data/index.html&#39;).extname);
+</code></pre>
+<h3 id="get-url-port">
+			Get: URL.port
+			<span><a class="mark" href="#get-url-port" id="get-url-port">#</a></span>
+		</h3><p>获取主机端口号,如果URL中没有定义端口号返回一个空字符串</p>
+<p>Example:</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<pre><code class="undefinedjs">// Prints: 81
+console.log(new URL(&#39;http://quickgr.org:81&#39;).port);
+// Prints 没有端口号会返回空字符串: &quot;&quot;
+console.log(new URL(&#39;http://quickgr.org&#39;).port);
+</code></pre>
+<h3 id="get-url-protocol">
+			Get: URL.protocol
+			<span><a class="mark" href="#get-url-protocol" id="get-url-protocol">#</a></span>
+		</h3><p>获取URL的协议类型字符串, 例如: <code>&#39;http:&#39;</code>|<code>&#39;https&#39;</code>|<code>&#39;ftp:&#39;</code></p>
+<h3 id="get-url-params">
+			Get: URL.params
+			<span><a class="mark" href="#get-url-params" id="get-url-params">#</a></span>
+		</h3><p>以对像方式返回查询参数集合</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// {
+//   a: &quot;100&quot;,
+//   b: &quot;test&quot;
+// }
+console.log(new URL(&#39;http://quickgr.org/?a=100&amp;b=test&#39;).params);
+</code></pre>
+<h3 id="get-url-hashparams">
+			Get: URL.hashParams
+			<span><a class="mark" href="#get-url-hashparams" id="get-url-hashparams">#</a></span>
+		</h3><p>以对像方式返回Hash参数集合</p>
+<ul>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints:
+// {
+//   a: &quot;200&quot;,
+//   b: &quot;300&quot;
+// }
+console.log(new URL(&#39;http://quickgr.org/#a=200&amp;b=300&#39;).hashParams);
+</code></pre>
+<h3 id="url-getparam-name-">
+			URL.getParam(name)
+			<span><a class="mark" href="#url-getparam-name-" id="url-getparam-name-">#</a></span>
+		</h3><p>通过名称获取uri参数值</p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} </li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} </li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: ok
+console.log(new URL(&#39;http://quickgr.org/?args=ok&#39;).getParam(&#39;args&#39;));
+</code></pre>
+<h3 id="url-setparam-name-value-">
+			URL.setParam(name, value)
+			<span><a class="mark" href="#url-setparam-name-value-" id="url-setparam-name-value-">#</a></span>
+		</h3><p>设置URL查询参数键值对,并返回自己</p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@arg <code>value</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {URL} 返回自己</li>
+</ul>
+<h3 id="url-deleteparam-name-">
+			URL.deleteParam(name)
+			<span><a class="mark" href="#url-deleteparam-name-" id="url-deleteparam-name-">#</a></span>
+		</h3><p>通过名称删除URL查询参数</p>
+<ul>
+<li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
+<li>@ret {URL}</li>
+</ul>
+<h3 id="url-clearparam-">
+			URL.clearParam()
+			<span><a class="mark" href="#url-clearparam-" id="url-clearparam-">#</a></span>
+		</h3><p>删除URL中的所有查询参数</p>
+<ul>
+<li>@ret {URL}</li>
+</ul>
+<h3 id="url-gethash-name-">
+			URL.getHash(name)
+			<span><a class="mark" href="#url-gethash-name-" id="url-gethash-name-">#</a></span>
+		</h3><h3 id="url-sethash-name-value-">
+			URL.setHash(name, value)
+			<span><a class="mark" href="#url-sethash-name-value-" id="url-sethash-name-value-">#</a></span>
+		</h3><h3 id="url-deletehash-name-">
+			URL.deleteHash(name)
+			<span><a class="mark" href="#url-deletehash-name-" id="url-deletehash-name-">#</a></span>
+		</h3><h3 id="url-clearhash-">
+			URL.clearHash()
+			<span><a class="mark" href="#url-clearhash-" id="url-clearhash-">#</a></span>
+		</h3><h3 id="url-relative-target-">
+			URL.relative(target)
+			<span><a class="mark" href="#url-relative-target-" id="url-relative-target-">#</a></span>
+		</h3><p>返回与<code>target</code>的相对路径</p>
+<ul>
+<li>@arg <code>target</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} 字符串类型的目标路径</li>
+<li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>} </li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: ../A/B/C/test.js
+var uri = new URL(&#39;http://quickgr.org/home/&#39;);
+console.log(uri.relative(&#39;http://quickgr.org/A/B/C/test.js&#39;));
+// Prints: file:///var/data/A/B/C/test.js
+var uri2 = new URL(&#39;http://quickgr.org/home/&#39;);
+console.log(uri2.relative(&#39;file:///var/data/A/B/C/test.js&#39;));
+</code></pre>
+<h2 id="-url-url-">
+			<code>下面为URL快捷函数,其中第一个参数都为创建URL对像用到的路径</code>
+			<span><a class="mark" href="#-url-url-" id="-url-url-">#</a></span>
+		</h2><h2 id="filename-path-">
+			filename(path)
+			<span><a class="mark" href="#filename-path-" id="filename-path-">#</a></span>
+		</h2><h2 id="path-path-">
+			path(path)
+			<span><a class="mark" href="#path-path-" id="path-path-">#</a></span>
+		</h2><h2 id="dirname-path-">
+			dirname(path)
+			<span><a class="mark" href="#dirname-path-" id="dirname-path-">#</a></span>
+		</h2><h2 id="search-path-">
+			search(path)
+			<span><a class="mark" href="#search-path-" id="search-path-">#</a></span>
+		</h2><h2 id="hash-path-">
+			hash(path)
+			<span><a class="mark" href="#hash-path-" id="hash-path-">#</a></span>
+		</h2><h2 id="host-path-">
+			host(path)
+			<span><a class="mark" href="#host-path-" id="host-path-">#</a></span>
+		</h2><h2 id="hostname-path-">
+			hostname(path)
+			<span><a class="mark" href="#hostname-path-" id="hostname-path-">#</a></span>
+		</h2><h2 id="origin-path-">
+			origin(path)
+			<span><a class="mark" href="#origin-path-" id="origin-path-">#</a></span>
+		</h2><h2 id="basename-path-">
+			basename(path)
+			<span><a class="mark" href="#basename-path-" id="basename-path-">#</a></span>
+		</h2><h2 id="extname-path-">
+			extname(path)
+			<span><a class="mark" href="#extname-path-" id="extname-path-">#</a></span>
+		</h2><h2 id="port-path-">
+			port(path)
+			<span><a class="mark" href="#port-path-" id="port-path-">#</a></span>
+		</h2><h2 id="protocol-path-">
+			protocol(path)
+			<span><a class="mark" href="#protocol-path-" id="protocol-path-">#</a></span>
+		</h2><h2 id="params-path-">
+			params(path)
+			<span><a class="mark" href="#params-path-" id="params-path-">#</a></span>
+		</h2><h2 id="hashparams-path-">
+			hashParams(path)
+			<span><a class="mark" href="#hashparams-path-" id="hashparams-path-">#</a></span>
+		</h2><h2 id="getparam-path-name-">
+			getParam(path, name)
+			<span><a class="mark" href="#getparam-path-name-" id="getparam-path-name-">#</a></span>
+		</h2><h2 id="setparam-path-name-value-">
+			setParam(path, name, value)
+			<span><a class="mark" href="#setparam-path-name-value-" id="setparam-path-name-value-">#</a></span>
+		</h2><h2 id="delparam-path-name-">
+			delParam(path, name)
+			<span><a class="mark" href="#delparam-path-name-" id="delparam-path-name-">#</a></span>
+		</h2><h2 id="clearparam-path-">
+			clearParam(path)
+			<span><a class="mark" href="#clearparam-path-" id="clearparam-path-">#</a></span>
+		</h2><h2 id="gethash-path-name-">
+			getHash(path, name)
+			<span><a class="mark" href="#gethash-path-name-" id="gethash-path-name-">#</a></span>
+		</h2><h2 id="sethash-path-name-value-">
+			setHash(path, name, value)
+			<span><a class="mark" href="#sethash-path-name-value-" id="sethash-path-name-value-">#</a></span>
+		</h2><h2 id="deletehash-path-name-">
+			deleteHash(path, name)
+			<span><a class="mark" href="#deletehash-path-name-" id="deletehash-path-name-">#</a></span>
+		</h2><h2 id="clearhash-path-">
+			clearHash(path)
+			<span><a class="mark" href="#clearhash-path-" id="clearhash-path-">#</a></span>
+		</h2><h2 id="relative-path-target-">
+			relative(path, target)
+			<span><a class="mark" href="#relative-path-target-" id="relative-path-target-">#</a></span>
+		</h2>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>
