@@ -38,17 +38,17 @@
 
 			<!--div id="intro" class="interior">
 				<a href="/" id="home2" title="Go back to the home page">
-					qgr
+					langou
 				</a>
 			</div-->
 
-			<h1 id="-qgr-">
-			<a href="http://quickgr.org/"><code>Qgr</code></a>
-			<span><a class="mark" href="#-qgr-" id="-qgr-">#</a></span>
+			<h1 id="-langou-">
+			<a href="http://langou.org/"><code>Langou</code></a>
+			<span><a class="mark" href="#-langou-" id="-langou-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/qmake"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/qgr/tree/master/examples"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/lmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/langou/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -64,25 +64,25 @@
 			Modules
 			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="qgr.html"><code>qgr</code></a></li>
+<li><a href="langou.html"><code>langou</code></a></li>
 <li><a href="pkg.html"><code>pkg</code></a></li>
-<li><a href="action.html"><code>qgr/action</code></a></li>
-<li><a href="app.html"><code>qgr/app</code></a></li>
-<li><a href="css.html"><code>qgr/css</code></a></li>
-<li><a href="ctr.html"><code>qgr/ctr</code></a></li>
-<li><a href="display_port.html"><code>qgr/display_port</code></a></li>
-<li><a href="font.html"><code>qgr/font</code></a></li>
-<li><a href="media.html"><code>qgr/media</code></a></li>
-<li><a href="value.html"><code>qgr/value</code></a></li>
-<li><a href="util.html"><code>qgr/util</code></a></li>
-<li><a href="event.html"><code>qgr/event</code></a></li>
-<li><a href="fs.html"><code>qgr/fs</code></a></li>
-<li><a href="http.html"><code>qgr/http</code></a></li>
-<li><a href="keys.html"><code>qgr/keys</code></a></li>
-<li><a href="path.html"><code>qgr/path</code></a></li>
-<li><a href="reader.html"><code>qgr/reader</code></a></li>
-<li><a href="storage.html"><code>qgr/storage</code></a></li>
-<li><a href="sys.html"><code>qgr/sys</code></a></li>
+<li><a href="action.html"><code>langou/action</code></a></li>
+<li><a href="app.html"><code>langou/app</code></a></li>
+<li><a href="css.html"><code>langou/css</code></a></li>
+<li><a href="ctr.html"><code>langou/ctr</code></a></li>
+<li><a href="display_port.html"><code>langou/display_port</code></a></li>
+<li><a href="font.html"><code>langou/font</code></a></li>
+<li><a href="media.html"><code>langou/media</code></a></li>
+<li><a href="value.html"><code>langou/value</code></a></li>
+<li><a href="util.html"><code>langou/util</code></a></li>
+<li><a href="event.html"><code>langou/event</code></a></li>
+<li><a href="fs.html"><code>langou/fs</code></a></li>
+<li><a href="http.html"><code>langou/http</code></a></li>
+<li><a href="keys.html"><code>langou/keys</code></a></li>
+<li><a href="path.html"><code>langou/path</code></a></li>
+<li><a href="reader.html"><code>langou/reader</code></a></li>
+<li><a href="storage.html"><code>langou/storage</code></a></li>
+<li><a href="sys.html"><code>langou/sys</code></a></li>
 <li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
@@ -91,7 +91,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Qgr v0.5.0 Documentation</h1>
+				<h1>Langou v0.5.2 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -105,7 +105,7 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#qgr-http">qgr/http</a></span>
+<span><a href="#langou-http">langou/http</a></span>
 <ul>
 <li>
 <span><a href="#enum-httpmethod">Enum: HttpMethod</a></span>
@@ -360,9 +360,9 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="qgr-http">
-			<code>qgr/http</code>
-			<span><a class="mark" href="#qgr-http" id="qgr-http">#</a></span>
+				<h1 id="langou-http">
+			<code>langou/http</code>
+			<span><a class="mark" href="#langou-http" id="langou-http">#</a></span>
 		</h1><p>提供<code>http</code>与<code>https</code>协议的客服端支持</p>
 <p>可以使用<code>get</code>方式访问服务端数据，并可很方便的将这些数据保存到本地</p>
 <p>也可使用<code>post</code>方式发送数据或上传文件到服务器</p>
@@ -543,7 +543,7 @@ cl.onReadystateChange = function() { console.log(this.readyState, this.statusCod
 			HttpClientRequest.setUploadFile(formName, localPath)
 			<span><a class="mark" href="#httpclientrequest-setuploadfile-formname-localpath-" id="httpclientrequest-setuploadfile-formname-localpath-">#</a></span>
 		</h3><p>上传本地文件设置以<code>multipart/form-data</code>形式, 并在发送请求时自动添加请求头</p>
-<p><code>Content-Type: multipart/form-data; boundary=----QgrFormBoundaryrGKCBY7qhFd3TrwA</code></p>
+<p><code>Content-Type: multipart/form-data; boundary=----LangouFormBoundaryrGKCBY7qhFd3TrwA</code></p>
 <p>必须使用<a href="http.html#http_method_post"><code>HTTP_METHOD_POST</code></a>方法发送请求否则会忽略表单</p>
 <ul>
 <li>@arg <code>formName</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
