@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Langou API Documentation</title>
+	<title>Ngui API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
 		var src = 'css.html';
@@ -38,17 +38,17 @@
 
 			<!--div id="intro" class="interior">
 				<a href="/" id="home2" title="Go back to the home page">
-					langou
+					ngui
 				</a>
 			</div-->
 
-			<h1 id="-langou-">
-			<a href="http://langou.org/"><code>Langou</code></a>
-			<span><a class="mark" href="#-langou-" id="-langou-">#</a></span>
+			<h1 id="-ngui-">
+			<a href="http://ngui.fun/"><code>Ngui</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/lmake"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/langou/tree/master/examples"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/nxmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -64,25 +64,25 @@
 			Modules
 			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="langou.html"><code>langou</code></a></li>
+<li><a href="ngui.html"><code>ngui</code></a></li>
 <li><a href="pkg.html"><code>pkg</code></a></li>
-<li><a href="action.html"><code>langou/action</code></a></li>
-<li><a href="app.html"><code>langou/app</code></a></li>
-<li><a href="css.html"><code>langou/css</code></a></li>
-<li><a href="ctr.html"><code>langou/ctr</code></a></li>
-<li><a href="display_port.html"><code>langou/display_port</code></a></li>
-<li><a href="font.html"><code>langou/font</code></a></li>
-<li><a href="media.html"><code>langou/media</code></a></li>
-<li><a href="value.html"><code>langou/value</code></a></li>
-<li><a href="util.html"><code>langou/util</code></a></li>
-<li><a href="event.html"><code>langou/event</code></a></li>
-<li><a href="fs.html"><code>langou/fs</code></a></li>
-<li><a href="http.html"><code>langou/http</code></a></li>
-<li><a href="keys.html"><code>langou/keys</code></a></li>
-<li><a href="path.html"><code>langou/path</code></a></li>
-<li><a href="reader.html"><code>langou/reader</code></a></li>
-<li><a href="storage.html"><code>langou/storage</code></a></li>
-<li><a href="sys.html"><code>langou/sys</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="path.html"><code>ngui/path</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
 <li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
@@ -91,7 +91,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Langou v0.6.0 Documentation</h1>
+				<h1>Ngui v0.6.2 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -105,7 +105,7 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#langou-css">langou/css</a></span>
+<span><a href="#ngui-css">ngui/css</a></span>
 <ul>
 <li>
 <span><a href="#create-sheets-">create(sheets)</a></span>
@@ -304,14 +304,14 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="langou-css">
-			<code>langou/css</code>
-			<span><a class="mark" href="#langou-css" id="langou-css">#</a></span>
+				<h1 id="ngui-css">
+			<code>ngui/css</code>
+			<span><a class="mark" href="#ngui-css" id="ngui-css">#</a></span>
 		</h1><ul>
 <li><p><code>css</code>样式表类似于html <code>css</code>样式表，支持使用多级样式表，但只支持<code>class</code>类</p>
 </li>
 <li><p>支持<code>3</code>种伪类型<code>normal</code>、<code>hover</code>、<code>down</code></p>
-<p>  对应<a href="langou.html#view-onhighlighted"><code>View.onHighlighted</code></a>事件中的 <a href="langou.html#highlighted_normal"><code>HIGHLIGHTED_NORMAL</code></a> 、<a href="langou.html#highlighted_hover"><code>HIGHLIGHTED_HOVER</code></a>、<a href="langou.html#highlighted_down"><code>HIGHLIGHTED_DOWN</code></a></p>
+<p>  对应<a href="ngui.html#view-onhighlighted"><code>View.onHighlighted</code></a>事件中的 <a href="ngui.html#highlighted_normal"><code>HIGHLIGHTED_NORMAL</code></a> 、<a href="ngui.html#highlighted_hover"><code>HIGHLIGHTED_HOVER</code></a>、<a href="ngui.html#highlighted_down"><code>HIGHLIGHTED_DOWN</code></a></p>
 </li>
 <li><p>这里的样式表没有权重的概念，使用直接赋值的方式与使用样式表权重都相同，</p>
 <p>  但需要注意先后顺序小心直接赋值会被样式表覆盖，</p>
@@ -349,9 +349,9 @@
 </li>
 </ul>
 <p>Example:</p>
-<pre><code class="undefinedjs">import CSS from &#39;langou/css&#39;
-import { GUIApplication, Root, Div } from &#39;langou&#39;
-import &#39;langou/dialog&#39;
+<pre><code class="undefinedjs">import CSS from &#39;ngui/css&#39;
+import { GUIApplication, Root, Div } from &#39;ngui&#39;
+import &#39;ngui/dialog&#39;
 // 样式表都是全局的
 CSS({
     &#39;.test&#39;: {

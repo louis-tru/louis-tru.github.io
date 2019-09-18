@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Langou API Documentation</title>
+	<title>Ngui API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
 		var src = 'blog/003-action.html';
@@ -38,17 +38,17 @@
 
 			<!--div id="intro" class="interior">
 				<a href="/" id="home2" title="Go back to the home page">
-					langou
+					ngui
 				</a>
 			</div-->
 
-			<h1 id="-langou-">
-			<a href="http://langou.org/"><code>Langou</code></a>
-			<span><a class="mark" href="#-langou-" id="-langou-">#</a></span>
+			<h1 id="-ngui-">
+			<a href="http://ngui.fun/"><code>Ngui</code></a>
+			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/lmake"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/langou/tree/master/examples"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/nxmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -64,25 +64,25 @@
 			Modules
 			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="langou.html"><code>langou</code></a></li>
+<li><a href="ngui.html"><code>ngui</code></a></li>
 <li><a href="pkg.html"><code>pkg</code></a></li>
-<li><a href="action.html"><code>langou/action</code></a></li>
-<li><a href="app.html"><code>langou/app</code></a></li>
-<li><a href="css.html"><code>langou/css</code></a></li>
-<li><a href="ctr.html"><code>langou/ctr</code></a></li>
-<li><a href="display_port.html"><code>langou/display_port</code></a></li>
-<li><a href="font.html"><code>langou/font</code></a></li>
-<li><a href="media.html"><code>langou/media</code></a></li>
-<li><a href="value.html"><code>langou/value</code></a></li>
-<li><a href="util.html"><code>langou/util</code></a></li>
-<li><a href="event.html"><code>langou/event</code></a></li>
-<li><a href="fs.html"><code>langou/fs</code></a></li>
-<li><a href="http.html"><code>langou/http</code></a></li>
-<li><a href="keys.html"><code>langou/keys</code></a></li>
-<li><a href="path.html"><code>langou/path</code></a></li>
-<li><a href="reader.html"><code>langou/reader</code></a></li>
-<li><a href="storage.html"><code>langou/storage</code></a></li>
-<li><a href="sys.html"><code>langou/sys</code></a></li>
+<li><a href="action.html"><code>ngui/action</code></a></li>
+<li><a href="app.html"><code>ngui/app</code></a></li>
+<li><a href="css.html"><code>ngui/css</code></a></li>
+<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
+<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
+<li><a href="font.html"><code>ngui/font</code></a></li>
+<li><a href="media.html"><code>ngui/media</code></a></li>
+<li><a href="value.html"><code>ngui/value</code></a></li>
+<li><a href="util.html"><code>ngui/util</code></a></li>
+<li><a href="event.html"><code>ngui/event</code></a></li>
+<li><a href="fs.html"><code>ngui/fs</code></a></li>
+<li><a href="http.html"><code>ngui/http</code></a></li>
+<li><a href="keys.html"><code>ngui/keys</code></a></li>
+<li><a href="path.html"><code>ngui/path</code></a></li>
+<li><a href="reader.html"><code>ngui/reader</code></a></li>
+<li><a href="storage.html"><code>ngui/storage</code></a></li>
+<li><a href="sys.html"><code>ngui/sys</code></a></li>
 <li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
@@ -91,7 +91,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Langou v0.6.0 Documentation</h1>
+				<h1>Ngui v0.6.2 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -105,7 +105,7 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#langou-">Langou简介</a></span>
+<span><a href="#ngui-">Ngui简介</a></span>
 </li>
 <li>
 <span><a href="#-action-">什么是Action动作</a></span>
@@ -145,22 +145,22 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="langou-">
-			Langou简介
-			<span><a class="mark" href="#langou-" id="langou-">#</a></span>
-		</h1><p>Langou是一个跨平台（Android/iOS）前端开发框架，核心代码使用C++编写，底层基于OpenGL绘图，上层实现了一个精简的排版引擎以及一个JS/JSX运行环境。目标是想实现在此基础上开发GUI应用程序可兼顾开发速度与运行效率。</p>
+				<h1 id="ngui-">
+			Ngui简介
+			<span><a class="mark" href="#ngui-" id="ngui-">#</a></span>
+		</h1><p>Ngui是一个跨平台（Android/iOS）前端开发框架，核心代码使用C++编写，底层基于OpenGL绘图，上层实现了一个精简的排版引擎以及一个JS/JSX运行环境。目标是想实现在此基础上开发GUI应用程序可兼顾开发速度与运行效率。</p>
 <ul>
-<li><p><a href="http://www.jianshu.com/p/2104b885eae6"><code>开源跨平台移动项目Langou【简介】</code></a></p>
+<li><p><a href="http://www.jianshu.com/p/2104b885eae6"><code>开源跨平台移动项目Ngui【简介】</code></a></p>
 </li>
-<li><p><a href="http://www.jianshu.com/p/b21bf5380c7f"><code>开源跨平台移动项目Langou【入门】</code></a></p>
+<li><p><a href="http://www.jianshu.com/p/b21bf5380c7f"><code>开源跨平台移动项目Ngui【入门】</code></a></p>
 </li>
-<li><p><a href="http://www.jianshu.com/p/4e9d927c3724"><code>开源跨平台移动项目Langou【视图与布局系统】</code></a></p>
+<li><p><a href="http://www.jianshu.com/p/4e9d927c3724"><code>开源跨平台移动项目Ngui【视图与布局系统】</code></a></p>
 </li>
-<li><p><a href="http://www.jianshu.com/p/01064b100315"><code>开源跨平台移动项目Langou【Action动作系统】</code></a></p>
+<li><p><a href="http://www.jianshu.com/p/01064b100315"><code>开源跨平台移动项目Ngui【Action动作系统】</code></a></p>
 </li>
-<li><p><a href="http://www.jianshu.com/p/fb86b020554b"><code>开源跨平台移动项目Langou【CSS样式表规则及用法】</code></a></p>
+<li><p><a href="http://www.jianshu.com/p/fb86b020554b"><code>开源跨平台移动项目Ngui【CSS样式表规则及用法】</code></a></p>
 </li>
-<li><p><a href="http://langou.org/doc/"><code>Langou API 文档</code></a></p>
+<li><p><a href="http://ngui.fun/doc/"><code>Ngui API 文档</code></a></p>
 </li>
 </ul>
 <h1 id="-action-">
@@ -171,18 +171,19 @@
 			动作是什么原理
 			<span><a class="mark" href="#-" id="-">#</a></span>
 		</h1><p>动作怎么驱动视图进行流畅运动的呢？其实原理很简单，我们可以把动作系统看做一个独立的系统与视图或渲染完全不相关。它们之间的关系是动作自身的变化最终会映射调视图，这个过程是通过调用视图暴露的公有方法或属性来完成的。这个过程完全是单向的，且视图不会向动作发出任何指令。
-比如说现在创建了一个新的关键帧动作，给它设置两个关键帧，且x的值经过1秒钟从0变化到100。这个过程是动作自身发生的变化并且带动与之相关的视图一同发生改变，请记住这个过程视图是被动的，而动作才是主动的发生改变。</p>
-<pre><code class="undefinedjs">import { langou, Div } from &#39;langou&#39;;
-import KeyframeAction from &#39;langou/action&#39;;
+比如说现在创建了一个新的关键帧动作，给它设置两个关键帧，且x的值经过1秒钟从0变化到100，然后再经过1秒回到0。这个过程是动作自身发生的变化并且带动与之相关的视图一同发生改变，请记住这个过程视图是被动的，而动作才是主动的发生改变。</p>
+<pre><code class="undefinedjs">import { ngui, Div } from &#39;ngui&#39;;
+import KeyframeAction from &#39;ngui/action&#39;;
 var div = new Div();
 var act = new KeyframeAction();
 act.add({ x: 0, time: 0 });
 act.add({ x: 100, time: 1e3/*毫秒*/ });
+act.add({ x: 0, time: 2e3/*毫秒*/ });
 div.width = 50;
 div.height = 50;
 div.backgroundColor = &#39;#f00&#39;;
 div.action = act;
-div.appendTo(langou.root);
+div.appendTo(ngui.root);
 act.play();
 </code></pre>
 <h1 id="-">
@@ -191,13 +192,13 @@ act.play();
 		</h1><p>以下是框架提供的几个类型与继承联系</p>
 <p>注：带*号的为抽象类型或协议没有构造函数</p>
 <ul>
-<li><a href="https://langou.org/doc/action.html#class-action">Action</a>*<ul>
-<li><a href="https://langou.org/doc/action.html#class-groupaction">GroupAction</a>*<ul>
-<li><a href="https://langou.org/doc/action.html#class-spawnaction">SpawnAction</a> </li>
-<li><a href="https://langou.org/doc/action.html#class-sequenceaction">SequenceAction</a></li>
+<li><a href="https://ngui.fun/doc/action.html#class-action">Action</a>*<ul>
+<li><a href="https://ngui.fun/doc/action.html#class-groupaction">GroupAction</a>*<ul>
+<li><a href="https://ngui.fun/doc/action.html#class-spawnaction">SpawnAction</a> </li>
+<li><a href="https://ngui.fun/doc/action.html#class-sequenceaction">SequenceAction</a></li>
 </ul>
 </li>
-<li><a href="https://langou.org/doc/action.html#class-keyframeaction">KeyframeAction</a></li>
+<li><a href="https://ngui.fun/doc/action.html#class-keyframeaction">KeyframeAction</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +211,7 @@ act.play();
 			GroupAction*
 			<span><a class="mark" href="#groupaction-" id="groupaction-">#</a></span>
 		</h2><p>这是个集合的动作类型，提供子动作的添加删除插入。有了子动作就可以帮你实现更加复杂的动画场景。
-它也有两个具体的子类型 <a href="https://langou.org/doc/action.html#class-spawnaction">SpawnAction</a> 、<a href="https://langou.org/doc/action.html#class-sequenceaction">SequenceAction</a>。</p>
+它也有两个具体的子类型 <a href="https://ngui.fun/doc/action.html#class-spawnaction">SpawnAction</a> 、<a href="https://ngui.fun/doc/action.html#class-sequenceaction">SequenceAction</a>。</p>
 <h2 id="spawnaction">
 			SpawnAction
 			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
@@ -222,8 +223,8 @@ act.play();
 <h1 id="keyframeaction-frame">
 			KeyframeAction与Frame
 			<span><a class="mark" href="#keyframeaction-frame" id="keyframeaction-frame">#</a></span>
-		</h1><p>关键帧动作这是动作系统的核心。所有动作的实现均在这里完成它是动作系统基本单元，前面的<a href="https://langou.org/doc/action.html#class-groupaction">GroupAction</a>只有包含<a href="https://langou.org/doc/action.html#class-keyframeaction">KeyframeAction</a>类型的动作才有真正的义意。
-而关键帧动作又包含理更加基本的元素<code>关键帧</code><a href="https://langou.org/doc/action.html#class-frame">Frame</a>,关键帧包含的属性与<code>CSS</code>属性是同名的且与所有视图的属性都是对应关键。通俗的说比如<a href="https://langou.org/doc/langou.html#class-view">View</a>上会有<code>x</code>属性而<a href="https://langou.org/doc/action.html#class-frame">Frame</a>上也会有<code>x</code>属性，如果关键帧上有视图上并不存在的属性，那么这个属性对视图是无效的。比如<a href="https://langou.org/doc/langou.html#class-view">View</a>上就不存在<code>width</code>属性那么这个属性的改变不会影响到<a href="https://langou.org/doc/langou.html#class-view">View</a>,但如果绑定的视图是<a href="https://langou.org/doc/langou.html#class-div">Div</a>那么<code>width</code>的改变一定会影响到它，这与<code>CSS</code>样式表类似。</p>
+		</h1><p>关键帧动作这是动作系统的核心。所有动作的实现均在这里完成它是动作系统基本单元，前面的<a href="https://ngui.fun/doc/action.html#class-groupaction">GroupAction</a>只有包含<a href="https://ngui.fun/doc/action.html#class-keyframeaction">KeyframeAction</a>类型的动作才有真正的义意。
+而关键帧动作又包含理更加基本的元素<code>关键帧</code><a href="https://ngui.fun/doc/action.html#class-frame">Frame</a>,关键帧包含的属性与<code>CSS</code>属性是同名的且与所有视图的属性都是对应关键。通俗的说比如<a href="https://ngui.fun/doc/ngui.html#class-view">View</a>上会有<code>x</code>属性而<a href="https://ngui.fun/doc/action.html#class-frame">Frame</a>上也会有<code>x</code>属性，如果关键帧上有视图上并不存在的属性，那么这个属性对视图是无效的。比如<a href="https://ngui.fun/doc/ngui.html#class-view">View</a>上就不存在<code>width</code>属性那么这个属性的改变不会影响到<a href="https://ngui.fun/doc/ngui.html#class-view">View</a>,但如果绑定的视图是<a href="https://ngui.fun/doc/ngui.html#class-div">Div</a>那么<code>width</code>的改变一定会影响到它，这与<code>CSS</code>样式表类似。</p>
 <p>看下面的例子:</p>
 <pre><code class="undefinedjs">// 这是有效的动作
 var act1 = new KeyframeAction();
@@ -244,7 +245,7 @@ act2.paly();
 <h1 id="view-action-">
 			View.action属性
 			<span><a class="mark" href="#view-action-" id="view-action-">#</a></span>
-		</h1><p><a href="https://langou.org/doc/langou.html#set-view-action">View.action</a>做为<a href="https://langou.org/doc/langou.html#class-view">View</a>的一个属性可接收多种类型的参数，之前给大家展示的例子中创建动作是很繁琐的，但<code>active</code>提供多种类型的参数类型的支持，包括<code>json</code>数据与<code>Action</code>对像实例本身。前面的例子中已介绍过<code>Action</code>方式，下面着重说<code>json</code>数据方法。大家也可研读<code>langou.js</code>与<code>action.js</code>中的源代码，其它<a href="https://langou.org/doc/langou.html#set-view-action">View.action</a>属性只是做简单的调用转发，功能的实现其实是在<code>action.js</code>文件中的<code>create()</code>方法里实现的。</p>
+		</h1><p><a href="https://ngui.fun/doc/ngui.html#set-view-action">View.action</a>做为<a href="https://ngui.fun/doc/ngui.html#class-view">View</a>的一个属性可接收多种类型的参数，之前给大家展示的例子中创建动作是很繁琐的，但<code>active</code>提供多种类型的参数类型的支持，包括<code>json</code>数据与<code>Action</code>对像实例本身。前面的例子中已介绍过<code>Action</code>方式，下面着重说<code>json</code>数据方法。大家也可研读<code>ngui.js</code>与<code>action.js</code>中的源代码，其它<a href="https://ngui.fun/doc/ngui.html#set-view-action">View.action</a>属性只是做简单的调用转发，功能的实现其实是在<code>action.js</code>文件中的<code>create()</code>方法里实现的。</p>
 <p>看例子:</p>
 <pre><code class="undefinedjs">// 这是创建KeyframeAction
 var div = new Div();
@@ -291,11 +292,11 @@ div4.action = {
     ]
 };
 </code></pre>
-<p>大家可以看到上面的例子中有4种典型的创建方法。主要看你给的<code>json</code>数据是否存在这三个属性<code>seq</code>、<code>spawn</code>、<code>keyframe</code>，对应<a href="https://langou.org/doc/action.html#class-spawnaction">SpawnAction</a>、<a href="https://langou.org/doc/action.html#class-sequenceaction">SequenceAction</a>、<a href="https://langou.org/doc/action.html#class-keyframeaction">KeyframeAction</a>，外加一个<code>json</code>数据类型检查，数据类型为数组就创建<a href="https://langou.org/doc/action.html#class-keyframeaction">KeyframeAction</a>。并且这可以嵌套使用。</p>
+<p>大家可以看到上面的例子中有4种典型的创建方法。主要看你给的<code>json</code>数据是否存在这三个属性<code>seq</code>、<code>spawn</code>、<code>keyframe</code>，对应<a href="https://ngui.fun/doc/action.html#class-spawnaction">SpawnAction</a>、<a href="https://ngui.fun/doc/action.html#class-sequenceaction">SequenceAction</a>、<a href="https://ngui.fun/doc/action.html#class-keyframeaction">KeyframeAction</a>，外加一个<code>json</code>数据类型检查，数据类型为数组就创建<a href="https://ngui.fun/doc/action.html#class-keyframeaction">KeyframeAction</a>。并且这可以嵌套使用。</p>
 <h1 id="view-transition-">
 			View.transition()方法
 			<span><a class="mark" href="#view-transition-" id="view-transition-">#</a></span>
-		</h1><p>这是一个简单创建简单过渡动画的方法，实现原型为<code>action.js</code>的<code>transition()</code>方法，与<a href="https://langou.org/doc/langou.html#set-view-action">View.action</a>一样<a href="https://langou.org/doc/langou.html#view-transition-style-delay-cb-">View.transition()</a>只做简单的转发。</p>
+		</h1><p>这是一个简单创建简单过渡动画的方法，实现原型为<code>action.js</code>的<code>transition()</code>方法，与<a href="https://ngui.fun/doc/ngui.html#set-view-action">View.action</a>一样<a href="https://ngui.fun/doc/ngui.html#view-transition-style-delay-cb-">View.transition()</a>只做简单的转发。</p>
 <p>典型应用：</p>
 <pre><code class="undefinedjs">view.transition({
     time: 1000,

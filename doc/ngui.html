@@ -1,54 +1,54 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Ngui API Documentation</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-  <script>
-    var src = 'ngui.html';
-    var relative = '';
-    document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-    document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-  </script>
+	<meta charset="utf-8"/>
+	<title>Ngui API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'ngui.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
 
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-  <style>  
-    #column1.interior {
-      overflow-wrap: break-word;
-    }
-  
-    .on {
-      color: #43853d !important;
-      border-radius: 0;
-      border-bottom: 1px solid #43853d;
-      background: none;
-    }
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
 
-    img {
-      max-width: 100%;
-    }
+		img {
+			max-width: 100%;
+		}
 
-  </style>
-  
-  <div id="content" class="clearfix">
+	</style>
+	
+	<div id="content" class="clearfix">
 
-    <div id="column2" class="interior">
+		<div id="column2" class="interior">
 
-      <!--div id="intro" class="interior">
-        <a href="/" id="home2" title="Go back to the home page">
-          NGUI
-        </a>
-      </div-->
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					ngui
+				</a>
+			</div-->
 
-      <h1 id="-ngui-">
-			<a href="http://ngui.io/"><code>Ngui</code></a>
+			<h1 id="-ngui-">
+			<a href="http://ngui.fun/"><code>Ngui</code></a>
 			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/ngui-tools"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/ngui/tree/master/demo"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/nxmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ngui/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -79,7 +79,7 @@
 <li><a href="fs.html"><code>ngui/fs</code></a></li>
 <li><a href="http.html"><code>ngui/http</code></a></li>
 <li><a href="keys.html"><code>ngui/keys</code></a></li>
-<li><a href="url.html"><code>ngui/url</code></a></li>
+<li><a href="path.html"><code>ngui/path</code></a></li>
 <li><a href="reader.html"><code>ngui/reader</code></a></li>
 <li><a href="storage.html"><code>ngui/storage</code></a></li>
 <li><a href="sys.html"><code>ngui/sys</code></a></li>
@@ -87,23 +87,23 @@
 </ul>
 
 
-    </div>
-    
-    <div id="column1" data-id="documentation" class="interior">
-      <header>
-        <h1>Ngui v0.4.0 Documentation</h1>
-        <div id="gtoc">
-          <p>
-            <a href="/doc" id="index">Documentation Index</a> |
-            <a href="/" id="home">Home</a>
-          </p>
-        </div>
-        <hr>
-      </header>
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Ngui v0.6.2 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
 
-      <div id="toc">
-        <h2>Table of Contents</h2>
-        <ul>
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
 <li>
 <span><a href="#ngui">ngui</a></span>
 <ul>
@@ -117,16 +117,10 @@
 <span><a href="#nextframe-cb-">nextFrame(cb)</a></span>
 </li>
 <li>
-<span><a href="#new-vx-parent-args-">New(vx[,parent[,...args]])</a></span>
-</li>
-<li>
-<span><a href="#new-vx-args-">New(vx[,...args])</a></span>
+<span><a href="#render-vx-parentview-">render(vx[,parentView])</a></span>
 </li>
 <li>
 <span><a href="#css-sheets-">CSS(sheets)</a></span>
-</li>
-<li>
-<span><a href="#isviewxml-vx-type-">isViewXml(vx[,type])</a></span>
 </li>
 <li>
 <span><a href="#get-app">Get: app</a></span>
@@ -216,22 +210,13 @@
 <span><a href="#view-appendto-parent-">View.appendTo(parent)</a></span>
 </li>
 <li>
+<span><a href="#view-afterto-prevview-">View.afterTo(prevView)</a></span>
+</li>
+<li>
 <span><a href="#view-before-prev-">View.before(prev)</a></span>
 </li>
 <li>
 <span><a href="#view-after-next-">View.after(next)</a></span>
-</li>
-<li>
-<span><a href="#view-movetobefore-">View.moveToBefore();</a></span>
-</li>
-<li>
-<span><a href="#view-movetoafter-">View.moveToAfter();</a></span>
-</li>
-<li>
-<span><a href="#view-movetofirst-">View.moveToFirst();</a></span>
-</li>
-<li>
-<span><a href="#view-movetolast-">View.moveToLast();</a></span>
 </li>
 <li>
 <span><a href="#view-remove-">View.remove()</a></span>
@@ -250,9 +235,6 @@
 </li>
 <li>
 <span><a href="#view-layoutoffsetfrom-upper-">View.layoutOffsetFrom([upper])</a></span>
-</li>
-<li>
-<span><a href="#view-children-index-">View.children(index)</a></span>
 </li>
 <li>
 <span><a href="#view-getaction-">View.getAction()</a></span>
@@ -306,25 +288,13 @@
 <span><a href="#view-toggleclass-name-">View.toggleClass(name)</a></span>
 </li>
 <li>
-<span><a href="#get-view-childrencount">Get: View.childrenCount</a></span>
-</li>
-<li>
 <span><a href="#view-innertext">View.innerText</a></span>
 </li>
 <li>
 <span><a href="#view-id">View.id</a></span>
 </li>
 <li>
-<span><a href="#get-view-controller">Get: View.controller</a></span>
-</li>
-<li>
-<span><a href="#get-view-ctr">Get: View.ctr</a></span>
-</li>
-<li>
-<span><a href="#get-view-top">Get: View.top</a></span>
-</li>
-<li>
-<span><a href="#get-view-topctr">Get: View.topCtr</a></span>
+<span><a href="#get-view-owner">Get: View.owner</a></span>
 </li>
 <li>
 <span><a href="#get-view-parent">Get: View.parent</a></span>
@@ -372,7 +342,7 @@
 <span><a href="#get-view-finalvisible">Get: View.finalVisible</a></span>
 </li>
 <li>
-<span><a href="#get-view-screenvisible">Get: View.screenVisible</a></span>
+<span><a href="#get-view-drawvisible">Get: View.drawVisible</a></span>
 </li>
 <li>
 <span><a href="#view-translate">View.translate</a></span>
@@ -653,6 +623,9 @@
 <li>
 <span><a href="#indep-aligny">Indep.alignY</a></span>
 </li>
+<li>
+<span><a href="#set-indep-align">Set: Indep.align</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#class-limitindep">Class: LimitIndep</a></span>
@@ -876,48 +849,48 @@
 <span><a href="#class-textfont">Class: TextFont</a></span>
 <ul>
 <li>
-<span><a href="#view-textbackgroundcolor">View.textBackgroundColor</a></span>
+<span><a href="#textfont-textbackgroundcolor">TextFont.textBackgroundColor</a></span>
 </li>
 <li>
-<span><a href="#view-textcolor">View.textColor</a></span>
+<span><a href="#textfont-textcolor">TextFont.textColor</a></span>
 </li>
 <li>
-<span><a href="#view-textsize">View.textSize</a></span>
+<span><a href="#textfont-textsize">TextFont.textSize</a></span>
 </li>
 <li>
-<span><a href="#view-textstyle">View.textStyle</a></span>
+<span><a href="#textfont-textstyle">TextFont.textStyle</a></span>
 </li>
 <li>
-<span><a href="#view-textfamily">View.textFamily</a></span>
+<span><a href="#textfont-textfamily">TextFont.textFamily</a></span>
 </li>
 <li>
-<span><a href="#view-textshadow">View.textShadow</a></span>
+<span><a href="#textfont-textshadow">TextFont.textShadow</a></span>
 </li>
 <li>
-<span><a href="#view-textlineheight">View.textLineHeight</a></span>
+<span><a href="#textfont-textlineheight">TextFont.textLineHeight</a></span>
 </li>
 <li>
-<span><a href="#view-textdecoration">View.textDecoration</a></span>
+<span><a href="#textfont-textdecoration">TextFont.textDecoration</a></span>
 </li>
 </ul>
 <li>
 <span><a href="#class-textlayout">Class: TextLayout</a></span>
 <ul>
 <li>
-<span><a href="#view-textoverflow">View.textOverflow</a></span>
+<span><a href="#textfont-textoverflow">TextFont.textOverflow</a></span>
 </li>
 <li>
-<span><a href="#view-textwhitespace">View.textWhiteSpace</a></span>
+<span><a href="#textfont-textwhitespace">TextFont.textWhiteSpace</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-      </div>
+			</div>
 
-      <div id="apicontent">
-        <h1 id="ngui">
+			<div id="apicontent">
+				<h1 id="ngui">
 			<code>ngui</code>
 			<span><a class="mark" href="#ngui" id="ngui">#</a></span>
 		</h1><h2 id="class-guiapplication">
@@ -932,27 +905,14 @@
 			nextFrame(cb)
 			<span><a class="mark" href="#nextframe-cb-" id="nextframe-cb-">#</a></span>
 		</h2><p>渲染下一帧画面后执行，快捷方式 --&gt; <a href="display_port.html#nextFrame-cb-"><code>nextFrame(cb)</code></a></p>
-<h2 id="new-vx-parent-args-">
-			New(vx[,parent[,...args]])
-			<span><a class="mark" href="#new-vx-parent-args-" id="new-vx-parent-args-">#</a></span>
-		</h2><h2 id="new-vx-args-">
-			New(vx[,...args])
-			<span><a class="mark" href="#new-vx-args-" id="new-vx-args-">#</a></span>
-		</h2><p>通过<code>vx</code>描述数据创建视图或视图控制器，快捷方式 --&gt; <a href="ctr.html#new-vx-parent-args-"><code>New()</code></a></p>
+<h2 id="render-vx-parentview-">
+			render(vx[,parentView])
+			<span><a class="mark" href="#render-vx-parentview-" id="render-vx-parentview-">#</a></span>
+		</h2><p>通过<code>vdom</code>描述数据创建视图或视图控制器，快捷方式 --&gt; <a href="ctr.html#static-viewcontroller-render-vdom-parentview-"><code>render()</code></a></p>
 <h2 id="css-sheets-">
 			CSS(sheets)
 			<span><a class="mark" href="#css-sheets-" id="css-sheets-">#</a></span>
 		</h2><p>定义样式表，快捷方式 --&gt; <a href="css.html#css-sheets-"><code>CSS()</code></a></p>
-<h2 id="isviewxml-vx-type-">
-			isViewXml(vx[,type])
-			<span><a class="mark" href="#isviewxml-vx-type-" id="isviewxml-vx-type-">#</a></span>
-		</h2><p>测试参数<code>vx</code>是否为视图描述数据并且为<code>type</code>类型</p>
-<p>如果不传入<code>type</code>不检测类型</p>
-<ul>
-<li>@arg <code>vx</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>}</li>
-<li>@arg <code>[type]</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"><code>Class</code></a>}</li>
-<li>@ret {<a href="native_types.html#bool"><code>bool</code></a>}</li>
-</ul>
 <h2 id="get-app">
 			Get: app
 			<span><a class="mark" href="#get-app" id="get-app">#</a></span>
@@ -1058,7 +1018,7 @@ v.y = 100;
 ngui.root.append(v);
 
 // jsx语法只能存在于.jsx文件中
-var v2 = ngui.New(&lt;Div width=100 height=100 backgroundColor=&quot;#f00&quot; /&gt;, v);
+var v2 = ngui.render(&lt;Div width=100 height=100 backgroundColor=&quot;#f00&quot; /&gt;, v);
 v2.onClick.on(function(ev) {
     console.log(&#39;div click&#39;);
 })
@@ -1109,6 +1069,13 @@ v2.onClick.on(function(ev) {
 <ul>
 <li>@arg <code>parent</code> {<a href="ngui.html#class-view"><code>View</code></a>}</li>
 </ul>
+<h3 id="view-afterto-prevview-">
+			View.afterTo(prevView)
+			<span><a class="mark" href="#view-afterto-prevview-" id="view-afterto-prevview-">#</a></span>
+		</h3><p>追加上一个视图的后面</p>
+<ul>
+<li>@arg <code>prevView</code> {<a href="ngui.html#class-view"><code>View</code></a>}</li>
+</ul>
 <h3 id="view-before-prev-">
 			View.before(prev)
 			<span><a class="mark" href="#view-before-prev-" id="view-before-prev-">#</a></span>
@@ -1123,22 +1090,6 @@ v2.onClick.on(function(ev) {
 <ul>
 <li>@arg <code>next</code> {<a href="ngui.html#class-view"><code>View</code></a>}</li>
 </ul>
-<h3 id="view-movetobefore-">
-			View.moveToBefore();
-			<span><a class="mark" href="#view-movetobefore-" id="view-movetobefore-">#</a></span>
-		</h3><p>移动到上一个兄弟视图前面</p>
-<h3 id="view-movetoafter-">
-			View.moveToAfter();
-			<span><a class="mark" href="#view-movetoafter-" id="view-movetoafter-">#</a></span>
-		</h3><p>移动到下一个兄弟视图后面</p>
-<h3 id="view-movetofirst-">
-			View.moveToFirst();
-			<span><a class="mark" href="#view-movetofirst-" id="view-movetofirst-">#</a></span>
-		</h3><p>移动到第一个</p>
-<h3 id="view-movetolast-">
-			View.moveToLast();
-			<span><a class="mark" href="#view-movetolast-" id="view-movetolast-">#</a></span>
-		</h3><p>移动到最后一个</p>
 <h3 id="view-remove-">
 			View.remove()
 			<span><a class="mark" href="#view-remove-" id="view-remove-">#</a></span>
@@ -1177,14 +1128,6 @@ v2.onClick.on(function(ev) {
 <ul>
 <li>@arg <code>[upper=parent]</code> {<a href="ngui.html#class-view"><code>View</code></a>}</li>
 <li>@ret {<a href="value.html#class-vec2"><code>Vec2</code></a>}</li>
-</ul>
-<h3 id="view-children-index-">
-			View.children(index)
-			<span><a class="mark" href="#view-children-index-" id="view-children-index-">#</a></span>
-		</h3><p>通过索引获取子视图</p>
-<ul>
-<li>@arg <code>index</code> {<a href="native_types.html#uint"><code>uint</code></a>}</li>
-<li>@ret {<a href="ngui.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="view-getaction-">
 			View.getAction()
@@ -1307,13 +1250,6 @@ v2.onClick.on(function(ev) {
 <ul>
 <li>@arg <code>name</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
-<h3 id="get-view-childrencount">
-			Get: View.childrenCount
-			<span><a class="mark" href="#get-view-childrencount" id="get-view-childrencount">#</a></span>
-		</h3><p>返回子视图数量</p>
-<ul>
-<li>{<a href="native_types.html#uint"><code>uint</code></a>}</li>
-</ul>
 <h3 id="view-innertext">
 			View.innerText
 			<span><a class="mark" href="#view-innertext" id="view-innertext">#</a></span>
@@ -1326,35 +1262,14 @@ v2.onClick.on(function(ev) {
 			View.id
 			<span><a class="mark" href="#view-id" id="view-id">#</a></span>
 		</h3><p>获取或设置<code>id</code>,这个<code>id</code>在同一个视图控制器作作用域中不可以重复</p>
-<p>可以通过<code>topCtr.find(id)</code>获取这个视图</p>
+<p>可以通过<code>owner.IDs.id</code>获取这个视图</p>
 <ul>
 <li>{<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
-<h3 id="get-view-controller">
-			Get: View.controller
-			<span><a class="mark" href="#get-view-controller" id="get-view-controller">#</a></span>
-		</h3><h3 id="get-view-ctr">
-			Get: View.ctr
-			<span><a class="mark" href="#get-view-ctr" id="get-view-ctr">#</a></span>
-		</h3><p>如果这个视图拥有<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>可通过<code>ctr</code>或<code>controller</code>获取它，</p>
-<p>这个视图称之为关键视图，<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>称之为成员视图控制器，</p>
-<p>关键视图下面所有后代视图以及子视图控制器都属于这个作用域中的成员，</p>
-<p>成员视图的<code>top</code>属性都指向当前关键视图,成员视图的<code>topCtr</code>以及子视图控制器的<code>parent</code>都指向成员视图控制器属性，</p>
-<p>如果这些成员有具名的<code>id</code>,可以通过成员视图控制器<code>ViewController.find(id)</code>找到这些成员</p>
-<ul>
-<li>{<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
-</ul>
-<h3 id="get-view-top">
-			Get: View.top
-			<span><a class="mark" href="#get-view-top" id="get-view-top">#</a></span>
-		</h3><p>指向关键视图</p>
-<ul>
-<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
-</ul>
-<h3 id="get-view-topctr">
-			Get: View.topCtr
-			<span><a class="mark" href="#get-view-topctr" id="get-view-topctr">#</a></span>
-		</h3><p>指向成员视图控制器</p>
+<h3 id="get-view-owner">
+			Get: View.owner
+			<span><a class="mark" href="#get-view-owner" id="get-view-owner">#</a></span>
+		</h3><p>指向视图控制器 <code>owner</code></p>
 <ul>
 <li>{<a href="ctr.html#class-viewcontroller"><code>ViewController</code></a>}</li>
 </ul>
@@ -1463,10 +1378,10 @@ v2.onClick.on(function(ev) {
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
-<h3 id="get-view-screenvisible">
-			Get: View.screenVisible
-			<span><a class="mark" href="#get-view-screenvisible" id="get-view-screenvisible">#</a></span>
-		</h3><p>该状态标识视图是否在屏幕或区域范围内,这个状态会忽略<code>visible</code>值</p>
+<h3 id="get-view-drawvisible">
+			Get: View.drawVisible
+			<span><a class="mark" href="#get-view-drawvisible" id="get-view-drawvisible">#</a></span>
+		</h3><p>该状态标识视图是否在屏幕或区域范围内(是否需要绘图),这个状态会忽略<code>visible</code>值</p>
 <ul>
 <li>{<a href="native_types.html#bool"><code>bool</code></a>}</li>
 </ul>
@@ -2238,6 +2153,24 @@ console.log(view.class);
 <li><p>{<a href="value.html#class-align"><code>Align</code></a>}</p>
 </li>
 </ul>
+<h3 id="set-indep-align">
+			Set: Indep.align
+			<span><a class="mark" href="#set-indep-align" id="set-indep-align">#</a></span>
+		</h3><p>同时设置垂直与水平对齐方式，默认为<code>left</code>与<code>top</code>，有效的值为：</p>
+<ul>
+<li><p><code>left</code> - 水平左对齐</p>
+</li>
+<li><p><code>right</code> - 水平右对齐</p>
+</li>
+<li><p><code>top</code> - 垂直顶部对齐</p>
+</li>
+<li><p><code>bottom</code> - 垂直底部对齐</p>
+</li>
+<li><p><code>cerent</code> - 水平与垂直居中对齐</p>
+</li>
+<li><p>{<a href="value.html#class-align"><code>Align</code></a>}</p>
+</li>
+</ul>
 <h2 id="class-limitindep">
 			<code>Class: LimitIndep</code>
 			<span><a class="mark" href="#class-limitindep" id="class-limitindep">#</a></span>
@@ -2775,30 +2708,30 @@ console.log(view.class);
 <li><code>abstract class</code></li>
 </ul>
 <p>普通文本与字体属性,这是个抽象类型并没有构造函数</p>
-<h3 id="view-textbackgroundcolor">
-			View.textBackgroundColor
-			<span><a class="mark" href="#view-textbackgroundcolor" id="view-textbackgroundcolor">#</a></span>
+<h3 id="textfont-textbackgroundcolor">
+			TextFont.textBackgroundColor
+			<span><a class="mark" href="#textfont-textbackgroundcolor" id="textfont-textbackgroundcolor">#</a></span>
 		</h3><p>文本背景颜色 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li>{<a href="value.html#class-textcolor"><code>TextColor</code></a>}</li>
 </ul>
-<h3 id="view-textcolor">
-			View.textColor
-			<span><a class="mark" href="#view-textcolor" id="view-textcolor">#</a></span>
+<h3 id="textfont-textcolor">
+			TextFont.textColor
+			<span><a class="mark" href="#textfont-textcolor" id="textfont-textcolor">#</a></span>
 		</h3><p>文本颜色 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li>{<a href="value.html#class-textcolor"><code>TextColor</code></a>}</li>
 </ul>
-<h3 id="view-textsize">
-			View.textSize
-			<span><a class="mark" href="#view-textsize" id="view-textsize">#</a></span>
+<h3 id="textfont-textsize">
+			TextFont.textSize
+			<span><a class="mark" href="#textfont-textsize" id="textfont-textsize">#</a></span>
 		</h3><p>文本字号大小 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li>{<a href="value.html#class-textsize"><code>TextSize</code></a>}</li>
 </ul>
-<h3 id="view-textstyle">
-			View.textStyle
-			<span><a class="mark" href="#view-textstyle" id="view-textstyle">#</a></span>
+<h3 id="textfont-textstyle">
+			TextFont.textStyle
+			<span><a class="mark" href="#textfont-textstyle" id="textfont-textstyle">#</a></span>
 		</h3><p>文本样式 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li><code>inherit</code> - 继承</li>
@@ -2810,23 +2743,23 @@ console.log(view.class);
 <li><p>{<a href="value.html#class-textstyle"><code>TextStyle</code></a>}</p>
 </li>
 </ul>
-<h3 id="view-textfamily">
-			View.textFamily
-			<span><a class="mark" href="#view-textfamily" id="view-textfamily">#</a></span>
+<h3 id="textfont-textfamily">
+			TextFont.textFamily
+			<span><a class="mark" href="#textfont-textfamily" id="textfont-textfamily">#</a></span>
 		</h3><p>文本字体家族名称列表字符串，多个使用逗号分割 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li>{<a href="value.html#class-textfamily"><code>TextFamily</code></a>}</li>
 </ul>
-<h3 id="view-textshadow">
-			View.textShadow
-			<span><a class="mark" href="#view-textshadow" id="view-textshadow">#</a></span>
+<h3 id="textfont-textshadow">
+			TextFont.textShadow
+			<span><a class="mark" href="#textfont-textshadow" id="textfont-textshadow">#</a></span>
 		</h3><p>文本阴影 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li>{<a href="value.html#class-textshadow"><code>TextShadow</code></a>}</li>
 </ul>
-<h3 id="view-textlineheight">
-			View.textLineHeight
-			<span><a class="mark" href="#view-textlineheight" id="view-textlineheight">#</a></span>
+<h3 id="textfont-textlineheight">
+			TextFont.textLineHeight
+			<span><a class="mark" href="#textfont-textlineheight" id="textfont-textlineheight">#</a></span>
 		</h3><p>文本行高 <strong>Default</strong> <code>inherit</code></p>
 <p>可选的值为</p>
 <ul>
@@ -2837,9 +2770,9 @@ console.log(view.class);
 <li><p>{<a href="value.html#class-textlineheight"><code>TextLineHeight</code></a>}</p>
 </li>
 </ul>
-<h3 id="view-textdecoration">
-			View.textDecoration
-			<span><a class="mark" href="#view-textdecoration" id="view-textdecoration">#</a></span>
+<h3 id="textfont-textdecoration">
+			TextFont.textDecoration
+			<span><a class="mark" href="#textfont-textdecoration" id="textfont-textdecoration">#</a></span>
 		</h3><p>文本装饰 <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li><code>inherit</code>    - 继承父视图</li>
@@ -2859,9 +2792,9 @@ console.log(view.class);
 <li><code>extends</code> <a href="ngui.html#class-textfont"><code>TextFont</code></a></li>
 </ul>
 <p>布局文本字体属性,这是个抽象类型并没有构造函数</p>
-<h3 id="view-textoverflow">
-			View.textOverflow
-			<span><a class="mark" href="#view-textoverflow" id="view-textoverflow">#</a></span>
+<h3 id="textfont-textoverflow">
+			TextFont.textOverflow
+			<span><a class="mark" href="#textfont-textoverflow" id="textfont-textoverflow">#</a></span>
 		</h3><p>文本溢出动作  <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li><code>inherit</code> - 继承父视图</li>
@@ -2873,9 +2806,9 @@ console.log(view.class);
 <li><p>{<a href="value.html#class-textoverflow"><code>TextOverflow</code></a>}</p>
 </li>
 </ul>
-<h3 id="view-textwhitespace">
-			View.textWhiteSpace
-			<span><a class="mark" href="#view-textwhitespace" id="view-textwhitespace">#</a></span>
+<h3 id="textfont-textwhitespace">
+			TextFont.textWhiteSpace
+			<span><a class="mark" href="#textfont-textwhitespace" id="textfont-textwhitespace">#</a></span>
 		</h3><p>文本空格处理方式  <strong>Default</strong> <code>inherit</code></p>
 <ul>
 <li><code>inherit</code> - 继承父视图</li>
@@ -2889,37 +2822,37 @@ console.log(view.class);
 </li>
 </ul>
 
-      </div>
+			</div>
 
-    </div>
+		</div>
 
-  </div>
+	</div>
 
-  <script>
-    document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-    document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-  </script>
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
 
-  <script>
-    highlight(undefined, undefined, 'pre');
-    
-    var column2 = document.getElementById('column2');
-    var a = column2.querySelector('li > a[href="' + src + '"]')
-    if ( a ) {
-      a.className += ' on';
-    }
-    if ( relative ) {
-      column2.querySelectorAll('li > a').forEach(function(a) {
-        var href = a.getAttribute('href');
-        if ( !href.match(/^(\/|https?:\/\/)/) ) {
-          a.setAttribute('href', relative + href);
-        }
-      });
-    }
-    document.getElementById('index').href = relative + '.';
-    document.getElementById('home').href = relative + '..';
-    // document.getElementById('home2').href = relative + '..';
-  </script>
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
 
 </body>
 </html>
