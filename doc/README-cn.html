@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Ngui API Documentation</title>
+	<title>Ftr API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
 		var src = 'README-cn.html';
@@ -38,17 +38,17 @@
 
 			<!--div id="intro" class="interior">
 				<a href="/" id="home2" title="Go back to the home page">
-					ngui
+					ftr
 				</a>
 			</div-->
 
-			<h1 id="-ngui-">
-			<a href="http://ngui.fun/"><code>Ngui</code></a>
-			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
+			<h1 id="ftr">
+			<a href="http://fasttr.org/"><code>Ftr</code></a>
+			<span><a class="mark" href="#ftr" id="ftr">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/nxmake"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/ngui/tree/master/examples"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/ftrp"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ftr/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -64,25 +64,25 @@
 			Modules
 			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="ftr.html"><code>ftr</code></a></li>
 <li><a href="pkg.html"><code>pkg</code></a></li>
-<li><a href="action.html"><code>ngui/action</code></a></li>
-<li><a href="app.html"><code>ngui/app</code></a></li>
-<li><a href="css.html"><code>ngui/css</code></a></li>
-<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
-<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
-<li><a href="font.html"><code>ngui/font</code></a></li>
-<li><a href="media.html"><code>ngui/media</code></a></li>
-<li><a href="value.html"><code>ngui/value</code></a></li>
-<li><a href="util.html"><code>ngui/util</code></a></li>
-<li><a href="event.html"><code>ngui/event</code></a></li>
-<li><a href="fs.html"><code>ngui/fs</code></a></li>
-<li><a href="http.html"><code>ngui/http</code></a></li>
-<li><a href="keys.html"><code>ngui/keys</code></a></li>
-<li><a href="path.html"><code>ngui/path</code></a></li>
-<li><a href="reader.html"><code>ngui/reader</code></a></li>
-<li><a href="storage.html"><code>ngui/storage</code></a></li>
-<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="action.html"><code>ftr/action</code></a></li>
+<li><a href="app.html"><code>ftr/app</code></a></li>
+<li><a href="css.html"><code>ftr/css</code></a></li>
+<li><a href="ctr.html"><code>ftr/ctr</code></a></li>
+<li><a href="display_port.html"><code>ftr/display_port</code></a></li>
+<li><a href="font.html"><code>ftr/font</code></a></li>
+<li><a href="media.html"><code>ftr/media</code></a></li>
+<li><a href="value.html"><code>ftr/value</code></a></li>
+<li><a href="util.html"><code>ftr/util</code></a></li>
+<li><a href="event.html"><code>ftr/event</code></a></li>
+<li><a href="fs.html"><code>ftr/fs</code></a></li>
+<li><a href="http.html"><code>ftr/http</code></a></li>
+<li><a href="keys.html"><code>ftr/keys</code></a></li>
+<li><a href="path.html"><code>ftr/path</code></a></li>
+<li><a href="reader.html"><code>ftr/reader</code></a></li>
+<li><a href="storage.html"><code>ftr/storage</code></a></li>
+<li><a href="sys.html"><code>ftr/sys</code></a></li>
 <li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
@@ -91,7 +91,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Ngui v0.6.2 Documentation</h1>
+				<h1>Ftr v0.7.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -105,7 +105,7 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#ngui-">Ngui简介</a></span>
+<span><a href="#ftr-">Ftr简介</a></span>
 </li>
 <li>
 <span><a href="#simple-examples">Simple Examples</a></span>
@@ -114,7 +114,7 @@
 <span><a href="#start-usage">Start Usage</a></span>
 <ul>
 <li>
-<span><a href="#install-nxmake">Install nxmake</a></span>
+<span><a href="#install-ftrp">Install ftrp</a></span>
 </li>
 <li>
 <span><a href="#create-new-project">Create new project</a></span>
@@ -126,7 +126,7 @@
 <span><a href="#export-project">Export project</a></span>
 </li>
 <li>
-<span><a href="#ngui-test-http-server">Ngui test http server</a></span>
+<span><a href="#ftr-test-http-server">Ftr test http server</a></span>
 </li>
 </ul>
 <li>
@@ -136,14 +136,14 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="ngui-">
-			Ngui简介
-			<span><a class="mark" href="#ngui-" id="ngui-">#</a></span>
-		</h1><p>Ngui是一个跨平台（Android/iOS）前端开发框架，核心代码使用C++编写，底层基于OpenGL绘图，上层实现了一个精简的排版引擎以及一个JS/JSX运行环境。目标是想实现在此基础上开发GUI应用程序可兼顾开发速度与运行效率。</p>
+				<h1 id="ftr-">
+			Ftr简介
+			<span><a class="mark" href="#ftr-" id="ftr-">#</a></span>
+		</h1><p>Ftr是一个跨平台（Android/iOS）前端开发框架，核心代码使用C++编写，底层基于OpenGL绘图，上层实现了一个精简的排版引擎以及一个JS/JSX运行环境。目标是想实现在此基础上开发GUI应用程序可兼顾开发速度与运行效率。</p>
 <ul>
 <li><p>暂时只支持<code>iOS</code>与<code>Android</code>系统，并不包含<code>AndroidTV</code>因为<code>TV</code>应用与手机应用有很大的不同</p>
 </li>
-<li><p>从这里<a href="http://ngui.fun/doc/"><code>Go API Index</code></a>可以到 <code>API Documents Index</code></p>
+<li><p>从这里<a href="http://fasttr.org/doc/"><code>Go API Index</code></a>可以到 <code>API Documents Index</code></p>
 </li>
 </ul>
 <table>
@@ -164,31 +164,32 @@
 			Simple Examples
 			<span><a class="mark" href="#simple-examples" id="simple-examples">#</a></span>
 		</h1><p>这是一个简单的在屏幕上显示<code>hello world!</code>的程序</p>
-<pre><code class="undefinedjsx">import { GUIApplication, Text } from &#39;ngui&#39;
+<pre><code class="undefinedjsx">import { GUIApplication, Text } from &#39;ftr&#39;
 new GUIApplication().start(
     &lt;Text&gt;hello world!&lt;/Text&gt;
 )
 </code></pre>
-<p>你可以获取到更加详细的<a href="https://github.com/louis-tru/ngui/tree/master/examples">Examples</a></p>
+<p>你可以获取到更加详细的<a href="https://github.com/louis-tru/ftr/tree/master/examples">Examples</a></p>
 <h1 id="start-usage">
 			Start Usage
 			<span><a class="mark" href="#start-usage" id="start-usage">#</a></span>
-		</h1><p>如果你从来没有使用过<code>Ngui</code>你可以从这里开始，一步步创建你的<code>Ngui</code>程序。</p>
-<h2 id="install-nxmake">
-			Install nxmake
-			<span><a class="mark" href="#install-nxmake" id="install-nxmake">#</a></span>
-		</h2><p>首先你需要安装<code>Ngui</code>提供的工具包</p>
+		</h1><p>如果你从来没有使用过<code>Ftr</code>你可以从这里开始，一步步创建你的<code>Ftr</code>程序。</p>
+<h2 id="install-ftrp">
+			Install ftrp
+			<span><a class="mark" href="#install-ftrp" id="install-ftrp">#</a></span>
+		</h2><p>首先你需要安装<code>Ftr</code>提供的工具包</p>
 <ul>
-<li><p>使用 nodejs <code>npm</code> 安装 <code>nxmake</code></p>
+<li><p>使用 nodejs <code>npm</code> 安装 <code>ftrp</code></p>
 </li>
 <li><p>打开<code>Terminal</code>并执行以下命令：</p>
 </li>
 </ul>
 <pre><code class="undefinedsh"># shell
-$ sudo npm install -g nxmake
+$ sudo npm install -g ftrp
+
 </code></pre>
 <ul>
-<li><p>运行<code>nxmake</code> 需要依赖<code>nodejs</code>与<code>python2.7</code></p>
+<li><p>运行<code>ftrp</code> 需要依赖<code>nodejs</code>与<code>python2.7</code></p>
 </li>
 <li><p>并且不能运行在<code>windows</code>系统, 暂时只能在<code>mac</code>或<code>linux</code>下使用</p>
 </li>
@@ -196,18 +197,18 @@ $ sudo npm install -g nxmake
 <h2 id="create-new-project">
 			Create new project
 			<span><a class="mark" href="#create-new-project" id="create-new-project">#</a></span>
-		</h2><p>使用下面的<code>shell</code>命令创建一个新的<code>Ngui</code>工程：</p>
+		</h2><p>使用下面的<code>shell</code>命令创建一个新的<code>Ftr</code>工程：</p>
 <pre><code class="undefinedsh"># shell
 $ mkdir myproject
 $ cd myproject
-$ nxmake init
+$ ftrp init
 </code></pre>
 <h2 id="build-project">
 			Build project
 			<span><a class="mark" href="#build-project" id="build-project">#</a></span>
 		</h2><p>这一步会把工程里面的javascript代码以及资源文件进行压缩并打包，如果这是一个新的工程可以跳过这一步骤直接到下一步</p>
 <pre><code class="undefinedsh"># shell
-$ nxmake build
+$ ftrp build
 </code></pre>
 <h2 id="export-project">
 			Export project
@@ -215,26 +216,26 @@ $ nxmake build
 		</h2><p>这一步导出<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html">Xcode</a>或<a href="https://developer.android.com/studio/projects/create-project.html">Android Studio</a>工程，因为你最终要发布程序将会是一个<code>.apk</code>或<code>.ipa</code></p>
 <pre><code class="undefinedsh"># shell
 # export xcode ios project
-$ nxmake export ios
+$ ftrp export ios
 # export android studio project
-$ nxmake export android
+$ ftrp export android
 </code></pre>
 <p>导出工程后，接下来你可以使用<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html">Xcode</a>与<a href="https://developer.android.com/studio/projects/create-project.html">Android Studio</a>打开它</p>
-<h2 id="ngui-test-http-server">
-			Ngui test http server
-			<span><a class="mark" href="#ngui-test-http-server" id="ngui-test-http-server">#</a></span>
-		</h2><p><code>nxmake</code>提供了一个测试http服务器，你不需要每次修改完<code>js</code>或<code>jsx</code>代码都进行重新安装</p>
+<h2 id="ftr-test-http-server">
+			Ftr test http server
+			<span><a class="mark" href="#ftr-test-http-server" id="ftr-test-http-server">#</a></span>
+		</h2><p><code>ftrp</code>提供了一个测试http服务器，你不需要每次修改完<code>js</code>或<code>jsx</code>代码都进行重新安装</p>
 <p>执行下面的代码可以启动它：</p>
 <pre><code class="undefinedsh"># shell
-$ nxmake
+$ ftrp
 </code></pre>
 <h1 id="downloads">
 			Downloads
 			<span><a class="mark" href="#downloads" id="downloads">#</a></span>
 		</h1><ul>
-<li><p>Examples demo <a href="https://github.com/louis-tru/ngui/releases/download/v0.1.0/examples-release.apk">Android APK</a> Install package</p>
+<li><p>Examples demo <a href="https://github.com/louis-tru/ftr/releases/download/v0.1.0/examples-release.apk">Android APK</a> Install package</p>
 </li>
-<li><p>Project <a href="https://github.com/louis-tru/ngui">Source code</a> from <code>Github</code></p>
+<li><p>Project <a href="https://github.com/louis-tru/ftr">Source code</a> from <code>Github</code></p>
 </li>
 </ul>
 <script>

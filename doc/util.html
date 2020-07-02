@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Ngui API Documentation</title>
+	<title>Ftr API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
 		var src = 'util.html';
@@ -38,17 +38,17 @@
 
 			<!--div id="intro" class="interior">
 				<a href="/" id="home2" title="Go back to the home page">
-					ngui
+					ftr
 				</a>
 			</div-->
 
-			<h1 id="-ngui-">
-			<a href="http://ngui.fun/"><code>Ngui</code></a>
-			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
+			<h1 id="ftr">
+			<a href="http://fasttr.org/"><code>Ftr</code></a>
+			<span><a class="mark" href="#ftr" id="ftr">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/nxmake"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/ngui/tree/master/examples"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/ftrp"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ftr/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -64,25 +64,25 @@
 			Modules
 			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="ftr.html"><code>ftr</code></a></li>
 <li><a href="pkg.html"><code>pkg</code></a></li>
-<li><a href="action.html"><code>ngui/action</code></a></li>
-<li><a href="app.html"><code>ngui/app</code></a></li>
-<li><a href="css.html"><code>ngui/css</code></a></li>
-<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
-<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
-<li><a href="font.html"><code>ngui/font</code></a></li>
-<li><a href="media.html"><code>ngui/media</code></a></li>
-<li><a href="value.html"><code>ngui/value</code></a></li>
-<li><a href="util.html"><code>ngui/util</code></a></li>
-<li><a href="event.html"><code>ngui/event</code></a></li>
-<li><a href="fs.html"><code>ngui/fs</code></a></li>
-<li><a href="http.html"><code>ngui/http</code></a></li>
-<li><a href="keys.html"><code>ngui/keys</code></a></li>
-<li><a href="path.html"><code>ngui/path</code></a></li>
-<li><a href="reader.html"><code>ngui/reader</code></a></li>
-<li><a href="storage.html"><code>ngui/storage</code></a></li>
-<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="action.html"><code>ftr/action</code></a></li>
+<li><a href="app.html"><code>ftr/app</code></a></li>
+<li><a href="css.html"><code>ftr/css</code></a></li>
+<li><a href="ctr.html"><code>ftr/ctr</code></a></li>
+<li><a href="display_port.html"><code>ftr/display_port</code></a></li>
+<li><a href="font.html"><code>ftr/font</code></a></li>
+<li><a href="media.html"><code>ftr/media</code></a></li>
+<li><a href="value.html"><code>ftr/value</code></a></li>
+<li><a href="util.html"><code>ftr/util</code></a></li>
+<li><a href="event.html"><code>ftr/event</code></a></li>
+<li><a href="fs.html"><code>ftr/fs</code></a></li>
+<li><a href="http.html"><code>ftr/http</code></a></li>
+<li><a href="keys.html"><code>ftr/keys</code></a></li>
+<li><a href="path.html"><code>ftr/path</code></a></li>
+<li><a href="reader.html"><code>ftr/reader</code></a></li>
+<li><a href="storage.html"><code>ftr/storage</code></a></li>
+<li><a href="sys.html"><code>ftr/sys</code></a></li>
 <li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
@@ -91,7 +91,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Ngui v0.6.2 Documentation</h1>
+				<h1>Ftr v0.7.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -105,7 +105,7 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#ngui-util">ngui/util</a></span>
+<span><a href="#ftr-util">ftr/util</a></span>
 <ul>
 <li>
 <span><a href="#version-">version()</a></span>
@@ -209,13 +209,13 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="ngui-util">
-			<code>ngui/util</code>
-			<span><a class="mark" href="#ngui-util" id="ngui-util">#</a></span>
+				<h1 id="ftr-util">
+			<code>ftr/util</code>
+			<span><a class="mark" href="#ftr-util" id="ftr-util">#</a></span>
 		</h1><h2 id="version-">
 			version()
 			<span><a class="mark" href="#version-" id="version-">#</a></span>
-		</h2><p>获取<code>Ngui</code>版本号字符串</p>
+		</h2><p>获取<code>Ftr</code>版本号字符串</p>
 <ul>
 <li>@ret {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
 </ul>
@@ -243,7 +243,7 @@
 			runScript(source,name[,sandbox])
 			<span><a class="mark" href="#runscript-source-name-sandbox-" id="runscript-source-name-sandbox-">#</a></span>
 		</h2><p>编译运行一段javascript代码并返回运行结果,与<code>eval</code>函数类似,但这个方法可以指定一个名称与一个运行上下文对像</p>
-<p>如果要执行Ngui <code>js</code> or <code>jsx</code> 代码需先使用 <code>util.transformJs()</code> or <code>util.transformJsx()</code> 进行转换</p>
+<p>如果要执行Ftr <code>js</code> or <code>jsx</code> 代码需先使用 <code>util.transformJs()</code> or <code>util.transformJsx()</code> 进行转换</p>
 <p>名称在调试代码或程序发生异常时非常有用</p>
 <p>如果不传入这个沙盒<code>sandbox</code>上下文默认使用<code>global</code>对像</p>
 <ul>
@@ -258,7 +258,7 @@
 		</h2><h2 id="transformjsx-source-name-">
 			transformJsx(source,name)
 			<span><a class="mark" href="#transformjsx-source-name-" id="transformjsx-source-name-">#</a></span>
-		</h2><p>转换Ngui <code>jsx</code>代码为普通的可运行的<code>js</code>代码</p>
+		</h2><p>转换Ftr <code>jsx</code>代码为普通的可运行的<code>js</code>代码</p>
 <p>转换失败会抛出异常,成功则返回新的代码</p>
 <ul>
 <li>@arg <code>source</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>
@@ -268,7 +268,7 @@
 <h2 id="transformjs-source-name-">
 			transformJs(source,name)
 			<span><a class="mark" href="#transformjs-source-name-" id="transformjs-source-name-">#</a></span>
-		</h2><p>转换Ngui <code>js</code>代码为普通的可运行的<code>js</code>代码</p>
+		</h2><p>转换Ftr <code>js</code>代码为普通的可运行的<code>js</code>代码</p>
 <p>转换失败会抛出异常,成功则返回新的代码</p>
 <ul>
 <li>@arg <code>source</code> {<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>}</li>

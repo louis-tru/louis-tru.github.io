@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Ngui API Documentation</title>
+	<title>Ftr API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
 		var src = 'event.html';
@@ -38,17 +38,17 @@
 
 			<!--div id="intro" class="interior">
 				<a href="/" id="home2" title="Go back to the home page">
-					ngui
+					ftr
 				</a>
 			</div-->
 
-			<h1 id="-ngui-">
-			<a href="http://ngui.fun/"><code>Ngui</code></a>
-			<span><a class="mark" href="#-ngui-" id="-ngui-">#</a></span>
+			<h1 id="ftr">
+			<a href="http://fasttr.org/"><code>Ftr</code></a>
+			<span><a class="mark" href="#ftr" id="ftr">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
-<li><a href="https://www.npmjs.com/package/nxmake"><code>Tools</code></a></li>
-<li><a href="https://github.com/louis-tru/ngui/tree/master/examples"><code>Examples</code></a></li>
+<li><a href="https://www.npmjs.com/package/ftrp"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/ftr/tree/master/examples"><code>Examples</code></a></li>
 </ul>
 <h1 id="course">
 			Course
@@ -64,25 +64,25 @@
 			Modules
 			<span><a class="mark" href="#modules" id="modules">#</a></span>
 		</h1><ul>
-<li><a href="ngui.html"><code>ngui</code></a></li>
+<li><a href="ftr.html"><code>ftr</code></a></li>
 <li><a href="pkg.html"><code>pkg</code></a></li>
-<li><a href="action.html"><code>ngui/action</code></a></li>
-<li><a href="app.html"><code>ngui/app</code></a></li>
-<li><a href="css.html"><code>ngui/css</code></a></li>
-<li><a href="ctr.html"><code>ngui/ctr</code></a></li>
-<li><a href="display_port.html"><code>ngui/display_port</code></a></li>
-<li><a href="font.html"><code>ngui/font</code></a></li>
-<li><a href="media.html"><code>ngui/media</code></a></li>
-<li><a href="value.html"><code>ngui/value</code></a></li>
-<li><a href="util.html"><code>ngui/util</code></a></li>
-<li><a href="event.html"><code>ngui/event</code></a></li>
-<li><a href="fs.html"><code>ngui/fs</code></a></li>
-<li><a href="http.html"><code>ngui/http</code></a></li>
-<li><a href="keys.html"><code>ngui/keys</code></a></li>
-<li><a href="path.html"><code>ngui/path</code></a></li>
-<li><a href="reader.html"><code>ngui/reader</code></a></li>
-<li><a href="storage.html"><code>ngui/storage</code></a></li>
-<li><a href="sys.html"><code>ngui/sys</code></a></li>
+<li><a href="action.html"><code>ftr/action</code></a></li>
+<li><a href="app.html"><code>ftr/app</code></a></li>
+<li><a href="css.html"><code>ftr/css</code></a></li>
+<li><a href="ctr.html"><code>ftr/ctr</code></a></li>
+<li><a href="display_port.html"><code>ftr/display_port</code></a></li>
+<li><a href="font.html"><code>ftr/font</code></a></li>
+<li><a href="media.html"><code>ftr/media</code></a></li>
+<li><a href="value.html"><code>ftr/value</code></a></li>
+<li><a href="util.html"><code>ftr/util</code></a></li>
+<li><a href="event.html"><code>ftr/event</code></a></li>
+<li><a href="fs.html"><code>ftr/fs</code></a></li>
+<li><a href="http.html"><code>ftr/http</code></a></li>
+<li><a href="keys.html"><code>ftr/keys</code></a></li>
+<li><a href="path.html"><code>ftr/path</code></a></li>
+<li><a href="reader.html"><code>ftr/reader</code></a></li>
+<li><a href="storage.html"><code>ftr/storage</code></a></li>
+<li><a href="sys.html"><code>ftr/sys</code></a></li>
 <li><a href="native_types.html"><code>Native Types</code></a></li>
 </ul>
 
@@ -91,7 +91,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Ngui v0.6.2 Documentation</h1>
+				<h1>Ftr v0.7.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -105,7 +105,7 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#ngui-event">ngui/event</a></span>
+<span><a href="#ftr-event">ftr/event</a></span>
 <ul>
 <li>
 <span><a href="#enum-highlightedstatus">Enum: HighlightedStatus</a></span>
@@ -124,10 +124,10 @@
 <span><a href="#enum-returnvaluemask">Enum: ReturnValueMask</a></span>
 <ul>
 <li>
-<span><a href="#return_value_mask_default-1-0-">RETURN_VALUE_MASK_DEFAULT = (1<<0)</a></span>
+<span><a href="#return_value_mask_default-10-">RETURN_VALUE_MASK_DEFAULT = (10)</a></span>
 </li>
 <li>
-<span><a href="#return_value_mask_bubble-1-1-">RETURN_VALUE_MASK_BUBBLE = (1<<1)</a></span>
+<span><a href="#return_value_mask_bubble-11-">RETURN_VALUE_MASK_BUBBLE = (11)</a></span>
 </li>
 <li>
 <span><a href="#return_value_mask_all">RETURN_VALUE_MASK_ALL</a></span>
@@ -788,9 +788,9 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="ngui-event">
-			<code>ngui/event</code>
-			<span><a class="mark" href="#ngui-event" id="ngui-event">#</a></span>
+				<h1 id="ftr-event">
+			<code>ftr/event</code>
+			<span><a class="mark" href="#ftr-event" id="ftr-event">#</a></span>
 		</h1><h2 id="enum-highlightedstatus">
 			<code>Enum: HighlightedStatus</code>
 			<span><a class="mark" href="#enum-highlightedstatus" id="enum-highlightedstatus">#</a></span>
@@ -808,12 +808,12 @@
 			<code>Enum: ReturnValueMask</code>
 			<span><a class="mark" href="#enum-returnvaluemask" id="enum-returnvaluemask">#</a></span>
 		</h2><p>GUI事件数据返回值掩码，如果返回值被设置成<code>0</code>，表示同时取消默认动作与事件冒泡</p>
-<h3 id="return_value_mask_default-1-0-">
+<h3 id="return_value_mask_default-10-">
 			RETURN_VALUE_MASK_DEFAULT = (1&lt;&lt;0)
-			<span><a class="mark" href="#return_value_mask_default-1-0-" id="return_value_mask_default-1-0-">#</a></span>
-		</h3><h3 id="return_value_mask_bubble-1-1-">
+			<span><a class="mark" href="#return_value_mask_default-10-" id="return_value_mask_default-10-">#</a></span>
+		</h3><h3 id="return_value_mask_bubble-11-">
 			RETURN_VALUE_MASK_BUBBLE = (1&lt;&lt;1)
-			<span><a class="mark" href="#return_value_mask_bubble-1-1-" id="return_value_mask_bubble-1-1-">#</a></span>
+			<span><a class="mark" href="#return_value_mask_bubble-11-" id="return_value_mask_bubble-11-">#</a></span>
 		</h3><h3 id="return_value_mask_all">
 			RETURN_VALUE_MASK_ALL
 			<span><a class="mark" href="#return_value_mask_all" id="return_value_mask_all">#</a></span>
@@ -1285,7 +1285,7 @@
 			GUITouch.view
 			<span><a class="mark" href="#guitouch-view" id="guitouch-view">#</a></span>
 		</h3><ul>
-<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="ftr.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h2 id="class-notification">
 			<code>Class: Notification</code>
@@ -1341,6 +1341,7 @@ var noticer = notification.onChange;
 noticer.off(0) // delete default listener
 // Prints: responseonChange 1
 notification.triggerChange();
+
 </code></pre>
 <h2 id="class-eventnoticer">
 			<code>Class: EventNoticer</code>
@@ -1515,7 +1516,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			Get: GUIEvent.origin
 			<span><a class="mark" href="#get-guievent-origin" id="get-guievent-origin">#</a></span>
 		</h3><ul>
-<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="ftr.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-guievent-timestamp">
 			Get: GUIEvent.timestamp
@@ -1641,7 +1642,7 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			GUIKeyEvent.focusMove
 			<span><a class="mark" href="#guikeyevent-focusmove" id="guikeyevent-focusmove">#</a></span>
 		</h3><ul>
-<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="ftr.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h2 id="class-guiclickevent">
 			<code>Class: GUIClickEvent</code>
@@ -1709,14 +1710,14 @@ var id = display_port.onChange.on2(function(scope, ev) {
 			<span><a class="mark" href="#get-focus" id="get-focus">#</a></span>
 		</h3><p>变化前的焦点视图</p>
 <ul>
-<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="ftr.html#class-view"><code>View</code></a>}</li>
 </ul>
 <h3 id="get-focusmove">
 			Get: focusMove
 			<span><a class="mark" href="#get-focusmove" id="get-focusmove">#</a></span>
 		</h3><p>变化后的焦点视图</p>
 <ul>
-<li>{<a href="ngui.html#class-view"><code>View</code></a>}</li>
+<li>{<a href="ftr.html#class-view"><code>View</code></a>}</li>
 </ul>
 
 			</div>
