@@ -1,5 +1,5 @@
 # louis-tru.github.io
 
-This is [`Ngui Website`] and Documents
+This is [`Negui Website`] and Documents
 
-[`Ngui Website`]: http://nodegui.org/
+[`Negui Website`]: http://nodegui.org/
