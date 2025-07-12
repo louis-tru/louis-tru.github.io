@@ -588,7 +588,7 @@
 			<span><a class="mark" href="#nativehttpclientrequest-send-data-" id="nativehttpclientrequest-send-data-">#</a></span>
 		</h3><p>Start send the request</p>
 <ul>
-<li><code>@param</code> <code>data?</code>: <a href="_ext.html#string"><code>string</code></a>|<code>Uint8Array</code> </li>
+<li><code>@param</code> <code>data?</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="nativehttpclientrequest-pause-">
@@ -687,7 +687,7 @@ cl2.send();
 			<span><a class="mark" href="#requestoptions-postdata-" id="requestoptions-postdata-">#</a></span>
 		</h3><p>Non post requests ignore this option </p>
 <ul>
-<li><code>postData?</code>: <a href="_ext.html#string"><code>string</code></a>|<code>Uint8Array</code> </li>
+<li><code>postData?</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 <h3 id="requestoptions-save-">
 			requestoptions.save?
@@ -742,7 +742,7 @@ cl2.send();
 			<span><a class="mark" href="#responsedata-data" id="responsedata-data">#</a></span>
 		</h3><p>response data </p>
 <ul>
-<li><code>data</code>: <code>Uint8Array</code> </li>
+<li><code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 <h3 id="responsedata-httpversion">
 			responsedata.httpVersion
@@ -829,7 +829,7 @@ try {
 </code></pre>
 <ul>
 <li><code>@param</code> <code>options</code>: <a href="#interface-requestoptions"><code>RequestOptions</code></a> </li>
-<li><code>@return</code> <code>Uint8Array</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 <h2 id="download-url-save-">
 			download(url,save)
@@ -872,7 +872,7 @@ try {
 		</h2><p>Sending data to server in POST way</p>
 <ul>
 <li><code>@param</code> <code>url</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="_ext.html#string"><code>string</code></a>|<code>Uint8Array</code> </li>
+<li><code>@param</code> <code>data</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@return</code> <a href="fs.html#asynctask"><code>AsyncTask</code></a>&lt;<a href="#interface-responsedata"><code>ResponseData</code></a>&gt; </li>
 </ul>
 <h2 id="getsync-url-">
@@ -881,7 +881,7 @@ try {
 		</h2><p>Syncing request HTTP data in GET way</p>
 <ul>
 <li><code>@param</code> <code>url</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>Uint8Array</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 <h2 id="postsync-url-data-">
 			postSync(url,data)
@@ -889,8 +889,8 @@ try {
 		</h2><p>Syncing send data to server by POST</p>
 <ul>
 <li><code>@param</code> <code>url</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="_ext.html#string"><code>string</code></a>|<code>Uint8Array</code> </li>
-<li><code>@return</code> <code>Uint8Array</code> </li>
+<li><code>@param</code> <code>data</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 <h2 id="downloadsync-url-save-">
 			downloadSync(url,save)
@@ -899,7 +899,7 @@ try {
 <ul>
 <li><code>@param</code> <code>url</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>save</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>Uint8Array</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 <h2 id="uploadsync-url-localpath-">
 			uploadSync(url,localPath)
@@ -908,7 +908,7 @@ try {
 <ul>
 <li><code>@param</code> <code>url</code>: <a href="_ext.html#string"><code>string</code></a> target server url</li>
 <li><code>@param</code> <code>localPath</code>: <a href="_ext.html#string"><code>string</code></a> local file path</li>
-<li><code>@return</code> <code>Uint8Array</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 </ul>
 
 			</div>
