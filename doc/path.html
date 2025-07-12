@@ -81,10 +81,10 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
-<li><a href="_common.html"><code>quark/_common</code></a></li>
-<li><a href="_event.html"><code>quark/_event</code></a></li>
-<li><a href="_ext.html"><code>quark/_ext</code></a></li>
-<li><a href="_util.html"><code>quark/_util</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
 </ul>
 
 
@@ -329,14 +329,14 @@ new URL(&#39;[`http://quarks.cc:&#39;).href`](http://quarks.cc:&#39;).href)
 			url.constructor(path?)
 			<span><a class="mark" href="#url-constructor-path-" id="url-constructor-path-">#</a></span>
 		</h3><ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="url-href">
 			url.href
 			<span><a class="mark" href="#url-href" id="url-href">#</a></span>
 		</h3><p>Get the complete URL, including parameters<br/>href: &quot;<a href="http://xxxx.xxx:81/v1.1.0/quark/path.js?sasasas&amp;asasasa#sdsdsd&quot;"><code>http://xxxx.xxx:81/v1.1.0/quark/path.js?sasasas&amp;asasasa#sdsdsd&quot;</code></a></p>
 <ul>
-<li><code>@get</code> <code>href</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>href</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: http://quarks.cc/
@@ -347,7 +347,7 @@ console.log(new URL(&#39;[`http://quarks.cc/&#39;).href);`](http://quarks.cc/&#3
 			<span><a class="mark" href="#url-filename" id="url-filename">#</a></span>
 		</h3><p>Get full path name<br/>filename: &quot;/D:/Documents/test.js&quot;</p>
 <ul>
-<li><code>@get</code> <code>filename</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>filename</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: /aaa/bbbb/ccc/test.js
@@ -357,7 +357,7 @@ console.log(new URL(&#39;[`http://quarks.cc/aaa/bbbb/ccc/test.js&#39;).filename)
 			url.path
 			<span><a class="mark" href="#url-path" id="url-path">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> /a/b/s/test.html?aaaaa=100</li>
+<li><code>@get</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> /a/b/s/test.html?aaaaa=100</li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: /aaa/bbbb/ccc/test.js?asas=asas
@@ -368,7 +368,7 @@ console.log(new URL(&#39;[`http://quarks.cc/aaa/bbbb/ccc/test.js?asas=asas&#39;)
 			<span><a class="mark" href="#url-dirname" id="url-dirname">#</a></span>
 		</h3><p>Full path dir<br/>dirname: &quot;/D:/Documents&quot;</p>
 <ul>
-<li><code>@get</code> <code>dirname</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>dirname</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: /aaa/bbbb/ccc
@@ -379,7 +379,7 @@ console.log(new URL(&#39;[`http://quarks.cc/aaa/bbbb/ccc/test.js&#39;).dirname);
 			<span><a class="mark" href="#url-search" id="url-search">#</a></span>
 		</h3><p>Get url query parameters<br/>search: &quot;?sasasas&amp;asasasa&quot;</p>
 <ul>
-<li><code>@get</code> <code>search</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>search</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: ?a=A&amp;b=B
@@ -390,7 +390,7 @@ console.log(new URL(&#39;[`http://quarks.cc/?a=A&amp;b=B&#39;).search);`](http:/
 			<span><a class="mark" href="#url-hash" id="url-hash">#</a></span>
 		</h3><p>hash: &quot;#sdsdsd&quot;<br/>Get hash parameters</p>
 <ul>
-<li><code>@get</code> <code>hash</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>hash</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: #c=C&amp;d=D
@@ -401,7 +401,7 @@ console.log(new URL(&#39;[`http://quarks.cc/?a=A&amp;b=B#c=C&amp;d=D&#39;).hash)
 			<span><a class="mark" href="#url-host" id="url-host">#</a></span>
 		</h3><p>host: &quot;quarks.cc:81&quot;<br/>Gets the host name and returns the host name with the port number</p>
 <ul>
-<li><code>@get</code> <code>host</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>host</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: quarks.cc:80
@@ -412,7 +412,7 @@ console.log(new URL(&#39;[`http://quarks.cc:81/&#39;).host);`](http://quarks.cc:
 			<span><a class="mark" href="#url-hostname" id="url-hostname">#</a></span>
 		</h3><p>hostname: &quot;quarks.cc&quot;<br/>Gets the host name, but does not return the port number</p>
 <ul>
-<li><code>@get</code> <code>hostname</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>hostname</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: quarks.cc
@@ -423,7 +423,7 @@ console.log(new URL(&#39;[`http://quarks.cc:81/&#39;).host);`](http://quarks.cc:
 			<span><a class="mark" href="#url-origin" id="url-origin">#</a></span>
 		</h3><p>origin: &quot;<a href="http://quarks.cc:81&quot;"><code>http://quarks.cc:81&quot;</code></a><br/>Get the uri origin, protocol+host</p>
 <ul>
-<li><code>@get</code> <code>origin</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>origin</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: http://quarks.cc:81
@@ -436,7 +436,7 @@ console.log(new URL(&#39;file:///var/data/index.html&#39;).host);
 			<span><a class="mark" href="#url-basename" id="url-basename">#</a></span>
 		</h3><p>Get path base name</p>
 <ul>
-<li><code>@get</code> <code>basename</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>basename</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: index.html
@@ -447,7 +447,7 @@ console.log(new URL(&#39;file:///var/data/index.html&#39;).basename);
 			<span><a class="mark" href="#url-extname" id="url-extname">#</a></span>
 		</h3><p>Get path extname</p>
 <ul>
-<li><code>@get</code> <code>extname</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>extname</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: .html
@@ -458,7 +458,7 @@ console.log(new URL(&#39;file:///var/data/index.html&#39;).extname);
 			<span><a class="mark" href="#url-port" id="url-port">#</a></span>
 		</h3><p>port: &quot;81&quot;<br/>Get the host port number.<br/>If the port number is not defined in the URL, an empty string is returned.</p>
 <ul>
-<li><code>@get</code> <code>port</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>port</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints: 81
@@ -471,14 +471,14 @@ console.log(new URL(&#39;[`http://quarks.cc&#39;).port);`](http://quarks.cc&#39;
 			<span><a class="mark" href="#url-protocol" id="url-protocol">#</a></span>
 		</h3><p>Get the protocol type string of the URL, For: <code>&#39;http:&#39;</code>|<code>&#39;https&#39;</code>|<code>&#39;ftp:&#39;</code></p>
 <ul>
-<li><code>@get</code> <code>protocol</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>protocol</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="url-params">
 			url.params
 			<span><a class="mark" href="#url-params" id="url-params">#</a></span>
 		</h3><p>Returns a collection of query parameters as an object, or set</p>
 <ul>
-<li><code>@get</code> <code>params</code>: <code>Dict</code>&lt;<a href="_ext.html#string"><code>string</code></a>&gt; </li>
+<li><code>@get</code> <code>params</code>: <code>Dict</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints:
@@ -493,7 +493,7 @@ console.log(new URL(&#39;[`http://quarks.cc/?a=100&amp;b=test&#39;).params);`](h
 			<span><a class="mark" href="#url-hashparams" id="url-hashparams">#</a></span>
 		</h3><p>Returns a Hash parameter set as an object, or set</p>
 <ul>
-<li><code>@get</code> <code>hashParams</code>: <code>Dict</code>&lt;<a href="_ext.html#string"><code>string</code></a>&gt; </li>
+<li><code>@get</code> <code>hashParams</code>: <code>Dict</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints:
@@ -512,16 +512,16 @@ console.log(new URL(&#39;[`http://quarks.cc/#a=200&amp;b=300&#39;).hashParams);`
 console.log(new URL(&#39;[`http://quarks.cc/?args=ok&#39;).getParam(&#39;args&#39;));`](http://quarks.cc/?args=ok&#39;).getParam(&#39;args&#39;));)
 </code></pre>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="url-setparam-name-value-">
 			url.setParam(name,value)
 			<span><a class="mark" href="#url-setparam-name-value-" id="url-setparam-name-value-">#</a></span>
 		</h3><p>Set the URL query parameter key-value pair and return self</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="url-deleteparam-name-">
@@ -529,7 +529,7 @@ console.log(new URL(&#39;[`http://quarks.cc/?args=ok&#39;).getParam(&#39;args&#3
 			<span><a class="mark" href="#url-deleteparam-name-" id="url-deleteparam-name-">#</a></span>
 		</h3><p>Remove URL query parameters by name</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="url-clearparams-">
@@ -544,16 +544,16 @@ console.log(new URL(&#39;[`http://quarks.cc/?args=ok&#39;).getParam(&#39;args&#3
 			<span><a class="mark" href="#url-gethash-name-" id="url-gethash-name-">#</a></span>
 		</h3><p>Get hash param by name</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="url-sethash-name-value-">
 			url.setHash(name,value)
 			<span><a class="mark" href="#url-sethash-name-value-" id="url-sethash-name-value-">#</a></span>
 		</h3><p>Set hash param by the key/value</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="url-deletehash-name-">
@@ -561,7 +561,7 @@ console.log(new URL(&#39;[`http://quarks.cc/?args=ok&#39;).getParam(&#39;args&#3
 			<span><a class="mark" href="#url-deletehash-name-" id="url-deletehash-name-">#</a></span>
 		</h3><p>Delete hash param by the name</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="url-clearhashs-">
@@ -584,14 +584,14 @@ var url2 = new URL(&#39;file:///var/data/A/B/C/test.js&#39;);
 console.log(url2.relative(&#39;[`http://quarks.cc/home/&#39;));`](http://quarks.cc/home/&#39;));)
 </code></pre>
 <ul>
-<li><code>@param</code> <code>fromPath</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>fromPath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="url-tojson-">
 			url.toJSON()
 			<span><a class="mark" href="#url-tojson-" id="url-tojson-">#</a></span>
 		</h3><ul>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="default">
 			default
@@ -606,14 +606,14 @@ console.log(url2.relative(&#39;[`http://quarks.cc/home/&#39;));`](http://quarks.
 console.log(path.executable());
 </code></pre>
 <ul>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-documents-path-">
 			default.documents(path?)
 			<span><a class="mark" href="#default-documents-path-" id="default-documents-path-">#</a></span>
 		</h3><p>Get the document storage path of the current application</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> Append to the document path</li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> Append to the document path</li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints:
@@ -624,47 +624,47 @@ console.log(path.documents());
 console.log(path.documents(&#39;aa.jpeg&#39;));
 </code></pre>
 <ul>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-temp-path-">
 			default.temp(path?)
 			<span><a class="mark" href="#default-temp-path-" id="default-temp-path-">#</a></span>
 		</h3><p>Get the application temporary directory</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-resources-path-">
 			default.resources(path?)
 			<span><a class="mark" href="#default-resources-path-" id="default-resources-path-">#</a></span>
 		</h3><p>Get the application resource directory</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-cwd-string">
 			default.cwd()string
 			<span><a class="mark" href="#default-cwd-string" id="default-cwd-string">#</a></span>
 		</h3><p>Get the current working directory</p>
 <ul>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-chdir-path-">
 			default.chdir(path)
 			<span><a class="mark" href="#default-chdir-path-" id="default-chdir-path-">#</a></span>
 		</h3><p>Set the current working directory and return <code>true</code> if successful</p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="default-normalizepath-path-retain_up-">
 			default.normalizePath(path,retain_up?)
 			<span><a class="mark" href="#default-normalizepath-path-retain_up-" id="default-normalizepath-path-retain_up-">#</a></span>
 		</h3><p>Format part path to normalize path</p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>retain_up?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>retain_up?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-classicpath-path-">
 			default.classicPath(path)
@@ -675,8 +675,8 @@ console.log(path.documents(&#39;aa.jpeg&#39;));
 console.log(path.normalizePath(&#39;file:///var/data/test.js&#39;));
 </code></pre>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-resolve-path-partpath-string-">
 			default.resolve(path,partPath?string)
@@ -692,9 +692,9 @@ console.log(path.chdir(&#39;/var/data&#39;));
 console.log(path.resolve(&#39;aaa/bbb/../cc/.//!&lt;ddd/kk.jpg&#39;));
 </code></pre>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>partPath?string</code>:  </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-isabsolute-path-">
 			default.isAbsolute(path)
@@ -710,201 +710,201 @@ console.log(path.isAbsolute(&#39;[`http://quarks.cc/&#39;));`](http://quarks.cc/
 console.log(path.isAbsolute(&#39;index.jsx&#39;));
 </code></pre>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="default-basename-path-">
 			default.basename(path?)
 			<span><a class="mark" href="#default-basename-path-" id="default-basename-path-">#</a></span>
 		</h3><p>Get basename</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-dirname-path-">
 			default.dirname(path?)
 			<span><a class="mark" href="#default-dirname-path-" id="default-dirname-path-">#</a></span>
 		</h3><p>Get dirname</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-extname-path-">
 			default.extname(path?)
 			<span><a class="mark" href="#default-extname-path-" id="default-extname-path-">#</a></span>
 		</h3><p>Get extname</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-filename-path-">
 			default.filename(path?)
 			<span><a class="mark" href="#default-filename-path-" id="default-filename-path-">#</a></span>
 		</h3><p>Get filename</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-path-path-">
 			default.path(path?)
 			<span><a class="mark" href="#default-path-path-" id="default-path-path-">#</a></span>
 		</h3><p>Get path</p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-search-path-">
 			default.search(path?)
 			<span><a class="mark" href="#default-search-path-" id="default-search-path-">#</a></span>
 		</h3><p>Get search </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-hash-path-">
 			default.hash(path?)
 			<span><a class="mark" href="#default-hash-path-" id="default-hash-path-">#</a></span>
 		</h3><p>Get hash </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-host-path-">
 			default.host(path?)
 			<span><a class="mark" href="#default-host-path-" id="default-host-path-">#</a></span>
 		</h3><p>Get host </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-hostname-path-">
 			default.hostname(path?)
 			<span><a class="mark" href="#default-hostname-path-" id="default-hostname-path-">#</a></span>
 		</h3><p>Get hostname </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-origin-path-">
 			default.origin(path?)
 			<span><a class="mark" href="#default-origin-path-" id="default-origin-path-">#</a></span>
 		</h3><p>Get origin </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-port-path-">
 			default.port(path?)
 			<span><a class="mark" href="#default-port-path-" id="default-port-path-">#</a></span>
 		</h3><p>Get port: &quot;81&quot; </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-protocol-path-">
 			default.protocol(path?)
 			<span><a class="mark" href="#default-protocol-path-" id="default-protocol-path-">#</a></span>
 		</h3><p>Get protocol: &quot;http:&quot; </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-params-path-">
 			default.params(path?)
 			<span><a class="mark" href="#default-params-path-" id="default-params-path-">#</a></span>
 		</h3><p>Get params </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>Dict</code>&lt;<a href="_ext.html#string"><code>string</code></a>&gt; </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <code>Dict</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
 </ul>
 <h3 id="default-hashparams-path-">
 			default.hashParams(path?)
 			<span><a class="mark" href="#default-hashparams-path-" id="default-hashparams-path-">#</a></span>
 		</h3><p>Get params  </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>Dict</code>&lt;<a href="_ext.html#string"><code>string</code></a>&gt; </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <code>Dict</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
 </ul>
 <h3 id="default-getparam-name-path-">
 			default.getParam(name,path?)
 			<span><a class="mark" href="#default-getparam-name-path-" id="default-getparam-name-path-">#</a></span>
 		</h3><p>Get path param </p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-setparam-name-value-path-">
 			default.setParam(name,value,path?)
 			<span><a class="mark" href="#default-setparam-name-value-path-" id="default-setparam-name-value-path-">#</a></span>
 		</h3><p>Set path param </p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-deleteparam-name-path-">
 			default.deleteParam(name,path?)
 			<span><a class="mark" href="#default-deleteparam-name-path-" id="default-deleteparam-name-path-">#</a></span>
 		</h3><p>Delete path param </p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-clearparams-path-">
 			default.clearParams(path?)
 			<span><a class="mark" href="#default-clearparams-path-" id="default-clearparams-path-">#</a></span>
 		</h3><p>Delete all of hash params </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-gethash-name-path-">
 			default.getHash(name,path?)
 			<span><a class="mark" href="#default-gethash-name-path-" id="default-gethash-name-path-">#</a></span>
 		</h3><p>Get hash param </p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-sethash-name-value-path-">
 			default.setHash(name,value,path?)
 			<span><a class="mark" href="#default-sethash-name-value-path-" id="default-sethash-name-value-path-">#</a></span>
 		</h3><p>Set hash param </p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-deletehash-name-path-">
 			default.deleteHash(name,path?)
 			<span><a class="mark" href="#default-deletehash-name-path-" id="default-deletehash-name-path-">#</a></span>
 		</h3><p>Delete hash param </p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-clearhashs-path-">
 			default.clearHashs(path?)
 			<span><a class="mark" href="#default-clearhashs-path-" id="default-clearhashs-path-">#</a></span>
 		</h3><p>Delete all of hash params </p>
 <ul>
-<li><code>@param</code> <code>path?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-relative-from-target-">
 			default.relative(from,target?)
 			<span><a class="mark" href="#default-relative-from-target-" id="default-relative-from-target-">#</a></span>
 		</h3><p>Get relative path </p>
 <ul>
-<li><code>@param</code> <code>from</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>target?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>from</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>target?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 
 			</div>

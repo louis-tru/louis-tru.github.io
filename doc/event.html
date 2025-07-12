@@ -81,10 +81,10 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
-<li><a href="_common.html"><code>quark/_common</code></a></li>
-<li><a href="_event.html"><code>quark/_event</code></a></li>
-<li><a href="_ext.html"><code>quark/_ext</code></a></li>
-<li><a href="_util.html"><code>quark/_util</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
 </ul>
 
 
@@ -356,7 +356,7 @@
 			UIEvent
 			<span><a class="mark" href="#uievent" id="uievent">#</a></span>
 		</h3><ul>
-<li><code>@extends</code> <a href="_event.html#event"><code>Event</code></a></li>
+<li><code>@extends</code> <a href="$event.html#event"><code>Event</code></a></li>
 </ul>
 <h3 id="uievent-origin">
 			uievent.origin
@@ -370,21 +370,21 @@
 			<span><a class="mark" href="#uievent-timestamp" id="uievent-timestamp">#</a></span>
 		</h3><p>The time when the event is triggered </p>
 <ul>
-<li><code>@get</code> <code>timestamp</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>timestamp</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="uievent-isdefault">
 			uievent.isDefault
 			<span><a class="mark" href="#uievent-isdefault" id="uievent-isdefault">#</a></span>
 		</h3><p>Gets whether the default action of an event is enabled </p>
 <ul>
-<li><code>@get</code> <code>isDefault</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>isDefault</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="uievent-isbubble">
 			uievent.isBubble
 			<span><a class="mark" href="#uievent-isbubble" id="uievent-isbubble">#</a></span>
 		</h3><p>Gets whether event bubbling is enabled </p>
 <ul>
-<li><code>@get</code> <code>isBubble</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>isBubble</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="uievent-canceldefault-">
 			uievent.cancelDefault()
@@ -421,21 +421,21 @@
 			<span><a class="mark" href="#actionevent-delay" id="actionevent-delay">#</a></span>
 		</h3><p>The difference between the event triggering time and the target time </p>
 <ul>
-<li><code>@get</code> <code>delay</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>delay</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="actionevent-frame">
 			actionevent.frame
 			<span><a class="mark" href="#actionevent-frame" id="actionevent-frame">#</a></span>
 		</h3><p>Keyframe Index </p>
 <ul>
-<li><code>@get</code> <code>frame</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>frame</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="actionevent-looped">
 			actionevent.looped
 			<span><a class="mark" href="#actionevent-looped" id="actionevent-looped">#</a></span>
 		</h3><p>The current number of looped </p>
 <ul>
-<li><code>@get</code> <code>looped</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>looped</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h2 id="class-keyevent">
 			Class: KeyEvent
@@ -465,63 +465,63 @@
 			<span><a class="mark" href="#keyevent-keypress" id="keyevent-keypress">#</a></span>
 		</h3><p>Ascii code converted from keyboard code </p>
 <ul>
-<li><code>@get</code> <code>keypress</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>keypress</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyevent-repeat">
 			keyevent.repeat
 			<span><a class="mark" href="#keyevent-repeat" id="keyevent-repeat">#</a></span>
 		</h3><p>The number of times the event is triggered repeatedly after the key is pressed<br/>until the key is released </p>
 <ul>
-<li><code>@get</code> <code>repeat</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>repeat</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyevent-shift">
 			keyevent.shift
 			<span><a class="mark" href="#keyevent-shift" id="keyevent-shift">#</a></span>
 		</h3><p>Is the shift key pressed </p>
 <ul>
-<li><code>@get</code> <code>shift</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>shift</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="keyevent-ctrl">
 			keyevent.ctrl
 			<span><a class="mark" href="#keyevent-ctrl" id="keyevent-ctrl">#</a></span>
 		</h3><p>Is the ctrl key pressed </p>
 <ul>
-<li><code>@get</code> <code>ctrl</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>ctrl</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="keyevent-alt">
 			keyevent.alt
 			<span><a class="mark" href="#keyevent-alt" id="keyevent-alt">#</a></span>
 		</h3><p>Is the alt key pressed </p>
 <ul>
-<li><code>@get</code> <code>alt</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>alt</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="keyevent-command">
 			keyevent.command
 			<span><a class="mark" href="#keyevent-command" id="keyevent-command">#</a></span>
 		</h3><p>Is the command key pressed </p>
 <ul>
-<li><code>@get</code> <code>command</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>command</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="keyevent-capslock">
 			keyevent.capsLock
 			<span><a class="mark" href="#keyevent-capslock" id="keyevent-capslock">#</a></span>
 		</h3><p>Is capsLock enabled </p>
 <ul>
-<li><code>@get</code> <code>capsLock</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>capsLock</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="keyevent-device">
 			keyevent.device
 			<span><a class="mark" href="#keyevent-device" id="keyevent-device">#</a></span>
 		</h3><p>Device id </p>
 <ul>
-<li><code>@get</code> <code>device</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>device</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyevent-source">
 			keyevent.source
 			<span><a class="mark" href="#keyevent-source" id="keyevent-source">#</a></span>
 		</h3><p>Source id </p>
 <ul>
-<li><code>@get</code> <code>source</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>source</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h2 id="class-clickevent">
 			Class: ClickEvent
@@ -537,21 +537,21 @@
 			<span><a class="mark" href="#clickevent-x" id="clickevent-x">#</a></span>
 		</h3><p>The cursor position in the window x </p>
 <ul>
-<li><code>@get</code> <code>x</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="clickevent-y">
 			clickevent.y
 			<span><a class="mark" href="#clickevent-y" id="clickevent-y">#</a></span>
 		</h3><p>The cursor position in the window y </p>
 <ul>
-<li><code>@get</code> <code>y</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="clickevent-count">
 			clickevent.count
 			<span><a class="mark" href="#clickevent-count" id="clickevent-count">#</a></span>
 		</h3><p>Number of consecutive clicks, possibly double clicks </p>
 <ul>
-<li><code>@get</code> <code>count</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>count</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="clickevent-type">
 			clickevent.type
@@ -591,14 +591,14 @@
 			<span><a class="mark" href="#mouseevent-x" id="mouseevent-x">#</a></span>
 		</h3><p>The cursor position in the window x </p>
 <ul>
-<li><code>@get</code> <code>x</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="mouseevent-y">
 			mouseevent.y
 			<span><a class="mark" href="#mouseevent-y" id="mouseevent-y">#</a></span>
 		</h3><p>The cursor position in the window y </p>
 <ul>
-<li><code>@get</code> <code>y</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h2 id="interface-touchpoint">
 			Interface: TouchPoint
@@ -612,49 +612,49 @@
 			<span><a class="mark" href="#touchpoint-id" id="touchpoint-id">#</a></span>
 		</h3><p>Touch point id </p>
 <ul>
-<li><code>@get</code> <code>id</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="touchpoint-startx">
 			touchpoint.startX
 			<span><a class="mark" href="#touchpoint-startx" id="touchpoint-startx">#</a></span>
 		</h3><p>The position x of the touchpoint in the window when it is first pressed </p>
 <ul>
-<li><code>@get</code> <code>startX</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>startX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="touchpoint-starty">
 			touchpoint.startY
 			<span><a class="mark" href="#touchpoint-starty" id="touchpoint-starty">#</a></span>
 		</h3><p>The position y of the touchpoint in the window when it is first pressed </p>
 <ul>
-<li><code>@get</code> <code>startY</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>startY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="touchpoint-x">
 			touchpoint.x
 			<span><a class="mark" href="#touchpoint-x" id="touchpoint-x">#</a></span>
 		</h3><p>The position of the touchpoint in the window x </p>
 <ul>
-<li><code>@get</code> <code>x</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="touchpoint-y">
 			touchpoint.y
 			<span><a class="mark" href="#touchpoint-y" id="touchpoint-y">#</a></span>
 		</h3><p>The position of the touchpoint in the window y </p>
 <ul>
-<li><code>@get</code> <code>y</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="touchpoint-force">
 			touchpoint.force
 			<span><a class="mark" href="#touchpoint-force" id="touchpoint-force">#</a></span>
 		</h3><p>touchpoint pressure strength, value range [0-1] </p>
 <ul>
-<li><code>@get</code> <code>force</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>force</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="touchpoint-clickin">
 			touchpoint.clickIn
 			<span><a class="mark" href="#touchpoint-clickin" id="touchpoint-clickin">#</a></span>
 		</h3><p>Whether the touchpoint is still within the click range.<br/>If the touchpoint is within the click range when it is pressed,<br/>the touchpoint may move out of the range later. </p>
 <ul>
-<li><code>@get</code> <code>clickIn</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>clickIn</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="touchpoint-view">
 			touchpoint.view
@@ -686,7 +686,7 @@
 			NativeNotification
 			<span><a class="mark" href="#nativenotification" id="nativenotification">#</a></span>
 		</h3><ul>
-<li><code>@extends</code> <a href="_event.html#notification"><code>Notification</code></a></li>
+<li><code>@extends</code> <a href="$event.html#notification"><code>Notification</code></a></li>
 <li><code>@template</code> &lt;<code>E</code>&gt;</li>
 </ul>
 

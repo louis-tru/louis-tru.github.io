@@ -81,10 +81,10 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
-<li><a href="_common.html"><code>quark/_common</code></a></li>
-<li><a href="_event.html"><code>quark/_event</code></a></li>
-<li><a href="_ext.html"><code>quark/_ext</code></a></li>
-<li><a href="_util.html"><code>quark/_util</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
 </ul>
 
 
@@ -261,7 +261,7 @@
 			ActionIn
 			<span><a class="mark" href="#actionin" id="actionin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>ActionIn</code> = <a href="#class-action"><code>Action</code></a>|<a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>| {<br/><code>playing?</code>: <a href="_ext.html#boolean"><code>boolean</code></a>; <br/><code>loop?</code>: <a href="_ext.html#number"><code>number</code></a>; <br/><code>speed?</code>: <a href="_ext.html#number"><code>number</code></a>; <br/><code>spawn?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>seq?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>keyframe?</code>: <a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>; <br/>}</li>
+<li><code>@type</code> <code>ActionIn</code> = <a href="#class-action"><code>Action</code></a>|<a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>| {<br/><code>playing?</code>: <a href="$ext.html#boolean"><code>boolean</code></a>; <br/><code>loop?</code>: <a href="$ext.html#number"><code>number</code></a>; <br/><code>speed?</code>: <a href="$ext.html#number"><code>number</code></a>; <br/><code>spawn?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>seq?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>keyframe?</code>: <a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>; <br/>}</li>
 </ul>
 <h2 id="class-keyframe">
 			Class: Keyframe
@@ -277,14 +277,14 @@
 			<span><a class="mark" href="#keyframe-index" id="keyframe-index">#</a></span>
 		</h3><p>Get Keyframe index in the keyframe action </p>
 <ul>
-<li><code>@get</code> <code>index</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>index</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframe-time">
 			keyframe.time
 			<span><a class="mark" href="#keyframe-time" id="keyframe-time">#</a></span>
 		</h3><p>Get Keyframe time poing </p>
 <ul>
-<li><code>@get</code> <code>time</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframe-curve">
 			keyframe.curve
@@ -298,7 +298,7 @@
 			<span><a class="mark" href="#keyframe-itemscount" id="keyframe-itemscount">#</a></span>
 		</h3><p>Get StyleSheet items count </p>
 <ul>
-<li><code>@get</code> <code>itemsCount</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>itemsCount</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframe-apply-view-">
 			keyframe.apply(view)
@@ -331,28 +331,28 @@
 			<span><a class="mark" href="#action-duration" id="action-duration">#</a></span>
 		</h3><p>Get action playtime long </p>
 <ul>
-<li><code>@get</code> <code>duration</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>duration</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="action-playing">
 			action.playing
 			<span><a class="mark" href="#action-playing" id="action-playing">#</a></span>
 		</h3><p>Set/Get action playing state, if set then play() or stop() is called </p>
 <ul>
-<li><code>playing</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>playing</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="action-loop">
 			action.loop
 			<span><a class="mark" href="#action-loop" id="action-loop">#</a></span>
 		</h3><p>Set/Get action loop, the zero means not loop </p>
 <ul>
-<li><code>loop</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>loop</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="action-speed">
 			action.speed
 			<span><a class="mark" href="#action-speed" id="action-speed">#</a></span>
 		</h3><p>Set/Get action speed </p>
 <ul>
-<li><code>speed</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>speed</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="action-play-">
 			action.play()
@@ -373,7 +373,7 @@
 			<span><a class="mark" href="#action-seek-time-" id="action-seek-time-">#</a></span>
 		</h3><p>Jump to target <code>time</code>, after calling it, it will reset the internal <code>looped</code></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="_ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
+<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="action-seekplay-time-">
@@ -381,7 +381,7 @@
 			<span><a class="mark" href="#action-seekplay-time-" id="action-seekplay-time-">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and start playing. The internal <code>looped</code> will be reset after calling</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="_ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
+<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="action-seekstop-time-">
@@ -389,7 +389,7 @@
 			<span><a class="mark" href="#action-seekstop-time-" id="action-seekstop-time-">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and stop playing. The internal <code>looped</code> will be reset after calling</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="_ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
+<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="action-before-action-">
@@ -468,21 +468,21 @@
 			<span><a class="mark" href="#keyframeaction-time" id="keyframeaction-time">#</a></span>
 		</h3><p>get play time  </p>
 <ul>
-<li><code>@get</code> <code>time</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframeaction-frame">
 			keyframeaction.frame
 			<span><a class="mark" href="#keyframeaction-frame" id="keyframeaction-frame">#</a></span>
 		</h3><p>get playing frame index </p>
 <ul>
-<li><code>@get</code> <code>frame</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>frame</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframeaction-length">
 			keyframeaction.length
 			<span><a class="mark" href="#keyframeaction-length" id="keyframeaction-length">#</a></span>
 		</h3><p>get count of frames </p>
 <ul>
-<li><code>@get</code> <code>length</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>length</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframeaction-indexed">
 			keyframeaction.indexed
@@ -496,7 +496,7 @@
 			<span><a class="mark" href="#keyframeaction-addframe-time-curve-" id="keyframeaction-addframe-time-curve-">#</a></span>
 		</h3><p>By <code>time</code> and <code>curve</code> add keyframe，and return it</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="_ext.html#uint"><code>Uint</code></a> Keyframe time point</li>
+<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> Keyframe time point</li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> No <code>curve</code> use <code>&#39;ease&#39;</code> as default</li>
 </ul>
 <p>Can use <code>&#39;linear&#39;</code>、<code>&#39;ease&#39;</code>、<code>&#39;easeIn&#39;</code>、<code>&#39;easeOut&#39;</code>、<code>&#39;easeInOut&#39;</code> as params</p>
@@ -509,7 +509,7 @@
 		</h3><p>Add keyframes by the <code>cssExp</code> stylesheet name expression and return keyframes</p>
 <ul>
 <li><code>@param</code> <code>cssExp</code>: <a href="css.html#cssnameexp"><code>CSSNameExp</code></a> css exp</li>
-<li><code>@param</code> <code>time?</code>: <a href="_ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
+<li><code>@param</code> <code>time?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
 <li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
 </ul>
@@ -519,7 +519,7 @@
 		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,<br/>and return keyframes</p>
 <ul>
 <li><code>@param</code> <code>styleOrCssExp</code>: <a href="#keyframein"><code>KeyframeIn</code></a> style sheet or css exp</li>
-<li><code>@param</code> <code>time?</code>: <a href="_ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
+<li><code>@param</code> <code>time?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
 <li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
 </ul>
@@ -528,10 +528,10 @@
 			<span><a class="mark" href="#createaction-win-arg-parent-" id="createaction-win-arg-parent-">#</a></span>
 		</h2><ul>
 <li>Create an action through the <code>json</code> parameter. If the <code>arg</code> passed in is <a href="#class-action"><code>Action</code></a>,<br/>  skip the creation process and return directly.<br/>  If the parent action is passed in, append the newly created action to the end of <code>parent</code> after creation.</li>
-<li>If the passed in parameter is an <a href="_ext.html#array"><code>Array</code></a>, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a> and use this <a href="_ext.html#array"><code>Array</code></a> to create the corresponding <a href="#class-keyframe"><code>Keyframe</code></a></li>
+<li>If the passed in parameter is an <a href="$ext.html#array"><code>Array</code></a>, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a> and use this <a href="$ext.html#array"><code>Array</code></a> to create the corresponding <a href="#class-keyframe"><code>Keyframe</code></a></li>
 <li>If the passed in parameter has a <code>seq</code> attribute, create a <a href="#class-sequenceaction"><code>SequenceAction</code></a></li>
 <li>If the passed in parameter has a <code>spawn</code> attribute, create a <a href="#class-spawnaction"><code>SpawnAction</code></a></li>
-<li>If there is no <code>seq</code> or <code>spawn</code> in the passed in parameter, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a><br/>  If the object&#39;s internal attribute <code>keyframe</code> is <a href="_ext.html#array"><code>Array</code></a>, use this <a href="_ext.html#array"><code>Array</code></a> to create a <a href="#class-keyframe"><code>Keyframe</code></a></li>
+<li>If there is no <code>seq</code> or <code>spawn</code> in the passed in parameter, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a><br/>  If the object&#39;s internal attribute <code>keyframe</code> is <a href="$ext.html#array"><code>Array</code></a>, use this <a href="$ext.html#array"><code>Array</code></a> to create a <a href="#class-keyframe"><code>Keyframe</code></a></li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">var act1 = createAction(win, [

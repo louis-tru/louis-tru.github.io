@@ -81,10 +81,10 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
-<li><a href="_common.html"><code>quark/_common</code></a></li>
-<li><a href="_event.html"><code>quark/_event</code></a></li>
-<li><a href="_ext.html"><code>quark/_ext</code></a></li>
-<li><a href="_util.html"><code>quark/_util</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
 </ul>
 
 
@@ -204,24 +204,24 @@
 			<span><a class="mark" href="#isnull-value-" id="isnull-value-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>value</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="extendclass-cls-extds-top-">
 			extendClass(cls,extds,top?)
 			<span><a class="mark" href="#extendclass-cls-extds-top-" id="extendclass-cls-extds-top-">#</a></span>
 		</h2><p>EXT class prototype objects</p>
 <ul>
-<li><code>@param</code> <code>cls</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
-<li><code>@param</code> <code>extds</code>: <a href="_ext.html#function"><code>Function</code></a><code>[]</code>|<a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>cls</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>extds</code>: <a href="$ext.html#function"><code>Function</code></a><code>[]</code>|<a href="$ext.html#function"><code>Function</code></a> </li>
 <li><code>@param</code> <code>top?</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#function"><code>Function</code></a> </li>
 </ul>
 <h2 id="scopelock-mutex-cb-">
 			scopeLock(mutex,cb)
 			<span><a class="mark" href="#scopelock-mutex-cb-" id="scopelock-mutex-cb-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>mutex</code>: <code>any</code> </li>
-<li><code>@param</code> <code>cb</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>cb</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
 <li><code>@return</code> <code>Promise</code> </li>
 </ul>
 <h2 id="getprop-name-self-">
@@ -229,7 +229,7 @@
 			<span><a class="mark" href="#getprop-name-self-" id="getprop-name-self-">#</a></span>
 		</h2><p>Get object value by name</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>self</code>: <code>any</code> </li>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
@@ -238,7 +238,7 @@
 			<span><a class="mark" href="#setprop-name-value-self-" id="setprop-name-value-self-">#</a></span>
 		</h2><p>Setting object value by name</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>value</code>: <code>any</code> </li>
 <li><code>@param</code> <code>self</code>: <code>any</code> </li>
 <li><code>@return</code> <code>any</code> </li>
@@ -248,7 +248,7 @@
 			<span><a class="mark" href="#removeprop-name-self-" id="removeprop-name-self-">#</a></span>
 		</h2><p>Delete object value by name</p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>self</code>: <code>any</code> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
@@ -267,8 +267,8 @@
 <li><p>Fixed random value, specified probability to return a constant</p><br/></li>
 <li><p>Get a random number from <code>0</code> to the passed probability number <code>arguments.length</code> by probability</p><br/></li>
 <li><p>The sum of the passed probabilities cannot be <code>zero</code></p><br/></li>
-<li><p><code>@param</code> <code>arg0</code>: <a href="_ext.html#number"><code>number</code></a> Enter percentage</p><br/></li>
-<li><code>@param</code> <code>args</code>: <a href="_ext.html#number"><code>number</code></a><code>[]</code> Enter percentage</li>
+<li><p><code>@param</code> <code>arg0</code>: <a href="$ext.html#number"><code>number</code></a> Enter percentage</p><br/></li>
+<li><code>@param</code> <code>args</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> Enter percentage</li>
 </ul>
 <p>Example:</p>
 <pre><code class="undefinedjs">// Prints: 3 5 9
@@ -281,9 +281,9 @@ console.log(util.fixRandom(10, 20, 30, 40))
 console.log(util.fixRandom(10, 20, 30, 40))
 </code></pre>
 <ul>
-<li><code>@return</code> <a href="_ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>arg</code>: <a href="_ext.html#number"><code>number</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>arg</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h2 id="filter-obj-exp-non-">
 			filter(obj,exp,non?)
@@ -291,8 +291,8 @@ console.log(util.fixRandom(10, 20, 30, 40))
 		</h2><p>Filter object attrs</p>
 <ul>
 <li><code>@param</code> <code>obj</code>: <code>any</code> </li>
-<li><code>@param</code> <code>exp</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code>|<a href="_ext.html#function"><code>Function</code></a> filter exp</li>
-<li><code>@param</code> <code>non?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> take non</li>
+<li><code>@param</code> <code>exp</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code>|<a href="$ext.html#function"><code>Function</code></a> filter exp</li>
+<li><code>@param</code> <code>non?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> take non</li>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
 <h2 id="update-obj-extd-">
@@ -324,22 +324,22 @@ console.log(util.fixRandom(10, 20, 30, 40))
 <ul>
 <li><code>@param</code> <code>baseclass</code>: <code>class</code> </li>
 <li><code>@param</code> <code>subclass</code>: <code>class</code> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="assert-condition-code-">
 			assert(condition,code?)
 			<span><a class="mark" href="#assert-condition-code-" id="assert-condition-code-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>condition</code>: <code>any</code> </li>
-<li><code>@param</code> <code>code?</code>: <a href="_ext.html#number"><code>number</code></a>|<code>ErrorNewArg</code> </li>
+<li><code>@param</code> <code>code?</code>: <a href="$ext.html#number"><code>number</code></a>|<code>ErrorNewArg</code> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="promise-executor-">
 			promise(executor)
 			<span><a class="mark" href="#promise-executor-" id="promise-executor-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>executor</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>executor</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
 <li><code>@return</code> <code>Promise</code> </li>
 </ul>
 

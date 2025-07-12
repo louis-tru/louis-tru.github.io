@@ -81,10 +81,10 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
-<li><a href="_common.html"><code>quark/_common</code></a></li>
-<li><a href="_event.html"><code>quark/_event</code></a></li>
-<li><a href="_ext.html"><code>quark/_ext</code></a></li>
-<li><a href="_util.html"><code>quark/_util</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
 </ul>
 
 
@@ -206,70 +206,70 @@
 			<span><a class="mark" href="#normalizepath-path-retain_up-" id="normalizepath-path-retain_up-">#</a></span>
 		</h2><p>format part</p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>retain_up?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>retain_up?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="formatpath-args-">
 			formatPath(...args)
 			<span><a class="mark" href="#formatpath-args-" id="formatpath-args-">#</a></span>
 		</h2><p>file:///home/louis/test.txt<br/>file:///d:/home/louis/test.txt<br/><a href="http://google.com/test.txt"><code>http://google.com/test.txt</code></a><br/>return format path</p>
 <ul>
-<li><code>@param</code> <code>args</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>args</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="isabsolute-path-">
 			isAbsolute(path)
 			<span><a class="mark" href="#isabsolute-path-" id="isabsolute-path-">#</a></span>
 		</h2><p>Is it an absolute path?</p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="islocal-path-">
 			isLocal(path)
 			<span><a class="mark" href="#islocal-path-" id="islocal-path-">#</a></span>
 		</h2><p>Is it a local path?</p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="islocalzip-path-">
 			isLocalZip(path)
 			<span><a class="mark" href="#islocalzip-path-" id="islocalzip-path-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="ishttp-path-">
 			isHttp(path)
 			<span><a class="mark" href="#ishttp-path-" id="ishttp-path-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="stripbom-content-">
 			stripBOM(content)
 			<span><a class="mark" href="#stripbom-content-" id="stripbom-content-">#</a></span>
 		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)<br/>because the buffer-to-string conversion in <code>fs.readFileSync()</code><br/>translates it to FEFF, the UTF-16 BOM.</p>
 <ul>
-<li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>content</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="stripshebang-content-">
 			stripShebang(content)
 			<span><a class="mark" href="#stripshebang-content-" id="stripshebang-content-">#</a></span>
 		</h2><p>Find end of shebang line and slice it off</p>
 <ul>
-<li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>content</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="assert-value-message-">
 			assert(value,message?)
 			<span><a class="mark" href="#assert-value-message-" id="assert-value-message-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>value</code>: <code>any</code> </li>
-<li><code>@param</code> <code>message?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>message?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="class-hash5381">
 			Class: Hash5381
@@ -281,20 +281,20 @@
 			hash5381.hashCode()
 			<span><a class="mark" href="#hash5381-hashcode-" id="hash5381-hashcode-">#</a></span>
 		</h3><ul>
-<li><code>@return</code> <a href="_ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#int"><code>Int</code></a> </li>
 </ul>
 <h3 id="hash5381-update-data-">
 			hash5381.update(data)
 			<span><a class="mark" href="#hash5381-update-data-" id="hash5381-update-data-">#</a></span>
 		</h3><ul>
-<li><code>@param</code> <code>data</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="hash5381-digest-">
 			hash5381.digest()
 			<span><a class="mark" href="#hash5381-digest-" id="hash5381-digest-">#</a></span>
 		</h3><ul>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="hash5381-clear-">
 			hash5381.clear()
@@ -309,14 +309,14 @@
 			default.debug
 			<span><a class="mark" href="#default-debug" id="default-debug">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>debug</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>debug</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="default-version-string">
 			default.version()string
 			<span><a class="mark" href="#default-version-string" id="default-version-string">#</a></span>
 		</h3><p>Get <code>quark</code> framework version</p>
 <ul>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="default-platform">
 			default.platform
@@ -328,27 +328,27 @@
 			default.argv
 			<span><a class="mark" href="#default-argv" id="default-argv">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>argv</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code> </li>
+<li><code>@get</code> <code>argv</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code> </li>
 </ul>
 <h3 id="default-options">
 			default.options
 			<span><a class="mark" href="#default-options" id="default-options">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>options</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@get</code> <code>options</code>: <a href="$ext.html#object"><code>object</code></a> </li>
 </ul>
 <h3 id="default-nexttick-cb-">
 			default.nextTick(cb)
 			<span><a class="mark" href="#default-nexttick-cb-" id="default-nexttick-cb-">#</a></span>
 		</h3><p>Wait for the next tick of the message loop to call the callback function</p>
 <ul>
-<li><code>@param</code> <code>cb</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>cb</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
 </ul>
 <h3 id="default-sleep-time-">
 			default.sleep(time)
 			<span><a class="mark" href="#default-sleep-time-" id="default-sleep-time-">#</a></span>
 		</h3><p>Asynchronous sleep, equivalent to calling <code>setTimeout</code></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="default-gc-">
 			default.gc()
@@ -361,9 +361,9 @@
 <p>The name is very useful when debugging code or program exceptions. It is usually a file name.</p>
 <p>If you do not pass this sandbox <code>sandbox</code> context, the default is to use the <code>global</code> object.</p>
 <ul>
-<li><code>@param</code> <code>source</code>: <a href="_ext.html#string"><code>string</code></a> javascript source code</li>
-<li><code>@param</code> <code>name?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>sandbox?</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@param</code> <code>source</code>: <a href="$ext.html#string"><code>string</code></a> javascript source code</li>
+<li><code>@param</code> <code>name?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>sandbox?</code>: <a href="$ext.html#object"><code>object</code></a> </li>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
 <h3 id="default-hashcode-obj-">
@@ -372,7 +372,7 @@
 		</h3><p>Read the hash value of a data object</p>
 <ul>
 <li><code>@param</code> <code>obj</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="_ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#int"><code>Int</code></a> </li>
 </ul>
 <h3 id="default-hash-obj-">
 			default.hash(obj)
@@ -380,7 +380,7 @@
 		</h3><p>Read the hash value of a data object, and convert the value to a string</p>
 <ul>
 <li><code>@param</code> <code>obj</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 
 			</div>

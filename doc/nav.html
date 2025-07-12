@@ -81,10 +81,10 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
-<li><a href="_common.html"><code>quark/_common</code></a></li>
-<li><a href="_event.html"><code>quark/_event</code></a></li>
-<li><a href="_ext.html"><code>quark/_ext</code></a></li>
-<li><a href="_util.html"><code>quark/_util</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
 </ul>
 
 
@@ -289,21 +289,21 @@
 			<span><a class="mark" href="#navigationstatus-intoleave-animate-" id="navigationstatus-intoleave-animate-">#</a></span>
 		</h3><p>When the component leaves</p>
 <ul>
-<li><code>@param</code> <code>animate</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>animate</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="navigationstatus-intobackground-animate-">
 			navigationstatus.intoBackground(animate)
 			<span><a class="mark" href="#navigationstatus-intobackground-animate-" id="navigationstatus-intobackground-animate-">#</a></span>
 		</h3><p>When the component enters the background</p>
 <ul>
-<li><code>@param</code> <code>animate</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>animate</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="navigationstatus-intoforeground-animate-">
 			navigationstatus.intoForeground(animate)
 			<span><a class="mark" href="#navigationstatus-intoforeground-animate-" id="navigationstatus-intoforeground-animate-">#</a></span>
 		</h3><p>When the component enters the foreground</p>
 <ul>
-<li><code>@param</code> <code>animate</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>animate</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h2 id="class-navigation">
 			Class: Navigation
@@ -333,7 +333,7 @@
 			<span><a class="mark" href="#navigation-registernavigation-animate-" id="navigation-registernavigation-animate-">#</a></span>
 		</h3><p>Called when a navigation component is created</p>
 <ul>
-<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>animate?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>animate</code>:  </li>
 </ul>
 <h3 id="navigation-unregisternavigation-animate-">
@@ -341,7 +341,7 @@
 			<span><a class="mark" href="#navigation-unregisternavigation-animate-" id="navigation-unregisternavigation-animate-">#</a></span>
 		</h3><p>Called when a navigation component is unmounted</p>
 <ul>
-<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>animate?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>animate</code>:  </li>
 </ul>
 <h3 id="navigation-navigationback-">
@@ -350,7 +350,7 @@
 		</h3><ul>
 <li>When a navigation event occurs, the system will first send the event to the focus view,<br/>  If the event can be successfully transmitted to root,<br/>  The event will ultimately be sent to the top of the current navigation list stack</li>
 <li>If false is returned here,<br/>  it will continue to pass to the bottom of the navigation list stack,<br/>  Until it returns true or reaches the bottom of the stack to exit the application</li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navigation-navigationenter-focus-">
 			navigation.navigationEnter(focus)
@@ -420,7 +420,7 @@
 			<span><a class="mark" href="#navpagecollection-iscurrent-page-" id="navpagecollection-iscurrent-page-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>page</code>: <a href="#class-navpage"><code>NavPage</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpagecollection-push-arg-animate-">
 			navpagecollection.push(arg,animate?)
@@ -428,15 +428,15 @@
 		</h3><p>Add a navigation page to the end and display</p>
 <ul>
 <li><code>@param</code> <code>arg</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-navpage"><code>NavPage</code></a>&gt; </li>
-<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>animate?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpagecollection-pop-animate-count-">
 			navpagecollection.pop(animate?,count?)
 			<span><a class="mark" href="#navpagecollection-pop-animate-count-" id="navpagecollection-pop-animate-count-">#</a></span>
 		</h3><p>Remove pages from the end of the navigation</p>
 <ul>
-<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@param</code> <code>count?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>animate?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>count?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="class-navbar">
 			Class: Navbar
@@ -459,14 +459,14 @@
 			<span><a class="mark" href="#navbar-setbacktext-value-" id="navbar-setbacktext-value-">#</a></span>
 		</h3><p>Set navbar back text</p>
 <ul>
-<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="navbar-settitletext-value-">
 			navbar.setTitleText(value)
 			<span><a class="mark" href="#navbar-settitletext-value-" id="navbar-settitletext-value-">#</a></span>
 		</h3><p>Set navbar title text</p>
 <ul>
-<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="class-navpage">
 			Class: NavPage
@@ -500,19 +500,19 @@
 			navpage.isCurrent
 			<span><a class="mark" href="#navpage-iscurrent" id="navpage-iscurrent">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>isCurrent</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>isCurrent</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpage-isfirstpage">
 			navpage.isFirstPage
 			<span><a class="mark" href="#navpage-isfirstpage" id="navpage-isfirstpage">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>isFirstPage</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@get</code> <code>isFirstPage</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpage-title">
 			navpage.title
 			<span><a class="mark" href="#navpage-title" id="navpage-title">#</a></span>
 		</h3><ul>
-<li><code>title</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>title</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="navpage-navbar">
 			navpage.navbar
@@ -524,19 +524,19 @@
 			navpage.navbarHidden
 			<span><a class="mark" href="#navpage-navbarhidden" id="navpage-navbarhidden">#</a></span>
 		</h3><ul>
-<li><code>navbarHidden</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>navbarHidden</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpage-includenavbarpadding">
 			navpage.includeNavbarPadding
 			<span><a class="mark" href="#navpage-includenavbarpadding" id="navpage-includenavbarpadding">#</a></span>
 		</h3><ul>
-<li><code>includeNavbarPadding</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>includeNavbarPadding</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpage-navbarheight">
 			navpage.navbarHeight
 			<span><a class="mark" href="#navpage-navbarheight" id="navpage-navbarheight">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>navbarHeight</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>navbarHeight</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 
 			</div>
