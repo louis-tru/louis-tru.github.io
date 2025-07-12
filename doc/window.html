@@ -114,12 +114,60 @@
 <li>
 <span><a href="#options">Options</a></span>
 </li>
+<li>
+<span><a href="#options-olortype-">options.olorType?</a></span>
+</li>
+<li>
+<span><a href="#options-msaa-">options.msaa?</a></span>
+</li>
+<li>
+<span><a href="#options-frame-">options.frame?</a></span>
+</li>
+<li>
+<span><a href="#options-title-">options.title?</a></span>
+</li>
+<li>
+<span><a href="#options-backgroundcolor-">options.backgroundColor?</a></span>
+</li>
+<li>
+<span><a href="#options-navigationcolor-">options.navigationColor?</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#class-nativewindow">Class: NativeWindow</a></span>
 <ul>
 <li>
 <span><a href="#nativewindow">NativeWindow</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-scale">nativewindow.scale</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-defaultscale">nativewindow.defaultScale</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-fsp">nativewindow.fsp</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-atompixel">nativewindow.atomPixel</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-root">nativewindow.root</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-focusview">nativewindow.focusView</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-navigationrect">nativewindow.navigationRect</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-size">nativewindow.size</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-backgroundcolor">nativewindow.backgroundColor</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-surfacesize">nativewindow.surfaceSize</a></span>
 </li>
 <li>
 <span><a href="#nativewindow-nextframe-cb-">nativewindow.nextFrame(cb)</a></span>
@@ -150,6 +198,9 @@
 <span><a href="#window">Window</a></span>
 </li>
 <li>
+<span><a href="#window-rootctr">window.rootCtr</a></span>
+</li>
+<li>
 <span><a href="#window-render-vdom-">window.render(vdom)</a></span>
 </li>
 </ul>
@@ -169,7 +220,49 @@
 		</h2><h3 id="options">
 			Options
 			<span><a class="mark" href="#options" id="options">#</a></span>
-		</h3><h2 id="class-nativewindow">
+		</h3><h3 id="options-olortype-">
+			options.olorType?
+			<span><a class="mark" href="#options-olortype-" id="options-olortype-">#</a></span>
+		</h3><p>init window color type </p>
+<ul>
+<li><code>olorType?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="options-msaa-">
+			options.msaa?
+			<span><a class="mark" href="#options-msaa-" id="options-msaa-">#</a></span>
+		</h3><p>init window gpu render msaa count </p>
+<ul>
+<li><code>msaa?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="options-frame-">
+			options.frame?
+			<span><a class="mark" href="#options-frame-" id="options-frame-">#</a></span>
+		</h3><p>init window params </p>
+<ul>
+<li><code>frame?</code>: <a href="types.html#rect"><code>types.Rect</code></a> </li>
+</ul>
+<h3 id="options-title-">
+			options.title?
+			<span><a class="mark" href="#options-title-" id="options-title-">#</a></span>
+		</h3><p>init window title </p>
+<ul>
+<li><code>title?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="options-backgroundcolor-">
+			options.backgroundColor?
+			<span><a class="mark" href="#options-backgroundcolor-" id="options-backgroundcolor-">#</a></span>
+		</h3><p>init window background color </p>
+<ul>
+<li><code>backgroundColor?</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
+</ul>
+<h3 id="options-navigationcolor-">
+			options.navigationColor?
+			<span><a class="mark" href="#options-navigationcolor-" id="options-navigationcolor-">#</a></span>
+		</h3><p>Is need draw navigation buttons for android. </p>
+<ul>
+<li><code>navigationColor?</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
+</ul>
+<h2 id="class-nativewindow">
 			Class: NativeWindow
 			<span><a class="mark" href="#class-nativewindow" id="class-nativewindow">#</a></span>
 		</h2><h3 id="nativewindow">
@@ -177,6 +270,79 @@
 			<span><a class="mark" href="#nativewindow" id="nativewindow">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a></li>
+</ul>
+<h3 id="nativewindow-scale">
+			nativewindow.scale
+			<span><a class="mark" href="#nativewindow-scale" id="nativewindow-scale">#</a></span>
+		</h3><p>The scaling ratio of the physical pixel size of the window to the drawing size</p>
+<ul>
+<li><code>@get</code> <code>scale</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="nativewindow-defaultscale">
+			nativewindow.defaultScale
+			<span><a class="mark" href="#nativewindow-defaultscale" id="nativewindow-defaultscale">#</a></span>
+		</h3><p>The default recommended scaling ratio between window physical pixels and drawing size</p>
+<ul>
+<li><code>@get</code> <code>defaultScale</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="nativewindow-fsp">
+			nativewindow.fsp
+			<span><a class="mark" href="#nativewindow-fsp" id="nativewindow-fsp">#</a></span>
+		</h3><p>Current drawing frame rate</p>
+<ul>
+<li><code>@get</code> <code>fsp</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="nativewindow-atompixel">
+			nativewindow.atomPixel
+			<span><a class="mark" href="#nativewindow-atompixel" id="nativewindow-atompixel">#</a></span>
+		</h3><p>Atom pixel size, Exp: 1 / scale</p>
+<ul>
+<li><code>@get</code> <code>atomPixel</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="nativewindow-root">
+			nativewindow.root
+			<span><a class="mark" href="#nativewindow-root" id="nativewindow-root">#</a></span>
+		</h3><p>The only root view in the window</p>
+<ul>
+<li><code>@get</code> <code>root</code>: <a href="view.html#root"><code>Root</code></a> </li>
+</ul>
+<h3 id="nativewindow-focusview">
+			nativewindow.focusView
+			<span><a class="mark" href="#nativewindow-focusview" id="nativewindow-focusview">#</a></span>
+		</h3><p>Current focus view</p>
+<ul>
+<li><code>@get</code> <code>focusView</code>: <a href="view.html#view"><code>View</code></a> </li>
+</ul>
+<h3 id="nativewindow-navigationrect">
+			nativewindow.navigationRect
+			<span><a class="mark" href="#nativewindow-navigationrect" id="nativewindow-navigationrect">#</a></span>
+		</h3><p>Navigation rect, possibly in the Android bottom navigation button area</p>
+<ul>
+<li><code>@get</code> <code>navigationRect</code>: <a href="types.html#rect"><code>types.Rect</code></a> </li>
+</ul>
+<h3 id="nativewindow-size">
+			nativewindow.size
+			<span><a class="mark" href="#nativewindow-size" id="nativewindow-size">#</a></span>
+		</h3><ul>
+<li>Set the logical size of the window. When this value changes, the change event will be triggered.</li>
+<li>When both width and height are set to zero, the most comfortable default display size is automatically set.</li>
+<li>If the width is set to non-zero, it means the width is fixed, and the height is automatically set according to the window ratio.</li>
+<li>If the height is set to non-zero, it means the height is fixed, and the width is automatically set according to the window ratio.</li>
+<li><code>size</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+</ul>
+<h3 id="nativewindow-backgroundcolor">
+			nativewindow.backgroundColor
+			<span><a class="mark" href="#nativewindow-backgroundcolor" id="nativewindow-backgroundcolor">#</a></span>
+		</h3><p>The background color for the window</p>
+<ul>
+<li><code>backgroundColor</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
+</ul>
+<h3 id="nativewindow-surfacesize">
+			nativewindow.surfaceSize
+			<span><a class="mark" href="#nativewindow-surfacesize" id="nativewindow-surfacesize">#</a></span>
+		</h3><p>Window physical surface pixel size</p>
+<ul>
+<li><code>surfaceSize</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
 </ul>
 <h3 id="nativewindow-nextframe-cb-">
 			nativewindow.nextFrame(cb)
@@ -237,6 +403,13 @@
 			<span><a class="mark" href="#window" id="window">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-nativewindow"><code>NativeWindow</code></a></li>
+</ul>
+<h3 id="window-rootctr">
+			window.rootCtr
+			<span><a class="mark" href="#window-rootctr" id="window-rootctr">#</a></span>
+		</h3><p>The only root view controller in the window</p>
+<ul>
+<li><code>@get</code> <code>rootCtr</code>: <a href="quark.html#viewcontroller"><code>ViewController</code></a> </li>
 </ul>
 <h3 id="window-render-vdom-">
 			window.render(vdom)

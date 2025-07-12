@@ -132,6 +132,12 @@
 <span><a href="#screen-onorientation">screen.onOrientation</a></span>
 </li>
 <li>
+<span><a href="#screen-orientation">screen.orientation</a></span>
+</li>
+<li>
+<span><a href="#screen-statusbarheight">screen.statusBarHeight</a></span>
+</li>
+<li>
 <span><a href="#screen-setvisiblestatusbar-visible-">screen.setVisibleStatusBar(visible)</a></span>
 </li>
 <li>
@@ -157,13 +163,28 @@
 		</h2><h3 id="orientation">
 			Orientation
 			<span><a class="mark" href="#orientation" id="orientation">#</a></span>
-		</h3><h2 id="enum-statusbarstyle">
+		</h3><ul>
+<li><code>Invalid</code><br>Invalid, Default use the User mode </li>
+<li><code>Portrait</code><br>Portrait </li>
+<li><code>Landscape</code><br>Landscape, Rotate 90 degrees clockwise </li>
+<li><code>Reverse_Portrait</code><br>Reverse Portrait, Rotate 180 degrees clockwise </li>
+<li><code>Reverse_Landscape</code><br>Reverse Landscape, Rotate 270 degrees clockwise </li>
+<li><code>User</code><br>User, Any orientation is allowed </li>
+<li><code>User_Portrait</code><br>User Portrait, Portrait and Reverse_Portrait directions available </li>
+<li><code>User_Landscape</code><br>User Landscape, Landscape and Reverse_Landscape directions available </li>
+<li><code>User_Locked</code><br>User Locked, Lock the application&#39;s startup state </li>
+</ul>
+<h2 id="enum-statusbarstyle">
 			Enum: StatusBarStyle
 			<span><a class="mark" href="#enum-statusbarstyle" id="enum-statusbarstyle">#</a></span>
 		</h2><h3 id="statusbarstyle">
 			StatusBarStyle
 			<span><a class="mark" href="#statusbarstyle" id="statusbarstyle">#</a></span>
-		</h3><h2 id="class-screen">
+		</h3><ul>
+<li><code>White</code><br>White </li>
+<li><code>Black</code><br>Black </li>
+</ul>
+<h2 id="class-screen">
 			Class: Screen
 			<span><a class="mark" href="#class-screen" id="class-screen">#</a></span>
 		</h2><h3 id="screen">
@@ -176,7 +197,20 @@
 			screen.onOrientation
 			<span><a class="mark" href="#screen-onorientation" id="screen-onorientation">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onOrientation</code>:  </li>
+<li><code>@event</code> <code>onOrientation</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-screen"><code>Screen</code></a>&gt;&gt; </li>
+</ul>
+<h3 id="screen-orientation">
+			screen.orientation
+			<span><a class="mark" href="#screen-orientation" id="screen-orientation">#</a></span>
+		</h3><p>Current screen direction</p>
+<ul>
+<li><code>@get</code> <code>orientation</code>: <a href="#enum-orientation"><code>Orientation</code></a> </li>
+</ul>
+<h3 id="screen-statusbarheight">
+			screen.statusBarHeight
+			<span><a class="mark" href="#screen-statusbarheight" id="screen-statusbarheight">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>statusBarHeight</code>: <a href="_ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="screen-setvisiblestatusbar-visible-">
 			screen.setVisibleStatusBar(visible)

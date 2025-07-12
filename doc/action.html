@@ -121,6 +121,18 @@
 <span><a href="#keyframe">Keyframe</a></span>
 </li>
 <li>
+<span><a href="#keyframe-index">keyframe.index</a></span>
+</li>
+<li>
+<span><a href="#keyframe-time">keyframe.time</a></span>
+</li>
+<li>
+<span><a href="#keyframe-curve">keyframe.curve</a></span>
+</li>
+<li>
+<span><a href="#keyframe-itemscount">keyframe.itemsCount</a></span>
+</li>
+<li>
 <span><a href="#keyframe-apply-view-">keyframe.apply(view)</a></span>
 </li>
 <li>
@@ -132,6 +144,18 @@
 <ul>
 <li>
 <span><a href="#action">Action</a></span>
+</li>
+<li>
+<span><a href="#action-duration">action.duration</a></span>
+</li>
+<li>
+<span><a href="#action-playing">action.playing</a></span>
+</li>
+<li>
+<span><a href="#action-loop">action.loop</a></span>
+</li>
+<li>
+<span><a href="#action-speed">action.speed</a></span>
 </li>
 <li>
 <span><a href="#action-play-">action.play()</a></span>
@@ -188,6 +212,18 @@
 <span><a href="#keyframeaction">KeyframeAction</a></span>
 </li>
 <li>
+<span><a href="#keyframeaction-time">keyframeaction.time</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-frame">keyframeaction.frame</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-length">keyframeaction.length</a></span>
+</li>
+<li>
+<span><a href="#keyframeaction-indexed">keyframeaction.indexed</a></span>
+</li>
+<li>
 <span><a href="#keyframeaction-addframe-time-curve-">keyframeaction.addFrame(time,curve?)</a></span>
 </li>
 <li>
@@ -226,6 +262,12 @@
 			<span><a class="mark" href="#actionin" id="actionin">#</a></span>
 		</h2><ul>
 <li><code>@type</code> <code>ActionIn</code> = <a href="#class-action"><code>Action</code></a>|<a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>| {
+<code>playing?</code>: <a href="_ext.html#boolean"><code>boolean</code></a>; 
+<code>loop?</code>: <a href="_ext.html#number"><code>number</code></a>; 
+<code>speed?</code>: <a href="_ext.html#number"><code>number</code></a>; 
+<code>spawn?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; 
+<code>seq?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; 
+<code>keyframe?</code>: <a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>; 
 }</li>
 </ul>
 <h2 id="class-keyframe">
@@ -236,6 +278,34 @@
 			<span><a class="mark" href="#keyframe" id="keyframe">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="css.html#stylesheet"><code>StyleSheet</code></a></li>
+</ul>
+<h3 id="keyframe-index">
+			keyframe.index
+			<span><a class="mark" href="#keyframe-index" id="keyframe-index">#</a></span>
+		</h3><p>Get Keyframe index in the keyframe action </p>
+<ul>
+<li><code>@get</code> <code>index</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyframe-time">
+			keyframe.time
+			<span><a class="mark" href="#keyframe-time" id="keyframe-time">#</a></span>
+		</h3><p>Get Keyframe time poing </p>
+<ul>
+<li><code>@get</code> <code>time</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyframe-curve">
+			keyframe.curve
+			<span><a class="mark" href="#keyframe-curve" id="keyframe-curve">#</a></span>
+		</h3><p>Get transition curve </p>
+<ul>
+<li><code>@get</code> <code>curve</code>: <a href="types.html#curve"><code>types.Curve</code></a> </li>
+</ul>
+<h3 id="keyframe-itemscount">
+			keyframe.itemsCount
+			<span><a class="mark" href="#keyframe-itemscount" id="keyframe-itemscount">#</a></span>
+		</h3><p>Get StyleSheet items count </p>
+<ul>
+<li><code>@get</code> <code>itemsCount</code>: <a href="_ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="keyframe-apply-view-">
 			keyframe.apply(view)
@@ -262,6 +332,34 @@
 		</h3><p>Action base type, this is an abstract type without a constructor</p>
 <ul>
 <li><code>@abstract</code>  </li>
+</ul>
+<h3 id="action-duration">
+			action.duration
+			<span><a class="mark" href="#action-duration" id="action-duration">#</a></span>
+		</h3><p>Get action playtime long </p>
+<ul>
+<li><code>@get</code> <code>duration</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="action-playing">
+			action.playing
+			<span><a class="mark" href="#action-playing" id="action-playing">#</a></span>
+		</h3><p>Set/Get action playing state, if set then play() or stop() is called </p>
+<ul>
+<li><code>playing</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="action-loop">
+			action.loop
+			<span><a class="mark" href="#action-loop" id="action-loop">#</a></span>
+		</h3><p>Set/Get action loop, the zero means not loop </p>
+<ul>
+<li><code>loop</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="action-speed">
+			action.speed
+			<span><a class="mark" href="#action-speed" id="action-speed">#</a></span>
+		</h3><p>Set/Get action speed </p>
+<ul>
+<li><code>speed</code>: <a href="_ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="action-play-">
 			action.play()
@@ -373,6 +471,34 @@ The current action needs to have a parent action, otherwise it will be invalid.<
 			<span><a class="mark" href="#keyframeaction" id="keyframeaction">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-action"><code>Action</code></a></li>
+</ul>
+<h3 id="keyframeaction-time">
+			keyframeaction.time
+			<span><a class="mark" href="#keyframeaction-time" id="keyframeaction-time">#</a></span>
+		</h3><p>get play time  </p>
+<ul>
+<li><code>@get</code> <code>time</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyframeaction-frame">
+			keyframeaction.frame
+			<span><a class="mark" href="#keyframeaction-frame" id="keyframeaction-frame">#</a></span>
+		</h3><p>get playing frame index </p>
+<ul>
+<li><code>@get</code> <code>frame</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyframeaction-length">
+			keyframeaction.length
+			<span><a class="mark" href="#keyframeaction-length" id="keyframeaction-length">#</a></span>
+		</h3><p>get count of frames </p>
+<ul>
+<li><code>@get</code> <code>length</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyframeaction-indexed">
+			keyframeaction.indexed
+			<span><a class="mark" href="#keyframeaction-indexed" id="keyframeaction-indexed">#</a></span>
+		</h3><p>Get the {Keyframe} for index</p>
+<ul>
+<li><code>@get</code> <code>indexed</code>: <a href="#class-keyframe"><code>Keyframe</code></a> </li>
 </ul>
 <h3 id="keyframeaction-addframe-time-curve-">
 			keyframeaction.addFrame(time,curve?)

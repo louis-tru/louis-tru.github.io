@@ -134,6 +134,15 @@
 <li>
 <span><a href="#dirent">Dirent</a></span>
 </li>
+<li>
+<span><a href="#dirent-name">dirent.name</a></span>
+</li>
+<li>
+<span><a href="#dirent-pathname">dirent.pathname</a></span>
+</li>
+<li>
+<span><a href="#dirent-type">dirent.type</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#class-filestat">Class: FileStat</a></span>
@@ -226,6 +235,18 @@
 <ul>
 <li>
 <span><a href="#streamresponse">StreamResponse</a></span>
+</li>
+<li>
+<span><a href="#streamresponse-size">streamresponse.size</a></span>
+</li>
+<li>
+<span><a href="#streamresponse-total">streamresponse.total</a></span>
+</li>
+<li>
+<span><a href="#streamresponse-data">streamresponse.data</a></span>
+</li>
+<li>
+<span><a href="#streamresponse-ended">streamresponse.ended</a></span>
 </li>
 </ul>
 <li>
@@ -369,6 +390,32 @@
 			FileOpenFlag
 			<span><a class="mark" href="#fileopenflag" id="fileopenflag">#</a></span>
 		</h3><p>Opening file Flags</p>
+<ul>
+<li><code>FOPEN_ACCMODE</code>  </li>
+<li><code>FOPEN_RDONLY</code><br>Open a read-only file. The file must exist. </li>
+<li><code>FOPEN_WRONLY</code><br>Open a write-only file. The file must exist. </li>
+<li><code>FOPEN_RDWR</code><br>Open a file for reading and writing. The file must exist. </li>
+<li><code>FOPEN_CREAT</code><br>Create the file if it does not exist </li>
+<li><code>FOPEN_EXCL</code><br>Create a file as executable </li>
+<li><code>FOPEN_NOCTTY</code><br>No Controlling TTY </li>
+<li><code>FOPEN_TRUNC</code><br>Clear the file contents if the file exists </li>
+<li><code>FOPEN_APPEND</code><br>Move the file read cursor to the end if the file exists </li>
+<li><code>FOPEN_NONBLOCK</code><br>Blocking mode, usually using the open function </li>
+<li><code>FOPEN_R</code><br>r, open the file for reading only, the file must exist </li>
+<li><code>FOPEN_W</code><br>w, Open a write-only file. If the file exists, the file length is cleared to zero, that is,
+the file content will disappear. If the file does not exist, it will be created. </li>
+<li><code>FOPEN_A</code><br>a, Open a write-only file in append mode. If the file does not exist, it will be created.
+If the file exists, the written data will be added to the end of the file, that is, 
+the original content of the file will be retained.</li>
+<li><code>FOPEN_RP</code><br>r+,
+Open a file for reading and writing. The file must exist.</li>
+<li><code>FOPEN_WP</code><br>w+, Open the file for reading and writing. If the file exists,
+the file length will be cleared to zero, that is, the file content will disappear.
+If the file does not exist, it will be created.</li>
+<li><code>FOPEN_AP</code><br>a+, Open a readable and writable file in append mode. If the file does not exist,
+it will be created. If the file exists, the written data will be added to the end of the file,
+that is, the original content of the file will be retained.</li>
+</ul>
 <h2 id="enum-filetype">
 			Enum: FileType
 			<span><a class="mark" href="#enum-filetype" id="enum-filetype">#</a></span>
@@ -376,6 +423,17 @@
 			FileType
 			<span><a class="mark" href="#filetype" id="filetype">#</a></span>
 		</h3><p>File type</p>
+<ul>
+<li><code>FTYPE_UNKNOWN</code><br>Unknown Type </li>
+<li><code>FTYPE_FILE</code><br>Normal File </li>
+<li><code>FTYPE_DIR</code><br>Directory) </li>
+<li><code>FTYPE_LINK</code><br>Symbolic link files（Soft Link） </li>
+<li><code>FTYPE_FIFO</code><br>Named pipes, a special type of file used for interprocess communication (IPC) </li>
+<li><code>FTYPE_SOCKET</code><br>Socket </li>
+<li><code>FTYPE_CHAR</code><br>Unbuffered character devices, such as keyboard and mouse (/dev/input/<em>), terminal (/dev/tty</em>)</li>
+<li><code>FTYPE_BLOCK</code><br>Provides buffered, block-oriented (fixed-size data blocks) I/O access,
+such as hard disk drives (/dev/sda, /dev/sda1, /dev/nvme0n1p1)</li>
+</ul>
 <h2 id="defaultmode">
 			defaultMode
 			<span><a class="mark" href="#defaultmode" id="defaultmode">#</a></span>
@@ -398,6 +456,27 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 			Dirent
 			<span><a class="mark" href="#dirent" id="dirent">#</a></span>
 		</h3><p>The result returned by calling readdir/readdirSync</p>
+<h3 id="dirent-name">
+			dirent.name
+			<span><a class="mark" href="#dirent-name" id="dirent-name">#</a></span>
+		</h3><p>File name </p>
+<ul>
+<li><code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="dirent-pathname">
+			dirent.pathname
+			<span><a class="mark" href="#dirent-pathname" id="dirent-pathname">#</a></span>
+		</h3><p>The full path to the file </p>
+<ul>
+<li><code>pathname</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="dirent-type">
+			dirent.type
+			<span><a class="mark" href="#dirent-type" id="dirent-type">#</a></span>
+		</h3><p>File Type </p>
+<ul>
+<li><code>type</code>: <a href="#enum-filetype"><code>FileType</code></a> </li>
+</ul>
 <h2 id="class-filestat">
 			Class: FileStat
 			<span><a class="mark" href="#class-filestat" id="class-filestat">#</a></span>
@@ -584,7 +663,35 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 		</h2><h3 id="streamresponse">
 			StreamResponse
 			<span><a class="mark" href="#streamresponse" id="streamresponse">#</a></span>
-		</h3><h2 id="class-asynctask">
+		</h3><h3 id="streamresponse-size">
+			streamresponse.size
+			<span><a class="mark" href="#streamresponse-size" id="streamresponse-size">#</a></span>
+		</h3><p>Data size </p>
+<ul>
+<li><code>size</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="streamresponse-total">
+			streamresponse.total
+			<span><a class="mark" href="#streamresponse-total" id="streamresponse-total">#</a></span>
+		</h3><p>Total data size </p>
+<ul>
+<li><code>total</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="streamresponse-data">
+			streamresponse.data
+			<span><a class="mark" href="#streamresponse-data" id="streamresponse-data">#</a></span>
+		</h3><p>It is Data </p>
+<ul>
+<li><code>data</code>: <code>Uint8Array</code> </li>
+</ul>
+<h3 id="streamresponse-ended">
+			streamresponse.ended
+			<span><a class="mark" href="#streamresponse-ended" id="streamresponse-ended">#</a></span>
+		</h3><p>Is it over </p>
+<ul>
+<li><code>ended</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="class-asynctask">
 			Class: AsyncTask
 			<span><a class="mark" href="#class-asynctask" id="class-asynctask">#</a></span>
 		</h2><h3 id="asynctask">
@@ -998,7 +1105,7 @@ This method will not throw an exception. If the path cannot be read, it will onl
 			reader
 			<span><a class="mark" href="#reader" id="reader">#</a></span>
 		</h2><ul>
-<li><code>@const</code> <code>reader</code>: </li>
+<li><code>@const</code> <code>reader</code>: <a href="#interface-reader"><code>Reader</code></a></li>
 </ul>
 
 			</div>

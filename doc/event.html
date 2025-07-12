@@ -136,6 +136,18 @@
 <span><a href="#uievent">UIEvent</a></span>
 </li>
 <li>
+<span><a href="#uievent-origin">uievent.origin</a></span>
+</li>
+<li>
+<span><a href="#uievent-timestamp">uievent.timestamp</a></span>
+</li>
+<li>
+<span><a href="#uievent-isdefault">uievent.isDefault</a></span>
+</li>
+<li>
+<span><a href="#uievent-isbubble">uievent.isBubble</a></span>
+</li>
+<li>
 <span><a href="#uievent-canceldefault-">uievent.cancelDefault()</a></span>
 </li>
 <li>
@@ -148,12 +160,57 @@
 <li>
 <span><a href="#actionevent">ActionEvent</a></span>
 </li>
+<li>
+<span><a href="#actionevent-action">actionevent.action</a></span>
+</li>
+<li>
+<span><a href="#actionevent-delay">actionevent.delay</a></span>
+</li>
+<li>
+<span><a href="#actionevent-frame">actionevent.frame</a></span>
+</li>
+<li>
+<span><a href="#actionevent-looped">actionevent.looped</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#class-keyevent">Class: KeyEvent</a></span>
 <ul>
 <li>
 <span><a href="#keyevent">KeyEvent</a></span>
+</li>
+<li>
+<span><a href="#keyevent-nextfocus">keyevent.nextFocus</a></span>
+</li>
+<li>
+<span><a href="#keyevent-keycode">keyevent.keycode</a></span>
+</li>
+<li>
+<span><a href="#keyevent-keypress">keyevent.keypress</a></span>
+</li>
+<li>
+<span><a href="#keyevent-repeat">keyevent.repeat</a></span>
+</li>
+<li>
+<span><a href="#keyevent-shift">keyevent.shift</a></span>
+</li>
+<li>
+<span><a href="#keyevent-ctrl">keyevent.ctrl</a></span>
+</li>
+<li>
+<span><a href="#keyevent-alt">keyevent.alt</a></span>
+</li>
+<li>
+<span><a href="#keyevent-command">keyevent.command</a></span>
+</li>
+<li>
+<span><a href="#keyevent-capslock">keyevent.capsLock</a></span>
+</li>
+<li>
+<span><a href="#keyevent-device">keyevent.device</a></span>
+</li>
+<li>
+<span><a href="#keyevent-source">keyevent.source</a></span>
 </li>
 </ul>
 <li>
@@ -162,12 +219,27 @@
 <li>
 <span><a href="#clickevent">ClickEvent</a></span>
 </li>
+<li>
+<span><a href="#clickevent-x">clickevent.x</a></span>
+</li>
+<li>
+<span><a href="#clickevent-y">clickevent.y</a></span>
+</li>
+<li>
+<span><a href="#clickevent-count">clickevent.count</a></span>
+</li>
+<li>
+<span><a href="#clickevent-type">clickevent.type</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#class-highlightedevent">Class: HighlightedEvent</a></span>
 <ul>
 <li>
 <span><a href="#highlightedevent">HighlightedEvent</a></span>
+</li>
+<li>
+<span><a href="#highlightedevent-status">highlightedevent.status</a></span>
 </li>
 </ul>
 <li>
@@ -176,6 +248,12 @@
 <li>
 <span><a href="#mouseevent">MouseEvent</a></span>
 </li>
+<li>
+<span><a href="#mouseevent-x">mouseevent.x</a></span>
+</li>
+<li>
+<span><a href="#mouseevent-y">mouseevent.y</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#interface-touchpoint">Interface: TouchPoint</a></span>
@@ -183,12 +261,39 @@
 <li>
 <span><a href="#touchpoint">TouchPoint</a></span>
 </li>
+<li>
+<span><a href="#touchpoint-id">touchpoint.id</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-startx">touchpoint.startX</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-starty">touchpoint.startY</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-x">touchpoint.x</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-y">touchpoint.y</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-force">touchpoint.force</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-clickin">touchpoint.clickIn</a></span>
+</li>
+<li>
+<span><a href="#touchpoint-view">touchpoint.view</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#class-touchevent">Class: TouchEvent</a></span>
 <ul>
 <li>
 <span><a href="#touchevent">TouchEvent</a></span>
+</li>
+<li>
+<span><a href="#touchevent-changedtouches">touchevent.changedTouches</a></span>
 </li>
 </ul>
 <li>
@@ -215,6 +320,11 @@
 			ClickType
 			<span><a class="mark" href="#clicktype" id="clicktype">#</a></span>
 		</h3><p>The type or device that triggers the click event, such as using a touch screen or a mouse</p>
+<ul>
+<li><code>Touch</code><br>touchscreen </li>
+<li><code>Keyboard</code><br>Press Enter on the keyboard or press OK on the remote control </li>
+<li><code>Mouse</code><br>mouse </li>
+</ul>
 <h2 id="enum-highlightedstatus">
 			Enum: HighlightedStatus
 			<span><a class="mark" href="#enum-highlightedstatus" id="enum-highlightedstatus">#</a></span>
@@ -222,6 +332,11 @@
 			HighlightedStatus
 			<span><a class="mark" href="#highlightedstatus" id="highlightedstatus">#</a></span>
 		</h3><p>Status type of event <code>Highlighted</code></p>
+<ul>
+<li><code>Normal</code><br>Normal situation </li>
+<li><code>Hover</code><br>When the mouse moves over the view or the focus switches to the view </li>
+<li><code>Active</code><br>When the mouse is pressed or the OK button is pressed on the remote control </li>
+</ul>
 <h2 id="enum-returnvaluemask">
 			Enum: ReturnValueMask
 			<span><a class="mark" href="#enum-returnvaluemask" id="enum-returnvaluemask">#</a></span>
@@ -229,6 +344,11 @@
 			ReturnValueMask
 			<span><a class="mark" href="#returnvaluemask" id="returnvaluemask">#</a></span>
 		</h3><p>Mask function corresponding to event return value (returnValue)</p>
+<ul>
+<li><code>Default</code><br>Enable default actions </li>
+<li><code>Bubble</code><br>Enable event bubbling </li>
+<li><code>All</code><br>Both of the above include </li>
+</ul>
 <h2 id="class-uievent">
 			Class: UIEvent
 			<span><a class="mark" href="#class-uievent" id="class-uievent">#</a></span>
@@ -237,6 +357,34 @@
 			<span><a class="mark" href="#uievent" id="uievent">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="_event.html#event"><code>Event</code></a></li>
+</ul>
+<h3 id="uievent-origin">
+			uievent.origin
+			<span><a class="mark" href="#uievent-origin" id="uievent-origin">#</a></span>
+		</h3><p>Origin of the event </p>
+<ul>
+<li><code>@get</code> <code>origin</code>: <a href="view.html#view"><code>View</code></a> </li>
+</ul>
+<h3 id="uievent-timestamp">
+			uievent.timestamp
+			<span><a class="mark" href="#uievent-timestamp" id="uievent-timestamp">#</a></span>
+		</h3><p>The time when the event is triggered </p>
+<ul>
+<li><code>@get</code> <code>timestamp</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="uievent-isdefault">
+			uievent.isDefault
+			<span><a class="mark" href="#uievent-isdefault" id="uievent-isdefault">#</a></span>
+		</h3><p>Gets whether the default action of an event is enabled </p>
+<ul>
+<li><code>@get</code> <code>isDefault</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="uievent-isbubble">
+			uievent.isBubble
+			<span><a class="mark" href="#uievent-isbubble" id="uievent-isbubble">#</a></span>
+		</h3><p>Gets whether event bubbling is enabled </p>
+<ul>
+<li><code>@get</code> <code>isBubble</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="uievent-canceldefault-">
 			uievent.cancelDefault()
@@ -261,6 +409,34 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
 </ul>
+<h3 id="actionevent-action">
+			actionevent.action
+			<span><a class="mark" href="#actionevent-action" id="actionevent-action">#</a></span>
+		</h3><p>Get the action object that triggers the event </p>
+<ul>
+<li><code>@get</code> <code>action</code>: <a href="action.html#action"><code>Action</code></a> </li>
+</ul>
+<h3 id="actionevent-delay">
+			actionevent.delay
+			<span><a class="mark" href="#actionevent-delay" id="actionevent-delay">#</a></span>
+		</h3><p>The difference between the event triggering time and the target time </p>
+<ul>
+<li><code>@get</code> <code>delay</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="actionevent-frame">
+			actionevent.frame
+			<span><a class="mark" href="#actionevent-frame" id="actionevent-frame">#</a></span>
+		</h3><p>Keyframe Index </p>
+<ul>
+<li><code>@get</code> <code>frame</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="actionevent-looped">
+			actionevent.looped
+			<span><a class="mark" href="#actionevent-looped" id="actionevent-looped">#</a></span>
+		</h3><p>The current number of looped </p>
+<ul>
+<li><code>@get</code> <code>looped</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
 <h2 id="class-keyevent">
 			Class: KeyEvent
 			<span><a class="mark" href="#class-keyevent" id="class-keyevent">#</a></span>
@@ -270,6 +446,84 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
 </ul>
+<h3 id="keyevent-nextfocus">
+			keyevent.nextFocus
+			<span><a class="mark" href="#keyevent-nextfocus" id="keyevent-nextfocus">#</a></span>
+		</h3><p>The next possible remote focus view </p>
+<ul>
+<li><code>nextFocus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="keyevent-keycode">
+			keyevent.keycode
+			<span><a class="mark" href="#keyevent-keycode" id="keyevent-keycode">#</a></span>
+		</h3><p>Keyboard Code </p>
+<ul>
+<li><code>@get</code> <code>keycode</code>: <a href="keyboard.html#keyboardkeycode"><code>KeyboardKeyCode</code></a> </li>
+</ul>
+<h3 id="keyevent-keypress">
+			keyevent.keypress
+			<span><a class="mark" href="#keyevent-keypress" id="keyevent-keypress">#</a></span>
+		</h3><p>Ascii code converted from keyboard code </p>
+<ul>
+<li><code>@get</code> <code>keypress</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyevent-repeat">
+			keyevent.repeat
+			<span><a class="mark" href="#keyevent-repeat" id="keyevent-repeat">#</a></span>
+		</h3><p>The number of times the event is triggered repeatedly after the key is pressed
+until the key is released </p>
+<ul>
+<li><code>@get</code> <code>repeat</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyevent-shift">
+			keyevent.shift
+			<span><a class="mark" href="#keyevent-shift" id="keyevent-shift">#</a></span>
+		</h3><p>Is the shift key pressed </p>
+<ul>
+<li><code>@get</code> <code>shift</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="keyevent-ctrl">
+			keyevent.ctrl
+			<span><a class="mark" href="#keyevent-ctrl" id="keyevent-ctrl">#</a></span>
+		</h3><p>Is the ctrl key pressed </p>
+<ul>
+<li><code>@get</code> <code>ctrl</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="keyevent-alt">
+			keyevent.alt
+			<span><a class="mark" href="#keyevent-alt" id="keyevent-alt">#</a></span>
+		</h3><p>Is the alt key pressed </p>
+<ul>
+<li><code>@get</code> <code>alt</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="keyevent-command">
+			keyevent.command
+			<span><a class="mark" href="#keyevent-command" id="keyevent-command">#</a></span>
+		</h3><p>Is the command key pressed </p>
+<ul>
+<li><code>@get</code> <code>command</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="keyevent-capslock">
+			keyevent.capsLock
+			<span><a class="mark" href="#keyevent-capslock" id="keyevent-capslock">#</a></span>
+		</h3><p>Is capsLock enabled </p>
+<ul>
+<li><code>@get</code> <code>capsLock</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="keyevent-device">
+			keyevent.device
+			<span><a class="mark" href="#keyevent-device" id="keyevent-device">#</a></span>
+		</h3><p>Device id </p>
+<ul>
+<li><code>@get</code> <code>device</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyevent-source">
+			keyevent.source
+			<span><a class="mark" href="#keyevent-source" id="keyevent-source">#</a></span>
+		</h3><p>Source id </p>
+<ul>
+<li><code>@get</code> <code>source</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
 <h2 id="class-clickevent">
 			Class: ClickEvent
 			<span><a class="mark" href="#class-clickevent" id="class-clickevent">#</a></span>
@@ -278,6 +532,34 @@
 			<span><a class="mark" href="#clickevent" id="clickevent">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="clickevent-x">
+			clickevent.x
+			<span><a class="mark" href="#clickevent-x" id="clickevent-x">#</a></span>
+		</h3><p>The cursor position in the window x </p>
+<ul>
+<li><code>@get</code> <code>x</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="clickevent-y">
+			clickevent.y
+			<span><a class="mark" href="#clickevent-y" id="clickevent-y">#</a></span>
+		</h3><p>The cursor position in the window y </p>
+<ul>
+<li><code>@get</code> <code>y</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="clickevent-count">
+			clickevent.count
+			<span><a class="mark" href="#clickevent-count" id="clickevent-count">#</a></span>
+		</h3><p>Number of consecutive clicks, possibly double clicks </p>
+<ul>
+<li><code>@get</code> <code>count</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="clickevent-type">
+			clickevent.type
+			<span><a class="mark" href="#clickevent-type" id="clickevent-type">#</a></span>
+		</h3><p>Click trigger type </p>
+<ul>
+<li><code>@get</code> <code>type</code>: <a href="#enum-clicktype"><code>ClickType</code></a> </li>
 </ul>
 <h2 id="class-highlightedevent">
 			Class: HighlightedEvent
@@ -291,6 +573,13 @@ For example: when the mouse enters the view, the state is <code>Hover</code></p>
 <ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
 </ul>
+<h3 id="highlightedevent-status">
+			highlightedevent.status
+			<span><a class="mark" href="#highlightedevent-status" id="highlightedevent-status">#</a></span>
+		</h3><p>Highlight state type </p>
+<ul>
+<li><code>@get</code> <code>status</code>: <a href="#enum-highlightedstatus"><code>HighlightedStatus</code></a> </li>
+</ul>
 <h2 id="class-mouseevent">
 			Class: MouseEvent
 			<span><a class="mark" href="#class-mouseevent" id="class-mouseevent">#</a></span>
@@ -300,6 +589,20 @@ For example: when the mouse enters the view, the state is <code>Hover</code></p>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
 </ul>
+<h3 id="mouseevent-x">
+			mouseevent.x
+			<span><a class="mark" href="#mouseevent-x" id="mouseevent-x">#</a></span>
+		</h3><p>The cursor position in the window x </p>
+<ul>
+<li><code>@get</code> <code>x</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="mouseevent-y">
+			mouseevent.y
+			<span><a class="mark" href="#mouseevent-y" id="mouseevent-y">#</a></span>
+		</h3><p>The cursor position in the window y </p>
+<ul>
+<li><code>@get</code> <code>y</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
 <h2 id="interface-touchpoint">
 			Interface: TouchPoint
 			<span><a class="mark" href="#interface-touchpoint" id="interface-touchpoint">#</a></span>
@@ -307,6 +610,64 @@ For example: when the mouse enters the view, the state is <code>Hover</code></p>
 			TouchPoint
 			<span><a class="mark" href="#touchpoint" id="touchpoint">#</a></span>
 		</h3><p>Touch point data of the touch event</p>
+<h3 id="touchpoint-id">
+			touchpoint.id
+			<span><a class="mark" href="#touchpoint-id" id="touchpoint-id">#</a></span>
+		</h3><p>Touch point id </p>
+<ul>
+<li><code>@get</code> <code>id</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="touchpoint-startx">
+			touchpoint.startX
+			<span><a class="mark" href="#touchpoint-startx" id="touchpoint-startx">#</a></span>
+		</h3><p>The position x of the touchpoint in the window when it is first pressed </p>
+<ul>
+<li><code>@get</code> <code>startX</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="touchpoint-starty">
+			touchpoint.startY
+			<span><a class="mark" href="#touchpoint-starty" id="touchpoint-starty">#</a></span>
+		</h3><p>The position y of the touchpoint in the window when it is first pressed </p>
+<ul>
+<li><code>@get</code> <code>startY</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="touchpoint-x">
+			touchpoint.x
+			<span><a class="mark" href="#touchpoint-x" id="touchpoint-x">#</a></span>
+		</h3><p>The position of the touchpoint in the window x </p>
+<ul>
+<li><code>@get</code> <code>x</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="touchpoint-y">
+			touchpoint.y
+			<span><a class="mark" href="#touchpoint-y" id="touchpoint-y">#</a></span>
+		</h3><p>The position of the touchpoint in the window y </p>
+<ul>
+<li><code>@get</code> <code>y</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="touchpoint-force">
+			touchpoint.force
+			<span><a class="mark" href="#touchpoint-force" id="touchpoint-force">#</a></span>
+		</h3><p>touchpoint pressure strength, value range [0-1] </p>
+<ul>
+<li><code>@get</code> <code>force</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="touchpoint-clickin">
+			touchpoint.clickIn
+			<span><a class="mark" href="#touchpoint-clickin" id="touchpoint-clickin">#</a></span>
+		</h3><p>Whether the touchpoint is still within the click range.
+If the touchpoint is within the click range when it is pressed,
+the touchpoint may move out of the range later. </p>
+<ul>
+<li><code>@get</code> <code>clickIn</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="touchpoint-view">
+			touchpoint.view
+			<span><a class="mark" href="#touchpoint-view" id="touchpoint-view">#</a></span>
+		</h3><p>The initial view of the touchpoint </p>
+<ul>
+<li><code>@get</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
+</ul>
 <h2 id="class-touchevent">
 			Class: TouchEvent
 			<span><a class="mark" href="#class-touchevent" id="class-touchevent">#</a></span>
@@ -315,6 +676,13 @@ For example: when the mouse enters the view, the state is <code>Hover</code></p>
 			<span><a class="mark" href="#touchevent" id="touchevent">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="touchevent-changedtouches">
+			touchevent.changedTouches
+			<span><a class="mark" href="#touchevent-changedtouches" id="touchevent-changedtouches">#</a></span>
+		</h3><p>Touch point collection </p>
+<ul>
+<li><code>@get</code> <code>changedTouches</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a><code>[]</code> </li>
 </ul>
 <h2 id="class-nativenotification">
 			Class: NativeNotification

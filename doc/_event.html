@@ -115,6 +115,9 @@
 <span><a href="#event">Event</a></span>
 </li>
 <li>
+<span><a href="#event-returnvalue">event.returnValue</a></span>
+</li>
+<li>
 <span><a href="#event-data">event.data</a></span>
 </li>
 <li>
@@ -149,21 +152,6 @@
 <span><a href="#eventnoticer-constructor-name-sender-">eventnoticer.constructor(name,sender)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-on-listen-ctxorid-id-">eventnoticer.on(listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#eventnoticer-once-listen-ctxorid-id-">eventnoticer.once(listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#eventnoticer-on2-listen-ctxorid-id-">eventnoticer.on2(listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#eventnoticer-once2-listen-ctxorid-id-">eventnoticer.once2(listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#eventnoticer-trigger-data-">eventnoticer.trigger(data)</a></span>
-</li>
-<li>
 <span><a href="#eventnoticer-triggerwithevent-event-">eventnoticer.triggerWithEvent(event)</a></span>
 </li>
 <li>
@@ -184,18 +172,6 @@
 </li>
 <li>
 <span><a href="#notification-adddefaultlistener-name-listen-">notification.addDefaultListener(name,listen)</a></span>
-</li>
-<li>
-<span><a href="#notification-addeventlistener-name-listen-ctxorid-id-">notification.addEventListener(name,listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#notification-addeventlisteneronce-name-listen-ctxorid-id-">notification.addEventListenerOnce(name,listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#notification-addeventlistener2-name-listen-ctxorid-id-">notification.addEventListener2(name,listen,ctxOrId?,id?)</a></span>
-</li>
-<li>
-<span><a href="#notification-addeventlisteneronce2-name-listen-ctxorid-id-">notification.addEventListenerOnce2(name,listen,ctxOrId?,id?)</a></span>
 </li>
 <li>
 <span><a href="#notification-addeventforward-name-noticer-id-">notification.addEventForward(name,noticer,id?)</a></span>
@@ -243,6 +219,13 @@
 		</h3><p>The event data</p>
 <ul>
 <li><code>@template</code> &lt;<code>Sender</code>,<code>SendData</code>&gt;</li>
+</ul>
+<h3 id="event-returnvalue">
+			event.returnValue
+			<span><a class="mark" href="#event-returnvalue" id="event-returnvalue">#</a></span>
+		</h3><p>The return value </p>
+<ul>
+<li><code>returnValue</code>: <a href="_ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="event-data">
 			event.data
@@ -316,17 +299,12 @@
 			<span><a class="mark" href="#eventnoticer-constructor-name-sender-" id="eventnoticer-constructor-name-sender-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> Event name</li>
-<li><code>@param</code> <code>sender</code>: <a href="_ext.html#object"><code>object</code></a> Event sender</li>
-</ul>
-<h3 id="eventnoticer-on-listen-ctxorid-id-">
-			eventnoticer.on(listen,ctxOrId?,id?)
-			<span><a class="mark" href="#eventnoticer-on-listen-ctxorid-id-" id="eventnoticer-on-listen-ctxorid-id-">#</a></span>
-		</h3><p>Add an event listener (function)</p>
-<ul>
-<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> Listener alias, can be deleted by id</li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
+<li><p><code>@param</code> <code>sender</code>: <a href="_ext.html#object"><code>object</code></a> Event sender</p>
+</li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
+</li>
+<li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
+<li><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">var ctx = { a:100 }
@@ -341,60 +319,19 @@ screen.onChange.on(function(ev) {
 }, ctx, id)
 </code></pre>
 <ul>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-</ul>
-<h3 id="eventnoticer-once-listen-ctxorid-id-">
-			eventnoticer.once(listen,ctxOrId?,id?)
-			<span><a class="mark" href="#eventnoticer-once-listen-ctxorid-id-" id="eventnoticer-once-listen-ctxorid-id-">#</a></span>
-		</h3><p>Add a listener (function) and delete it immediately after listening only once</p>
-<ul>
-<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> Listener alias, can be deleted by id</li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-</ul>
-<h3 id="eventnoticer-on2-listen-ctxorid-id-">
-			eventnoticer.on2(listen,ctxOrId?,id?)
-			<span><a class="mark" href="#eventnoticer-on2-listen-ctxorid-id-" id="eventnoticer-on2-listen-ctxorid-id-">#</a></span>
-		</h3><p>Add an event listener (function),
-and &quot;on&quot; the same processor of the method to add the event trigger to receive two parameters</p>
-<ul>
-<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> Listener alias, can be deleted by id</li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
-</ul>
-<p>Example:</p>
-<pre><code class="undefinedjs">var ctx = { a:100 }
-var id = display_port.onChange.on2(function(ctx, ev) {
-    // Prints: 100
-    console.log(ctx.a)
-}, ctx)
-</code></pre>
-<ul>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-</ul>
-<h3 id="eventnoticer-once2-listen-ctxorid-id-">
-			eventnoticer.once2(listen,ctxOrId?,id?)
-			<span><a class="mark" href="#eventnoticer-once2-listen-ctxorid-id-" id="eventnoticer-once2-listen-ctxorid-id-">#</a></span>
-		</h3><p>Add an event listener (function), And to listen only once and immediately remove
-and &quot;on&quot; the same processor of the method to add the event trigger to receive two parameters</p>
-<ul>
-<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
+<li><code>@param</code> <code>listen</code>:  Listening Function</li>
+<li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
+<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p>
+</li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
+</li>
+<li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
+<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p>
+</li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
+</li>
+<li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
 <li><code>@param</code> <code>id</code>:  Listener alias, can be deleted by id</li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="eventnoticer-trigger-data-">
-			eventnoticer.trigger(data)
-			<span><a class="mark" href="#eventnoticer-trigger-data-" id="eventnoticer-trigger-data-">#</a></span>
-		</h3><p>Notify all observers</p>
-<ul>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@param</code> <code>data</code>: <code>T</code> </li>
 </ul>
 <h3 id="eventnoticer-triggerwithevent-event-">
 			eventnoticer.triggerWithEvent(event)
@@ -446,54 +383,6 @@ and &quot;on&quot; the same processor of the method to add the event trigger to 
 <li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
 </ul>
-<h3 id="notification-addeventlistener-name-listen-ctxorid-id-">
-			notification.addEventListener(name,listen,ctxOrId?,id?)
-			<span><a class="mark" href="#notification-addeventlistener-name-listen-ctxorid-id-" id="notification-addeventlistener-name-listen-ctxorid-id-">#</a></span>
-		</h3><p>call: <a href="#eventnoticer-on-listen-ctxorid-id-"><code>EventNoticer.on(listen,ctxOrId?,id?)</code></a></p>
-<ul>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="notification-addeventlisteneronce-name-listen-ctxorid-id-">
-			notification.addEventListenerOnce(name,listen,ctxOrId?,id?)
-			<span><a class="mark" href="#notification-addeventlisteneronce-name-listen-ctxorid-id-" id="notification-addeventlisteneronce-name-listen-ctxorid-id-">#</a></span>
-		</h3><p>call: <a href="#eventnoticer-once-listen-ctxorid-id-"><code>EventNoticer.once(listen,ctxOrId?,id?)</code></a></p>
-<ul>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="notification-addeventlistener2-name-listen-ctxorid-id-">
-			notification.addEventListener2(name,listen,ctxOrId?,id?)
-			<span><a class="mark" href="#notification-addeventlistener2-name-listen-ctxorid-id-" id="notification-addeventlistener2-name-listen-ctxorid-id-">#</a></span>
-		</h3><p>call: <a href="#eventnoticer-on2-listen-ctxorid-id-"><code>EventNoticer.on2(listen,ctxOrId?,id?)</code></a></p>
-<ul>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="notification-addeventlisteneronce2-name-listen-ctxorid-id-">
-			notification.addEventListenerOnce2(name,listen,ctxOrId?,id?)
-			<span><a class="mark" href="#notification-addeventlisteneronce2-name-listen-ctxorid-id-" id="notification-addeventlisteneronce2-name-listen-ctxorid-id-">#</a></span>
-		</h3><p>call: <a href="#eventnoticer-once2-listen-ctxorid-id-"><code>EventNoticer.once2(listen,ctxOrId?,id?)</code></a></p>
-<ul>
-<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
-<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
-<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
-</ul>
 <h3 id="notification-addeventforward-name-noticer-id-">
 			notification.addEventForward(name,noticer,id?)
 			<span><a class="mark" href="#notification-addeventforward-name-noticer-id-" id="notification-addeventforward-name-noticer-id-">#</a></span>
@@ -514,7 +403,7 @@ and &quot;on&quot; the same processor of the method to add the event trigger to 
 <h3 id="notification-trigger-name-data-">
 			notification.trigger(name,data?)
 			<span><a class="mark" href="#notification-trigger-name-data-" id="notification-trigger-name-data-">#</a></span>
-		</h3><p>Trigger an event by event name --&gt; <a href="#eventnoticer-trigger-data-"><code>EventNoticer.trigger(data)</code></a></p>
+		</h3><p>Trigger an event by event name --&gt; [<code>EventNoticer.trigger(data)</code>]</p>
 <ul>
 <li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>data?</code>: <code>any</code> </li>

@@ -110,7 +110,17 @@
 <ul>
 <li>
 <span><a href="#args">Args</a></span>
+<ul>
+<li>
+<span><a href="#args-window">args.window</a></span>
 </li>
+<li>
+<span><a href="#args-owner">args.owner</a></span>
+</li>
+<li>
+<span><a href="#args-children">args.children</a></span>
+</li>
+</ul>
 <li>
 <span><a href="#assertdom-subclass-baseclass-args-">assertDom(subclass,baseclass,...args)</a></span>
 </li>
@@ -134,6 +144,39 @@
 <span><a href="#viewcontroller">ViewController</a></span>
 </li>
 <li>
+<span><a href="#viewcontroller-window">viewcontroller.window</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-owner">viewcontroller.owner</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-children">viewcontroller.children</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-props">viewcontroller.props</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-state">viewcontroller.state</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-refs">viewcontroller.refs</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-ref">viewcontroller.ref</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-dom">viewcontroller.dom</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-isloaded">viewcontroller.isLoaded</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-ismounted">viewcontroller.isMounted</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-isdestroyd">viewcontroller.isDestroyd</a></span>
+</li>
+<li>
 <span><a href="#viewcontroller-metaview">viewcontroller.metaView</a></span>
 </li>
 <li>
@@ -144,12 +187,6 @@
 </li>
 <li>
 <span><a href="#viewcontroller-update-cb-">viewcontroller.update(cb?)</a></span>
-</li>
-<li>
-<span><a href="#viewcontroller-asdom-">viewcontroller.asDom()</a></span>
-</li>
-<li>
-<span><a href="#viewcontroller-asref-ref-">viewcontroller.asRef(ref)</a></span>
 </li>
 <li>
 <span><a href="#viewcontroller-triggerload-">viewcontroller.triggerLoad()</a></span>
@@ -198,6 +235,24 @@
 <ul>
 <li><code>@type</code> <code>Args</code> = </li>
 </ul>
+<h3 id="args-window">
+			args.window
+			<span><a class="mark" href="#args-window" id="args-window">#</a></span>
+		</h3><ul>
+<li><code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+</ul>
+<h3 id="args-owner">
+			args.owner
+			<span><a class="mark" href="#args-owner" id="args-owner">#</a></span>
+		</h3><ul>
+<li><code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
+</ul>
+<h3 id="args-children">
+			args.children
+			<span><a class="mark" href="#args-children" id="args-children">#</a></span>
+		</h3><ul>
+<li><code>children</code>:  </li>
+</ul>
 <h2 id="assertdom-subclass-baseclass-args-">
 			assertDom(subclass,baseclass,...args)
 			<span><a class="mark" href="#assertdom-subclass-baseclass-args-" id="assertdom-subclass-baseclass-args-">#</a></span>
@@ -244,6 +299,83 @@
 <li><code>@template</code> &lt;<code>P</code>,<code>S</code>&gt;</li>
 <li><code>@implements</code> <a href="view.html#dom"><code>DOM</code></a></li>
 </ul>
+<h3 id="viewcontroller-window">
+			viewcontroller.window
+			<span><a class="mark" href="#viewcontroller-window" id="viewcontroller-window">#</a></span>
+		</h3><p><a href="window.html#window"><code>Window</code></a> object ref </p>
+<ul>
+<li><code>@get</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+</ul>
+<h3 id="viewcontroller-owner">
+			viewcontroller.owner
+			<span><a class="mark" href="#viewcontroller-owner" id="viewcontroller-owner">#</a></span>
+		</h3><p>Parent controller which the current controller belongs </p>
+<ul>
+<li><code>@get</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
+</ul>
+<h3 id="viewcontroller-children">
+			viewcontroller.children
+			<span><a class="mark" href="#viewcontroller-children" id="viewcontroller-children">#</a></span>
+		</h3><p>Outer children vdom </p>
+<ul>
+<li><code>@get</code> <code>children</code>:  </li>
+</ul>
+<h3 id="viewcontroller-props">
+			viewcontroller.props
+			<span><a class="mark" href="#viewcontroller-props" id="viewcontroller-props">#</a></span>
+		</h3><p>the ViewController external incoming attributes </p>
+<ul>
+<li><code>@get</code> <code>props</code>: <code>Readonly</code>&lt;<code>P</code>&gt; </li>
+</ul>
+<h3 id="viewcontroller-state">
+			viewcontroller.state
+			<span><a class="mark" href="#viewcontroller-state" id="viewcontroller-state">#</a></span>
+		</h3><p>View Controller States </p>
+<ul>
+<li><code>@get</code> <code>state</code>: <code>Readonly</code>&lt;<code>S</code>&gt; </li>
+</ul>
+<h3 id="viewcontroller-refs">
+			viewcontroller.refs
+			<span><a class="mark" href="#viewcontroller-refs" id="viewcontroller-refs">#</a></span>
+		</h3><p>Subordinate objects referenced by the <code>ref</code> name </p>
+<ul>
+<li><code>@get</code> <code>refs</code>: <code>Readonly</code>&lt;<code>Dict</code>&lt;<a href="#class-viewcontroller"><code>ViewController</code></a>|<a href="view.html#view"><code>View</code></a>&gt;&gt; </li>
+</ul>
+<h3 id="viewcontroller-ref">
+			viewcontroller.ref
+			<span><a class="mark" href="#viewcontroller-ref" id="viewcontroller-ref">#</a></span>
+		</h3><p>The Ref-Name in the <code>owner</code> controller </p>
+<ul>
+<li><code>@get</code> <code>ref</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="viewcontroller-dom">
+			viewcontroller.dom
+			<span><a class="mark" href="#viewcontroller-dom" id="viewcontroller-dom">#</a></span>
+		</h3><p>The rendered DOM object under the current ViewController </p>
+<ul>
+<li><code>@get</code> <code>dom</code>: <a href="view.html#dom"><code>DOM</code></a> </li>
+</ul>
+<h3 id="viewcontroller-isloaded">
+			viewcontroller.isLoaded
+			<span><a class="mark" href="#viewcontroller-isloaded" id="viewcontroller-isloaded">#</a></span>
+		</h3><p>After triggering Load, it will be set to <code>true</code> </p>
+<ul>
+<li><code>@get</code> <code>isLoaded</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="viewcontroller-ismounted">
+			viewcontroller.isMounted
+			<span><a class="mark" href="#viewcontroller-ismounted" id="viewcontroller-ismounted">#</a></span>
+		</h3><p>It will be set to <code>true</code> before triggering Mounted </p>
+<ul>
+<li><code>@get</code> <code>isMounted</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="viewcontroller-isdestroyd">
+			viewcontroller.isDestroyd
+			<span><a class="mark" href="#viewcontroller-isdestroyd" id="viewcontroller-isdestroyd">#</a></span>
+		</h3><p>It will be set to <code>true</code> before triggering Destroy </p>
+<ul>
+<li><code>@get</code> <code>isDestroyd</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
 <h3 id="viewcontroller-metaview">
 			viewcontroller.metaView
 			<span><a class="mark" href="#viewcontroller-metaview" id="viewcontroller-metaview">#</a></span>
@@ -272,23 +404,6 @@
 		</h3><p>Force re-rendering of the ViewController</p>
 <ul>
 <li><code>@param</code> <code>cb?</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
-</ul>
-<h3 id="viewcontroller-asdom-">
-			viewcontroller.asDom()
-			<span><a class="mark" href="#viewcontroller-asdom-" id="viewcontroller-asdom-">#</a></span>
-		</h3><p>Template method, returns the current <code>dom</code> and returns it as template <code>T</code> type</p>
-<ul>
-<li><code>@return</code> <a href="view.html#dom"><code>DOM</code></a>  </li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
-<h3 id="viewcontroller-asref-ref-">
-			viewcontroller.asRef(ref)
-			<span><a class="mark" href="#viewcontroller-asref-ref-" id="viewcontroller-asref-ref-">#</a></span>
-		</h3><p>Template method, finds the subordinate <code>DOM</code> by ref name and returns it as template <code>T</code> type</p>
-<ul>
-<li><code>@return</code> <a href="view.html#dom"><code>DOM</code></a>  </li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@param</code> <code>ref</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="viewcontroller-triggerload-">
 			viewcontroller.triggerLoad()

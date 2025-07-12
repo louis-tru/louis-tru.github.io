@@ -135,6 +135,63 @@
 <li>
 <span><a href="#stream">Stream</a></span>
 </li>
+<li>
+<span><a href="#stream-type">stream.type</a></span>
+</li>
+<li>
+<span><a href="#stream-mime">stream.mime</a></span>
+</li>
+<li>
+<span><a href="#stream-language">stream.language</a></span>
+</li>
+<li>
+<span><a href="#stream-codecid">stream.codecId</a></span>
+</li>
+<li>
+<span><a href="#stream-codectag">stream.codecTag</a></span>
+</li>
+<li>
+<span><a href="#stream-format">stream.format</a></span>
+</li>
+<li>
+<span><a href="#stream-profile">stream.profile</a></span>
+</li>
+<li>
+<span><a href="#stream-level">stream.level</a></span>
+</li>
+<li>
+<span><a href="#stream-width">stream.width</a></span>
+</li>
+<li>
+<span><a href="#stream-height">stream.height</a></span>
+</li>
+<li>
+<span><a href="#stream-bitrate">stream.bitrate</a></span>
+</li>
+<li>
+<span><a href="#stream-samplerate">stream.sampleRate</a></span>
+</li>
+<li>
+<span><a href="#stream-channels">stream.channels</a></span>
+</li>
+<li>
+<span><a href="#stream-channellayout">stream.channelLayout</a></span>
+</li>
+<li>
+<span><a href="#stream-duration">stream.duration</a></span>
+</li>
+<li>
+<span><a href="#stream-avgframerate">stream.avgFramerate</a></span>
+</li>
+<li>
+<span><a href="#stream-timebase">stream.timeBase</a></span>
+</li>
+<li>
+<span><a href="#stream-index">stream.index</a></span>
+</li>
+<li>
+<span><a href="#stream-hashcode">stream.hashCode</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#interface-player">Interface: Player</a></span>
@@ -143,7 +200,37 @@
 <span><a href="#player">Player</a></span>
 </li>
 <li>
+<span><a href="#player-pts">player.pts</a></span>
+</li>
+<li>
+<span><a href="#player-volume">player.volume</a></span>
+</li>
+<li>
+<span><a href="#player-mute">player.mute</a></span>
+</li>
+<li>
+<span><a href="#player-ispause">player.isPause</a></span>
+</li>
+<li>
+<span><a href="#player-type">player.type</a></span>
+</li>
+<li>
+<span><a href="#player-duration">player.duration</a></span>
+</li>
+<li>
 <span><a href="#player-status">player.status</a></span>
+</li>
+<li>
+<span><a href="#player-src">player.src</a></span>
+</li>
+<li>
+<span><a href="#player-video">player.video</a></span>
+</li>
+<li>
+<span><a href="#player-audio">player.audio</a></span>
+</li>
+<li>
+<span><a href="#player-audiostreams">player.audioStreams</a></span>
 </li>
 <li>
 <span><a href="#player-play-">player.play()</a></span>
@@ -196,35 +283,252 @@
 		</h2><h3 id="mediatype">
 			MediaType
 			<span><a class="mark" href="#mediatype" id="mediatype">#</a></span>
-		</h3><h2 id="enum-mediasourcestatus">
+		</h3><ul>
+<li><code>kVideo</code><br>Video type </li>
+<li><code>kAudio</code><br>Audio type </li>
+</ul>
+<h2 id="enum-mediasourcestatus">
 			Enum: MediaSourceStatus
 			<span><a class="mark" href="#enum-mediasourcestatus" id="enum-mediasourcestatus">#</a></span>
 		</h2><h3 id="mediasourcestatus">
 			MediaSourceStatus
 			<span><a class="mark" href="#mediasourcestatus" id="mediasourcestatus">#</a></span>
-		</h3><h2 id="enum-audiochannellayoutmask">
+		</h3><ul>
+<li><code>kNormal</code><br>Normal status, Uninitialized </li>
+<li><code>kOpening</code><br>Opening status </li>
+<li><code>kPlaying</code><br>Playing status </li>
+<li><code>kPaused</code><br>Paused status </li>
+<li><code>kError</code><br>Error status </li>
+<li><code>kEOF</code><br>EOF, end status </li>
+</ul>
+<h2 id="enum-audiochannellayoutmask">
 			Enum: AudioChannelLayoutMask
 			<span><a class="mark" href="#enum-audiochannellayoutmask" id="enum-audiochannellayoutmask">#</a></span>
 		</h2><h3 id="audiochannellayoutmask">
 			AudioChannelLayoutMask
 			<span><a class="mark" href="#audiochannellayoutmask" id="audiochannellayoutmask">#</a></span>
-		</h3><h2 id="interface-stream">
+		</h3><ul>
+<li><code>kInvalid</code><br>none </li>
+<li><code>kFront_Left</code><br>front left </li>
+<li><code>kFront_Right</code><br>front right </li>
+<li><code>kFront_Center</code><br>front center </li>
+<li><code>kLow_Frequency</code><br>low frequency </li>
+<li><code>kBack_Left</code><br>back left </li>
+<li><code>kBack_Right</code><br>back right </li>
+<li><code>kFront_Left_Of_Center</code><br>front left of center </li>
+<li><code>kFront_Right_Of_Center</code><br>front right of center </li>
+<li><code>kBack_Center</code><br>back center </li>
+<li><code>kSide_Left</code><br>side left </li>
+<li><code>kSide_Right</code><br>side right </li>
+<li><code>kTop_Center</code><br>top center </li>
+<li><code>kTop_Front_Left</code><br>top front left </li>
+<li><code>kTop_Front_Center</code><br>top front center </li>
+<li><code>kTop_Front_Right</code><br>top front right </li>
+<li><code>kTop_Back_Left</code><br>top back left </li>
+<li><code>kTop_Back_Center</code><br>top back center </li>
+<li><code>kTop_Back_Right</code><br>top back right </li>
+</ul>
+<h2 id="interface-stream">
 			Interface: Stream
 			<span><a class="mark" href="#interface-stream" id="interface-stream">#</a></span>
 		</h2><h3 id="stream">
 			Stream
 			<span><a class="mark" href="#stream" id="stream">#</a></span>
-		</h3><h2 id="interface-player">
+		</h3><h3 id="stream-type">
+			stream.type
+			<span><a class="mark" href="#stream-type" id="stream-type">#</a></span>
+		</h3><ul>
+<li><code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> type</li>
+</ul>
+<h3 id="stream-mime">
+			stream.mime
+			<span><a class="mark" href="#stream-mime" id="stream-mime">#</a></span>
+		</h3><ul>
+<li><code>mime</code>: <a href="_ext.html#string"><code>string</code></a> mime type</li>
+</ul>
+<h3 id="stream-language">
+			stream.language
+			<span><a class="mark" href="#stream-language" id="stream-language">#</a></span>
+		</h3><ul>
+<li><code>language</code>: <a href="_ext.html#string"><code>string</code></a> language</li>
+</ul>
+<h3 id="stream-codecid">
+			stream.codecId
+			<span><a class="mark" href="#stream-codecid" id="stream-codecid">#</a></span>
+		</h3><ul>
+<li><code>codecId</code>: <a href="_ext.html#number"><code>number</code></a> codec id</li>
+</ul>
+<h3 id="stream-codectag">
+			stream.codecTag
+			<span><a class="mark" href="#stream-codectag" id="stream-codectag">#</a></span>
+		</h3><ul>
+<li><code>codecTag</code>: <a href="_ext.html#number"><code>number</code></a> codec tag</li>
+</ul>
+<h3 id="stream-format">
+			stream.format
+			<span><a class="mark" href="#stream-format" id="stream-format">#</a></span>
+		</h3><ul>
+<li><code>format</code>: <a href="_ext.html#number"><code>number</code></a> codec av format output</li>
+</ul>
+<h3 id="stream-profile">
+			stream.profile
+			<span><a class="mark" href="#stream-profile" id="stream-profile">#</a></span>
+		</h3><ul>
+<li><code>profile</code>: <a href="_ext.html#number"><code>number</code></a> profile</li>
+</ul>
+<h3 id="stream-level">
+			stream.level
+			<span><a class="mark" href="#stream-level" id="stream-level">#</a></span>
+		</h3><ul>
+<li><code>level</code>: <a href="_ext.html#number"><code>number</code></a> level</li>
+</ul>
+<h3 id="stream-width">
+			stream.width
+			<span><a class="mark" href="#stream-width" id="stream-width">#</a></span>
+		</h3><ul>
+<li><code>width</code>: <a href="_ext.html#number"><code>number</code></a> video width</li>
+</ul>
+<h3 id="stream-height">
+			stream.height
+			<span><a class="mark" href="#stream-height" id="stream-height">#</a></span>
+		</h3><ul>
+<li><code>height</code>: <a href="_ext.html#number"><code>number</code></a> video height</li>
+</ul>
+<h3 id="stream-bitrate">
+			stream.bitrate
+			<span><a class="mark" href="#stream-bitrate" id="stream-bitrate">#</a></span>
+		</h3><ul>
+<li><code>bitrate</code>: <a href="_ext.html#number"><code>number</code></a> bit rate</li>
+</ul>
+<h3 id="stream-samplerate">
+			stream.sampleRate
+			<span><a class="mark" href="#stream-samplerate" id="stream-samplerate">#</a></span>
+		</h3><ul>
+<li><code>sampleRate</code>: <a href="_ext.html#number"><code>number</code></a> audio sample rate</li>
+</ul>
+<h3 id="stream-channels">
+			stream.channels
+			<span><a class="mark" href="#stream-channels" id="stream-channels">#</a></span>
+		</h3><ul>
+<li><code>channels</code>: <a href="_ext.html#number"><code>number</code></a> audio channel count</li>
+</ul>
+<h3 id="stream-channellayout">
+			stream.channelLayout
+			<span><a class="mark" href="#stream-channellayout" id="stream-channellayout">#</a></span>
+		</h3><ul>
+<li><code>channelLayout</code>: <a href="_ext.html#number"><code>number</code></a> audio channel layout to enum AudioChannelLayoutMask</li>
+</ul>
+<h3 id="stream-duration">
+			stream.duration
+			<span><a class="mark" href="#stream-duration" id="stream-duration">#</a></span>
+		</h3><ul>
+<li><code>duration</code>: <a href="_ext.html#number"><code>number</code></a> duration of the stream, in stream time base.</li>
+</ul>
+<h3 id="stream-avgframerate">
+			stream.avgFramerate
+			<span><a class="mark" href="#stream-avgframerate" id="stream-avgframerate">#</a></span>
+		</h3><ul>
+<li><code>avgFramerate</code>: <a href="_ext.html#number"><code>number</code></a><code>[]</code> video frame average framerate</li>
+</ul>
+<h3 id="stream-timebase">
+			stream.timeBase
+			<span><a class="mark" href="#stream-timebase" id="stream-timebase">#</a></span>
+		</h3><ul>
+<li><code>timeBase</code>: <a href="_ext.html#number"><code>number</code></a><code>[]</code> Unit of pts,dts on Packet,Frame by Numerator/Denominator (seconds)</li>
+</ul>
+<h3 id="stream-index">
+			stream.index
+			<span><a class="mark" href="#stream-index" id="stream-index">#</a></span>
+		</h3><ul>
+<li><code>index</code>: <a href="_ext.html#number"><code>number</code></a> stream index in source</li>
+</ul>
+<h3 id="stream-hashcode">
+			stream.hashCode
+			<span><a class="mark" href="#stream-hashcode" id="stream-hashcode">#</a></span>
+		</h3><ul>
+<li><code>hashCode</code>: <a href="_ext.html#number"><code>number</code></a> key params hash code</li>
+</ul>
+<h2 id="interface-player">
 			Interface: Player
 			<span><a class="mark" href="#interface-player" id="interface-player">#</a></span>
 		</h2><h3 id="player">
 			Player
 			<span><a class="mark" href="#player" id="player">#</a></span>
-		</h3><h3 id="player-status">
+		</h3><h3 id="player-pts">
+			player.pts
+			<span><a class="mark" href="#player-pts" id="player-pts">#</a></span>
+		</h3><p>Current the presentation timestamp</p>
+<ul>
+<li><code>@get</code> <code>pts</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="player-volume">
+			player.volume
+			<span><a class="mark" href="#player-volume" id="player-volume">#</a></span>
+		</h3><p>Get/Set audio volume</p>
+<ul>
+<li><code>volume</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="player-mute">
+			player.mute
+			<span><a class="mark" href="#player-mute" id="player-mute">#</a></span>
+		</h3><p>Get/Set audio mute</p>
+<ul>
+<li><code>mute</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="player-ispause">
+			player.isPause
+			<span><a class="mark" href="#player-ispause" id="player-ispause">#</a></span>
+		</h3><p>Get is paused</p>
+<ul>
+<li><code>@get</code> <code>isPause</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="player-type">
+			player.type
+			<span><a class="mark" href="#player-type" id="player-type">#</a></span>
+		</h3><p>Get media type</p>
+<ul>
+<li><code>@get</code> <code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> </li>
+</ul>
+<h3 id="player-duration">
+			player.duration
+			<span><a class="mark" href="#player-duration" id="player-duration">#</a></span>
+		</h3><p>Media play duration</p>
+<ul>
+<li><code>@get</code> <code>duration</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="player-status">
 			player.status
 			<span><a class="mark" href="#player-status" id="player-status">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>status</code>: <a href="#enum-mediasourcestatus"><code>MediaSourceStatus</code></a> The playback status of the current media source</li>
+</ul>
+<h3 id="player-src">
+			player.src
+			<span><a class="mark" href="#player-src" id="player-src">#</a></span>
+		</h3><p>set/get media source path</p>
+<ul>
+<li><code>src</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="player-video">
+			player.video
+			<span><a class="mark" href="#player-video" id="player-video">#</a></span>
+		</h3><p>The currently playing video stream</p>
+<ul>
+<li><code>@get</code> <code>video</code>: <a href="#interface-stream"><code>Stream</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="player-audio">
+			player.audio
+			<span><a class="mark" href="#player-audio" id="player-audio">#</a></span>
+		</h3><p>The currently playing audio stream</p>
+<ul>
+<li><code>@get</code> <code>audio</code>: <a href="#interface-stream"><code>Stream</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="player-audiostreams">
+			player.audioStreams
+			<span><a class="mark" href="#player-audiostreams" id="player-audiostreams">#</a></span>
+		</h3><p>Get the number of audio tracks in the current media source</p>
+<ul>
+<li><code>@get</code> <code>audioStreams</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="player-play-">
 			player.play()
@@ -277,25 +581,25 @@
 			audioplayer.onLoad
 			<span><a class="mark" href="#audioplayer-onload" id="audioplayer-onload">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onLoad</code>:  </li>
+<li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="audioplayer-onstop">
 			audioplayer.onStop
 			<span><a class="mark" href="#audioplayer-onstop" id="audioplayer-onstop">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onStop</code>:  </li>
+<li><code>@event</code> <code>onStop</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="audioplayer-onerror">
 			audioplayer.onError
 			<span><a class="mark" href="#audioplayer-onerror" id="audioplayer-onerror">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onError</code>:  </li>
+<li><code>@event</code> <code>onError</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="_ext.html#error"><code>Error</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="audioplayer-onbuffering">
 			audioplayer.onBuffering
 			<span><a class="mark" href="#audioplayer-onbuffering" id="audioplayer-onbuffering">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onBuffering</code>:  </li>
+<li><code>@event</code> <code>onBuffering</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="_ext.html#number"><code>number</code></a>&gt;&gt; </li>
 </ul>
 
 			</div>
