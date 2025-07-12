@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'window.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-window">quark/window</a></span>
+<ul>
+<li>
+<span><a href="#interface-options">Interface: Options</a></span>
+<ul>
+<li>
+<span><a href="#options">Options</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-nativewindow">Class: NativeWindow</a></span>
+<ul>
+<li>
+<span><a href="#nativewindow">NativeWindow</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-nextframe-cb-">nativewindow.nextFrame(cb)</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-activate-">nativewindow.activate()</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-close-">nativewindow.close()</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-pending-">nativewindow.pending()</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-setfullscreen-fullscreen-">nativewindow.setFullscreen(fullscreen)</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-setcursorstyle-style-">nativewindow.setCursorStyle(style)</a></span>
+</li>
+<li>
+<span><a href="#nativewindow-constructor-opts-">nativewindow.constructor(opts?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-window">Class: Window</a></span>
+<ul>
+<li>
+<span><a href="#window">Window</a></span>
+</li>
+<li>
+<span><a href="#window-render-vdom-">window.render(vdom)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-window">
+			quark/window
+			<span><a class="mark" href="#quark-window" id="quark-window">#</a></span>
+		</h1><h2 id="interface-options">
+			Interface: Options
+			<span><a class="mark" href="#interface-options" id="interface-options">#</a></span>
+		</h2><h3 id="options">
+			Options
+			<span><a class="mark" href="#options" id="options">#</a></span>
+		</h3><h2 id="class-nativewindow">
+			Class: NativeWindow
+			<span><a class="mark" href="#class-nativewindow" id="class-nativewindow">#</a></span>
+		</h2><h3 id="nativewindow">
+			NativeWindow
+			<span><a class="mark" href="#nativewindow" id="nativewindow">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a></li>
+</ul>
+<h3 id="nativewindow-nextframe-cb-">
+			nativewindow.nextFrame(cb)
+			<span><a class="mark" href="#nativewindow-nextframe-cb-" id="nativewindow-nextframe-cb-">#</a></span>
+		</h3><p>When rendering next frame call</p>
+<ul>
+<li><code>@param</code> <code>cb</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+</ul>
+<h3 id="nativewindow-activate-">
+			nativewindow.activate()
+			<span><a class="mark" href="#nativewindow-activate-" id="nativewindow-activate-">#</a></span>
+		</h3><p>Activate the display window or taking the window to the foreground</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+</ul>
+<h3 id="nativewindow-close-">
+			nativewindow.close()
+			<span><a class="mark" href="#nativewindow-close-" id="nativewindow-close-">#</a></span>
+		</h3><p>To close or destroy the window</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="nativewindow-pending-">
+			nativewindow.pending()
+			<span><a class="mark" href="#nativewindow-pending-" id="nativewindow-pending-">#</a></span>
+		</h3><p>Taking window to background and pending</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="nativewindow-setfullscreen-fullscreen-">
+			nativewindow.setFullscreen(fullscreen)
+			<span><a class="mark" href="#nativewindow-setfullscreen-fullscreen-" id="nativewindow-setfullscreen-fullscreen-">#</a></span>
+		</h3><p>Setting whether the window is displayed in full screen mode</p>
+<ul>
+<li><code>@param</code> <code>fullscreen</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="nativewindow-setcursorstyle-style-">
+			nativewindow.setCursorStyle(style)
+			<span><a class="mark" href="#nativewindow-setcursorstyle-style-" id="nativewindow-setcursorstyle-style-">#</a></span>
+		</h3><p>Setting the mouse cursor style</p>
+<ul>
+<li><code>@param</code> <code>style</code>: <a href="types.html#cursorstyle"><code>types.CursorStyle</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="nativewindow-constructor-opts-">
+			nativewindow.constructor(opts?)
+			<span><a class="mark" href="#nativewindow-constructor-opts-" id="nativewindow-constructor-opts-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>opts?</code>: <a href="#interface-options"><code>Options</code></a> </li>
+</ul>
+<h2 id="class-window">
+			Class: Window
+			<span><a class="mark" href="#class-window" id="class-window">#</a></span>
+		</h2><h3 id="window">
+			Window
+			<span><a class="mark" href="#window" id="window">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-nativewindow"><code>NativeWindow</code></a></li>
+</ul>
+<h3 id="window-render-vdom-">
+			window.render(vdom)
+			<span><a class="mark" href="#window-render-vdom-" id="window-render-vdom-">#</a></span>
+		</h3><p>Create a view or view controller <code>DOM</code> by <code>vdom</code></p>
+<ul>
+<li><code>@return</code> <code>DOM</code>  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedtsx">import {Application,Window,ViewController} from &#39;quark&#39;
+import * as http from &#39;quark/http&#39;
+import * as buffer from &#39;quark/buffer&#39;
+class MyCtr extends ViewController&lt;{param: number}, {data?: Uint8Array}&gt; {
+    triggerLoad() {
+        return http
+            .get(&#39;[`http://192.168.1.100:1026/README.md?param=&#39;`](http://192.168.1.100:1026/README.md?param=&#39;) + this.props.param)
+            .then(e=&gt;this.setState({data:e.data}));
+    }
+    render() {
+        return (
+            &lt;box width={100} height={100} backgroundColor=&quot;#f00&quot;&gt;
+                {this.state.data&amp;&amp;buffer.toString(this.state.data)}
+            &lt;/box&gt;
+        )
+    }
+}
+new Application();
+new Window().activate().render(
+    &lt;MyCtr param={10} /&gt;
+);
+</code></pre>
+<ul>
+<li><code>@param</code> <code>vdom</code>: <a href="ctr.html#virtualdom"><code>VirtualDOM</code></a> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

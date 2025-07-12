@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'dialog.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-dialog">quark/dialog</a></span>
+<ul>
+<li>
+<span><a href="#consts">Consts</a></span>
+</li>
+<li>
+<span><a href="#class-dialog">Class: Dialog</a></span>
+<ul>
+<li>
+<span><a href="#dialog">Dialog</a></span>
+</li>
+<li>
+<span><a href="#dialog-length">dialog.length</a></span>
+</li>
+<li>
+<span><a href="#dialog-buttons">dialog.buttons</a></span>
+</li>
+<li>
+<span><a href="#dialog-show-">dialog.show()</a></span>
+</li>
+<li>
+<span><a href="#dialog-close-">dialog.close()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-sheet">Class: Sheet</a></span>
+<ul>
+<li>
+<span><a href="#sheet">Sheet</a></span>
+</li>
+<li>
+<span><a href="#sheet-alert-window-msg-cb-">sheet.alert(window,msg,cb?)</a></span>
+</li>
+<li>
+<span><a href="#sheet-confirm-window-msg-cb-">sheet.confirm(window,msg,cb?)</a></span>
+</li>
+<li>
+<span><a href="#sheet-prompt-window-msg-cb-">sheet.prompt(window,msg,cb?)</a></span>
+</li>
+<li>
+<span><a href="#sheet-show-window-title-msg-buttons-cb-">sheet.show(window,title,msg,buttons?,cb?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#sheet-window-content-">sheet(window,content)</a></span>
+</li>
+<li>
+<span><a href="#sheetconfirm-window-buttons-cb-">sheetConfirm(window,buttons?,cb?)</a></span>
+</li>
+<li>
+<span><a href="#class-dialogcontroller">Class: DialogController</a></span>
+<ul>
+<li>
+<span><a href="#dialogcontroller">DialogController</a></span>
+</li>
+<li>
+<span><a href="#dialogcontroller-alertdialog-msg-cb-">dialogcontroller.alertDialog(msg,cb?)</a></span>
+</li>
+<li>
+<span><a href="#dialogcontroller-promptdialog-msg-cb-">dialogcontroller.promptDialog(msg,cb?)</a></span>
+</li>
+<li>
+<span><a href="#dialogcontroller-confirmdialog-msg-cb-">dialogcontroller.confirmDialog(msg,cb?)</a></span>
+</li>
+<li>
+<span><a href="#dialogcontroller-showdialog-title-msg-buttons-cb-">dialogcontroller.showDialog(title,msg,buttons?,cb?)</a></span>
+</li>
+<li>
+<span><a href="#dialogcontroller-sheetdialog-content-">dialogcontroller.sheetDialog(content)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-dialog">
+			quark/dialog
+			<span><a class="mark" href="#quark-dialog" id="quark-dialog">#</a></span>
+		</h1><h2 id="consts">
+			Consts
+			<span><a class="mark" href="#consts" id="consts">#</a></span>
+		</h2><ul>
+<li><code>@const</code> <code>Consts</code>:  {
+}</li>
+</ul>
+<h2 id="class-dialog">
+			Class: Dialog
+			<span><a class="mark" href="#class-dialog" id="class-dialog">#</a></span>
+		</h2><h3 id="dialog">
+			Dialog
+			<span><a class="mark" href="#dialog" id="dialog">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="nav.html#navigation"><code>Navigation</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="dialog-length">
+			dialog.length
+			<span><a class="mark" href="#dialog-length" id="dialog-length">#</a></span>
+		</h3><p>buttons length</p>
+<ul>
+<li><code>@get</code> <code>length</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="dialog-buttons">
+			dialog.buttons
+			<span><a class="mark" href="#dialog-buttons" id="dialog-buttons">#</a></span>
+		</h3><ul>
+<li><code>buttons</code>: <a href="ctr.html#renderdata"><code>RenderData</code></a><code>[]</code> </li>
+</ul>
+<h3 id="dialog-show-">
+			dialog.show()
+			<span><a class="mark" href="#dialog-show-" id="dialog-show-">#</a></span>
+		</h3><h3 id="dialog-close-">
+			dialog.close()
+			<span><a class="mark" href="#dialog-close-" id="dialog-close-">#</a></span>
+		</h3><h2 id="class-sheet">
+			Class: Sheet
+			<span><a class="mark" href="#class-sheet" id="class-sheet">#</a></span>
+		</h2><h3 id="sheet">
+			Sheet
+			<span><a class="mark" href="#sheet" id="sheet">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-dialog"><code>Dialog</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="sheet-alert-window-msg-cb-">
+			sheet.alert(window,msg,cb?)
+			<span><a class="mark" href="#sheet-alert-window-msg-cb-" id="sheet-alert-window-msg-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@param</code> <code>cb?</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a>  </li>
+</ul>
+<h3 id="sheet-confirm-window-msg-cb-">
+			sheet.confirm(window,msg,cb?)
+			<span><a class="mark" href="#sheet-confirm-window-msg-cb-" id="sheet-confirm-window-msg-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>ms</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>cb</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a>  </li>
+<li><code>@param</code> <code>msg</code>:  </li>
+<li><code>@param</code> <code>cb?</code>:  </li>
+</ul>
+<h3 id="sheet-prompt-window-msg-cb-">
+			sheet.prompt(window,msg,cb?)
+			<span><a class="mark" href="#sheet-prompt-window-msg-cb-" id="sheet-prompt-window-msg-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@param</code> <code>cb?</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a>  </li>
+</ul>
+<h3 id="sheet-show-window-title-msg-buttons-cb-">
+			sheet.show(window,title,msg,buttons?,cb?)
+			<span><a class="mark" href="#sheet-show-window-title-msg-buttons-cb-" id="sheet-show-window-title-msg-buttons-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>title</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>buttons?</code>: <a href="ctr.html#renderdata"><code>RenderData</code></a><code>[]</code> </li>
+<li><code>@param</code> <code>cb?</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a>  </li>
+</ul>
+<h2 id="sheet-window-content-">
+			sheet(window,content)
+			<span><a class="mark" href="#sheet-window-content-" id="sheet-window-content-">#</a></span>
+		</h2><ul>
+<li><code>@return</code> <a href="#class-sheet"><code>Sheet</code></a>  </li>
+<li><code>@param</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="sheetconfirm-window-buttons-cb-">
+			sheetConfirm(window,buttons?,cb?)
+			<span><a class="mark" href="#sheetconfirm-window-buttons-cb-" id="sheetconfirm-window-buttons-cb-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>buttons?</code>: <a href="ctr.html#renderdata"><code>RenderData</code></a><code>[]</code> </li>
+<li><code>@param</code> <code>cb?</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="#class-sheet"><code>Sheet</code></a>  </li>
+</ul>
+<h2 id="class-dialogcontroller">
+			Class: DialogController
+			<span><a class="mark" href="#class-dialogcontroller" id="class-dialogcontroller">#</a></span>
+		</h2><h3 id="dialogcontroller">
+			DialogController
+			<span><a class="mark" href="#dialogcontroller" id="dialogcontroller">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="ctr.html#viewcontroller"><code>ViewController</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="dialogcontroller-alertdialog-msg-cb-">
+			dialogcontroller.alertDialog(msg,cb?)
+			<span><a class="mark" href="#dialogcontroller-alertdialog-msg-cb-" id="dialogcontroller-alertdialog-msg-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>cb?</code>:  </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a> </li>
+</ul>
+<h3 id="dialogcontroller-promptdialog-msg-cb-">
+			dialogcontroller.promptDialog(msg,cb?)
+			<span><a class="mark" href="#dialogcontroller-promptdialog-msg-cb-" id="dialogcontroller-promptdialog-msg-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@param</code> <code>cb?</code>:  </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a> </li>
+</ul>
+<h3 id="dialogcontroller-confirmdialog-msg-cb-">
+			dialogcontroller.confirmDialog(msg,cb?)
+			<span><a class="mark" href="#dialogcontroller-confirmdialog-msg-cb-" id="dialogcontroller-confirmdialog-msg-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>cb?</code>:  </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a> </li>
+</ul>
+<h3 id="dialogcontroller-showdialog-title-msg-buttons-cb-">
+			dialogcontroller.showDialog(title,msg,buttons?,cb?)
+			<span><a class="mark" href="#dialogcontroller-showdialog-title-msg-buttons-cb-" id="dialogcontroller-showdialog-title-msg-buttons-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>title</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>buttons?</code>: <a href="ctr.html#renderdata"><code>RenderData</code></a><code>[]</code> </li>
+<li><code>@param</code> <code>cb?</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="#class-dialog"><code>Dialog</code></a> </li>
+</ul>
+<h3 id="dialogcontroller-sheetdialog-content-">
+			dialogcontroller.sheetDialog(content)
+			<span><a class="mark" href="#dialogcontroller-sheetdialog-content-" id="dialogcontroller-sheetdialog-content-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-sheet"><code>Sheet</code></a> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = '_common.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-_common">quark/_common</a></span>
+<ul>
+<li>
+<span><a href="#clone-obj-">clone(obj)</a></span>
+</li>
+<li>
+<span><a href="#extend-obj-extd-top-">extend(obj,extd,top?)</a></span>
+</li>
+<li>
+<span><a href="#noop-">noop()</a></span>
+</li>
+<li>
+<span><a href="#isnull-value-">isNull(value)</a></span>
+</li>
+<li>
+<span><a href="#extendclass-cls-extds-top-">extendClass(cls,extds,top?)</a></span>
+</li>
+<li>
+<span><a href="#scopelock-mutex-cb-">scopeLock(mutex,cb)</a></span>
+</li>
+<li>
+<span><a href="#getprop-name-self-">getProp(name,self)</a></span>
+</li>
+<li>
+<span><a href="#setprop-name-value-self-">setProp(name,value,self)</a></span>
+</li>
+<li>
+<span><a href="#removeprop-name-self-">removeProp(name,self)</a></span>
+</li>
+<li>
+<span><a href="#random-start-end-">random(start?,end?)</a></span>
+</li>
+<li>
+<span><a href="#fixrandom-arg0-args-">fixRandom(arg0,...args)</a></span>
+</li>
+<li>
+<span><a href="#filter-obj-exp-non-">filter(obj,exp,non?)</a></span>
+</li>
+<li>
+<span><a href="#update-obj-extd-">update(obj,extd)</a></span>
+</li>
+<li>
+<span><a href="#select-default-value-">select(default,value)</a></span>
+</li>
+<li>
+<span><a href="#equalsclass-baseclass-subclass-">equalsClass(baseclass,subclass)</a></span>
+</li>
+<li>
+<span><a href="#assert-condition-code-">assert(condition,code?)</a></span>
+</li>
+<li>
+<span><a href="#promise-executor-">promise(executor)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-_common">
+			quark/_common
+			<span><a class="mark" href="#quark-_common" id="quark-_common">#</a></span>
+		</h1><h2 id="clone-obj-">
+			clone(obj)
+			<span><a class="mark" href="#clone-obj-" id="clone-obj-">#</a></span>
+		</h2><p>Clone an Object</p>
+<ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> The Object to be cloned</li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h2 id="extend-obj-extd-top-">
+			extend(obj,extd,top?)
+			<span><a class="mark" href="#extend-obj-extd-top-" id="extend-obj-extd-top-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> </li>
+<li><code>@param</code> <code>extd</code>: <code>any</code> </li>
+<li><code>@param</code> <code>top?</code>: <code>any</code> </li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h2 id="noop-">
+			noop()
+			<span><a class="mark" href="#noop-" id="noop-">#</a></span>
+		</h2><p>Empty function</p>
+<h2 id="isnull-value-">
+			isNull(value)
+			<span><a class="mark" href="#isnull-value-" id="isnull-value-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>value</code>: <code>any</code> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="extendclass-cls-extds-top-">
+			extendClass(cls,extds,top?)
+			<span><a class="mark" href="#extendclass-cls-extds-top-" id="extendclass-cls-extds-top-">#</a></span>
+		</h2><p>EXT class prototype objects</p>
+<ul>
+<li><code>@param</code> <code>cls</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>extds</code>: <a href="_ext.html#function"><code>Function</code></a><code>[]</code>|<a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>top?</code>: <code>any</code> </li>
+<li><code>@return</code> <a href="_ext.html#function"><code>Function</code></a> </li>
+</ul>
+<h2 id="scopelock-mutex-cb-">
+			scopeLock(mutex,cb)
+			<span><a class="mark" href="#scopelock-mutex-cb-" id="scopelock-mutex-cb-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>mutex</code>: <code>any</code> </li>
+<li><code>@param</code> <code>cb</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <code>Promise</code> </li>
+</ul>
+<h2 id="getprop-name-self-">
+			getProp(name,self)
+			<span><a class="mark" href="#getprop-name-self-" id="getprop-name-self-">#</a></span>
+		</h2><p>Get object value by name</p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>self</code>: <code>any</code> </li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h2 id="setprop-name-value-self-">
+			setProp(name,value,self)
+			<span><a class="mark" href="#setprop-name-value-self-" id="setprop-name-value-self-">#</a></span>
+		</h2><p>Setting object value by name</p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>value</code>: <code>any</code> </li>
+<li><code>@param</code> <code>self</code>: <code>any</code> </li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h2 id="removeprop-name-self-">
+			removeProp(name,self)
+			<span><a class="mark" href="#removeprop-name-self-" id="removeprop-name-self-">#</a></span>
+		</h2><p>Delete object value by name</p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>self</code>: <code>any</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="random-start-end-">
+			random(start?,end?)
+			<span><a class="mark" href="#random-start-end-" id="random-start-end-">#</a></span>
+		</h2><p>Creating random numbers</p>
+<ul>
+<li><code>@param</code> <code>start?</code>:  Numbers of begin</li>
+<li><code>@param</code> <code>end?</code>:  Numbers of end</li>
+</ul>
+<h2 id="fixrandom-arg0-args-">
+			fixRandom(arg0,...args)
+			<span><a class="mark" href="#fixrandom-arg0-args-" id="fixrandom-arg0-args-">#</a></span>
+		</h2><ul>
+<li><p>Fixed random value, specified probability to return a constant</p>
+</li>
+<li><p>Get a random number from <code>0</code> to the passed probability number <code>arguments.length</code> by probability</p>
+</li>
+<li><p>The sum of the passed probabilities cannot be <code>zero</code></p>
+</li>
+<li><p><code>@param</code> <code>arg0</code>: <a href="_ext.html#number"><code>number</code></a> Enter percentage</p>
+</li>
+<li><code>@param</code> <code>args</code>: <a href="_ext.html#number"><code>number</code></a><code>[]</code> Enter percentage</li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">// Prints: 3 5 9
+console.log(util.random(0, 10))
+console.log(util.random(0, 10))
+console.log(util.random(0, 10))
+// Prints 0 3 2
+console.log(util.fixRandom(10, 20, 30, 40))
+console.log(util.fixRandom(10, 20, 30, 40))
+console.log(util.fixRandom(10, 20, 30, 40))
+</code></pre>
+<ul>
+<li><code>@return</code> <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>arg</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="filter-obj-exp-non-">
+			filter(obj,exp,non?)
+			<span><a class="mark" href="#filter-obj-exp-non-" id="filter-obj-exp-non-">#</a></span>
+		</h2><p>Filter object attrs</p>
+<ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> </li>
+<li><code>@param</code> <code>exp</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code>|<a href="_ext.html#function"><code>Function</code></a> filter exp</li>
+<li><code>@param</code> <code>non?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> take non</li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h2 id="update-obj-extd-">
+			update(obj,extd)
+			<span><a class="mark" href="#update-obj-extd-" id="update-obj-extd-">#</a></span>
+		</h2><p>Update object property value</p>
+<ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> need to be updated for as</li>
+<li><code>@param</code> <code>extd</code>: <code>any</code> update object</li>
+<li><code>@return</code> <code>any</code> </li>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@return</code> <code>T</code> </li>
+</ul>
+<h2 id="select-default-value-">
+			select(default,value)
+			<span><a class="mark" href="#select-default-value-" id="select-default-value-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>default</code>: <code>any</code> </li>
+<li><code>@param</code> <code>value</code>: <code>any</code> </li>
+<li><code>@return</code> <code>any</code> </li>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@param</code> <code>default_</code>: <code>T</code> </li>
+<li><code>@return</code> <code>T</code> </li>
+</ul>
+<h2 id="equalsclass-baseclass-subclass-">
+			equalsClass(baseclass,subclass)
+			<span><a class="mark" href="#equalsclass-baseclass-subclass-" id="equalsclass-baseclass-subclass-">#</a></span>
+		</h2><p>Whether this type of sub-types</p>
+<ul>
+<li><code>@param</code> <code>baseclass</code>: <code>class</code> </li>
+<li><code>@param</code> <code>subclass</code>: <code>class</code> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="assert-condition-code-">
+			assert(condition,code?)
+			<span><a class="mark" href="#assert-condition-code-" id="assert-condition-code-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>condition</code>: <code>any</code> </li>
+<li><code>@param</code> <code>code?</code>: <a href="_ext.html#number"><code>number</code></a>|<code>ErrorNewArg</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="promise-executor-">
+			promise(executor)
+			<span><a class="mark" href="#promise-executor-" id="promise-executor-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>executor</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <code>Promise</code> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

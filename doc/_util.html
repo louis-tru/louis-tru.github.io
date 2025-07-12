@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = '_util.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-_util">quark/_util</a></span>
+<ul>
+<li>
+<span><a href="#normalizepath-path-retain_up-">normalizePath(path,retain_up?)</a></span>
+</li>
+<li>
+<span><a href="#formatpath-args-">formatPath(...args)</a></span>
+</li>
+<li>
+<span><a href="#isabsolute-path-">isAbsolute(path)</a></span>
+</li>
+<li>
+<span><a href="#islocal-path-">isLocal(path)</a></span>
+</li>
+<li>
+<span><a href="#islocalzip-path-">isLocalZip(path)</a></span>
+</li>
+<li>
+<span><a href="#ishttp-path-">isHttp(path)</a></span>
+</li>
+<li>
+<span><a href="#stripbom-content-">stripBOM(content)</a></span>
+</li>
+<li>
+<span><a href="#stripshebang-content-">stripShebang(content)</a></span>
+</li>
+<li>
+<span><a href="#assert-value-message-">assert(value,message?)</a></span>
+</li>
+<li>
+<span><a href="#class-hash5381">Class: Hash5381</a></span>
+<ul>
+<li>
+<span><a href="#hash5381">Hash5381</a></span>
+</li>
+<li>
+<span><a href="#hash5381-hashcode-">hash5381.hashCode()</a></span>
+</li>
+<li>
+<span><a href="#hash5381-update-data-">hash5381.update(data)</a></span>
+</li>
+<li>
+<span><a href="#hash5381-digest-">hash5381.digest()</a></span>
+</li>
+<li>
+<span><a href="#hash5381-clear-">hash5381.clear()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#default">default</a></span>
+<ul>
+<li>
+<span><a href="#default-debug">default.debug</a></span>
+</li>
+<li>
+<span><a href="#default-version-string">default.version()string</a></span>
+</li>
+<li>
+<span><a href="#default-platform">default.platform</a></span>
+</li>
+<li>
+<span><a href="#default-argv">default.argv</a></span>
+</li>
+<li>
+<span><a href="#default-options">default.options</a></span>
+</li>
+<li>
+<span><a href="#default-nexttick-cb-">default.nextTick(cb)</a></span>
+</li>
+<li>
+<span><a href="#default-sleep-time-">default.sleep(time)</a></span>
+</li>
+<li>
+<span><a href="#default-gc-">default.gc()</a></span>
+</li>
+<li>
+<span><a href="#default-runscript-source-name-sandbox-">default.runScript(source,name?,sandbox?)</a></span>
+</li>
+<li>
+<span><a href="#default-hashcode-obj-">default.hashCode(obj)</a></span>
+</li>
+<li>
+<span><a href="#default-hash-obj-">default.hash(obj)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-_util">
+			quark/_util
+			<span><a class="mark" href="#quark-_util" id="quark-_util">#</a></span>
+		</h1><h2 id="normalizepath-path-retain_up-">
+			normalizePath(path,retain_up?)
+			<span><a class="mark" href="#normalizepath-path-retain_up-" id="normalizepath-path-retain_up-">#</a></span>
+		</h2><p>format part</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>retain_up?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="formatpath-args-">
+			formatPath(...args)
+			<span><a class="mark" href="#formatpath-args-" id="formatpath-args-">#</a></span>
+		</h2><p>file:///home/louis/test.txt
+file:///d:/home/louis/test.txt
+<a href="http://google.com/test.txt"><code>http://google.com/test.txt</code></a>
+return format path</p>
+<ul>
+<li><code>@param</code> <code>args</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="isabsolute-path-">
+			isAbsolute(path)
+			<span><a class="mark" href="#isabsolute-path-" id="isabsolute-path-">#</a></span>
+		</h2><p>Is it an absolute path?</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="islocal-path-">
+			isLocal(path)
+			<span><a class="mark" href="#islocal-path-" id="islocal-path-">#</a></span>
+		</h2><p>Is it a local path?</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="islocalzip-path-">
+			isLocalZip(path)
+			<span><a class="mark" href="#islocalzip-path-" id="islocalzip-path-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="ishttp-path-">
+			isHttp(path)
+			<span><a class="mark" href="#ishttp-path-" id="ishttp-path-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="stripbom-content-">
+			stripBOM(content)
+			<span><a class="mark" href="#stripbom-content-" id="stripbom-content-">#</a></span>
+		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+because the buffer-to-string conversion in <code>fs.readFileSync()</code>
+translates it to FEFF, the UTF-16 BOM.</p>
+<ul>
+<li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="stripshebang-content-">
+			stripShebang(content)
+			<span><a class="mark" href="#stripshebang-content-" id="stripshebang-content-">#</a></span>
+		</h2><p>Find end of shebang line and slice it off</p>
+<ul>
+<li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="assert-value-message-">
+			assert(value,message?)
+			<span><a class="mark" href="#assert-value-message-" id="assert-value-message-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>value</code>: <code>any</code> </li>
+<li><code>@param</code> <code>message?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="class-hash5381">
+			Class: Hash5381
+			<span><a class="mark" href="#class-hash5381" id="class-hash5381">#</a></span>
+		</h2><h3 id="hash5381">
+			Hash5381
+			<span><a class="mark" href="#hash5381" id="hash5381">#</a></span>
+		</h3><h3 id="hash5381-hashcode-">
+			hash5381.hashCode()
+			<span><a class="mark" href="#hash5381-hashcode-" id="hash5381-hashcode-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="_ext.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="hash5381-update-data-">
+			hash5381.update(data)
+			<span><a class="mark" href="#hash5381-update-data-" id="hash5381-update-data-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>data</code>: <a href="_ext.html#string"><code>string</code></a>|<code>Uint8Array</code> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="hash5381-digest-">
+			hash5381.digest()
+			<span><a class="mark" href="#hash5381-digest-" id="hash5381-digest-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="hash5381-clear-">
+			hash5381.clear()
+			<span><a class="mark" href="#hash5381-clear-" id="hash5381-clear-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="default">
+			default
+			<span><a class="mark" href="#default" id="default">#</a></span>
+		</h2><h3 id="default-debug">
+			default.debug
+			<span><a class="mark" href="#default-debug" id="default-debug">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>debug</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="default-version-string">
+			default.version()string
+			<span><a class="mark" href="#default-version-string" id="default-version-string">#</a></span>
+		</h3><p>Get <code>quark</code> framework version</p>
+<ul>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="default-platform">
+			default.platform
+			<span><a class="mark" href="#default-platform" id="default-platform">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>platform</code>: <code>Platform</code> </li>
+</ul>
+<h3 id="default-argv">
+			default.argv
+			<span><a class="mark" href="#default-argv" id="default-argv">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>argv</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code> </li>
+</ul>
+<h3 id="default-options">
+			default.options
+			<span><a class="mark" href="#default-options" id="default-options">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>options</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+</ul>
+<h3 id="default-nexttick-cb-">
+			default.nextTick(cb)
+			<span><a class="mark" href="#default-nexttick-cb-" id="default-nexttick-cb-">#</a></span>
+		</h3><p>Wait for the next tick of the message loop to call the callback function</p>
+<ul>
+<li><code>@param</code> <code>cb</code>: <a href="_ext.html#function"><code>Function</code></a> </li>
+</ul>
+<h3 id="default-sleep-time-">
+			default.sleep(time)
+			<span><a class="mark" href="#default-sleep-time-" id="default-sleep-time-">#</a></span>
+		</h3><p>Asynchronous sleep, equivalent to calling <code>setTimeout</code></p>
+<ul>
+<li><code>@param</code> <code>time</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="default-gc-">
+			default.gc()
+			<span><a class="mark" href="#default-gc-" id="default-gc-">#</a></span>
+		</h3><p>Manually let the JavaScript engine perform <code>GC</code> actions</p>
+<h3 id="default-runscript-source-name-sandbox-">
+			default.runScript(source,name?,sandbox?)
+			<span><a class="mark" href="#default-runscript-source-name-sandbox-" id="default-runscript-source-name-sandbox-">#</a></span>
+		</h3><p>Compile and run a piece of javascript code and return the running result.
+    You can specify a name and a running context object.</p>
+<p>The name is very useful when debugging code or program exceptions. It is usually a file name.</p>
+<p>If you do not pass this sandbox <code>sandbox</code> context, the default is to use the <code>global</code> object.</p>
+<ul>
+<li><code>@param</code> <code>source</code>: <a href="_ext.html#string"><code>string</code></a> javascript source code</li>
+<li><code>@param</code> <code>name?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>sandbox?</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h3 id="default-hashcode-obj-">
+			default.hashCode(obj)
+			<span><a class="mark" href="#default-hashcode-obj-" id="default-hashcode-obj-">#</a></span>
+		</h3><p>Read the hash value of a data object</p>
+<ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> </li>
+<li><code>@return</code> <a href="_ext.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="default-hash-obj-">
+			default.hash(obj)
+			<span><a class="mark" href="#default-hash-obj-" id="default-hash-obj-">#</a></span>
+		</h3><p>Read the hash value of a data object, and convert the value to a string</p>
+<ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

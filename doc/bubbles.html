@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'bubbles.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-bubbles">quark/bubbles</a></span>
+<ul>
+<li>
+<span><a href="#enum-priority">Enum: Priority</a></span>
+<ul>
+<li>
+<span><a href="#priority">Priority</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-bubbles">Class: Bubbles</a></span>
+<ul>
+<li>
+<span><a href="#bubbles">Bubbles</a></span>
+</li>
+<li>
+<span><a href="#bubbles-frail">bubbles.frail</a></span>
+</li>
+<li>
+<span><a href="#bubbles-priority">bubbles.priority</a></span>
+</li>
+<li>
+<span><a href="#bubbles-backgroundcolor">bubbles.backgroundColor</a></span>
+</li>
+<li>
+<span><a href="#bubbles-borderradius">bubbles.borderRadius</a></span>
+</li>
+<li>
+<span><a href="#bubbles-showfrom-from-offset-">bubbles.showFrom(from,offset?)</a></span>
+</li>
+<li>
+<span><a href="#bubbles-show-rect-">bubbles.show(rect)</a></span>
+</li>
+<li>
+<span><a href="#bubbles-reset-">bubbles.reset()</a></span>
+</li>
+<li>
+<span><a href="#bubbles-navigationback-">bubbles.navigationBack()</a></span>
+</li>
+<li>
+<span><a href="#bubbles-navigationenter-focus-">bubbles.navigationEnter(focus)</a></span>
+</li>
+<li>
+<span><a href="#bubbles-render-win-vdom-">bubbles.render(win,vdom)</a></span>
+</li>
+<li>
+<span><a href="#bubbles-rendershow-from-vdom-">bubbles.renderShow(from,vdom)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-bubbles">
+			quark/bubbles
+			<span><a class="mark" href="#quark-bubbles" id="quark-bubbles">#</a></span>
+		</h1><h2 id="enum-priority">
+			Enum: Priority
+			<span><a class="mark" href="#enum-priority" id="enum-priority">#</a></span>
+		</h2><h3 id="priority">
+			Priority
+			<span><a class="mark" href="#priority" id="priority">#</a></span>
+		</h3><h2 id="class-bubbles">
+			Class: Bubbles
+			<span><a class="mark" href="#class-bubbles" id="class-bubbles">#</a></span>
+		</h2><h3 id="bubbles">
+			Bubbles
+			<span><a class="mark" href="#bubbles" id="bubbles">#</a></span>
+		</h3><ul>
+<li><code>@template</code> &lt;<code>P</code>,<code>S</code>,<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+<li><code>@extends</code> <a href="nav.html#navigation"><code>Navigation</code></a></li>
+</ul>
+<h3 id="bubbles-frail">
+			bubbles.frail
+			<span><a class="mark" href="#bubbles-frail" id="bubbles-frail">#</a></span>
+		</h3><ul>
+<li><code>frail</code>: <a href="_ext.html#boolean"><code>boolean</code></a> By default clicking anywhere on the screen will disappear</li>
+</ul>
+<h3 id="bubbles-priority">
+			bubbles.priority
+			<span><a class="mark" href="#bubbles-priority" id="bubbles-priority">#</a></span>
+		</h3><ul>
+<li><code>priority</code>: <a href="#enum-priority"><code>Priority</code></a> display location</li>
+</ul>
+<h3 id="bubbles-backgroundcolor">
+			bubbles.backgroundColor
+			<span><a class="mark" href="#bubbles-backgroundcolor" id="bubbles-backgroundcolor">#</a></span>
+		</h3><ul>
+<li><code>backgroundColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
+</ul>
+<h3 id="bubbles-borderradius">
+			bubbles.borderRadius
+			<span><a class="mark" href="#bubbles-borderradius" id="bubbles-borderradius">#</a></span>
+		</h3><ul>
+<li><code>borderRadius</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="bubbles-showfrom-from-offset-">
+			bubbles.showFrom(from,offset?)
+			<span><a class="mark" href="#bubbles-showfrom-from-offset-" id="bubbles-showfrom-from-offset-">#</a></span>
+		</h3><p>Showing Bubbles by Target View</p>
+<ul>
+<li><code>@param</code> <code>from</code>: <a href="view.html#view"><code>View</code></a> Parameters provide the location information to be displayed</li>
+<li><code>@param</code> <code>offset?</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> Displays the offset of the target position</li>
+</ul>
+<h3 id="bubbles-show-rect-">
+			bubbles.show(rect)
+			<span><a class="mark" href="#bubbles-show-rect-" id="bubbles-show-rect-">#</a></span>
+		</h3><p>Show by rect</p>
+<ul>
+<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>types.Rect</code></a> </li>
+</ul>
+<h3 id="bubbles-reset-">
+			bubbles.reset()
+			<span><a class="mark" href="#bubbles-reset-" id="bubbles-reset-">#</a></span>
+		</h3><p>Reset and Reshow</p>
+<h3 id="bubbles-navigationback-">
+			bubbles.navigationBack()
+			<span><a class="mark" href="#bubbles-navigationback-" id="bubbles-navigationback-">#</a></span>
+		</h3><ul>
+<li><code>@overwrite</code>  </li>
+</ul>
+<h3 id="bubbles-navigationenter-focus-">
+			bubbles.navigationEnter(focus)
+			<span><a class="mark" href="#bubbles-navigationenter-focus-" id="bubbles-navigationenter-focus-">#</a></span>
+		</h3><ul>
+<li><code>@overwrite</code>  </li>
+<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a> </li>
+</ul>
+<h3 id="bubbles-render-win-vdom-">
+			bubbles.render(win,vdom)
+			<span><a class="mark" href="#bubbles-render-win-vdom-" id="bubbles-render-win-vdom-">#</a></span>
+		</h3><p>Creating Bubbles through Vdom</p>
+<ul>
+<li><code>@return</code> <a href="#class-bubbles"><code>Bubbles</code></a>  </li>
+<li><code>@param</code> <code>win</code>: <a href="window.html#window"><code>Window</code></a> </li>
+<li><code>@param</code> <code>vdom</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-bubbles"><code>Bubbles</code></a>&gt; </li>
+</ul>
+<h3 id="bubbles-rendershow-from-vdom-">
+			bubbles.renderShow(from,vdom)
+			<span><a class="mark" href="#bubbles-rendershow-from-vdom-" id="bubbles-rendershow-from-vdom-">#</a></span>
+		</h3><p>Create and show bubbles through Vdom</p>
+<ul>
+<li><code>@return</code> <a href="#class-bubbles"><code>Bubbles</code></a>  </li>
+<li><code>@param</code> <code>from</code>: <a href="view.html#view"><code>View</code></a> </li>
+<li><code>@param</code> <code>vdom</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-bubbles"><code>Bubbles</code></a>&gt; </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

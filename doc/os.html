@@ -5,7 +5,7 @@
 	<title>Quark API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
-		var src = 'app.html';
+		var src = 'os.html';
 		var relative = '';
 		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
 		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
@@ -106,39 +106,13 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#quark-app">quark/app</a></span>
+<span><a href="#quark-os">quark/os</a></span>
 <ul>
 <li>
-<span><a href="#class-nativeapplication">Class: NativeApplication</a></span>
+<span><a href="#enum-networkinterface">Enum: NetworkInterface</a></span>
 <ul>
 <li>
-<span><a href="#nativeapplication">NativeApplication</a></span>
-</li>
-<li>
-<span><a href="#nativeapplication-usedresourcememory-">nativeapplication.usedResourceMemory()</a></span>
-</li>
-<li>
-<span><a href="#nativeapplication-clear-all-">nativeapplication.clear(all?)</a></span>
-</li>
-<li>
-<span><a href="#nativeapplication-openurl-url-">nativeapplication.openURL(url)</a></span>
-</li>
-<li>
-<span><a href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc-">nativeapplication.sendEmail(recipient,subject,body?,cc?,bcc?)</a></span>
-</li>
-</ul>
-<li>
-<span><a href="#class-application">Class: Application</a></span>
-<ul>
-<li>
-<span><a href="#application">Application</a></span>
-</li>
-</ul>
-<li>
-<span><a href="#default">default</a></span>
-<ul>
-<li>
-<span><a href="#default-current">default.current</a></span>
+<span><a href="#networkinterface">NetworkInterface</a></span>
 </li>
 </ul>
 </li>
@@ -148,69 +122,16 @@
 			</div>
 
 			<div id="apicontent">
-				<h1 id="quark-app">
-			quark/app
-			<span><a class="mark" href="#quark-app" id="quark-app">#</a></span>
-		</h1><h2 id="class-nativeapplication">
-			Class: NativeApplication
-			<span><a class="mark" href="#class-nativeapplication" id="class-nativeapplication">#</a></span>
-		</h2><h3 id="nativeapplication">
-			NativeApplication
-			<span><a class="mark" href="#nativeapplication" id="nativeapplication">#</a></span>
-		</h3><h3 id="nativeapplication-usedresourcememory-">
-			nativeapplication.usedResourceMemory()
-			<span><a class="mark" href="#nativeapplication-usedresourcememory-" id="nativeapplication-usedresourcememory-">#</a></span>
-		</h3><p>get current used resource memory </p>
-<ul>
-<li><code>@return</code> <a href="_ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="nativeapplication-clear-all-">
-			nativeapplication.clear(all?)
-			<span><a class="mark" href="#nativeapplication-clear-all-" id="nativeapplication-clear-all-">#</a></span>
-		</h3><p>clear resource memory </p>
-<ul>
-<li><code>@param</code> <code>all?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativeapplication-openurl-url-">
-			nativeapplication.openURL(url)
-			<span><a class="mark" href="#nativeapplication-openurl-url-" id="nativeapplication-openurl-url-">#</a></span>
-		</h3><p>open uri For: examples openURL(<code>&#39;[</code>https://baidu.com&#39;<code>)</code>](https://baidu.com&#39;`)) </p>
-<ul>
-<li><code>@param</code> <code>url</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativeapplication-sendemail-recipient-subject-body-cc-bcc-">
-			nativeapplication.sendEmail(recipient,subject,body?,cc?,bcc?)
-			<span><a class="mark" href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc-" id="nativeapplication-sendemail-recipient-subject-body-cc-bcc-">#</a></span>
-		</h3><p>By parameter open email client</p>
-<ul>
-<li><code>@param</code> <code>recipient</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>subject</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>body?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>cc?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>bcc?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="class-application">
-			Class: Application
-			<span><a class="mark" href="#class-application" id="class-application">#</a></span>
-		</h2><h3 id="application">
-			Application
-			<span><a class="mark" href="#application" id="application">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-nativeapplication"><code>NativeApplication</code></a></li>
-</ul>
-<h2 id="default">
-			default
-			<span><a class="mark" href="#default" id="default">#</a></span>
-		</h2><h3 id="default-current">
-			default.current
-			<span><a class="mark" href="#default-current" id="default-current">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>current</code>: <a href="#class-application"><code>Application</code></a> </li>
-</ul>
-
+				<h1 id="quark-os">
+			quark/os
+			<span><a class="mark" href="#quark-os" id="quark-os">#</a></span>
+		</h1><h2 id="enum-networkinterface">
+			Enum: NetworkInterface
+			<span><a class="mark" href="#enum-networkinterface" id="enum-networkinterface">#</a></span>
+		</h2><h3 id="networkinterface">
+			NetworkInterface
+			<span><a class="mark" href="#networkinterface" id="networkinterface">#</a></span>
+		</h3>
 			</div>
 
 		</div>

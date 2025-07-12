@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = '_event.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-_event">quark/_event</a></span>
+<ul>
+<li>
+<span><a href="#class-event">Class: Event</a></span>
+<ul>
+<li>
+<span><a href="#event">Event</a></span>
+</li>
+<li>
+<span><a href="#event-data">event.data</a></span>
+</li>
+<li>
+<span><a href="#event-sender">event.sender</a></span>
+</li>
+<li>
+<span><a href="#event-constructor-data-">event.constructor(data)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#listen">Listen</a></span>
+</li>
+<li>
+<span><a href="#listen2">Listen2</a></span>
+</li>
+<li>
+<span><a href="#class-eventnoticer">Class: EventNoticer</a></span>
+<ul>
+<li>
+<span><a href="#eventnoticer">EventNoticer</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-name">eventnoticer.name</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-sender">eventnoticer.sender</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-length">eventnoticer.length</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-constructor-name-sender-">eventnoticer.constructor(name,sender)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-on-listen-ctxorid-id-">eventnoticer.on(listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-once-listen-ctxorid-id-">eventnoticer.once(listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-on2-listen-ctxorid-id-">eventnoticer.on2(listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-once2-listen-ctxorid-id-">eventnoticer.once2(listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-trigger-data-">eventnoticer.trigger(data)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-triggerwithevent-event-">eventnoticer.triggerWithEvent(event)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-off-listen-ctx-">eventnoticer.off(listen?,ctx?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-notification">Class: Notification</a></span>
+<ul>
+<li>
+<span><a href="#notification">Notification</a></span>
+</li>
+<li>
+<span><a href="#notification-getnoticer-name-">notification.getNoticer(name)</a></span>
+</li>
+<li>
+<span><a href="#notification-hasnoticer-name-">notification.hasNoticer(name)</a></span>
+</li>
+<li>
+<span><a href="#notification-adddefaultlistener-name-listen-">notification.addDefaultListener(name,listen)</a></span>
+</li>
+<li>
+<span><a href="#notification-addeventlistener-name-listen-ctxorid-id-">notification.addEventListener(name,listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#notification-addeventlisteneronce-name-listen-ctxorid-id-">notification.addEventListenerOnce(name,listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#notification-addeventlistener2-name-listen-ctxorid-id-">notification.addEventListener2(name,listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#notification-addeventlisteneronce2-name-listen-ctxorid-id-">notification.addEventListenerOnce2(name,listen,ctxOrId?,id?)</a></span>
+</li>
+<li>
+<span><a href="#notification-addeventforward-name-noticer-id-">notification.addEventForward(name,noticer,id?)</a></span>
+</li>
+<li>
+<span><a href="#notification-addeventforwardonce-noticer-id-">notification.addEventForwardOnce(noticer,id?)</a></span>
+</li>
+<li>
+<span><a href="#notification-trigger-name-data-">notification.trigger(name,data?)</a></span>
+</li>
+<li>
+<span><a href="#notification-triggerwithevent-name-event-">notification.triggerWithEvent(name,event)</a></span>
+</li>
+<li>
+<span><a href="#notification-removeeventlistener-name-listen-ctx-">notification.removeEventListener(name,listen?,ctx?)</a></span>
+</li>
+<li>
+<span><a href="#notification-removeeventlistenerwithctx-ctx-">notification.removeEventListenerWithCtx(ctx)</a></span>
+</li>
+<li>
+<span><a href="#notification-allnoticers-">notification.allNoticers()</a></span>
+</li>
+<li>
+<span><a href="#notification-triggerlistenerchange-name-count-change-">notification.triggerListenerChange(name,count,change)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#event-target-name-">event(target,name)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-_event">
+			quark/_event
+			<span><a class="mark" href="#quark-_event" id="quark-_event">#</a></span>
+		</h1><h2 id="class-event">
+			Class: Event
+			<span><a class="mark" href="#class-event" id="class-event">#</a></span>
+		</h2><h3 id="event">
+			Event
+			<span><a class="mark" href="#event" id="event">#</a></span>
+		</h3><p>The event data</p>
+<ul>
+<li><code>@template</code> &lt;<code>Sender</code>,<code>SendData</code>&gt;</li>
+</ul>
+<h3 id="event-data">
+			event.data
+			<span><a class="mark" href="#event-data" id="event-data">#</a></span>
+		</h3><p>The Data </p>
+<ul>
+<li><code>@get</code> <code>data</code>: <code>SendData</code> </li>
+</ul>
+<h3 id="event-sender">
+			event.sender
+			<span><a class="mark" href="#event-sender" id="event-sender">#</a></span>
+		</h3><p>The sender </p>
+<ul>
+<li><code>@get</code> <code>sender</code>: <code>Sender</code> </li>
+</ul>
+<h3 id="event-constructor-data-">
+			event.constructor(data)
+			<span><a class="mark" href="#event-constructor-data-" id="event-constructor-data-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>data</code>: <code>SendData</code> </li>
+</ul>
+<h2 id="listen">
+			Listen
+			<span><a class="mark" href="#listen" id="listen">#</a></span>
+		</h2><ul>
+<li><code>@callback</code> <code>Listen(this,evt)</code> </li>
+<li><code>@template</code> &lt;<code>E</code>,<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>this</code>: <code>Ctx</code> </li>
+<li><code>@param</code> <code>evt</code>: <code>E</code> </li>
+</ul>
+<h2 id="listen2">
+			Listen2
+			<span><a class="mark" href="#listen2" id="listen2">#</a></span>
+		</h2><ul>
+<li><code>@callback</code> <code>Listen2(self,evt)</code> </li>
+<li><code>@template</code> &lt;<code>E</code>,<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>self</code>: <code>Ctx</code> </li>
+<li><code>@param</code> <code>evt</code>: <code>E</code> </li>
+</ul>
+<h2 id="class-eventnoticer">
+			Class: EventNoticer
+			<span><a class="mark" href="#class-eventnoticer" id="class-eventnoticer">#</a></span>
+		</h2><h3 id="eventnoticer">
+			EventNoticer
+			<span><a class="mark" href="#eventnoticer" id="eventnoticer">#</a></span>
+		</h3><p>Event notifier, the core of event listener adding, deleting, triggering and notification</p>
+<ul>
+<li><code>@template</code> &lt;<code>E</code>&gt;</li>
+</ul>
+<h3 id="eventnoticer-name">
+			eventnoticer.name
+			<span><a class="mark" href="#eventnoticer-name" id="eventnoticer-name">#</a></span>
+		</h3><p>Event name </p>
+<ul>
+<li><code>@get</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="eventnoticer-sender">
+			eventnoticer.sender
+			<span><a class="mark" href="#eventnoticer-sender" id="eventnoticer-sender">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>sender</code>: <code>any</code> Event sender</li>
+</ul>
+<h3 id="eventnoticer-length">
+			eventnoticer.length
+			<span><a class="mark" href="#eventnoticer-length" id="eventnoticer-length">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>length</code>:  Number of event listeners</li>
+</ul>
+<h3 id="eventnoticer-constructor-name-sender-">
+			eventnoticer.constructor(name,sender)
+			<span><a class="mark" href="#eventnoticer-constructor-name-sender-" id="eventnoticer-constructor-name-sender-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> Event name</li>
+<li><code>@param</code> <code>sender</code>: <a href="_ext.html#object"><code>object</code></a> Event sender</li>
+</ul>
+<h3 id="eventnoticer-on-listen-ctxorid-id-">
+			eventnoticer.on(listen,ctxOrId?,id?)
+			<span><a class="mark" href="#eventnoticer-on-listen-ctxorid-id-" id="eventnoticer-on-listen-ctxorid-id-">#</a></span>
+		</h3><p>Add an event listener (function)</p>
+<ul>
+<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> Listener alias, can be deleted by id</li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
+</ul>
+<p>For example:</p>
+<pre><code class="undefinedts">var ctx = { a:100 }
+var id = screen.onChange.on(function(ev) {
+// Prints: 100
+    console.log(this.a)
+}, ctx)
+// Replace Listener
+screen.onChange.on(function(ev) {
+// Prints: replace 100
+    console.log(&#39;replace&#39;, this.a)
+}, ctx, id)
+</code></pre>
+<ul>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+</ul>
+<h3 id="eventnoticer-once-listen-ctxorid-id-">
+			eventnoticer.once(listen,ctxOrId?,id?)
+			<span><a class="mark" href="#eventnoticer-once-listen-ctxorid-id-" id="eventnoticer-once-listen-ctxorid-id-">#</a></span>
+		</h3><p>Add a listener (function) and delete it immediately after listening only once</p>
+<ul>
+<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> Listener alias, can be deleted by id</li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+</ul>
+<h3 id="eventnoticer-on2-listen-ctxorid-id-">
+			eventnoticer.on2(listen,ctxOrId?,id?)
+			<span><a class="mark" href="#eventnoticer-on2-listen-ctxorid-id-" id="eventnoticer-on2-listen-ctxorid-id-">#</a></span>
+		</h3><p>Add an event listener (function),
+and &quot;on&quot; the same processor of the method to add the event trigger to receive two parameters</p>
+<ul>
+<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> Listener alias, can be deleted by id</li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
+</ul>
+<p>Example:</p>
+<pre><code class="undefinedjs">var ctx = { a:100 }
+var id = display_port.onChange.on2(function(ctx, ev) {
+    // Prints: 100
+    console.log(ctx.a)
+}, ctx)
+</code></pre>
+<ul>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+</ul>
+<h3 id="eventnoticer-once2-listen-ctxorid-id-">
+			eventnoticer.once2(listen,ctxOrId?,id?)
+			<span><a class="mark" href="#eventnoticer-once2-listen-ctxorid-id-" id="eventnoticer-once2-listen-ctxorid-id-">#</a></span>
+		</h3><p>Add an event listener (function), And to listen only once and immediately remove
+and &quot;on&quot; the same processor of the method to add the event trigger to receive two parameters</p>
+<ul>
+<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; Listening Function</li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> Specify the listener function this or id alias</li>
+<li><code>@param</code> <code>id</code>:  Listener alias, can be deleted by id</li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> Returns the passed <code>id</code> or the automatically generated <code>id</code></li>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="eventnoticer-trigger-data-">
+			eventnoticer.trigger(data)
+			<span><a class="mark" href="#eventnoticer-trigger-data-" id="eventnoticer-trigger-data-">#</a></span>
+		</h3><p>Notify all observers</p>
+<ul>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@param</code> <code>data</code>: <code>T</code> </li>
+</ul>
+<h3 id="eventnoticer-triggerwithevent-event-">
+			eventnoticer.triggerWithEvent(event)
+			<span><a class="mark" href="#eventnoticer-triggerwithevent-event-" id="eventnoticer-triggerwithevent-event-">#</a></span>
+		</h3><p>Notify all observers</p>
+<ul>
+<li><code>@param</code> <code>event</code>: <code>E</code> </li>
+</ul>
+<h3 id="eventnoticer-off-listen-ctx-">
+			eventnoticer.off(listen?,ctx?)
+			<span><a class="mark" href="#eventnoticer-off-listen-ctx-" id="eventnoticer-off-listen-ctx-">#</a></span>
+		</h3><p>Remove listener function</p>
+<ul>
+<li><code>@param</code> <code>listen?</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#function"><code>Function</code></a>|<a href="_ext.html#object"><code>object</code></a> 
+  It can be a listener function/id alias/context.
+  If no parameter is passed, all listeners will be uninstalled.</li>
+<li><code>@return</code> <code>int</code>  Returns the number of deleted listeners</li>
+<li><code>@param</code> <code>ctx?</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+</ul>
+<h2 id="class-notification">
+			Class: Notification
+			<span><a class="mark" href="#class-notification" id="class-notification">#</a></span>
+		</h2><h3 id="notification">
+			Notification
+			<span><a class="mark" href="#notification" id="notification">#</a></span>
+		</h3><p>This is a collection of events <code>EventNoticer</code>, event triggering and response center</p>
+<p>Derived types inherited from it can use the <code>@event</code> keyword to declare member events</p>
+<ul>
+<li><code>@template</code> &lt;<code>E</code>&gt;</li>
+</ul>
+<h3 id="notification-getnoticer-name-">
+			notification.getNoticer(name)
+			<span><a class="mark" href="#notification-getnoticer-name-" id="notification-getnoticer-name-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
+</ul>
+<h3 id="notification-hasnoticer-name-">
+			notification.hasNoticer(name)
+			<span><a class="mark" href="#notification-hasnoticer-name-" id="notification-hasnoticer-name-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <code>bool</code> </li>
+</ul>
+<h3 id="notification-adddefaultlistener-name-listen-">
+			notification.addDefaultListener(name,listen)
+			<span><a class="mark" href="#notification-adddefaultlistener-name-listen-" id="notification-adddefaultlistener-name-listen-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="notification-addeventlistener-name-listen-ctxorid-id-">
+			notification.addEventListener(name,listen,ctxOrId?,id?)
+			<span><a class="mark" href="#notification-addeventlistener-name-listen-ctxorid-id-" id="notification-addeventlistener-name-listen-ctxorid-id-">#</a></span>
+		</h3><p>call: <a href="#eventnoticer-on-listen-ctxorid-id-"><code>EventNoticer.on(listen,ctxOrId?,id?)</code></a></p>
+<ul>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="notification-addeventlisteneronce-name-listen-ctxorid-id-">
+			notification.addEventListenerOnce(name,listen,ctxOrId?,id?)
+			<span><a class="mark" href="#notification-addeventlisteneronce-name-listen-ctxorid-id-" id="notification-addeventlisteneronce-name-listen-ctxorid-id-">#</a></span>
+		</h3><p>call: <a href="#eventnoticer-once-listen-ctxorid-id-"><code>EventNoticer.once(listen,ctxOrId?,id?)</code></a></p>
+<ul>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="notification-addeventlistener2-name-listen-ctxorid-id-">
+			notification.addEventListener2(name,listen,ctxOrId?,id?)
+			<span><a class="mark" href="#notification-addeventlistener2-name-listen-ctxorid-id-" id="notification-addeventlistener2-name-listen-ctxorid-id-">#</a></span>
+		</h3><p>call: <a href="#eventnoticer-on2-listen-ctxorid-id-"><code>EventNoticer.on2(listen,ctxOrId?,id?)</code></a></p>
+<ul>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="notification-addeventlisteneronce2-name-listen-ctxorid-id-">
+			notification.addEventListenerOnce2(name,listen,ctxOrId?,id?)
+			<span><a class="mark" href="#notification-addeventlisteneronce2-name-listen-ctxorid-id-" id="notification-addeventlisteneronce2-name-listen-ctxorid-id-">#</a></span>
+		</h3><p>call: <a href="#eventnoticer-once2-listen-ctxorid-id-"><code>EventNoticer.once2(listen,ctxOrId?,id?)</code></a></p>
+<ul>
+<li><code>@template</code> &lt;<code>Ctx</code>&gt;</li>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen</code>: <a href="#listen2"><code>Listen2</code></a>&lt;<code>E</code>,<code>Ctx</code>&gt; </li>
+<li><code>@param</code> <code>ctxOrId?</code>: <code>Ctx</code>|<a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="notification-addeventforward-name-noticer-id-">
+			notification.addEventForward(name,noticer,id?)
+			<span><a class="mark" href="#notification-addeventforward-name-noticer-id-" id="notification-addeventforward-name-noticer-id-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>noticer</code>: <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="notification-addeventforwardonce-noticer-id-">
+			notification.addEventForwardOnce(noticer,id?)
+			<span><a class="mark" href="#notification-addeventforwardonce-noticer-id-" id="notification-addeventforwardonce-noticer-id-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>noticer</code>: <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
+<li><code>@param</code> <code>id?</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="notification-trigger-name-data-">
+			notification.trigger(name,data?)
+			<span><a class="mark" href="#notification-trigger-name-data-" id="notification-trigger-name-data-">#</a></span>
+		</h3><p>Trigger an event by event name --&gt; <a href="#eventnoticer-trigger-data-"><code>EventNoticer.trigger(data)</code></a></p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>data?</code>: <code>any</code> </li>
+</ul>
+<h3 id="notification-triggerwithevent-name-event-">
+			notification.triggerWithEvent(name,event)
+			<span><a class="mark" href="#notification-triggerwithevent-name-event-" id="notification-triggerwithevent-name-event-">#</a></span>
+		</h3><p>Trigger an event by name and <a href="#class-event"><code>Event</code></a> --&gt; <a href="#eventnoticer-triggerwithevent-event-"><code>EventNoticer.triggerWithEvent(event)</code></a></p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>event</code>: <code>E</code> </li>
+</ul>
+<h3 id="notification-removeeventlistener-name-listen-ctx-">
+			notification.removeEventListener(name,listen?,ctx?)
+			<span><a class="mark" href="#notification-removeeventlistener-name-listen-ctx-" id="notification-removeeventlistener-name-listen-ctx-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen?</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#function"><code>Function</code></a>|<a href="_ext.html#object"><code>object</code></a> </li>
+<li><code>@param</code> <code>ctx?</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+</ul>
+<h3 id="notification-removeeventlistenerwithctx-ctx-">
+			notification.removeEventListenerWithCtx(ctx)
+			<span><a class="mark" href="#notification-removeeventlistenerwithctx-ctx-" id="notification-removeeventlistenerwithctx-ctx-">#</a></span>
+		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code>
+Actually traverse and call the [<code>EventNoticer.off(ctx)</code>] method</p>
+<p>For example:</p>
+<pre><code class="undefinedts">import event from &#39;quark/event&#39;;
+
+class TestNotification extends Notification {
+    \@event readonly onChange;
+}
+
+var notification = new TestNotification();
+// Prints: responseonChange 0 100
+notification.onChange = function(ev) { // add default listener
+    console.log(&#39;responseonChange 0&#39;, ev.data)
+}
+notification.triggerChange(100);
+
+// Prints: 
+// responseonChange 0 200
+// responseonChange 1
+notification.onChange.on(function(ev) {
+    console.log(&#39;responseonChange 1&#39;)
+})
+notification.triggerWithEvent(&#39;change&#39;, new Event(200));
+
+var noticer = notification.onChange;
+noticer.off(0) // delete default listener
+// Prints: responseonChange 1
+notification.triggerChange();
+
+</code></pre>
+<ul>
+<li><code>@param</code> <code>ctx</code>: <a href="_ext.html#object"><code>object</code></a> </li>
+</ul>
+<h3 id="notification-allnoticers-">
+			notification.allNoticers()
+			<span><a class="mark" href="#notification-allnoticers-" id="notification-allnoticers-">#</a></span>
+		</h3><p>Get all of <a href="#class-eventnoticer"><code>EventNoticer</code></a></p>
+<ul>
+<li><code>@return</code> <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt;<code>[]</code> </li>
+</ul>
+<h3 id="notification-triggerlistenerchange-name-count-change-">
+			notification.triggerListenerChange(name,count,change)
+			<span><a class="mark" href="#notification-triggerlistenerchange-name-count-change-" id="notification-triggerlistenerchange-name-count-change-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>count</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>change</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="event-target-name-">
+			event(target,name)
+			<span><a class="mark" href="#event-target-name-" id="event-target-name-">#</a></span>
+		</h2><p>Typescript decorator</p>
+<ul>
+<li><code>@decorator</code>  </li>
+<li><code>@param</code> <code>target</code>: <code>any</code> </li>
+<li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

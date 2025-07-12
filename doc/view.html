@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'view.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-view">quark/view</a></span>
+<ul>
+<li>
+<span><a href="#enum-viewtype">Enum: ViewType</a></span>
+<ul>
+<li>
+<span><a href="#viewtype">ViewType</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-dom">Interface: DOM</a></span>
+<ul>
+<li>
+<span><a href="#dom">DOM</a></span>
+</li>
+<li>
+<span><a href="#dom-ref">dom.ref</a></span>
+</li>
+<li>
+<span><a href="#dom-metaview">dom.metaView</a></span>
+</li>
+<li>
+<span><a href="#dom-appendto-parent-">dom.appendTo(parent)</a></span>
+</li>
+<li>
+<span><a href="#dom-afterto-prev-">dom.afterTo(prev)</a></span>
+</li>
+<li>
+<span><a href="#dom-destroy-owner-">dom.destroy(owner)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#childdom">ChildDOM</a></span>
+</li>
+<li>
+<span><a href="#class-view">Class: View</a></span>
+<ul>
+<li>
+<span><a href="#view">View</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-undefined">view.undefined</a></span>
+</li>
+<li>
+<span><a href="#view-focus-">view.focus()</a></span>
+</li>
+<li>
+<span><a href="#view-show-">view.show()</a></span>
+</li>
+<li>
+<span><a href="#view-hide-">view.hide()</a></span>
+</li>
+<li>
+<span><a href="#view-isselfchild-child-">view.isSelfChild(child)</a></span>
+</li>
+<li>
+<span><a href="#view-before-view-">view.before(view)</a></span>
+</li>
+<li>
+<span><a href="#view-after-view-">view.after(view)</a></span>
+</li>
+<li>
+<span><a href="#view-prepend-view-">view.prepend(view)</a></span>
+</li>
+<li>
+<span><a href="#view-append-view-">view.append(view)</a></span>
+</li>
+<li>
+<span><a href="#view-remove-">view.remove()</a></span>
+</li>
+<li>
+<span><a href="#view-removeallchild-">view.removeAllChild()</a></span>
+</li>
+<li>
+<span><a href="#view-overlaptest-point-">view.overlapTest(point)</a></span>
+</li>
+<li>
+<span><a href="#view-hashcode-">view.hashCode()</a></span>
+</li>
+<li>
+<span><a href="#view-appendto-parent-">view.appendTo(parent)</a></span>
+</li>
+<li>
+<span><a href="#view-afterto-prev-">view.afterTo(prev)</a></span>
+</li>
+<li>
+<span><a href="#view-destroy-owner-">view.destroy(owner)</a></span>
+</li>
+<li>
+<span><a href="#view-transition-to-from-cb-">view.transition(to,from?,cb?)</a></span>
+</li>
+<li>
+<span><a href="#view-constructor-win-">view.constructor(win)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-box">Class: Box</a></span>
+<ul>
+<li>
+<span><a href="#box">Box</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-flex">Class: Flex</a></span>
+<ul>
+<li>
+<span><a href="#flex">Flex</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-flow">Class: Flow</a></span>
+<ul>
+<li>
+<span><a href="#flow">Flow</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-free">Class: Free</a></span>
+<ul>
+<li>
+<span><a href="#free">Free</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-image">Class: Image</a></span>
+<ul>
+<li>
+<span><a href="#image">Image</a></span>
+</li>
+<li>
+<span><a href="#image-undefined">image.undefined</a></span>
+</li>
+<li>
+<span><a href="#image-undefined">image.undefined</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-matrix">Class: Matrix</a></span>
+<ul>
+<li>
+<span><a href="#matrix">Matrix</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-root">Class: Root</a></span>
+<ul>
+<li>
+<span><a href="#root">Root</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-textoptions">Interface: TextOptions</a></span>
+<ul>
+<li>
+<span><a href="#textoptions">TextOptions</a></span>
+</li>
+<li>
+<span><a href="#textoptions-computelayoutsize-text-">textoptions.computeLayoutSize(text)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-text">Class: Text</a></span>
+<ul>
+<li>
+<span><a href="#text">Text</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-button">Class: Button</a></span>
+<ul>
+<li>
+<span><a href="#button">Button</a></span>
+</li>
+<li>
+<span><a href="#button-nextbutton-dir-">button.nextButton(dir)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-label">Class: Label</a></span>
+<ul>
+<li>
+<span><a href="#label">Label</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-label">Class: Label</a></span>
+<ul>
+<li>
+<span><a href="#label">Label</a></span>
+</li>
+<li>
+<span><a href="#label-undefined">label.undefined</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-scrollbase">Interface: ScrollBase</a></span>
+<ul>
+<li>
+<span><a href="#scrollbase">ScrollBase</a></span>
+</li>
+<li>
+<span><a href="#scrollbase-scrollto-val-duration-curve-">scrollbase.scrollTo(val,duration?,curve?)</a></span>
+</li>
+<li>
+<span><a href="#scrollbase-terminate-">scrollbase.terminate()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-textarea">Class: Textarea</a></span>
+<ul>
+<li>
+<span><a href="#textarea">Textarea</a></span>
+</li>
+<li>
+<span><a href="#textarea-undefined">textarea.undefined</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-scroll">Class: Scroll</a></span>
+<ul>
+<li>
+<span><a href="#scroll">Scroll</a></span>
+</li>
+<li>
+<span><a href="#scroll-undefined">scroll.undefined</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-video">Class: Video</a></span>
+<ul>
+<li>
+<span><a href="#video">Video</a></span>
+</li>
+<li>
+<span><a href="#video-undefined">video.undefined</a></span>
+</li>
+<li>
+<span><a href="#video-undefined">video.undefined</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-view">
+			quark/view
+			<span><a class="mark" href="#quark-view" id="quark-view">#</a></span>
+		</h1><h2 id="enum-viewtype">
+			Enum: ViewType
+			<span><a class="mark" href="#enum-viewtype" id="enum-viewtype">#</a></span>
+		</h2><h3 id="viewtype">
+			ViewType
+			<span><a class="mark" href="#viewtype" id="viewtype">#</a></span>
+		</h3><h2 id="interface-dom">
+			Interface: DOM
+			<span><a class="mark" href="#interface-dom" id="interface-dom">#</a></span>
+		</h2><h3 id="dom">
+			DOM
+			<span><a class="mark" href="#dom" id="dom">#</a></span>
+		</h3><h3 id="dom-ref">
+			dom.ref
+			<span><a class="mark" href="#dom-ref" id="dom-ref">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>ref</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="dom-metaview">
+			dom.metaView
+			<span><a class="mark" href="#dom-metaview" id="dom-metaview">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>metaView</code>: <a href="#class-view"><code>View</code></a> mount point for view controller </li>
+</ul>
+<h3 id="dom-appendto-parent-">
+			dom.appendTo(parent)
+			<span><a class="mark" href="#dom-appendto-parent-" id="dom-appendto-parent-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>parent</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="#class-view"><code>View</code></a> </li>
+</ul>
+<h3 id="dom-afterto-prev-">
+			dom.afterTo(prev)
+			<span><a class="mark" href="#dom-afterto-prev-" id="dom-afterto-prev-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>prev</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="#class-view"><code>View</code></a> </li>
+</ul>
+<h3 id="dom-destroy-owner-">
+			dom.destroy(owner)
+			<span><a class="mark" href="#dom-destroy-owner-" id="dom-destroy-owner-">#</a></span>
+		</h3><p>destroy from owner </p>
+<ul>
+<li><code>@param</code> <code>owner</code>: <a href="ctr.html#viewcontroller"><code>ViewController</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="childdom">
+			ChildDOM
+			<span><a class="mark" href="#childdom" id="childdom">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>ChildDOM</code> = <a href="#interface-dom"><code>DOM</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a></li>
+</ul>
+<h2 id="class-view">
+			Class: View
+			<span><a class="mark" href="#class-view" id="class-view">#</a></span>
+		</h2><h3 id="view">
+			View
+			<span><a class="mark" href="#view" id="view">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="event.html#uievent"><code>UIEvent</code></a>&gt;</li>
+<li><code>@implements</code> <a href="#interface-dom"><code>DOM</code></a></li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-undefined">
+			view.undefined
+			<span><a class="mark" href="#view-undefined" id="view-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="view-focus-">
+			view.focus()
+			<span><a class="mark" href="#view-focus-" id="view-focus-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="view-show-">
+			view.show()
+			<span><a class="mark" href="#view-show-" id="view-show-">#</a></span>
+		</h3><p>Set visible = true</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-hide-">
+			view.hide()
+			<span><a class="mark" href="#view-hide-" id="view-hide-">#</a></span>
+		</h3><p>Set visible = false</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-isselfchild-child-">
+			view.isSelfChild(child)
+			<span><a class="mark" href="#view-isselfchild-child-" id="view-isselfchild-child-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>child</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="view-before-view-">
+			view.before(view)
+			<span><a class="mark" href="#view-before-view-" id="view-before-view-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>view</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-after-view-">
+			view.after(view)
+			<span><a class="mark" href="#view-after-view-" id="view-after-view-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>view</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-prepend-view-">
+			view.prepend(view)
+			<span><a class="mark" href="#view-prepend-view-" id="view-prepend-view-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>view</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-append-view-">
+			view.append(view)
+			<span><a class="mark" href="#view-append-view-" id="view-append-view-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>view</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-remove-">
+			view.remove()
+			<span><a class="mark" href="#view-remove-" id="view-remove-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-removeallchild-">
+			view.removeAllChild()
+			<span><a class="mark" href="#view-removeallchild-" id="view-removeallchild-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-overlaptest-point-">
+			view.overlapTest(point)
+			<span><a class="mark" href="#view-overlaptest-point-" id="view-overlaptest-point-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>point</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="view-hashcode-">
+			view.hashCode()
+			<span><a class="mark" href="#view-hashcode-" id="view-hashcode-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="_ext.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="view-appendto-parent-">
+			view.appendTo(parent)
+			<span><a class="mark" href="#view-appendto-parent-" id="view-appendto-parent-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>parent</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+</ul>
+<h3 id="view-afterto-prev-">
+			view.afterTo(prev)
+			<span><a class="mark" href="#view-afterto-prev-" id="view-afterto-prev-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>prev</code>: <a href="#class-view"><code>View</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+</ul>
+<h3 id="view-destroy-owner-">
+			view.destroy(owner)
+			<span><a class="mark" href="#view-destroy-owner-" id="view-destroy-owner-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>owner</code>: <a href="ctr.html#viewcontroller"><code>ViewController</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="view-transition-to-from-cb-">
+			view.transition(to,from?,cb?)
+			<span><a class="mark" href="#view-transition-to-from-cb-" id="view-transition-to-from-cb-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>to</code>: <a href="action.html#keyframein"><code>KeyframeIn</code></a> </li>
+<li><code>@param</code> <code>from?</code>: <a href="action.html#keyframein"><code>KeyframeIn</code></a>|<a href="action.html#actioncb"><code>ActionCb</code></a> </li>
+<li><code>@param</code> <code>cb?</code>: <a href="action.html#actioncb"><code>ActionCb</code></a> </li>
+<li><code>@return</code> <a href="action.html#keyframeaction"><code>KeyframeAction</code></a> </li>
+</ul>
+<h3 id="view-constructor-win-">
+			view.constructor(win)
+			<span><a class="mark" href="#view-constructor-win-" id="view-constructor-win-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>win</code>: <a href="window.html#window"><code>Window</code></a> </li>
+</ul>
+<h2 id="class-box">
+			Class: Box
+			<span><a class="mark" href="#class-box" id="class-box">#</a></span>
+		</h2><h3 id="box">
+			Box
+			<span><a class="mark" href="#box" id="box">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-view"><code>View</code></a></li>
+</ul>
+<h2 id="class-flex">
+			Class: Flex
+			<span><a class="mark" href="#class-flex" id="class-flex">#</a></span>
+		</h2><h3 id="flex">
+			Flex
+			<span><a class="mark" href="#flex" id="flex">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+</ul>
+<h2 id="class-flow">
+			Class: Flow
+			<span><a class="mark" href="#class-flow" id="class-flow">#</a></span>
+		</h2><h3 id="flow">
+			Flow
+			<span><a class="mark" href="#flow" id="flow">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-flex"><code>Flex</code></a></li>
+</ul>
+<h2 id="class-free">
+			Class: Free
+			<span><a class="mark" href="#class-free" id="class-free">#</a></span>
+		</h2><h3 id="free">
+			Free
+			<span><a class="mark" href="#free" id="free">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+</ul>
+<h2 id="class-image">
+			Class: Image
+			<span><a class="mark" href="#class-image" id="class-image">#</a></span>
+		</h2><h3 id="image">
+			Image
+			<span><a class="mark" href="#image" id="image">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+</ul>
+<h3 id="image-undefined">
+			image.undefined
+			<span><a class="mark" href="#image-undefined" id="image-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="image-undefined">
+			image.undefined
+			<span><a class="mark" href="#image-undefined" id="image-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h2 id="class-matrix">
+			Class: Matrix
+			<span><a class="mark" href="#class-matrix" id="class-matrix">#</a></span>
+		</h2><h3 id="matrix">
+			Matrix
+			<span><a class="mark" href="#matrix" id="matrix">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+</ul>
+<h2 id="class-root">
+			Class: Root
+			<span><a class="mark" href="#class-root" id="class-root">#</a></span>
+		</h2><h3 id="root">
+			Root
+			<span><a class="mark" href="#root" id="root">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-matrix"><code>Matrix</code></a></li>
+</ul>
+<h2 id="interface-textoptions">
+			Interface: TextOptions
+			<span><a class="mark" href="#interface-textoptions" id="interface-textoptions">#</a></span>
+		</h2><h3 id="textoptions">
+			TextOptions
+			<span><a class="mark" href="#textoptions" id="textoptions">#</a></span>
+		</h3><h3 id="textoptions-computelayoutsize-text-">
+			textoptions.computeLayoutSize(text)
+			<span><a class="mark" href="#textoptions-computelayoutsize-text-" id="textoptions-computelayoutsize-text-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>text</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+</ul>
+<h2 id="class-text">
+			Class: Text
+			<span><a class="mark" href="#class-text" id="class-text">#</a></span>
+		</h2><h3 id="text">
+			Text
+			<span><a class="mark" href="#text" id="text">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+<li><code>@implements</code> <a href="#interface-textoptions"><code>TextOptions</code></a></li>
+</ul>
+<h2 id="class-button">
+			Class: Button
+			<span><a class="mark" href="#class-button" id="class-button">#</a></span>
+		</h2><h3 id="button">
+			Button
+			<span><a class="mark" href="#button" id="button">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-text"><code>Text</code></a></li>
+</ul>
+<h3 id="button-nextbutton-dir-">
+			button.nextButton(dir)
+			<span><a class="mark" href="#button-nextbutton-dir-" id="button-nextbutton-dir-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>dir</code>: <a href="types.html#finddirection"><code>types.FindDirection</code></a> </li>
+<li><code>@return</code> <a href="#class-button"><code>Button</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h2 id="class-label">
+			Class: Label
+			<span><a class="mark" href="#class-label" id="class-label">#</a></span>
+		</h2><h3 id="label">
+			Label
+			<span><a class="mark" href="#label" id="label">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-view"><code>View</code></a></li>
+<li><code>@implements</code> <a href="#interface-textoptions"><code>TextOptions</code></a></li>
+</ul>
+<h2 id="class-label">
+			Class: Label
+			<span><a class="mark" href="#class-label" id="class-label">#</a></span>
+		</h2><h3 id="label">
+			Label
+			<span><a class="mark" href="#label" id="label">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+<li><code>@implements</code> <a href="#interface-textoptions"><code>TextOptions</code></a></li>
+</ul>
+<h3 id="label-undefined">
+			label.undefined
+			<span><a class="mark" href="#label-undefined" id="label-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h2 id="interface-scrollbase">
+			Interface: ScrollBase
+			<span><a class="mark" href="#interface-scrollbase" id="interface-scrollbase">#</a></span>
+		</h2><h3 id="scrollbase">
+			ScrollBase
+			<span><a class="mark" href="#scrollbase" id="scrollbase">#</a></span>
+		</h3><h3 id="scrollbase-scrollto-val-duration-curve-">
+			scrollbase.scrollTo(val,duration?,curve?)
+			<span><a class="mark" href="#scrollbase-scrollto-val-duration-curve-" id="scrollbase-scrollto-val-duration-curve-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>val</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li><code>@param</code> <code>duration?</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>curve?</code>: <a href="types.html#curve"><code>types.Curve</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="scrollbase-terminate-">
+			scrollbase.terminate()
+			<span><a class="mark" href="#scrollbase-terminate-" id="scrollbase-terminate-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="class-textarea">
+			Class: Textarea
+			<span><a class="mark" href="#class-textarea" id="class-textarea">#</a></span>
+		</h2><h3 id="textarea">
+			Textarea
+			<span><a class="mark" href="#textarea" id="textarea">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <code>Input</code></li>
+<li><code>@implements</code> <a href="#interface-scrollbase"><code>ScrollBase</code></a></li>
+</ul>
+<h3 id="textarea-undefined">
+			textarea.undefined
+			<span><a class="mark" href="#textarea-undefined" id="textarea-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h2 id="class-scroll">
+			Class: Scroll
+			<span><a class="mark" href="#class-scroll" id="class-scroll">#</a></span>
+		</h2><h3 id="scroll">
+			Scroll
+			<span><a class="mark" href="#scroll" id="scroll">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+<li><code>@implements</code> <a href="#interface-scrollbase"><code>ScrollBase</code></a></li>
+</ul>
+<h3 id="scroll-undefined">
+			scroll.undefined
+			<span><a class="mark" href="#scroll-undefined" id="scroll-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h2 id="class-video">
+			Class: Video
+			<span><a class="mark" href="#class-video" id="class-video">#</a></span>
+		</h2><h3 id="video">
+			Video
+			<span><a class="mark" href="#video" id="video">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-image"><code>Image</code></a></li>
+<li><code>@implements</code> <a href="media.html#player"><code>Player</code></a></li>
+</ul>
+<h3 id="video-undefined">
+			video.undefined
+			<span><a class="mark" href="#video-undefined" id="video-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+<h3 id="video-undefined">
+			video.undefined
+			<span><a class="mark" href="#video-undefined" id="video-undefined">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>undefined</code>:  </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

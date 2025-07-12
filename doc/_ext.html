@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = '_ext.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-_ext">quark/_ext</a></span>
+<ul>
+<li>
+<span><a href="#number">number</a></span>
+</li>
+<li>
+<span><a href="#boolean">boolean</a></span>
+</li>
+<li>
+<span><a href="#object">object</a></span>
+</li>
+<li>
+<span><a href="#string">string</a></span>
+</li>
+<li>
+<span><a href="#int">Int</a></span>
+</li>
+<li>
+<span><a href="#uint">Uint</a></span>
+</li>
+<li>
+<span><a href="#float">Float</a></span>
+</li>
+<li>
+<span><a href="#interface-object">Interface: Object</a></span>
+<ul>
+<li>
+<span><a href="#object">Object</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-dict">Interface: Dict</a></span>
+<ul>
+<li>
+<span><a href="#dict">Dict</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-function">Interface: Function</a></span>
+<ul>
+<li>
+<span><a href="#function">Function</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-array">Interface: Array</a></span>
+<ul>
+<li>
+<span><a href="#array">Array</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-string">Interface: String</a></span>
+<ul>
+<li>
+<span><a href="#string">String</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-number">Interface: Number</a></span>
+<ul>
+<li>
+<span><a href="#number">Number</a></span>
+</li>
+<li>
+<span><a href="#number-tofixedbefore-before-after-">number.toFixedBefore(before,after?)</a></span>
+</li>
+<li>
+<span><a href="#number-tofixedvariable-after-split-symbol-">number.toFixedVariable(after,split?,symbol?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-boolean">Interface: Boolean</a></span>
+<ul>
+<li>
+<span><a href="#boolean">Boolean</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-date">Interface: Date</a></span>
+<ul>
+<li>
+<span><a href="#date">Date</a></span>
+</li>
+<li>
+<span><a href="#date-parsedate-date_str-format-timezone-">date.parseDate(date_str,format?,timezone?)</a></span>
+</li>
+<li>
+<span><a href="#date-formattimespan-ts-format-">date.formatTimeSpan(ts,format?)</a></span>
+</li>
+<li>
+<span><a href="#date-add-ms-">date.add(ms)</a></span>
+</li>
+<li>
+<span><a href="#date-tostring-format-timezone-">date.toString(format?,timezone?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-errordescribe">Interface: ErrorDescribe</a></span>
+<ul>
+<li>
+<span><a href="#errordescribe">ErrorDescribe</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#errnocode">ErrnoCode</a></span>
+</li>
+<li>
+<span><a href="#errornewarg">ErrorNewArg</a></span>
+</li>
+<li>
+<span><a href="#interface-error">Interface: Error</a></span>
+<ul>
+<li>
+<span><a href="#error">Error</a></span>
+</li>
+<li>
+<span><a href="#error-capturestacktrace-targetobject-constructoropt-">error.captureStackTrace(targetObject,constructorOpt?)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-_ext">
+			quark/_ext
+			<span><a class="mark" href="#quark-_ext" id="quark-_ext">#</a></span>
+		</h1><h2 id="number">
+			number
+			<span><a class="mark" href="#number" id="number">#</a></span>
+		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</code></a></p>
+<ul>
+<li><code>@type</code> <code>number</code> = <a href="#interface-number"><code>Number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="boolean">
+			boolean
+			<span><a class="mark" href="#boolean" id="boolean">#</a></span>
+		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</code></a></p>
+<ul>
+<li><code>@type</code> <code>boolean</code> = <a href="#interface-boolean"><code>Boolean</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="object">
+			object
+			<span><a class="mark" href="#object" id="object">#</a></span>
+		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</code></a></p>
+<ul>
+<li><code>@type</code> <code>object</code> = <a href="#interface-object"><code>Object</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="string">
+			string
+			<span><a class="mark" href="#string" id="string">#</a></span>
+		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</code></a></p>
+<ul>
+<li><code>@type</code> <code>string</code> = <a href="#interface-string"><code>String</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="int">
+			Int
+			<span><a class="mark" href="#int" id="int">#</a></span>
+		</h2><p>32-bit signed integer, Range: -2147483648 to 2147483647</p>
+<ul>
+<li><code>@type</code> <code>Int</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="uint">
+			Uint
+			<span><a class="mark" href="#uint" id="uint">#</a></span>
+		</h2><p>32-bit signed integer, Range: 0 to 4294967295</p>
+<ul>
+<li><code>@type</code> <code>Uint</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="float">
+			Float
+			<span><a class="mark" href="#float" id="float">#</a></span>
+		</h2><p>32-bit floating point</p>
+<ul>
+<li><code>@type</code> <code>Float</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-object">
+			Interface: Object
+			<span><a class="mark" href="#interface-object" id="interface-object">#</a></span>
+		</h2><h3 id="object">
+			Object
+			<span><a class="mark" href="#object" id="object">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-dict">
+			Interface: Dict
+			<span><a class="mark" href="#interface-dict" id="interface-dict">#</a></span>
+		</h2><h3 id="dict">
+			Dict
+			<span><a class="mark" href="#dict" id="dict">#</a></span>
+		</h3><p>Dictionaries</p>
+<ul>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-function">
+			Interface: Function
+			<span><a class="mark" href="#interface-function" id="interface-function">#</a></span>
+		</h2><h3 id="function">
+			Function
+			<span><a class="mark" href="#function" id="function">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-array">
+			Interface: Array
+			<span><a class="mark" href="#interface-array" id="interface-array">#</a></span>
+		</h2><h3 id="array">
+			Array
+			<span><a class="mark" href="#array" id="array">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+</ul>
+<h2 id="interface-string">
+			Interface: String
+			<span><a class="mark" href="#interface-string" id="interface-string">#</a></span>
+		</h2><h3 id="string">
+			String
+			<span><a class="mark" href="#string" id="string">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-number">
+			Interface: Number
+			<span><a class="mark" href="#interface-number" id="interface-number">#</a></span>
+		</h2><h3 id="number">
+			Number
+			<span><a class="mark" href="#number" id="number">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h3 id="number-tofixedbefore-before-after-">
+			number.toFixedBefore(before,after?)
+			<span><a class="mark" href="#number-tofixedbefore-before-after-" id="number-tofixedbefore-before-after-">#</a></span>
+		</h3><p>Convert to a string with a fixed number of digits before and after the decimal point</p>
+<ul>
+<li><code>@param</code> <code>before</code>: <a href="#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
+<li><code>@param</code> <code>after?</code>: <a href="#uint"><code>Uint</code></a> Fixed number of digits after the decimal point</li>
+<li><code>@return</code> <a href="#interface-string"><code>string</code></a> </li>
+</ul>
+<h3 id="number-tofixedvariable-after-split-symbol-">
+			number.toFixedVariable(after,split?,symbol?)
+			<span><a class="mark" href="#number-tofixedvariable-after-split-symbol-" id="number-tofixedvariable-after-split-symbol-">#</a></span>
+		</h3><p>Fixed the number of digits before the decimal point and used symbol separation</p>
+<ul>
+<li><code>@param</code> <code>after</code>: <a href="#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
+<li><code>@param</code> <code>split?</code>: <a href="#uint"><code>Uint</code></a> Split unit length</li>
+<li><code>@param</code> <code>symbol?</code>: <a href="#interface-string"><code>string</code></a> Split characters</li>
+</ul>
+<p>For example:</p>
+<pre><code class="undefinedts">// Print: 1,000,000.03
+console.log((1000000.03).toFixedVariable(8,3,&#39;,&#39;))
+</code></pre>
+<ul>
+<li><code>@return</code> <a href="#interface-string"><code>string</code></a> </li>
+</ul>
+<h2 id="interface-boolean">
+			Interface: Boolean
+			<span><a class="mark" href="#interface-boolean" id="interface-boolean">#</a></span>
+		</h2><h3 id="boolean">
+			Boolean
+			<span><a class="mark" href="#boolean" id="boolean">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-date">
+			Interface: Date
+			<span><a class="mark" href="#interface-date" id="interface-date">#</a></span>
+		</h2><h3 id="date">
+			Date
+			<span><a class="mark" href="#date" id="date">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h3 id="date-parsedate-date_str-format-timezone-">
+			date.parseDate(date_str,format?,timezone?)
+			<span><a class="mark" href="#date-parsedate-date_str-format-timezone-" id="date-parsedate-date_str-format-timezone-">#</a></span>
+		</h3><p>Parse a string as a time</p>
+<ul>
+<li><code>@param</code> <code>str</code>:  The string to parse</li>
+<li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> date format default yyyyMMddhhmmssfff</li>
+<li><code>@param</code> <code>timezone?</code>: <a href="#uint"><code>Uint</code></a> The time zone of the time to be parsed, the default is the current time zone</li>
+<li><code>@return</code> <a href="#interface-date"><code>Date</code></a> Retruu Date object</li>
+<li><code>@static</code>  </li>
+</ul>
+<p>For example:</p>
+<pre><code class="undefinedts">let i = &#39;2008-02-13 01:12:13&#39;;
+let date = Date.parseDate(i); // The new time returned
+</code></pre>
+<ul>
+<li><code>@param</code> <code>date_str</code>: <a href="#interface-string"><code>string</code></a> </li>
+</ul>
+<h3 id="date-formattimespan-ts-format-">
+			date.formatTimeSpan(ts,format?)
+			<span><a class="mark" href="#date-formattimespan-ts-format-" id="date-formattimespan-ts-format-">#</a></span>
+		</h3><p>Formatting timestamps</p>
+<ul>
+<li><code>@param</code> <code>time_span</code>: <a href="#uint"><code>Uint</code></a> The timestamp to format</li>
+<li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> The timestamp format to be formatted</li>
+<li><code>@return</code> <a href="#interface-string"><code>string</code></a> The returned formatted timestamp</li>
+<li><code>@static</code>  </li>
+</ul>
+<p>For example:</p>
+<pre><code class="undefinedts">// Format timestamp (unit: milliseconds)
+let time_span = 10002100;
+let format = &#39;dd hh:mm:ss&#39;;
+let str = Date.formatTimeSpan(time_span, format); // str = &#39;0 2:46:42&#39;
+let format = &#39;dd天hh时mm分ss秒&#39;;
+let str = Date.formatTimeSpan(time_span, format); // str = &#39;0天2时46分42秒&#39;
+format = &#39;hh时mm分ss秒&#39;;
+str = Date.formatTimeSpan(time_span, format); // str = &#39;2时46分42秒&#39;
+format = &#39;mm分ss秒&#39;;
+str = Date.formatTimeSpan(time_span, format); // str = &#39;166分42秒&#39;
+</code></pre>
+<ul>
+<li><code>@param</code> <code>ts</code>:  </li>
+</ul>
+<h3 id="date-add-ms-">
+			date.add(ms)
+			<span><a class="mark" href="#date-add-ms-" id="date-add-ms-">#</a></span>
+		</h3><p>Add milliseconds to the current Date time and change the time value</p>
+<ul>
+<li><code>@param</code> <code>ms</code>: <a href="#uint"><code>Uint</code></a> The millisecond value to append</li>
+<li><code>@return</code> <a href="#interface-date"><code>Date</code></a> </li>
+</ul>
+<h3 id="date-tostring-format-timezone-">
+			date.toString(format?,timezone?)
+			<span><a class="mark" href="#date-tostring-format-timezone-" id="date-tostring-format-timezone-">#</a></span>
+		</h3><p>Returns a date string given a date format</p>
+<ul>
+<li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> The format of the string to be converted</li>
+<li><p><code>@return</code> <a href="#interface-string"><code>string</code></a> Returns the formatted time string</p>
+</li>
+<li><p><code>@exmples</code>  </p>
+</li>
+</ul>
+<pre><code class="undefinedts">let date = new Date();
+let format = &#39;yyyy-MM-dd hh:mm:ss.fff&#39;;
+let dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10：32：23&#39;
+format = &#39;yyyy-MM-dd hh:mm:ss&#39;;
+dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10：32：23&#39;
+format = &#39;yyyy/MM/dd&#39;;
+dateStr = date.toString(format); // dateStr的值为 &#39;2008/12/10&#39;
+format = &#39;yyyy-MM-dd hh&#39;;
+dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10&#39;
+</code></pre>
+<ul>
+<li><code>@param</code> <code>timezone?</code>: <a href="#interface-number"><code>number</code></a> </li>
+</ul>
+<h2 id="interface-errordescribe">
+			Interface: ErrorDescribe
+			<span><a class="mark" href="#interface-errordescribe" id="interface-errordescribe">#</a></span>
+		</h2><h3 id="errordescribe">
+			ErrorDescribe
+			<span><a class="mark" href="#errordescribe" id="errordescribe">#</a></span>
+		</h3><ul>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="errnocode">
+			ErrnoCode
+			<span><a class="mark" href="#errnocode" id="errnocode">#</a></span>
+		</h2><p>The [errno,message,description] of Array</p>
+<ul>
+<li><code>@type</code> <code>ErrnoCode</code> = <code>[number,string,string?]</code></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="errornewarg">
+			ErrorNewArg
+			<span><a class="mark" href="#errornewarg" id="errornewarg">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>ErrorNewArg</code> = <a href="#errnocode"><code>ErrnoCode</code></a>|<a href="#interface-error"><code>Error</code></a>|<a href="#interface-string"><code>string</code></a>|<a href="#interface-errordescribe"><code>ErrorDescribe</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-error">
+			Interface: Error
+			<span><a class="mark" href="#interface-error" id="interface-error">#</a></span>
+		</h2><h3 id="error">
+			Error
+			<span><a class="mark" href="#error" id="error">#</a></span>
+		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</code></a></p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h3 id="error-capturestacktrace-targetobject-constructoropt-">
+			error.captureStackTrace(targetObject,constructorOpt?)
+			<span><a class="mark" href="#error-capturestacktrace-targetobject-constructoropt-" id="error-capturestacktrace-targetobject-constructoropt-">#</a></span>
+		</h3><p>Create .stack property on a target object</p>
+<ul>
+<li><code>@static</code>  </li>
+<li><code>@param</code> <code>targetObject</code>: <a href="#interface-object"><code>Object</code></a> </li>
+<li><code>@param</code> <code>constructorOpt?</code>: <a href="#interface-function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

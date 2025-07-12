@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'nav.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="_common.html"><code>quark/_common</code></a></li>
+<li><a href="_event.html"><code>quark/_event</code></a></li>
+<li><a href="_ext.html"><code>quark/_ext</code></a></li>
+<li><a href="_util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.0.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-nav">quark/nav</a></span>
+<ul>
+<li>
+<span><a href="#enum-navstatus">Enum: NavStatus</a></span>
+<ul>
+<li>
+<span><a href="#navstatus">NavStatus</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-navigationstatus">Class: NavigationStatus</a></span>
+<ul>
+<li>
+<span><a href="#navigationstatus">NavigationStatus</a></span>
+</li>
+<li>
+<span><a href="#navigationstatus-intoleave-animate-">navigationstatus.intoLeave(animate)</a></span>
+</li>
+<li>
+<span><a href="#navigationstatus-intobackground-animate-">navigationstatus.intoBackground(animate)</a></span>
+</li>
+<li>
+<span><a href="#navigationstatus-intoforeground-animate-">navigationstatus.intoForeground(animate)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-navigation">Class: Navigation</a></span>
+<ul>
+<li>
+<span><a href="#navigation">Navigation</a></span>
+</li>
+<li>
+<span><a href="#navigation-navstack">navigation.navStack</a></span>
+</li>
+<li>
+<span><a href="#navigation-initfocus-">navigation.initFocus()</a></span>
+</li>
+<li>
+<span><a href="#navigation-registernavigation-animate-">navigation.registerNavigation(animate)</a></span>
+</li>
+<li>
+<span><a href="#navigation-unregisternavigation-animate-">navigation.unregisterNavigation(animate)</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationback-">navigation.navigationBack()</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationenter-focus-">navigation.navigationEnter(focus)</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationtop-focus-">navigation.navigationTop(focus)</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationdown-focus-">navigation.navigationDown(focus)</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationleft-focus-">navigation.navigationLeft(focus)</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationright-focus-">navigation.navigationRight(focus)</a></span>
+</li>
+<li>
+<span><a href="#navigation-navigationmenu-">navigation.navigationMenu()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-navpagecollection">Class: NavPageCollection</a></span>
+<ul>
+<li>
+<span><a href="#navpagecollection">NavPageCollection</a></span>
+</li>
+<li>
+<span><a href="#navpagecollection-enableanimate">navpagecollection.enableAnimate</a></span>
+</li>
+<li>
+<span><a href="#navpagecollection-iscurrent-page-">navpagecollection.isCurrent(page)</a></span>
+</li>
+<li>
+<span><a href="#navpagecollection-push-arg-animate-">navpagecollection.push(arg,animate?)</a></span>
+</li>
+<li>
+<span><a href="#navpagecollection-pop-animate-count-">navpagecollection.pop(animate?,count?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-navbar">Class: Navbar</a></span>
+<ul>
+<li>
+<span><a href="#navbar">Navbar</a></span>
+</li>
+<li>
+<span><a href="#navbar-page">navbar.page</a></span>
+</li>
+<li>
+<span><a href="#navbar-setbacktext-value-">navbar.setBackText(value)</a></span>
+</li>
+<li>
+<span><a href="#navbar-settitletext-value-">navbar.setTitleText(value)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-navpage">Class: NavPage</a></span>
+<ul>
+<li>
+<span><a href="#navpage">NavPage</a></span>
+</li>
+<li>
+<span><a href="#navpage-prevpage">navpage.prevPage</a></span>
+</li>
+<li>
+<span><a href="#navpage-nextpage">navpage.nextPage</a></span>
+</li>
+<li>
+<span><a href="#navpage-collection">navpage.collection</a></span>
+</li>
+<li>
+<span><a href="#navpage-iscurrent">navpage.isCurrent</a></span>
+</li>
+<li>
+<span><a href="#navpage-isfirstpage">navpage.isFirstPage</a></span>
+</li>
+<li>
+<span><a href="#navpage-title">navpage.title</a></span>
+</li>
+<li>
+<span><a href="#navpage-navbar">navpage.navbar</a></span>
+</li>
+<li>
+<span><a href="#navpage-navbarhidden">navpage.navbarHidden</a></span>
+</li>
+<li>
+<span><a href="#navpage-includenavbarpadding">navpage.includeNavbarPadding</a></span>
+</li>
+<li>
+<span><a href="#navpage-navbarheight">navpage.navbarHeight</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-nav">
+			quark/nav
+			<span><a class="mark" href="#quark-nav" id="quark-nav">#</a></span>
+		</h1><h2 id="enum-navstatus">
+			Enum: NavStatus
+			<span><a class="mark" href="#enum-navstatus" id="enum-navstatus">#</a></span>
+		</h2><h3 id="navstatus">
+			NavStatus
+			<span><a class="mark" href="#navstatus" id="navstatus">#</a></span>
+		</h3><h2 id="class-navigationstatus">
+			Class: NavigationStatus
+			<span><a class="mark" href="#class-navigationstatus" id="class-navigationstatus">#</a></span>
+		</h2><h3 id="navigationstatus">
+			NavigationStatus
+			<span><a class="mark" href="#navigationstatus" id="navigationstatus">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="ctr.html#viewcontroller"><code>ViewController</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="navigationstatus-intoleave-animate-">
+			navigationstatus.intoLeave(animate)
+			<span><a class="mark" href="#navigationstatus-intoleave-animate-" id="navigationstatus-intoleave-animate-">#</a></span>
+		</h3><p>When the component leaves</p>
+<ul>
+<li><code>@param</code> <code>animate</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="navigationstatus-intobackground-animate-">
+			navigationstatus.intoBackground(animate)
+			<span><a class="mark" href="#navigationstatus-intobackground-animate-" id="navigationstatus-intobackground-animate-">#</a></span>
+		</h3><p>When the component enters the background</p>
+<ul>
+<li><code>@param</code> <code>animate</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="navigationstatus-intoforeground-animate-">
+			navigationstatus.intoForeground(animate)
+			<span><a class="mark" href="#navigationstatus-intoforeground-animate-" id="navigationstatus-intoforeground-animate-">#</a></span>
+		</h3><p>When the component enters the foreground</p>
+<ul>
+<li><code>@param</code> <code>animate</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="class-navigation">
+			Class: Navigation
+			<span><a class="mark" href="#class-navigation" id="class-navigation">#</a></span>
+		</h2><h3 id="navigation">
+			Navigation
+			<span><a class="mark" href="#navigation" id="navigation">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-navigationstatus"><code>NavigationStatus</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="navigation-navstack">
+			navigation.navStack
+			<span><a class="mark" href="#navigation-navstack" id="navigation-navstack">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>navStack</code>: <a href="event.html#list"><code>List</code></a>&lt;<a href="#class-navigation"><code>Navigation</code></a>&gt; </li>
+</ul>
+<h3 id="navigation-initfocus-">
+			navigation.initFocus()
+			<span><a class="mark" href="#navigation-initfocus-" id="navigation-initfocus-">#</a></span>
+		</h3><p>When initializing navigation, return a focus view</p>
+<ul>
+<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navigation-registernavigation-animate-">
+			navigation.registerNavigation(animate)
+			<span><a class="mark" href="#navigation-registernavigation-animate-" id="navigation-registernavigation-animate-">#</a></span>
+		</h3><p>Called when a navigation component is created</p>
+<ul>
+<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>animate</code>:  </li>
+</ul>
+<h3 id="navigation-unregisternavigation-animate-">
+			navigation.unregisterNavigation(animate)
+			<span><a class="mark" href="#navigation-unregisternavigation-animate-" id="navigation-unregisternavigation-animate-">#</a></span>
+		</h3><p>Called when a navigation component is unmounted</p>
+<ul>
+<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>animate</code>:  </li>
+</ul>
+<h3 id="navigation-navigationback-">
+			navigation.navigationBack()
+			<span><a class="mark" href="#navigation-navigationback-" id="navigation-navigationback-">#</a></span>
+		</h3><ul>
+<li>When a navigation event occurs, the system will first send the event to the focus view,
+  If the event can be successfully transmitted to root,
+  The event will ultimately be sent to the top of the current navigation list stack</li>
+<li>If false is returned here,
+  it will continue to pass to the bottom of the navigation list stack,
+  Until it returns true or reaches the bottom of the stack to exit the application</li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navigation-navigationenter-focus-">
+			navigation.navigationEnter(focus)
+			<span><a class="mark" href="#navigation-navigationenter-focus-" id="navigation-navigationenter-focus-">#</a></span>
+		</h3><p>Called when the remote control presses OK</p>
+<ul>
+<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a> </li>
+</ul>
+<h3 id="navigation-navigationtop-focus-">
+			navigation.navigationTop(focus)
+			<span><a class="mark" href="#navigation-navigationtop-focus-" id="navigation-navigationtop-focus-">#</a></span>
+		</h3><ul>
+<li>Called when the remote control presses Up</li>
+<li>The focus will not change in any way is returning null</li>
+<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navigation-navigationdown-focus-">
+			navigation.navigationDown(focus)
+			<span><a class="mark" href="#navigation-navigationdown-focus-" id="navigation-navigationdown-focus-">#</a></span>
+		</h3><ul>
+<li>Called when the remote control presses Down</li>
+<li>The focus will not change in any way is returning null</li>
+<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navigation-navigationleft-focus-">
+			navigation.navigationLeft(focus)
+			<span><a class="mark" href="#navigation-navigationleft-focus-" id="navigation-navigationleft-focus-">#</a></span>
+		</h3><ul>
+<li>Called when the remote control presses Left</li>
+<li>The focus will not change in any way is returning null</li>
+<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navigation-navigationright-focus-">
+			navigation.navigationRight(focus)
+			<span><a class="mark" href="#navigation-navigationright-focus-" id="navigation-navigationright-focus-">#</a></span>
+		</h3><ul>
+<li>Called when the remote control presses Right</li>
+<li>The focus will not change in any way is returning null</li>
+<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navigation-navigationmenu-">
+			navigation.navigationMenu()
+			<span><a class="mark" href="#navigation-navigationmenu-" id="navigation-navigationmenu-">#</a></span>
+		</h3><p>When pressing the menu button, it will be called up</p>
+<h2 id="class-navpagecollection">
+			Class: NavPageCollection
+			<span><a class="mark" href="#class-navpagecollection" id="class-navpagecollection">#</a></span>
+		</h2><h3 id="navpagecollection">
+			NavPageCollection
+			<span><a class="mark" href="#navpagecollection" id="navpagecollection">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-navigation"><code>Navigation</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="navpagecollection-enableanimate">
+			navpagecollection.enableAnimate
+			<span><a class="mark" href="#navpagecollection-enableanimate" id="navpagecollection-enableanimate">#</a></span>
+		</h3><ul>
+<li><code>enableAnimate</code>:  </li>
+</ul>
+<h3 id="navpagecollection-iscurrent-page-">
+			navpagecollection.isCurrent(page)
+			<span><a class="mark" href="#navpagecollection-iscurrent-page-" id="navpagecollection-iscurrent-page-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>page</code>: <a href="#class-navpage"><code>NavPage</code></a> </li>
+<li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpagecollection-push-arg-animate-">
+			navpagecollection.push(arg,animate?)
+			<span><a class="mark" href="#navpagecollection-push-arg-animate-" id="navpagecollection-push-arg-animate-">#</a></span>
+		</h3><p>Add a navigation page to the end and display</p>
+<ul>
+<li><code>@param</code> <code>arg</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-navpage"><code>NavPage</code></a>&gt; </li>
+<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpagecollection-pop-animate-count-">
+			navpagecollection.pop(animate?,count?)
+			<span><a class="mark" href="#navpagecollection-pop-animate-count-" id="navpagecollection-pop-animate-count-">#</a></span>
+		</h3><p>Remove pages from the end of the navigation</p>
+<ul>
+<li><code>@param</code> <code>animate?</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@param</code> <code>count?</code>: <a href="_ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h2 id="class-navbar">
+			Class: Navbar
+			<span><a class="mark" href="#class-navbar" id="class-navbar">#</a></span>
+		</h2><h3 id="navbar">
+			Navbar
+			<span><a class="mark" href="#navbar" id="navbar">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-navigationstatus"><code>NavigationStatus</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="navbar-page">
+			navbar.page
+			<span><a class="mark" href="#navbar-page" id="navbar-page">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>page</code>: <a href="#class-navpage"><code>NavPage</code></a> </li>
+</ul>
+<h3 id="navbar-setbacktext-value-">
+			navbar.setBackText(value)
+			<span><a class="mark" href="#navbar-setbacktext-value-" id="navbar-setbacktext-value-">#</a></span>
+		</h3><p>Set navbar back text</p>
+<ul>
+<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="navbar-settitletext-value-">
+			navbar.setTitleText(value)
+			<span><a class="mark" href="#navbar-settitletext-value-" id="navbar-settitletext-value-">#</a></span>
+		</h3><p>Set navbar title text</p>
+<ul>
+<li><code>@param</code> <code>value</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="class-navpage">
+			Class: NavPage
+			<span><a class="mark" href="#class-navpage" id="class-navpage">#</a></span>
+		</h2><h3 id="navpage">
+			NavPage
+			<span><a class="mark" href="#navpage" id="navpage">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-navigation"><code>Navigation</code></a></li>
+<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="navpage-prevpage">
+			navpage.prevPage
+			<span><a class="mark" href="#navpage-prevpage" id="navpage-prevpage">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>prevPage</code>: <a href="#class-navpage"><code>NavPage</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navpage-nextpage">
+			navpage.nextPage
+			<span><a class="mark" href="#navpage-nextpage" id="navpage-nextpage">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>nextPage</code>: <a href="#class-navpage"><code>NavPage</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="navpage-collection">
+			navpage.collection
+			<span><a class="mark" href="#navpage-collection" id="navpage-collection">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>collection</code>: <a href="#class-navpagecollection"><code>NavPageCollection</code></a> </li>
+</ul>
+<h3 id="navpage-iscurrent">
+			navpage.isCurrent
+			<span><a class="mark" href="#navpage-iscurrent" id="navpage-iscurrent">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>isCurrent</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpage-isfirstpage">
+			navpage.isFirstPage
+			<span><a class="mark" href="#navpage-isfirstpage" id="navpage-isfirstpage">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>isFirstPage</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpage-title">
+			navpage.title
+			<span><a class="mark" href="#navpage-title" id="navpage-title">#</a></span>
+		</h3><ul>
+<li><code>title</code>: <a href="_ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="navpage-navbar">
+			navpage.navbar
+			<span><a class="mark" href="#navpage-navbar" id="navpage-navbar">#</a></span>
+		</h3><ul>
+<li><code>navbar</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-navbar"><code>Navbar</code></a>&gt; </li>
+</ul>
+<h3 id="navpage-navbarhidden">
+			navpage.navbarHidden
+			<span><a class="mark" href="#navpage-navbarhidden" id="navpage-navbarhidden">#</a></span>
+		</h3><ul>
+<li><code>navbarHidden</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpage-includenavbarpadding">
+			navpage.includeNavbarPadding
+			<span><a class="mark" href="#navpage-includenavbarpadding" id="navpage-includenavbarpadding">#</a></span>
+		</h3><ul>
+<li><code>includeNavbarPadding</code>: <a href="_ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpage-navbarheight">
+			navpage.navbarHeight
+			<span><a class="mark" href="#navpage-navbarheight" id="navpage-navbarheight">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>navbarHeight</code>: <a href="_ext.html#number"><code>number</code></a> </li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>
