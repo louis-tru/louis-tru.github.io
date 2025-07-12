@@ -299,10 +299,8 @@
 			<span><a class="mark" href="#eventnoticer-constructor-name-sender-" id="eventnoticer-constructor-name-sender-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>name</code>: <a href="_ext.html#string"><code>string</code></a> Event name</li>
-<li><p><code>@param</code> <code>sender</code>: <a href="_ext.html#object"><code>object</code></a> Event sender</p>
-</li>
-<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
-</li>
+<li><p><code>@param</code> <code>sender</code>: <a href="_ext.html#object"><code>object</code></a> Event sender</p><br/></li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
 <li><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</li>
 </ul>
@@ -321,15 +319,11 @@ screen.onChange.on(function(ev) {
 <ul>
 <li><code>@param</code> <code>listen</code>:  Listening Function</li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
-<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p>
-</li>
-<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
-</li>
+<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p><br/></li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
-<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p>
-</li>
-<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
-</li>
+<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p><br/></li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
 <li><code>@param</code> <code>id</code>:  Listener alias, can be deleted by id</li>
 </ul>
@@ -345,9 +339,7 @@ screen.onChange.on(function(ev) {
 			<span><a class="mark" href="#eventnoticer-off-listen-ctx-" id="eventnoticer-off-listen-ctx-">#</a></span>
 		</h3><p>Remove listener function</p>
 <ul>
-<li><code>@param</code> <code>listen?</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#function"><code>Function</code></a>|<a href="_ext.html#object"><code>object</code></a> 
-  It can be a listener function/id alias/context.
-  If no parameter is passed, all listeners will be uninstalled.</li>
+<li><code>@param</code> <code>listen?</code>: <a href="_ext.html#string"><code>string</code></a>|<a href="_ext.html#function"><code>Function</code></a>|<a href="_ext.html#object"><code>object</code></a> <br/>  It can be a listener function/id alias/context.<br/>  If no parameter is passed, all listeners will be uninstalled.</li>
 <li><code>@return</code> <code>int</code>  Returns the number of deleted listeners</li>
 <li><code>@param</code> <code>ctx?</code>: <a href="_ext.html#object"><code>object</code></a> </li>
 </ul>
@@ -427,8 +419,7 @@ screen.onChange.on(function(ev) {
 <h3 id="notification-removeeventlistenerwithctx-ctx-">
 			notification.removeEventListenerWithCtx(ctx)
 			<span><a class="mark" href="#notification-removeeventlistenerwithctx-ctx-" id="notification-removeeventlistenerwithctx-ctx-">#</a></span>
-		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code>
-Actually traverse and call the [<code>EventNoticer.off(ctx)</code>] method</p>
+		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code><br/>Actually traverse and call the [<code>EventNoticer.off(ctx)</code>] method</p>
 <p>For example:</p>
 <pre><code class="undefinedts">import event from &#39;quark/event&#39;;
 

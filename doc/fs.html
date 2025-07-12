@@ -402,19 +402,11 @@
 <li><code>FOPEN_APPEND</code><br>Move the file read cursor to the end if the file exists </li>
 <li><code>FOPEN_NONBLOCK</code><br>Blocking mode, usually using the open function </li>
 <li><code>FOPEN_R</code><br>r, open the file for reading only, the file must exist </li>
-<li><code>FOPEN_W</code><br>w, Open a write-only file. If the file exists, the file length is cleared to zero, that is,
-the file content will disappear. If the file does not exist, it will be created. </li>
-<li><code>FOPEN_A</code><br>a, Open a write-only file in append mode. If the file does not exist, it will be created.
-If the file exists, the written data will be added to the end of the file, that is, 
-the original content of the file will be retained.</li>
-<li><code>FOPEN_RP</code><br>r+,
-Open a file for reading and writing. The file must exist.</li>
-<li><code>FOPEN_WP</code><br>w+, Open the file for reading and writing. If the file exists,
-the file length will be cleared to zero, that is, the file content will disappear.
-If the file does not exist, it will be created.</li>
-<li><code>FOPEN_AP</code><br>a+, Open a readable and writable file in append mode. If the file does not exist,
-it will be created. If the file exists, the written data will be added to the end of the file,
-that is, the original content of the file will be retained.</li>
+<li><code>FOPEN_W</code><br>w, Open a write-only file. If the file exists, the file length is cleared to zero, that is,<br/>the file content will disappear. If the file does not exist, it will be created. </li>
+<li><code>FOPEN_A</code><br>a, Open a write-only file in append mode. If the file does not exist, it will be created.<br/>If the file exists, the written data will be added to the end of the file, that is, <br/>the original content of the file will be retained.</li>
+<li><code>FOPEN_RP</code><br>r+,<br/>Open a file for reading and writing. The file must exist.</li>
+<li><code>FOPEN_WP</code><br>w+, Open the file for reading and writing. If the file exists,<br/>the file length will be cleared to zero, that is, the file content will disappear.<br/>If the file does not exist, it will be created.</li>
+<li><code>FOPEN_AP</code><br>a+, Open a readable and writable file in append mode. If the file does not exist,<br/>it will be created. If the file exists, the written data will be added to the end of the file,<br/>that is, the original content of the file will be retained.</li>
 </ul>
 <h2 id="enum-filetype">
 			Enum: FileType
@@ -431,14 +423,12 @@ that is, the original content of the file will be retained.</li>
 <li><code>FTYPE_FIFO</code><br>Named pipes, a special type of file used for interprocess communication (IPC) </li>
 <li><code>FTYPE_SOCKET</code><br>Socket </li>
 <li><code>FTYPE_CHAR</code><br>Unbuffered character devices, such as keyboard and mouse (/dev/input/<em>), terminal (/dev/tty</em>)</li>
-<li><code>FTYPE_BLOCK</code><br>Provides buffered, block-oriented (fixed-size data blocks) I/O access,
-such as hard disk drives (/dev/sda, /dev/sda1, /dev/nvme0n1p1)</li>
+<li><code>FTYPE_BLOCK</code><br>Provides buffered, block-oriented (fixed-size data blocks) I/O access,<br/>such as hard disk drives (/dev/sda, /dev/sda1, /dev/nvme0n1p1)</li>
 </ul>
 <h2 id="defaultmode">
 			defaultMode
 			<span><a class="mark" href="#defaultmode" id="defaultmode">#</a></span>
-		</h2><p>Create and set the default <code>mode</code> value of the file, 
-which is related to the file&#39;s permissions. This is an <code>int</code> integer type value</p>
+		</h2><p>Create and set the default <code>mode</code> value of the file, <br/>which is related to the file&#39;s permissions. This is an <code>int</code> integer type value</p>
 <ul>
 <li><code>@const</code> <code>defaultMode</code>: </li>
 </ul>
@@ -751,8 +741,7 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 <h2 id="mkdirs-path-mode-">
 			mkdirs(path,mode?)
 			<span><a class="mark" href="#mkdirs-path-mode-" id="mkdirs-path-mode-">#</a></span>
-		</h2><p>Recursively create directories. This method will create 
-    a directory tree in sequence, and will not throw an exception if the directory exists.</p>
+		</h2><p>Recursively create directories. This method will create <br/>    a directory tree in sequence, and will not throw an exception if the directory exists.</p>
 <p>Ref: sync method [<code>mkdirsSync(path[,mode])</code>]</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
@@ -799,8 +788,7 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 <h2 id="readdir-path-">
 			readdir(path)
 			<span><a class="mark" href="#readdir-path-" id="readdir-path-">#</a></span>
-		</h2><p>Read directory listing information. Throws an exception if failed. 
-    Returns an <a href="_ext.html#array"><code>Array</code></a> of <a href="#interface-dirent"><code>Dirent</code></a> if successful.</p>
+		</h2><p>Read directory listing information. Throws an exception if failed. <br/>    Returns an <a href="_ext.html#array"><code>Array</code></a> of <a href="#interface-dirent"><code>Dirent</code></a> if successful.</p>
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints:
 // {
@@ -931,8 +919,7 @@ fs.abort(task.id);
 <h2 id="copyrecursion-path-target-">
 			copyRecursion(path,target)
 			<span><a class="mark" href="#copyrecursion-path-target-" id="copyrecursion-path-target-">#</a></span>
-		</h2><p>Recursively copy files
-The difference between <code>copyRecursion()</code> and <code>copy()</code> is that <code>copy()</code> can only copy a single file</p>
+		</h2><p>Recursively copy files<br/>The difference between <code>copyRecursion()</code> and <code>copy()</code> is that <code>copy()</code> can only copy a single file</p>
 <p>For example:</p>
 <pre><code class="undefinedts">fs.copy(source, target).then(()=&gt;{
     // Success
@@ -948,8 +935,7 @@ The difference between <code>copyRecursion()</code> and <code>copy()</code> is t
 <h2 id="copy-path-target-">
 			copy(path,target)
 			<span><a class="mark" href="#copy-path-target-" id="copy-path-target-">#</a></span>
-		</h2><p>Copy a single file
-Ref: <a href="#copyrecursion-path-target-"><code>copyRecursion(path,target)</code></a></p>
+		</h2><p>Copy a single file<br/>Ref: <a href="#copyrecursion-path-target-"><code>copyRecursion(path,target)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>target</code>: <a href="_ext.html#string"><code>string</code></a> </li>
@@ -973,13 +959,9 @@ Ref: <a href="#copyrecursion-path-target-"><code>copyRecursion(path,target)</cod
 		</h3><p>The methods provided here can perform basic read operations on URI paths of different protocols</p>
 <p>Currently supported path types:</p>
 <ul>
-<li><p><code>[</code>http://<code>](http://`) or `[`https://</code>](https://<code>) - can be read synchronously or asynchronously, but cannot read directories or test existence,</code>readdirSync()<code>returns an empty array and</code>isFileSync()<code>always returns</code>false`.</p>
-</li>
-<li><p><code>file://</code> local file path. <code>/var/data</code> or <code>var/data</code> can be used as local paths without error.</p>
-</li>
-<li><p><code>zip://</code> This is a way to represent the path in the <code>zip</code> package, <code>zip:///var/data/test.zip@/a.txt</code>
-This path represents the <code>a.txt</code> file in <code>zip:///var/data/test.zip</code>. Note that this path must exist in the local file system</p>
-</li>
+<li><p><code>[</code>http://<code>](http://`) or `[`https://</code>](https://<code>) - can be read synchronously or asynchronously, but cannot read directories or test existence,</code>readdirSync()<code>returns an empty array and</code>isFileSync()<code>always returns</code>false`.</p><br/></li>
+<li><p><code>file://</code> local file path. <code>/var/data</code> or <code>var/data</code> can be used as local paths without error.</p><br/></li>
+<li><p><code>zip://</code> This is a way to represent the path in the <code>zip</code> package, <code>zip:///var/data/test.zip@/a.txt</code><br/>This path represents the <code>a.txt</code> file in <code>zip:///var/data/test.zip</code>. Note that this path must exist in the local file system</p><br/></li>
 </ul>
 <h3 id="reader-readfile-path-">
 			reader.readFile(path)
@@ -1043,10 +1025,7 @@ reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
 <h3 id="reader-existssync-path-">
 			reader.existsSync(path)
 			<span><a class="mark" href="#reader-existssync-path-" id="reader-existssync-path-">#</a></span>
-		</h3><p>同步测试文件或目录是否存在，如果文件存在会返回<code>false</code>
-这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回</code>false<code>](http://`与`https://`类型的路径,如果传入这种路径立即返回`false`)
-Synchronously test whether a file or directory exists. If the file exists, it will return `false`
-This method cannot handle paths of the `[`http://</code>](http://<code>) and</code><a href="https://`"><code>https://`</code></a> type. If such a path is passed, it will immediately return <code>false</code></p>
+		</h3><p>同步测试文件或目录是否存在，如果文件存在会返回<code>false</code><br/>这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回</code>false<code>](http://`与`https://`类型的路径,如果传入这种路径立即返回`false`)<br/>Synchronously test whether a file or directory exists. If the file exists, it will return `false`<br/>This method cannot handle paths of the `[`http://</code>](http://<code>) and</code><a href="https://`"><code>https://`</code></a> type. If such a path is passed, it will immediately return <code>false</code></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
@@ -1054,10 +1033,7 @@ This method cannot handle paths of the `[`http://</code>](http://<code>) and</co
 <h3 id="reader-isfilesync-path-">
 			reader.isFileSync(path)
 			<span><a class="mark" href="#reader-isfilesync-path-" id="reader-isfilesync-path-">#</a></span>
-		</h3><p>同步检查路径是否为文件，如果路径不存在返回 <code>false</code>
-这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回</code>false<code>](http://`与`https://`类型的路径,如果传入这种路径立即返回`false`)
-Synchronously check if the path is a file, and return `false` if the path does not exist
-This method cannot handle `[`http://</code>](http://<code>) and</code><a href="https://`"><code>https://`</code></a> type paths, and immediately returns <code>false</code> if such a path is passed</p>
+		</h3><p>同步检查路径是否为文件，如果路径不存在返回 <code>false</code><br/>这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回</code>false<code>](http://`与`https://`类型的路径,如果传入这种路径立即返回`false`)<br/>Synchronously check if the path is a file, and return `false` if the path does not exist<br/>This method cannot handle `[`http://</code>](http://<code>) and</code><a href="https://`"><code>https://`</code></a> type paths, and immediately returns <code>false</code> if such a path is passed</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
@@ -1065,10 +1041,7 @@ This method cannot handle `[`http://</code>](http://<code>) and</code><a href="h
 <h3 id="reader-isdirectorysync-path-">
 			reader.isDirectorySync(path)
 			<span><a class="mark" href="#reader-isdirectorysync-path-" id="reader-isdirectorysync-path-">#</a></span>
-		</h3><p>同步检查路径是否为目录，如果路径不存在返回 <code>false</code>
-这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回</code>false<code>](http://`与`https://`类型的路径,如果传入这种路径立即返回`false`)
-Synchronously check if the path is a directory, and return `false` if the path does not exist
-This method cannot handle `[`http://</code>](http://<code>) and</code><a href="https://`"><code>https://`</code></a> type paths, and immediately returns <code>false</code> if such a path is passed in</p>
+		</h3><p>同步检查路径是否为目录，如果路径不存在返回 <code>false</code><br/>这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回</code>false<code>](http://`与`https://`类型的路径,如果传入这种路径立即返回`false`)<br/>Synchronously check if the path is a directory, and return `false` if the path does not exist<br/>This method cannot handle `[`http://</code>](http://<code>) and</code><a href="https://`"><code>https://`</code></a> type paths, and immediately returns <code>false</code> if such a path is passed in</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="_ext.html#boolean"><code>boolean</code></a> </li>
@@ -1076,12 +1049,7 @@ This method cannot handle `[`http://</code>](http://<code>) and</code><a href="h
 <h3 id="reader-readdirsync-path-">
 			reader.readdirSync(path)
 			<span><a class="mark" href="#reader-readdirsync-path-" id="reader-readdirsync-path-">#</a></span>
-		</h3><p>同步读取目录文件列表,
-这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回一个空数组[</code>Array<code>],</code>](http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回一个空数组[</code>Array<code>],)
-这个方法也不会抛出异常，如果不能读取路径，只会返回空数组[</code>Array<code>]
-Synchronously read the directory file list,
-This method cannot handle</code><a href="http://`"><code>http://`</code></a> and <code>[</code>https://<code></code>](https://<code>) type paths. If such a path is passed, an empty array [</code>Array<code>] will be immediately returned.
-This method will not throw an exception. If the path cannot be read, it will only return an empty array [</code>Array`]</p>
+		</h3><p>同步读取目录文件列表,<br/>这个方法不能处理<code>[</code>http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回一个空数组[</code>Array<code>],</code>](http://<code>与</code>https://<code>类型的路径,如果传入这种路径立即返回一个空数组[</code>Array<code>],)<br/>这个方法也不会抛出异常，如果不能读取路径，只会返回空数组[</code>Array<code>]<br/>Synchronously read the directory file list,<br/>This method cannot handle</code><a href="http://`"><code>http://`</code></a> and <code>[</code>https://<code></code>](https://<code>) type paths. If such a path is passed, an empty array [</code>Array<code>] will be immediately returned.<br/>This method will not throw an exception. If the path cannot be read, it will only return an empty array [</code>Array`]</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#interface-dirent"><code>Dirent</code></a><code>[]</code> </li>

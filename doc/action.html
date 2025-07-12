@@ -261,14 +261,7 @@
 			ActionIn
 			<span><a class="mark" href="#actionin" id="actionin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>ActionIn</code> = <a href="#class-action"><code>Action</code></a>|<a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>| {
-<code>playing?</code>: <a href="_ext.html#boolean"><code>boolean</code></a>; 
-<code>loop?</code>: <a href="_ext.html#number"><code>number</code></a>; 
-<code>speed?</code>: <a href="_ext.html#number"><code>number</code></a>; 
-<code>spawn?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; 
-<code>seq?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; 
-<code>keyframe?</code>: <a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>; 
-}</li>
+<li><code>@type</code> <code>ActionIn</code> = <a href="#class-action"><code>Action</code></a>|<a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>| {<br/><code>playing?</code>: <a href="_ext.html#boolean"><code>boolean</code></a>; <br/><code>loop?</code>: <a href="_ext.html#number"><code>number</code></a>; <br/><code>speed?</code>: <a href="_ext.html#number"><code>number</code></a>; <br/><code>spawn?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>seq?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>keyframe?</code>: <a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>; <br/>}</li>
 </ul>
 <h2 id="class-keyframe">
 			Class: Keyframe
@@ -402,8 +395,7 @@
 <h3 id="action-before-action-">
 			action.before(action)
 			<span><a class="mark" href="#action-before-action-" id="action-before-action-">#</a></span>
-		</h3><p>Add a sibling action to the front of itself.
-The current action needs to have a parent action else it will be invalid.</p>
+		</h3><p>Add a sibling action to the front of itself.<br/>The current action needs to have a parent action else it will be invalid.</p>
 <ul>
 <li><code>@param</code> <code>action</code>: <a href="#class-action"><code>Action</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
@@ -411,8 +403,7 @@ The current action needs to have a parent action else it will be invalid.</p>
 <h3 id="action-after-action-">
 			action.after(action)
 			<span><a class="mark" href="#action-after-action-" id="action-after-action-">#</a></span>
-		</h3><p>Add a sibling action to the back of itself.
-The current action needs to have a parent action, otherwise it will be invalid.</p>
+		</h3><p>Add a sibling action to the back of itself.<br/>The current action needs to have a parent action, otherwise it will be invalid.</p>
 <ul>
 <li><code>@param</code> <code>action</code>: <a href="#class-action"><code>Action</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
@@ -525,8 +516,7 @@ The current action needs to have a parent action, otherwise it will be invalid.<
 <h3 id="keyframeaction-add-styleorcssexp-time-curve-">
 			keyframeaction.add(styleOrCssExp,time?,curve?)
 			<span><a class="mark" href="#keyframeaction-add-styleorcssexp-time-curve-" id="keyframeaction-add-styleorcssexp-time-curve-">#</a></span>
-		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,
-and return keyframes</p>
+		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,<br/>and return keyframes</p>
 <ul>
 <li><code>@param</code> <code>styleOrCssExp</code>: <a href="#keyframein"><code>KeyframeIn</code></a> style sheet or css exp</li>
 <li><code>@param</code> <code>time?</code>: <a href="_ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
@@ -537,14 +527,11 @@ and return keyframes</p>
 			createAction(win,arg,parent?)
 			<span><a class="mark" href="#createaction-win-arg-parent-" id="createaction-win-arg-parent-">#</a></span>
 		</h2><ul>
-<li>Create an action through the <code>json</code> parameter. If the <code>arg</code> passed in is <a href="#class-action"><code>Action</code></a>,
-  skip the creation process and return directly.
-  If the parent action is passed in, append the newly created action to the end of <code>parent</code> after creation.</li>
+<li>Create an action through the <code>json</code> parameter. If the <code>arg</code> passed in is <a href="#class-action"><code>Action</code></a>,<br/>  skip the creation process and return directly.<br/>  If the parent action is passed in, append the newly created action to the end of <code>parent</code> after creation.</li>
 <li>If the passed in parameter is an <a href="_ext.html#array"><code>Array</code></a>, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a> and use this <a href="_ext.html#array"><code>Array</code></a> to create the corresponding <a href="#class-keyframe"><code>Keyframe</code></a></li>
 <li>If the passed in parameter has a <code>seq</code> attribute, create a <a href="#class-sequenceaction"><code>SequenceAction</code></a></li>
 <li>If the passed in parameter has a <code>spawn</code> attribute, create a <a href="#class-spawnaction"><code>SpawnAction</code></a></li>
-<li>If there is no <code>seq</code> or <code>spawn</code> in the passed in parameter, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a>
-  If the object&#39;s internal attribute <code>keyframe</code> is <a href="_ext.html#array"><code>Array</code></a>, use this <a href="_ext.html#array"><code>Array</code></a> to create a <a href="#class-keyframe"><code>Keyframe</code></a></li>
+<li>If there is no <code>seq</code> or <code>spawn</code> in the passed in parameter, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a><br/>  If the object&#39;s internal attribute <code>keyframe</code> is <a href="_ext.html#array"><code>Array</code></a>, use this <a href="_ext.html#array"><code>Array</code></a> to create a <a href="#class-keyframe"><code>Keyframe</code></a></li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">var act1 = createAction(win, [
@@ -590,9 +577,7 @@ var act2 = createAction(win, {
 <h2 id="transition-view-to-fromorcb-cb-">
 			transition(view,to,fromOrCb?,cb?)
 			<span><a class="mark" href="#transition-view-to-fromorcb-cb-" id="transition-view-to-fromorcb-cb-">#</a></span>
-		</h2><p>Create a view style transition action by the style and play this action,
-    and callback after completion
-Callback: cb()</p>
+		</h2><p>Create a view style transition action by the style and play this action,<br/>    and callback after completion<br/>Callback: cb()</p>
 <p>For example:</p>
 <pre><code class="undefinedts">// The transition is completed and callback is made after 1 second
 transition(view, {

@@ -213,10 +213,7 @@
 <h2 id="formatpath-args-">
 			formatPath(...args)
 			<span><a class="mark" href="#formatpath-args-" id="formatpath-args-">#</a></span>
-		</h2><p>file:///home/louis/test.txt
-file:///d:/home/louis/test.txt
-<a href="http://google.com/test.txt"><code>http://google.com/test.txt</code></a>
-return format path</p>
+		</h2><p>file:///home/louis/test.txt<br/>file:///d:/home/louis/test.txt<br/><a href="http://google.com/test.txt"><code>http://google.com/test.txt</code></a><br/>return format path</p>
 <ul>
 <li><code>@param</code> <code>args</code>: <a href="_ext.html#string"><code>string</code></a><code>[]</code> </li>
 <li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
@@ -254,9 +251,7 @@ return format path</p>
 <h2 id="stripbom-content-">
 			stripBOM(content)
 			<span><a class="mark" href="#stripbom-content-" id="stripbom-content-">#</a></span>
-		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
-because the buffer-to-string conversion in <code>fs.readFileSync()</code>
-translates it to FEFF, the UTF-16 BOM.</p>
+		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)<br/>because the buffer-to-string conversion in <code>fs.readFileSync()</code><br/>translates it to FEFF, the UTF-16 BOM.</p>
 <ul>
 <li><code>@param</code> <code>content</code>: <a href="_ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="_ext.html#string"><code>string</code></a> </li>
@@ -362,8 +357,7 @@ translates it to FEFF, the UTF-16 BOM.</p>
 <h3 id="default-runscript-source-name-sandbox-">
 			default.runScript(source,name?,sandbox?)
 			<span><a class="mark" href="#default-runscript-source-name-sandbox-" id="default-runscript-source-name-sandbox-">#</a></span>
-		</h3><p>Compile and run a piece of javascript code and return the running result.
-    You can specify a name and a running context object.</p>
+		</h3><p>Compile and run a piece of javascript code and return the running result.<br/>    You can specify a name and a running context object.</p>
 <p>The name is very useful when debugging code or program exceptions. It is usually a file name.</p>
 <p>If you do not pass this sandbox <code>sandbox</code> context, the default is to use the <code>global</code> object.</p>
 <ul>
