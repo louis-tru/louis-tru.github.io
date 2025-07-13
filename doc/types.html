@@ -336,6 +336,19 @@
 <span><a href="#finddirectionin">FindDirectionIn</a></span>
 </li>
 <li>
+<span><a href="#class-base">Class: Base</a></span>
+<ul>
+<li>
+<span><a href="#base">Base</a></span>
+</li>
+<li>
+<span><a href="#base-tostring-">base.toString()</a></span>
+</li>
+<li>
+<span><a href="#base-tostringstyled-indent-">base.toStringStyled(indent?)</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#class-vec2">Class: Vec2</a></span>
 <ul>
 <li>
@@ -733,10 +746,10 @@
 <span><a href="#textcolorin">TextColorIn</a></span>
 </li>
 <li>
-<span><a href="#class-textcolor">Class: TextColor</a></span>
+<span><a href="#class-textsize">Class: TextSize</a></span>
 <ul>
 <li>
-<span><a href="#textcolor">TextColor</a></span>
+<span><a href="#textsize">TextSize</a></span>
 </li>
 </ul>
 <li>
@@ -749,34 +762,34 @@
 <span><a href="#textlineheight">TextLineHeight</a></span>
 </li>
 <li>
-<span><a href="#class-textcolor">Class: TextColor</a></span>
+<span><a href="#class-textshadow">Class: TextShadow</a></span>
 <ul>
 <li>
-<span><a href="#textcolor">TextColor</a></span>
+<span><a href="#textshadow">TextShadow</a></span>
 </li>
 <li>
-<span><a href="#textcolor-x">textcolor.x</a></span>
+<span><a href="#textshadow-x">textshadow.x</a></span>
 </li>
 <li>
-<span><a href="#textcolor-y">textcolor.y</a></span>
+<span><a href="#textshadow-y">textshadow.y</a></span>
 </li>
 <li>
-<span><a href="#textcolor-size">textcolor.size</a></span>
+<span><a href="#textshadow-size">textshadow.size</a></span>
 </li>
 <li>
-<span><a href="#textcolor-color">textcolor.color</a></span>
+<span><a href="#textshadow-color">textshadow.color</a></span>
 </li>
 <li>
-<span><a href="#textcolor-r">textcolor.r</a></span>
+<span><a href="#textshadow-r">textshadow.r</a></span>
 </li>
 <li>
-<span><a href="#textcolor-g">textcolor.g</a></span>
+<span><a href="#textshadow-g">textshadow.g</a></span>
 </li>
 <li>
-<span><a href="#textcolor-b">textcolor.b</a></span>
+<span><a href="#textshadow-b">textshadow.b</a></span>
 </li>
 <li>
-<span><a href="#textcolor-a">textcolor.a</a></span>
+<span><a href="#textshadow-a">textshadow.a</a></span>
 </li>
 </ul>
 <li>
@@ -786,13 +799,13 @@
 <span><a href="#ffid">FFID</a></span>
 </li>
 <li>
-<span><a href="#class-textcolor">Class: TextColor</a></span>
+<span><a href="#class-textfamily">Class: TextFamily</a></span>
 <ul>
 <li>
-<span><a href="#textcolor">TextColor</a></span>
+<span><a href="#textfamily">TextFamily</a></span>
 </li>
 <li>
-<span><a href="#textcolor-families-">textcolor.families()</a></span>
+<span><a href="#textfamily-families-">textfamily.families()</a></span>
 </li>
 </ul>
 <li>
@@ -1576,13 +1589,34 @@
 		</h2><ul>
 <li><code>@type</code> <code>FindDirectionIn</code> = <code>&quot;none&quot;</code>|<code>&quot;left&quot;</code>|<code>&quot;top&quot;</code>|<code>&quot;right&quot;</code>|<code>&quot;bottom&quot;</code>|<a href="#enum-finddirection"><code>FindDirection</code></a></li>
 </ul>
+<h2 id="class-base">
+			Class: Base
+			<span><a class="mark" href="#class-base" id="class-base">#</a></span>
+		</h2><h3 id="base">
+			Base
+			<span><a class="mark" href="#base" id="base">#</a></span>
+		</h3><ul>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+</ul>
+<h3 id="base-tostring-">
+			base.toString()
+			<span><a class="mark" href="#base-tostring-" id="base-tostring-">#</a></span>
+		</h3><h3 id="base-tostringstyled-indent-">
+			base.toStringStyled(indent?)
+			<span><a class="mark" href="#base-tostringstyled-indent-" id="base-tostringstyled-indent-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>indent?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
 <h2 id="class-vec2">
 			Class: Vec2
 			<span><a class="mark" href="#class-vec2" id="class-vec2">#</a></span>
 		</h2><h3 id="vec2">
 			Vec2
 			<span><a class="mark" href="#vec2" id="vec2">#</a></span>
-		</h3><h3 id="vec2-x">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-vec2"><code>Vec2</code></a>&gt;</li>
+</ul>
+<h3 id="vec2-x">
 			vec2.x
 			<span><a class="mark" href="#vec2-x" id="vec2-x">#</a></span>
 		</h3><ul>
@@ -1606,7 +1640,10 @@
 		</h2><h3 id="vec3">
 			Vec3
 			<span><a class="mark" href="#vec3" id="vec3">#</a></span>
-		</h3><h3 id="vec3-x">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-vec3"><code>Vec3</code></a>&gt;</li>
+</ul>
+<h3 id="vec3-x">
 			vec3.x
 			<span><a class="mark" href="#vec3-x" id="vec3-x">#</a></span>
 		</h3><ul>
@@ -1636,7 +1673,10 @@
 		</h2><h3 id="vec4">
 			Vec4
 			<span><a class="mark" href="#vec4" id="vec4">#</a></span>
-		</h3><h3 id="vec4-x">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-vec4"><code>Vec4</code></a>&gt;</li>
+</ul>
+<h3 id="vec4-x">
 			vec4.x
 			<span><a class="mark" href="#vec4-x" id="vec4-x">#</a></span>
 		</h3><ul>
@@ -1672,7 +1712,10 @@
 		</h2><h3 id="curve">
 			Curve
 			<span><a class="mark" href="#curve" id="curve">#</a></span>
-		</h3><h3 id="curve-p1">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-curve"><code>Curve</code></a>&gt;</li>
+</ul>
+<h3 id="curve-p1">
 			curve.p1
 			<span><a class="mark" href="#curve-p1" id="curve-p1">#</a></span>
 		</h3><ul>
@@ -1720,7 +1763,10 @@
 		</h2><h3 id="rect">
 			Rect
 			<span><a class="mark" href="#rect" id="rect">#</a></span>
-		</h3><h3 id="rect-origin">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-rect"><code>Rect</code></a>&gt;</li>
+</ul>
+<h3 id="rect-origin">
 			rect.origin
 			<span><a class="mark" href="#rect-origin" id="rect-origin">#</a></span>
 		</h3><ul>
@@ -1768,7 +1814,10 @@
 		</h2><h3 id="mat">
 			Mat
 			<span><a class="mark" href="#mat" id="mat">#</a></span>
-		</h3><h3 id="mat-m0">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-mat"><code>Mat</code></a>&gt;</li>
+</ul>
+<h3 id="mat-m0">
 			mat.m0
 			<span><a class="mark" href="#mat-m0" id="mat-m0">#</a></span>
 		</h3><ul>
@@ -1816,7 +1865,10 @@
 		</h2><h3 id="mat4">
 			Mat4
 			<span><a class="mark" href="#mat4" id="mat4">#</a></span>
-		</h3><h3 id="mat4-m0">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-mat4"><code>Mat4</code></a>&gt;</li>
+</ul>
+<h3 id="mat4-m0">
 			mat4.m0
 			<span><a class="mark" href="#mat4-m0" id="mat4-m0">#</a></span>
 		</h3><ul>
@@ -1918,7 +1970,10 @@
 		</h2><h3 id="color">
 			Color
 			<span><a class="mark" href="#color" id="color">#</a></span>
-		</h3><h3 id="color-r">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-color"><code>Color</code></a>&gt;</li>
+</ul>
+<h3 id="color-r">
 			color.r
 			<span><a class="mark" href="#color-r" id="color-r">#</a></span>
 		</h3><ul>
@@ -1960,7 +2015,10 @@
 		</h2><h3 id="shadow">
 			Shadow
 			<span><a class="mark" href="#shadow" id="shadow">#</a></span>
-		</h3><h3 id="shadow-x">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-shadow"><code>Shadow</code></a>&gt;</li>
+</ul>
+<h3 id="shadow-x">
 			shadow.x
 			<span><a class="mark" href="#shadow-x" id="shadow-x">#</a></span>
 		</h3><ul>
@@ -2020,7 +2078,10 @@
 		</h2><h3 id="boxborder">
 			BoxBorder
 			<span><a class="mark" href="#boxborder" id="boxborder">#</a></span>
-		</h3><h3 id="boxborder-width">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-boxborder"><code>BoxBorder</code></a>&gt;</li>
+</ul>
+<h3 id="boxborder-width">
 			boxborder.width
 			<span><a class="mark" href="#boxborder-width" id="boxborder-width">#</a></span>
 		</h3><ul>
@@ -2068,7 +2129,10 @@
 		</h2><h3 id="fillposition">
 			FillPosition
 			<span><a class="mark" href="#fillposition" id="fillposition">#</a></span>
-		</h3><h3 id="fillposition-value">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-fillposition"><code>FillPosition</code></a>&gt;</li>
+</ul>
+<h3 id="fillposition-value">
 			fillposition.value
 			<span><a class="mark" href="#fillposition-value" id="fillposition-value">#</a></span>
 		</h3><ul>
@@ -2098,7 +2162,10 @@
 		</h2><h3 id="fillsize">
 			FillSize
 			<span><a class="mark" href="#fillsize" id="fillsize">#</a></span>
-		</h3><h3 id="fillsize-value">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-fillsize"><code>FillSize</code></a>&gt;</li>
+</ul>
+<h3 id="fillsize-value">
 			fillsize.value
 			<span><a class="mark" href="#fillsize-value" id="fillsize-value">#</a></span>
 		</h3><ul>
@@ -2128,7 +2195,10 @@
 		</h2><h3 id="boxsize">
 			BoxSize
 			<span><a class="mark" href="#boxsize" id="boxsize">#</a></span>
-		</h3><h3 id="boxsize-value">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-boxsize"><code>BoxSize</code></a>&gt;</li>
+</ul>
+<h3 id="boxsize-value">
 			boxsize.value
 			<span><a class="mark" href="#boxsize-value" id="boxsize-value">#</a></span>
 		</h3><ul>
@@ -2158,7 +2228,10 @@
 		</h2><h3 id="boxorigin">
 			BoxOrigin
 			<span><a class="mark" href="#boxorigin" id="boxorigin">#</a></span>
-		</h3><h3 id="boxorigin-value">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-boxsize"><code>BoxSize</code></a>&gt;</li>
+</ul>
+<h3 id="boxorigin-value">
 			boxorigin.value
 			<span><a class="mark" href="#boxorigin-value" id="boxorigin-value">#</a></span>
 		</h3><ul>
@@ -2190,7 +2263,7 @@
 			<span><a class="mark" href="#textbase" id="textbase">#</a></span>
 		</h3><ul>
 <li><code>@template</code> &lt;<code>Derived</code>,<code>Value</code>&gt;</li>
-<li><code>@extends</code> <code>Base</code></li>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<code>Derived</code>&gt;</li>
 </ul>
 <h3 id="textbase-value">
 			textbase.value
@@ -2210,7 +2283,10 @@
 		</h2><h3 id="textcolor">
 			TextColor
 			<span><a class="mark" href="#textcolor" id="textcolor">#</a></span>
-		</h3><h3 id="textcolor-r">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textcolor"><code>TextColor</code></a>,<a href="#class-color"><code>Color</code></a>&gt;</li>
+</ul>
+<h3 id="textcolor-r">
 			textcolor.r
 			<span><a class="mark" href="#textcolor-r" id="textcolor-r">#</a></span>
 		</h3><ul>
@@ -2246,17 +2322,20 @@
 		</h2><ul>
 <li><code>@type</code> <code>TextColorIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#colorin"><code>ColorIn</code></a>|<a href="#class-textcolor"><code>TextColor</code></a></li>
 </ul>
-<h2 id="class-textcolor">
-			Class: TextColor
-			<span><a class="mark" href="#class-textcolor" id="class-textcolor">#</a></span>
-		</h2><h3 id="textcolor">
-			TextColor
-			<span><a class="mark" href="#textcolor" id="textcolor">#</a></span>
-		</h3><h2 id="textsizein">
+<h2 id="class-textsize">
+			Class: TextSize
+			<span><a class="mark" href="#class-textsize" id="class-textsize">#</a></span>
+		</h2><h3 id="textsize">
+			TextSize
+			<span><a class="mark" href="#textsize" id="textsize">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textsize"><code>TextSize</code></a>,<a href="#n"><code>N</code></a>&gt;</li>
+</ul>
+<h2 id="textsizein">
 			TextSizeIn
 			<span><a class="mark" href="#textsizein" id="textsizein">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextSizeIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#n"><code>N</code></a>|<code>TextSize</code></li>
+<li><code>@type</code> <code>TextSizeIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#n"><code>N</code></a>|<a href="#class-textsize"><code>TextSize</code></a></li>
 </ul>
 <h2 id="textlineheightin">
 			TextLineHeightIn
@@ -2268,59 +2347,62 @@
 			TextLineHeight
 			<span><a class="mark" href="#textlineheight" id="textlineheight">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextLineHeight</code> = <code>TextSize</code></li>
+<li><code>@type</code> <code>TextLineHeight</code> = <a href="#class-textsize"><code>TextSize</code></a></li>
 </ul>
-<h2 id="class-textcolor">
-			Class: TextColor
-			<span><a class="mark" href="#class-textcolor" id="class-textcolor">#</a></span>
-		</h2><h3 id="textcolor">
-			TextColor
-			<span><a class="mark" href="#textcolor" id="textcolor">#</a></span>
-		</h3><h3 id="textcolor-x">
-			textcolor.x
-			<span><a class="mark" href="#textcolor-x" id="textcolor-x">#</a></span>
+<h2 id="class-textshadow">
+			Class: TextShadow
+			<span><a class="mark" href="#class-textshadow" id="class-textshadow">#</a></span>
+		</h2><h3 id="textshadow">
+			TextShadow
+			<span><a class="mark" href="#textshadow" id="textshadow">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textshadow"><code>TextShadow</code></a>,<a href="#class-shadow"><code>Shadow</code></a>&gt;</li>
+</ul>
+<h3 id="textshadow-x">
+			textshadow.x
+			<span><a class="mark" href="#textshadow-x" id="textshadow-x">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="textcolor-y">
-			textcolor.y
-			<span><a class="mark" href="#textcolor-y" id="textcolor-y">#</a></span>
+<h3 id="textshadow-y">
+			textshadow.y
+			<span><a class="mark" href="#textshadow-y" id="textshadow-y">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="textcolor-size">
-			textcolor.size
-			<span><a class="mark" href="#textcolor-size" id="textcolor-size">#</a></span>
+<h3 id="textshadow-size">
+			textshadow.size
+			<span><a class="mark" href="#textshadow-size" id="textshadow-size">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>size</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="textcolor-color">
-			textcolor.color
-			<span><a class="mark" href="#textcolor-color" id="textcolor-color">#</a></span>
+<h3 id="textshadow-color">
+			textshadow.color
+			<span><a class="mark" href="#textshadow-color" id="textshadow-color">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>color</code>: <a href="#class-color"><code>Color</code></a> </li>
 </ul>
-<h3 id="textcolor-r">
-			textcolor.r
-			<span><a class="mark" href="#textcolor-r" id="textcolor-r">#</a></span>
+<h3 id="textshadow-r">
+			textshadow.r
+			<span><a class="mark" href="#textshadow-r" id="textshadow-r">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>r</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="textcolor-g">
-			textcolor.g
-			<span><a class="mark" href="#textcolor-g" id="textcolor-g">#</a></span>
+<h3 id="textshadow-g">
+			textshadow.g
+			<span><a class="mark" href="#textshadow-g" id="textshadow-g">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>g</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="textcolor-b">
-			textcolor.b
-			<span><a class="mark" href="#textcolor-b" id="textcolor-b">#</a></span>
+<h3 id="textshadow-b">
+			textshadow.b
+			<span><a class="mark" href="#textshadow-b" id="textshadow-b">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="textcolor-a">
-			textcolor.a
-			<span><a class="mark" href="#textcolor-a" id="textcolor-a">#</a></span>
+<h3 id="textshadow-a">
+			textshadow.a
+			<span><a class="mark" href="#textshadow-a" id="textshadow-a">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
@@ -2328,7 +2410,7 @@
 			TextShadowIn
 			<span><a class="mark" href="#textshadowin" id="textshadowin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextShadowIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#shadowin"><code>ShadowIn</code></a>|<code>TextShadow</code></li>
+<li><code>@type</code> <code>TextShadowIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#shadowin"><code>ShadowIn</code></a>|<a href="#class-textshadow"><code>TextShadow</code></a></li>
 </ul>
 <h2 id="ffid">
 			FFID
@@ -2336,15 +2418,18 @@
 		</h2><ul>
 <li><code>@type</code> <code>FFID</code> = <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a></li>
 </ul>
-<h2 id="class-textcolor">
-			Class: TextColor
-			<span><a class="mark" href="#class-textcolor" id="class-textcolor">#</a></span>
-		</h2><h3 id="textcolor">
-			TextColor
-			<span><a class="mark" href="#textcolor" id="textcolor">#</a></span>
-		</h3><h3 id="textcolor-families-">
-			textcolor.families()
-			<span><a class="mark" href="#textcolor-families-" id="textcolor-families-">#</a></span>
+<h2 id="class-textfamily">
+			Class: TextFamily
+			<span><a class="mark" href="#class-textfamily" id="class-textfamily">#</a></span>
+		</h2><h3 id="textfamily">
+			TextFamily
+			<span><a class="mark" href="#textfamily" id="textfamily">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textfamily"><code>TextFamily</code></a>,<a href="#ffid"><code>FFID</code></a>&gt;</li>
+</ul>
+<h3 id="textfamily-families-">
+			textfamily.families()
+			<span><a class="mark" href="#textfamily-families-" id="textfamily-families-">#</a></span>
 		</h3><ul>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a>  </li>
 </ul>
@@ -2358,7 +2443,7 @@
 			TextFamilyIn
 			<span><a class="mark" href="#textfamilyin" id="textfamilyin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextFamilyIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="$ext.html#string"><code>string</code></a>|<code>TextFamily</code></li>
+<li><code>@type</code> <code>TextFamilyIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="$ext.html#string"><code>string</code></a>|<a href="#class-textfamily"><code>TextFamily</code></a></li>
 </ul>
 <h2 id="class-boxfilter">
 			Class: BoxFilter
@@ -2399,7 +2484,10 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><h3 id="fillimage">
 			FillImage
 			<span><a class="mark" href="#fillimage" id="fillimage">#</a></span>
-		</h3><h3 id="fillimage-src">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-boxfilter"><code>BoxFilter</code></a></li>
+</ul>
+<h3 id="fillimage-src">
 			fillimage.src
 			<span><a class="mark" href="#fillimage-src" id="fillimage-src">#</a></span>
 		</h3><ul>
@@ -2448,7 +2536,10 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><h3 id="fillgradientradial">
 			FillGradientRadial
 			<span><a class="mark" href="#fillgradientradial" id="fillgradientradial">#</a></span>
-		</h3><h3 id="fillgradientradial-positions">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-boxfilter"><code>BoxFilter</code></a></li>
+</ul>
+<h3 id="fillgradientradial-positions">
 			fillgradientradial.positions
 			<span><a class="mark" href="#fillgradientradial-positions" id="fillgradientradial-positions">#</a></span>
 		</h3><ul>
@@ -2496,7 +2587,10 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><h3 id="boxshadow">
 			BoxShadow
 			<span><a class="mark" href="#boxshadow" id="boxshadow">#</a></span>
-		</h3><h3 id="boxshadow-value">
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-boxfilter"><code>BoxFilter</code></a></li>
+</ul>
+<h3 id="boxshadow-value">
 			boxshadow.value
 			<span><a class="mark" href="#boxshadow-value" id="boxshadow-value">#</a></span>
 		</h3><ul>
@@ -2669,7 +2763,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><ul>
 <li><code>@param</code> <code>kink</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 <li><code>@param</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
-<li><code>@return</code> <code>TextSize</code> </li>
+<li><code>@return</code> <a href="#class-textsize"><code>TextSize</code></a> </li>
 <li><code>@param</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 </ul>
 <h2 id="newtextlineheight-kink-value-">
@@ -2692,7 +2786,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 <li><code>@param</code> <code>g</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@param</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@param</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
-<li><code>@return</code> <code>TextShadow</code> </li>
+<li><code>@return</code> <a href="#class-textshadow"><code>TextShadow</code></a> </li>
 </ul>
 <h2 id="newtextfamily-kind-ffid-">
 			newTextFamily(kind,ffid?)
@@ -2700,7 +2794,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><ul>
 <li><code>@param</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 <li><code>@param</code> <code>ffid?</code>: <a href="#ffid"><code>FFID</code></a> </li>
-<li><code>@return</code> <code>TextFamily</code> </li>
+<li><code>@return</code> <a href="#class-textfamily"><code>TextFamily</code></a> </li>
 </ul>
 <h2 id="parserepeat-val-desc-">
 			parseRepeat(val,desc?)
@@ -2982,7 +3076,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textsizein"><code>TextSizeIn</code></a> </li>
 <li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>TextSize</code> </li>
+<li><code>@return</code> <a href="#class-textsize"><code>TextSize</code></a> </li>
 </ul>
 <h2 id="parsetextlineheight-val-desc-">
 			parseTextLineHeight(val,desc?)
@@ -2998,7 +3092,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textshadowin"><code>TextShadowIn</code></a> </li>
 <li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>TextShadow</code> </li>
+<li><code>@return</code> <a href="#class-textshadow"><code>TextShadow</code></a> </li>
 </ul>
 <h2 id="parsetextfamily-val-desc-">
 			parseTextFamily(val,desc?)
@@ -3006,7 +3100,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textfamilyin"><code>TextFamilyIn</code></a> </li>
 <li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>TextFamily</code> </li>
+<li><code>@return</code> <a href="#class-textfamily"><code>TextFamily</code></a> </li>
 </ul>
 <h2 id="parseboxfilter-val-desc-">
 			parseBoxFilter(val,desc?)
