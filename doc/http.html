@@ -324,6 +324,33 @@
 <li>
 <span><a href="#uploadsync-url-localpath-">uploadSync(url,localPath)</a></span>
 </li>
+<li>
+<span><a href="#abort-id-">abort(id)</a></span>
+</li>
+<li>
+<span><a href="#useragent-">userAgent()</a></span>
+</li>
+<li>
+<span><a href="#setuseragent-ua-">setUserAgent(ua)</a></span>
+</li>
+<li>
+<span><a href="#cachepath-">cachePath()</a></span>
+</li>
+<li>
+<span><a href="#setcachepath-path-">setCachePath(path)</a></span>
+</li>
+<li>
+<span><a href="#maxconnectpoolsize-">maxConnectPoolSize()</a></span>
+</li>
+<li>
+<span><a href="#setmaxconnectpoolsize-size-">setMaxConnectPoolSize(size)</a></span>
+</li>
+<li>
+<span><a href="#clearcache-">clearCache()</a></span>
+</li>
+<li>
+<span><a href="#clearcookie-">clearCookie()</a></span>
+</li>
 </ul>
 </li>
 </ul>
@@ -909,6 +936,73 @@ try {
 <li><code>@param</code> <code>url</code>: <a href="$ext.html#string"><code>string</code></a> target server url</li>
 <li><code>@param</code> <code>localPath</code>: <a href="$ext.html#string"><code>string</code></a> local file path</li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+</ul>
+<h2 id="abort-id-">
+			abort(id)
+			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
+		</h2><p>abort async task by id</p>
+<ul>
+<li><code>@param</code> <code>id</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="useragent-">
+			userAgent()
+			<span><a class="mark" href="#useragent-" id="useragent-">#</a></span>
+		</h2><p>Getting default http user-agent header</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="setuseragent-ua-">
+			setUserAgent(ua)
+			<span><a class="mark" href="#setuseragent-ua-" id="setuseragent-ua-">#</a></span>
+		</h2><p>Setting default http user-agent header</p>
+<ul>
+<li><code>@param</code> <code>ua</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="cachepath-">
+			cachePath()
+			<span><a class="mark" href="#cachepath-" id="cachepath-">#</a></span>
+		</h2><p>Getting HTTP cache saving path</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="setcachepath-path-">
+			setCachePath(path)
+			<span><a class="mark" href="#setcachepath-path-" id="setcachepath-path-">#</a></span>
+		</h2><p>Setting local HTTP cache saving path</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="maxconnectpoolsize-">
+			maxConnectPoolSize()
+			<span><a class="mark" href="#maxconnectpoolsize-" id="maxconnectpoolsize-">#</a></span>
+		</h2><p>Getting network connection pool size</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h2 id="setmaxconnectpoolsize-size-">
+			setMaxConnectPoolSize(size)
+			<span><a class="mark" href="#setmaxconnectpoolsize-size-" id="setmaxconnectpoolsize-size-">#</a></span>
+		</h2><p>Setting network connection pool size</p>
+<ul>
+<li><code>@param</code> <code>size</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="clearcache-">
+			clearCache()
+			<span><a class="mark" href="#clearcache-" id="clearcache-">#</a></span>
+		</h2><p>To clear all of caches</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="clearcookie-">
+			clearCookie()
+			<span><a class="mark" href="#clearcookie-" id="clearcookie-">#</a></span>
+		</h2><p>To clear all of cookies</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 
 			</div>

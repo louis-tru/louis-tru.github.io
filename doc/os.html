@@ -115,6 +115,56 @@
 <span><a href="#networkinterface">NetworkInterface</a></span>
 </li>
 </ul>
+<li>
+<span><a href="#arch-">arch()</a></span>
+</li>
+<li>
+<span><a href="#name-">name()</a></span>
+</li>
+<li>
+<span><a href="#version-">version()</a></span>
+</li>
+<li>
+<span><a href="#brand-">brand()</a></span>
+</li>
+<li>
+<span><a href="#model-">model()</a></span>
+</li>
+<li>
+<span><a href="#info-">info()</a></span>
+</li>
+<li>
+<span><a href="#languages-">languages()</a></span>
+</li>
+<li>
+<span><a href="#iswifi-">isWifi()</a></span>
+</li>
+<li>
+<span><a href="#ismobile-">isMobile()</a></span>
+</li>
+<li>
+<span><a href="#networkinterface-">networkInterface()</a></span>
+</li>
+<li>
+<span><a href="#isacpower-">isAcPower()</a></span>
+</li>
+<li>
+<span><a href="#isbattery-">isBattery()</a></span>
+</li>
+<li>
+<span><a href="#batterylevel-">batteryLevel()</a></span>
+</li>
+<li>
+<span><a href="#memory-">memory()</a></span>
+</li>
+<li>
+<span><a href="#usedmemory-">usedMemory()</a></span>
+</li>
+<li>
+<span><a href="#availablememory-">availableMemory()</a></span>
+</li>
+<li>
+<span><a href="#cpuusage-">cpuUsage()</a></span>
 </li>
 </ul>
 </li>
@@ -139,6 +189,135 @@
 <li><code>k3G</code>  Mobile 3G</li>
 <li><code>k4G</code>  Mobile 4G</li>
 <li><code>k5G</code>  Mobile 5G</li>
+</ul>
+<h2 id="arch-">
+			arch()
+			<span><a class="mark" href="#arch-" id="arch-">#</a></span>
+		</h2><p>Get CPU arch type</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="name-">
+			name()
+			<span><a class="mark" href="#name-" id="name-">#</a></span>
+		</h2><p>Get OS name, For: <code>Android</code>/<code>iOS</code>/<code>MacOSX</code>/<code>Linux</code></p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="version-">
+			version()
+			<span><a class="mark" href="#version-" id="version-">#</a></span>
+		</h2><p>Get OS version info</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="brand-">
+			brand()
+			<span><a class="mark" href="#brand-" id="brand-">#</a></span>
+		</h2><p>Get the Device brand, For: Apple/Huawei</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="model-">
+			model()
+			<span><a class="mark" href="#model-" id="model-">#</a></span>
+		</h2><p>Get OS model, iPad‌/iPhone‌/Mac16,10</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="info-">
+			info()
+			<span><a class="mark" href="#info-" id="info-">#</a></span>
+		</h2><p>Get OS information</p>
+<p>For example:</p>
+<pre><code class="undefinedts">// Prints:
+// sysname: Louis-iPhone
+// sysname: Darwin
+// machine: iPhone7,2
+// nodename: Louis-iPhone
+// version: Darwin Kernel Version 16.6.0: Mon Apr 17 17:33:35 PDT 2017; root:xnu-3789.60.24~24/RELEASE_ARM64_T7000
+// release: 16.6.0
+console.log(os.info());
+</code></pre>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="languages-">
+			languages()
+			<span><a class="mark" href="#languages-" id="languages-">#</a></span>
+		</h2><p>Get List of OS supported languages, May value is <code>&#39;en-us&#39;</code>|<code>&#39;zh-cn&#39;</code>|<code>&#39;zh-tw&#39;</code></p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a><code>[]</code> </li>
+</ul>
+<h2 id="iswifi-">
+			isWifi()
+			<span><a class="mark" href="#iswifi-" id="iswifi-">#</a></span>
+		</h2><p>Is it a wifi network type?</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="ismobile-">
+			isMobile()
+			<span><a class="mark" href="#ismobile-" id="ismobile-">#</a></span>
+		</h2><p>Is it a mobile network type?</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="networkinterface-">
+			networkInterface()
+			<span><a class="mark" href="#networkinterface-" id="networkinterface-">#</a></span>
+		</h2><p>Get the network interface</p>
+<ul>
+<li><code>@return</code> <a href="#enum-networkinterface"><code>NetworkInterface</code></a> </li>
+</ul>
+<h2 id="isacpower-">
+			isAcPower()
+			<span><a class="mark" href="#isacpower-" id="isacpower-">#</a></span>
+		</h2><p>Is there an external power supply connected?</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="isbattery-">
+			isBattery()
+			<span><a class="mark" href="#isbattery-" id="isbattery-">#</a></span>
+		</h2><p>Is there a battery device?</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="batterylevel-">
+			batteryLevel()
+			<span><a class="mark" href="#batterylevel-" id="batterylevel-">#</a></span>
+		</h2><p>Get battery power percentage if have a battery</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> range 0 to 1</li>
+</ul>
+<h2 id="memory-">
+			memory()
+			<span><a class="mark" href="#memory-" id="memory-">#</a></span>
+		</h2><p>Get the memory total</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="usedmemory-">
+			usedMemory()
+			<span><a class="mark" href="#usedmemory-" id="usedmemory-">#</a></span>
+		</h2><p>Get the used memory size</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="availablememory-">
+			availableMemory()
+			<span><a class="mark" href="#availablememory-" id="availablememory-">#</a></span>
+		</h2><p>Get the available memory size</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="cpuusage-">
+			cpuUsage()
+			<span><a class="mark" href="#cpuusage-" id="cpuusage-">#</a></span>
+		</h2><p>Get CPU usage percentage</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 
 			</div>

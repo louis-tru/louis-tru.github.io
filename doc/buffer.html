@@ -111,6 +111,12 @@
 <li>
 <span><a href="#encoding">Encoding</a></span>
 </li>
+<li>
+<span><a href="#fromstring-str-targeten-">fromString(str,targetEn?)</a></span>
+</li>
+<li>
+<span><a href="#tostring-src-encoding-start-end-">toString(src,encoding?,start?,end?)</a></span>
+</li>
 </ul>
 </li>
 </ul>
@@ -126,6 +132,26 @@
 		</h2><p>All encoding algorithms of string</p>
 <ul>
 <li><code>@type</code> <code>Encoding</code> = </li>
+</ul>
+<h2 id="fromstring-str-targeten-">
+			fromString(str,targetEn?)
+			<span><a class="mark" href="#fromstring-str-targeten-" id="fromstring-str-targeten-">#</a></span>
+		</h2><p>Specify the algorithm to encode the string and return the encoded data</p>
+<ul>
+<li><code>@param</code> <code>str</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>targetEn?</code>: <a href="#encoding"><code>Encoding</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+</ul>
+<h2 id="tostring-src-encoding-start-end-">
+			toString(src,encoding?,start?,end?)
+			<span><a class="mark" href="#tostring-src-encoding-start-end-" id="tostring-src-encoding-start-end-">#</a></span>
+		</h2><p>Decode data into a string using the specified algorithm</p>
+<ul>
+<li><code>@param</code> <code>src</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>encoding?</code>: <a href="#encoding"><code>Encoding</code></a> </li>
+<li><code>@param</code> <code>start?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>end?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 
 			</div>

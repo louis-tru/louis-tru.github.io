@@ -264,10 +264,103 @@
 <li>
 <span><a href="#asynctask-abort-reason-">asynctask.abort(reason?)</a></span>
 </li>
-<li>
-<span><a href="#asynctask-chmod-path-mode-">asynctask.chmod(path,mode?)</a></span>
-</li>
 </ul>
+<li>
+<span><a href="#chmodsync-path-mode-">chmodSync(path,mode?)</a></span>
+</li>
+<li>
+<span><a href="#chownsync-path-owner-group-">chownSync(path,owner,group)</a></span>
+</li>
+<li>
+<span><a href="#mkdirsync-path-mode-">mkdirSync(path,mode?)</a></span>
+</li>
+<li>
+<span><a href="#mkdirssync-path-mode-">mkdirsSync(path,mode?)</a></span>
+</li>
+<li>
+<span><a href="#renamesync-name-newname-">renameSync(name,newName)</a></span>
+</li>
+<li>
+<span><a href="#linksync-src-target-">linkSync(src,target)</a></span>
+</li>
+<li>
+<span><a href="#unlinksync-path-">unlinkSync(path)</a></span>
+</li>
+<li>
+<span><a href="#rmdirsync-path-">rmdirSync(path)</a></span>
+</li>
+<li>
+<span><a href="#readdirsync-path-">readdirSync(path)</a></span>
+</li>
+<li>
+<span><a href="#statsync-path-">statSync(path)</a></span>
+</li>
+<li>
+<span><a href="#existssync-path-">existsSync(path)</a></span>
+</li>
+<li>
+<span><a href="#isfilesync-path-">isFileSync(path)</a></span>
+</li>
+<li>
+<span><a href="#isdirectorysync-path-">isDirectorySync(path)</a></span>
+</li>
+<li>
+<span><a href="#readablesync-path-">readableSync(path)</a></span>
+</li>
+<li>
+<span><a href="#writablesync-path-">writableSync(path)</a></span>
+</li>
+<li>
+<span><a href="#executablesync-path-">executableSync(path)</a></span>
+</li>
+<li>
+<span><a href="#chmodrecursionsync-path-mode-">chmodRecursionSync(path,mode?)</a></span>
+</li>
+<li>
+<span><a href="#chownrecursionsync-path-owner-group-">chownRecursionSync(path,owner,group)</a></span>
+</li>
+<li>
+<span><a href="#removerecursionsync-path-">removeRecursionSync(path)</a></span>
+</li>
+<li>
+<span><a href="#copyrecursionsync-path-target-">copyRecursionSync(path,target)</a></span>
+</li>
+<li>
+<span><a href="#copysync-path-target-">copySync(path,target)</a></span>
+</li>
+<li>
+<span><a href="#writefilesync-path-data-size-">writeFileSync(path,data,size?)</a></span>
+</li>
+<li>
+<span><a href="#writefilesync-path-data-encoding-">writeFileSync(path,data,encoding?)</a></span>
+</li>
+<li>
+<span><a href="#readfilesync-path-">readFileSync(path)</a></span>
+</li>
+<li>
+<span><a href="#readfilesync-path-encoding-">readFileSync(path,encoding)</a></span>
+</li>
+<li>
+<span><a href="#opensync-path-flags-">openSync(path,flags?)</a></span>
+</li>
+<li>
+<span><a href="#closesync-fd-">closeSync(fd)</a></span>
+</li>
+<li>
+<span><a href="#readsync-fd-out-size-offsetfd-">readSync(fd,out,size?,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#writesync-fd-data-size-offsetfd-">writeSync(fd,data,size?,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#writesync-fd-data-offsetfd-">writeSync(fd,data,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#writesync-fd-data-encoding-offsetfd-">writeSync(fd,data,encoding,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#chmod-path-mode-">chmod(path,mode?)</a></span>
+</li>
 <li>
 <span><a href="#chown-path-owner-group-">chown(path,owner,group)</a></span>
 </li>
@@ -330,6 +423,39 @@
 </li>
 <li>
 <span><a href="#readstream-path-cb-">readStream(path,cb)</a></span>
+</li>
+<li>
+<span><a href="#abort-id-">abort(id)</a></span>
+</li>
+<li>
+<span><a href="#writefile-path-data-size-">writeFile(path,data,size?)</a></span>
+</li>
+<li>
+<span><a href="#writefile-path-data-encoding-">writeFile(path,data,encoding?)</a></span>
+</li>
+<li>
+<span><a href="#readfile-path-">readFile(path)</a></span>
+</li>
+<li>
+<span><a href="#readfile-path-encoding-">readFile(path,encoding)</a></span>
+</li>
+<li>
+<span><a href="#open-path-flags-">open(path,flags?)</a></span>
+</li>
+<li>
+<span><a href="#close-fd-">close(fd)</a></span>
+</li>
+<li>
+<span><a href="#read-fd-out-size-offsetfd-">read(fd,out,size?,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#write-fd-data-size-offsetfd-">write(fd,data,size?,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#write-fd-data-offsetfd-">write(fd,data,offsetFd?)</a></span>
+</li>
+<li>
+<span><a href="#write-fd-data-encoding-offsetfd-">write(fd,data,encoding,offsetFd?)</a></span>
 </li>
 <li>
 <span><a href="#interface-reader">Interface: Reader</a></span>
@@ -713,10 +839,294 @@
 <li><code>@param</code> <code>reason?</code>: <a href="$ext.html#error"><code>Error</code></a> If the parameter is passed in, an exception will be thrown</li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
-<h3 id="asynctask-chmod-path-mode-">
-			asynctask.chmod(path,mode?)
-			<span><a class="mark" href="#asynctask-chmod-path-mode-" id="asynctask-chmod-path-mode-">#</a></span>
-		</h3><p>Please ref: sync method [<code>chmodSync(path,mode?)</code>]</p>
+<h2 id="chmodsync-path-mode-">
+			chmodSync(path,mode?)
+			<span><a class="mark" href="#chmodsync-path-mode-" id="chmodsync-path-mode-">#</a></span>
+		</h2><p>Synchronously change file permissions</p>
+<pre><code class="undefinedts">chmodSync(&#39;my_file.txt&#39;, 0o775)
+</code></pre>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="chownsync-path-owner-group-">
+			chownSync(path,owner,group)
+			<span><a class="mark" href="#chownsync-path-owner-group-" id="chownsync-path-owner-group-">#</a></span>
+		</h2><p>Synchronize the <code>owner</code> and <code>group</code> of the configuration file</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>group</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="mkdirsync-path-mode-">
+			mkdirSync(path,mode?)
+			<span><a class="mark" href="#mkdirsync-path-mode-" id="mkdirsync-path-mode-">#</a></span>
+		</h2><p>Create a directory synchronously. If the path already exists, an exception will be thrown.</p>
+<ul>
+<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="mkdirssync-path-mode-">
+			mkdirsSync(path,mode?)
+			<span><a class="mark" href="#mkdirssync-path-mode-" id="mkdirssync-path-mode-">#</a></span>
+		</h2><p>Synchronously recursively create directories,<br/>and no exception is thrown if the directory exists</p>
+<ul>
+<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="renamesync-name-newname-">
+			renameSync(name,newName)
+			<span><a class="mark" href="#renamesync-name-newname-" id="renamesync-name-newname-">#</a></span>
+		</h2><p>Synchronously rename files and directories</p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>newName</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="linksync-src-target-">
+			linkSync(src,target)
+			<span><a class="mark" href="#linksync-src-target-" id="linksync-src-target-">#</a></span>
+		</h2><p>Synchronously create file hard links</p>
+<ul>
+<li><code>@param</code> <code>src</code>: <a href="$ext.html#string"><code>string</code></a> Original file path</li>
+<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> Link target path</li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="unlinksync-path-">
+			unlinkSync(path)
+			<span><a class="mark" href="#unlinksync-path-" id="unlinksync-path-">#</a></span>
+		</h2><p>Synchronously delete the file hard link.<br/>If the file has only one link, the file will be physically deleted.</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="rmdirsync-path-">
+			rmdirSync(path)
+			<span><a class="mark" href="#rmdirsync-path-" id="rmdirsync-path-">#</a></span>
+		</h2><p>Synchronously delete the file directory, the file directory must be empty</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="readdirsync-path-">
+			readdirSync(path)
+			<span><a class="mark" href="#readdirsync-path-" id="readdirsync-path-">#</a></span>
+		</h2><p>Synchronously read the file directory file list</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#interface-dirent"><code>Dirent</code></a><code>[]</code> </li>
+</ul>
+<h2 id="statsync-path-">
+			statSync(path)
+			<span><a class="mark" href="#statsync-path-" id="statsync-path-">#</a></span>
+		</h2><p>Synchronously read file status information</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-filestat"><code>FileStat</code></a> </li>
+</ul>
+<h2 id="existssync-path-">
+			existsSync(path)
+			<span><a class="mark" href="#existssync-path-" id="existssync-path-">#</a></span>
+		</h2><p>Synchronously check if a file exists</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="isfilesync-path-">
+			isFileSync(path)
+			<span><a class="mark" href="#isfilesync-path-" id="isfilesync-path-">#</a></span>
+		</h2><p>Synchronously checks if the path is a file, and returns <code>false</code> if the path does not exist</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="isdirectorysync-path-">
+			isDirectorySync(path)
+			<span><a class="mark" href="#isdirectorysync-path-" id="isdirectorysync-path-">#</a></span>
+		</h2><p>Synchronously checks if the path is a directory, and returns <code>false</code> if the path does not exist</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="readablesync-path-">
+			readableSync(path)
+			<span><a class="mark" href="#readablesync-path-" id="readablesync-path-">#</a></span>
+		</h2><p>Synchronously checks if the path is readable, returning <code>false</code> if the path does not exist</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="writablesync-path-">
+			writableSync(path)
+			<span><a class="mark" href="#writablesync-path-" id="writablesync-path-">#</a></span>
+		</h2><p>Synchronously checks if the path is writable, returning <code>false</code> if the path does not exist</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="executablesync-path-">
+			executableSync(path)
+			<span><a class="mark" href="#executablesync-path-" id="executablesync-path-">#</a></span>
+		</h2><p>Synchronously checks if it is executable, returns <code>false</code> if the path does not exist</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h2 id="chmodrecursionsync-path-mode-">
+			chmodRecursionSync(path,mode?)
+			<span><a class="mark" href="#chmodrecursionsync-path-mode-" id="chmodrecursionsync-path-mode-">#</a></span>
+		</h2><p>Synchronously recursively set the file permission attribute mode<br/>(TODO: will block the calling thread, please use with caution)</p>
+<ul>
+<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+</ul>
+<p>For example:</p>
+<pre><code class="undefinedts">fs.chmodRecursionSync(mypath, 0755);
+</code></pre>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="chownrecursionsync-path-owner-group-">
+			chownRecursionSync(path,owner,group)
+			<span><a class="mark" href="#chownrecursionsync-path-owner-group-" id="chownrecursionsync-path-owner-group-">#</a></span>
+		</h2><p>Synchronously recursively set file <code>owner</code> and <code>group</code> attributes<br/>(TODO: will block the calling thread, please use with caution)</p>
+<ul>
+<li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> System User ID</li>
+<li><code>@param</code> <code>group</code>: <a href="$ext.html#uint"><code>Uint</code></a> System Group ID</li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="removerecursionsync-path-">
+			removeRecursionSync(path)
+			<span><a class="mark" href="#removerecursionsync-path-" id="removerecursionsync-path-">#</a></span>
+		</h2><p>Synchronous recursive deletion of directories or files,<br/>use this method with caution, it may cause the thread to be blocked for a long time</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="copyrecursionsync-path-target-">
+			copyRecursionSync(path,target)
+			<span><a class="mark" href="#copyrecursionsync-path-target-" id="copyrecursionsync-path-target-">#</a></span>
+		</h2><p>Synchronous recursive copy of files,<br/>use this method with caution, it may cause the thread to be blocked for a long time</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="copysync-path-target-">
+			copySync(path,target)
+			<span><a class="mark" href="#copysync-path-target-" id="copysync-path-target-">#</a></span>
+		</h2><p>Copy files synchronously (TODO: will block the calling thread, please use with caution)<br/>Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><code>copyRecursionSync(path,target)</code></a></p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="writefilesync-path-data-size-">
+			writeFileSync(path,data,size?)
+			<span><a class="mark" href="#writefilesync-path-data-size-" id="writefilesync-path-data-size-">#</a></span>
+		</h2><p>Synchronously write data to a file</p>
+<ul>
+<li><code>@param</code> <code>size?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Write all data when no parameters are passed</li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h2 id="writefilesync-path-data-encoding-">
+			writeFileSync(path,data,encoding?)
+			<span><a class="mark" href="#writefilesync-path-data-encoding-" id="writefilesync-path-data-encoding-">#</a></span>
+		</h2><p>Synchronously write a string to a file</p>
+<ul>
+<li><code>@param</code> <code>encoding?</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> If not passed in, the default encoding is <code>utf-8</code></li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h2 id="readfilesync-path-">
+			readFileSync(path)
+			<span><a class="mark" href="#readfilesync-path-" id="readfilesync-path-">#</a></span>
+		</h2><p>Reading files synchronously</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+</ul>
+<h2 id="readfilesync-path-encoding-">
+			readFileSync(path,encoding)
+			<span><a class="mark" href="#readfilesync-path-encoding-" id="readfilesync-path-encoding-">#</a></span>
+		</h2><p>Synchronously read a file as a string</p>
+<ul>
+<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> Decode data to string encoding</li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="opensync-path-flags-">
+			openSync(path,flags?)
+			<span><a class="mark" href="#opensync-path-flags-" id="opensync-path-flags-">#</a></span>
+		</h2><p>Opens a file by path synchronously and returns an open file handle</p>
+<ul>
+<li><code>@param</code> <code>flags?</code>: <a href="#enum-fileopenflag"><code>FileOpenFlag</code></a> Open file flags mask <strong>Default</strong> as FileOpenFlag.FOPEN_R</li>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h2 id="closesync-fd-">
+			closeSync(fd)
+			<span><a class="mark" href="#closesync-fd-" id="closesync-fd-">#</a></span>
+		</h2><p>Close the file handle synchronously</p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="readsync-fd-out-size-offsetfd-">
+			readSync(fd,out,size?,offsetFd?)
+			<span><a class="mark" href="#readsync-fd-out-size-offsetfd-" id="readsync-fd-out-size-offsetfd-">#</a></span>
+		</h2><p>Synchronously read the file contents from the file handle</p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>out</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> Read the file and save it here</li>
+<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or passed in <code>-1</code>, the length of the <code>out</code> parameter is used</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or -1 is passed,<br/>  the internal offset value of the file handle is used (it will advance after each read)</li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> Returns the size of the data actually read</li>
+</ul>
+<h2 id="writesync-fd-data-size-offsetfd-">
+			writeSync(fd,data,size?,offsetFd?)
+			<span><a class="mark" href="#writesync-fd-data-size-offsetfd-" id="writesync-fd-data-size-offsetfd-">#</a></span>
+		</h2><p>Synchronously write data to a file handle</p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> Data to be written</li>
+<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, all data will be written</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+</ul>
+<h2 id="writesync-fd-data-offsetfd-">
+			writeSync(fd,data,offsetFd?)
+			<span><a class="mark" href="#writesync-fd-data-offsetfd-" id="writesync-fd-data-offsetfd-">#</a></span>
+		</h2><p>Write data to the file handle synchronously and encode the data using <code>utf-8</code></p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> The string to be written</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+</ul>
+<h2 id="writesync-fd-data-encoding-offsetfd-">
+			writeSync(fd,data,encoding,offsetFd?)
+			<span><a class="mark" href="#writesync-fd-data-encoding-offsetfd-" id="writesync-fd-data-encoding-offsetfd-">#</a></span>
+		</h2><p>Synchronously write data to a file handle</p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> Data to be written</li>
+<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> Encoding Type</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+</ul>
+<h2 id="chmod-path-mode-">
+			chmod(path,mode?)
+			<span><a class="mark" href="#chmod-path-mode-" id="chmod-path-mode-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#chmodsync-path-mode-"><code>chmodSync(path,mode?)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
@@ -724,7 +1134,7 @@
 <h2 id="chown-path-owner-group-">
 			chown(path,owner,group)
 			<span><a class="mark" href="#chown-path-owner-group-" id="chown-path-owner-group-">#</a></span>
-		</h2><p>Please ref: sync method [<code>chownSync(path,owner,group)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#chownsync-path-owner-group-"><code>chownSync(path,owner,group)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
@@ -733,7 +1143,7 @@
 <h2 id="chmod-path-mode-">
 			chmod(path,mode?)
 			<span><a class="mark" href="#chmod-path-mode-" id="chmod-path-mode-">#</a></span>
-		</h2><p>Please ref: sync method [<code>mkdirSync(path,mode?)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#mkdirsync-path-mode-"><code>mkdirSync(path,mode?)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
@@ -758,7 +1168,7 @@
 <h2 id="rename-name-newname-">
 			rename(name,newName)
 			<span><a class="mark" href="#rename-name-newname-" id="rename-name-newname-">#</a></span>
-		</h2><p>Please ref: sync method [<code>renameSync(name,newName)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#renamesync-name-newname-"><code>renameSync(name,newName)</code></a></p>
 <ul>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>newName</code>: <a href="$ext.html#string"><code>string</code></a> </li>
@@ -766,7 +1176,7 @@
 <h2 id="link-src-target-">
 			link(src,target)
 			<span><a class="mark" href="#link-src-target-" id="link-src-target-">#</a></span>
-		</h2><p>Please ref: sync method [<code>linkSync(src,target)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#linksync-src-target-"><code>linkSync(src,target)</code></a></p>
 <ul>
 <li><code>@param</code> <code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
@@ -774,14 +1184,14 @@
 <h2 id="unlink-path-">
 			unlink(path)
 			<span><a class="mark" href="#unlink-path-" id="unlink-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>unlinkSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#unlinksync-path-"><code>unlinkSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="rmdir-path-">
 			rmdir(path)
 			<span><a class="mark" href="#rmdir-path-" id="rmdir-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>rmdirSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#rmdirsync-path-"><code>rmdirSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
@@ -812,7 +1222,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="stat-path-">
 			stat(path)
 			<span><a class="mark" href="#stat-path-" id="stat-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>statSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#statsync-path-"><code>statSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="#class-filestat"><code>FileStat</code></a>&gt; </li>
@@ -820,7 +1230,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="exists-path-">
 			exists(path)
 			<span><a class="mark" href="#exists-path-" id="exists-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>existsSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#existssync-path-"><code>existsSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
@@ -828,7 +1238,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="isfile-path-">
 			isFile(path)
 			<span><a class="mark" href="#isfile-path-" id="isfile-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>isFileSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#isfilesync-path-"><code>isFileSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
@@ -836,7 +1246,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="isdirectory-path-">
 			isDirectory(path)
 			<span><a class="mark" href="#isdirectory-path-" id="isdirectory-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>isDirectorySync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#isdirectorysync-path-"><code>isDirectorySync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
@@ -844,7 +1254,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="readable-path-">
 			readable(path)
 			<span><a class="mark" href="#readable-path-" id="readable-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>readableSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#readablesync-path-"><code>readableSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
@@ -852,7 +1262,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="writable-path-">
 			writable(path)
 			<span><a class="mark" href="#writable-path-" id="writable-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>writableSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#writablesync-path-"><code>writableSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
@@ -860,7 +1270,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 <h2 id="executable-path-">
 			executable(path)
 			<span><a class="mark" href="#executable-path-" id="executable-path-">#</a></span>
-		</h2><p>Please ref: sync method [<code>executableSync(path)</code>]</p>
+		</h2><p>Please ref: sync method <a href="#executablesync-path-"><code>executableSync(path)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
@@ -949,6 +1359,120 @@ fs.abort(task.id);
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> Read the target path</li>
 <li><code>@param</code> <code>cb</code>: <a href="#streamresponsecallback"><code>StreamResponseCallback</code></a> Asynchronous stream callback function</li>
 <li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
+<h2 id="abort-id-">
+			abort(id)
+			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
+		</h2><p>Force abort a running asynchronous task by <code>id</code><br/>If a meaningless <code>id</code> is passed in or the task to which <br/>    the <code>id</code> belongs has been completed, no processing will be done</p>
+<p>For example:</p>
+<pre><code class="undefinedts">var a = fs.chmod(mypath, 0o755);
+var b = fs.chown(mypath, 501, 501);
+var c = fs.copy(mypath, newpath);
+// force abort task
+fs.abort(a.id);
+fs.abort(b.id);
+fs.abort(c.id);
+</code></pre>
+<ul>
+<li><code>@param</code> <code>id</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h2 id="writefile-path-data-size-">
+			writeFile(path,data,size?)
+			<span><a class="mark" href="#writefile-path-data-size-" id="writefile-path-data-size-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#writefilesync-path-data-size-"><code>writeFileSync(path,data,size?)</code></a></p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>size?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+</ul>
+<h2 id="writefile-path-data-encoding-">
+			writeFile(path,data,encoding?)
+			<span><a class="mark" href="#writefile-path-data-encoding-" id="writefile-path-data-encoding-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#writefilesync-path-data-encoding-"><code>writeFileSync(path,data,encoding?)</code></a></p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>encoding?</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+</ul>
+<h2 id="readfile-path-">
+			readFile(path)
+			<span><a class="mark" href="#readfile-path-" id="readfile-path-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#readfilesync-path-"><code>readFileSync(path)</code></a></p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>&gt; </li>
+</ul>
+<h2 id="readfile-path-encoding-">
+			readFile(path,encoding)
+			<span><a class="mark" href="#readfile-path-encoding-" id="readfile-path-encoding-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#readfilesync-path-encoding-"><code>readFileSync(path,encoding)</code></a></p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
+</ul>
+<h2 id="open-path-flags-">
+			open(path,flags?)
+			<span><a class="mark" href="#open-path-flags-" id="open-path-flags-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#opensync-path-flags-"><code>openSync(path,flags?)</code></a></p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>flags?</code>: <a href="#enum-fileopenflag"><code>FileOpenFlag</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+</ul>
+<h2 id="close-fd-">
+			close(fd)
+			<span><a class="mark" href="#close-fd-" id="close-fd-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#closesync-fd-"><code>closeSync(fd)</code></a></p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
+<h2 id="read-fd-out-size-offsetfd-">
+			read(fd,out,size?,offsetFd?)
+			<span><a class="mark" href="#read-fd-out-size-offsetfd-" id="read-fd-out-size-offsetfd-">#</a></span>
+		</h2><p>Please ref: sync method [<code>readSync(fd,out,size?,offsetFd?])</code>]</p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>out</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+</ul>
+<h2 id="write-fd-data-size-offsetfd-">
+			write(fd,data,size?,offsetFd?)
+			<span><a class="mark" href="#write-fd-data-size-offsetfd-" id="write-fd-data-size-offsetfd-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#writesync-fd-data-size-offsetfd-"><code>writeSync(fd,data,size?,offsetFd?)</code></a></p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+</ul>
+<h2 id="write-fd-data-offsetfd-">
+			write(fd,data,offsetFd?)
+			<span><a class="mark" href="#write-fd-data-offsetfd-" id="write-fd-data-offsetfd-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#writesync-fd-data-offsetfd-"><code>writeSync(fd,data,offsetFd?)</code></a></p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+</ul>
+<h2 id="write-fd-data-encoding-offsetfd-">
+			write(fd,data,encoding,offsetFd?)
+			<span><a class="mark" href="#write-fd-data-encoding-offsetfd-" id="write-fd-data-encoding-offsetfd-">#</a></span>
+		</h2><p>Please ref: sync method <a href="#writesync-fd-data-encoding-offsetfd-"><code>writeSync(fd,data,encoding,offsetFd?)</code></a></p>
+<ul>
+<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="interface-reader">
 			Interface: Reader
