@@ -92,7 +92,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.0.0 Documentation</h1>
+				<h1>Quark v1.1.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -208,6 +208,15 @@
 </li>
 <li>
 <span><a href="#vdom">VDom</a></span>
+</li>
+<li>
+<span><a href="#renderdata">RenderData</a></span>
+</li>
+<li>
+<span><a href="#rendernode">RenderNode</a></span>
+</li>
+<li>
+<span><a href="#renderresult">RenderResult</a></span>
 </li>
 </ul>
 </li>
@@ -411,7 +420,7 @@
 			<span><a class="mark" href="#viewcontroller-render-" id="viewcontroller-render-">#</a></span>
 		</h3><p>When rendering occurs, call to return the <code>vdom</code> object that needs to be rendered</p>
 <ul>
-<li><code>@return</code> <code>RenderResult</code> </li>
+<li><code>@return</code> <a href="#renderresult"><code>RenderResult</code></a> </li>
 </ul>
 <h3 id="viewcontroller-appendto-parent-">
 			viewcontroller.appendTo(parent)
@@ -453,6 +462,24 @@
 		</h2><ul>
 <li><code>@type</code> <code>VDom</code> = <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<code>T</code>&gt;</li>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
+</ul>
+<h2 id="renderdata">
+			RenderData
+			<span><a class="mark" href="#renderdata" id="renderdata">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>RenderData</code> = <a href="#class-virtualdom"><code>VirtualDOM</code></a>|<a href="$ext.html#string"><code>string</code></a></li>
+</ul>
+<h2 id="rendernode">
+			RenderNode
+			<span><a class="mark" href="#rendernode" id="rendernode">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>RenderNode</code> = <a href="#renderdata"><code>RenderData</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a></li>
+</ul>
+<h2 id="renderresult">
+			RenderResult
+			<span><a class="mark" href="#renderresult" id="renderresult">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>RenderResult</code> = <a href="#rendernode"><code>RenderNode</code></a><code>[]</code>|<a href="#rendernode"><code>RenderNode</code></a></li>
 </ul>
 
 			</div>
