@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'README-cn.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.2.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark">Quark</a></span>
+</li>
+<li>
+<span><a href="#-">源码构建</a></span>
+</li>
+<li>
+<span><a href="#-">简单示例</a></span>
+</li>
+<li>
+<span><a href="#-">开始使用</a></span>
+<ul>
+<li>
+<span><a href="#-npm-qkmake">从npm安装qkmake</a></span>
+</li>
+<li>
+<span><a href="#-qkmake-">使用qkmake工具创建新项目</a></span>
+</li>
+<li>
+<span><a href="#-">构建项目</a></span>
+</li>
+<li>
+<span><a href="#-">导出项目</a></span>
+</li>
+<li>
+<span><a href="#-http-">测试http服务器</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#-">视图布局</a></span>
+</li>
+<li>
+<span><a href="#css-">CSS样式表</a></span>
+</li>
+<li>
+<span><a href="#-action-">动作（Action）</a></span>
+<ul>
+<li>
+<span><a href="#-">动作是什么原理?</a></span>
+</li>
+<li>
+<span><a href="#-">动作类型</a></span>
+</li>
+<li>
+<span><a href="#action">Action</a></span>
+</li>
+<li>
+<span><a href="#spawnaction">SpawnAction</a></span>
+</li>
+<li>
+<span><a href="#sequenceaction">SequenceAction</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#keyframeaction-keyframe">KeyframeAction与Keyframe</a></span>
+</li>
+<li>
+<span><a href="#view-onactionkeyframe-view-onactionloop">View.onActionKeyframe与View.onActionLoop</a></span>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark">
+			Quark
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><p>Quark 是一个跨平台（<code>Android</code>/<code>iOS</code>/<code>Mac</code>/<code>Linux</code>）的前端开发框架。核心代码使用 C++ 编写，底层基于 OpenGL 绘制，上层实现了精简的排版引擎和 JS/JSX 运行环境。目标是在此基础上开发兼顾开发速度和运行效率的 GUI 应用。</p>
+<ul>
+<li>从这里，<a href="http://quarks.cc/doc/"><code>Go API Index</code></a> 可以转到 <code>API 文档索引</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img src="http://quarks.cc/img/000.jpg" alt="Screenshot"></th>
+<th><img src="http://quarks.cc/img/001.jpg" alt="Screenshot"></th>
+<th><img src="http://quarks.cc/img/002.jpg" alt="Screenshot"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="-">
+			源码构建
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h1><ol>
+<li>构建必须依赖的 <code>Xcode</code> / <code>JDK</code> / <code>Android-SDK</code> / <code>python</code> / <code>nodejs</code></li>
+<li>设置环境变量 <code>ANDROID_SDK</code> 和 <code>NDK</code> 目录</li>
+<li>拉取依赖库，执行 <code>make sync</code></li>
+</ol>
+<p>编译安装qkmake，执行<code>make all</code>或者<code>make install</code>，需要比较长的时间。</p>
+<p>这里获取 <a href="https://github.com/louis-tru/quark"><code>Source code</code></a> 从 <code>Github</code>。</p>
+<h1 id="-">
+			简单示例
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h1><p>这是一个在屏幕上显示 Hello world 的简单程序</p>
+<pre><code class="undefinedtsx">import { Jsx,Application,Window } from &#39;quark&#39;
+new Application();
+new Window().render(
+    &lt;text value=&quot;Hello world&quot; textSize={48} align=&quot;centerMiddle&quot; /&gt;
+);
+</code></pre>
+<p>您可以获得更详细的<a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></p>
+<h1 id="-">
+			开始使用
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h1><p>如果您以前从未使用过 Quark，您可以从这里开始逐步构建您的 Quark 程序。</p>
+<h2 id="-npm-qkmake">
+			从npm安装qkmake
+			<span><a class="mark" href="#-npm-qkmake" id="-npm-qkmake">#</a></span>
+		</h2><p>首先，你需要安装<code>Quark</code>提供的工具包</p>
+<ul>
+<li>使用 nodejs <code>npm</code> 安装 <code>qkmake</code></li>
+<li>打开 <code>Terminal</code> 并执行以下命令：</li>
+</ul>
+<pre><code class="undefinedsh"># shell
+$ sudo npm install -g qkmake
+</code></pre>
+<ul>
+<li><p>运行 <code>qkmake</code> 需要依赖 <code>nodejs</code> 和 <code>python</code></p><br/></li>
+<li><p>目前不支持 <code>windows</code> 系统，需要在 <code>mac</code> 系统下使用</p><br/></li>
+</ul>
+<h2 id="-qkmake-">
+			使用qkmake工具创建新项目
+			<span><a class="mark" href="#-qkmake-" id="-qkmake-">#</a></span>
+		</h2><p>使用以下 <code>shell</code> 命令创建一个新的 <code>Quark</code> 项目：</p>
+<pre><code class="undefinedsh"># shell
+$ mkdir myproj
+$ cd myproj
+$ qkmake init
+</code></pre>
+<h2 id="-">
+			构建项目
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h2><p>此步骤会压缩并打包项目内的 JavaScript 代码和资源文件。<br/>如果是新项目，您可以跳过此步骤，直接进入下一步。</p>
+<pre><code class="undefinedsh"># shell
+$ qkmake build
+</code></pre>
+<h2 id="-">
+			导出项目
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h2><p>这一步导出<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a>或者<a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a>项目，因为最终发布的程序会是<code>.apk</code>或者<code>.ipa</code></p>
+<pre><code class="undefinedsh"># shell
+# export xcode ios project
+$ qkmake export ios
+# export android studio project
+$ qkmake export android
+</code></pre>
+<p>导出项目后，会在项目根目录下生成<code>project/ios</code>与<code>project/android</code>分别对应<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a>工程与<a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a>工程。</p>
+<h2 id="-http-">
+			测试http服务器
+			<span><a class="mark" href="#-http-" id="-http-">#</a></span>
+		</h2><p><code>qkmake</code> 提供了一个测试 http 服务器，每次修改 <code>ts</code> 或 <code>tsx</code> 代码时，会通知连接到此服务器的设备，把应用启动地址设置成调试服务器地址，这样可以在代码发生改变时自动更新界面，而无需重新启动应用。</p>
+<p>在导出项目时会自动把启动地址设置这个调式地址，所大部分情况下不需要修改，除非想连接到其它地方。</p>
+<p>执行以下代码启动服务器：</p>
+<pre><code class="undefinedsh"># shell
+$ qkmake watch
+# Start web server:
+#  http://192.168.1.200:1026/
+# Watching files change:
+</code></pre>
+<h1 id="-">
+			视图布局
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h1><p>视图用来描述屏幕上所有可见的元素，并且也是事件的响应者，这些事件由硬件以及操作系统触发。</p>
+<p>详细的API文档请大家去这里<a href="https://quarks.cc/doc/view.html#view">View</a>查阅。</p>
+<p>以下是现在提供的所有<a href="https://quarks.cc/doc/view.html#view">View</a>与继承关系：</p>
+<ul>
+<li><a href="https://quarks.cc/doc/view.html#scrollbase">ScrollBase</a></li>
+<li><a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a></li>
+<li><a href="https://quarks.cc/doc/view.html#view">View</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#box">Box</a>*<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul><br/><li><a href="http://langou.org/doc/media.html#class-video">Video</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-input">Input</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollbase">ScrollBase</a>&gt;</li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollbase">ScrollBase</a>&gt;</li><br/><li><a href="https://quarks.cc/doc/view.html#class-text">Text</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li><br/></ul><br/></li><br/><li><a href="http://langou.org/doc/media.html#class-matrix">Matrix</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li><br/></ul><br/></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-label">Label</a></li><br/></ul><br/></li>
+</ul>
+<p>这有点像HTML布局：</p>
+<pre><code class="undefinedtsx">import {Jsx,Application,Window} from &#39;quark&#39;
+new Application()
+new Window().render(
+    &lt;flex width=&quot;100%&quot; height=&quot;50%&quot; itemsAlign=&quot;centerCenter&quot;&gt;
+        &lt;button
+            minWidth=&quot;10%&quot;
+            maxWidth=&quot;40%&quot;
+            height=&quot;100%&quot;
+            paddingLeft={5}
+            textLineHeight={1} // 100%
+            textSize={18}
+            textFamily=&quot;iconfont&quot;
+            backgroundColor=&quot;#f00&quot;
+            textWhiteSpace=&quot;noWrap&quot;
+            textAlign=&quot;center&quot;
+        &gt;
+            &lt;label textFamily=&quot;default&quot; textSize={16} textOverflow=&quot;ellipsis&quot; value=&quot;ABCDEFGHIJKMLNOPQ&quot; /&gt;
+        &lt;/button&gt;
+        &lt;text
+            weight={[0,1]}
+            height=&quot;100%&quot;
+            textColor=&quot;#00f&quot;
+            textLineHeight={1}
+            textSize={16}
+            textWhiteSpace=&quot;noWrap&quot;
+            textWeight=&quot;bold&quot;
+            textOverflow=&quot;ellipsisCenter&quot;
+            textAlign=&quot;center&quot;
+            value=&quot;Title&quot;
+            backgroundColor=&quot;#0f0&quot;
+        /&gt;
+        &lt;text
+            minWidth=&quot;10%&quot;
+            maxWidth=&quot;40%&quot;
+            height=&quot;100%&quot;
+            textColor=&quot;#f0f&quot;
+            textLineHeight={1}
+            backgroundColor=&quot;#0ff&quot;
+            textAlign=&quot;center&quot;
+            value=&quot;A&quot;
+            opacity={0.5}
+        /&gt;
+    &lt;/flex&gt;
+)
+</code></pre>
+<h1 id="css-">
+			CSS样式表
+			<span><a class="mark" href="#css-" id="css-">#</a></span>
+		</h1><ul>
+<li><p>这与<code>HTML/CSS</code>的样式表非常类似，但现在的只支持<code>class</code>并不支持<code>id</code>与<code>tagName</code></p><br/></li>
+<li><p>样式表的数据结构其实是个树状结构，每个具名的样式表都可以有子样式表，子级样式表以空格区分且级数没有限制但理论来说越多的级数查询的速度也会越慢。</p><br/></li>
+<li><p>每个样式表可以指定一个时间<code>time</code>(毫秒)表示切换到此样式表的过渡时间，如果指定表示没有过渡。<br/>其实过渡触发时会创建一个动作并播放此动作。</p><br/></li>
+<li><p>样式表现在有三个伪类状态：</p><br/><ol><br/><li><code>normal</code> 光标或触摸离开（一般状态）时</li><br/><li><code>hover</code> 光标进入或者焦点进入时</li><br/><li><code>action</code> 光标按下时或者触摸离开时</li><br/></ol><br/></li>
+</ul>
+<p>下面是样式表的写法：</p>
+<pre><code class="undefinedtsx">import { Jsx, createCss } from &#39;quark&#39;;
+createCss({
+    &#39;.a&#39;: {
+        width: &#39;match&#39;,
+        textLineHeight: 45,
+        textWhiteSpace: &#39;pre&#39;,
+        textSize: 16,
+    },
+    &#39;.a:normal&#39;: {
+        textColor: &#39;#0f0&#39;,
+    },
+    &#39;.a:hover&#39;: {
+        textColor: &#39;#f0f&#39;,
+    },
+    &#39;.a:active&#39;: {
+        textColor: &#39;#f00&#39;,
+    },
+    &#39;.a .b&#39;: {
+        textSize: 20,
+    },
+    &#39;.a:normal .b&#39;: {
+        time: 500,  // 设置一个过渡时间
+        textColor: &#39;#000&#39;,
+    },
+    &#39;.a:hover .b&#39;: {
+        time: 500,
+        textColor: &#39;#f00&#39;,
+    },
+    &#39;.a:action .b:action&#39;: { // 这条规则无效，伪类不能存在子伪类
+        time: 500,
+        textColor: &#39;#f0f&#39;,
+    }, 
+});
+const vx = (
+    &lt;text class=&quot;a&quot; &gt;
+        &lt;label value=&quot;Hello A!&quot; /&gt;
+        &lt;label class=&quot;b&quot; value=&quot;Hello B!&quot; /&gt;
+    &lt;/text&gt;
+);
+</code></pre>
+<h1 id="-action-">
+			动作（Action）
+			<span><a class="mark" href="#-action-" id="-action-">#</a></span>
+		</h1><p>什么是动作呢？顾名思义它是管理运行环境中所有动作的中枢，通俗点讲就是动画。它也是总个框架核心组件之一，它提供动作的创建、删除、插入，以及提供对关键帧与过渡的诸多操作。关键帧的过渡可以使用三次贝塞尔曲线，或内置的曲线   <code>linear</code>/<code>ease</code>/<code>easeIn</code>/<code>easeOut</code>/<code>easeInOut</code>，这也和大多数主流框架以及游戏引擎类似。</p>
+<h2 id="-">
+			动作是什么原理?
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h2><p>动作怎么驱动视图进行流畅运动的呢？其实原理很简单，可以把动作系统看做一个独立的系统与视图或渲染完全不相关。它们之间的关系是动作自身的变化最终会映射调视图，这个过程是通过调用视图暴露的公有方法或属性来完成的，过程完全是单向的，且视图不会向动作发出任何指令。</p>
+<p>比如说现在创建了一个新的关键帧动作，给它设置两个关键帧，且x的值经过1秒钟从0变化到100。动作自身发生变化时通过调用绑定视图的API改变视图布局属性。这个过程视图是被动的，而动作是主动的。</p>
+<pre><code class="undefinedts">import { Application,Window,Box,KeyframeAction } from &#39;quark&#39;
+var app = new Application();
+var win = new Window();
+var box = new Box(win);
+var act = new KeyframeAction(win);
+act.add({ x: 0, time: 0 });
+act.add({ x: 100, time: 1e3/*毫秒*/ });
+box.width = 50;
+box.height = 50;
+box.backgroundColor = &#39;#f00&#39;;
+box.action = act;
+box.appendTo(win.root);
+act.loop = 1000;
+act.play();
+</code></pre>
+<h2 id="-">
+			动作类型
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h2><p>以下是框架提供的几个类型与继承联系</p>
+<ul>
+<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a><ul><br/><li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> </li><br/><li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a></li><br/><li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a></li><br/></ul><br/></li>
+</ul>
+<h2 id="action">
+			Action
+			<span><a class="mark" href="#action" id="action">#</a></span>
+		</h2><p>这是所有动作的基础类型，也是抽象类型不可以直接被实例。<br/>提供了一些基本的api操作，<code>播放</code>，<code>停止</code>，<code>跳转</code> 等，具体可查看API手册。</p>
+<h2 id="spawnaction">
+			SpawnAction
+			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
+		</h2><p>并行动作顾名思义即就是它的子动作都是并行运行的。并且以最长子动作的时长做为自身的时长来执行动作，较短时长的子动作则在结尾等待动作的结束或一个循环的的终止。</p>
+<h2 id="sequenceaction">
+			SequenceAction
+			<span><a class="mark" href="#sequenceaction" id="sequenceaction">#</a></span>
+		</h2><p>串行动作这个比较好理解，子动作一个接着一个执行，全部执行完成后结束或开始新的循环。</p>
+<h1 id="keyframeaction-keyframe">
+			KeyframeAction与Keyframe
+			<span><a class="mark" href="#keyframeaction-keyframe" id="keyframeaction-keyframe">#</a></span>
+		</h1><p>关键帧动作这是动作系统的核心。所有动作的实现均在这里完成它是动作系统基本单元，前面的<a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a>与<a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a>只有包含<a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a>类型的动作才有真正的义意。<br/>而关键帧动作又包含理更加基本的元素<a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a>，关键帧的属性与<code>CSS</code>属性是完全同名的且包含全部视图上可以变化的全部属性，比如<a href="http://langou.org/doc/media.html#class-matrix">Matrix</a>有<code>x</code>属性而<a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a>上也有<code>x</code>属性，但<a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a>上有的属性如果视图上并不存在，那么这个属性对视图是无效的，比如<a href="https://quarks.cc/doc/view.html#view">View</a>上就不存在<code>width</code>属性，所以<code>width</code>的改变不会影响到<a href="https://quarks.cc/doc/view.html#view">View</a>，但如果绑定的视图是<a href="https://quarks.cc/doc/view.html#box">Box</a>那么<code>width</code>的改变就会影响到它，这与<code>CSS</code>样式表类似。</p>
+<p>看下面的例子:</p>
+<pre><code class="undefinedjs">// 这是有效的动作
+var act1 = new KeyframeAction(win);
+var box1 = new Box(win);
+box1.backgroundColor = &#39;#f00&#39;;
+act1.add({ width: 10, height: 10 });
+act1.add({ width: 100, height: 100, time: 1e3 });
+box1.action = act1;
+act1.paly();
+// 这是无效的
+var act2 = new KeyframeAction(win);
+var view = new View(win);
+act2.add({ width: 10, height: 10 });
+act2.add({ width: 100, height: 100, time: 1e3 });
+view.action = act2;
+act2.paly();
+</code></pre>
+<h1 id="view-onactionkeyframe-view-onactionloop">
+			View.onActionKeyframe与View.onActionLoop
+			<span><a class="mark" href="#view-onactionkeyframe-view-onactionloop" id="view-onactionkeyframe-view-onactionloop">#</a></span>
+		</h1><p>这两个事件是由动作产生并发送的。</p>
+<ul>
+<li><p><code>View.onActionKeyframe</code>为动作执行到达关键帧时触发。因为画面渲染是固定的帧率，触发总是发生在帧的渲染时，所以可能会与理想中的时间值有所误差提前或延后，这个延时值会保存在事件数据的<code>delay</code>上。提前为负数，延时为正数。</p><br/></li>
+<li><p><code>View.onActionLoop</code>动作循环开始时触发，第一次执行动作并不会触发。同样它也会有延时，也同样记录在<code>delay</code>。</p><br/></li>
+</ul>
+<script>
+    <!--
+    var language = (navigator.browserLanguage || navigator.language).toLowerCase();
+    var isLanguageCn = language.indexOf('cn') >= 0;
+    var isPageCn = location.href.indexOf('README-cn') >=0;
+    var isHtml = typeof src == 'string'; // html page will have a src variable
+
+    if ( isLanguageCn ) { // cn
+        if ( !isPageCn ) { // goto to cn
+            location.href = isHtml ? 'README-cn.html' : 'README-cn.md';
+        }
+    } else { // en
+        if ( isPageCn ) { // goto to en
+            location.href = isHtml ? 'README.html' : 'README.md';
+        }
+    }
+    -->
+</script>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

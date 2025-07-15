@@ -425,7 +425,7 @@ import * as buffer from &#39;quark/buffer&#39;
 class MyCtr extends ViewController&lt;{param: number}, {data?: Uint8Array}&gt; {
     triggerLoad() {
         return http
-            .get(&#39;[`http://192.168.1.100:1026/README.md?param=&#39;`](http://192.168.1.100:1026/README.md?param=&#39;) + this.props.param)
+            .get(&#39;[`http://192.168.1.100:1026/README.md?param=`](http://192.168.1.100:1026/README.md?param=)&#39; + this.props.param)
             .then(e=&gt;this.setState({data:e.data}));
     }
     render() {

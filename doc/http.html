@@ -652,7 +652,7 @@
 <pre><code class="undefinedts">import path from &#39;quark/path&#39;
 import * as fs from &#39;quark/fs&#39;
 var cl = new HttpClientRequest()
-cl.setUrl(&#39;[`https://www.baidu.com/&#39;)`](https://www.baidu.com/&#39;))
+cl.setUrl(&#39;[`https://www.baidu.com/`](https://www.baidu.com/)&#39;)
 cl.setSavePath(path.documents(&#39;baidu.html&#39;));
 cl.onError.on(function(ev) { console.log(ev.data) })
 // Prints: 
@@ -673,7 +673,7 @@ cl.onReadystateChange.on(function() { console.log(cl.readyState, cl.statusCode) 
 cl.send();
 
 var cl2 = new HttpClientRequest()
-cl2.setUrl(&#39;[`http://192.168.1.100:1026/Tools/uploadFile&#39;)`](http://192.168.1.100:1026/Tools/uploadFile&#39;))
+cl2.setUrl(&#39;[`http://192.168.1.100:1026/Tools/uploadFile`](http://192.168.1.100:1026/Tools/uploadFile)&#39;)
 cl2.setMethod(HttpMethod.POST);
 cl2.setUploadFile(&#39;uploadFile&#39;, path.resources(&#39;util/http.js&#39;))
 cl2.onEnd.on(function() {
@@ -800,7 +800,7 @@ cl2.send();
 <pre><code class="undefinedts">import path from &#39;quark/path&#39;
 // uploat file and save body data
 var opts = {
-    url: &#39;[`http://192.168.1.100:1026/Tools/uploadFile&#39;,`](http://192.168.1.100:1026/Tools/uploadFile&#39;,)
+    url: &#39;[`http://192.168.1.100:1026/Tools/uploadFile`](http://192.168.1.100:1026/Tools/uploadFile)&#39;,
     method: HttpMethod.POST,
     headers: { test: &#39;test&#39; },
     // postData: &#39;a=A&#39;,
@@ -827,7 +827,7 @@ request(opts).then(function(buff) {
 		</h2><p>Sending HTTP request with stream way by the options</p>
 <p>For example:</p>
 <pre><code class="undefinedts">requestStream({
-    url: &#39;[`http://192.168.1.100:1026/&#39;`](http://192.168.1.100:1026/&#39;) 
+    url: &#39;[`http://192.168.1.100:1026/`](http://192.168.1.100:1026/)&#39; 
 }, (d)=&gt;{
     // Prints: &lt;Buffer ...&gt;
     console.log(d.data) 
@@ -849,7 +849,7 @@ request(opts).then(function(buff) {
 <p>For example:</p>
 <pre><code class="undefinedjs">// Prints: &lt;Buffer ...&gt;
 try {
-    console.log(http.requestSync({ url: &#39;[`http://192.168.1.100:1026/&#39;`](http://192.168.1.100:1026/&#39;) }));
+    console.log(http.requestSync({ url: &#39;[`http://192.168.1.100:1026/`](http://192.168.1.100:1026/)&#39; }));
 } catch(e) {
     //Fail
 }

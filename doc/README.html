@@ -106,10 +106,10 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#quark">quark</a></span>
+<span><a href="#quark">Quark</a></span>
 </li>
 <li>
-<span><a href="#build-source">Build source</a></span>
+<span><a href="#source-build">Source build</a></span>
 </li>
 <li>
 <span><a href="#simple-examples">Simple Examples</a></span>
@@ -141,19 +141,18 @@
 
 			<div id="apicontent">
 				<h1 id="quark">
-			quark
+			Quark
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
-		</h1><p>quark is a cross-platform (Android/iOS/Mac/Linux) front-end development framework. The core code is written in C++. The bottom layer is based on OpenGL drawing. The upper layer implements a streamlined typesetting engine and a JS/JSX running environment. The goal is to develop GUI applications on this basis, which can take both development speed and operation efficiency into account.</p>
+		</h1><p>Quark is a cross-platform (<code>Android</code>/<code>iOS</code>/<code>Mac</code>/<code>Linux</code>) front-end development framework. The core code is written in C++. The bottom layer is based on OpenGL drawing. The upper layer implements a streamlined typesetting engine and a JS/JSX running environment. The goal is to develop GUI applications on this basis, which can take both development speed and operation efficiency into account.</p>
 <ul>
-<li>Only <code>iOS</code> and <code>Android</code> systems are supported for the time being, this does not include <code>AndroidTV</code>, because <code>TV</code> applications are very different from mobile applications</li>
 <li>From here, <a href="http://quarks.cc/doc/"><code>Go API Index</code></a> can go to <code>API Documents Index</code></li>
 </ul>
 <table>
 <thead>
 <tr>
-<th><img src="http://quarks.cc/img/0x0ss.jpg" alt="Screenshot"></th>
-<th><img src="http://quarks.cc/img/0x0ss_3.jpg" alt="Screenshot"></th>
-<th><img src="http://quarks.cc/img/0x0ss_4.jpg" alt="Screenshot"></th>
+<th><img src="http://quarks.cc/img/000.jpg" alt="Screenshot"></th>
+<th><img src="http://quarks.cc/img/001.jpg" alt="Screenshot"></th>
+<th><img src="http://quarks.cc/img/002.jpg" alt="Screenshot"></th>
 </tr>
 </thead>
 <tbody>
@@ -162,20 +161,20 @@
 </tr>
 </tbody>
 </table>
-<h1 id="build-source">
-			Build source
-			<span><a class="mark" href="#build-source" id="build-source">#</a></span>
+<h1 id="source-build">
+			Source build
+			<span><a class="mark" href="#source-build" id="source-build">#</a></span>
 		</h1><ol>
 <li>Build must dependent <code>Xcode</code> / <code>JDK</code> / <code>Android-SDK</code> / <code>python</code> / <code>nodejs</code> .</li>
 <li>Setting environment variable <code>ANDROID_SDK</code> and <code>NDK</code> directory.</li>
 <li>Pull dependent librarys, execute <code>make sync</code>.</li>
 </ol>
-<p>Compile and install qkmake, execute <code>make</code> or <code>make install</code>, It takes a long time.</p>
+<p>Compile and install qkmake, execute <code>make all</code> or <code>make install</code>, It takes a long time.</p>
 <h1 id="simple-examples">
 			Simple Examples
 			<span><a class="mark" href="#simple-examples" id="simple-examples">#</a></span>
 		</h1><p>This is a simple program to display Hello world on the screen</p>
-<pre><code class="undefinedtsx">import { Jsx,Application,Window } from &#39;quark&#39;
+<pre><code class="undefinedtsx">import { Jsx,Application,Window } from &#39;quark&#39;;
 new Application();
 new Window().render(
     &lt;text value=&quot;Hello world&quot; textSize={48} align=&quot;centerMiddle&quot; /&gt;
@@ -214,14 +213,14 @@ $ qkmake init
 			Build project
 			<span><a class="mark" href="#build-project" id="build-project">#</a></span>
 		</h2><p>This step compresses and packages the JavaScript code and resource files inside the project,<br/>If this is a new project, you can skip this step and go directly to the next step</p>
-<pre><code class="undefinedjs"># shell
+<pre><code class="undefinedsh"># shell
 $ qkmake build
 </code></pre>
 <h2 id="export-project">
 			Export project
 			<span><a class="mark" href="#export-project" id="export-project">#</a></span>
-		</h2><p>This step exports <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> or <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a> project，because you eventually publish the program that be a <code>.apk</code> or <code>.ipa</code></p>
-<pre><code class="undefinedjs"># shell
+		</h2><p>This step exports <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> or <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a> project，because eventually publish the program that be a <code>.apk</code> or <code>.ipa</code></p>
+<pre><code class="undefinedsh"># shell
 # export xcode ios project
 $ qkmake export ios
 # export android studio project
@@ -233,7 +232,7 @@ $ qkmake export android
 			<span><a class="mark" href="#quark-test-http-server" id="quark-test-http-server">#</a></span>
 		</h2><p><code>qkmake</code> provides a test http server, each time you change the <code>js</code> or <code>jsx</code> code, you don&#39;t have to reinstall every time.</p>
 <p>Execute the following code to start it：</p>
-<pre><code class="undefinedjs"># shell
+<pre><code class="undefinedsh"># shell
 $ qkmake watch
 </code></pre>
 <h1 id="downloads">
@@ -243,7 +242,24 @@ $ qkmake watch
 <li>Examples demo <a href="https://github.com/louis-tru/quark/releases/download/v0.1.0/examples-release.apk"><code>Android APK</code></a> Install package</li>
 <li>Project <a href="https://github.com/louis-tru/quark"><code>Source code</code></a> from <code>Github</code></li>
 </ul>
+<script>
+    <!--
+    var language = (navigator.browserLanguage || navigator.language).toLowerCase();
+    var isLanguageCn = language.indexOf('cn') >= 0;
+    var isPageCn = location.href.indexOf('README-cn') >=0;
+    var isHtml = typeof src == 'string'; // html page will have a src variable
 
+    if ( isLanguageCn ) { // cn
+        if ( !isPageCn ) { // goto to cn
+            location.href = isHtml ? 'README-cn.html' : 'README-cn.md';
+        }
+    } else { // en
+        if ( isPageCn ) { // goto to en
+            location.href = isHtml ? 'README.html' : 'README.md';
+        }
+    }
+    -->
+</script>
 			</div>
 
 		</div>

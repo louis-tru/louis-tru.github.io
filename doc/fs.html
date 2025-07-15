@@ -1492,7 +1492,7 @@ fs.abort(c.id);
 			<span><a class="mark" href="#reader-readfile-path-" id="reader-readfile-path-">#</a></span>
 		</h3><p>Reading file data</p>
 <p>For example:</p>
-<pre><code class="undefinedts">reader.readFile(&#39;[`http://xxx.com/test.txt&#39;).then(()=&gt;{`](http://xxx.com/test.txt&#39;).then(()=&gt;{)
+<pre><code class="undefinedts">reader.readFile(&#39;[`http://xxx.com/test.txt`](http://xxx.com/test.txt)&#39;).then(()=&gt;{
     // Success
 }).catch(err=&gt;{
     // Fail
@@ -1517,7 +1517,7 @@ fs.abort(c.id);
 		</h3><p>Read file data by asynchronous streaming</p>
 <p>For example:</p>
 <pre><code class="undefinedts">// async read file stream 
-reader.readStream(&#39;[`http://www.baidu.com&#39;,`](http://www.baidu.com&#39;,) function(d){}));
+reader.readStream(&#39;[`http://www.baidu.com`](http://www.baidu.com)&#39;, function(d){}));
 reader.readStream(&#39;file:///var/data/test.txt&#39;, function(d){}));
 reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
     // Success
