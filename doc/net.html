@@ -528,7 +528,7 @@
 			<span><a class="mark" href="#socket-write-data-" id="socket-write-data-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="socket-error-reason-">
 			socket.error(reason)
@@ -751,7 +751,7 @@ ws.connect();
 		</h3><p>Sending the data message.<br/>Frame client-to-server output as a text packet or buffer packet.</p>
 <ul>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-send-data-">
 			websocket.send(data)
@@ -759,14 +759,14 @@ ws.connect();
 		</h3><p>alias for write</p>
 <ul>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-ping-">
 			websocket.ping()
 			<span><a class="mark" href="#websocket-ping-" id="websocket-ping-">#</a></span>
 		</h3><p>Sending the ping message</p>
 <ul>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-test-timeoutms-">
 			websocket.test(timeoutMs?)
@@ -774,7 +774,7 @@ ws.connect();
 		</h3><p>First send the ping message to the remote client then wait for the pong message</p>
 <ul>
 <li><code>@param</code> <code>timeoutMs?</code>: <a href="$ext.html#uint"><code>Uint</code></a> wait for the pong message, default not timeout</li>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-disablesslverify-disable-">
 			websocket.disableSslVerify(disable)
