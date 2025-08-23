@@ -192,9 +192,6 @@
 <li>
 <span><a href="#packagejson-watching-">packagejson.watching?</a></span>
 </li>
-<li>
-<span><a href="#packagejson-loadsync-">packagejson.loadSync()</a></span>
-</li>
 </ul>
 <li>
 <span><a href="#class-module">Class: Module</a></span>
@@ -273,6 +270,9 @@
 <span><a href="#package-resolve-relativepath-">package.resolve(relativePath)</a></span>
 </li>
 <li>
+<span><a href="#package-install-">package.install()</a></span>
+</li>
+<li>
 <span><a href="#package-installsync-">package.installSync()</a></span>
 </li>
 </ul>
@@ -300,6 +300,9 @@
 </li>
 <li>
 <span><a href="#default-mainfilename">default.mainFilename</a></span>
+</li>
+<li>
+<span><a href="#default-addsearchpath-path-isfirst-nocache-">default.addSearchPath(path,isFirst?,noCache?)</a></span>
 </li>
 <li>
 <span><a href="#default-lookuppackage-name-parent-">default.lookupPackage(name,parent?)</a></span>
@@ -461,10 +464,6 @@
 		</h3><ul>
 <li><code>watching?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> having debug server of the watching mode</li>
 </ul>
-<h3 id="packagejson-loadsync-">
-			packagejson.loadSync()
-			<span><a class="mark" href="#packagejson-loadsync-" id="packagejson-loadsync-">#</a></span>
-		</h3><p>async load packages name and version and files hash</p>
 <h2 id="class-module">
 			Class: Module
 			<span><a class="mark" href="#class-module" id="class-module">#</a></span>
@@ -620,6 +619,13 @@
 <li><code>@param</code> <code>relativePath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
+<h3 id="package-install-">
+			package.install()
+			<span><a class="mark" href="#package-install-" id="package-install-">#</a></span>
+		</h3><p>Async install package</p>
+<ul>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
 <h3 id="package-installsync-">
 			package.installSync()
 			<span><a class="mark" href="#package-installsync-" id="package-installsync-">#</a></span>
@@ -666,6 +672,16 @@
 			<span><a class="mark" href="#default-mainfilename" id="default-mainfilename">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>mainFilename</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="default-addsearchpath-path-isfirst-nocache-">
+			default.addSearchPath(path,isFirst?,noCache?)
+			<span><a class="mark" href="#default-addsearchpath-path-isfirst-nocache-" id="default-addsearchpath-path-isfirst-nocache-">#</a></span>
+		</h3><p>Add global search path</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> global search directory path</li>
+<li><code>@param</code> <code>isFirst?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> use high priority</li>
+<li><code>@param</code> <code>noCache?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> use __no_cache param load pkgs.json file</li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="default-lookuppackage-name-parent-">
 			default.lookupPackage(name,parent?)

@@ -187,6 +187,15 @@
 <li>
 <span><a href="#wsclient-constructor-servicename-conv-">wsclient.constructor(serviceName,conv)</a></span>
 </li>
+<li>
+<span><a href="#wsclient-receivemessage-packet-">wsclient.receiveMessage(packet)</a></span>
+</li>
+<li>
+<span><a href="#wsclient-callmethod-method-data-sender-">wsclient.callMethod(method,data,sender)</a></span>
+</li>
+<li>
+<span><a href="#wsclient-send-method-data-sender-">wsclient.send(method,data?,sender?)</a></span>
+</li>
 </ul>
 </li>
 </ul>
@@ -323,11 +332,37 @@
 			<span><a class="mark" href="#wsclient-constructor-servicename-conv-" id="wsclient-constructor-servicename-conv-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>serviceName</code>: <a href="$ext.html#string"><code>string</code></a> Service name on the server</li>
-<li><p><code>@param</code> <code>conv</code>: <a href="#class-wsconversation"><code>WSConversation</code></a> Conversation instance</p><br/></li>
+<li><code>@param</code> <code>conv</code>: <a href="#class-wsconversation"><code>WSConversation</code></a> Conversation instance</li>
+</ul>
+<h3 id="wsclient-receivemessage-packet-">
+			wsclient.receiveMessage(packet)
+			<span><a class="mark" href="#wsclient-receivemessage-packet-" id="wsclient-receivemessage-packet-">#</a></span>
+		</h3><p>To handle received messages from the server.</p>
+<ul>
+<li><code>@param</code> <code>packet</code>: <a href="#interface-packet"><code>Packet</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
+<h3 id="wsclient-callmethod-method-data-sender-">
+			wsclient.callMethod(method,data,sender)
+			<span><a class="mark" href="#wsclient-callmethod-method-data-sender-" id="wsclient-callmethod-method-data-sender-">#</a></span>
+		</h3><p>The remote service calls a method on the client by the method name.</p>
+<ul>
+<li><code>@param</code> <code>method</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>data</code>: <code>any</code> </li>
+<li><p><code>@param</code> <code>sender</code>: <a href="$ext.html#string"><code>string</code></a> </p><br/></li>
 <li><p><code>@param</code> <code>method</code>:  Method name to call</p><br/></li>
 <li><code>@param</code> <code>data?</code>:  Data to send</li>
 <li><code>@param</code> <code>timeout?</code>:  Timeout in milliseconds, default 120s</li>
 <li><code>@param</code> <code>sender?</code>:  Sender name, default this service name</li>
+</ul>
+<h3 id="wsclient-send-method-data-sender-">
+			wsclient.send(method,data?,sender?)
+			<span><a class="mark" href="#wsclient-send-method-data-sender-" id="wsclient-send-method-data-sender-">#</a></span>
+		</h3><p>To call a method on the server but there will be no callback.</p>
+<ul>
+<li><code>@param</code> <code>method</code>: <a href="$ext.html#string"><code>string</code></a> Method name to call</li>
+<li><code>@param</code> <code>data?</code>: <code>any</code> Data to send</li>
+<li><code>@param</code> <code>sender?</code>: <a href="$ext.html#string"><code>string</code></a> Sender name, default this service name</li>
 </ul>
 
 			</div>

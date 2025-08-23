@@ -202,6 +202,9 @@
 <li>
 <span><a href="#socket-write-data-">socket.write(data)</a></span>
 </li>
+<li>
+<span><a href="#socket-error-reason-">socket.error(reason)</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#interface-signer">Interface: Signer</a></span>
@@ -310,7 +313,34 @@
 <span><a href="#websocket-ping-">websocket.ping()</a></span>
 </li>
 <li>
+<span><a href="#websocket-test-timeoutms-">websocket.test(timeoutMs?)</a></span>
+</li>
+<li>
 <span><a href="#websocket-disablesslverify-disable-">websocket.disableSslVerify(disable)</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggeropen-">websocket.triggerOpen()</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggerclose-">websocket.triggerClose()</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggererror-err-">websocket.triggerError(err)</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggerping-">websocket.triggerPing()</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggerpong-">websocket.triggerPong()</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggerdata-data-">websocket.triggerData(data)</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggertext-text-">websocket.triggerText(text)</a></span>
+</li>
+<li>
+<span><a href="#websocket-triggertimeout-">websocket.triggerTimeout()</a></span>
 </li>
 </ul>
 </li>
@@ -499,6 +529,13 @@
 		</h3><ul>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
+<h3 id="socket-error-reason-">
+			socket.error(reason)
+			<span><a class="mark" href="#socket-error-reason-" id="socket-error-reason-">#</a></span>
+		</h3><p>Handles an error</p>
+<ul>
+<li><code>@param</code> <code>reason</code>: <code>any</code> </li>
 </ul>
 <h2 id="interface-signer">
 			Interface: Signer
@@ -731,6 +768,14 @@ ws.connect();
 <ul>
 <li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
+<h3 id="websocket-test-timeoutms-">
+			websocket.test(timeoutMs?)
+			<span><a class="mark" href="#websocket-test-timeoutms-" id="websocket-test-timeoutms-">#</a></span>
+		</h3><p>First send the ping message to the remote client then wait for the pong message</p>
+<ul>
+<li><code>@param</code> <code>timeoutMs?</code>: <a href="$ext.html#uint"><code>Uint</code></a> wait for the pong message, default not timeout</li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
 <h3 id="websocket-disablesslverify-disable-">
 			websocket.disableSslVerify(disable)
 			<span><a class="mark" href="#websocket-disablesslverify-disable-" id="websocket-disablesslverify-disable-">#</a></span>
@@ -738,7 +783,40 @@ ws.connect();
 <ul>
 <li><code>@param</code> <code>disable</code>: <a href="$ext.html#boolean"><code>boolean</code></a> True means disable ssl verify</li>
 </ul>
-
+<h3 id="websocket-triggeropen-">
+			websocket.triggerOpen()
+			<span><a class="mark" href="#websocket-triggeropen-" id="websocket-triggeropen-">#</a></span>
+		</h3><h3 id="websocket-triggerclose-">
+			websocket.triggerClose()
+			<span><a class="mark" href="#websocket-triggerclose-" id="websocket-triggerclose-">#</a></span>
+		</h3><h3 id="websocket-triggererror-err-">
+			websocket.triggerError(err)
+			<span><a class="mark" href="#websocket-triggererror-err-" id="websocket-triggererror-err-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>err</code>: <a href="$ext.html#error"><code>Error</code></a> </li>
+</ul>
+<h3 id="websocket-triggerping-">
+			websocket.triggerPing()
+			<span><a class="mark" href="#websocket-triggerping-" id="websocket-triggerping-">#</a></span>
+		</h3><h3 id="websocket-triggerpong-">
+			websocket.triggerPong()
+			<span><a class="mark" href="#websocket-triggerpong-" id="websocket-triggerpong-">#</a></span>
+		</h3><h3 id="websocket-triggerdata-data-">
+			websocket.triggerData(data)
+			<span><a class="mark" href="#websocket-triggerdata-data-" id="websocket-triggerdata-data-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>data</code>: <code>Buffer</code> </li>
+</ul>
+<h3 id="websocket-triggertext-text-">
+			websocket.triggerText(text)
+			<span><a class="mark" href="#websocket-triggertext-text-" id="websocket-triggertext-text-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>text</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="websocket-triggertimeout-">
+			websocket.triggerTimeout()
+			<span><a class="mark" href="#websocket-triggertimeout-" id="websocket-triggertimeout-">#</a></span>
+		</h3>
 			</div>
 
 		</div>

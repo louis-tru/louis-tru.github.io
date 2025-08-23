@@ -188,6 +188,21 @@
 <span><a href="#viewcontroller-update-cb-">viewcontroller.update(cb?)</a></span>
 </li>
 <li>
+<span><a href="#viewcontroller-triggerload-">viewcontroller.triggerLoad()</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-triggermounted-">viewcontroller.triggerMounted()</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-triggerupdate-old-vdom-">viewcontroller.triggerUpdate(old,vdom)</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-triggerdestroy-">viewcontroller.triggerDestroy()</a></span>
+</li>
+<li>
+<span><a href="#viewcontroller-render-">viewcontroller.render()</a></span>
+</li>
+<li>
 <span><a href="#viewcontroller-appendto-parent-">viewcontroller.appendTo(parent)</a></span>
 </li>
 <li>
@@ -378,6 +393,43 @@
 		</h3><p>Force re-rendering of the ViewController</p>
 <ul>
 <li><code>@param</code> <code>cb?</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
+</ul>
+<h3 id="viewcontroller-triggerload-">
+			viewcontroller.triggerLoad()
+			<span><a class="mark" href="#viewcontroller-triggerload-" id="viewcontroller-triggerload-">#</a></span>
+		</h3><p>Triggered before the first render call</p>
+<ul>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h3 id="viewcontroller-triggermounted-">
+			viewcontroller.triggerMounted()
+			<span><a class="mark" href="#viewcontroller-triggermounted-" id="viewcontroller-triggermounted-">#</a></span>
+		</h3><p>Triggered after the first render call completed</p>
+<ul>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h3 id="viewcontroller-triggerupdate-old-vdom-">
+			viewcontroller.triggerUpdate(old,vdom)
+			<span><a class="mark" href="#viewcontroller-triggerupdate-old-vdom-" id="viewcontroller-triggerupdate-old-vdom-">#</a></span>
+		</h3><p>Triggered when the DOM content is updated</p>
+<ul>
+<li><code>@param</code> <code>old</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
+<li><code>@param</code> <code>vdom</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h3 id="viewcontroller-triggerdestroy-">
+			viewcontroller.triggerDestroy()
+			<span><a class="mark" href="#viewcontroller-triggerdestroy-" id="viewcontroller-triggerdestroy-">#</a></span>
+		</h3><p>Triggered when after calling remove()</p>
+<ul>
+<li><code>@return</code> <code>any</code> </li>
+</ul>
+<h3 id="viewcontroller-render-">
+			viewcontroller.render()
+			<span><a class="mark" href="#viewcontroller-render-" id="viewcontroller-render-">#</a></span>
+		</h3><p>When rendering occurs, call to return the <code>vdom</code> object that needs to be rendered</p>
+<ul>
+<li><code>@return</code> <a href="#renderresult"><code>RenderResult</code></a> </li>
 </ul>
 <h3 id="viewcontroller-appendto-parent-">
 			viewcontroller.appendTo(parent)
