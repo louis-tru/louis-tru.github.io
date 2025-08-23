@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -196,6 +205,18 @@
 <ul>
 <li>
 <span><a href="#window">Window</a></span>
+</li>
+<li>
+<span><a href="#window-onchange">window.onChange</a></span>
+</li>
+<li>
+<span><a href="#window-onbackground">window.onBackground</a></span>
+</li>
+<li>
+<span><a href="#window-onforeground">window.onForeground</a></span>
+</li>
+<li>
+<span><a href="#window-onclose">window.onClose</a></span>
 </li>
 <li>
 <span><a href="#window-rootctr">window.rootCtr</a></span>
@@ -404,6 +425,34 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-nativewindow"><code>NativeWindow</code></a></li>
 </ul>
+<h3 id="window-onchange">
+			window.onChange
+			<span><a class="mark" href="#window-onchange" id="window-onchange">#</a></span>
+		</h3><p>Trigger when to change window size</p>
+<ul>
+<li><code>@event</code> <code>onChange</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+</ul>
+<h3 id="window-onbackground">
+			window.onBackground
+			<span><a class="mark" href="#window-onbackground" id="window-onbackground">#</a></span>
+		</h3><p>Trigger when into background</p>
+<ul>
+<li><code>@event</code> <code>onBackground</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+</ul>
+<h3 id="window-onforeground">
+			window.onForeground
+			<span><a class="mark" href="#window-onforeground" id="window-onforeground">#</a></span>
+		</h3><p>Trigger when into foreground</p>
+<ul>
+<li><code>@event</code> <code>onForeground</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+</ul>
+<h3 id="window-onclose">
+			window.onClose
+			<span><a class="mark" href="#window-onclose" id="window-onclose">#</a></span>
+		</h3><p>Trigger when closed window</p>
+<ul>
+<li><code>@event</code> <code>onClose</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+</ul>
 <h3 id="window-rootctr">
 			window.rootCtr
 			<span><a class="mark" href="#window-rootctr" id="window-rootctr">#</a></span>
@@ -425,7 +474,7 @@ import * as buffer from &#39;quark/buffer&#39;
 class MyCtr extends ViewController&lt;{param: number}, {data?: Uint8Array}&gt; {
     triggerLoad() {
         return http
-            .get(&#39;[`http://192.168.1.100:1026/README.md?param=`](http://192.168.1.100:1026/README.md?param=)&#39; + this.props.param)
+            .get(&#39;http://192.168.1.100:1026/README.md?param=&#39; + this.props.param)
             .then(e=&gt;this.setState({data:e.data}));
     }
     render() {

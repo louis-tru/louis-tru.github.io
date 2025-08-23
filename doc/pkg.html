@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -181,7 +190,7 @@
 <span><a href="#packagejson-modules-">packagejson.modules?</a></span>
 </li>
 <li>
-<span><a href="#packagejson-load-nocache-">packagejson.load(noCache?)</a></span>
+<span><a href="#packagejson-watching-">packagejson.watching?</a></span>
 </li>
 <li>
 <span><a href="#packagejson-loadsync-">packagejson.loadSync()</a></span>
@@ -264,9 +273,6 @@
 <span><a href="#package-resolve-relativepath-">package.resolve(relativePath)</a></span>
 </li>
 <li>
-<span><a href="#package-install-">package.install()</a></span>
-</li>
-<li>
 <span><a href="#package-installsync-">package.installSync()</a></span>
 </li>
 </ul>
@@ -281,6 +287,12 @@
 <span><a href="#default">default</a></span>
 <ul>
 <li>
+<span><a href="#default-onfilechanged">default.onFileChanged</a></span>
+</li>
+<li>
+<span><a href="#default-iswatching">default.isWatching</a></span>
+</li>
+<li>
 <span><a href="#default-mainpackage">default.mainPackage</a></span>
 </li>
 <li>
@@ -288,9 +300,6 @@
 </li>
 <li>
 <span><a href="#default-mainfilename">default.mainFilename</a></span>
-</li>
-<li>
-<span><a href="#default-addsearchpath-path-isfirst-nocache-">default.addSearchPath(path,isFirst?,noCache?)</a></span>
 </li>
 <li>
 <span><a href="#default-lookuppackage-name-parent-">default.lookupPackage(name,parent?)</a></span>
@@ -309,7 +318,7 @@
 		</h1><h2 id="getorigin-from-">
 			getOrigin(from)
 			<span><a class="mark" href="#getorigin-from-" id="getorigin-from-">#</a></span>
-		</h2><p><a href="http://google.com/aa/test.txt"><code>http://google.com/aa/test.txt</code></a> =&gt; <a href="http://google.com"><code>http://google.com</code></a><br/>zip:///home/xxx/test.apk@/assets/bb.jpg =&gt; zip:///home/xxx/test.apk@<br/>file:///d:/a/bc/d/e/f/test.txt =&gt; file://d:<br/>file:///a/bc/d/e/f/test.txt =&gt; file://</p>
+		</h2><p>http://google.com/aa/test.txt =&gt; http://google.com<br/>zip:///home/xxx/test.apk@/assets/bb.jpg =&gt; zip:///home/xxx/test.apk@<br/>file:///d:/a/bc/d/e/f/test.txt =&gt; file://d:<br/>file:///a/bc/d/e/f/test.txt =&gt; file://</p>
 <ul>
 <li><code>@param</code> <code>from</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
@@ -446,12 +455,11 @@
 		</h3><ul>
 <li><code>modules?</code>: <code>Dict</code>&lt;<code>Dict</code>&lt;<a href="#interface-packagejson"><code>PackageJson</code></a>&gt;&gt; </li>
 </ul>
-<h3 id="packagejson-load-nocache-">
-			packagejson.load(noCache?)
-			<span><a class="mark" href="#packagejson-load-nocache-" id="packagejson-load-nocache-">#</a></span>
-		</h3><p>load packages name and version and files hash</p>
-<ul>
-<li><code>@param</code> <code>noCache?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<h3 id="packagejson-watching-">
+			packagejson.watching?
+			<span><a class="mark" href="#packagejson-watching-" id="packagejson-watching-">#</a></span>
+		</h3><ul>
+<li><code>watching?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> having debug server of the watching mode</li>
 </ul>
 <h3 id="packagejson-loadsync-">
 			packagejson.loadSync()
@@ -612,13 +620,6 @@
 <li><code>@param</code> <code>relativePath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
-<h3 id="package-install-">
-			package.install()
-			<span><a class="mark" href="#package-install-" id="package-install-">#</a></span>
-		</h3><p>Async install package</p>
-<ul>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
 <h3 id="package-installsync-">
 			package.installSync()
 			<span><a class="mark" href="#package-installsync-" id="package-installsync-">#</a></span>
@@ -636,7 +637,19 @@
 <h2 id="default">
 			default
 			<span><a class="mark" href="#default" id="default">#</a></span>
-		</h2><h3 id="default-mainpackage">
+		</h2><h3 id="default-onfilechanged">
+			default.onFileChanged
+			<span><a class="mark" href="#default-onfilechanged" id="default-onfilechanged">#</a></span>
+		</h3><ul>
+<li><code>@event</code> <code>onFileChanged</code>:  </li>
+</ul>
+<h3 id="default-iswatching">
+			default.isWatching
+			<span><a class="mark" href="#default-iswatching" id="default-iswatching">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>isWatching</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="default-mainpackage">
 			default.mainPackage
 			<span><a class="mark" href="#default-mainpackage" id="default-mainpackage">#</a></span>
 		</h3><ul>
@@ -653,16 +666,6 @@
 			<span><a class="mark" href="#default-mainfilename" id="default-mainfilename">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>mainFilename</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="default-addsearchpath-path-isfirst-nocache-">
-			default.addSearchPath(path,isFirst?,noCache?)
-			<span><a class="mark" href="#default-addsearchpath-path-isfirst-nocache-" id="default-addsearchpath-path-isfirst-nocache-">#</a></span>
-		</h3><p>Add global search path</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> global search directory path</li>
-<li><code>@param</code> <code>isFirst?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> use high priority</li>
-<li><code>@param</code> <code>noCache?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> use __no_cache param load pkgs.json file</li>
-<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="default-lookuppackage-name-parent-">
 			default.lookupPackage(name,parent?)

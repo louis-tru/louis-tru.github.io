@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -125,6 +134,18 @@
 </li>
 <li>
 <span><a href="#uint">Uint</a></span>
+</li>
+<li>
+<span><a href="#uint16">Uint16</a></span>
+</li>
+<li>
+<span><a href="#int16">Int16</a></span>
+</li>
+<li>
+<span><a href="#uint8">Uint8</a></span>
+</li>
+<li>
+<span><a href="#int8">Int8</a></span>
 </li>
 <li>
 <span><a href="#float">Float</a></span>
@@ -242,7 +263,7 @@
 		</h1><h2 id="number">
 			number
 			<span><a class="mark" href="#number" id="number">#</a></span>
-		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</code></a></p>
+		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</p>
 <ul>
 <li><code>@type</code> <code>number</code> = <a href="#interface-number"><code>Number</code></a></li>
 <li><code>@global</code>  </li>
@@ -250,7 +271,7 @@
 <h2 id="boolean">
 			boolean
 			<span><a class="mark" href="#boolean" id="boolean">#</a></span>
-		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</code></a></p>
+		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</p>
 <ul>
 <li><code>@type</code> <code>boolean</code> = <a href="#interface-boolean"><code>Boolean</code></a></li>
 <li><code>@global</code>  </li>
@@ -258,7 +279,7 @@
 <h2 id="object">
 			object
 			<span><a class="mark" href="#object" id="object">#</a></span>
-		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</code></a></p>
+		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</p>
 <ul>
 <li><code>@type</code> <code>object</code> = <a href="#interface-object"><code>Object</code></a></li>
 <li><code>@global</code>  </li>
@@ -266,7 +287,7 @@
 <h2 id="string">
 			string
 			<span><a class="mark" href="#string" id="string">#</a></span>
-		</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</code></a></p>
+		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
 <ul>
 <li><code>@type</code> <code>string</code> = <a href="#interface-string"><code>String</code></a></li>
 <li><code>@global</code>  </li>
@@ -274,7 +295,7 @@
 <h2 id="int">
 			Int
 			<span><a class="mark" href="#int" id="int">#</a></span>
-		</h2><p>32-bit signed integer, Range: -2147483648 to 2147483647</p>
+		</h2><p>32-bit integer, Range: -2147483648 to 2147483647</p>
 <ul>
 <li><code>@type</code> <code>Int</code> = <a href="#interface-number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
@@ -287,10 +308,42 @@
 <li><code>@type</code> <code>Uint</code> = <a href="#interface-number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
+<h2 id="uint16">
+			Uint16
+			<span><a class="mark" href="#uint16" id="uint16">#</a></span>
+		</h2><p>16-bit signed integer, Range: 0 to 65535</p>
+<ul>
+<li><code>@type</code> <code>Uint16</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="int16">
+			Int16
+			<span><a class="mark" href="#int16" id="int16">#</a></span>
+		</h2><p>16-bit integer, Range: -32768 to 32767</p>
+<ul>
+<li><code>@type</code> <code>Int16</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="uint8">
+			Uint8
+			<span><a class="mark" href="#uint8" id="uint8">#</a></span>
+		</h2><p>8-bit signed integer, Range: 0 to 255</p>
+<ul>
+<li><code>@type</code> <code>Uint8</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="int8">
+			Int8
+			<span><a class="mark" href="#int8" id="int8">#</a></span>
+		</h2><p>8-bit integer, Range: -128 to 127</p>
+<ul>
+<li><code>@type</code> <code>Int8</code> = <a href="#interface-number"><code>number</code></a></li>
+<li><code>@global</code>  </li>
+</ul>
 <h2 id="float">
 			Float
 			<span><a class="mark" href="#float" id="float">#</a></span>
-		</h2><p>32-bit floating point</p>
+		</h2><p>32-bit floating point， Range: -3.402823466E+38 to 3.402823466E+38</p>
 <ul>
 <li><code>@type</code> <code>Float</code> = <a href="#interface-number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
@@ -301,7 +354,7 @@
 		</h2><h3 id="object">
 			Object
 			<span><a class="mark" href="#object" id="object">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
@@ -322,7 +375,7 @@
 		</h2><h3 id="function">
 			Function
 			<span><a class="mark" href="#function" id="function">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
@@ -332,7 +385,7 @@
 		</h2><h3 id="array">
 			Array
 			<span><a class="mark" href="#array" id="array">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</p>
 <ul>
 <li><code>@global</code>  </li>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
@@ -343,7 +396,7 @@
 		</h2><h3 id="string">
 			String
 			<span><a class="mark" href="#string" id="string">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
@@ -353,7 +406,7 @@
 		</h2><h3 id="number">
 			Number
 			<span><a class="mark" href="#number" id="number">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
@@ -388,7 +441,7 @@ console.log((1000000.03).toFixedVariable(8,3,&#39;,&#39;))
 		</h2><h3 id="boolean">
 			Boolean
 			<span><a class="mark" href="#boolean" id="boolean">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
@@ -398,7 +451,7 @@ console.log((1000000.03).toFixedVariable(8,3,&#39;,&#39;))
 		</h2><h3 id="date">
 			Date
 			<span><a class="mark" href="#date" id="date">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
@@ -513,7 +566,7 @@ dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10&#39;
 		</h2><h3 id="error">
 			Error
 			<span><a class="mark" href="#error" id="error">#</a></span>
-		</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</code></a></p>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>

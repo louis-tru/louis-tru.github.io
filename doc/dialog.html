@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -119,6 +128,15 @@
 </li>
 <li>
 <span><a href="#dialog-length">dialog.length</a></span>
+</li>
+<li>
+<span><a href="#dialog-title">dialog.title</a></span>
+</li>
+<li>
+<span><a href="#dialog-content">dialog.content</a></span>
+</li>
+<li>
+<span><a href="#dialog-autoclose">dialog.autoClose</a></span>
 </li>
 <li>
 <span><a href="#dialog-buttons">dialog.buttons</a></span>
@@ -209,6 +227,24 @@
 		</h3><p>buttons length</p>
 <ul>
 <li><code>@get</code> <code>length</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="dialog-title">
+			dialog.title
+			<span><a class="mark" href="#dialog-title" id="dialog-title">#</a></span>
+		</h3><ul>
+<li><code>title</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="dialog-content">
+			dialog.content
+			<span><a class="mark" href="#dialog-content" id="dialog-content">#</a></span>
+		</h3><ul>
+<li><code>content</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="dialog-autoclose">
+			dialog.autoClose
+			<span><a class="mark" href="#dialog-autoclose" id="dialog-autoclose">#</a></span>
+		</h3><ul>
+<li><code>autoClose</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="dialog-buttons">
 			dialog.buttons

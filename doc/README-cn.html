@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -275,9 +284,9 @@ $ qkmake watch
 <p>详细的API文档请大家去这里<a href="https://quarks.cc/doc/view.html#view">View</a>查阅。</p>
 <p>以下是现在提供的所有<a href="https://quarks.cc/doc/view.html#view">View</a>与继承关系：</p>
 <ul>
-<li><a href="https://quarks.cc/doc/view.html#scrollbase">ScrollBase</a></li>
+<li><a href="https://quarks.cc/doc/view.html#scrollview">ScrollView</a></li>
 <li><a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a></li>
-<li><a href="https://quarks.cc/doc/view.html#view">View</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#box">Box</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul><br/><li><a href="http://quarks.cc/doc/media.html#class-video">Video</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-input">Input</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollbase">ScrollBase</a>&gt;</li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollbase">ScrollBase</a>&gt;</li><br/><li><a href="https://quarks.cc/doc/view.html#class-text">Text</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li><br/></ul><br/></li><br/><li><a href="http://quarks.cc/doc/media.html#class-matrix">Matrix</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li><br/></ul><br/></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-label">Label</a></li><br/></ul><br/></li>
+<li><a href="https://quarks.cc/doc/view.html#view">View</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#box">Box</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul><br/><li><a href="http://quarks.cc/doc/media.html#class-video">Video</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-input">Input</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollview">ScrollView</a>&gt;</li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollview">ScrollView</a>&gt;</li><br/><li><a href="https://quarks.cc/doc/view.html#class-text">Text</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li><br/></ul><br/></li><br/><li><a href="http://quarks.cc/doc/media.html#class-matrix">Matrix</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li><br/></ul><br/></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-label">Label</a></li><br/></ul><br/></li>
 </ul>
 <p>这有点像HTML布局：</p>
 <pre><code class="undefinedtsx">import {Jsx,Application,Window} from &#39;quark&#39;
@@ -331,7 +340,7 @@ new Window().render(
 		</h1><ul>
 <li><p>这与<code>HTML/CSS</code>的样式表非常类似，但现在的只支持<code>class</code>并不支持<code>id</code>与<code>tagName</code></p><br/></li>
 <li><p>样式表的数据结构其实是个树状结构，每个具名的样式表都可以有子样式表，子级样式表以空格区分且级数没有限制但理论来说越多的级数查询的速度也会越慢。</p><br/></li>
-<li><p>每个样式表可以指定一个时间<code>time</code>(毫秒)表示切换到此样式表的过渡时间，如果指定表示没有过渡。<br/>其实过渡触发时会创建一个动作并播放此动作。</p><br/></li>
+<li><p>每个样式表可以指定一个时间<code>time</code>(毫秒)表示切换到此样式表的过渡时间，如果没指定表示没有过渡。<br/>其实过渡触发时会创建一个动作并播放此动作。</p><br/></li>
 <li><p>样式表现在有三个伪类状态：</p><br/><ol><br/><li><code>normal</code> 光标或触摸离开（一般状态）时</li><br/><li><code>hover</code> 光标进入或者焦点进入时</li><br/><li><code>action</code> 光标按下时或者触摸离开时</li><br/></ol><br/></li>
 </ul>
 <p>下面是样式表的写法：</p>

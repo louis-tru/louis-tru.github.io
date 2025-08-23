@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -240,7 +249,7 @@
 <span><a href="#view-window">view.window</a></span>
 </li>
 <li>
-<span><a href="#view-matrix">view.matrix</a></span>
+<span><a href="#view-matrixview">view.matrixView</a></span>
 </li>
 <li>
 <span><a href="#view-level">view.level</a></span>
@@ -546,55 +555,114 @@
 </li>
 </ul>
 <li>
+<span><a href="#interface-matrixview">Interface: MatrixView</a></span>
+<ul>
+<li>
+<span><a href="#matrixview">MatrixView</a></span>
+</li>
+<li>
+<span><a href="#matrixview-translate">matrixview.translate</a></span>
+</li>
+<li>
+<span><a href="#matrixview-scale">matrixview.scale</a></span>
+</li>
+<li>
+<span><a href="#matrixview-skew">matrixview.skew</a></span>
+</li>
+<li>
+<span><a href="#matrixview-origin">matrixview.origin</a></span>
+</li>
+<li>
+<span><a href="#matrixview-originx">matrixview.originX</a></span>
+</li>
+<li>
+<span><a href="#matrixview-originy">matrixview.originY</a></span>
+</li>
+<li>
+<span><a href="#matrixview-x">matrixview.x</a></span>
+</li>
+<li>
+<span><a href="#matrixview-y">matrixview.y</a></span>
+</li>
+<li>
+<span><a href="#matrixview-scalex">matrixview.scaleX</a></span>
+</li>
+<li>
+<span><a href="#matrixview-scaley">matrixview.scaleY</a></span>
+</li>
+<li>
+<span><a href="#matrixview-skewx">matrixview.skewX</a></span>
+</li>
+<li>
+<span><a href="#matrixview-skewy">matrixview.skewY</a></span>
+</li>
+<li>
+<span><a href="#matrixview-rotatez">matrixview.rotateZ</a></span>
+</li>
+<li>
+<span><a href="#matrixview-originvalue">matrixview.originValue</a></span>
+</li>
+<li>
+<span><a href="#matrixview-matrix">matrixview.matrix</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#class-matrix">Class: Matrix</a></span>
 <ul>
 <li>
 <span><a href="#matrix">Matrix</a></span>
 </li>
+</ul>
 <li>
-<span><a href="#matrix-translate">matrix.translate</a></span>
+<span><a href="#class-sprite">Class: Sprite</a></span>
+<ul>
+<li>
+<span><a href="#sprite">Sprite</a></span>
 </li>
 <li>
-<span><a href="#matrix-scale">matrix.scale</a></span>
+<span><a href="#sprite-onload">sprite.onLoad</a></span>
 </li>
 <li>
-<span><a href="#matrix-skew">matrix.skew</a></span>
+<span><a href="#sprite-onerror">sprite.onError</a></span>
 </li>
 <li>
-<span><a href="#matrix-rotatez">matrix.rotateZ</a></span>
+<span><a href="#sprite-src">sprite.src</a></span>
 </li>
 <li>
-<span><a href="#matrix-originx">matrix.originX</a></span>
+<span><a href="#sprite-width">sprite.width</a></span>
 </li>
 <li>
-<span><a href="#matrix-originy">matrix.originY</a></span>
+<span><a href="#sprite-height">sprite.height</a></span>
 </li>
 <li>
-<span><a href="#matrix-originvalue">matrix.originValue</a></span>
+<span><a href="#sprite-frame">sprite.frame</a></span>
 </li>
 <li>
-<span><a href="#matrix-x">matrix.x</a></span>
+<span><a href="#sprite-frames">sprite.frames</a></span>
 </li>
 <li>
-<span><a href="#matrix-y">matrix.y</a></span>
+<span><a href="#sprite-item">sprite.item</a></span>
 </li>
 <li>
-<span><a href="#matrix-scalex">matrix.scaleX</a></span>
+<span><a href="#sprite-items">sprite.items</a></span>
 </li>
 <li>
-<span><a href="#matrix-scaley">matrix.scaleY</a></span>
+<span><a href="#sprite-gap">sprite.gap</a></span>
 </li>
 <li>
-<span><a href="#matrix-skewx">matrix.skewX</a></span>
+<span><a href="#sprite-fsp">sprite.fsp</a></span>
 </li>
 <li>
-<span><a href="#matrix-skewy">matrix.skewY</a></span>
+<span><a href="#sprite-direction">sprite.direction</a></span>
 </li>
 <li>
-<span><a href="#matrix-origin">matrix.origin</a></span>
+<span><a href="#sprite-playing">sprite.playing</a></span>
 </li>
 <li>
-<span><a href="#matrix-mat">matrix.mat</a></span>
+<span><a href="#sprite-play-all-">sprite.play(all?)</a></span>
+</li>
+<li>
+<span><a href="#sprite-stop-all-">sprite.stop(all?)</a></span>
 </li>
 </ul>
 <li>
@@ -727,73 +795,73 @@
 </li>
 </ul>
 <li>
-<span><a href="#interface-scrollbase">Interface: ScrollBase</a></span>
+<span><a href="#interface-scrollview">Interface: ScrollView</a></span>
 <ul>
 <li>
-<span><a href="#scrollbase">ScrollBase</a></span>
+<span><a href="#scrollview">ScrollView</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollbar">scrollbase.scrollbar</a></span>
+<span><a href="#scrollview-scrollbar">scrollview.scrollbar</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-bounce">scrollbase.bounce</a></span>
+<span><a href="#scrollview-bounce">scrollview.bounce</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-bouncelock">scrollbase.bounceLock</a></span>
+<span><a href="#scrollview-bouncelock">scrollview.bounceLock</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-momentum">scrollbase.momentum</a></span>
+<span><a href="#scrollview-momentum">scrollview.momentum</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-lockdirection">scrollbase.lockDirection</a></span>
+<span><a href="#scrollview-lockdirection">scrollview.lockDirection</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollx">scrollbase.scrollX</a></span>
+<span><a href="#scrollview-scrollx">scrollview.scrollX</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrolly">scrollbase.scrollY</a></span>
+<span><a href="#scrollview-scrolly">scrollview.scrollY</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scroll">scrollbase.scroll</a></span>
+<span><a href="#scrollview-scroll">scrollview.scroll</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-resistance">scrollbase.resistance</a></span>
+<span><a href="#scrollview-resistance">scrollview.resistance</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-catchpositionx">scrollbase.catchPositionX</a></span>
+<span><a href="#scrollview-catchpositionx">scrollview.catchPositionX</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-catchpositiony">scrollbase.catchPositionY</a></span>
+<span><a href="#scrollview-catchpositiony">scrollview.catchPositionY</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollbarcolor">scrollbase.scrollbarColor</a></span>
+<span><a href="#scrollview-scrollbarcolor">scrollview.scrollbarColor</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollbarwidth">scrollbase.scrollbarWidth</a></span>
+<span><a href="#scrollview-scrollbarwidth">scrollview.scrollbarWidth</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollbarmargin">scrollbase.scrollbarMargin</a></span>
+<span><a href="#scrollview-scrollbarmargin">scrollview.scrollbarMargin</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollduration">scrollbase.scrollDuration</a></span>
+<span><a href="#scrollview-scrollduration">scrollview.scrollDuration</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-defaultcurve">scrollbase.defaultCurve</a></span>
+<span><a href="#scrollview-defaultcurve">scrollview.defaultCurve</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollbarh">scrollbase.scrollbarH</a></span>
+<span><a href="#scrollview-scrollbarh">scrollview.scrollbarH</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollbarv">scrollbase.scrollbarV</a></span>
+<span><a href="#scrollview-scrollbarv">scrollview.scrollbarV</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollsize">scrollbase.scrollSize</a></span>
+<span><a href="#scrollview-scrollsize">scrollview.scrollSize</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-scrollto-val-duration-curve-">scrollbase.scrollTo(val,duration?,curve?)</a></span>
+<span><a href="#scrollview-scrollto-val-duration-curve-">scrollview.scrollTo(val,duration?,curve?)</a></span>
 </li>
 <li>
-<span><a href="#scrollbase-terminate-">scrollbase.terminate()</a></span>
+<span><a href="#scrollview-terminate-">scrollview.terminate()</a></span>
 </li>
 </ul>
 <li>
@@ -1106,11 +1174,11 @@
 		</h3><ul>
 <li><code>@get</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
 </ul>
-<h3 id="view-matrix">
-			view.matrix
-			<span><a class="mark" href="#view-matrix" id="view-matrix">#</a></span>
+<h3 id="view-matrixview">
+			view.matrixView
+			<span><a class="mark" href="#view-matrixview" id="view-matrixview">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>matrix</code>: <a href="#class-matrix"><code>Matrix</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> top matrix view</li>
+<li><code>@get</code> <code>matrixView</code>: <a href="#interface-matrixview"><code>MatrixView</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> top matrix view</li>
 </ul>
 <h3 id="view-level">
 			view.level
@@ -1705,6 +1773,105 @@
 		</h3><ul>
 <li><code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
+<h2 id="interface-matrixview">
+			Interface: MatrixView
+			<span><a class="mark" href="#interface-matrixview" id="interface-matrixview">#</a></span>
+		</h2><h3 id="matrixview">
+			MatrixView
+			<span><a class="mark" href="#matrixview" id="matrixview">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-view"><code>View</code></a></li>
+</ul>
+<h3 id="matrixview-translate">
+			matrixview.translate
+			<span><a class="mark" href="#matrixview-translate" id="matrixview-translate">#</a></span>
+		</h3><ul>
+<li><code>translate</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+</ul>
+<h3 id="matrixview-scale">
+			matrixview.scale
+			<span><a class="mark" href="#matrixview-scale" id="matrixview-scale">#</a></span>
+		</h3><ul>
+<li><code>scale</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+</ul>
+<h3 id="matrixview-skew">
+			matrixview.skew
+			<span><a class="mark" href="#matrixview-skew" id="matrixview-skew">#</a></span>
+		</h3><ul>
+<li><code>skew</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+</ul>
+<h3 id="matrixview-origin">
+			matrixview.origin
+			<span><a class="mark" href="#matrixview-origin" id="matrixview-origin">#</a></span>
+		</h3><ul>
+<li><code>origin</code>: <a href="types.html#boxorigin"><code>types.BoxOrigin</code></a><code>[]</code> </li>
+</ul>
+<h3 id="matrixview-originx">
+			matrixview.originX
+			<span><a class="mark" href="#matrixview-originx" id="matrixview-originx">#</a></span>
+		</h3><ul>
+<li><code>originX</code>: <a href="types.html#boxorigin"><code>types.BoxOrigin</code></a> </li>
+</ul>
+<h3 id="matrixview-originy">
+			matrixview.originY
+			<span><a class="mark" href="#matrixview-originy" id="matrixview-originy">#</a></span>
+		</h3><ul>
+<li><code>originY</code>: <a href="types.html#boxorigin"><code>types.BoxOrigin</code></a> </li>
+</ul>
+<h3 id="matrixview-x">
+			matrixview.x
+			<span><a class="mark" href="#matrixview-x" id="matrixview-x">#</a></span>
+		</h3><ul>
+<li><code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-y">
+			matrixview.y
+			<span><a class="mark" href="#matrixview-y" id="matrixview-y">#</a></span>
+		</h3><ul>
+<li><code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-scalex">
+			matrixview.scaleX
+			<span><a class="mark" href="#matrixview-scalex" id="matrixview-scalex">#</a></span>
+		</h3><ul>
+<li><code>scaleX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-scaley">
+			matrixview.scaleY
+			<span><a class="mark" href="#matrixview-scaley" id="matrixview-scaley">#</a></span>
+		</h3><ul>
+<li><code>scaleY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-skewx">
+			matrixview.skewX
+			<span><a class="mark" href="#matrixview-skewx" id="matrixview-skewx">#</a></span>
+		</h3><ul>
+<li><code>skewX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-skewy">
+			matrixview.skewY
+			<span><a class="mark" href="#matrixview-skewy" id="matrixview-skewy">#</a></span>
+		</h3><ul>
+<li><code>skewY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-rotatez">
+			matrixview.rotateZ
+			<span><a class="mark" href="#matrixview-rotatez" id="matrixview-rotatez">#</a></span>
+		</h3><ul>
+<li><code>rotateZ</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="matrixview-originvalue">
+			matrixview.originValue
+			<span><a class="mark" href="#matrixview-originvalue" id="matrixview-originvalue">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>originValue</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> </li>
+</ul>
+<h3 id="matrixview-matrix">
+			matrixview.matrix
+			<span><a class="mark" href="#matrixview-matrix" id="matrixview-matrix">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>matrix</code>: <a href="types.html#mat"><code>types.Mat</code></a> </li>
+</ul>
 <h2 id="class-matrix">
 			Class: Matrix
 			<span><a class="mark" href="#class-matrix" id="class-matrix">#</a></span>
@@ -1713,96 +1880,109 @@
 			<span><a class="mark" href="#matrix" id="matrix">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+<li><code>@implements</code> <a href="#interface-matrixview"><code>MatrixView</code></a></li>
 </ul>
-<h3 id="matrix-translate">
-			matrix.translate
-			<span><a class="mark" href="#matrix-translate" id="matrix-translate">#</a></span>
+<h2 id="class-sprite">
+			Class: Sprite
+			<span><a class="mark" href="#class-sprite" id="class-sprite">#</a></span>
+		</h2><h3 id="sprite">
+			Sprite
+			<span><a class="mark" href="#sprite" id="sprite">#</a></span>
 		</h3><ul>
-<li><code>translate</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li><code>@extends</code> <a href="#class-view"><code>View</code></a></li>
+<li><code>@implements</code> <a href="#interface-matrixview"><code>MatrixView</code></a></li>
 </ul>
-<h3 id="matrix-scale">
-			matrix.scale
-			<span><a class="mark" href="#matrix-scale" id="matrix-scale">#</a></span>
+<h3 id="sprite-onload">
+			sprite.onLoad
+			<span><a class="mark" href="#sprite-onload" id="sprite-onload">#</a></span>
 		</h3><ul>
-<li><code>scale</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#uievent"><code>UIEvent</code></a>&gt; </li>
 </ul>
-<h3 id="matrix-skew">
-			matrix.skew
-			<span><a class="mark" href="#matrix-skew" id="matrix-skew">#</a></span>
+<h3 id="sprite-onerror">
+			sprite.onError
+			<span><a class="mark" href="#sprite-onerror" id="sprite-onerror">#</a></span>
 		</h3><ul>
-<li><code>skew</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li><code>@event</code> <code>onError</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#uievent"><code>UIEvent</code></a>&gt; </li>
 </ul>
-<h3 id="matrix-rotatez">
-			matrix.rotateZ
-			<span><a class="mark" href="#matrix-rotatez" id="matrix-rotatez">#</a></span>
+<h3 id="sprite-src">
+			sprite.src
+			<span><a class="mark" href="#sprite-src" id="sprite-src">#</a></span>
 		</h3><ul>
-<li><code>rotateZ</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
-<h3 id="matrix-originx">
-			matrix.originX
-			<span><a class="mark" href="#matrix-originx" id="matrix-originx">#</a></span>
+<h3 id="sprite-width">
+			sprite.width
+			<span><a class="mark" href="#sprite-width" id="sprite-width">#</a></span>
 		</h3><ul>
-<li><code>originX</code>: <a href="types.html#boxorigin"><code>types.BoxOrigin</code></a> </li>
+<li><code>width</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="matrix-originy">
-			matrix.originY
-			<span><a class="mark" href="#matrix-originy" id="matrix-originy">#</a></span>
+<h3 id="sprite-height">
+			sprite.height
+			<span><a class="mark" href="#sprite-height" id="sprite-height">#</a></span>
 		</h3><ul>
-<li><code>originY</code>: <a href="types.html#boxorigin"><code>types.BoxOrigin</code></a> </li>
+<li><code>height</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="matrix-originvalue">
-			matrix.originValue
-			<span><a class="mark" href="#matrix-originvalue" id="matrix-originvalue">#</a></span>
+<h3 id="sprite-frame">
+			sprite.frame
+			<span><a class="mark" href="#sprite-frame" id="sprite-frame">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>originValue</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li><code>frame</code>: <a href="$ext.html#uint16"><code>Uint16</code></a> </li>
 </ul>
-<h3 id="matrix-x">
-			matrix.x
-			<span><a class="mark" href="#matrix-x" id="matrix-x">#</a></span>
+<h3 id="sprite-frames">
+			sprite.frames
+			<span><a class="mark" href="#sprite-frames" id="sprite-frames">#</a></span>
 		</h3><ul>
-<li><code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>frames</code>: <a href="$ext.html#uint16"><code>Uint16</code></a> </li>
 </ul>
-<h3 id="matrix-y">
-			matrix.y
-			<span><a class="mark" href="#matrix-y" id="matrix-y">#</a></span>
+<h3 id="sprite-item">
+			sprite.item
+			<span><a class="mark" href="#sprite-item" id="sprite-item">#</a></span>
 		</h3><ul>
-<li><code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>item</code>: <a href="$ext.html#uint16"><code>Uint16</code></a> </li>
 </ul>
-<h3 id="matrix-scalex">
-			matrix.scaleX
-			<span><a class="mark" href="#matrix-scalex" id="matrix-scalex">#</a></span>
+<h3 id="sprite-items">
+			sprite.items
+			<span><a class="mark" href="#sprite-items" id="sprite-items">#</a></span>
 		</h3><ul>
-<li><code>scaleX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>items</code>: <a href="$ext.html#uint16"><code>Uint16</code></a> </li>
 </ul>
-<h3 id="matrix-scaley">
-			matrix.scaleY
-			<span><a class="mark" href="#matrix-scaley" id="matrix-scaley">#</a></span>
+<h3 id="sprite-gap">
+			sprite.gap
+			<span><a class="mark" href="#sprite-gap" id="sprite-gap">#</a></span>
 		</h3><ul>
-<li><code>scaleY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>gap</code>: <a href="$ext.html#uint8"><code>Uint8</code></a> </li>
 </ul>
-<h3 id="matrix-skewx">
-			matrix.skewX
-			<span><a class="mark" href="#matrix-skewx" id="matrix-skewx">#</a></span>
+<h3 id="sprite-fsp">
+			sprite.fsp
+			<span><a class="mark" href="#sprite-fsp" id="sprite-fsp">#</a></span>
 		</h3><ul>
-<li><code>skewX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>fsp</code>: <a href="$ext.html#uint8"><code>Uint8</code></a> </li>
 </ul>
-<h3 id="matrix-skewy">
-			matrix.skewY
-			<span><a class="mark" href="#matrix-skewy" id="matrix-skewy">#</a></span>
+<h3 id="sprite-direction">
+			sprite.direction
+			<span><a class="mark" href="#sprite-direction" id="sprite-direction">#</a></span>
 		</h3><ul>
-<li><code>skewY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>direction</code>: <a href="types.html#direction"><code>types.Direction</code></a> </li>
 </ul>
-<h3 id="matrix-origin">
-			matrix.origin
-			<span><a class="mark" href="#matrix-origin" id="matrix-origin">#</a></span>
+<h3 id="sprite-playing">
+			sprite.playing
+			<span><a class="mark" href="#sprite-playing" id="sprite-playing">#</a></span>
 		</h3><ul>
-<li><code>origin</code>: <a href="types.html#boxorigin"><code>types.BoxOrigin</code></a><code>[]</code> </li>
+<li><code>playing</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="matrix-mat">
-			matrix.mat
-			<span><a class="mark" href="#matrix-mat" id="matrix-mat">#</a></span>
+<h3 id="sprite-play-all-">
+			sprite.play(all?)
+			<span><a class="mark" href="#sprite-play-all-" id="sprite-play-all-">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>mat</code>: <a href="types.html#mat"><code>types.Mat</code></a> </li>
+<li><code>@param</code> <code>all?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="sprite-stop-all-">
+			sprite.stop(all?)
+			<span><a class="mark" href="#sprite-stop-all-" id="sprite-stop-all-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>all?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="class-root">
 			Class: Root
@@ -2034,138 +2214,141 @@
 		</h3><ul>
 <li><code>@get</code> <code>textLength</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h2 id="interface-scrollbase">
-			Interface: ScrollBase
-			<span><a class="mark" href="#interface-scrollbase" id="interface-scrollbase">#</a></span>
-		</h2><h3 id="scrollbase">
-			ScrollBase
-			<span><a class="mark" href="#scrollbase" id="scrollbase">#</a></span>
-		</h3><h3 id="scrollbase-scrollbar">
-			scrollbase.scrollbar
-			<span><a class="mark" href="#scrollbase-scrollbar" id="scrollbase-scrollbar">#</a></span>
+<h2 id="interface-scrollview">
+			Interface: ScrollView
+			<span><a class="mark" href="#interface-scrollview" id="interface-scrollview">#</a></span>
+		</h2><h3 id="scrollview">
+			ScrollView
+			<span><a class="mark" href="#scrollview" id="scrollview">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
+</ul>
+<h3 id="scrollview-scrollbar">
+			scrollview.scrollbar
+			<span><a class="mark" href="#scrollview-scrollbar" id="scrollview-scrollbar">#</a></span>
 		</h3><ul>
 <li><code>scrollbar</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-bounce">
-			scrollbase.bounce
-			<span><a class="mark" href="#scrollbase-bounce" id="scrollbase-bounce">#</a></span>
+<h3 id="scrollview-bounce">
+			scrollview.bounce
+			<span><a class="mark" href="#scrollview-bounce" id="scrollview-bounce">#</a></span>
 		</h3><ul>
 <li><code>bounce</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-bouncelock">
-			scrollbase.bounceLock
-			<span><a class="mark" href="#scrollbase-bouncelock" id="scrollbase-bouncelock">#</a></span>
+<h3 id="scrollview-bouncelock">
+			scrollview.bounceLock
+			<span><a class="mark" href="#scrollview-bouncelock" id="scrollview-bouncelock">#</a></span>
 		</h3><ul>
 <li><code>bounceLock</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-momentum">
-			scrollbase.momentum
-			<span><a class="mark" href="#scrollbase-momentum" id="scrollbase-momentum">#</a></span>
+<h3 id="scrollview-momentum">
+			scrollview.momentum
+			<span><a class="mark" href="#scrollview-momentum" id="scrollview-momentum">#</a></span>
 		</h3><ul>
 <li><code>momentum</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-lockdirection">
-			scrollbase.lockDirection
-			<span><a class="mark" href="#scrollbase-lockdirection" id="scrollbase-lockdirection">#</a></span>
+<h3 id="scrollview-lockdirection">
+			scrollview.lockDirection
+			<span><a class="mark" href="#scrollview-lockdirection" id="scrollview-lockdirection">#</a></span>
 		</h3><ul>
 <li><code>lockDirection</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollx">
-			scrollbase.scrollX
-			<span><a class="mark" href="#scrollbase-scrollx" id="scrollbase-scrollx">#</a></span>
+<h3 id="scrollview-scrollx">
+			scrollview.scrollX
+			<span><a class="mark" href="#scrollview-scrollx" id="scrollview-scrollx">#</a></span>
 		</h3><ul>
 <li><code>scrollX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrolly">
-			scrollbase.scrollY
-			<span><a class="mark" href="#scrollbase-scrolly" id="scrollbase-scrolly">#</a></span>
+<h3 id="scrollview-scrolly">
+			scrollview.scrollY
+			<span><a class="mark" href="#scrollview-scrolly" id="scrollview-scrolly">#</a></span>
 		</h3><ul>
 <li><code>scrollY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-scroll">
-			scrollbase.scroll
-			<span><a class="mark" href="#scrollbase-scroll" id="scrollbase-scroll">#</a></span>
+<h3 id="scrollview-scroll">
+			scrollview.scroll
+			<span><a class="mark" href="#scrollview-scroll" id="scrollview-scroll">#</a></span>
 		</h3><ul>
 <li><code>scroll</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
 </ul>
-<h3 id="scrollbase-resistance">
-			scrollbase.resistance
-			<span><a class="mark" href="#scrollbase-resistance" id="scrollbase-resistance">#</a></span>
+<h3 id="scrollview-resistance">
+			scrollview.resistance
+			<span><a class="mark" href="#scrollview-resistance" id="scrollview-resistance">#</a></span>
 		</h3><ul>
 <li><code>resistance</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-catchpositionx">
-			scrollbase.catchPositionX
-			<span><a class="mark" href="#scrollbase-catchpositionx" id="scrollbase-catchpositionx">#</a></span>
+<h3 id="scrollview-catchpositionx">
+			scrollview.catchPositionX
+			<span><a class="mark" href="#scrollview-catchpositionx" id="scrollview-catchpositionx">#</a></span>
 		</h3><ul>
 <li><code>catchPositionX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-catchpositiony">
-			scrollbase.catchPositionY
-			<span><a class="mark" href="#scrollbase-catchpositiony" id="scrollbase-catchpositiony">#</a></span>
+<h3 id="scrollview-catchpositiony">
+			scrollview.catchPositionY
+			<span><a class="mark" href="#scrollview-catchpositiony" id="scrollview-catchpositiony">#</a></span>
 		</h3><ul>
 <li><code>catchPositionY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollbarcolor">
-			scrollbase.scrollbarColor
-			<span><a class="mark" href="#scrollbase-scrollbarcolor" id="scrollbase-scrollbarcolor">#</a></span>
+<h3 id="scrollview-scrollbarcolor">
+			scrollview.scrollbarColor
+			<span><a class="mark" href="#scrollview-scrollbarcolor" id="scrollview-scrollbarcolor">#</a></span>
 		</h3><ul>
 <li><code>scrollbarColor</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollbarwidth">
-			scrollbase.scrollbarWidth
-			<span><a class="mark" href="#scrollbase-scrollbarwidth" id="scrollbase-scrollbarwidth">#</a></span>
+<h3 id="scrollview-scrollbarwidth">
+			scrollview.scrollbarWidth
+			<span><a class="mark" href="#scrollview-scrollbarwidth" id="scrollview-scrollbarwidth">#</a></span>
 		</h3><ul>
 <li><code>scrollbarWidth</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollbarmargin">
-			scrollbase.scrollbarMargin
-			<span><a class="mark" href="#scrollbase-scrollbarmargin" id="scrollbase-scrollbarmargin">#</a></span>
+<h3 id="scrollview-scrollbarmargin">
+			scrollview.scrollbarMargin
+			<span><a class="mark" href="#scrollview-scrollbarmargin" id="scrollview-scrollbarmargin">#</a></span>
 		</h3><ul>
 <li><code>scrollbarMargin</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollduration">
-			scrollbase.scrollDuration
-			<span><a class="mark" href="#scrollbase-scrollduration" id="scrollbase-scrollduration">#</a></span>
+<h3 id="scrollview-scrollduration">
+			scrollview.scrollDuration
+			<span><a class="mark" href="#scrollview-scrollduration" id="scrollview-scrollduration">#</a></span>
 		</h3><ul>
 <li><code>scrollDuration</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="scrollbase-defaultcurve">
-			scrollbase.defaultCurve
-			<span><a class="mark" href="#scrollbase-defaultcurve" id="scrollbase-defaultcurve">#</a></span>
+<h3 id="scrollview-defaultcurve">
+			scrollview.defaultCurve
+			<span><a class="mark" href="#scrollview-defaultcurve" id="scrollview-defaultcurve">#</a></span>
 		</h3><ul>
 <li><code>defaultCurve</code>: <a href="types.html#curve"><code>types.Curve</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollbarh">
-			scrollbase.scrollbarH
-			<span><a class="mark" href="#scrollbase-scrollbarh" id="scrollbase-scrollbarh">#</a></span>
+<h3 id="scrollview-scrollbarh">
+			scrollview.scrollbarH
+			<span><a class="mark" href="#scrollview-scrollbarh" id="scrollview-scrollbarh">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>scrollbarH</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollbarv">
-			scrollbase.scrollbarV
-			<span><a class="mark" href="#scrollbase-scrollbarv" id="scrollbase-scrollbarv">#</a></span>
+<h3 id="scrollview-scrollbarv">
+			scrollview.scrollbarV
+			<span><a class="mark" href="#scrollview-scrollbarv" id="scrollview-scrollbarv">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>scrollbarV</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollsize">
-			scrollbase.scrollSize
-			<span><a class="mark" href="#scrollbase-scrollsize" id="scrollbase-scrollsize">#</a></span>
+<h3 id="scrollview-scrollsize">
+			scrollview.scrollSize
+			<span><a class="mark" href="#scrollview-scrollsize" id="scrollview-scrollsize">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>scrollSize</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
 </ul>
-<h3 id="scrollbase-scrollto-val-duration-curve-">
-			scrollbase.scrollTo(val,duration?,curve?)
-			<span><a class="mark" href="#scrollbase-scrollto-val-duration-curve-" id="scrollbase-scrollto-val-duration-curve-">#</a></span>
+<h3 id="scrollview-scrollto-val-duration-curve-">
+			scrollview.scrollTo(val,duration?,curve?)
+			<span><a class="mark" href="#scrollview-scrollto-val-duration-curve-" id="scrollview-scrollto-val-duration-curve-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>val</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
 <li><code>@param</code> <code>duration?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curve"><code>types.Curve</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
-<h3 id="scrollbase-terminate-">
-			scrollbase.terminate()
-			<span><a class="mark" href="#scrollbase-terminate-" id="scrollbase-terminate-">#</a></span>
+<h3 id="scrollview-terminate-">
+			scrollview.terminate()
+			<span><a class="mark" href="#scrollview-terminate-" id="scrollview-terminate-">#</a></span>
 		</h3><ul>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
@@ -2177,7 +2360,7 @@
 			<span><a class="mark" href="#textarea" id="textarea">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <code>Input</code></li>
-<li><code>@implements</code> <a href="#interface-scrollbase"><code>ScrollBase</code></a></li>
+<li><code>@implements</code> <a href="#interface-scrollview"><code>ScrollView</code></a></li>
 </ul>
 <h3 id="textarea-onscroll">
 			textarea.onScroll
@@ -2193,7 +2376,7 @@
 			<span><a class="mark" href="#scroll" id="scroll">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-box"><code>Box</code></a></li>
-<li><code>@implements</code> <a href="#interface-scrollbase"><code>ScrollBase</code></a></li>
+<li><code>@implements</code> <a href="#interface-scrollview"><code>ScrollView</code></a></li>
 </ul>
 <h3 id="scroll-onscroll">
 			scroll.onScroll

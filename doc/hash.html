@@ -5,7 +5,7 @@
 	<title>Quark API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
-		var src = 'test.html';
+		var src = 'hash.html';
 		var relative = '';
 		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
 		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
@@ -115,16 +115,88 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#quark-test">quark/test</a></span>
+<span><a href="#quark-hash">quark/hash</a></span>
+<ul>
+<li>
+<span><a href="#md5">md5</a></span>
+</li>
+<li>
+<span><a href="#sha1">sha1</a></span>
+</li>
+<li>
+<span><a href="#sha256">sha256</a></span>
+</li>
+<li>
+<span><a href="#rng-len-">rng(len)</a></span>
+</li>
+<li>
+<span><a href="#rng16-">rng16()</a></span>
+</li>
+<li>
+<span><a href="#bytetohex">byteToHex</a></span>
+</li>
+<li>
+<span><a href="#uuid_v4-random-">uuid_v4(random?)</a></span>
+</li>
+</ul>
 </li>
 </ul>
 			</div>
 
 			<div id="apicontent">
-				<h1 id="quark-test">
-			quark/test
-			<span><a class="mark" href="#quark-test" id="quark-test">#</a></span>
-		</h1>
+				<h1 id="quark-hash">
+			quark/hash
+			<span><a class="mark" href="#quark-hash" id="quark-hash">#</a></span>
+		</h1><h2 id="md5">
+			md5
+			<span><a class="mark" href="#md5" id="md5">#</a></span>
+		</h2><ul>
+<li><code>@const</code> <code>md5</code>: </li>
+</ul>
+<h2 id="sha1">
+			sha1
+			<span><a class="mark" href="#sha1" id="sha1">#</a></span>
+		</h2><ul>
+<li><code>@const</code> <code>sha1</code>: </li>
+</ul>
+<h2 id="sha256">
+			sha256
+			<span><a class="mark" href="#sha256" id="sha256">#</a></span>
+		</h2><ul>
+<li><code>@const</code> <code>sha256</code>: </li>
+</ul>
+<h2 id="rng-len-">
+			rng(len)
+			<span><a class="mark" href="#rng-len-" id="rng-len-">#</a></span>
+		</h2><p>Math.random()-based (RNG)<br/>If all else fails, use Math.random().  It&#39;s fast, but is of unspecified<br/>quality.</p>
+<ul>
+<li><code>@param</code> <code>len</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="buffer.html#buffer"><code>Buffer</code></a> </li>
+</ul>
+<h2 id="rng16-">
+			rng16()
+			<span><a class="mark" href="#rng16-" id="rng16-">#</a></span>
+		</h2><p>Generate a 16-byte random number.</p>
+<ul>
+<li><code>@return</code> <a href="buffer.html#buffer"><code>Buffer</code></a> </li>
+</ul>
+<h2 id="bytetohex">
+			byteToHex
+			<span><a class="mark" href="#bytetohex" id="bytetohex">#</a></span>
+		</h2><p>Convert array of 16 byte values to UUID string format of the form:<br/>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
+<ul>
+<li><code>@const</code> <code>byteToHex</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code></li>
+</ul>
+<h2 id="uuid_v4-random-">
+			uuid_v4(random?)
+			<span><a class="mark" href="#uuid_v4-random-" id="uuid_v4-random-">#</a></span>
+		</h2><p>Generate a version 4 (random) UUID.</p>
+<ul>
+<li><code>@param</code> <code>random</code>:  Optional 16-byte array to use as random data.</li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> A version 4 UUID string.</li>
+<li><code>@param</code> <code>random?</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+</ul>
+
 			</div>
 
 		</div>

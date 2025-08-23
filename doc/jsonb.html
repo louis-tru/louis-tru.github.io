@@ -5,7 +5,7 @@
 	<title>Quark API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
-		var src = 'test.html';
+		var src = 'jsonb.html';
 		var relative = '';
 		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
 		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
@@ -115,16 +115,56 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#quark-test">quark/test</a></span>
+<span><a href="#quark-jsonb">quark/jsonb</a></span>
+<ul>
+<li>
+<span><a href="#default">default</a></span>
+<ul>
+<li>
+<span><a href="#default-binaryify-obj-">default.binaryify(obj)</a></span>
+</li>
+<li>
+<span><a href="#default-parse-buf-">default.parse(buf)</a></span>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 			</div>
 
 			<div id="apicontent">
-				<h1 id="quark-test">
-			quark/test
-			<span><a class="mark" href="#quark-test" id="quark-test">#</a></span>
-		</h1>
+				<h1 id="quark-jsonb">
+			quark/jsonb
+			<span><a class="mark" href="#quark-jsonb" id="quark-jsonb">#</a></span>
+		</h1><h2 id="default">
+			default
+			<span><a class="mark" href="#default" id="default">#</a></span>
+		</h2><h3 id="default-binaryify-obj-">
+			default.binaryify(obj)
+			<span><a class="mark" href="#default-binaryify-obj-" id="default-binaryify-obj-">#</a></span>
+		</h3><p>Convert a JSON object to binary format.</p>
+<ul>
+<li><code>@param</code> <code>obj</code>: <code>any</code> - The object to convert.</li>
+<li><code>@return</code> <a href="buffer.html#buffer"><code>Buffer</code></a>  - The binary representation of the object.</li>
+</ul>
+<p>For example:<br/>const jsonb = require(&#39;quark/jsonb&#39;);<br/>const binaryData = jsonb.binaryify({ key: &#39;value&#39; });<br/>console.log(binaryData); // Outputs the binary data.</p>
+<ul>
+<li><code>@throws</code> {Error} - If the object cannot be serialized.</li>
+</ul>
+<h3 id="default-parse-buf-">
+			default.parse(buf)
+			<span><a class="mark" href="#default-parse-buf-" id="default-parse-buf-">#</a></span>
+		</h3><p>Parse a binary buffer back to a JSON object.</p>
+<ul>
+<li><code>@param</code> <code>buf</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> - The binary data to parse.</li>
+<li><code>@return</code> <code>any</code>  - The parsed JSON object.</li>
+</ul>
+<p>For example:<br/>const jsonb = require(&#39;quark/jsonb&#39;);<br/>const jsonData = jsonb.parse(binaryData);<br/>console.log(jsonData); // Outputs the original JSON object.</p>
+<ul>
+<li><code>@throws</code> {Error} - If the buffer cannot be parsed.</li>
+</ul>
+
 			</div>
 
 		</div>

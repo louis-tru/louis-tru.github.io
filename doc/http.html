@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -230,6 +239,30 @@
 <ul>
 <li>
 <span><a href="#httpclientrequest">HttpClientRequest</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onerror">httpclientrequest.onError</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onwrite">httpclientrequest.onWrite</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onheader">httpclientrequest.onHeader</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-ondata">httpclientrequest.onData</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onend">httpclientrequest.onEnd</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onreadystatechange">httpclientrequest.onReadystateChange</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-ontimeout">httpclientrequest.onTimeout</a></span>
+</li>
+<li>
+<span><a href="#httpclientrequest-onabort">httpclientrequest.onAbort</a></span>
 </li>
 </ul>
 <li>
@@ -652,7 +685,7 @@
 <pre><code class="undefinedts">import path from &#39;quark/path&#39;
 import * as fs from &#39;quark/fs&#39;
 var cl = new HttpClientRequest()
-cl.setUrl(&#39;[`https://www.baidu.com/`](https://www.baidu.com/)&#39;)
+cl.setUrl(&#39;https://www.baidu.com/&#39;)
 cl.setSavePath(path.documents(&#39;baidu.html&#39;));
 cl.onError.on(function(ev) { console.log(ev.data) })
 // Prints: 
@@ -673,7 +706,7 @@ cl.onReadystateChange.on(function() { console.log(cl.readyState, cl.statusCode) 
 cl.send();
 
 var cl2 = new HttpClientRequest()
-cl2.setUrl(&#39;[`http://192.168.1.100:1026/Tools/uploadFile`](http://192.168.1.100:1026/Tools/uploadFile)&#39;)
+cl2.setUrl(&#39;http://192.168.1.100:1026/Tools/uploadFile&#39;)
 cl2.setMethod(HttpMethod.POST);
 cl2.setUploadFile(&#39;uploadFile&#39;, path.resources(&#39;util/http.js&#39;))
 cl2.onEnd.on(function() {
@@ -682,6 +715,62 @@ cl2.onEnd.on(function() {
 })
 cl2.send();
 </code></pre>
+<h3 id="httpclientrequest-onerror">
+			httpclientrequest.onError
+			<span><a class="mark" href="#httpclientrequest-onerror" id="httpclientrequest-onerror">#</a></span>
+		</h3><p>Trigger when an error occurs</p>
+<ul>
+<li><code>@event</code> <code>onError</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&lt;<a href="$ext.html#error"><code>Error</code></a>&gt;&gt; </li>
+</ul>
+<h3 id="httpclientrequest-onwrite">
+			httpclientrequest.onWrite
+			<span><a class="mark" href="#httpclientrequest-onwrite" id="httpclientrequest-onwrite">#</a></span>
+		</h3><p>Trigger when write data to the server</p>
+<ul>
+<li><code>@event</code> <code>onWrite</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&gt; </li>
+</ul>
+<h3 id="httpclientrequest-onheader">
+			httpclientrequest.onHeader
+			<span><a class="mark" href="#httpclientrequest-onheader" id="httpclientrequest-onheader">#</a></span>
+		</h3><p>Trigger when accept headers complete</p>
+<ul>
+<li><code>@event</code> <code>onHeader</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&gt; </li>
+</ul>
+<h3 id="httpclientrequest-ondata">
+			httpclientrequest.onData
+			<span><a class="mark" href="#httpclientrequest-ondata" id="httpclientrequest-ondata">#</a></span>
+		</h3><p>Trigger when accept part of body data, and will be continuous</p>
+<ul>
+<li><code>@event</code> <code>onData</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>&gt;&gt; </li>
+</ul>
+<h3 id="httpclientrequest-onend">
+			httpclientrequest.onEnd
+			<span><a class="mark" href="#httpclientrequest-onend" id="httpclientrequest-onend">#</a></span>
+		</h3><p>Trigger when ended a request and response</p>
+<ul>
+<li><code>@event</code> <code>onEnd</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&gt; </li>
+</ul>
+<h3 id="httpclientrequest-onreadystatechange">
+			httpclientrequest.onReadystateChange
+			<span><a class="mark" href="#httpclientrequest-onreadystatechange" id="httpclientrequest-onreadystatechange">#</a></span>
+		</h3><p>Trigger when changed readystate</p>
+<ul>
+<li><code>@event</code> <code>onReadystateChange</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&gt; </li>
+</ul>
+<h3 id="httpclientrequest-ontimeout">
+			httpclientrequest.onTimeout
+			<span><a class="mark" href="#httpclientrequest-ontimeout" id="httpclientrequest-ontimeout">#</a></span>
+		</h3><p>Trigger when a request timeout</p>
+<ul>
+<li><code>@event</code> <code>onTimeout</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&gt; </li>
+</ul>
+<h3 id="httpclientrequest-onabort">
+			httpclientrequest.onAbort
+			<span><a class="mark" href="#httpclientrequest-onabort" id="httpclientrequest-onabort">#</a></span>
+		</h3><p>Trigger when a request is actively abort</p>
+<ul>
+<li><code>@event</code> <code>onAbort</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#httpevent"><code>HttpEvent</code></a>&gt; </li>
+</ul>
 <h2 id="interface-requestoptions">
 			Interface: RequestOptions
 			<span><a class="mark" href="#interface-requestoptions" id="interface-requestoptions">#</a></span>
@@ -800,7 +889,7 @@ cl2.send();
 <pre><code class="undefinedts">import path from &#39;quark/path&#39;
 // uploat file and save body data
 var opts = {
-    url: &#39;[`http://192.168.1.100:1026/Tools/uploadFile`](http://192.168.1.100:1026/Tools/uploadFile)&#39;,
+    url: &#39;http://192.168.1.100:1026/Tools/uploadFile&#39;,
     method: HttpMethod.POST,
     headers: { test: &#39;test&#39; },
     // postData: &#39;a=A&#39;,
@@ -827,7 +916,7 @@ request(opts).then(function(buff) {
 		</h2><p>Sending HTTP request with stream way by the options</p>
 <p>For example:</p>
 <pre><code class="undefinedts">requestStream({
-    url: &#39;[`http://192.168.1.100:1026/`](http://192.168.1.100:1026/)&#39; 
+    url: &#39;http://192.168.1.100:1026/&#39; 
 }, (d)=&gt;{
     // Prints: &lt;Buffer ...&gt;
     console.log(d.data) 
@@ -849,7 +938,7 @@ request(opts).then(function(buff) {
 <p>For example:</p>
 <pre><code class="undefinedjs">// Prints: &lt;Buffer ...&gt;
 try {
-    console.log(http.requestSync({ url: &#39;[`http://192.168.1.100:1026/`](http://192.168.1.100:1026/)&#39; }));
+    console.log(http.requestSync({ url: &#39;http://192.168.1.100:1026/&#39; }));
 } catch(e) {
     //Fail
 }

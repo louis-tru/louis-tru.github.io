@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'ws.html';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.2.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-ws">quark/ws</a></span>
+<ul>
+<li>
+<span><a href="#enum-packettype">Enum: PacketType</a></span>
+<ul>
+<li>
+<span><a href="#packettype">PacketType</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-packet">Interface: Packet</a></span>
+<ul>
+<li>
+<span><a href="#packet">Packet</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-wsconversation">Class: WSConversation</a></span>
+<ul>
+<li>
+<span><a href="#wsconversation">WSConversation</a></span>
+</li>
+<li>
+<span><a href="#wsconversation-token">wsconversation.token</a></span>
+</li>
+<li>
+<span><a href="#wsconversation-autoreconnect">wsconversation.autoReconnect</a></span>
+</li>
+<li>
+<span><a href="#wsconversation-connect-">wsconversation.connect()</a></span>
+</li>
+<li>
+<span><a href="#wsconversation-close-">wsconversation.close()</a></span>
+</li>
+<li>
+<span><a href="#wsconversation-sendpacket-p-">wsconversation.sendPacket(p)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#method_call_timeout">METHOD_CALL_TIMEOUT</a></span>
+</li>
+<li>
+<span><a href="#class-wscevent">Class: WSCEvent</a></span>
+<ul>
+<li>
+<span><a href="#wscevent">WSCEvent</a></span>
+</li>
+<li>
+<span><a href="#wscevent-remotesender">wscevent.remoteSender</a></span>
+</li>
+<li>
+<span><a href="#wscevent-constructor-data-sender-">wscevent.constructor(data?,sender?)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-wsclient">Class: WSClient</a></span>
+<ul>
+<li>
+<span><a href="#wsclient">WSClient</a></span>
+</li>
+<li>
+<span><a href="#wsclient-name">wsclient.name</a></span>
+</li>
+<li>
+<span><a href="#wsclient-conv">wsclient.conv</a></span>
+</li>
+<li>
+<span><a href="#wsclient-onload">wsclient.onLoad</a></span>
+</li>
+<li>
+<span><a href="#wsclient-constructor-servicename-conv-">wsclient.constructor(serviceName,conv)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-ws">
+			quark/ws
+			<span><a class="mark" href="#quark-ws" id="quark-ws">#</a></span>
+		</h1><h2 id="enum-packettype">
+			Enum: PacketType
+			<span><a class="mark" href="#enum-packettype" id="enum-packettype">#</a></span>
+		</h2><h3 id="packettype">
+			PacketType
+			<span><a class="mark" href="#packettype" id="packettype">#</a></span>
+		</h3><p>Defines the types of packets used in WSClient communication.</p>
+<h2 id="interface-packet">
+			Interface: Packet
+			<span><a class="mark" href="#interface-packet" id="interface-packet">#</a></span>
+		</h2><h3 id="packet">
+			Packet
+			<span><a class="mark" href="#packet" id="packet">#</a></span>
+		</h3><p>Represents a packet structure used in WSClient communication.</p>
+<h2 id="class-wsconversation">
+			Class: WSConversation
+			<span><a class="mark" href="#class-wsconversation" id="class-wsconversation">#</a></span>
+		</h2><h3 id="wsconversation">
+			WSConversation
+			<span><a class="mark" href="#wsconversation" id="wsconversation">#</a></span>
+		</h3><p>WSConversation is extended from WebSocket to provide a WSClient connection.</p>
+<ul>
+<li><code>@extends</code> <a href="net.html#websocket"><code>WebSocket</code></a></li>
+</ul>
+<h3 id="wsconversation-token">
+			wsconversation.token
+			<span><a class="mark" href="#wsconversation-token" id="wsconversation-token">#</a></span>
+		</h3><p>Session token</p>
+<ul>
+<li><code>@get</code> <code>token</code>:  </li>
+</ul>
+<h3 id="wsconversation-autoreconnect">
+			wsconversation.autoReconnect
+			<span><a class="mark" href="#wsconversation-autoreconnect" id="wsconversation-autoreconnect">#</a></span>
+		</h3><ul>
+<li><code>autoReconnect</code>:  </li>
+</ul>
+<h3 id="wsconversation-connect-">
+			wsconversation.connect()
+			<span><a class="mark" href="#wsconversation-connect-" id="wsconversation-connect-">#</a></span>
+		</h3><ul>
+<li><code>@override</code><br>Connect to the WebSocket server.</li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="wsconversation-close-">
+			wsconversation.close()
+			<span><a class="mark" href="#wsconversation-close-" id="wsconversation-close-">#</a></span>
+		</h3><ul>
+<li><code>@override</code><br>Close the conversation connection.</li>
+</ul>
+<h3 id="wsconversation-sendpacket-p-">
+			wsconversation.sendPacket(p)
+			<span><a class="mark" href="#wsconversation-sendpacket-p-" id="wsconversation-sendpacket-p-">#</a></span>
+		</h3><p>Send a packet to the server.</p>
+<ul>
+<li><code>@param</code> <code>data</code>:  Packet data to send</li>
+<li><code>@param</code> <code>p</code>: <a href="#interface-packet"><code>Packet</code></a> </li>
+<li><code>@return</code> <code>Promise</code>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+</ul>
+<h2 id="method_call_timeout">
+			METHOD_CALL_TIMEOUT
+			<span><a class="mark" href="#method_call_timeout" id="method_call_timeout">#</a></span>
+		</h2><p>120s</p>
+<ul>
+<li><code>@const</code> <code>METHOD_CALL_TIMEOUT</code>: </li>
+</ul>
+<h2 id="class-wscevent">
+			Class: WSCEvent
+			<span><a class="mark" href="#class-wscevent" id="class-wscevent">#</a></span>
+		</h2><h3 id="wscevent">
+			WSCEvent
+			<span><a class="mark" href="#wscevent" id="wscevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-wsclient"><code>WSClient</code></a>&gt;</li>
+</ul>
+<h3 id="wscevent-remotesender">
+			wscevent.remoteSender
+			<span><a class="mark" href="#wscevent-remotesender" id="wscevent-remotesender">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>remoteSender</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="wscevent-constructor-data-sender-">
+			wscevent.constructor(data?,sender?)
+			<span><a class="mark" href="#wscevent-constructor-data-sender-" id="wscevent-constructor-data-sender-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>data?</code>: <code>any</code> Event data</li>
+<li><code>@param</code> <code>sender?</code>: <a href="$ext.html#string"><code>string</code></a> Remote sender id</li>
+</ul>
+<h2 id="class-wsclient">
+			Class: WSClient
+			<span><a class="mark" href="#class-wsclient" id="class-wsclient">#</a></span>
+		</h2><h3 id="wsclient">
+			WSClient
+			<span><a class="mark" href="#wsclient" id="wsclient">#</a></span>
+		</h3><p>WSClient is Qktool&#39;s WebSocket service client.</p>
+<p>Through it, you can call the service methods of server provided or listen to the service events.</p>
+<ul>
+<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#class-wscevent"><code>WSCEvent</code></a>&gt;</li>
+</ul>
+<h3 id="wsclient-name">
+			wsclient.name
+			<span><a class="mark" href="#wsclient-name" id="wsclient-name">#</a></span>
+		</h3><p>Service name on the server</p>
+<ul>
+<li><code>@get</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="wsclient-conv">
+			wsclient.conv
+			<span><a class="mark" href="#wsclient-conv" id="wsclient-conv">#</a></span>
+		</h3><p>Conversation instance</p>
+<ul>
+<li><code>@get</code> <code>conv</code>: <a href="#class-wsconversation"><code>WSConversation</code></a> </li>
+</ul>
+<h3 id="wsclient-onload">
+			wsclient.onLoad
+			<span><a class="mark" href="#wsclient-onload" id="wsclient-onload">#</a></span>
+		</h3><p>Triggered when the client is loaded and ready to use.</p>
+<ul>
+<li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#class-wscevent"><code>WSCEvent</code></a>&gt; </li>
+</ul>
+<h3 id="wsclient-constructor-servicename-conv-">
+			wsclient.constructor(serviceName,conv)
+			<span><a class="mark" href="#wsclient-constructor-servicename-conv-" id="wsclient-constructor-servicename-conv-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>serviceName</code>: <a href="$ext.html#string"><code>string</code></a> Service name on the server</li>
+<li><p><code>@param</code> <code>conv</code>: <a href="#class-wsconversation"><code>WSConversation</code></a> Conversation instance</p><br/></li>
+<li><p><code>@param</code> <code>method</code>:  Method name to call</p><br/></li>
+<li><code>@param</code> <code>data?</code>:  Data to send</li>
+<li><code>@param</code> <code>timeout?</code>:  Timeout in milliseconds, default 120s</li>
+<li><code>@param</code> <code>sender?</code>:  Sender name, default this service name</li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

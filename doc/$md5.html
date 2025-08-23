@@ -5,7 +5,7 @@
 	<title>Quark API Documentation</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
 	<script>
-		var src = 'test.html';
+		var src = '.html5.md';
 		var relative = '';
 		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
 		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
@@ -115,16 +115,61 @@
 				<h2>Table of Contents</h2>
 				<ul>
 <li>
-<span><a href="#quark-test">quark/test</a></span>
+<span><a href="#quark-_md5">quark/_md5</a></span>
+<ul>
+<li>
+<span><a href="#chrsz">chrsz</a></span>
+</li>
+<li>
+<span><a href="#bin2binl-bin-">bin2binl(bin)</a></span>
+</li>
+<li>
+<span><a href="#binl2bin-binl-">binl2bin(binl)</a></span>
+</li>
+<li>
+<span><a href="#default-s-">default(s)</a></span>
+</li>
+</ul>
 </li>
 </ul>
 			</div>
 
 			<div id="apicontent">
-				<h1 id="quark-test">
-			quark/test
-			<span><a class="mark" href="#quark-test" id="quark-test">#</a></span>
-		</h1>
+				<h1 id="quark-_md5">
+			quark/_md5
+			<span><a class="mark" href="#quark-_md5" id="quark-_md5">#</a></span>
+		</h1><h2 id="chrsz">
+			chrsz
+			<span><a class="mark" href="#chrsz" id="chrsz">#</a></span>
+		</h2><p>bits per input character. 8 - ASCII; 16 - Unicode</p>
+<ul>
+<li><code>@const</code> <code>chrsz</code>: </li>
+</ul>
+<h2 id="bin2binl-bin-">
+			bin2binl(bin)
+			<span><a class="mark" href="#bin2binl-bin-" id="bin2binl-bin-">#</a></span>
+		</h2><p>Convert a string to an array of little-endian words<br/>If chrsz is ASCII, characters &gt;255 have their hi-byte silently ignored.</p>
+<ul>
+<li><code>@param</code> <code>bin</code>: <code>ArrayLike</code>&lt;<a href="$ext.html#uint8"><code>Uint8</code></a>&gt; </li>
+<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a><code>[]</code> </li>
+</ul>
+<h2 id="binl2bin-binl-">
+			binl2bin(binl)
+			<span><a class="mark" href="#binl2bin-binl-" id="binl2bin-binl-">#</a></span>
+		</h2><p>Convert an array of little-endian words to a bin</p>
+<ul>
+<li><code>@param</code> <code>binl</code>: <code>ArrayLike</code>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@return</code> <a href="buffer.html#buffer"><code>buffer.Buffer</code></a> </li>
+</ul>
+<h2 id="default-s-">
+			default(s)
+			<span><a class="mark" href="#default-s-" id="default-s-">#</a></span>
+		</h2><p>Calculate the MD5 of a string or ArrayLike<Int></p>
+<ul>
+<li><code>@param</code> <code>s</code>: <a href="$ext.html#string"><code>string</code></a>|<code>ArrayLike</code>&lt;<a href="$ext.html#int"><code>Int</code></a>&gt; </li>
+<li><code>@return</code> <a href="buffer.html#buffer"><code>buffer.Buffer</code></a> </li>
+</ul>
+
 			</div>
 
 		</div>

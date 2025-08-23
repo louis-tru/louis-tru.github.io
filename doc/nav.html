@@ -65,11 +65,14 @@
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
 <li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
 <li><a href="http.html"><code>quark/http</code></a></li>
 <li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
 <li><a href="os.html"><code>quark/os</code></a></li>
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
@@ -81,10 +84,16 @@
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
 <li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
 </ul>
 
 
@@ -200,6 +209,21 @@
 <span><a href="#navbar">Navbar</a></span>
 </li>
 <li>
+<span><a href="#navbar-hidden">navbar.hidden</a></span>
+</li>
+<li>
+<span><a href="#navbar-visiblebackicon">navbar.visibleBackIcon</a></span>
+</li>
+<li>
+<span><a href="#navbar-visiblebacktext">navbar.visibleBackText</a></span>
+</li>
+<li>
+<span><a href="#navbar-backtextcolor">navbar.backTextColor</a></span>
+</li>
+<li>
+<span><a href="#navbar-titletextcolor">navbar.titleTextColor</a></span>
+</li>
+<li>
 <span><a href="#navbar-page">navbar.page</a></span>
 </li>
 <li>
@@ -229,6 +253,9 @@
 </li>
 <li>
 <span><a href="#navpage-isfirstpage">navpage.isFirstPage</a></span>
+</li>
+<li>
+<span><a href="#navpage-backgroundcolor">navpage.backgroundColor</a></span>
 </li>
 <li>
 <span><a href="#navpage-title">navpage.title</a></span>
@@ -413,7 +440,7 @@
 			navpagecollection.enableAnimate
 			<span><a class="mark" href="#navpagecollection-enableanimate" id="navpagecollection-enableanimate">#</a></span>
 		</h3><ul>
-<li><code>enableAnimate</code>:  </li>
+<li><code>enableAnimate</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="navpagecollection-iscurrent-page-">
 			navpagecollection.isCurrent(page)
@@ -447,6 +474,36 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-navigationstatus"><code>NavigationStatus</code></a></li>
 <li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
+</ul>
+<h3 id="navbar-hidden">
+			navbar.hidden
+			<span><a class="mark" href="#navbar-hidden" id="navbar-hidden">#</a></span>
+		</h3><ul>
+<li><code>hidden</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navbar-visiblebackicon">
+			navbar.visibleBackIcon
+			<span><a class="mark" href="#navbar-visiblebackicon" id="navbar-visiblebackicon">#</a></span>
+		</h3><ul>
+<li><code>visibleBackIcon</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navbar-visiblebacktext">
+			navbar.visibleBackText
+			<span><a class="mark" href="#navbar-visiblebacktext" id="navbar-visiblebacktext">#</a></span>
+		</h3><ul>
+<li><code>visibleBackText</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navbar-backtextcolor">
+			navbar.backTextColor
+			<span><a class="mark" href="#navbar-backtextcolor" id="navbar-backtextcolor">#</a></span>
+		</h3><ul>
+<li><code>backTextColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
+</ul>
+<h3 id="navbar-titletextcolor">
+			navbar.titleTextColor
+			<span><a class="mark" href="#navbar-titletextcolor" id="navbar-titletextcolor">#</a></span>
+		</h3><ul>
+<li><code>titleTextColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
 </ul>
 <h3 id="navbar-page">
 			navbar.page
@@ -507,6 +564,12 @@
 			<span><a class="mark" href="#navpage-isfirstpage" id="navpage-isfirstpage">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>isFirstPage</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="navpage-backgroundcolor">
+			navpage.backgroundColor
+			<span><a class="mark" href="#navpage-backgroundcolor" id="navpage-backgroundcolor">#</a></span>
+		</h3><ul>
+<li><code>backgroundColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
 </ul>
 <h3 id="navpage-title">
 			navpage.title
