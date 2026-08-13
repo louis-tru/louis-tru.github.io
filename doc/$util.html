@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -118,24 +124,6 @@
 <span><a href="#quark-_util">quark/_util</a></span>
 <ul>
 <li>
-<span><a href="#normalizepath-path-retain_up-">normalizePath(path,retain_up?)</a></span>
-</li>
-<li>
-<span><a href="#formatpath-args-">formatPath(...args)</a></span>
-</li>
-<li>
-<span><a href="#isabsolute-path-">isAbsolute(path)</a></span>
-</li>
-<li>
-<span><a href="#islocal-path-">isLocal(path)</a></span>
-</li>
-<li>
-<span><a href="#islocalzip-path-">isLocalZip(path)</a></span>
-</li>
-<li>
-<span><a href="#ishttp-path-">isHttp(path)</a></span>
-</li>
-<li>
 <span><a href="#stripbom-content-">stripBOM(content)</a></span>
 </li>
 <li>
@@ -145,22 +133,34 @@
 <span><a href="#assert-value-message-">assert(value,message?)</a></span>
 </li>
 <li>
-<span><a href="#class-hash5381">Class: Hash5381</a></span>
+<span><a href="#class-hash">Class: Hash</a></span>
 <ul>
 <li>
-<span><a href="#hash5381">Hash5381</a></span>
+<span><a href="#hash">Hash</a></span>
 </li>
 <li>
-<span><a href="#hash5381-hashcode-">hash5381.hashCode()</a></span>
+<span><a href="#hash-hashcode-">hash.hashCode()</a></span>
 </li>
 <li>
-<span><a href="#hash5381-update-data-">hash5381.update(data)</a></span>
+<span><a href="#hash-hashstr-">hash.hashStr()</a></span>
 </li>
 <li>
-<span><a href="#hash5381-digest-">hash5381.digest()</a></span>
+<span><a href="#hash-update-data-">hash.update(data)</a></span>
 </li>
 <li>
-<span><a href="#hash5381-clear-">hash5381.clear()</a></span>
+<span><a href="#hash-update1f-f1-">hash.update1f(f1)</a></span>
+</li>
+<li>
+<span><a href="#hash-update2f-f1-f2-">hash.update2f(f1,f2)</a></span>
+</li>
+<li>
+<span><a href="#hash-update4f-f1-f2-f3-f4-">hash.update4f(f1,f2,f3,f4)</a></span>
+</li>
+<li>
+<span><a href="#hash-equals-other-">hash.equals(other)</a></span>
+</li>
+<li>
+<span><a href="#hash-clear-">hash.clear()</a></span>
 </li>
 </ul>
 <li>
@@ -202,6 +202,9 @@
 <li>
 <span><a href="#default-hash-obj-">default.hash(obj)</a></span>
 </li>
+<li>
+<span><a href="#default-debuglog-tag-">default.debugLog(TAG?)</a></span>
+</li>
 </ul>
 </li>
 </ul>
@@ -213,54 +216,7 @@
 				<h1 id="quark-_util">
 			quark/_util
 			<span><a class="mark" href="#quark-_util" id="quark-_util">#</a></span>
-		</h1><h2 id="normalizepath-path-retain_up-">
-			normalizePath(path,retain_up?)
-			<span><a class="mark" href="#normalizepath-path-retain_up-" id="normalizepath-path-retain_up-">#</a></span>
-		</h2><p>format part</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>retain_up?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="formatpath-args-">
-			formatPath(...args)
-			<span><a class="mark" href="#formatpath-args-" id="formatpath-args-">#</a></span>
-		</h2><p>file:///home/louis/test.txt<br/>file:///d:/home/louis/test.txt<br/>http://google.com/test.txt<br/>return format path</p>
-<ul>
-<li><code>@param</code> <code>args</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="isabsolute-path-">
-			isAbsolute(path)
-			<span><a class="mark" href="#isabsolute-path-" id="isabsolute-path-">#</a></span>
-		</h2><p>Is it an absolute path?</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="islocal-path-">
-			isLocal(path)
-			<span><a class="mark" href="#islocal-path-" id="islocal-path-">#</a></span>
-		</h2><p>Is it a local path?</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="islocalzip-path-">
-			isLocalZip(path)
-			<span><a class="mark" href="#islocalzip-path-" id="islocalzip-path-">#</a></span>
-		</h2><ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="ishttp-path-">
-			isHttp(path)
-			<span><a class="mark" href="#ishttp-path-" id="ishttp-path-">#</a></span>
-		</h2><ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="stripbom-content-">
+		</h1><h2 id="stripbom-content-">
 			stripBOM(content)
 			<span><a class="mark" href="#stripbom-content-" id="stripbom-content-">#</a></span>
 		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)<br/>because the buffer-to-string conversion in <code>fs.readFileSync()</code><br/>translates it to FEFF, the UTF-16 BOM.</p>
@@ -279,38 +235,71 @@
 <h2 id="assert-value-message-">
 			assert(value,message?)
 			<span><a class="mark" href="#assert-value-message-" id="assert-value-message-">#</a></span>
-		</h2><ul>
+		</h2><p>Asserts that value is not null or undefined.</p>
+<ul>
 <li><code>@param</code> <code>value</code>: <code>any</code> </li>
 <li><code>@param</code> <code>message?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
-<h2 id="class-hash5381">
-			Class: Hash5381
-			<span><a class="mark" href="#class-hash5381" id="class-hash5381">#</a></span>
-		</h2><h3 id="hash5381">
-			Hash5381
-			<span><a class="mark" href="#hash5381" id="hash5381">#</a></span>
-		</h3><h3 id="hash5381-hashcode-">
-			hash5381.hashCode()
-			<span><a class="mark" href="#hash5381-hashcode-" id="hash5381-hashcode-">#</a></span>
+<h2 id="class-hash">
+			Class: Hash
+			<span><a class="mark" href="#class-hash" id="class-hash">#</a></span>
+		</h2><h3 id="hash">
+			Hash
+			<span><a class="mark" href="#hash" id="hash">#</a></span>
+		</h3><h3 id="hash-hashcode-">
+			hash.hashCode()
+			<span><a class="mark" href="#hash-hashcode-" id="hash-hashcode-">#</a></span>
 		</h3><ul>
-<li><code>@return</code> <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> </li>
 </ul>
-<h3 id="hash5381-update-data-">
-			hash5381.update(data)
-			<span><a class="mark" href="#hash5381-update-data-" id="hash5381-update-data-">#</a></span>
+<h3 id="hash-hashstr-">
+			hash.hashStr()
+			<span><a class="mark" href="#hash-hashstr-" id="hash-hashstr-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="hash-update-data-">
+			hash.update(data)
+			<span><a class="mark" href="#hash-update-data-" id="hash-update-data-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
-<h3 id="hash5381-digest-">
-			hash5381.digest()
-			<span><a class="mark" href="#hash5381-digest-" id="hash5381-digest-">#</a></span>
+<h3 id="hash-update1f-f1-">
+			hash.update1f(f1)
+			<span><a class="mark" href="#hash-update1f-f1-" id="hash-update1f-f1-">#</a></span>
 		</h3><ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>f1</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
-<h3 id="hash5381-clear-">
-			hash5381.clear()
-			<span><a class="mark" href="#hash5381-clear-" id="hash5381-clear-">#</a></span>
+<h3 id="hash-update2f-f1-f2-">
+			hash.update2f(f1,f2)
+			<span><a class="mark" href="#hash-update2f-f1-f2-" id="hash-update2f-f1-f2-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>f1</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>f2</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="hash-update4f-f1-f2-f3-f4-">
+			hash.update4f(f1,f2,f3,f4)
+			<span><a class="mark" href="#hash-update4f-f1-f2-f3-f4-" id="hash-update4f-f1-f2-f3-f4-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>f1</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>f2</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>f3</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>f4</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="hash-equals-other-">
+			hash.equals(other)
+			<span><a class="mark" href="#hash-equals-other-" id="hash-equals-other-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>other</code>: <a href="#class-hash"><code>Hash</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="hash-clear-">
+			hash.clear()
+			<span><a class="mark" href="#hash-clear-" id="hash-clear-">#</a></span>
 		</h3><ul>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
@@ -366,7 +355,7 @@
 			<span><a class="mark" href="#default-sleep-time-" id="default-sleep-time-">#</a></span>
 		</h3><p>Asynchronous sleep, equivalent to calling <code>setTimeout</code></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="default-gc-">
 			default.gc()
@@ -390,7 +379,7 @@
 		</h3><p>Read the hash value of a data object</p>
 <ul>
 <li><code>@param</code> <code>obj</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="default-hash-obj-">
 			default.hash(obj)
@@ -399,6 +388,13 @@
 <ul>
 <li><code>@param</code> <code>obj</code>: <code>any</code> </li>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="default-debuglog-tag-">
+			default.debugLog(TAG?)
+			<span><a class="mark" href="#default-debuglog-tag-" id="default-debuglog-tag-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>TAG?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#function"><code>Function</code></a> </li>
 </ul>
 
 			</div>

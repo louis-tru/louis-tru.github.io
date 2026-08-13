@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -187,10 +193,24 @@
 </li>
 </ul>
 <li>
+<span><a href="#enum-boxsizing">Enum: BoxSizing</a></span>
+<ul>
+<li>
+<span><a href="#boxsizing">BoxSizing</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#enum-boxsizekind">Enum: BoxSizeKind</a></span>
 <ul>
 <li>
 <span><a href="#boxsizekind">BoxSizeKind</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-layouttype">Enum: LayoutType</a></span>
+<ul>
+<li>
+<span><a href="#layouttype">LayoutType</a></span>
 </li>
 </ul>
 <li>
@@ -222,38 +242,38 @@
 </li>
 </ul>
 <li>
-<span><a href="#enum-textwhitespace">Enum: TextWhiteSpace</a></span>
+<span><a href="#enum-whitespace">Enum: WhiteSpace</a></span>
 <ul>
 <li>
-<span><a href="#textwhitespace">TextWhiteSpace</a></span>
+<span><a href="#whitespace">WhiteSpace</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#enum-textwordbreak">Enum: TextWordBreak</a></span>
+<span><a href="#enum-wordbreak">Enum: WordBreak</a></span>
 <ul>
 <li>
-<span><a href="#textwordbreak">TextWordBreak</a></span>
+<span><a href="#wordbreak">WordBreak</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#enum-textweight">Enum: TextWeight</a></span>
+<span><a href="#enum-fontweight">Enum: FontWeight</a></span>
 <ul>
 <li>
-<span><a href="#textweight">TextWeight</a></span>
+<span><a href="#fontweight">FontWeight</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#enum-textwidth">Enum: TextWidth</a></span>
+<span><a href="#enum-fontwidth">Enum: FontWidth</a></span>
 <ul>
 <li>
-<span><a href="#textwidth">TextWidth</a></span>
+<span><a href="#fontwidth">FontWidth</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#enum-textslant">Enum: TextSlant</a></span>
+<span><a href="#enum-fontslant">Enum: FontSlant</a></span>
 <ul>
 <li>
-<span><a href="#textslant">TextSlant</a></span>
+<span><a href="#fontslant">FontSlant</a></span>
 </li>
 </ul>
 <li>
@@ -281,10 +301,10 @@
 </li>
 </ul>
 <li>
-<span><a href="#enum-finddirection">Enum: FindDirection</a></span>
+<span><a href="#enum-cascadecolor">Enum: CascadeColor</a></span>
 <ul>
 <li>
-<span><a href="#finddirection">FindDirection</a></span>
+<span><a href="#cascadecolor">CascadeColor</a></span>
 </li>
 </ul>
 <li>
@@ -309,6 +329,12 @@
 <span><a href="#alignin">AlignIn</a></span>
 </li>
 <li>
+<span><a href="#boxsizingin">BoxSizingIn</a></span>
+</li>
+<li>
+<span><a href="#layouttypein">LayoutTypeIn</a></span>
+</li>
+<li>
 <span><a href="#textalignin">TextAlignIn</a></span>
 </li>
 <li>
@@ -318,19 +344,19 @@
 <span><a href="#textoverflowin">TextOverflowIn</a></span>
 </li>
 <li>
-<span><a href="#textwhitespacein">TextWhiteSpaceIn</a></span>
+<span><a href="#whitespacein">WhiteSpaceIn</a></span>
 </li>
 <li>
-<span><a href="#textwordbreakin">TextWordBreakIn</a></span>
+<span><a href="#wordbreakin">WordBreakIn</a></span>
 </li>
 <li>
-<span><a href="#textweightin">TextWeightIn</a></span>
+<span><a href="#fontweightin">FontWeightIn</a></span>
 </li>
 <li>
-<span><a href="#textwidthin">TextWidthIn</a></span>
+<span><a href="#fontwidthin">FontWidthIn</a></span>
 </li>
 <li>
-<span><a href="#textslantin">TextSlantIn</a></span>
+<span><a href="#fontslantin">FontSlantIn</a></span>
 </li>
 <li>
 <span><a href="#keyboardtypein">KeyboardTypeIn</a></span>
@@ -342,7 +368,7 @@
 <span><a href="#cursorstylein">CursorStyleIn</a></span>
 </li>
 <li>
-<span><a href="#finddirectionin">FindDirectionIn</a></span>
+<span><a href="#cascadecolorin">CascadeColorIn</a></span>
 </li>
 <li>
 <span><a href="#class-base">Class: Base</a></span>
@@ -368,6 +394,87 @@
 </li>
 <li>
 <span><a href="#vec2-y">vec2.y</a></span>
+</li>
+<li>
+<span><a href="#vec2-width">vec2.width</a></span>
+</li>
+<li>
+<span><a href="#vec2-height">vec2.height</a></span>
+</li>
+<li>
+<span><a href="#vec2-tostring-">vec2.toString()</a></span>
+</li>
+<li>
+<span><a href="#vec2-iszero-">vec2.isZero()</a></span>
+</li>
+<li>
+<span><a href="#vec2-equal-b-">vec2.equal(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-add-b-">vec2.add(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-sub-b-">vec2.sub(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-mul-b-">vec2.mul(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-div-b-">vec2.div(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-length-">vec2.length()</a></span>
+</li>
+<li>
+<span><a href="#vec2-lengthsq-">vec2.lengthSq()</a></span>
+</li>
+<li>
+<span><a href="#vec2-dot-b-">vec2.dot(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-det-b-">vec2.det(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-normalized-">vec2.normalized()</a></span>
+</li>
+<li>
+<span><a href="#vec2-rotate90z-">vec2.rotate90z()</a></span>
+</li>
+<li>
+<span><a href="#vec2-rotate270z-">vec2.rotate270z()</a></span>
+</li>
+<li>
+<span><a href="#vec2-normalline-prev-next-">vec2.normalline(prev,next)</a></span>
+</li>
+<li>
+<span><a href="#vec2-angle-">vec2.angle()</a></span>
+</li>
+<li>
+<span><a href="#vec2-angleindegrees-">vec2.angleInDegrees()</a></span>
+</li>
+<li>
+<span><a href="#vec2-angleto-p-">vec2.angleTo(p)</a></span>
+</li>
+<li>
+<span><a href="#vec2-rotate-radians-">vec2.rotate(radians)</a></span>
+</li>
+<li>
+<span><a href="#vec2-reversey-">vec2.reverseY()</a></span>
+</li>
+<li>
+<span><a href="#vec2-directioneight-">vec2.directionEight()</a></span>
+</li>
+<li>
+<span><a href="#vec2-mid-b-">vec2.mid(b)</a></span>
+</li>
+<li>
+<span><a href="#vec2-mid-vec-">vec2.mid(vec)</a></span>
+</li>
+<li>
+<span><a href="#vec2-new-x-y-">vec2.new(x,y)</a></span>
+</li>
+<li>
+<span><a href="#vec2-zero-">vec2.zero()</a></span>
 </li>
 </ul>
 <li>
@@ -449,7 +556,7 @@
 <span><a href="#rect">Rect</a></span>
 </li>
 <li>
-<span><a href="#rect-origin">rect.origin</a></span>
+<span><a href="#rect-begin">rect.begin</a></span>
 </li>
 <li>
 <span><a href="#rect-size">rect.size</a></span>
@@ -470,6 +577,54 @@
 <li>
 <span><a href="#rectin">RectIn</a></span>
 </li>
+<li>
+<span><a href="#class-range">Class: Range</a></span>
+<ul>
+<li>
+<span><a href="#range">Range</a></span>
+</li>
+<li>
+<span><a href="#range-begin">range.begin</a></span>
+</li>
+<li>
+<span><a href="#range-end">range.end</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-region">Class: Region</a></span>
+<ul>
+<li>
+<span><a href="#region">Region</a></span>
+</li>
+<li>
+<span><a href="#region-begin">region.begin</a></span>
+</li>
+<li>
+<span><a href="#region-end">region.end</a></span>
+</li>
+<li>
+<span><a href="#region-origin">region.origin</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-borderradius">Class: BorderRadius</a></span>
+<ul>
+<li>
+<span><a href="#borderradius">BorderRadius</a></span>
+</li>
+<li>
+<span><a href="#borderradius-lefttop">borderradius.leftTop</a></span>
+</li>
+<li>
+<span><a href="#borderradius-righttop">borderradius.rightTop</a></span>
+</li>
+<li>
+<span><a href="#borderradius-rightbottom">borderradius.rightBottom</a></span>
+</li>
+<li>
+<span><a href="#borderradius-leftbottom">borderradius.leftBottom</a></span>
+</li>
+</ul>
 <li>
 <span><a href="#class-mat">Class: Mat</a></span>
 <ul>
@@ -571,6 +726,9 @@
 <li>
 <span><a href="#color-a">color.a</a></span>
 </li>
+<li>
+<span><a href="#color-alpha">color.alpha</a></span>
+</li>
 </ul>
 <li>
 <span><a href="#colorstrin">ColorStrIn</a></span>
@@ -613,32 +771,32 @@
 <span><a href="#shadowin">ShadowIn</a></span>
 </li>
 <li>
-<span><a href="#class-boxborder">Class: BoxBorder</a></span>
+<span><a href="#class-border">Class: Border</a></span>
 <ul>
 <li>
-<span><a href="#boxborder">BoxBorder</a></span>
+<span><a href="#border">Border</a></span>
 </li>
 <li>
-<span><a href="#boxborder-width">boxborder.width</a></span>
+<span><a href="#border-width">border.width</a></span>
 </li>
 <li>
-<span><a href="#boxborder-color">boxborder.color</a></span>
+<span><a href="#border-color">border.color</a></span>
 </li>
 <li>
-<span><a href="#boxborder-r">boxborder.r</a></span>
+<span><a href="#border-r">border.r</a></span>
 </li>
 <li>
-<span><a href="#boxborder-g">boxborder.g</a></span>
+<span><a href="#border-g">border.g</a></span>
 </li>
 <li>
-<span><a href="#boxborder-b">boxborder.b</a></span>
+<span><a href="#border-b">border.b</a></span>
 </li>
 <li>
-<span><a href="#boxborder-a">boxborder.a</a></span>
+<span><a href="#border-a">border.a</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#boxborderin">BoxBorderIn</a></span>
+<span><a href="#borderin">BorderIn</a></span>
 </li>
 <li>
 <span><a href="#class-fillposition">Class: FillPosition</a></span>
@@ -755,20 +913,20 @@
 <span><a href="#textcolorin">TextColorIn</a></span>
 </li>
 <li>
-<span><a href="#class-textsize">Class: TextSize</a></span>
+<span><a href="#class-fontsize">Class: FontSize</a></span>
 <ul>
 <li>
-<span><a href="#textsize">TextSize</a></span>
+<span><a href="#fontsize">FontSize</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#textsizein">TextSizeIn</a></span>
+<span><a href="#fontsizein">FontSizeIn</a></span>
 </li>
 <li>
-<span><a href="#textlineheightin">TextLineHeightIn</a></span>
+<span><a href="#lineheightin">LineHeightIn</a></span>
 </li>
 <li>
-<span><a href="#textlineheight">TextLineHeight</a></span>
+<span><a href="#lineheight">LineHeight</a></span>
 </li>
 <li>
 <span><a href="#class-textshadow">Class: TextShadow</a></span>
@@ -805,23 +963,51 @@
 <span><a href="#textshadowin">TextShadowIn</a></span>
 </li>
 <li>
+<span><a href="#class-textstroke">Class: TextStroke</a></span>
+<ul>
+<li>
+<span><a href="#textstroke">TextStroke</a></span>
+</li>
+<li>
+<span><a href="#textstroke-width">textstroke.width</a></span>
+</li>
+<li>
+<span><a href="#textstroke-color">textstroke.color</a></span>
+</li>
+<li>
+<span><a href="#textstroke-r">textstroke.r</a></span>
+</li>
+<li>
+<span><a href="#textstroke-g">textstroke.g</a></span>
+</li>
+<li>
+<span><a href="#textstroke-b">textstroke.b</a></span>
+</li>
+<li>
+<span><a href="#textstroke-a">textstroke.a</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#textstrokein">TextStrokeIn</a></span>
+</li>
+<li>
 <span><a href="#ffid">FFID</a></span>
 </li>
 <li>
-<span><a href="#class-textfamily">Class: TextFamily</a></span>
+<span><a href="#class-fontfamily">Class: FontFamily</a></span>
 <ul>
 <li>
-<span><a href="#textfamily">TextFamily</a></span>
+<span><a href="#fontfamily">FontFamily</a></span>
 </li>
 <li>
-<span><a href="#textfamily-families-">textfamily.families()</a></span>
+<span><a href="#fontfamily-families-">fontfamily.families()</a></span>
 </li>
 </ul>
 <li>
 <span><a href="#emptyffid">EmptyFFID</a></span>
 </li>
 <li>
-<span><a href="#textfamilyin">TextFamilyIn</a></span>
+<span><a href="#fontfamilyin">FontFamilyIn</a></span>
 </li>
 <li>
 <span><a href="#class-boxfilter">Class: BoxFilter</a></span>
@@ -913,6 +1099,99 @@
 <span><a href="#boxshadowin">BoxShadowIn</a></span>
 </li>
 <li>
+<span><a href="#parseboxfilter-val-msg-">parseBoxFilter(val,msg?)</a></span>
+</li>
+<li>
+<span><a href="#parseboxshadow-val-msg-">parseBoxShadow(val,msg?)</a></span>
+</li>
+<li>
+<span><a href="#parseboxfilterptr">parseBoxFilterPtr</a></span>
+</li>
+<li>
+<span><a href="#parseboxshadowptr">parseBoxShadowPtr</a></span>
+</li>
+<li>
+<span><a href="#class-skeletondata">Class: SkeletonData</a></span>
+<ul>
+<li>
+<span><a href="#skeletondata">SkeletonData</a></span>
+</li>
+<li>
+<span><a href="#skeletondata-make-skelpath-atlaspath-scale-">skeletondata.Make(skelPath,atlasPath?,scale?)</a></span>
+</li>
+<li>
+<span><a href="#skeletondata-make-skel-atlaspath-scale-">skeletondata.Make(skel,atlasPath,scale?)</a></span>
+</li>
+<li>
+<span><a href="#skeletondata-make-skel-atlas-dir-scale-">skeletondata.Make(skel,atlas,dir,scale?)</a></span>
+</li>
+<li>
+<span><a href="#skeletondata-hashcode-">skeletondata.hashCode()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#skeletondatain">SkeletonDataIn</a></span>
+</li>
+<li>
+<span><a href="#parseskeletondata-val-msg-">parseSkeletonData(val,msg?)</a></span>
+</li>
+<li>
+<span><a href="#parseskeletondataptr">parseSkeletonDataPtr</a></span>
+</li>
+<li>
+<span><a href="#enum-boundstype">Enum: BoundsType</a></span>
+<ul>
+<li>
+<span><a href="#boundstype">BoundsType</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-bounds">Class: Bounds</a></span>
+<ul>
+<li>
+<span><a href="#bounds">Bounds</a></span>
+</li>
+<li>
+<span><a href="#bounds-type">bounds.type</a></span>
+</li>
+<li>
+<span><a href="#bounds-offset">bounds.offset</a></span>
+</li>
+<li>
+<span><a href="#bounds-radius">bounds.radius</a></span>
+</li>
+<li>
+<span><a href="#bounds-pts-">bounds.pts?</a></span>
+</li>
+<li>
+<span><a href="#bounds-halfthickness">bounds.halfThickness</a></span>
+</li>
+<li>
+<span><a href="#bounds-hashcode-">bounds.hashCode()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#boundsin">BoundsIn</a></span>
+</li>
+<li>
+<span><a href="#newbounds-type-offsetx-offsety-radius-pts-">newBounds(type,offsetX,offsetY,radius,pts?)</a></span>
+</li>
+<li>
+<span><a href="#bounds-type-radius-pts-">bounds(type,radius,pts?)</a></span>
+</li>
+<li>
+<span><a href="#circbounds-radius-offsetx-offsety-">circBounds(radius,offsetX?,offsetY?)</a></span>
+</li>
+<li>
+<span><a href="#polybounds-path-offsetx-offsety-">polyBounds(path,offsetX?,offsetY?)</a></span>
+</li>
+<li>
+<span><a href="#segbounds-path-offsetx-offsety-">segBounds(path,offsetX?,offsetY?)</a></span>
+</li>
+<li>
+<span><a href="#parsebounds-val-msg-">parseBounds(val,msg?)</a></span>
+</li>
+<li>
 <span><a href="#newcolor-r-g-b-a-">newColor(r,g,b,a)</a></span>
 </li>
 <li>
@@ -928,6 +1207,15 @@
 <span><a href="#newrect-x-y-width-height-">newRect(x,y,width,height)</a></span>
 </li>
 <li>
+<span><a href="#newrange-x-y-width-height-">newRange(x,y,width,height)</a></span>
+</li>
+<li>
+<span><a href="#newregion-x-y-width-height-">newRegion(x,y,width,height)</a></span>
+</li>
+<li>
+<span><a href="#newborderradius-p0-p1-p2-p3-p4-p5-p6-p7-">newBorderRadius(p0,p1,p2,p3,p4,p5,p6,p7)</a></span>
+</li>
+<li>
 <span><a href="#newmat-value-">newMat(...value)</a></span>
 </li>
 <li>
@@ -940,7 +1228,7 @@
 <span><a href="#newshadow-x-y-size-r-g-b-a-">newShadow(x,y,size,r,g,b,a)</a></span>
 </li>
 <li>
-<span><a href="#newboxborder-width-r-b-a-">newBoxBorder(width,r,b,a)</a></span>
+<span><a href="#newborder-width-r-b-a-">newBorder(width,r,b,a)</a></span>
 </li>
 <li>
 <span><a href="#newfillposition-kink-value-">newFillPosition(kink,value)</a></span>
@@ -958,142 +1246,151 @@
 <span><a href="#newtextcolor-kink-r-g-b-a-">newTextColor(kink,r,g,b,a)</a></span>
 </li>
 <li>
-<span><a href="#newtextsize-kink-value-">newTextSize(kink,value)</a></span>
+<span><a href="#newfontsize-kink-value-">newFontSize(kink,value)</a></span>
 </li>
 <li>
-<span><a href="#newtextlineheight-kink-value-">newTextLineHeight(kink,value)</a></span>
+<span><a href="#newlineheight-kink-value-">newLineHeight(kink,value)</a></span>
 </li>
 <li>
 <span><a href="#newtextshadow-kind-offset_x-offset_y-size-r-g-b-a-">newTextShadow(kind,offset_x,offset_y,size,r,g,b,a)</a></span>
 </li>
 <li>
-<span><a href="#newtextfamily-kind-ffid-">newTextFamily(kind,ffid?)</a></span>
+<span><a href="#newtextstroke-kind-width-r-g-b-a-">newTextStroke(kind,width,r,g,b,a)</a></span>
 </li>
 <li>
-<span><a href="#parserepeat-val-desc-">parseRepeat(val,desc?)</a></span>
+<span><a href="#newfontfamily-kind-ffid-">newFontFamily(kind,ffid?)</a></span>
 </li>
 <li>
-<span><a href="#parsedirection-val-desc-">parseDirection(val,desc?)</a></span>
+<span><a href="#parserepeat-val-msg-">parseRepeat(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseitemsalign-val-desc-">parseItemsAlign(val,desc?)</a></span>
+<span><a href="#parsedirection-val-msg-">parseDirection(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsecrossalign-val-desc-">parseCrossAlign(val,desc?)</a></span>
+<span><a href="#parseitemsalign-val-msg-">parseItemsAlign(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsewrap-val-desc-">parseWrap(val,desc?)</a></span>
+<span><a href="#parsecrossalign-val-msg-">parseCrossAlign(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsewrapalign-val-desc-">parseWrapAlign(val,desc?)</a></span>
+<span><a href="#parsewrap-val-msg-">parseWrap(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsealign-val-desc-">parseAlign(val,desc?)</a></span>
+<span><a href="#parsewrapalign-val-msg-">parseWrapAlign(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextalign-val-desc-">parseTextAlign(val,desc?)</a></span>
+<span><a href="#parsealign-val-msg-">parseAlign(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextdecoration-val-desc-">parseTextDecoration(val,desc?)</a></span>
+<span><a href="#parseboxsizing-val-msg-">parseBoxSizing(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextoverflow-val-desc-">parseTextOverflow(val,desc?)</a></span>
+<span><a href="#parselayouttype-val-msg-">parseLayoutType(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextwhitespace-val-desc-">parseTextWhiteSpace(val,desc?)</a></span>
+<span><a href="#parsetextalign-val-msg-">parseTextAlign(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextwordbreak-val-desc-">parseTextWordBreak(val,desc?)</a></span>
+<span><a href="#parsetextdecoration-val-msg-">parseTextDecoration(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextweight-val-desc-">parseTextWeight(val,desc?)</a></span>
+<span><a href="#parsetextoverflow-val-msg-">parseTextOverflow(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextwidth-val-desc-">parseTextWidth(val,desc?)</a></span>
+<span><a href="#parsewhitespace-val-msg-">parseWhiteSpace(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextslant-val-desc-">parseTextSlant(val,desc?)</a></span>
+<span><a href="#parsewordbreak-val-msg-">parseWordBreak(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsekeyboardtype-val-desc-">parseKeyboardType(val,desc?)</a></span>
+<span><a href="#parsefontweight-val-msg-">parseFontWeight(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsekeyboardreturntype-val-desc-">parseKeyboardReturnType(val,desc?)</a></span>
+<span><a href="#parsefontwidth-val-msg-">parseFontWidth(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsecursorstyle-val-desc-">parseCursorStyle(val,desc?)</a></span>
+<span><a href="#parsefontslant-val-msg-">parseFontSlant(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsefinddirection-val-desc-">parseFindDirection(val,desc?)</a></span>
+<span><a href="#parsekeyboardtype-val-msg-">parseKeyboardType(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsevec2-val-desc-">parseVec2(val,desc?)</a></span>
+<span><a href="#parsekeyboardreturntype-val-msg-">parseKeyboardReturnType(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsevec3-val-desc-">parseVec3(val,desc?)</a></span>
+<span><a href="#parsecursorstyle-val-msg-">parseCursorStyle(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsevec4-val-desc-">parseVec4(val,desc?)</a></span>
+<span><a href="#parsecascadecolor-val-msg-">parseCascadeColor(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsecurve-val-desc-">parseCurve(val,desc?)</a></span>
+<span><a href="#parsevec2-val-msg-">parseVec2(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parserect-val-desc-">parseRect(val,desc?)</a></span>
+<span><a href="#parsevec3-val-msg-">parseVec3(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsemat-val-desc-">parseMat(val,desc?)</a></span>
+<span><a href="#parsevec4-val-msg-">parseVec4(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsemat4-val-desc-">parseMat4(val,desc?)</a></span>
+<span><a href="#parsecurve-val-msg-">parseCurve(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsecolor-val-desc-ref-">parseColor(val,desc?,ref?)</a></span>
+<span><a href="#parserect-val-msg-">parseRect(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseshadow-val-desc-ref-">parseShadow(val,desc?,ref?)</a></span>
+<span><a href="#parserange-val-msg-">parseRange(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxborder-val-desc-">parseBoxBorder(val,desc?)</a></span>
+<span><a href="#parseregion-val-msg-">parseRegion(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsefillposition-val-desc-">parseFillPosition(val,desc?)</a></span>
+<span><a href="#parseborderradius-val-msg-">parseBorderRadius(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsefillsize-val-desc-">parseFillSize(val,desc?)</a></span>
+<span><a href="#parsemat-val-msg-">parseMat(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxorigin-val-desc-">parseBoxOrigin(val,desc?)</a></span>
+<span><a href="#parsemat4-val-msg-">parseMat4(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxsize-val-desc-">parseBoxSize(val,desc?)</a></span>
+<span><a href="#parsecolor-val-msg-ref-">parseColor(val,msg?,ref?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextcolor-val-desc-">parseTextColor(val,desc?)</a></span>
+<span><a href="#parseshadow-val-msg-ref-">parseShadow(val,msg?,ref?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextsize-val-desc-">parseTextSize(val,desc?)</a></span>
+<span><a href="#parseborder-val-msg-ref-">parseBorder(val,msg?,ref?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextlineheight-val-desc-">parseTextLineHeight(val,desc?)</a></span>
+<span><a href="#parsefillposition-val-msg-">parseFillPosition(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextshadow-val-desc-">parseTextShadow(val,desc?)</a></span>
+<span><a href="#parsefillsize-val-msg-">parseFillSize(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parsetextfamily-val-desc-">parseTextFamily(val,desc?)</a></span>
+<span><a href="#parseboxorigin-val-msg-">parseBoxOrigin(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxfilter-val-desc-">parseBoxFilter(val,desc?)</a></span>
+<span><a href="#parseboxsize-val-msg-">parseBoxSize(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxshadow-val-desc-">parseBoxShadow(val,desc?)</a></span>
+<span><a href="#parsetextcolor-val-msg-">parseTextColor(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxfilterptr">parseBoxFilterPtr</a></span>
+<span><a href="#parsefontsize-val-msg-">parseFontSize(val,msg?)</a></span>
 </li>
 <li>
-<span><a href="#parseboxshadowptr">parseBoxShadowPtr</a></span>
+<span><a href="#parselineheight-val-msg-">parseLineHeight(val,msg?)</a></span>
+</li>
+<li>
+<span><a href="#parsetextshadow-val-msg-">parseTextShadow(val,msg?)</a></span>
+</li>
+<li>
+<span><a href="#parsetextstroke-val-msg-">parseTextStroke(val,msg?)</a></span>
+</li>
+<li>
+<span><a href="#parsefontfamily-val-msg-">parseFontFamily(val,msg?)</a></span>
 </li>
 </ul>
 </li>
@@ -1116,13 +1413,7 @@
 		</h2><h3 id="repeat">
 			Repeat
 			<span><a class="mark" href="#repeat" id="repeat">#</a></span>
-		</h3><ul>
-<li><code>Repeat</code>  </li>
-<li><code>RepeatX</code>  </li>
-<li><code>RepeatY</code>  </li>
-<li><code>RepeatNo</code>  </li>
-</ul>
-<h2 id="enum-fillpositionkind">
+		</h3><h2 id="enum-fillpositionkind">
 			Enum: FillPositionKind
 			<span><a class="mark" href="#enum-fillpositionkind" id="enum-fillpositionkind">#</a></span>
 		</h2><h3 id="fillpositionkind">
@@ -1160,10 +1451,19 @@
 			<span><a class="mark" href="#direction" id="direction">#</a></span>
 		</h3><p>Flex Layout direction</p>
 <ul>
+<li><code>None</code>  </li>
 <li><code>Row</code>  </li>
 <li><code>RowReverse</code>  </li>
 <li><code>Column</code>  </li>
 <li><code>ColumnReverse</code>  </li>
+<li><code>Left</code>  </li>
+<li><code>Right</code>  </li>
+<li><code>Top</code>  </li>
+<li><code>Bottom</code>  </li>
+<li><code>LeftTop</code>  </li>
+<li><code>RightTop</code>  </li>
+<li><code>RightBottom</code>  </li>
+<li><code>LeftBottom</code>  </li>
 </ul>
 <h2 id="enum-itemsalign">
 			Enum: ItemsAlign
@@ -1249,6 +1549,18 @@
 <li><code>CenterBottom</code>  </li>
 <li><code>RightBottom</code>  </li>
 </ul>
+<h2 id="enum-boxsizing">
+			Enum: BoxSizing
+			<span><a class="mark" href="#enum-boxsizing" id="enum-boxsizing">#</a></span>
+		</h2><h3 id="boxsizing">
+			BoxSizing
+			<span><a class="mark" href="#boxsizing" id="boxsizing">#</a></span>
+		</h3><p>The box sizing of the View</p>
+<ul>
+<li><code>ContentBox</code>  The width and height properties include only the content. Border and padding are not included.</li>
+<li><code>PaddingBox</code>  The width and height properties include the content and padding. Border is not included.</li>
+<li><code>BorderBox</code>  The width and height properties include the content, padding, and border.</li>
+</ul>
 <h2 id="enum-boxsizekind">
 			Enum: BoxSizeKind
 			<span><a class="mark" href="#enum-boxsizekind" id="enum-boxsizekind">#</a></span>
@@ -1256,14 +1568,13 @@
 			BoxSizeKind
 			<span><a class="mark" href="#boxsizekind" id="boxsizekind">#</a></span>
 		</h3><p>The width/height value kind for the Box</p>
-<ul>
-<li><code>None</code>  Do not use value</li>
-<li><code>Auto</code>  包裹内容 wrap content</li>
-<li><code>Match</code>  匹配父视图 match parent</li>
-<li><code>Value</code>  明确值  rem</li>
-<li><code>Ratio</code>  百分比 value %</li>
-<li><code>Minus</code>  减法(parent-value) value !</li>
-</ul>
+<h2 id="enum-layouttype">
+			Enum: LayoutType
+			<span><a class="mark" href="#enum-layouttype" id="enum-layouttype">#</a></span>
+		</h2><h3 id="layouttype">
+			LayoutType
+			<span><a class="mark" href="#layouttype" id="layouttype">#</a></span>
+		</h3><p>The layout type of the View</p>
 <h2 id="enum-textvaluekind">
 			Enum: TextValueKind
 			<span><a class="mark" href="#enum-textvaluekind" id="enum-textvaluekind">#</a></span>
@@ -1284,10 +1595,10 @@
 			<span><a class="mark" href="#textalign" id="textalign">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  inherit</li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>Left</code>  左对齐</li>
 <li><code>Center</code>  居中</li>
 <li><code>Right</code>  右对齐</li>
-<li><code>Default</code>  = <code>Left</code> </li>
 </ul>
 <h2 id="enum-textdecoration">
 			Enum: TextDecoration
@@ -1297,11 +1608,11 @@
 			<span><a class="mark" href="#textdecoration" id="textdecoration">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  inherit</li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>None</code>  没有</li>
 <li><code>Overline</code>  上划线</li>
 <li><code>LineThrough</code>  中划线</li>
 <li><code>Underline</code>  下划线</li>
-<li><code>Default</code>  = <code>None</code> </li>
 </ul>
 <h2 id="enum-textoverflow">
 			Enum: TextOverflow
@@ -1311,69 +1622,71 @@
 			<span><a class="mark" href="#textoverflow" id="textoverflow">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  inherit</li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>Normal</code>  不做任何处理</li>
 <li><code>Clip</code>  剪切</li>
 <li><code>Ellipsis</code>  剪切并显示省略号</li>
 <li><code>EllipsisCenter</code>  剪切并居中显示省略号</li>
-<li><code>Default</code>  = <code>Normal</code> </li>
 </ul>
-<h2 id="enum-textwhitespace">
-			Enum: TextWhiteSpace
-			<span><a class="mark" href="#enum-textwhitespace" id="enum-textwhitespace">#</a></span>
-		</h2><h3 id="textwhitespace">
-			TextWhiteSpace
-			<span><a class="mark" href="#textwhitespace" id="textwhitespace">#</a></span>
+<h2 id="enum-whitespace">
+			Enum: WhiteSpace
+			<span><a class="mark" href="#enum-whitespace" id="enum-whitespace">#</a></span>
+		</h2><h3 id="whitespace">
+			WhiteSpace
+			<span><a class="mark" href="#whitespace" id="whitespace">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  inherit</li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>Normal</code>  合并空白序列,使用自动wrap</li>
 <li><code>NoWrap</code>  合并空白序列,不使用自动wrap</li>
 <li><code>Pre</code>  保留所有空白,不使用自动wrap</li>
 <li><code>PreWrap</code>  保留所有空白,使用自动wrap</li>
 <li><code>PreLine</code>  合并空白符序列,但保留换行符,使用自动wrap</li>
-<li><code>Default</code>  = <code>Normal</code> </li>
 </ul>
-<h2 id="enum-textwordbreak">
-			Enum: TextWordBreak
-			<span><a class="mark" href="#enum-textwordbreak" id="enum-textwordbreak">#</a></span>
-		</h2><h3 id="textwordbreak">
-			TextWordBreak
-			<span><a class="mark" href="#textwordbreak" id="textwordbreak">#</a></span>
+<h2 id="enum-wordbreak">
+			Enum: WordBreak
+			<span><a class="mark" href="#enum-wordbreak" id="enum-wordbreak">#</a></span>
+		</h2><h3 id="wordbreak">
+			WordBreak
+			<span><a class="mark" href="#wordbreak" id="wordbreak">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  inherit</li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>Normal</code>  保持单词在同一行</li>
 <li><code>BreakWord</code>  保持单词在同一行,除非单词长度超过一行才截断</li>
 <li><code>BreakAll</code>  以字为单位行空间不足换行</li>
 <li><code>KeepAll</code>  所有连续的字符都当成一个单词,除非出现空白符、换行符、标点符</li>
-<li><code>Default</code>  = <code>Normal</code> </li>
 </ul>
-<h2 id="enum-textweight">
-			Enum: TextWeight
-			<span><a class="mark" href="#enum-textweight" id="enum-textweight">#</a></span>
-		</h2><h3 id="textweight">
-			TextWeight
-			<span><a class="mark" href="#textweight" id="textweight">#</a></span>
+<h2 id="enum-fontweight">
+			Enum: FontWeight
+			<span><a class="mark" href="#enum-fontweight" id="enum-fontweight">#</a></span>
+		</h2><h3 id="fontweight">
+			FontWeight
+			<span><a class="mark" href="#fontweight" id="fontweight">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  </li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>Thin</code>  </li>
 <li><code>Ultralight</code>  </li>
 <li><code>Light</code>  </li>
 <li><code>Regular</code>  </li>
+<li><code>Normal</code>  alias of Regular</li>
 <li><code>Medium</code>  </li>
 <li><code>Semibold</code>  </li>
 <li><code>Bold</code>  </li>
 <li><code>Heavy</code>  </li>
 <li><code>Black</code>  </li>
 <li><code>ExtraBlack</code>  </li>
-<li><code>Default</code>  = <code>Regular</code> </li>
 </ul>
-<h2 id="enum-textwidth">
-			Enum: TextWidth
-			<span><a class="mark" href="#enum-textwidth" id="enum-textwidth">#</a></span>
-		</h2><h3 id="textwidth">
-			TextWidth
-			<span><a class="mark" href="#textwidth" id="textwidth">#</a></span>
+<h2 id="enum-fontwidth">
+			Enum: FontWidth
+			<span><a class="mark" href="#enum-fontwidth" id="enum-fontwidth">#</a></span>
+		</h2><h3 id="fontwidth">
+			FontWidth
+			<span><a class="mark" href="#fontwidth" id="fontwidth">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  </li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>UltraCondensed</code>  </li>
 <li><code>ExtraCondensed</code>  </li>
 <li><code>Condensed</code>  </li>
@@ -1383,20 +1696,19 @@
 <li><code>Expanded</code>  </li>
 <li><code>ExtraExpanded</code>  </li>
 <li><code>UltraExpanded</code>  </li>
-<li><code>Default</code>  = <code>Normal</code> </li>
 </ul>
-<h2 id="enum-textslant">
-			Enum: TextSlant
-			<span><a class="mark" href="#enum-textslant" id="enum-textslant">#</a></span>
-		</h2><h3 id="textslant">
-			TextSlant
-			<span><a class="mark" href="#textslant" id="textslant">#</a></span>
+<h2 id="enum-fontslant">
+			Enum: FontSlant
+			<span><a class="mark" href="#enum-fontslant" id="enum-fontslant">#</a></span>
+		</h2><h3 id="fontslant">
+			FontSlant
+			<span><a class="mark" href="#fontslant" id="fontslant">#</a></span>
 		</h3><ul>
 <li><code>Inherit</code>  </li>
+<li><code>Default</code>  use default of the application</li>
 <li><code>Normal</code>  </li>
 <li><code>Italic</code>  </li>
 <li><code>Oblique</code>  </li>
-<li><code>Default</code>  = <code>Normal</code> </li>
 </ul>
 <h2 id="textstyle">
 			TextStyle
@@ -1453,6 +1765,7 @@
 <li><code>NoneUntilMouseMoves</code>  </li>
 <li><code>Arrow</code>  </li>
 <li><code>Ibeam</code>  </li>
+<li><code>Text</code>  </li>
 <li><code>PointingHand</code>  </li>
 <li><code>Pointer</code>  </li>
 <li><code>ClosedHand</code>  </li>
@@ -1470,25 +1783,20 @@
 <li><code>DragCopy</code>  </li>
 <li><code>ContextualMenu</code>  </li>
 <li><code>IbeamForVertical</code>  </li>
+<li><code>Default</code>  Default cursor style</li>
 </ul>
-<h2 id="enum-finddirection">
-			Enum: FindDirection
-			<span><a class="mark" href="#enum-finddirection" id="enum-finddirection">#</a></span>
-		</h2><h3 id="finddirection">
-			FindDirection
-			<span><a class="mark" href="#finddirection" id="finddirection">#</a></span>
-		</h3><ul>
-<li><code>None</code>  </li>
-<li><code>Left</code>  </li>
-<li><code>Top</code>  </li>
-<li><code>Right</code>  </li>
-<li><code>Bottom</code>  </li>
-</ul>
+<h2 id="enum-cascadecolor">
+			Enum: CascadeColor
+			<span><a class="mark" href="#enum-cascadecolor" id="enum-cascadecolor">#</a></span>
+		</h2><h3 id="cascadecolor">
+			CascadeColor
+			<span><a class="mark" href="#cascadecolor" id="cascadecolor">#</a></span>
+		</h3><p>Inherit Color from parent view</p>
 <h2 id="repeatin">
 			RepeatIn
 			<span><a class="mark" href="#repeatin" id="repeatin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>RepeatIn</code> = <code>&quot;repeat&quot;</code>|<code>&quot;repeatX&quot;</code>|<code>&quot;repeatY&quot;</code>|<code>&quot;repeatNo&quot;</code>|<a href="#enum-repeat"><code>Repeat</code></a></li>
+<li><code>@type</code> <code>RepeatIn</code> = <code>&quot;repeat&quot;</code>|<code>&quot;repeatX&quot;</code>|<code>&quot;repeatY&quot;</code>|<code>&quot;noRepeat&quot;</code>|<code>&quot;mirrorRepeat&quot;</code>|<code>&quot;mirrorRepeatX&quot;</code>|<code>&quot;mirrorRepeatY&quot;</code>|<a href="#enum-repeat"><code>Repeat</code></a></li>
 </ul>
 <h2 id="directionin">
 			DirectionIn
@@ -1526,6 +1834,18 @@
 		</h2><ul>
 <li><code>@type</code> <code>AlignIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;start&quot;</code>|<code>&quot;center&quot;</code>|<code>&quot;end&quot;</code>|<code>&quot;both&quot;</code>|<code>&quot;newStart&quot;</code>|<code>&quot;newCenter&quot;</code>|<code>&quot;newEnd&quot;</code>|<code>&quot;floatStart&quot;</code>|<code>&quot;floatCenter&quot;</code>|<code>&quot;floatEnd&quot;</code>|<code>&quot;baseline&quot;</code>|<code>&quot;top&quot;</code>|<code>&quot;middle&quot;</code>|<code>&quot;bottom&quot;</code>|<code>&quot;leftTop&quot;</code>|<code>&quot;centerTop&quot;</code>|<code>&quot;rightTop&quot;</code>|<code>&quot;leftMiddle&quot;</code>|<code>&quot;centerMiddle&quot;</code>|<code>&quot;rightMiddle&quot;</code>|<code>&quot;leftBottom&quot;</code>|<code>&quot;centerBottom&quot;</code>|<code>&quot;rightBottom&quot;</code>|<a href="#enum-align"><code>Align</code></a></li>
 </ul>
+<h2 id="boxsizingin">
+			BoxSizingIn
+			<span><a class="mark" href="#boxsizingin" id="boxsizingin">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>BoxSizingIn</code> = <code>&quot;contentBox&quot;</code>|<code>&quot;paddingBox&quot;</code>|<code>&quot;borderBox&quot;</code>|<a href="#enum-boxsizing"><code>BoxSizing</code></a></li>
+</ul>
+<h2 id="layouttypein">
+			LayoutTypeIn
+			<span><a class="mark" href="#layouttypein" id="layouttypein">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>LayoutTypeIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;float&quot;</code>|<code>&quot;free&quot;</code>|<code>&quot;text&quot;</code>|<code>&quot;flex&quot;</code>|<code>&quot;flow&quot;</code>|<a href="#enum-layouttype"><code>LayoutType</code></a></li>
+</ul>
 <h2 id="textalignin">
 			TextAlignIn
 			<span><a class="mark" href="#textalignin" id="textalignin">#</a></span>
@@ -1544,35 +1864,35 @@
 		</h2><ul>
 <li><code>@type</code> <code>TextOverflowIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;clip&quot;</code>|<code>&quot;ellipsis&quot;</code>|<code>&quot;ellipsisCenter&quot;</code>|<a href="#enum-textoverflow"><code>TextOverflow</code></a></li>
 </ul>
-<h2 id="textwhitespacein">
-			TextWhiteSpaceIn
-			<span><a class="mark" href="#textwhitespacein" id="textwhitespacein">#</a></span>
+<h2 id="whitespacein">
+			WhiteSpaceIn
+			<span><a class="mark" href="#whitespacein" id="whitespacein">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextWhiteSpaceIn</code> = <code>&quot;noWrap&quot;</code>|<code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;pre&quot;</code>|<code>&quot;preWrap&quot;</code>|<code>&quot;preLine&quot;</code>|<a href="#enum-textwhitespace"><code>TextWhiteSpace</code></a></li>
+<li><code>@type</code> <code>WhiteSpaceIn</code> = <code>&quot;noWrap&quot;</code>|<code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;pre&quot;</code>|<code>&quot;preWrap&quot;</code>|<code>&quot;preLine&quot;</code>|<a href="#enum-whitespace"><code>WhiteSpace</code></a></li>
 </ul>
-<h2 id="textwordbreakin">
-			TextWordBreakIn
-			<span><a class="mark" href="#textwordbreakin" id="textwordbreakin">#</a></span>
+<h2 id="wordbreakin">
+			WordBreakIn
+			<span><a class="mark" href="#wordbreakin" id="wordbreakin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextWordBreakIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;breakWord&quot;</code>|<code>&quot;breakAll&quot;</code>|<code>&quot;keepAll&quot;</code>|<a href="#enum-textwordbreak"><code>TextWordBreak</code></a></li>
+<li><code>@type</code> <code>WordBreakIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;breakWord&quot;</code>|<code>&quot;breakAll&quot;</code>|<code>&quot;keepAll&quot;</code>|<a href="#enum-wordbreak"><code>WordBreak</code></a></li>
 </ul>
-<h2 id="textweightin">
-			TextWeightIn
-			<span><a class="mark" href="#textweightin" id="textweightin">#</a></span>
+<h2 id="fontweightin">
+			FontWeightIn
+			<span><a class="mark" href="#fontweightin" id="fontweightin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextWeightIn</code> = <code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;thin&quot;</code>|<code>&quot;ultralight&quot;</code>|<code>&quot;light&quot;</code>|<code>&quot;regular&quot;</code>|<code>&quot;medium&quot;</code>|<code>&quot;semibold&quot;</code>|<code>&quot;bold&quot;</code>|<code>&quot;heavy&quot;</code>|<code>&quot;black&quot;</code>|<code>&quot;extraBlack&quot;</code>|<a href="#enum-textweight"><code>TextWeight</code></a></li>
+<li><code>@type</code> <code>FontWeightIn</code> = <code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;thin&quot;</code>|<code>&quot;ultralight&quot;</code>|<code>&quot;light&quot;</code>|<code>&quot;regular&quot;</code>|<code>&quot;medium&quot;</code>|<code>&quot;semibold&quot;</code>|<code>&quot;bold&quot;</code>|<code>&quot;heavy&quot;</code>|<code>&quot;black&quot;</code>|<code>&quot;extraBlack&quot;</code>|<a href="#enum-fontweight"><code>FontWeight</code></a></li>
 </ul>
-<h2 id="textwidthin">
-			TextWidthIn
-			<span><a class="mark" href="#textwidthin" id="textwidthin">#</a></span>
+<h2 id="fontwidthin">
+			FontWidthIn
+			<span><a class="mark" href="#fontwidthin" id="fontwidthin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextWidthIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;ultraCondensed&quot;</code>|<code>&quot;extraCondensed&quot;</code>|<code>&quot;condensed&quot;</code>|<code>&quot;semiCondensed&quot;</code>|<code>&quot;semiExpanded&quot;</code>|<code>&quot;expanded&quot;</code>|<code>&quot;extraExpanded&quot;</code>|<code>&quot;ultraExpanded&quot;</code>|<a href="#enum-textwidth"><code>TextWidth</code></a></li>
+<li><code>@type</code> <code>FontWidthIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;ultraCondensed&quot;</code>|<code>&quot;extraCondensed&quot;</code>|<code>&quot;condensed&quot;</code>|<code>&quot;semiCondensed&quot;</code>|<code>&quot;semiExpanded&quot;</code>|<code>&quot;expanded&quot;</code>|<code>&quot;extraExpanded&quot;</code>|<code>&quot;ultraExpanded&quot;</code>|<a href="#enum-fontwidth"><code>FontWidth</code></a></li>
 </ul>
-<h2 id="textslantin">
-			TextSlantIn
-			<span><a class="mark" href="#textslantin" id="textslantin">#</a></span>
+<h2 id="fontslantin">
+			FontSlantIn
+			<span><a class="mark" href="#fontslantin" id="fontslantin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextSlantIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;italic&quot;</code>|<code>&quot;oblique&quot;</code>|<a href="#enum-textslant"><code>TextSlant</code></a></li>
+<li><code>@type</code> <code>FontSlantIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;inherit&quot;</code>|<code>&quot;default&quot;</code>|<code>&quot;italic&quot;</code>|<code>&quot;oblique&quot;</code>|<a href="#enum-fontslant"><code>FontSlant</code></a></li>
 </ul>
 <h2 id="keyboardtypein">
 			KeyboardTypeIn
@@ -1592,11 +1912,11 @@
 		</h2><ul>
 <li><code>@type</code> <code>CursorStyleIn</code> = <code>&quot;normal&quot;</code>|<code>&quot;none&quot;</code>|<code>&quot;noneUntilMouseMoves&quot;</code>|<code>&quot;arrow&quot;</code>|<code>&quot;ibeam&quot;</code>|<code>&quot;pointingHand&quot;</code>|<code>&quot;pointer&quot;</code>|<code>&quot;closedHand&quot;</code>|<code>&quot;openHand&quot;</code>|<code>&quot;resizeLeft&quot;</code>|<code>&quot;resizeRight&quot;</code>|<code>&quot;resizeLeftRight&quot;</code>|<code>&quot;resizeUp&quot;</code>|<code>&quot;resizeDown&quot;</code>|<code>&quot;resizeUpDown&quot;</code>|<code>&quot;crosshair&quot;</code>|<code>&quot;disappearingItem&quot;</code>|<code>&quot;operationNotAllowed&quot;</code>|<code>&quot;dragLink&quot;</code>|<code>&quot;dragCopy&quot;</code>|<code>&quot;contextualMenu&quot;</code>|<code>&quot;ibeamForVertical&quot;</code>|<a href="#enum-cursorstyle"><code>CursorStyle</code></a></li>
 </ul>
-<h2 id="finddirectionin">
-			FindDirectionIn
-			<span><a class="mark" href="#finddirectionin" id="finddirectionin">#</a></span>
+<h2 id="cascadecolorin">
+			CascadeColorIn
+			<span><a class="mark" href="#cascadecolorin" id="cascadecolorin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>FindDirectionIn</code> = <code>&quot;none&quot;</code>|<code>&quot;left&quot;</code>|<code>&quot;top&quot;</code>|<code>&quot;right&quot;</code>|<code>&quot;bottom&quot;</code>|<a href="#enum-finddirection"><code>FindDirection</code></a></li>
+<li><code>@type</code> <code>CascadeColorIn</code> = <code>&quot;none&quot;</code>|<code>&quot;alpha&quot;</code>|<code>&quot;color&quot;</code>|<code>&quot;both&quot;</code>|<a href="#enum-cascadecolor"><code>CascadeColor</code></a></li>
 </ul>
 <h2 id="class-base">
 			Class: Base
@@ -1622,20 +1942,213 @@
 		</h2><h3 id="vec2">
 			Vec2
 			<span><a class="mark" href="#vec2" id="vec2">#</a></span>
-		</h3><ul>
+		</h3><p>2D vector</p>
+<ul>
 <li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-vec2"><code>Vec2</code></a>&gt;</li>
 </ul>
 <h3 id="vec2-x">
 			vec2.x
 			<span><a class="mark" href="#vec2-x" id="vec2-x">#</a></span>
-		</h3><ul>
-<li><code>x</code>: <a href="#n"><code>N</code></a> </li>
+		</h3><p>x component</p>
+<ul>
+<li><code>@get</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="vec2-y">
 			vec2.y
 			<span><a class="mark" href="#vec2-y" id="vec2-y">#</a></span>
+		</h3><p>y component</p>
+<ul>
+<li><code>@get</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="vec2-width">
+			vec2.width
+			<span><a class="mark" href="#vec2-width" id="vec2-width">#</a></span>
 		</h3><ul>
-<li><code>y</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>width</code>: <a href="#n"><code>N</code></a> alias of x</li>
+</ul>
+<h3 id="vec2-height">
+			vec2.height
+			<span><a class="mark" href="#vec2-height" id="vec2-height">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>height</code>: <a href="#n"><code>N</code></a> alias of y</li>
+</ul>
+<h3 id="vec2-tostring-">
+			vec2.toString()
+			<span><a class="mark" href="#vec2-tostring-" id="vec2-tostring-">#</a></span>
+		</h3><p>Get string value</p>
+<ul>
+<li><code>@return</code>  </li>
+</ul>
+<h3 id="vec2-iszero-">
+			vec2.isZero()
+			<span><a class="mark" href="#vec2-iszero-" id="vec2-iszero-">#</a></span>
+		</h3><p>Check vector is zero</p>
+<h3 id="vec2-equal-b-">
+			vec2.equal(b)
+			<span><a class="mark" href="#vec2-equal-b-" id="vec2-equal-b-">#</a></span>
+		</h3><p>Check two vectors are equal</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="vec2-add-b-">
+			vec2.add(b)
+			<span><a class="mark" href="#vec2-add-b-" id="vec2-add-b-">#</a></span>
+		</h3><p>Add two vectors</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-sub-b-">
+			vec2.sub(b)
+			<span><a class="mark" href="#vec2-sub-b-" id="vec2-sub-b-">#</a></span>
+		</h3><p>Subtract two vectors</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-mul-b-">
+			vec2.mul(b)
+			<span><a class="mark" href="#vec2-mul-b-" id="vec2-mul-b-">#</a></span>
+		</h3><p>Multiply vector by a scalar</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-div-b-">
+			vec2.div(b)
+			<span><a class="mark" href="#vec2-div-b-" id="vec2-div-b-">#</a></span>
+		</h3><p>Divide vector by a scalar</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-length-">
+			vec2.length()
+			<span><a class="mark" href="#vec2-length-" id="vec2-length-">#</a></span>
+		</h3><p>Get the length of the vector</p>
+<ul>
+<li><code>@return</code> <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="vec2-lengthsq-">
+			vec2.lengthSq()
+			<span><a class="mark" href="#vec2-lengthsq-" id="vec2-lengthsq-">#</a></span>
+		</h3><p>Returns vector length squared</p>
+<ul>
+<li><code>@return</code> <a href="#n"><code>N</code></a> The length squared</li>
+</ul>
+<h3 id="vec2-dot-b-">
+			vec2.dot(b)
+			<span><a class="mark" href="#vec2-dot-b-" id="vec2-dot-b-">#</a></span>
+		</h3><p>Get the dot product of two vectors</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@return</code> <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="vec2-det-b-">
+			vec2.det(b)
+			<span><a class="mark" href="#vec2-det-b-" id="vec2-det-b-">#</a></span>
+		</h3><p>returns scalar outer product</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-normalized-">
+			vec2.normalized()
+			<span><a class="mark" href="#vec2-normalized-" id="vec2-normalized-">#</a></span>
+		</h3><p>Get the normalized vector</p>
+<ul>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-rotate90z-">
+			vec2.rotate90z()
+			<span><a class="mark" href="#vec2-rotate90z-" id="vec2-rotate90z-">#</a></span>
+		</h3><p>Rotate the vector by 90 degrees clockwise</p>
+<h3 id="vec2-rotate270z-">
+			vec2.rotate270z()
+			<span><a class="mark" href="#vec2-rotate270z-" id="vec2-rotate270z-">#</a></span>
+		</h3><p>Rotate the vector by 270 degrees clockwise (90 degrees counterclockwise)</p>
+<h3 id="vec2-normalline-prev-next-">
+			vec2.normalline(prev,next)
+			<span><a class="mark" href="#vec2-normalline-prev-next-" id="vec2-normalline-prev-next-">#</a></span>
+		</h3><p>Default to use Cartesian coordinate system<br/>Returns zero when the previous is on the same side and on the same line as the next.<br/>Clockwise direction inward, screen coordinates outward</p>
+<ul>
+<li><code>@param</code> <code>prev</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@param</code> <code>next</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-angle-">
+			vec2.angle()
+			<span><a class="mark" href="#vec2-angle-" id="vec2-angle-">#</a></span>
+		</h3><p>Get the angle of the point in radians</p>
+<ul>
+<li><code>@return</code> <a href="#n"><code>N</code></a> angle in radians</li>
+</ul>
+<h3 id="vec2-angleindegrees-">
+			vec2.angleInDegrees()
+			<span><a class="mark" href="#vec2-angleindegrees-" id="vec2-angleindegrees-">#</a></span>
+		</h3><p>Get the angle of the point in degrees</p>
+<ul>
+<li><code>@return</code> <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="vec2-angleto-p-">
+			vec2.angleTo(p)
+			<span><a class="mark" href="#vec2-angleto-p-" id="vec2-angleto-p-">#</a></span>
+		</h3><p>Get the angle to another point in radians</p>
+<ul>
+<li><code>@param</code> <code>p</code>: <a href="#class-vec2"><code>Vec2</code></a> The other point</li>
+<li><code>@return</code> <a href="#n"><code>N</code></a> angle in radians</li>
+</ul>
+<h3 id="vec2-rotate-radians-">
+			vec2.rotate(radians)
+			<span><a class="mark" href="#vec2-rotate-radians-" id="vec2-rotate-radians-">#</a></span>
+		</h3><p>Rotate the vector by radians</p>
+<ul>
+<li><code>@param</code> <code>radians</code>: <a href="#n"><code>N</code></a> The angle in radians</li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> The rotated vector</li>
+</ul>
+<h3 id="vec2-reversey-">
+			vec2.reverseY()
+			<span><a class="mark" href="#vec2-reversey-" id="vec2-reversey-">#</a></span>
+		</h3><p>Reverse the y axis of the vector</p>
+<ul>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-directioneight-">
+			vec2.directionEight()
+			<span><a class="mark" href="#vec2-directioneight-" id="vec2-directioneight-">#</a></span>
+		</h3><p>Get the 8-direction of the vector</p>
+<ul>
+<li><code>@return</code> <a href="#enum-direction"><code>Direction</code></a> Return direction enum</li>
+</ul>
+<h3 id="vec2-mid-b-">
+			vec2.mid(b)
+			<span><a class="mark" href="#vec2-mid-b-" id="vec2-mid-b-">#</a></span>
+		</h3><p>Get the midpoint between two vectors</p>
+<ul>
+<li><code>@param</code> <code>b</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="vec2-mid-vec-">
+			vec2.mid(vec)
+			<span><a class="mark" href="#vec2-mid-vec-" id="vec2-mid-vec-">#</a></span>
+		</h3><p>Get the midpoint of multiple vectors</p>
+<ul>
+<li><code>@static</code>  </li>
+<li><code>@param</code> <code>vec</code>: <a href="#class-vec2"><code>Vec2</code></a><code>[]</code> The vectors array</li>
+<li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a>  The midpoint vector</li>
+</ul>
+<h3 id="vec2-new-x-y-">
+			vec2.new(x,y)
+			<span><a class="mark" href="#vec2-new-x-y-" id="vec2-new-x-y-">#</a></span>
+		</h3><ul>
+<li><code>@static</code><br>Create a new Vec2 instance</li>
+<li><code>@param</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="vec2-zero-">
+			vec2.zero()
+			<span><a class="mark" href="#vec2-zero-" id="vec2-zero-">#</a></span>
+		</h3><ul>
+<li><code>@static</code><br>Create a zero vector</li>
 </ul>
 <h2 id="vec2in">
 			Vec2In
@@ -1656,19 +2169,19 @@
 			vec3.x
 			<span><a class="mark" href="#vec3-x" id="vec3-x">#</a></span>
 		</h3><ul>
-<li><code>x</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="vec3-y">
 			vec3.y
 			<span><a class="mark" href="#vec3-y" id="vec3-y">#</a></span>
 		</h3><ul>
-<li><code>y</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="vec3-z">
 			vec3.z
 			<span><a class="mark" href="#vec3-z" id="vec3-z">#</a></span>
 		</h3><ul>
-<li><code>z</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>z</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h2 id="vec3in">
 			Vec3In
@@ -1689,25 +2202,25 @@
 			vec4.x
 			<span><a class="mark" href="#vec4-x" id="vec4-x">#</a></span>
 		</h3><ul>
-<li><code>x</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="vec4-y">
 			vec4.y
 			<span><a class="mark" href="#vec4-y" id="vec4-y">#</a></span>
 		</h3><ul>
-<li><code>y</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="vec4-z">
 			vec4.z
 			<span><a class="mark" href="#vec4-z" id="vec4-z">#</a></span>
 		</h3><ul>
-<li><code>z</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>z</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="vec4-w">
 			vec4.w
 			<span><a class="mark" href="#vec4-w" id="vec4-w">#</a></span>
 		</h3><ul>
-<li><code>w</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>w</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h2 id="vec4in">
 			Vec4In
@@ -1728,13 +2241,13 @@
 			curve.p1
 			<span><a class="mark" href="#curve-p1" id="curve-p1">#</a></span>
 		</h3><ul>
-<li><code>p1</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@get</code> <code>p1</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
 </ul>
 <h3 id="curve-p2">
 			curve.p2
 			<span><a class="mark" href="#curve-p2" id="curve-p2">#</a></span>
 		</h3><ul>
-<li><code>p2</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@get</code> <code>p2</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
 </ul>
 <h3 id="curve-p1x">
 			curve.p1x
@@ -1775,17 +2288,17 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-rect"><code>Rect</code></a>&gt;</li>
 </ul>
-<h3 id="rect-origin">
-			rect.origin
-			<span><a class="mark" href="#rect-origin" id="rect-origin">#</a></span>
+<h3 id="rect-begin">
+			rect.begin
+			<span><a class="mark" href="#rect-begin" id="rect-begin">#</a></span>
 		</h3><ul>
-<li><code>origin</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@get</code> <code>begin</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
 </ul>
 <h3 id="rect-size">
 			rect.size
 			<span><a class="mark" href="#rect-size" id="rect-size">#</a></span>
 		</h3><ul>
-<li><code>size</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+<li><code>@get</code> <code>size</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
 </ul>
 <h3 id="rect-x">
 			rect.x
@@ -1817,6 +2330,87 @@
 		</h2><ul>
 <li><code>@type</code> <code>RectIn</code> = <code>&quot;rect(0,0,100,100)&quot;</code>|<code>&quot;rect(0,0)&quot;</code>|<code>[0,0,100,100]</code>|<a href="#class-rect"><code>Rect</code></a></li>
 </ul>
+<h2 id="class-range">
+			Class: Range
+			<span><a class="mark" href="#class-range" id="class-range">#</a></span>
+		</h2><h3 id="range">
+			Range
+			<span><a class="mark" href="#range" id="range">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-range"><code>Range</code></a>&gt;</li>
+</ul>
+<h3 id="range-begin">
+			range.begin
+			<span><a class="mark" href="#range-begin" id="range-begin">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>begin</code>: <a href="#class-vec2"><code>Vec2</code></a> top-left corner</li>
+</ul>
+<h3 id="range-end">
+			range.end
+			<span><a class="mark" href="#range-end" id="range-end">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>end</code>: <a href="#class-vec2"><code>Vec2</code></a> bottom-right corner</li>
+</ul>
+<h2 id="class-region">
+			Class: Region
+			<span><a class="mark" href="#class-region" id="class-region">#</a></span>
+		</h2><h3 id="region">
+			Region
+			<span><a class="mark" href="#region" id="region">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-region"><code>Region</code></a>&gt;</li>
+</ul>
+<h3 id="region-begin">
+			region.begin
+			<span><a class="mark" href="#region-begin" id="region-begin">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>begin</code>: <a href="#class-vec2"><code>Vec2</code></a> top-left corner</li>
+</ul>
+<h3 id="region-end">
+			region.end
+			<span><a class="mark" href="#region-end" id="region-end">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>end</code>: <a href="#class-vec2"><code>Vec2</code></a> bottom-right corner</li>
+</ul>
+<h3 id="region-origin">
+			region.origin
+			<span><a class="mark" href="#region-origin" id="region-origin">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>origin</code>: <a href="#class-vec2"><code>Vec2</code></a> origin point</li>
+</ul>
+<h2 id="class-borderradius">
+			Class: BorderRadius
+			<span><a class="mark" href="#class-borderradius" id="class-borderradius">#</a></span>
+		</h2><h3 id="borderradius">
+			BorderRadius
+			<span><a class="mark" href="#borderradius" id="borderradius">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-borderradius"><code>BorderRadius</code></a>&gt;</li>
+</ul>
+<h3 id="borderradius-lefttop">
+			borderradius.leftTop
+			<span><a class="mark" href="#borderradius-lefttop" id="borderradius-lefttop">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>leftTop</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="borderradius-righttop">
+			borderradius.rightTop
+			<span><a class="mark" href="#borderradius-righttop" id="borderradius-righttop">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>rightTop</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="borderradius-rightbottom">
+			borderradius.rightBottom
+			<span><a class="mark" href="#borderradius-rightbottom" id="borderradius-rightbottom">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>rightBottom</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="borderradius-leftbottom">
+			borderradius.leftBottom
+			<span><a class="mark" href="#borderradius-leftbottom" id="borderradius-leftbottom">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>leftBottom</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
 <h2 id="class-mat">
 			Class: Mat
 			<span><a class="mark" href="#class-mat" id="class-mat">#</a></span>
@@ -1830,37 +2424,37 @@
 			mat.m0
 			<span><a class="mark" href="#mat-m0" id="mat-m0">#</a></span>
 		</h3><ul>
-<li><code>m0</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m0</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat-m1">
 			mat.m1
 			<span><a class="mark" href="#mat-m1" id="mat-m1">#</a></span>
 		</h3><ul>
-<li><code>m1</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m1</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat-m2">
 			mat.m2
 			<span><a class="mark" href="#mat-m2" id="mat-m2">#</a></span>
 		</h3><ul>
-<li><code>m2</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m2</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat-m3">
 			mat.m3
 			<span><a class="mark" href="#mat-m3" id="mat-m3">#</a></span>
 		</h3><ul>
-<li><code>m3</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m3</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat-m4">
 			mat.m4
 			<span><a class="mark" href="#mat-m4" id="mat-m4">#</a></span>
 		</h3><ul>
-<li><code>m4</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m4</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat-m5">
 			mat.m5
 			<span><a class="mark" href="#mat-m5" id="mat-m5">#</a></span>
 		</h3><ul>
-<li><code>m5</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m5</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h2 id="matin">
 			MatIn
@@ -1881,97 +2475,97 @@
 			mat4.m0
 			<span><a class="mark" href="#mat4-m0" id="mat4-m0">#</a></span>
 		</h3><ul>
-<li><code>m0</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m0</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m1">
 			mat4.m1
 			<span><a class="mark" href="#mat4-m1" id="mat4-m1">#</a></span>
 		</h3><ul>
-<li><code>m1</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m1</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m2">
 			mat4.m2
 			<span><a class="mark" href="#mat4-m2" id="mat4-m2">#</a></span>
 		</h3><ul>
-<li><code>m2</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m2</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m3">
 			mat4.m3
 			<span><a class="mark" href="#mat4-m3" id="mat4-m3">#</a></span>
 		</h3><ul>
-<li><code>m3</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m3</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m4">
 			mat4.m4
 			<span><a class="mark" href="#mat4-m4" id="mat4-m4">#</a></span>
 		</h3><ul>
-<li><code>m4</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m4</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m5">
 			mat4.m5
 			<span><a class="mark" href="#mat4-m5" id="mat4-m5">#</a></span>
 		</h3><ul>
-<li><code>m5</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m5</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m6">
 			mat4.m6
 			<span><a class="mark" href="#mat4-m6" id="mat4-m6">#</a></span>
 		</h3><ul>
-<li><code>m6</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m6</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m7">
 			mat4.m7
 			<span><a class="mark" href="#mat4-m7" id="mat4-m7">#</a></span>
 		</h3><ul>
-<li><code>m7</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m7</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m8">
 			mat4.m8
 			<span><a class="mark" href="#mat4-m8" id="mat4-m8">#</a></span>
 		</h3><ul>
-<li><code>m8</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m8</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m9">
 			mat4.m9
 			<span><a class="mark" href="#mat4-m9" id="mat4-m9">#</a></span>
 		</h3><ul>
-<li><code>m9</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m9</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m10">
 			mat4.m10
 			<span><a class="mark" href="#mat4-m10" id="mat4-m10">#</a></span>
 		</h3><ul>
-<li><code>m10</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m10</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m11">
 			mat4.m11
 			<span><a class="mark" href="#mat4-m11" id="mat4-m11">#</a></span>
 		</h3><ul>
-<li><code>m11</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m11</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m12">
 			mat4.m12
 			<span><a class="mark" href="#mat4-m12" id="mat4-m12">#</a></span>
 		</h3><ul>
-<li><code>m12</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m12</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m13">
 			mat4.m13
 			<span><a class="mark" href="#mat4-m13" id="mat4-m13">#</a></span>
 		</h3><ul>
-<li><code>m13</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m13</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m14">
 			mat4.m14
 			<span><a class="mark" href="#mat4-m14" id="mat4-m14">#</a></span>
 		</h3><ul>
-<li><code>m14</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m14</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="mat4-m15">
 			mat4.m15
 			<span><a class="mark" href="#mat4-m15" id="mat4-m15">#</a></span>
 		</h3><ul>
-<li><code>m15</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>m15</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h2 id="class-color">
 			Class: Color
@@ -1986,31 +2580,37 @@
 			color.r
 			<span><a class="mark" href="#color-r" id="color-r">#</a></span>
 		</h3><ul>
-<li><code>r</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>r</code>: <a href="#n"><code>N</code></a> red 0 ~ 255</li>
 </ul>
 <h3 id="color-g">
 			color.g
 			<span><a class="mark" href="#color-g" id="color-g">#</a></span>
 		</h3><ul>
-<li><code>g</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>g</code>: <a href="#n"><code>N</code></a> green 0 ~ 255</li>
 </ul>
 <h3 id="color-b">
 			color.b
 			<span><a class="mark" href="#color-b" id="color-b">#</a></span>
 		</h3><ul>
-<li><code>b</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>b</code>: <a href="#n"><code>N</code></a> blue 0 ~ 255</li>
 </ul>
 <h3 id="color-a">
 			color.a
 			<span><a class="mark" href="#color-a" id="color-a">#</a></span>
 		</h3><ul>
-<li><code>a</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>a</code>: <a href="#n"><code>N</code></a> alpha 0 ~ 255</li>
+</ul>
+<h3 id="color-alpha">
+			color.alpha
+			<span><a class="mark" href="#color-alpha" id="color-alpha">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>alpha</code>: <a href="#n"><code>N</code></a> alpha 0.0 ~ 1.0</li>
 </ul>
 <h2 id="colorstrin">
 			ColorStrIn
 			<span><a class="mark" href="#colorstrin" id="colorstrin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>ColorStrIn</code> = <code>&quot;#fff&quot;</code>|<code>&quot;rgb(0,0,0)&quot;</code>|<code>&quot;rgba(0,0,0,255)&quot;</code></li>
+<li><code>@type</code> <code>ColorStrIn</code> = <code>&quot;#fff&quot;</code>|<code>&quot;rgb(0,0,0)&quot;</code>|<code>&quot;rgba(0,0,0,1)&quot;</code></li>
 </ul>
 <h2 id="colorin">
 			ColorIn
@@ -2031,25 +2631,25 @@
 			shadow.x
 			<span><a class="mark" href="#shadow-x" id="shadow-x">#</a></span>
 		</h3><ul>
-<li><code>x</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="shadow-y">
 			shadow.y
 			<span><a class="mark" href="#shadow-y" id="shadow-y">#</a></span>
 		</h3><ul>
-<li><code>y</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="shadow-size">
 			shadow.size
 			<span><a class="mark" href="#shadow-size" id="shadow-size">#</a></span>
 		</h3><ul>
-<li><code>size</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>size</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="shadow-color">
 			shadow.color
 			<span><a class="mark" href="#shadow-color" id="shadow-color">#</a></span>
 		</h3><ul>
-<li><code>color</code>: <a href="#class-color"><code>Color</code></a> </li>
+<li><code>@get</code> <code>color</code>: <a href="#class-color"><code>Color</code></a> </li>
 </ul>
 <h3 id="shadow-r">
 			shadow.r
@@ -2081,56 +2681,56 @@
 		</h2><ul>
 <li><code>@type</code> <code>ShadowIn</code> = <code>&quot;2　2　2　rgb(100,100,100)&quot;</code>|<a href="#class-shadow"><code>Shadow</code></a></li>
 </ul>
-<h2 id="class-boxborder">
-			Class: BoxBorder
-			<span><a class="mark" href="#class-boxborder" id="class-boxborder">#</a></span>
-		</h2><h3 id="boxborder">
-			BoxBorder
-			<span><a class="mark" href="#boxborder" id="boxborder">#</a></span>
+<h2 id="class-border">
+			Class: Border
+			<span><a class="mark" href="#class-border" id="class-border">#</a></span>
+		</h2><h3 id="border">
+			Border
+			<span><a class="mark" href="#border" id="border">#</a></span>
 		</h3><ul>
-<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-boxborder"><code>BoxBorder</code></a>&gt;</li>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-border"><code>Border</code></a>&gt;</li>
 </ul>
-<h3 id="boxborder-width">
-			boxborder.width
-			<span><a class="mark" href="#boxborder-width" id="boxborder-width">#</a></span>
+<h3 id="border-width">
+			border.width
+			<span><a class="mark" href="#border-width" id="border-width">#</a></span>
 		</h3><ul>
-<li><code>width</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>width</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="boxborder-color">
-			boxborder.color
-			<span><a class="mark" href="#boxborder-color" id="boxborder-color">#</a></span>
+<h3 id="border-color">
+			border.color
+			<span><a class="mark" href="#border-color" id="border-color">#</a></span>
 		</h3><ul>
-<li><code>color</code>: <a href="#class-color"><code>Color</code></a> </li>
+<li><code>@get</code> <code>color</code>: <a href="#class-color"><code>Color</code></a> </li>
 </ul>
-<h3 id="boxborder-r">
-			boxborder.r
-			<span><a class="mark" href="#boxborder-r" id="boxborder-r">#</a></span>
+<h3 id="border-r">
+			border.r
+			<span><a class="mark" href="#border-r" id="border-r">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>r</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="boxborder-g">
-			boxborder.g
-			<span><a class="mark" href="#boxborder-g" id="boxborder-g">#</a></span>
+<h3 id="border-g">
+			border.g
+			<span><a class="mark" href="#border-g" id="border-g">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>g</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="boxborder-b">
-			boxborder.b
-			<span><a class="mark" href="#boxborder-b" id="boxborder-b">#</a></span>
+<h3 id="border-b">
+			border.b
+			<span><a class="mark" href="#border-b" id="border-b">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h3 id="boxborder-a">
-			boxborder.a
-			<span><a class="mark" href="#boxborder-a" id="boxborder-a">#</a></span>
+<h3 id="border-a">
+			border.a
+			<span><a class="mark" href="#border-a" id="border-a">#</a></span>
 		</h3><ul>
 <li><code>@get</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
-<h2 id="boxborderin">
-			BoxBorderIn
-			<span><a class="mark" href="#boxborderin" id="boxborderin">#</a></span>
+<h2 id="borderin">
+			BorderIn
+			<span><a class="mark" href="#borderin" id="borderin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>BoxBorderIn</code> = <code>&quot;1　rgb(100,100,100)&quot;</code>|<a href="#class-boxborder"><code>BoxBorder</code></a></li>
+<li><code>@type</code> <code>BorderIn</code> = <code>&quot;1　rgb(100,100,100)&quot;</code>|<a href="#class-border"><code>Border</code></a></li>
 </ul>
 <h2 id="class-fillposition">
 			Class: FillPosition
@@ -2145,13 +2745,13 @@
 			fillposition.value
 			<span><a class="mark" href="#fillposition-value" id="fillposition-value">#</a></span>
 		</h3><ul>
-<li><code>value</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="fillposition-kind">
 			fillposition.kind
 			<span><a class="mark" href="#fillposition-kind" id="fillposition-kind">#</a></span>
 		</h3><ul>
-<li><code>kind</code>: <a href="#enum-fillpositionkind"><code>FillPositionKind</code></a> </li>
+<li><code>@get</code> <code>kind</code>: <a href="#enum-fillpositionkind"><code>FillPositionKind</code></a> </li>
 </ul>
 <h2 id="fillpositionkindstr">
 			FillPositionKindStr
@@ -2178,13 +2778,13 @@
 			fillsize.value
 			<span><a class="mark" href="#fillsize-value" id="fillsize-value">#</a></span>
 		</h3><ul>
-<li><code>value</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="fillsize-kind">
 			fillsize.kind
 			<span><a class="mark" href="#fillsize-kind" id="fillsize-kind">#</a></span>
 		</h3><ul>
-<li><code>kind</code>: <a href="#enum-fillsizekind"><code>FillSizeKind</code></a> </li>
+<li><code>@get</code> <code>kind</code>: <a href="#enum-fillsizekind"><code>FillSizeKind</code></a> </li>
 </ul>
 <h2 id="fillsizekindstr">
 			FillSizeKindStr
@@ -2211,13 +2811,13 @@
 			boxsize.value
 			<span><a class="mark" href="#boxsize-value" id="boxsize-value">#</a></span>
 		</h3><ul>
-<li><code>value</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="boxsize-kind">
 			boxsize.kind
 			<span><a class="mark" href="#boxsize-kind" id="boxsize-kind">#</a></span>
 		</h3><ul>
-<li><code>kind</code>: <a href="#enum-boxsizekind"><code>BoxSizeKind</code></a> </li>
+<li><code>@get</code> <code>kind</code>: <a href="#enum-boxsizekind"><code>BoxSizeKind</code></a> </li>
 </ul>
 <h2 id="boxsizekindstr">
 			BoxSizeKindStr
@@ -2244,13 +2844,13 @@
 			boxorigin.value
 			<span><a class="mark" href="#boxorigin-value" id="boxorigin-value">#</a></span>
 		</h3><ul>
-<li><code>value</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="boxorigin-kind">
 			boxorigin.kind
 			<span><a class="mark" href="#boxorigin-kind" id="boxorigin-kind">#</a></span>
 		</h3><ul>
-<li><code>kind</code>: <a href="#boxoriginkind"><code>BoxOriginKind</code></a> </li>
+<li><code>@get</code> <code>kind</code>: <a href="#boxoriginkind"><code>BoxOriginKind</code></a> </li>
 </ul>
 <h2 id="boxoriginkindstr">
 			BoxOriginKindStr
@@ -2278,13 +2878,13 @@
 			textbase.value
 			<span><a class="mark" href="#textbase-value" id="textbase-value">#</a></span>
 		</h3><ul>
-<li><code>value</code>: <code>Value</code> </li>
+<li><code>@get</code> <code>value</code>: <code>Value</code> </li>
 </ul>
 <h3 id="textbase-kind">
 			textbase.kind
 			<span><a class="mark" href="#textbase-kind" id="textbase-kind">#</a></span>
 		</h3><ul>
-<li><code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
+<li><code>@get</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 </ul>
 <h2 id="class-textcolor">
 			Class: TextColor
@@ -2331,32 +2931,32 @@
 		</h2><ul>
 <li><code>@type</code> <code>TextColorIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#colorin"><code>ColorIn</code></a>|<a href="#class-textcolor"><code>TextColor</code></a></li>
 </ul>
-<h2 id="class-textsize">
-			Class: TextSize
-			<span><a class="mark" href="#class-textsize" id="class-textsize">#</a></span>
-		</h2><h3 id="textsize">
-			TextSize
-			<span><a class="mark" href="#textsize" id="textsize">#</a></span>
+<h2 id="class-fontsize">
+			Class: FontSize
+			<span><a class="mark" href="#class-fontsize" id="class-fontsize">#</a></span>
+		</h2><h3 id="fontsize">
+			FontSize
+			<span><a class="mark" href="#fontsize" id="fontsize">#</a></span>
 		</h3><ul>
-<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textsize"><code>TextSize</code></a>,<a href="#n"><code>N</code></a>&gt;</li>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-fontsize"><code>FontSize</code></a>,<a href="#n"><code>N</code></a>&gt;</li>
 </ul>
-<h2 id="textsizein">
-			TextSizeIn
-			<span><a class="mark" href="#textsizein" id="textsizein">#</a></span>
+<h2 id="fontsizein">
+			FontSizeIn
+			<span><a class="mark" href="#fontsizein" id="fontsizein">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextSizeIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#n"><code>N</code></a>|<a href="#class-textsize"><code>TextSize</code></a></li>
+<li><code>@type</code> <code>FontSizeIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#n"><code>N</code></a>|<a href="#class-fontsize"><code>FontSize</code></a></li>
 </ul>
-<h2 id="textlineheightin">
-			TextLineHeightIn
-			<span><a class="mark" href="#textlineheightin" id="textlineheightin">#</a></span>
+<h2 id="lineheightin">
+			LineHeightIn
+			<span><a class="mark" href="#lineheightin" id="lineheightin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextLineHeightIn</code> = <a href="#textsizein"><code>TextSizeIn</code></a></li>
+<li><code>@type</code> <code>LineHeightIn</code> = <a href="#fontsizein"><code>FontSizeIn</code></a></li>
 </ul>
-<h2 id="textlineheight">
-			TextLineHeight
-			<span><a class="mark" href="#textlineheight" id="textlineheight">#</a></span>
+<h2 id="lineheight">
+			LineHeight
+			<span><a class="mark" href="#lineheight" id="lineheight">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextLineHeight</code> = <a href="#class-textsize"><code>TextSize</code></a></li>
+<li><code>@type</code> <code>LineHeight</code> = <a href="#class-fontsize"><code>FontSize</code></a></li>
 </ul>
 <h2 id="class-textshadow">
 			Class: TextShadow
@@ -2421,24 +3021,75 @@
 		</h2><ul>
 <li><code>@type</code> <code>TextShadowIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#shadowin"><code>ShadowIn</code></a>|<a href="#class-textshadow"><code>TextShadow</code></a></li>
 </ul>
+<h2 id="class-textstroke">
+			Class: TextStroke
+			<span><a class="mark" href="#class-textstroke" id="class-textstroke">#</a></span>
+		</h2><h3 id="textstroke">
+			TextStroke
+			<span><a class="mark" href="#textstroke" id="textstroke">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textstroke"><code>TextStroke</code></a>,<a href="#class-border"><code>Border</code></a>&gt;</li>
+</ul>
+<h3 id="textstroke-width">
+			textstroke.width
+			<span><a class="mark" href="#textstroke-width" id="textstroke-width">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>width</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="textstroke-color">
+			textstroke.color
+			<span><a class="mark" href="#textstroke-color" id="textstroke-color">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>color</code>: <a href="#class-color"><code>Color</code></a> </li>
+</ul>
+<h3 id="textstroke-r">
+			textstroke.r
+			<span><a class="mark" href="#textstroke-r" id="textstroke-r">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>r</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="textstroke-g">
+			textstroke.g
+			<span><a class="mark" href="#textstroke-g" id="textstroke-g">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>g</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="textstroke-b">
+			textstroke.b
+			<span><a class="mark" href="#textstroke-b" id="textstroke-b">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="textstroke-a">
+			textstroke.a
+			<span><a class="mark" href="#textstroke-a" id="textstroke-a">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h2 id="textstrokein">
+			TextStrokeIn
+			<span><a class="mark" href="#textstrokein" id="textstrokein">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>TextStrokeIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="#borderin"><code>BorderIn</code></a>|<a href="#class-textstroke"><code>TextStroke</code></a></li>
+</ul>
 <h2 id="ffid">
 			FFID
 			<span><a class="mark" href="#ffid" id="ffid">#</a></span>
 		</h2><ul>
 <li><code>@type</code> <code>FFID</code> = <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a></li>
 </ul>
-<h2 id="class-textfamily">
-			Class: TextFamily
-			<span><a class="mark" href="#class-textfamily" id="class-textfamily">#</a></span>
-		</h2><h3 id="textfamily">
-			TextFamily
-			<span><a class="mark" href="#textfamily" id="textfamily">#</a></span>
+<h2 id="class-fontfamily">
+			Class: FontFamily
+			<span><a class="mark" href="#class-fontfamily" id="class-fontfamily">#</a></span>
+		</h2><h3 id="fontfamily">
+			FontFamily
+			<span><a class="mark" href="#fontfamily" id="fontfamily">#</a></span>
 		</h3><ul>
-<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-textfamily"><code>TextFamily</code></a>,<a href="#ffid"><code>FFID</code></a>&gt;</li>
+<li><code>@extends</code> <a href="#class-textbase"><code>TextBase</code></a>&lt;<a href="#class-fontfamily"><code>FontFamily</code></a>,<a href="#ffid"><code>FFID</code></a>&gt;</li>
 </ul>
-<h3 id="textfamily-families-">
-			textfamily.families()
-			<span><a class="mark" href="#textfamily-families-" id="textfamily-families-">#</a></span>
+<h3 id="fontfamily-families-">
+			fontfamily.families()
+			<span><a class="mark" href="#fontfamily-families-" id="fontfamily-families-">#</a></span>
 		</h3><ul>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a>  </li>
 </ul>
@@ -2448,11 +3099,11 @@
 		</h2><ul>
 <li><code>@const</code> <code>EmptyFFID</code>: <a href="#ffid"><code>FFID</code></a></li>
 </ul>
-<h2 id="textfamilyin">
-			TextFamilyIn
-			<span><a class="mark" href="#textfamilyin" id="textfamilyin">#</a></span>
+<h2 id="fontfamilyin">
+			FontFamilyIn
+			<span><a class="mark" href="#fontfamilyin" id="fontfamilyin">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>TextFamilyIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="$ext.html#string"><code>string</code></a>|<a href="#class-textfamily"><code>TextFamily</code></a></li>
+<li><code>@type</code> <code>FontFamilyIn</code> = <a href="#textvaluekindinstr"><code>TextValueKindInStr</code></a>|<a href="$ext.html#string"><code>string</code></a>|<a href="#class-fontfamily"><code>FontFamily</code></a></li>
 </ul>
 <h2 id="class-boxfilter">
 			Class: BoxFilter
@@ -2484,6 +3135,8 @@
 <p>For example:</p>
 <pre><code>image(res/image.png, auto 100%, x=start, y=20%, repeat)
 
+image(res/image.png, auto, repeatX, x=center, y=end)
+
 radial(#ff00ff 0%, #ff0 50%, #00f 100%)
 
 linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
@@ -2500,37 +3153,37 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 			fillimage.src
 			<span><a class="mark" href="#fillimage-src" id="fillimage-src">#</a></span>
 		</h3><ul>
-<li><code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@get</code> <code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h3 id="fillimage-width">
 			fillimage.width
 			<span><a class="mark" href="#fillimage-width" id="fillimage-width">#</a></span>
 		</h3><ul>
-<li><code>width</code>: <a href="#class-fillsize"><code>FillSize</code></a> </li>
+<li><code>@get</code> <code>width</code>: <a href="#class-fillsize"><code>FillSize</code></a> </li>
 </ul>
 <h3 id="fillimage-height">
 			fillimage.height
 			<span><a class="mark" href="#fillimage-height" id="fillimage-height">#</a></span>
 		</h3><ul>
-<li><code>height</code>: <a href="#class-fillsize"><code>FillSize</code></a> </li>
+<li><code>@get</code> <code>height</code>: <a href="#class-fillsize"><code>FillSize</code></a> </li>
 </ul>
 <h3 id="fillimage-x">
 			fillimage.x
 			<span><a class="mark" href="#fillimage-x" id="fillimage-x">#</a></span>
 		</h3><ul>
-<li><code>x</code>: <a href="#class-fillposition"><code>FillPosition</code></a> </li>
+<li><code>@get</code> <code>x</code>: <a href="#class-fillposition"><code>FillPosition</code></a> </li>
 </ul>
 <h3 id="fillimage-y">
 			fillimage.y
 			<span><a class="mark" href="#fillimage-y" id="fillimage-y">#</a></span>
 		</h3><ul>
-<li><code>y</code>: <a href="#class-fillposition"><code>FillPosition</code></a> </li>
+<li><code>@get</code> <code>y</code>: <a href="#class-fillposition"><code>FillPosition</code></a> </li>
 </ul>
 <h3 id="fillimage-repeat">
 			fillimage.repeat
 			<span><a class="mark" href="#fillimage-repeat" id="fillimage-repeat">#</a></span>
 		</h3><ul>
-<li><code>repeat</code>: <a href="#enum-repeat"><code>Repeat</code></a> </li>
+<li><code>@get</code> <code>repeat</code>: <a href="#enum-repeat"><code>Repeat</code></a> </li>
 </ul>
 <h3 id="fillimage-constructor-src-init-">
 			fillimage.constructor(src,init?)
@@ -2558,7 +3211,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 			fillgradientradial.colors
 			<span><a class="mark" href="#fillgradientradial-colors" id="fillgradientradial-colors">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>colors</code>: <a href="#class-color"><code>Color</code></a><code>[]</code> </li>
+<li><code>@get</code> <code>colors</code>: <a href="#class-color"><code>Color</code></a><code>[]</code> colors with premultiplied alpha</li>
 </ul>
 <h3 id="fillgradientradial-constructor-pos-colors-">
 			fillgradientradial.constructor(pos,colors)
@@ -2580,7 +3233,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 			fillgradientlinear.angle
 			<span><a class="mark" href="#fillgradientlinear-angle" id="fillgradientlinear-angle">#</a></span>
 		</h3><ul>
-<li><code>angle</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@get</code> <code>angle</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h3 id="fillgradientlinear-constructor-pos-coloes-angle-">
 			fillgradientlinear.constructor(pos,coloes,angle)
@@ -2603,7 +3256,7 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 			boxshadow.value
 			<span><a class="mark" href="#boxshadow-value" id="boxshadow-value">#</a></span>
 		</h3><ul>
-<li><code>value</code>: <a href="#class-shadow"><code>Shadow</code></a> </li>
+<li><code>@get</code> <code>value</code>: <a href="#class-shadow"><code>Shadow</code></a> </li>
 </ul>
 <h3 id="boxshadow-constructor-value-">
 			boxshadow.constructor(value)
@@ -2622,8 +3275,223 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 
 [&#39;10 10 2 #ff00aa&#39;]
 
-10 10 2 rgba(255,255,0,255)
-</code></pre><h2 id="newcolor-r-g-b-a-">
+10 10 2 rgba(255,255,0,1)
+</code></pre><h2 id="parseboxfilter-val-msg-">
+			parseBoxFilter(val,msg?)
+			<span><a class="mark" href="#parseboxfilter-val-msg-" id="parseboxfilter-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <a href="#boxfilterin"><code>BoxFilterIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-boxfilter"><code>BoxFilter</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h2 id="parseboxshadow-val-msg-">
+			parseBoxShadow(val,msg?)
+			<span><a class="mark" href="#parseboxshadow-val-msg-" id="parseboxshadow-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <a href="#boxshadowin"><code>BoxShadowIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-boxshadow"><code>BoxShadow</code></a> </li>
+</ul>
+<h2 id="parseboxfilterptr">
+			parseBoxFilterPtr
+			<span><a class="mark" href="#parseboxfilterptr" id="parseboxfilterptr">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>parseBoxFilterPtr</code> = <code>parseBoxFilter</code></li>
+</ul>
+<h2 id="parseboxshadowptr">
+			parseBoxShadowPtr
+			<span><a class="mark" href="#parseboxshadowptr" id="parseboxshadowptr">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>parseBoxShadowPtr</code> = <code>parseBoxShadow</code></li>
+</ul>
+<h2 id="class-skeletondata">
+			Class: SkeletonData
+			<span><a class="mark" href="#class-skeletondata" id="class-skeletondata">#</a></span>
+		</h2><h3 id="skeletondata">
+			SkeletonData
+			<span><a class="mark" href="#skeletondata" id="skeletondata">#</a></span>
+		</h3><h3 id="skeletondata-make-skelpath-atlaspath-scale-">
+			skeletondata.Make(skelPath,atlasPath?,scale?)
+			<span><a class="mark" href="#skeletondata-make-skelpath-atlaspath-scale-" id="skeletondata-make-skelpath-atlaspath-scale-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>skelPath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>atlasPath?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>scale?</code>: <a href="numbers.html#float"><code>Float</code></a> </li>
+<li><code>@return</code> <a href="#class-skeletondata"><code>SkeletonData</code></a> </li>
+</ul>
+<h3 id="skeletondata-make-skel-atlaspath-scale-">
+			skeletondata.Make(skel,atlasPath,scale?)
+			<span><a class="mark" href="#skeletondata-make-skel-atlaspath-scale-" id="skeletondata-make-skel-atlaspath-scale-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>skel</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>atlasPath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>scale?</code>: <a href="numbers.html#float"><code>Float</code></a> </li>
+<li><code>@return</code> <a href="#class-skeletondata"><code>SkeletonData</code></a> </li>
+</ul>
+<h3 id="skeletondata-make-skel-atlas-dir-scale-">
+			skeletondata.Make(skel,atlas,dir,scale?)
+			<span><a class="mark" href="#skeletondata-make-skel-atlas-dir-scale-" id="skeletondata-make-skel-atlas-dir-scale-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>skel</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>atlas</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>@param</code> <code>dir</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>scale?</code>: <a href="numbers.html#float"><code>Float</code></a> </li>
+<li><code>@return</code> <a href="#class-skeletondata"><code>SkeletonData</code></a> </li>
+</ul>
+<h3 id="skeletondata-hashcode-">
+			skeletondata.hashCode()
+			<span><a class="mark" href="#skeletondata-hashcode-" id="skeletondata-hashcode-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="#n"><code>N</code></a> </li>
+</ul>
+<h2 id="skeletondatain">
+			SkeletonDataIn
+			<span><a class="mark" href="#skeletondatain" id="skeletondatain">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>SkeletonDataIn</code> = </li>
+</ul>
+<p>For example:</p>
+<pre><code>skel(res/alien/image.skel, res/alien/image.atlas, scale=1)
+</code></pre><h2 id="parseskeletondata-val-msg-">
+			parseSkeletonData(val,msg?)
+			<span><a class="mark" href="#parseskeletondata-val-msg-" id="parseskeletondata-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <a href="#skeletondatain"><code>SkeletonDataIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-skeletondata"><code>SkeletonData</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h2 id="parseskeletondataptr">
+			parseSkeletonDataPtr
+			<span><a class="mark" href="#parseskeletondataptr" id="parseskeletondataptr">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>parseSkeletonDataPtr</code> = <code>parseSkeletonData</code></li>
+</ul>
+<h2 id="enum-boundstype">
+			Enum: BoundsType
+			<span><a class="mark" href="#enum-boundstype" id="enum-boundstype">#</a></span>
+		</h2><h3 id="boundstype">
+			BoundsType
+			<span><a class="mark" href="#boundstype" id="boundstype">#</a></span>
+		</h3><p>entity bounds type</p>
+<ul>
+<li><code>kDefault</code>  </li>
+<li><code>kCircle</code>  </li>
+<li><code>kPolygon</code>  </li>
+<li><code>kLineSegment</code>  </li>
+</ul>
+<h2 id="class-bounds">
+			Class: Bounds
+			<span><a class="mark" href="#class-bounds" id="class-bounds">#</a></span>
+		</h2><h3 id="bounds">
+			Bounds
+			<span><a class="mark" href="#bounds" id="bounds">#</a></span>
+		</h3><p>Entity bounds</p>
+<ul>
+<li><code>@extends</code> <a href="#class-base"><code>Base</code></a>&lt;<a href="#class-bounds"><code>Bounds</code></a>&gt;</li>
+</ul>
+<h3 id="bounds-type">
+			bounds.type
+			<span><a class="mark" href="#bounds-type" id="bounds-type">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>type</code>: <a href="#enum-boundstype"><code>BoundsType</code></a> </li>
+</ul>
+<h3 id="bounds-offset">
+			bounds.offset
+			<span><a class="mark" href="#bounds-offset" id="bounds-offset">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>offset</code>: <a href="#class-vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="bounds-radius">
+			bounds.radius
+			<span><a class="mark" href="#bounds-radius" id="bounds-radius">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>radius</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="bounds-pts-">
+			bounds.pts?
+			<span><a class="mark" href="#bounds-pts-" id="bounds-pts-">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>pts?</code>: <a href="path.html#path"><code>Path</code></a> </li>
+</ul>
+<h3 id="bounds-halfthickness">
+			bounds.halfThickness
+			<span><a class="mark" href="#bounds-halfthickness" id="bounds-halfthickness">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>halfThickness</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h3 id="bounds-hashcode-">
+			bounds.hashCode()
+			<span><a class="mark" href="#bounds-hashcode-" id="bounds-hashcode-">#</a></span>
+		</h3><ul>
+<li><code>@return</code> <a href="#n"><code>N</code></a> </li>
+</ul>
+<h2 id="boundsin">
+			BoundsIn
+			<span><a class="mark" href="#boundsin" id="boundsin">#</a></span>
+		</h2><ul>
+<li><code>@type</code> <code>BoundsIn</code> = <a href="#class-bounds"><code>Bounds</code></a></li>
+</ul>
+<h2 id="newbounds-type-offsetx-offsety-radius-pts-">
+			newBounds(type,offsetX,offsetY,radius,pts?)
+			<span><a class="mark" href="#newbounds-type-offsetx-offsety-radius-pts-" id="newbounds-type-offsetx-offsety-radius-pts-">#</a></span>
+		</h2><p>new entity bounds</p>
+<ul>
+<li><code>@param</code> <code>type</code>: <a href="#enum-boundstype"><code>BoundsType</code></a> </li>
+<li><code>@param</code> <code>offsetX</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>offsetY</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>radius</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>pts?</code>: <a href="path.html#path"><code>Path</code></a> </li>
+<li><code>@return</code> <a href="#class-bounds"><code>Bounds</code></a> </li>
+</ul>
+<h2 id="bounds-type-radius-pts-">
+			bounds(type,radius,pts?)
+			<span><a class="mark" href="#bounds-type-radius-pts-" id="bounds-type-radius-pts-">#</a></span>
+		</h2><p>alias for newBounds</p>
+<ul>
+<li><code>@param</code> <code>type</code>: <a href="#enum-boundstype"><code>BoundsType</code></a> </li>
+<li><code>@param</code> <code>radius</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>pts?</code>: <a href="path.html#path"><code>Path</code></a> </li>
+<li><code>@return</code> <a href="#class-bounds"><code>Bounds</code></a> </li>
+</ul>
+<h2 id="circbounds-radius-offsetx-offsety-">
+			circBounds(radius,offsetX?,offsetY?)
+			<span><a class="mark" href="#circbounds-radius-offsetx-offsety-" id="circbounds-radius-offsetx-offsety-">#</a></span>
+		</h2><p>new circle bounds</p>
+<ul>
+<li><code>@param</code> <code>radius</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>offsetX?</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>offsetY?</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-bounds"><code>Bounds</code></a> </li>
+</ul>
+<h2 id="polybounds-path-offsetx-offsety-">
+			polyBounds(path,offsetX?,offsetY?)
+			<span><a class="mark" href="#polybounds-path-offsetx-offsety-" id="polybounds-path-offsetx-offsety-">#</a></span>
+		</h2><p>new polygon bounds</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="path.html#path"><code>Path</code></a> </li>
+<li><code>@param</code> <code>offsetX?</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>offsetY?</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-bounds"><code>Bounds</code></a> </li>
+</ul>
+<h2 id="segbounds-path-offsetx-offsety-">
+			segBounds(path,offsetX?,offsetY?)
+			<span><a class="mark" href="#segbounds-path-offsetx-offsety-" id="segbounds-path-offsetx-offsety-">#</a></span>
+		</h2><p>new line segment bounds</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="path.html#path"><code>Path</code></a> </li>
+<li><code>@param</code> <code>offsetX?</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>offsetY?</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-bounds"><code>Bounds</code></a> </li>
+</ul>
+<h2 id="parsebounds-val-msg-">
+			parseBounds(val,msg?)
+			<span><a class="mark" href="#parsebounds-val-msg-" id="parsebounds-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <a href="#boundsin"><code>BoundsIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-bounds"><code>Bounds</code></a> </li>
+</ul>
+<h2 id="newcolor-r-g-b-a-">
 			newColor(r,g,b,a)
 			<span><a class="mark" href="#newcolor-r-g-b-a-" id="newcolor-r-g-b-a-">#</a></span>
 		</h2><ul>
@@ -2670,6 +3538,42 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 <li><code>@param</code> <code>height</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@return</code> <a href="#class-rect"><code>Rect</code></a> </li>
 </ul>
+<h2 id="newrange-x-y-width-height-">
+			newRange(x,y,width,height)
+			<span><a class="mark" href="#newrange-x-y-width-height-" id="newrange-x-y-width-height-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>width</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>height</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-range"><code>Range</code></a> </li>
+<li><code>@param</code> <code>x1</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>y1</code>: <a href="#n"><code>N</code></a> </li>
+</ul>
+<h2 id="newregion-x-y-width-height-">
+			newRegion(x,y,width,height)
+			<span><a class="mark" href="#newregion-x-y-width-height-" id="newregion-x-y-width-height-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>x</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>y</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>width</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>height</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-region"><code>Region</code></a> </li>
+</ul>
+<h2 id="newborderradius-p0-p1-p2-p3-p4-p5-p6-p7-">
+			newBorderRadius(p0,p1,p2,p3,p4,p5,p6,p7)
+			<span><a class="mark" href="#newborderradius-p0-p1-p2-p3-p4-p5-p6-p7-" id="newborderradius-p0-p1-p2-p3-p4-p5-p6-p7-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>p0</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p1</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p2</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p3</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p4</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p5</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p6</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>p7</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-borderradius"><code>BorderRadius</code></a> </li>
+</ul>
 <h2 id="newmat-value-">
 			newMat(...value)
 			<span><a class="mark" href="#newmat-value-" id="newmat-value-">#</a></span>
@@ -2707,15 +3611,15 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 <li><code>@param</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@return</code> <a href="#class-shadow"><code>Shadow</code></a> </li>
 </ul>
-<h2 id="newboxborder-width-r-b-a-">
-			newBoxBorder(width,r,b,a)
-			<span><a class="mark" href="#newboxborder-width-r-b-a-" id="newboxborder-width-r-b-a-">#</a></span>
+<h2 id="newborder-width-r-b-a-">
+			newBorder(width,r,b,a)
+			<span><a class="mark" href="#newborder-width-r-b-a-" id="newborder-width-r-b-a-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>width</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@param</code> <code>r</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@param</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@param</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
-<li><code>@return</code> <a href="#class-boxborder"><code>BoxBorder</code></a> </li>
+<li><code>@return</code> <a href="#class-border"><code>Border</code></a> </li>
 <li><code>@param</code> <code>g</code>: <a href="#n"><code>N</code></a> </li>
 </ul>
 <h2 id="newfillposition-kink-value-">
@@ -2766,22 +3670,22 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 <li><code>@return</code> <a href="#class-textcolor"><code>TextColor</code></a> </li>
 <li><code>@param</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 </ul>
-<h2 id="newtextsize-kink-value-">
-			newTextSize(kink,value)
-			<span><a class="mark" href="#newtextsize-kink-value-" id="newtextsize-kink-value-">#</a></span>
+<h2 id="newfontsize-kink-value-">
+			newFontSize(kink,value)
+			<span><a class="mark" href="#newfontsize-kink-value-" id="newfontsize-kink-value-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>kink</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 <li><code>@param</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
-<li><code>@return</code> <a href="#class-textsize"><code>TextSize</code></a> </li>
+<li><code>@return</code> <a href="#class-fontsize"><code>FontSize</code></a> </li>
 <li><code>@param</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 </ul>
-<h2 id="newtextlineheight-kink-value-">
-			newTextLineHeight(kink,value)
-			<span><a class="mark" href="#newtextlineheight-kink-value-" id="newtextlineheight-kink-value-">#</a></span>
+<h2 id="newlineheight-kink-value-">
+			newLineHeight(kink,value)
+			<span><a class="mark" href="#newlineheight-kink-value-" id="newlineheight-kink-value-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>kink</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 <li><code>@param</code> <code>value</code>: <a href="#n"><code>N</code></a> </li>
-<li><code>@return</code> <a href="#textlineheight"><code>TextLineHeight</code></a> </li>
+<li><code>@return</code> <a href="#lineheight"><code>LineHeight</code></a> </li>
 </ul>
 <h2 id="newtextshadow-kind-offset_x-offset_y-size-r-g-b-a-">
 			newTextShadow(kind,offset_x,offset_y,size,r,g,b,a)
@@ -2797,347 +3701,380 @@ linear(90, #ff00ff 0%, #ff0 50%, #00f 100%)
 <li><code>@param</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
 <li><code>@return</code> <a href="#class-textshadow"><code>TextShadow</code></a> </li>
 </ul>
-<h2 id="newtextfamily-kind-ffid-">
-			newTextFamily(kind,ffid?)
-			<span><a class="mark" href="#newtextfamily-kind-ffid-" id="newtextfamily-kind-ffid-">#</a></span>
+<h2 id="newtextstroke-kind-width-r-g-b-a-">
+			newTextStroke(kind,width,r,g,b,a)
+			<span><a class="mark" href="#newtextstroke-kind-width-r-g-b-a-" id="newtextstroke-kind-width-r-g-b-a-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
+<li><code>@param</code> <code>width</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>r</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>g</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>b</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@param</code> <code>a</code>: <a href="#n"><code>N</code></a> </li>
+<li><code>@return</code> <a href="#class-textstroke"><code>TextStroke</code></a> </li>
+</ul>
+<h2 id="newfontfamily-kind-ffid-">
+			newFontFamily(kind,ffid?)
+			<span><a class="mark" href="#newfontfamily-kind-ffid-" id="newfontfamily-kind-ffid-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>kind</code>: <a href="#enum-textvaluekind"><code>TextValueKind</code></a> </li>
 <li><code>@param</code> <code>ffid?</code>: <a href="#ffid"><code>FFID</code></a> </li>
-<li><code>@return</code> <a href="#class-textfamily"><code>TextFamily</code></a> </li>
+<li><code>@return</code> <a href="#class-fontfamily"><code>FontFamily</code></a> </li>
 </ul>
-<h2 id="parserepeat-val-desc-">
-			parseRepeat(val,desc?)
-			<span><a class="mark" href="#parserepeat-val-desc-" id="parserepeat-val-desc-">#</a></span>
+<h2 id="parserepeat-val-msg-">
+			parseRepeat(val,msg?)
+			<span><a class="mark" href="#parserepeat-val-msg-" id="parserepeat-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#repeatin"><code>RepeatIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-repeat"><code>Repeat</code></a> </li>
 </ul>
-<h2 id="parsedirection-val-desc-">
-			parseDirection(val,desc?)
-			<span><a class="mark" href="#parsedirection-val-desc-" id="parsedirection-val-desc-">#</a></span>
+<h2 id="parsedirection-val-msg-">
+			parseDirection(val,msg?)
+			<span><a class="mark" href="#parsedirection-val-msg-" id="parsedirection-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#directionin"><code>DirectionIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-direction"><code>Direction</code></a> </li>
 </ul>
-<h2 id="parseitemsalign-val-desc-">
-			parseItemsAlign(val,desc?)
-			<span><a class="mark" href="#parseitemsalign-val-desc-" id="parseitemsalign-val-desc-">#</a></span>
+<h2 id="parseitemsalign-val-msg-">
+			parseItemsAlign(val,msg?)
+			<span><a class="mark" href="#parseitemsalign-val-msg-" id="parseitemsalign-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#itemsalignin"><code>ItemsAlignIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-itemsalign"><code>ItemsAlign</code></a> </li>
 </ul>
-<h2 id="parsecrossalign-val-desc-">
-			parseCrossAlign(val,desc?)
-			<span><a class="mark" href="#parsecrossalign-val-desc-" id="parsecrossalign-val-desc-">#</a></span>
+<h2 id="parsecrossalign-val-msg-">
+			parseCrossAlign(val,msg?)
+			<span><a class="mark" href="#parsecrossalign-val-msg-" id="parsecrossalign-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#crossalignin"><code>CrossAlignIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-crossalign"><code>CrossAlign</code></a> </li>
 </ul>
-<h2 id="parsewrap-val-desc-">
-			parseWrap(val,desc?)
-			<span><a class="mark" href="#parsewrap-val-desc-" id="parsewrap-val-desc-">#</a></span>
+<h2 id="parsewrap-val-msg-">
+			parseWrap(val,msg?)
+			<span><a class="mark" href="#parsewrap-val-msg-" id="parsewrap-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#wrapin"><code>WrapIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-wrap"><code>Wrap</code></a> </li>
 </ul>
-<h2 id="parsewrapalign-val-desc-">
-			parseWrapAlign(val,desc?)
-			<span><a class="mark" href="#parsewrapalign-val-desc-" id="parsewrapalign-val-desc-">#</a></span>
+<h2 id="parsewrapalign-val-msg-">
+			parseWrapAlign(val,msg?)
+			<span><a class="mark" href="#parsewrapalign-val-msg-" id="parsewrapalign-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#wrapalignin"><code>WrapAlignIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-wrapalign"><code>WrapAlign</code></a> </li>
 </ul>
-<h2 id="parsealign-val-desc-">
-			parseAlign(val,desc?)
-			<span><a class="mark" href="#parsealign-val-desc-" id="parsealign-val-desc-">#</a></span>
+<h2 id="parsealign-val-msg-">
+			parseAlign(val,msg?)
+			<span><a class="mark" href="#parsealign-val-msg-" id="parsealign-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#alignin"><code>AlignIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-align"><code>Align</code></a> </li>
 </ul>
-<h2 id="parsetextalign-val-desc-">
-			parseTextAlign(val,desc?)
-			<span><a class="mark" href="#parsetextalign-val-desc-" id="parsetextalign-val-desc-">#</a></span>
+<h2 id="parseboxsizing-val-msg-">
+			parseBoxSizing(val,msg?)
+			<span><a class="mark" href="#parseboxsizing-val-msg-" id="parseboxsizing-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <a href="#boxsizingin"><code>BoxSizingIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-boxsizing"><code>BoxSizing</code></a> </li>
+</ul>
+<h2 id="parselayouttype-val-msg-">
+			parseLayoutType(val,msg?)
+			<span><a class="mark" href="#parselayouttype-val-msg-" id="parselayouttype-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <a href="#layouttypein"><code>LayoutTypeIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-layouttype"><code>LayoutType</code></a> </li>
+</ul>
+<h2 id="parsetextalign-val-msg-">
+			parseTextAlign(val,msg?)
+			<span><a class="mark" href="#parsetextalign-val-msg-" id="parsetextalign-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textalignin"><code>TextAlignIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-textalign"><code>TextAlign</code></a> </li>
 </ul>
-<h2 id="parsetextdecoration-val-desc-">
-			parseTextDecoration(val,desc?)
-			<span><a class="mark" href="#parsetextdecoration-val-desc-" id="parsetextdecoration-val-desc-">#</a></span>
+<h2 id="parsetextdecoration-val-msg-">
+			parseTextDecoration(val,msg?)
+			<span><a class="mark" href="#parsetextdecoration-val-msg-" id="parsetextdecoration-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textdecorationin"><code>TextDecorationIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-textdecoration"><code>TextDecoration</code></a> </li>
 </ul>
-<h2 id="parsetextoverflow-val-desc-">
-			parseTextOverflow(val,desc?)
-			<span><a class="mark" href="#parsetextoverflow-val-desc-" id="parsetextoverflow-val-desc-">#</a></span>
+<h2 id="parsetextoverflow-val-msg-">
+			parseTextOverflow(val,msg?)
+			<span><a class="mark" href="#parsetextoverflow-val-msg-" id="parsetextoverflow-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textoverflowin"><code>TextOverflowIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-textoverflow"><code>TextOverflow</code></a> </li>
 </ul>
-<h2 id="parsetextwhitespace-val-desc-">
-			parseTextWhiteSpace(val,desc?)
-			<span><a class="mark" href="#parsetextwhitespace-val-desc-" id="parsetextwhitespace-val-desc-">#</a></span>
+<h2 id="parsewhitespace-val-msg-">
+			parseWhiteSpace(val,msg?)
+			<span><a class="mark" href="#parsewhitespace-val-msg-" id="parsewhitespace-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textwhitespacein"><code>TextWhiteSpaceIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#enum-textwhitespace"><code>TextWhiteSpace</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#whitespacein"><code>WhiteSpaceIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-whitespace"><code>WhiteSpace</code></a> </li>
 </ul>
-<h2 id="parsetextwordbreak-val-desc-">
-			parseTextWordBreak(val,desc?)
-			<span><a class="mark" href="#parsetextwordbreak-val-desc-" id="parsetextwordbreak-val-desc-">#</a></span>
+<h2 id="parsewordbreak-val-msg-">
+			parseWordBreak(val,msg?)
+			<span><a class="mark" href="#parsewordbreak-val-msg-" id="parsewordbreak-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textwordbreakin"><code>TextWordBreakIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#enum-textwordbreak"><code>TextWordBreak</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#wordbreakin"><code>WordBreakIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-wordbreak"><code>WordBreak</code></a> </li>
 </ul>
-<h2 id="parsetextweight-val-desc-">
-			parseTextWeight(val,desc?)
-			<span><a class="mark" href="#parsetextweight-val-desc-" id="parsetextweight-val-desc-">#</a></span>
+<h2 id="parsefontweight-val-msg-">
+			parseFontWeight(val,msg?)
+			<span><a class="mark" href="#parsefontweight-val-msg-" id="parsefontweight-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textweightin"><code>TextWeightIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#enum-textweight"><code>TextWeight</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#fontweightin"><code>FontWeightIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-fontweight"><code>FontWeight</code></a> </li>
 </ul>
-<h2 id="parsetextwidth-val-desc-">
-			parseTextWidth(val,desc?)
-			<span><a class="mark" href="#parsetextwidth-val-desc-" id="parsetextwidth-val-desc-">#</a></span>
+<h2 id="parsefontwidth-val-msg-">
+			parseFontWidth(val,msg?)
+			<span><a class="mark" href="#parsefontwidth-val-msg-" id="parsefontwidth-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textwidthin"><code>TextWidthIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#enum-textwidth"><code>TextWidth</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#fontwidthin"><code>FontWidthIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-fontwidth"><code>FontWidth</code></a> </li>
 </ul>
-<h2 id="parsetextslant-val-desc-">
-			parseTextSlant(val,desc?)
-			<span><a class="mark" href="#parsetextslant-val-desc-" id="parsetextslant-val-desc-">#</a></span>
+<h2 id="parsefontslant-val-msg-">
+			parseFontSlant(val,msg?)
+			<span><a class="mark" href="#parsefontslant-val-msg-" id="parsefontslant-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textslantin"><code>TextSlantIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#enum-textslant"><code>TextSlant</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#fontslantin"><code>FontSlantIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-fontslant"><code>FontSlant</code></a> </li>
 </ul>
-<h2 id="parsekeyboardtype-val-desc-">
-			parseKeyboardType(val,desc?)
-			<span><a class="mark" href="#parsekeyboardtype-val-desc-" id="parsekeyboardtype-val-desc-">#</a></span>
+<h2 id="parsekeyboardtype-val-msg-">
+			parseKeyboardType(val,msg?)
+			<span><a class="mark" href="#parsekeyboardtype-val-msg-" id="parsekeyboardtype-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#keyboardtypein"><code>KeyboardTypeIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-keyboardtype"><code>KeyboardType</code></a> </li>
 </ul>
-<h2 id="parsekeyboardreturntype-val-desc-">
-			parseKeyboardReturnType(val,desc?)
-			<span><a class="mark" href="#parsekeyboardreturntype-val-desc-" id="parsekeyboardreturntype-val-desc-">#</a></span>
+<h2 id="parsekeyboardreturntype-val-msg-">
+			parseKeyboardReturnType(val,msg?)
+			<span><a class="mark" href="#parsekeyboardreturntype-val-msg-" id="parsekeyboardreturntype-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#keyboardreturntypein"><code>KeyboardReturnTypeIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-keyboardreturntype"><code>KeyboardReturnType</code></a> </li>
 </ul>
-<h2 id="parsecursorstyle-val-desc-">
-			parseCursorStyle(val,desc?)
-			<span><a class="mark" href="#parsecursorstyle-val-desc-" id="parsecursorstyle-val-desc-">#</a></span>
+<h2 id="parsecursorstyle-val-msg-">
+			parseCursorStyle(val,msg?)
+			<span><a class="mark" href="#parsecursorstyle-val-msg-" id="parsecursorstyle-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#cursorstylein"><code>CursorStyleIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#enum-cursorstyle"><code>CursorStyle</code></a> </li>
 </ul>
-<h2 id="parsefinddirection-val-desc-">
-			parseFindDirection(val,desc?)
-			<span><a class="mark" href="#parsefinddirection-val-desc-" id="parsefinddirection-val-desc-">#</a></span>
+<h2 id="parsecascadecolor-val-msg-">
+			parseCascadeColor(val,msg?)
+			<span><a class="mark" href="#parsecascadecolor-val-msg-" id="parsecascadecolor-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#finddirectionin"><code>FindDirectionIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#enum-finddirection"><code>FindDirection</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#cascadecolorin"><code>CascadeColorIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#enum-cascadecolor"><code>CascadeColor</code></a> </li>
 </ul>
-<h2 id="parsevec2-val-desc-">
-			parseVec2(val,desc?)
-			<span><a class="mark" href="#parsevec2-val-desc-" id="parsevec2-val-desc-">#</a></span>
+<h2 id="parsevec2-val-msg-">
+			parseVec2(val,msg?)
+			<span><a class="mark" href="#parsevec2-val-msg-" id="parsevec2-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#vec2in"><code>Vec2In</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-vec2"><code>Vec2</code></a> </li>
 </ul>
-<h2 id="parsevec3-val-desc-">
-			parseVec3(val,desc?)
-			<span><a class="mark" href="#parsevec3-val-desc-" id="parsevec3-val-desc-">#</a></span>
+<h2 id="parsevec3-val-msg-">
+			parseVec3(val,msg?)
+			<span><a class="mark" href="#parsevec3-val-msg-" id="parsevec3-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#vec3in"><code>Vec3In</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-vec3"><code>Vec3</code></a> </li>
 </ul>
-<h2 id="parsevec4-val-desc-">
-			parseVec4(val,desc?)
-			<span><a class="mark" href="#parsevec4-val-desc-" id="parsevec4-val-desc-">#</a></span>
+<h2 id="parsevec4-val-msg-">
+			parseVec4(val,msg?)
+			<span><a class="mark" href="#parsevec4-val-msg-" id="parsevec4-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#vec4in"><code>Vec4In</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-vec4"><code>Vec4</code></a> </li>
 </ul>
-<h2 id="parsecurve-val-desc-">
-			parseCurve(val,desc?)
-			<span><a class="mark" href="#parsecurve-val-desc-" id="parsecurve-val-desc-">#</a></span>
+<h2 id="parsecurve-val-msg-">
+			parseCurve(val,msg?)
+			<span><a class="mark" href="#parsecurve-val-msg-" id="parsecurve-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#curvein"><code>CurveIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-curve"><code>Curve</code></a> </li>
 </ul>
-<h2 id="parserect-val-desc-">
-			parseRect(val,desc?)
-			<span><a class="mark" href="#parserect-val-desc-" id="parserect-val-desc-">#</a></span>
+<h2 id="parserect-val-msg-">
+			parseRect(val,msg?)
+			<span><a class="mark" href="#parserect-val-msg-" id="parserect-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#rectin"><code>RectIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-rect"><code>Rect</code></a> </li>
 </ul>
-<h2 id="parsemat-val-desc-">
-			parseMat(val,desc?)
-			<span><a class="mark" href="#parsemat-val-desc-" id="parsemat-val-desc-">#</a></span>
+<h2 id="parserange-val-msg-">
+			parseRange(val,msg?)
+			<span><a class="mark" href="#parserange-val-msg-" id="parserange-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <code>RangeIn</code> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-range"><code>Range</code></a> </li>
+</ul>
+<h2 id="parseregion-val-msg-">
+			parseRegion(val,msg?)
+			<span><a class="mark" href="#parseregion-val-msg-" id="parseregion-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <code>RegionIn</code> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-region"><code>Region</code></a> </li>
+</ul>
+<h2 id="parseborderradius-val-msg-">
+			parseBorderRadius(val,msg?)
+			<span><a class="mark" href="#parseborderradius-val-msg-" id="parseborderradius-val-msg-">#</a></span>
+		</h2><ul>
+<li><code>@param</code> <code>val</code>: <code>BorderRadiusIn</code> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-borderradius"><code>BorderRadius</code></a> </li>
+</ul>
+<h2 id="parsemat-val-msg-">
+			parseMat(val,msg?)
+			<span><a class="mark" href="#parsemat-val-msg-" id="parsemat-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#matin"><code>MatIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-mat"><code>Mat</code></a> </li>
 </ul>
-<h2 id="parsemat4-val-desc-">
-			parseMat4(val,desc?)
-			<span><a class="mark" href="#parsemat4-val-desc-" id="parsemat4-val-desc-">#</a></span>
+<h2 id="parsemat4-val-msg-">
+			parseMat4(val,msg?)
+			<span><a class="mark" href="#parsemat4-val-msg-" id="parsemat4-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <code>Mat4In</code> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-mat4"><code>Mat4</code></a> </li>
 </ul>
-<h2 id="parsecolor-val-desc-ref-">
-			parseColor(val,desc?,ref?)
-			<span><a class="mark" href="#parsecolor-val-desc-ref-" id="parsecolor-val-desc-ref-">#</a></span>
+<h2 id="parsecolor-val-msg-ref-">
+			parseColor(val,msg?,ref?)
+			<span><a class="mark" href="#parsecolor-val-msg-ref-" id="parsecolor-val-msg-ref-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#colorin"><code>ColorIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>ref?</code>: <code>Reference</code> </li>
 <li><code>@return</code> <a href="#class-color"><code>Color</code></a> </li>
 </ul>
-<h2 id="parseshadow-val-desc-ref-">
-			parseShadow(val,desc?,ref?)
-			<span><a class="mark" href="#parseshadow-val-desc-ref-" id="parseshadow-val-desc-ref-">#</a></span>
+<h2 id="parseshadow-val-msg-ref-">
+			parseShadow(val,msg?,ref?)
+			<span><a class="mark" href="#parseshadow-val-msg-ref-" id="parseshadow-val-msg-ref-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#shadowin"><code>ShadowIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>ref?</code>: <code>Reference</code> </li>
 <li><code>@return</code> <a href="#class-shadow"><code>Shadow</code></a> </li>
 </ul>
-<h2 id="parseboxborder-val-desc-">
-			parseBoxBorder(val,desc?)
-			<span><a class="mark" href="#parseboxborder-val-desc-" id="parseboxborder-val-desc-">#</a></span>
+<h2 id="parseborder-val-msg-ref-">
+			parseBorder(val,msg?,ref?)
+			<span><a class="mark" href="#parseborder-val-msg-ref-" id="parseborder-val-msg-ref-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#boxborderin"><code>BoxBorderIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-boxborder"><code>BoxBorder</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#borderin"><code>BorderIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>ref?</code>: <code>Reference</code> </li>
+<li><code>@return</code> <a href="#class-border"><code>Border</code></a> </li>
 </ul>
-<h2 id="parsefillposition-val-desc-">
-			parseFillPosition(val,desc?)
-			<span><a class="mark" href="#parsefillposition-val-desc-" id="parsefillposition-val-desc-">#</a></span>
+<h2 id="parsefillposition-val-msg-">
+			parseFillPosition(val,msg?)
+			<span><a class="mark" href="#parsefillposition-val-msg-" id="parsefillposition-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#fillpositionin"><code>FillPositionIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-fillposition"><code>FillPosition</code></a> </li>
 </ul>
-<h2 id="parsefillsize-val-desc-">
-			parseFillSize(val,desc?)
-			<span><a class="mark" href="#parsefillsize-val-desc-" id="parsefillsize-val-desc-">#</a></span>
+<h2 id="parsefillsize-val-msg-">
+			parseFillSize(val,msg?)
+			<span><a class="mark" href="#parsefillsize-val-msg-" id="parsefillsize-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#fillsizein"><code>FillSizeIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-fillsize"><code>FillSize</code></a> </li>
 </ul>
-<h2 id="parseboxorigin-val-desc-">
-			parseBoxOrigin(val,desc?)
-			<span><a class="mark" href="#parseboxorigin-val-desc-" id="parseboxorigin-val-desc-">#</a></span>
+<h2 id="parseboxorigin-val-msg-">
+			parseBoxOrigin(val,msg?)
+			<span><a class="mark" href="#parseboxorigin-val-msg-" id="parseboxorigin-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#boxoriginin"><code>BoxOriginIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-boxorigin"><code>BoxOrigin</code></a> </li>
 </ul>
-<h2 id="parseboxsize-val-desc-">
-			parseBoxSize(val,desc?)
-			<span><a class="mark" href="#parseboxsize-val-desc-" id="parseboxsize-val-desc-">#</a></span>
+<h2 id="parseboxsize-val-msg-">
+			parseBoxSize(val,msg?)
+			<span><a class="mark" href="#parseboxsize-val-msg-" id="parseboxsize-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#boxsizein"><code>BoxSizeIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-boxsize"><code>BoxSize</code></a> </li>
 </ul>
-<h2 id="parsetextcolor-val-desc-">
-			parseTextColor(val,desc?)
-			<span><a class="mark" href="#parsetextcolor-val-desc-" id="parsetextcolor-val-desc-">#</a></span>
+<h2 id="parsetextcolor-val-msg-">
+			parseTextColor(val,msg?)
+			<span><a class="mark" href="#parsetextcolor-val-msg-" id="parsetextcolor-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textcolorin"><code>TextColorIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-textcolor"><code>TextColor</code></a> </li>
 </ul>
-<h2 id="parsetextsize-val-desc-">
-			parseTextSize(val,desc?)
-			<span><a class="mark" href="#parsetextsize-val-desc-" id="parsetextsize-val-desc-">#</a></span>
+<h2 id="parsefontsize-val-msg-">
+			parseFontSize(val,msg?)
+			<span><a class="mark" href="#parsefontsize-val-msg-" id="parsefontsize-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textsizein"><code>TextSizeIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-textsize"><code>TextSize</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#fontsizein"><code>FontSizeIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-fontsize"><code>FontSize</code></a> </li>
 </ul>
-<h2 id="parsetextlineheight-val-desc-">
-			parseTextLineHeight(val,desc?)
-			<span><a class="mark" href="#parsetextlineheight-val-desc-" id="parsetextlineheight-val-desc-">#</a></span>
+<h2 id="parselineheight-val-msg-">
+			parseLineHeight(val,msg?)
+			<span><a class="mark" href="#parselineheight-val-msg-" id="parselineheight-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textlineheightin"><code>TextLineHeightIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#textlineheight"><code>TextLineHeight</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#lineheightin"><code>LineHeightIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#lineheight"><code>LineHeight</code></a> </li>
 </ul>
-<h2 id="parsetextshadow-val-desc-">
-			parseTextShadow(val,desc?)
-			<span><a class="mark" href="#parsetextshadow-val-desc-" id="parsetextshadow-val-desc-">#</a></span>
+<h2 id="parsetextshadow-val-msg-">
+			parseTextShadow(val,msg?)
+			<span><a class="mark" href="#parsetextshadow-val-msg-" id="parsetextshadow-val-msg-">#</a></span>
 		</h2><ul>
 <li><code>@param</code> <code>val</code>: <a href="#textshadowin"><code>TextShadowIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="#class-textshadow"><code>TextShadow</code></a> </li>
 </ul>
-<h2 id="parsetextfamily-val-desc-">
-			parseTextFamily(val,desc?)
-			<span><a class="mark" href="#parsetextfamily-val-desc-" id="parsetextfamily-val-desc-">#</a></span>
+<h2 id="parsetextstroke-val-msg-">
+			parseTextStroke(val,msg?)
+			<span><a class="mark" href="#parsetextstroke-val-msg-" id="parsetextstroke-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#textfamilyin"><code>TextFamilyIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-textfamily"><code>TextFamily</code></a> </li>
+<li><code>@param</code> <code>val</code>: <a href="#textstrokein"><code>TextStrokeIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-textstroke"><code>TextStroke</code></a> </li>
 </ul>
-<h2 id="parseboxfilter-val-desc-">
-			parseBoxFilter(val,desc?)
-			<span><a class="mark" href="#parseboxfilter-val-desc-" id="parseboxfilter-val-desc-">#</a></span>
+<h2 id="parsefontfamily-val-msg-">
+			parseFontFamily(val,msg?)
+			<span><a class="mark" href="#parsefontfamily-val-msg-" id="parsefontfamily-val-msg-">#</a></span>
 		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#boxfilterin"><code>BoxFilterIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-boxfilter"><code>BoxFilter</code></a> </li>
-</ul>
-<h2 id="parseboxshadow-val-desc-">
-			parseBoxShadow(val,desc?)
-			<span><a class="mark" href="#parseboxshadow-val-desc-" id="parseboxshadow-val-desc-">#</a></span>
-		</h2><ul>
-<li><code>@param</code> <code>val</code>: <a href="#boxshadowin"><code>BoxShadowIn</code></a> </li>
-<li><code>@param</code> <code>desc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-boxshadow"><code>BoxShadow</code></a> </li>
-</ul>
-<h2 id="parseboxfilterptr">
-			parseBoxFilterPtr
-			<span><a class="mark" href="#parseboxfilterptr" id="parseboxfilterptr">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>parseBoxFilterPtr</code> = <code>parseBoxFilter</code></li>
-</ul>
-<h2 id="parseboxshadowptr">
-			parseBoxShadowPtr
-			<span><a class="mark" href="#parseboxshadowptr" id="parseboxshadowptr">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>parseBoxShadowPtr</code> = <code>parseBoxShadow</code></li>
+<li><code>@param</code> <code>val</code>: <a href="#fontfamilyin"><code>FontFamilyIn</code></a> </li>
+<li><code>@param</code> <code>msg?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="#class-fontfamily"><code>FontFamily</code></a> </li>
 </ul>
 
 			</div>

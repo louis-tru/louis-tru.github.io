@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -161,10 +167,19 @@
 <span><a href="#eventnoticer-constructor-name-sender-">eventnoticer.constructor(name,sender)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-triggerwithevent-event-">eventnoticer.triggerWithEvent(event)</a></span>
+<span><a href="#eventnoticer-forward-noticer-id-">eventnoticer.forward(noticer,id?)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-trigger-data-">eventnoticer.trigger(data)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-triggerwithevent-e-">eventnoticer.triggerWithEvent(e)</a></span>
 </li>
 <li>
 <span><a href="#eventnoticer-off-listen-ctx-">eventnoticer.off(listen?,ctx?)</a></span>
+</li>
+<li>
+<span><a href="#eventnoticer-offbyctx-ctx-">eventnoticer.offByCtx(ctx)</a></span>
 </li>
 </ul>
 <li>
@@ -183,13 +198,7 @@
 <span><a href="#notification-adddefaultlistener-name-listen-">notification.addDefaultListener(name,listen)</a></span>
 </li>
 <li>
-<span><a href="#notification-addeventforward-name-noticer-id-">notification.addEventForward(name,noticer,id?)</a></span>
-</li>
-<li>
-<span><a href="#notification-addeventforwardonce-noticer-id-">notification.addEventForwardOnce(noticer,id?)</a></span>
-</li>
-<li>
-<span><a href="#notification-trigger-name-data-">notification.trigger(name,data?)</a></span>
+<span><a href="#notification-trigger-name-data-">notification.trigger(name,data)</a></span>
 </li>
 <li>
 <span><a href="#notification-triggerwithevent-name-event-">notification.triggerWithEvent(name,event)</a></span>
@@ -198,7 +207,7 @@
 <span><a href="#notification-removeeventlistener-name-listen-ctx-">notification.removeEventListener(name,listen?,ctx?)</a></span>
 </li>
 <li>
-<span><a href="#notification-removeeventlistenerwithctx-ctx-">notification.removeEventListenerWithCtx(ctx)</a></span>
+<span><a href="#notification-removeeventlistenerbyctx-ctx-">notification.removeEventListenerByCtx(ctx)</a></span>
 </li>
 <li>
 <span><a href="#notification-allnoticers-">notification.allNoticers()</a></span>
@@ -234,7 +243,7 @@
 			<span><a class="mark" href="#event-returnvalue" id="event-returnvalue">#</a></span>
 		</h3><p>The return value </p>
 <ul>
-<li><code>returnValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>returnValue</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="event-data">
 			event.data
@@ -308,7 +317,7 @@
 			<span><a class="mark" href="#eventnoticer-constructor-name-sender-" id="eventnoticer-constructor-name-sender-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> Event name</li>
-<li><p><code>@param</code> <code>sender</code>: <a href="$ext.html#object"><code>object</code></a> Event sender</p><br/></li>
+<li><p><code>@param</code> <code>sender</code>: <code>SenderOf</code>&lt;<code>E</code>&gt; Event sender</p><br/></li>
 <li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
 <li><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</li>
@@ -328,29 +337,47 @@ screen.onChange.on(function(ev) {
 <ul>
 <li><code>@param</code> <code>listen</code>:  Listening Function</li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
-<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p><br/></li>
-<li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
-<li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
-<li><p><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</p><br/></li>
-<li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
-<li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
-<li><code>@param</code> <code>id</code>:  Listener alias, can be deleted by id</li>
+<li><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</li>
 </ul>
-<h3 id="eventnoticer-triggerwithevent-event-">
-			eventnoticer.triggerWithEvent(event)
-			<span><a class="mark" href="#eventnoticer-triggerwithevent-event-" id="eventnoticer-triggerwithevent-event-">#</a></span>
+<h3 id="eventnoticer-forward-noticer-id-">
+			eventnoticer.forward(noticer,id?)
+			<span><a class="mark" href="#eventnoticer-forward-noticer-id-" id="eventnoticer-forward-noticer-id-">#</a></span>
+		</h3><p>Forward the event to another noticer </p>
+<ul>
+<li><code>@param</code> <code>noticer</code>: <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
+<li><code>@param</code> <code>id?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="eventnoticer-trigger-data-">
+			eventnoticer.trigger(data)
+			<span><a class="mark" href="#eventnoticer-trigger-data-" id="eventnoticer-trigger-data-">#</a></span>
 		</h3><p>Notify all observers</p>
 <ul>
-<li><code>@param</code> <code>event</code>: <code>E</code> </li>
+<li><code>@param</code> <code>data</code>: <code>DataOf</code>&lt;<code>E</code>&gt; </li>
+</ul>
+<h3 id="eventnoticer-triggerwithevent-e-">
+			eventnoticer.triggerWithEvent(e)
+			<span><a class="mark" href="#eventnoticer-triggerwithevent-e-" id="eventnoticer-triggerwithevent-e-">#</a></span>
+		</h3><p>Notify all observers</p>
+<ul>
+<li><code>@param</code> <code>e</code>: <code>E</code> </li>
 </ul>
 <h3 id="eventnoticer-off-listen-ctx-">
 			eventnoticer.off(listen?,ctx?)
 			<span><a class="mark" href="#eventnoticer-off-listen-ctx-" id="eventnoticer-off-listen-ctx-">#</a></span>
 		</h3><p>Remove listener function</p>
 <ul>
-<li><code>@param</code> <code>listen?</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="$ext.html#function"><code>Function</code></a>|<a href="$ext.html#object"><code>object</code></a> <br/>  It can be a listener function/id alias/context.<br/>  If no parameter is passed, all listeners will be uninstalled.</li>
-<li><code>@return</code> <code>int</code>  Returns the number of deleted listeners</li>
-<li><code>@param</code> <code>ctx?</code>: <a href="$ext.html#object"><code>object</code></a> </li>
+<li><code>@param</code> <code>listen?</code>: <a href="$ext.html#function"><code>Function</code></a>|<a href="$ext.html#string"><code>string</code></a> <br/>  It can be a listener function/id alias.<br/>  If no parameter is passed, all listeners will be uninstalled.</li>
+<li><code>@param</code> <code>ctx?</code>: <a href="$ext.html#object"><code>object</code></a> Context object, only valid when <code>listen</code> is a function</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a>  Returns the number of deleted listeners</li>
+</ul>
+<h3 id="eventnoticer-offbyctx-ctx-">
+			eventnoticer.offByCtx(ctx)
+			<span><a class="mark" href="#eventnoticer-offbyctx-ctx-" id="eventnoticer-offbyctx-ctx-">#</a></span>
+		</h3><p>Remove all listeners related to <code>ctx</code> on this noticer</p>
+<ul>
+<li><code>@param</code> <code>ctx</code>: <a href="$ext.html#object"><code>object</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="class-notification">
 			Class: Notification
@@ -382,37 +409,21 @@ screen.onChange.on(function(ev) {
 			<span><a class="mark" href="#notification-adddefaultlistener-name-listen-" id="notification-adddefaultlistener-name-listen-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E</code>&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
-<h3 id="notification-addeventforward-name-noticer-id-">
-			notification.addEventForward(name,noticer,id?)
-			<span><a class="mark" href="#notification-addeventforward-name-noticer-id-" id="notification-addeventforward-name-noticer-id-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>noticer</code>: <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
-<li><code>@param</code> <code>id?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="notification-addeventforwardonce-noticer-id-">
-			notification.addEventForwardOnce(noticer,id?)
-			<span><a class="mark" href="#notification-addeventforwardonce-noticer-id-" id="notification-addeventforwardonce-noticer-id-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>noticer</code>: <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
-<li><code>@param</code> <code>id?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E2</code>&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li><code>@template</code> &lt;<code>E2</code>&gt;</li>
 </ul>
 <h3 id="notification-trigger-name-data-">
-			notification.trigger(name,data?)
+			notification.trigger(name,data)
 			<span><a class="mark" href="#notification-trigger-name-data-" id="notification-trigger-name-data-">#</a></span>
-		</h3><p>Trigger an event by event name --&gt; [<code>EventNoticer.trigger(data)</code>]</p>
+		</h3><p>Trigger an event by event name --&gt; <a href="#eventnoticer-trigger-data-"><code>EventNoticer.trigger(data)</code></a></p>
 <ul>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data?</code>: <code>any</code> </li>
+<li><code>@param</code> <code>data</code>: <code>DataOf</code>&lt;<code>E</code>&gt; </li>
 </ul>
 <h3 id="notification-triggerwithevent-name-event-">
 			notification.triggerWithEvent(name,event)
 			<span><a class="mark" href="#notification-triggerwithevent-name-event-" id="notification-triggerwithevent-name-event-">#</a></span>
-		</h3><p>Trigger an event by name and <a href="#class-event"><code>Event</code></a> --&gt; <a href="#eventnoticer-triggerwithevent-event-"><code>EventNoticer.triggerWithEvent(event)</code></a></p>
+		</h3><p>Trigger an event by name and <a href="#class-event"><code>Event</code></a> --&gt; [<code>EventNoticer.triggerWithEvent(event)</code>]</p>
 <ul>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>event</code>: <code>E</code> </li>
@@ -420,15 +431,16 @@ screen.onChange.on(function(ev) {
 <h3 id="notification-removeeventlistener-name-listen-ctx-">
 			notification.removeEventListener(name,listen?,ctx?)
 			<span><a class="mark" href="#notification-removeeventlistener-name-listen-ctx-" id="notification-removeeventlistener-name-listen-ctx-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen?</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="$ext.html#function"><code>Function</code></a>|<a href="$ext.html#object"><code>object</code></a> </li>
-<li><code>@param</code> <code>ctx?</code>: <a href="$ext.html#object"><code>object</code></a> </li>
+		</h3><p>Remove listener function</p>
+<ul>
+<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> Event name</li>
+<li><code>@param</code> <code>listen?</code>: <a href="$ext.html#function"><code>Function</code></a>|<a href="$ext.html#string"><code>string</code></a> It can be a listener function/id alias.<pre><code>            If no parameter is passed, all listeners will be uninstalled.<br/></code></pre></li>
+<li><code>@param</code> <code>ctx?</code>: <a href="$ext.html#object"><code>object</code></a> Context object, only valid when <code>listen</code> is a function</li>
 </ul>
-<h3 id="notification-removeeventlistenerwithctx-ctx-">
-			notification.removeEventListenerWithCtx(ctx)
-			<span><a class="mark" href="#notification-removeeventlistenerwithctx-ctx-" id="notification-removeeventlistenerwithctx-ctx-">#</a></span>
-		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code><br/>Actually traverse and call the [<code>EventNoticer.off(ctx)</code>] method</p>
+<h3 id="notification-removeeventlistenerbyctx-ctx-">
+			notification.removeEventListenerByCtx(ctx)
+			<span><a class="mark" href="#notification-removeeventlistenerbyctx-ctx-" id="notification-removeeventlistenerbyctx-ctx-">#</a></span>
+		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code><br/>Actually traverse and call the <a href="#eventnoticer-offbyctx-ctx-"><code>EventNoticer.offByCtx(ctx)</code></a> method</p>
 <p>For example:</p>
 <pre><code class="undefinedts">import event from &#39;quark/event&#39;;
 
@@ -472,8 +484,8 @@ notification.triggerChange();
 			<span><a class="mark" href="#notification-triggerlistenerchange-name-count-change-" id="notification-triggerlistenerchange-name-count-change-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>count</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@param</code> <code>change</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@param</code> <code>count</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>change</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="event-target-name-">
 			event(target,name)

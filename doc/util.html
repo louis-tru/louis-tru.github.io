@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -142,6 +148,8 @@
 <span><a href="#default-onunhandledrejection">default.onUnhandledRejection</a></span>
 </li>
 </ul>
+<li>
+<span><a href="#default">default</a></span>
 </li>
 </ul>
 </li>
@@ -165,7 +173,7 @@
 			default.id
 			<span><a class="mark" href="#default-id" id="default-id">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>id</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@get</code> <code>id</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="default-config">
 			default.config
@@ -177,13 +185,13 @@
 			default.onBeforeExit
 			<span><a class="mark" href="#default-onbeforeexit" id="default-onbeforeexit">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onBeforeExit</code>: <a href="$event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="$event.html#event"><code>Event</code></a>&lt;<a href="$ext.html#object"><code>object</code></a>,<a href="$ext.html#int"><code>Int</code></a>&gt;&gt; </li>
+<li><code>@event</code> <code>onBeforeExit</code>: <a href="$event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="$event.html#event"><code>Event</code></a>&lt;<a href="$ext.html#object"><code>object</code></a>,<a href="numbers.html#int"><code>Int</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="default-onexit">
 			default.onExit
 			<span><a class="mark" href="#default-onexit" id="default-onexit">#</a></span>
 		</h3><ul>
-<li><code>@event</code> <code>onExit</code>: <a href="$event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="$event.html#event"><code>Event</code></a>&lt;<a href="$ext.html#object"><code>object</code></a>,<a href="$ext.html#int"><code>Int</code></a>&gt;&gt; </li>
+<li><code>@event</code> <code>onExit</code>: <a href="$event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="$event.html#event"><code>Event</code></a>&lt;<a href="$ext.html#object"><code>object</code></a>,<a href="numbers.html#int"><code>Int</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="default-onuncaughtexception">
 			default.onUncaughtException
@@ -197,7 +205,10 @@
 		</h3><ul>
 <li><code>@event</code> <code>onUnhandledRejection</code>: <a href="$event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="$event.html#event"><code>Event</code></a>&lt;<a href="$ext.html#object"><code>object</code></a>,<a href="#errorreason"><code>ErrorReason</code></a>&gt;&gt; </li>
 </ul>
-
+<h2 id="default">
+			default
+			<span><a class="mark" href="#default" id="default">#</a></span>
+		</h2>
 			</div>
 
 		</div>

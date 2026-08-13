@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -130,26 +136,19 @@
 <span><a href="#string">string</a></span>
 </li>
 <li>
-<span><a href="#int">Int</a></span>
-</li>
+<span><a href="#interface-numberconstructor">Interface: NumberConstructor</a></span>
+<ul>
 <li>
-<span><a href="#uint">Uint</a></span>
+<span><a href="#numberconstructor">NumberConstructor</a></span>
 </li>
+</ul>
 <li>
-<span><a href="#uint16">Uint16</a></span>
-</li>
+<span><a href="#interface-objectconstructor">Interface: ObjectConstructor</a></span>
+<ul>
 <li>
-<span><a href="#int16">Int16</a></span>
+<span><a href="#objectconstructor">ObjectConstructor</a></span>
 </li>
-<li>
-<span><a href="#uint8">Uint8</a></span>
-</li>
-<li>
-<span><a href="#int8">Int8</a></span>
-</li>
-<li>
-<span><a href="#float">Float</a></span>
-</li>
+</ul>
 <li>
 <span><a href="#interface-object">Interface: Object</a></span>
 <ul>
@@ -162,6 +161,20 @@
 <ul>
 <li>
 <span><a href="#dict">Dict</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-timeoutresult">Interface: TimeoutResult</a></span>
+<ul>
+<li>
+<span><a href="#timeoutresult">TimeoutResult</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-console">Interface: Console</a></span>
+<ul>
+<li>
+<span><a href="#console">Console</a></span>
 </li>
 </ul>
 <li>
@@ -179,10 +192,24 @@
 </li>
 </ul>
 <li>
+<span><a href="#interface-arrayconstructor">Interface: ArrayConstructor</a></span>
+<ul>
+<li>
+<span><a href="#arrayconstructor">ArrayConstructor</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#interface-string">Interface: String</a></span>
 <ul>
 <li>
 <span><a href="#string">String</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-stringconstructor">Interface: StringConstructor</a></span>
+<ul>
+<li>
+<span><a href="#stringconstructor">StringConstructor</a></span>
 </li>
 </ul>
 <li>
@@ -206,22 +233,29 @@
 </li>
 </ul>
 <li>
+<span><a href="#interface-dateconstructor">Interface: DateConstructor</a></span>
+<ul>
+<li>
+<span><a href="#dateconstructor">DateConstructor</a></span>
+</li>
+<li>
+<span><a href="#dateconstructor-currenttimezone">dateconstructor.currentTimezone</a></span>
+</li>
+<li>
+<span><a href="#dateconstructor-parsedate-date_str-format-timezone-">dateconstructor.parseDate(date_str,format?,timezone?)</a></span>
+</li>
+<li>
+<span><a href="#dateconstructor-formattimespan-ts-format-">dateconstructor.formatTimeSpan(ts,format?)</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#interface-date">Interface: Date</a></span>
 <ul>
 <li>
 <span><a href="#date">Date</a></span>
 </li>
 <li>
-<span><a href="#date-currenttimezone">date.currentTimezone</a></span>
-</li>
-<li>
-<span><a href="#date-parsedate-date_str-format-timezone-">date.parseDate(date_str,format?,timezone?)</a></span>
-</li>
-<li>
-<span><a href="#date-formattimespan-ts-format-">date.formatTimeSpan(ts,format?)</a></span>
-</li>
-<li>
-<span><a href="#date-add-ms-">date.add(ms)</a></span>
+<span><a href="#date-addmilliseconds-ms-">date.addMilliseconds(ms)</a></span>
 </li>
 <li>
 <span><a href="#date-tostring-format-timezone-">date.toString(format?,timezone?)</a></span>
@@ -235,19 +269,20 @@
 </li>
 </ul>
 <li>
-<span><a href="#errnocode">ErrnoCode</a></span>
+<span><a href="#interface-errorconstructor">Interface: ErrorConstructor</a></span>
+<ul>
+<li>
+<span><a href="#errorconstructor">ErrorConstructor</a></span>
 </li>
 <li>
-<span><a href="#errornewarg">ErrorNewArg</a></span>
+<span><a href="#errorconstructor-capturestacktrace-targetobject-constructoropt-">errorconstructor.captureStackTrace(targetObject,constructorOpt?)</a></span>
 </li>
+</ul>
 <li>
 <span><a href="#interface-error">Interface: Error</a></span>
 <ul>
 <li>
 <span><a href="#error">Error</a></span>
-</li>
-<li>
-<span><a href="#error-capturestacktrace-targetobject-constructoropt-">error.captureStackTrace(targetObject,constructorOpt?)</a></span>
 </li>
 </ul>
 </li>
@@ -292,60 +327,24 @@
 <li><code>@type</code> <code>string</code> = <a href="#interface-string"><code>String</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
-<h2 id="int">
-			Int
-			<span><a class="mark" href="#int" id="int">#</a></span>
-		</h2><p>32-bit integer, Range: -2147483648 to 2147483647</p>
+<h2 id="interface-numberconstructor">
+			Interface: NumberConstructor
+			<span><a class="mark" href="#interface-numberconstructor" id="interface-numberconstructor">#</a></span>
+		</h2><h3 id="numberconstructor">
+			NumberConstructor
+			<span><a class="mark" href="#numberconstructor" id="numberconstructor">#</a></span>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</p>
 <ul>
-<li><code>@type</code> <code>Int</code> = <a href="#interface-number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
-<h2 id="uint">
-			Uint
-			<span><a class="mark" href="#uint" id="uint">#</a></span>
-		</h2><p>32-bit signed integer, Range: 0 to 4294967295</p>
+<h2 id="interface-objectconstructor">
+			Interface: ObjectConstructor
+			<span><a class="mark" href="#interface-objectconstructor" id="interface-objectconstructor">#</a></span>
+		</h2><h3 id="objectconstructor">
+			ObjectConstructor
+			<span><a class="mark" href="#objectconstructor" id="objectconstructor">#</a></span>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</p>
 <ul>
-<li><code>@type</code> <code>Uint</code> = <a href="#interface-number"><code>number</code></a></li>
-<li><code>@global</code>  </li>
-</ul>
-<h2 id="uint16">
-			Uint16
-			<span><a class="mark" href="#uint16" id="uint16">#</a></span>
-		</h2><p>16-bit signed integer, Range: 0 to 65535</p>
-<ul>
-<li><code>@type</code> <code>Uint16</code> = <a href="#interface-number"><code>number</code></a></li>
-<li><code>@global</code>  </li>
-</ul>
-<h2 id="int16">
-			Int16
-			<span><a class="mark" href="#int16" id="int16">#</a></span>
-		</h2><p>16-bit integer, Range: -32768 to 32767</p>
-<ul>
-<li><code>@type</code> <code>Int16</code> = <a href="#interface-number"><code>number</code></a></li>
-<li><code>@global</code>  </li>
-</ul>
-<h2 id="uint8">
-			Uint8
-			<span><a class="mark" href="#uint8" id="uint8">#</a></span>
-		</h2><p>8-bit signed integer, Range: 0 to 255</p>
-<ul>
-<li><code>@type</code> <code>Uint8</code> = <a href="#interface-number"><code>number</code></a></li>
-<li><code>@global</code>  </li>
-</ul>
-<h2 id="int8">
-			Int8
-			<span><a class="mark" href="#int8" id="int8">#</a></span>
-		</h2><p>8-bit integer, Range: -128 to 127</p>
-<ul>
-<li><code>@type</code> <code>Int8</code> = <a href="#interface-number"><code>number</code></a></li>
-<li><code>@global</code>  </li>
-</ul>
-<h2 id="float">
-			Float
-			<span><a class="mark" href="#float" id="float">#</a></span>
-		</h2><p>32-bit floating point， Range: -3.402823466E+38 to 3.402823466E+38</p>
-<ul>
-<li><code>@type</code> <code>Float</code> = <a href="#interface-number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-object">
@@ -368,6 +367,27 @@
 <ul>
 <li><code>@global</code>  </li>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@extends</code> <code>Record</code>&lt;<a href="#interface-string"><code>string</code></a>,<code>T</code>&gt;</li>
+</ul>
+<h2 id="interface-timeoutresult">
+			Interface: TimeoutResult
+			<span><a class="mark" href="#interface-timeoutresult" id="interface-timeoutresult">#</a></span>
+		</h2><h3 id="timeoutresult">
+			TimeoutResult
+			<span><a class="mark" href="#timeoutresult" id="timeoutresult">#</a></span>
+		</h3><ul>
+<li><code>@global</code>  </li>
+<li><code>@extends</code> <a href="defs.html#any"><code>Any</code></a></li>
+</ul>
+<h2 id="interface-console">
+			Interface: Console
+			<span><a class="mark" href="#interface-console" id="interface-console">#</a></span>
+		</h2><h3 id="console">
+			Console
+			<span><a class="mark" href="#console" id="console">#</a></span>
+		</h3><p>Console methods provided by the Qk JavaScript runtime.</p>
+<ul>
+<li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-function">
 			Interface: Function
@@ -390,12 +410,32 @@
 <li><code>@global</code>  </li>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
 </ul>
+<h2 id="interface-arrayconstructor">
+			Interface: ArrayConstructor
+			<span><a class="mark" href="#interface-arrayconstructor" id="interface-arrayconstructor">#</a></span>
+		</h2><h3 id="arrayconstructor">
+			ArrayConstructor
+			<span><a class="mark" href="#arrayconstructor" id="arrayconstructor">#</a></span>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
 <h2 id="interface-string">
 			Interface: String
 			<span><a class="mark" href="#interface-string" id="interface-string">#</a></span>
 		</h2><h3 id="string">
 			String
 			<span><a class="mark" href="#string" id="string">#</a></span>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h2 id="interface-stringconstructor">
+			Interface: StringConstructor
+			<span><a class="mark" href="#interface-stringconstructor" id="interface-stringconstructor">#</a></span>
+		</h2><h3 id="stringconstructor">
+			StringConstructor
+			<span><a class="mark" href="#stringconstructor" id="stringconstructor">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
 <ul>
 <li><code>@global</code>  </li>
@@ -415,8 +455,8 @@
 			<span><a class="mark" href="#number-tofixedbefore-before-after-" id="number-tofixedbefore-before-after-">#</a></span>
 		</h3><p>Convert to a string with a fixed number of digits before and after the decimal point</p>
 <ul>
-<li><code>@param</code> <code>before</code>: <a href="#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
-<li><code>@param</code> <code>after?</code>: <a href="#uint"><code>Uint</code></a> Fixed number of digits after the decimal point</li>
+<li><code>@param</code> <code>before</code>: <a href="numbers.html#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
+<li><code>@param</code> <code>after?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Fixed number of digits after the decimal point</li>
 <li><code>@return</code> <a href="#interface-string"><code>string</code></a> </li>
 </ul>
 <h3 id="number-tofixedvariable-after-split-symbol-">
@@ -424,8 +464,8 @@
 			<span><a class="mark" href="#number-tofixedvariable-after-split-symbol-" id="number-tofixedvariable-after-split-symbol-">#</a></span>
 		</h3><p>Fixed the number of digits before the decimal point and used symbol separation</p>
 <ul>
-<li><code>@param</code> <code>after</code>: <a href="#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
-<li><code>@param</code> <code>split?</code>: <a href="#uint"><code>Uint</code></a> Split unit length</li>
+<li><code>@param</code> <code>after</code>: <a href="numbers.html#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
+<li><code>@param</code> <code>split?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Split unit length</li>
 <li><code>@param</code> <code>symbol?</code>: <a href="#interface-string"><code>string</code></a> Split characters</li>
 </ul>
 <p>For example:</p>
@@ -445,32 +485,32 @@ console.log((1000000.03).toFixedVariable(8,3,&#39;,&#39;))
 <ul>
 <li><code>@global</code>  </li>
 </ul>
-<h2 id="interface-date">
-			Interface: Date
-			<span><a class="mark" href="#interface-date" id="interface-date">#</a></span>
-		</h2><h3 id="date">
-			Date
-			<span><a class="mark" href="#date" id="date">#</a></span>
+<h2 id="interface-dateconstructor">
+			Interface: DateConstructor
+			<span><a class="mark" href="#interface-dateconstructor" id="interface-dateconstructor">#</a></span>
+		</h2><h3 id="dateconstructor">
+			DateConstructor
+			<span><a class="mark" href="#dateconstructor" id="dateconstructor">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
-<h3 id="date-currenttimezone">
-			date.currentTimezone
-			<span><a class="mark" href="#date-currenttimezone" id="date-currenttimezone">#</a></span>
+<h3 id="dateconstructor-currenttimezone">
+			dateconstructor.currentTimezone
+			<span><a class="mark" href="#dateconstructor-currenttimezone" id="dateconstructor-currenttimezone">#</a></span>
 		</h3><p>current timezone</p>
 <ul>
-<li><code>currentTimezone</code>: <a href="#uint"><code>Uint</code></a> </li>
+<li><code>currentTimezone</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@static</code>  </li>
 </ul>
-<h3 id="date-parsedate-date_str-format-timezone-">
-			date.parseDate(date_str,format?,timezone?)
-			<span><a class="mark" href="#date-parsedate-date_str-format-timezone-" id="date-parsedate-date_str-format-timezone-">#</a></span>
+<h3 id="dateconstructor-parsedate-date_str-format-timezone-">
+			dateconstructor.parseDate(date_str,format?,timezone?)
+			<span><a class="mark" href="#dateconstructor-parsedate-date_str-format-timezone-" id="dateconstructor-parsedate-date_str-format-timezone-">#</a></span>
 		</h3><p>Parse a string as a time</p>
 <ul>
 <li><code>@param</code> <code>str</code>:  The string to parse</li>
 <li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> date format default yyyyMMddhhmmssfff</li>
-<li><code>@param</code> <code>timezone?</code>: <a href="#uint"><code>Uint</code></a> The time zone of the time to be parsed, the default is the current time zone</li>
+<li><code>@param</code> <code>timezone?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The time zone of the time to be parsed, the default is the current time zone</li>
 <li><code>@return</code> <a href="#interface-date"><code>Date</code></a> Retruu Date object</li>
 <li><code>@static</code>  </li>
 </ul>
@@ -481,12 +521,12 @@ let date = Date.parseDate(i); // The new time returned
 <ul>
 <li><code>@param</code> <code>date_str</code>: <a href="#interface-string"><code>string</code></a> </li>
 </ul>
-<h3 id="date-formattimespan-ts-format-">
-			date.formatTimeSpan(ts,format?)
-			<span><a class="mark" href="#date-formattimespan-ts-format-" id="date-formattimespan-ts-format-">#</a></span>
+<h3 id="dateconstructor-formattimespan-ts-format-">
+			dateconstructor.formatTimeSpan(ts,format?)
+			<span><a class="mark" href="#dateconstructor-formattimespan-ts-format-" id="dateconstructor-formattimespan-ts-format-">#</a></span>
 		</h3><p>Formatting timestamps</p>
 <ul>
-<li><code>@param</code> <code>time_span</code>: <a href="#uint"><code>Uint</code></a> The timestamp to format</li>
+<li><code>@param</code> <code>time_span</code>: <a href="numbers.html#uint"><code>Uint</code></a> The timestamp to format</li>
 <li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> The timestamp format to be formatted</li>
 <li><code>@return</code> <a href="#interface-string"><code>string</code></a> The returned formatted timestamp</li>
 <li><code>@static</code>  </li>
@@ -506,13 +546,23 @@ str = Date.formatTimeSpan(time_span, format); // str = &#39;166分42秒&#39;
 <ul>
 <li><code>@param</code> <code>ts</code>:  </li>
 </ul>
-<h3 id="date-add-ms-">
-			date.add(ms)
-			<span><a class="mark" href="#date-add-ms-" id="date-add-ms-">#</a></span>
+<h2 id="interface-date">
+			Interface: Date
+			<span><a class="mark" href="#interface-date" id="interface-date">#</a></span>
+		</h2><h3 id="date">
+			Date
+			<span><a class="mark" href="#date" id="date">#</a></span>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</p>
+<ul>
+<li><code>@global</code>  </li>
+</ul>
+<h3 id="date-addmilliseconds-ms-">
+			date.addMilliseconds(ms)
+			<span><a class="mark" href="#date-addmilliseconds-ms-" id="date-addmilliseconds-ms-">#</a></span>
 		</h3><p>Add milliseconds to the current Date time and change the time value</p>
 <ul>
-<li><code>@param</code> <code>ms</code>: <a href="#uint"><code>Uint</code></a> The millisecond value to append</li>
-<li><code>@return</code> <a href="#interface-date"><code>Date</code></a> </li>
+<li><code>@param</code> <code>ms</code>: <a href="numbers.html#uint"><code>Uint</code></a> The millisecond value to append</li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="date-tostring-format-timezone-">
 			date.toString(format?,timezone?)
@@ -544,21 +594,27 @@ dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10&#39;
 			<span><a class="mark" href="#errordescribe" id="errordescribe">#</a></span>
 		</h3><ul>
 <li><code>@global</code>  </li>
+<li><code>@extends</code> <a href="#interface-dict"><code>Dict</code></a></li>
 </ul>
-<h2 id="errnocode">
-			ErrnoCode
-			<span><a class="mark" href="#errnocode" id="errnocode">#</a></span>
-		</h2><p>The [errno,message,description] of Array</p>
+<h2 id="interface-errorconstructor">
+			Interface: ErrorConstructor
+			<span><a class="mark" href="#interface-errorconstructor" id="interface-errorconstructor">#</a></span>
+		</h2><h3 id="errorconstructor">
+			ErrorConstructor
+			<span><a class="mark" href="#errorconstructor" id="errorconstructor">#</a></span>
+		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</p>
 <ul>
-<li><code>@type</code> <code>ErrnoCode</code> = <code>[number,string,string?]</code></li>
 <li><code>@global</code>  </li>
 </ul>
-<h2 id="errornewarg">
-			ErrorNewArg
-			<span><a class="mark" href="#errornewarg" id="errornewarg">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>ErrorNewArg</code> = <a href="#errnocode"><code>ErrnoCode</code></a>|<a href="#interface-error"><code>Error</code></a>|<a href="#interface-string"><code>string</code></a>|<a href="#interface-errordescribe"><code>ErrorDescribe</code></a></li>
-<li><code>@global</code>  </li>
+<h3 id="errorconstructor-capturestacktrace-targetobject-constructoropt-">
+			errorconstructor.captureStackTrace(targetObject,constructorOpt?)
+			<span><a class="mark" href="#errorconstructor-capturestacktrace-targetobject-constructoropt-" id="errorconstructor-capturestacktrace-targetobject-constructoropt-">#</a></span>
+		</h3><p>Create .stack property on a target object</p>
+<ul>
+<li><code>@static</code>  </li>
+<li><code>@param</code> <code>targetObject</code>: <a href="#interface-object"><code>Object</code></a> </li>
+<li><code>@param</code> <code>constructorOpt?</code>: <a href="#interface-function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="interface-error">
 			Interface: Error
@@ -569,16 +625,7 @@ dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10&#39;
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</p>
 <ul>
 <li><code>@global</code>  </li>
-</ul>
-<h3 id="error-capturestacktrace-targetobject-constructoropt-">
-			error.captureStackTrace(targetObject,constructorOpt?)
-			<span><a class="mark" href="#error-capturestacktrace-targetobject-constructoropt-" id="error-capturestacktrace-targetobject-constructoropt-">#</a></span>
-		</h3><p>Create .stack property on a target object</p>
-<ul>
-<li><code>@static</code>  </li>
-<li><code>@param</code> <code>targetObject</code>: <a href="#interface-object"><code>Object</code></a> </li>
-<li><code>@param</code> <code>constructorOpt?</code>: <a href="#interface-function"><code>Function</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>@extends</code> <a href="#interface-dict"><code>Dict</code></a></li>
 </ul>
 
 			</div>

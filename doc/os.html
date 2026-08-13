@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -202,37 +208,61 @@
 <h2 id="arch-">
 			arch()
 			<span><a class="mark" href="#arch-" id="arch-">#</a></span>
-		</h2><p>Get CPU arch type</p>
+		</h2><p>Get CPU architecture type of the current device.<br/>Possible values:</p>
 <ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li>&quot;arm64&quot;   64-bit ARM architecture</li>
+<li>&quot;x64&quot;     64-bit x86 architecture</li>
+<li>&quot;arm&quot;     32-bit ARM architecture</li>
+<li>&quot;x86&quot;     32-bit x86 architecture</li>
+<li>&quot;mips&quot;    32-bit MIPS architecture</li>
+<li>&quot;mips64&quot;  64-bit MIPS architecture<br/>Notes:<ul><br/><li>The returned value reflects the runtime CPU architecture,<br/>not the ABI or instruction set availability.</li><br/><li>On emulators or compatibility layers, the value may differ<br/>from the physical hardware.</li><br/><li><code>@return</code>  </li><br/></ul><br/></li>
 </ul>
 <h2 id="name-">
 			name()
 			<span><a class="mark" href="#name-" id="name-">#</a></span>
-		</h2><p>Get OS name, For: <code>Android</code>/<code>iOS</code>/<code>MacOSX</code>/<code>Linux</code></p>
+		</h2><p>Get operating system name.<br/>Possible values:</p>
 <ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li>&quot;Android&quot;</li>
+<li>&quot;iOS&quot;</li>
+<li>&quot;MacOSX&quot;</li>
+<li>&quot;Linux&quot;<br/>Notes:<ul><br/><li>The returned value represents the operating system family,<br/>not a specific distribution or version.</li><br/><li>For Apple platforms, iOS and macOS are reported separately.</li><br/><li><code>@return</code>  </li><br/></ul><br/></li>
 </ul>
 <h2 id="version-">
 			version()
 			<span><a class="mark" href="#version-" id="version-">#</a></span>
-		</h2><p>Get OS version info</p>
+		</h2><p>Get operating system version information.<br/>Platform-specific behavior:</p>
 <ul>
+<li>iOS / macOS:<br/>Returns the system version string.<br/>Example:<ul><br/><li>&quot;17.1.2&quot;</li><br/><li>&quot;14.2&quot;</li><br/></ul><br/></li>
+<li>Android:<br/>Returns the Android OS version.<br/>Example:<ul><br/><li>&quot;14&quot;</li><br/><li>&quot;13&quot;</li><br/></ul><br/></li>
+<li>Linux:<br/>Returns the kernel release version.<br/>Example:<ul><br/><li>&quot;6.6.12-arch1-1&quot;</li><br/><li>&quot;5.15.0-89-generic&quot;<br/>Notes:</li><br/></ul><br/></li>
+<li>The format of the returned string is platform-dependent.</li>
+<li>This value is intended for informational and compatibility<br/>checks, not strict semantic version comparison.</li>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="brand-">
 			brand()
 			<span><a class="mark" href="#brand-" id="brand-">#</a></span>
-		</h2><p>Get the Device brand, For: Apple/Huawei</p>
+		</h2><p>Get device or operating system brand.<br/>Platform-specific behavior:</p>
 <ul>
+<li>Apple platforms (iOS / macOS):<br/>Returns &quot;Apple&quot;.</li>
+<li>Android:<br/>Returns the device manufacturer.<br/>Examples:<ul><br/><li>&quot;google&quot;</li><br/><li>&quot;samsung&quot;</li><br/><li>&quot;Xiaomi&quot;</li><br/><li>&quot;HUAWEI&quot;</li><br/><li>&quot;OPPO&quot;</li><br/><li>&quot;vivo&quot;</li><br/><li>&quot;OnePlus&quot;</li><br/></ul><br/></li>
+<li>Linux:<br/>Returns the distribution name if available.<br/>Examples:<ul><br/><li>&quot;Ubuntu&quot;</li><br/><li>&quot;Arch Linux&quot;</li><br/><li>&quot;Debian GNU/Linux&quot;<br/>Notes:</li><br/></ul><br/></li>
+<li>On some platforms or environments, this value may be empty<br/>or unavailable.</li>
+<li>The returned string should be treated as informational only.</li>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="model-">
 			model()
 			<span><a class="mark" href="#model-" id="model-">#</a></span>
-		</h2><p>Get OS model, iPad‌/iPhone‌/Mac16,10</p>
+		</h2><p>Get device model / platform model identifier.<br/>Platform-specific behavior:</p>
 <ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li>iOS:<br/>Returns device family name.<br/>Possible values:<ul><br/><li>&quot;iPhone&quot;</li><br/><li>&quot;iPad&quot;</li><br/><li>&quot;iPod touch&quot;</li><br/></ul><br/></li>
+<li>macOS:<br/>Returns Apple hardware model identifier.<br/>Example:<ul><br/><li>&quot;Mac16,10&quot;</li><br/></ul><br/></li>
+<li>Android:<br/>Returns OEM device model string (<code>Build.MODEL</code>).<br/>Examples:<ul><br/><li>&quot;Pixel 7&quot;</li><br/><li>&quot;Pixel 8 Pro&quot;</li><br/><li>&quot;SM-S9110&quot;</li><br/><li>&quot;2304FPN6DC&quot;</li><br/><li>&quot;ALN-AL00&quot;</li><br/><li>&quot;sdk_gphone64_arm64&quot; (emulator)</li><br/></ul><br/></li>
+<li>Linux:<br/>No standard device model exists.<br/>Returns an empty string.<br/>Notes:</li>
+<li>The returned value is platform-dependent and not guaranteed<br/>to be comparable across different operating systems.</li>
+<li>This API is intended for identification, logging, and<br/>platform-specific behavior selection, not for strict<br/>device classification.</li>
+<li><code>@return</code>  </li>
 </ul>
 <h2 id="info-">
 			info()

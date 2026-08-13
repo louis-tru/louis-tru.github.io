@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -117,20 +123,6 @@
 <li>
 <span><a href="#quark-event">quark/event</a></span>
 <ul>
-<li>
-<span><a href="#enum-clicktype">Enum: ClickType</a></span>
-<ul>
-<li>
-<span><a href="#clicktype">ClickType</a></span>
-</li>
-</ul>
-<li>
-<span><a href="#enum-highlightedstatus">Enum: HighlightedStatus</a></span>
-<ul>
-<li>
-<span><a href="#highlightedstatus">HighlightedStatus</a></span>
-</li>
-</ul>
 <li>
 <span><a href="#enum-returnvaluemask">Enum: ReturnValueMask</a></span>
 <ul>
@@ -183,6 +175,13 @@
 </li>
 </ul>
 <li>
+<span><a href="#enum-keyboardlocation">Enum: KeyboardLocation</a></span>
+<ul>
+<li>
+<span><a href="#keyboardlocation">KeyboardLocation</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#class-keyevent">Class: KeyEvent</a></span>
 <ul>
 <li>
@@ -195,7 +194,13 @@
 <span><a href="#keyevent-keycode">keyevent.keycode</a></span>
 </li>
 <li>
+<span><a href="#keyevent-code">keyevent.code</a></span>
+</li>
+<li>
 <span><a href="#keyevent-keypress">keyevent.keypress</a></span>
+</li>
+<li>
+<span><a href="#keyevent-location">keyevent.location</a></span>
 </li>
 <li>
 <span><a href="#keyevent-repeat">keyevent.repeat</a></span>
@@ -223,32 +228,36 @@
 </li>
 </ul>
 <li>
+<span><a href="#enum-clicktype">Enum: ClickType</a></span>
+<ul>
+<li>
+<span><a href="#clicktype">ClickType</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#class-clickevent">Class: ClickEvent</a></span>
 <ul>
 <li>
 <span><a href="#clickevent">ClickEvent</a></span>
 </li>
 <li>
-<span><a href="#clickevent-x">clickevent.x</a></span>
+<span><a href="#clickevent-position">clickevent.position</a></span>
 </li>
 <li>
-<span><a href="#clickevent-y">clickevent.y</a></span>
-</li>
-<li>
-<span><a href="#clickevent-count">clickevent.count</a></span>
+<span><a href="#clickevent-multicount">clickevent.multiCount</a></span>
 </li>
 <li>
 <span><a href="#clickevent-type">clickevent.type</a></span>
 </li>
+<li>
+<span><a href="#clickevent-ismulticlick">clickevent.isMultiClick</a></span>
+</li>
 </ul>
 <li>
-<span><a href="#class-highlightedevent">Class: HighlightedEvent</a></span>
+<span><a href="#enum-wheeldeltamode">Enum: WheelDeltaMode</a></span>
 <ul>
 <li>
-<span><a href="#highlightedevent">HighlightedEvent</a></span>
-</li>
-<li>
-<span><a href="#highlightedevent-status">highlightedevent.status</a></span>
+<span><a href="#wheeldeltamode">WheelDeltaMode</a></span>
 </li>
 </ul>
 <li>
@@ -258,10 +267,52 @@
 <span><a href="#mouseevent">MouseEvent</a></span>
 </li>
 <li>
-<span><a href="#mouseevent-x">mouseevent.x</a></span>
+<span><a href="#mouseevent-position">mouseevent.position</a></span>
 </li>
 <li>
-<span><a href="#mouseevent-y">mouseevent.y</a></span>
+<span><a href="#mouseevent-delta">mouseevent.delta</a></span>
+</li>
+<li>
+<span><a href="#mouseevent-level">mouseevent.level</a></span>
+</li>
+<li>
+<span><a href="#mouseevent-deltamode">mouseevent.deltaMode</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-uistate">Enum: UIState</a></span>
+<ul>
+<li>
+<span><a href="#uistate">UIState</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-uistateevent">Class: UIStateEvent</a></span>
+<ul>
+<li>
+<span><a href="#uistateevent">UIStateEvent</a></span>
+</li>
+<li>
+<span><a href="#uistateevent-state">uistateevent.state</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-inputevent">Class: InputEvent</a></span>
+<ul>
+<li>
+<span><a href="#inputevent">InputEvent</a></span>
+</li>
+<li>
+<span><a href="#inputevent-input">inputevent.input</a></span>
+</li>
+<li>
+<span><a href="#inputevent-inputdelete">inputevent.inputDelete</a></span>
+</li>
+<li>
+<span><a href="#inputevent-cursorindex">inputevent.cursorIndex</a></span>
+</li>
+<li>
+<span><a href="#inputevent-inputcontrol">inputevent.inputControl</a></span>
 </li>
 </ul>
 <li>
@@ -274,22 +325,13 @@
 <span><a href="#touchpoint-id">touchpoint.id</a></span>
 </li>
 <li>
-<span><a href="#touchpoint-startx">touchpoint.startX</a></span>
+<span><a href="#touchpoint-startposition">touchpoint.startPosition</a></span>
 </li>
 <li>
-<span><a href="#touchpoint-starty">touchpoint.startY</a></span>
-</li>
-<li>
-<span><a href="#touchpoint-x">touchpoint.x</a></span>
-</li>
-<li>
-<span><a href="#touchpoint-y">touchpoint.y</a></span>
+<span><a href="#touchpoint-position">touchpoint.position</a></span>
 </li>
 <li>
 <span><a href="#touchpoint-force">touchpoint.force</a></span>
-</li>
-<li>
-<span><a href="#touchpoint-clickin">touchpoint.clickIn</a></span>
 </li>
 <li>
 <span><a href="#touchpoint-view">touchpoint.view</a></span>
@@ -303,6 +345,298 @@
 </li>
 <li>
 <span><a href="#touchevent-changedtouches">touchevent.changedTouches</a></span>
+</li>
+<li>
+<span><a href="#touchevent-position">touchevent.position</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-gesturetouchpoint">Class: GestureTouchPoint</a></span>
+<ul>
+<li>
+<span><a href="#gesturetouchpoint">GestureTouchPoint</a></span>
+</li>
+<li>
+<span><a href="#gesturetouchpoint-touch">gesturetouchpoint.touch</a></span>
+</li>
+<li>
+<span><a href="#gesturetouchpoint-constructor-touch-">gesturetouchpoint.constructor(touch)</a></span>
+</li>
+<li>
+<span><a href="#gesturetouchpoint-center">gesturetouchpoint.center</a></span>
+</li>
+<li>
+<span><a href="#gesturetouchpoint-distance">gesturetouchpoint.distance</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-gesturestage">Enum: GestureStage</a></span>
+<ul>
+<li>
+<span><a href="#gesturestage">GestureStage</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-gesturetype">Enum: GestureType</a></span>
+<ul>
+<li>
+<span><a href="#gesturetype">GestureType</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-gestureevent">Class: GestureEvent</a></span>
+<ul>
+<li>
+<span><a href="#gestureevent">GestureEvent</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-expectedfingercount">gestureevent.expectedFingerCount</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-swipedistance">gestureevent.swipeDistance</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-swipevelocity">gestureevent.swipeVelocity</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-inittimestamp">gestureevent.initTimestamp</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-lastvelocityweight">gestureevent.lastVelocityWeight</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-id">gestureevent.id</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-starttimestamp">gestureevent.startTimestamp</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-stage">gestureevent.stage</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-initdistance">gestureevent.initDistance</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-initvelocity">gestureevent.initVelocity</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-distance">gestureevent.distance</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-velocity">gestureevent.velocity</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-lastvelocity">gestureevent.lastVelocity</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-touchs">gestureevent.touchs</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-sealed">gestureevent.sealed</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-first">gestureevent.first</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-last">gestureevent.last</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-length">gestureevent.length</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-constructor-origin-id-timestamp-">gestureevent.constructor(origin,id,timestamp)</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-isinitialstage-">gestureevent.isInitialStage()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-isswipetriggered-">gestureevent.isSwipeTriggered()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-reject-">gestureevent.reject()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-seal-">gestureevent.seal()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-startposition-">gestureevent.startPosition()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-position-">gestureevent.position()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-center-">gestureevent.center()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-rotation-isdegree-">gestureevent.rotation(isDegree)</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-scale-">gestureevent.scale()</a></span>
+</li>
+<li>
+<span><a href="#gestureevent-distanceoftwofinger-">gestureevent.distanceOfTwoFinger()</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-spineeventtype">Enum: SpineEventType</a></span>
+<ul>
+<li>
+<span><a href="#spineeventtype">SpineEventType</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-spineeventdata">Interface: SpineEventData</a></span>
+<ul>
+<li>
+<span><a href="#spineeventdata">SpineEventData</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-name">spineeventdata.name</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-time">spineeventdata.time</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-intvalue">spineeventdata.intValue</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-floatvalue">spineeventdata.floatValue</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-stringvalue">spineeventdata.stringValue</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-audiopath">spineeventdata.audioPath</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-volume">spineeventdata.volume</a></span>
+</li>
+<li>
+<span><a href="#spineeventdata-balance">spineeventdata.balance</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-spineevent">Class: SpineEvent</a></span>
+<ul>
+<li>
+<span><a href="#spineevent">SpineEvent</a></span>
+</li>
+<li>
+<span><a href="#spineevent-origin">spineevent.origin</a></span>
+</li>
+<li>
+<span><a href="#spineevent-type">spineevent.type</a></span>
+</li>
+<li>
+<span><a href="#spineevent-trackindex">spineevent.trackIndex</a></span>
+</li>
+<li>
+<span><a href="#spineevent-animationname">spineevent.animationName</a></span>
+</li>
+<li>
+<span><a href="#spineevent-tracktime">spineevent.trackTime</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-spineextevent">Class: SpineExtEvent</a></span>
+<ul>
+<li>
+<span><a href="#spineextevent">SpineExtEvent</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-staticdata">spineextevent.staticData</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-time">spineextevent.time</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-intvalue">spineextevent.intValue</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-floatvalue">spineextevent.floatValue</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-stringvalue">spineextevent.stringValue</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-volume">spineextevent.volume</a></span>
+</li>
+<li>
+<span><a href="#spineextevent-balance">spineextevent.balance</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-agentstateevent">Class: AgentStateEvent</a></span>
+<ul>
+<li>
+<span><a href="#agentstateevent">AgentStateEvent</a></span>
+</li>
+<li>
+<span><a href="#agentstateevent-origin">agentstateevent.origin</a></span>
+</li>
+<li>
+<span><a href="#agentstateevent-velocity">agentstateevent.velocity</a></span>
+</li>
+<li>
+<span><a href="#agentstateevent-heading">agentstateevent.heading</a></span>
+</li>
+<li>
+<span><a href="#agentstateevent-target">agentstateevent.target</a></span>
+</li>
+<li>
+<span><a href="#agentstateevent-moving">agentstateevent.moving</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-arrivepositionevent">Class: ArrivePositionEvent</a></span>
+<ul>
+<li>
+<span><a href="#arrivepositionevent">ArrivePositionEvent</a></span>
+</li>
+<li>
+<span><a href="#arrivepositionevent-tonext">arrivepositionevent.toNext</a></span>
+</li>
+<li>
+<span><a href="#arrivepositionevent-waypointindex">arrivepositionevent.waypointIndex</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#enum-movementstate">Enum: MovementState</a></span>
+<ul>
+<li>
+<span><a href="#movementstate">MovementState</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-agentmovementevent">Class: AgentMovementEvent</a></span>
+<ul>
+<li>
+<span><a href="#agentmovementevent">AgentMovementEvent</a></span>
+</li>
+<li>
+<span><a href="#agentmovementevent-movementstate">agentmovementevent.movementState</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-discoveryagentevent">Class: DiscoveryAgentEvent</a></span>
+<ul>
+<li>
+<span><a href="#discoveryagentevent">DiscoveryAgentEvent</a></span>
+</li>
+<li>
+<span><a href="#discoveryagentevent-origin">discoveryagentevent.origin</a></span>
+</li>
+<li>
+<span><a href="#discoveryagentevent-agent">discoveryagentevent.agent</a></span>
+</li>
+<li>
+<span><a href="#discoveryagentevent-location">discoveryagentevent.location</a></span>
+</li>
+<li>
+<span><a href="#discoveryagentevent-level">discoveryagentevent.level</a></span>
+</li>
+<li>
+<span><a href="#discoveryagentevent-entering">discoveryagentevent.entering</a></span>
 </li>
 </ul>
 <li>
@@ -322,31 +656,7 @@
 				<h1 id="quark-event">
 			quark/event
 			<span><a class="mark" href="#quark-event" id="quark-event">#</a></span>
-		</h1><h2 id="enum-clicktype">
-			Enum: ClickType
-			<span><a class="mark" href="#enum-clicktype" id="enum-clicktype">#</a></span>
-		</h2><h3 id="clicktype">
-			ClickType
-			<span><a class="mark" href="#clicktype" id="clicktype">#</a></span>
-		</h3><p>The type or device that triggers the click event, such as using a touch screen or a mouse</p>
-<ul>
-<li><code>Touch</code><br>touchscreen </li>
-<li><code>Keyboard</code><br>Press Enter on the keyboard or press OK on the remote control </li>
-<li><code>Mouse</code><br>mouse </li>
-</ul>
-<h2 id="enum-highlightedstatus">
-			Enum: HighlightedStatus
-			<span><a class="mark" href="#enum-highlightedstatus" id="enum-highlightedstatus">#</a></span>
-		</h2><h3 id="highlightedstatus">
-			HighlightedStatus
-			<span><a class="mark" href="#highlightedstatus" id="highlightedstatus">#</a></span>
-		</h3><p>Status type of event <code>Highlighted</code></p>
-<ul>
-<li><code>Normal</code><br>Normal situation </li>
-<li><code>Hover</code><br>When the mouse moves over the view or the focus switches to the view </li>
-<li><code>Active</code><br>When the mouse is pressed or the OK button is pressed on the remote control </li>
-</ul>
-<h2 id="enum-returnvaluemask">
+		</h1><h2 id="enum-returnvaluemask">
 			Enum: ReturnValueMask
 			<span><a class="mark" href="#enum-returnvaluemask" id="enum-returnvaluemask">#</a></span>
 		</h2><h3 id="returnvaluemask">
@@ -366,6 +676,7 @@
 			<span><a class="mark" href="#uievent" id="uievent">#</a></span>
 		</h3><ul>
 <li><code>@extends</code> <a href="$event.html#event"><code>Event</code></a></li>
+<li><code>@template</code> &lt;<code>SendData</code>&gt;</li>
 </ul>
 <h3 id="uievent-origin">
 			uievent.origin
@@ -377,9 +688,9 @@
 <h3 id="uievent-timestamp">
 			uievent.timestamp
 			<span><a class="mark" href="#uievent-timestamp" id="uievent-timestamp">#</a></span>
-		</h3><p>The time when the event is triggered </p>
+		</h3><p>The time when the event is created, in milliseconds </p>
 <ul>
-<li><code>@get</code> <code>timestamp</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>timestamp</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
 </ul>
 <h3 id="uievent-isdefault">
 			uievent.isDefault
@@ -446,6 +757,13 @@
 <ul>
 <li><code>@get</code> <code>looped</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
+<h2 id="enum-keyboardlocation">
+			Enum: KeyboardLocation
+			<span><a class="mark" href="#enum-keyboardlocation" id="enum-keyboardlocation">#</a></span>
+		</h2><h3 id="keyboardlocation">
+			KeyboardLocation
+			<span><a class="mark" href="#keyboardlocation" id="keyboardlocation">#</a></span>
+		</h3><p>Keyboard location on the device </p>
 <h2 id="class-keyevent">
 			Class: KeyEvent
 			<span><a class="mark" href="#class-keyevent" id="class-keyevent">#</a></span>
@@ -467,7 +785,14 @@
 			<span><a class="mark" href="#keyevent-keycode" id="keyevent-keycode">#</a></span>
 		</h3><p>Keyboard Code </p>
 <ul>
-<li><code>@get</code> <code>keycode</code>: <a href="keyboard.html#keyboardkeycode"><code>KeyboardKeyCode</code></a> </li>
+<li><code>@get</code> <code>keycode</code>: <a href="keyboard.html#keyboardcode"><code>KeyboardCode</code></a> </li>
+</ul>
+<h3 id="keyevent-code">
+			keyevent.code
+			<span><a class="mark" href="#keyevent-code" id="keyevent-code">#</a></span>
+		</h3><p>Keyboard code for physical key </p>
+<ul>
+<li><code>@get</code> <code>code</code>: <a href="keyboard.html#keyboardcode"><code>KeyboardCode</code></a> </li>
 </ul>
 <h3 id="keyevent-keypress">
 			keyevent.keypress
@@ -475,6 +800,13 @@
 		</h3><p>Ascii code converted from keyboard code </p>
 <ul>
 <li><code>@get</code> <code>keypress</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="keyevent-location">
+			keyevent.location
+			<span><a class="mark" href="#keyevent-location" id="keyevent-location">#</a></span>
+		</h3><p>The location of the key on the keyboard or device </p>
+<ul>
+<li><code>@get</code> <code>location</code>: <a href="#enum-keyboardlocation"><code>KeyboardLocation</code></a> </li>
 </ul>
 <h3 id="keyevent-repeat">
 			keyevent.repeat
@@ -507,7 +839,7 @@
 <h3 id="keyevent-command">
 			keyevent.command
 			<span><a class="mark" href="#keyevent-command" id="keyevent-command">#</a></span>
-		</h3><p>Is the command key pressed </p>
+		</h3><p>Is the command/meta/windows key pressed </p>
 <ul>
 <li><code>@get</code> <code>command</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
@@ -532,6 +864,18 @@
 <ul>
 <li><code>@get</code> <code>source</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
+<h2 id="enum-clicktype">
+			Enum: ClickType
+			<span><a class="mark" href="#enum-clicktype" id="enum-clicktype">#</a></span>
+		</h2><h3 id="clicktype">
+			ClickType
+			<span><a class="mark" href="#clicktype" id="clicktype">#</a></span>
+		</h3><p>The type or device that triggers the click event, such as using a touch screen or a mouse</p>
+<ul>
+<li><code>Mouse</code><br>mouse </li>
+<li><code>Touch</code><br>touchscreen </li>
+<li><code>Keyboard</code><br>Press Enter on the keyboard or press OK on the remote control </li>
+</ul>
 <h2 id="class-clickevent">
 			Class: ClickEvent
 			<span><a class="mark" href="#class-clickevent" id="class-clickevent">#</a></span>
@@ -541,26 +885,19 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
 </ul>
-<h3 id="clickevent-x">
-			clickevent.x
-			<span><a class="mark" href="#clickevent-x" id="clickevent-x">#</a></span>
-		</h3><p>The cursor position in the window x </p>
+<h3 id="clickevent-position">
+			clickevent.position
+			<span><a class="mark" href="#clickevent-position" id="clickevent-position">#</a></span>
+		</h3><p>The cursor position in the window </p>
 <ul>
-<li><code>@get</code> <code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
 </ul>
-<h3 id="clickevent-y">
-			clickevent.y
-			<span><a class="mark" href="#clickevent-y" id="clickevent-y">#</a></span>
-		</h3><p>The cursor position in the window y </p>
-<ul>
-<li><code>@get</code> <code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="clickevent-count">
-			clickevent.count
-			<span><a class="mark" href="#clickevent-count" id="clickevent-count">#</a></span>
+<h3 id="clickevent-multicount">
+			clickevent.multiCount
+			<span><a class="mark" href="#clickevent-multicount" id="clickevent-multicount">#</a></span>
 		</h3><p>Number of consecutive clicks, possibly double clicks </p>
 <ul>
-<li><code>@get</code> <code>count</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>multiCount</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="clickevent-type">
 			clickevent.type
@@ -569,22 +906,23 @@
 <ul>
 <li><code>@get</code> <code>type</code>: <a href="#enum-clicktype"><code>ClickType</code></a> </li>
 </ul>
-<h2 id="class-highlightedevent">
-			Class: HighlightedEvent
-			<span><a class="mark" href="#class-highlightedevent" id="class-highlightedevent">#</a></span>
-		</h2><h3 id="highlightedevent">
-			HighlightedEvent
-			<span><a class="mark" href="#highlightedevent" id="highlightedevent">#</a></span>
-		</h3><p>When this event triggers, <br/>the highlighted state that the view should enter after triggering certain events.<br/>For example: when the mouse enters the view, the state is <code>Hover</code></p>
+<h3 id="clickevent-ismulticlick">
+			clickevent.isMultiClick
+			<span><a class="mark" href="#clickevent-ismulticlick" id="clickevent-ismulticlick">#</a></span>
+		</h3><p>Whether it is a multi-click event </p>
 <ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+<li><code>@get</code> <code>isMultiClick</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h3 id="highlightedevent-status">
-			highlightedevent.status
-			<span><a class="mark" href="#highlightedevent-status" id="highlightedevent-status">#</a></span>
-		</h3><p>Highlight state type </p>
+<h2 id="enum-wheeldeltamode">
+			Enum: WheelDeltaMode
+			<span><a class="mark" href="#enum-wheeldeltamode" id="enum-wheeldeltamode">#</a></span>
+		</h2><h3 id="wheeldeltamode">
+			WheelDeltaMode
+			<span><a class="mark" href="#wheeldeltamode" id="wheeldeltamode">#</a></span>
+		</h3><p>Describes the semantic unit of a mouse wheel delta.<br/>Different input devices report scroll deltas in fundamentally different ways:</p>
 <ul>
-<li><code>@get</code> <code>status</code>: <a href="#enum-highlightedstatus"><code>HighlightedStatus</code></a> </li>
+<li>Line:<br/>Discrete, step-based scrolling typically produced by a physical mouse wheel.<br/>Each event represents one logical &quot;notch&quot; (line step), not a precise distance.<br/>The actual pixel movement should be determined by the application<br/>(e.g. multiply by line height or a fixed step size).</li>
+<li>Pixel:<br/>Continuous, high-precision scrolling produced by devices like trackpads.<br/>The delta represents a true pixel-based movement and can be applied<br/>directly for smooth, inertial scrolling.<br/>This distinction allows scroll views or editors to interpret the same input<br/>differently, providing consistent behavior across mice and touchpads.</li>
 </ul>
 <h2 id="class-mouseevent">
 			Class: MouseEvent
@@ -595,19 +933,101 @@
 		</h3><ul>
 <li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
 </ul>
-<h3 id="mouseevent-x">
-			mouseevent.x
-			<span><a class="mark" href="#mouseevent-x" id="mouseevent-x">#</a></span>
-		</h3><p>The cursor position in the window x </p>
+<h3 id="mouseevent-position">
+			mouseevent.position
+			<span><a class="mark" href="#mouseevent-position" id="mouseevent-position">#</a></span>
+		</h3><p>The cursor position in the window </p>
 <ul>
-<li><code>@get</code> <code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
 </ul>
-<h3 id="mouseevent-y">
-			mouseevent.y
-			<span><a class="mark" href="#mouseevent-y" id="mouseevent-y">#</a></span>
-		</h3><p>The cursor position in the window y </p>
+<h3 id="mouseevent-delta">
+			mouseevent.delta
+			<span><a class="mark" href="#mouseevent-delta" id="mouseevent-delta">#</a></span>
+		</h3><p>The Wheel delta only </p>
 <ul>
-<li><code>@get</code> <code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>delta</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="mouseevent-level">
+			mouseevent.level
+			<span><a class="mark" href="#mouseevent-level" id="mouseevent-level">#</a></span>
+		</h3><p>The current view level under the mouse cursor </p>
+<ul>
+<li><code>@get</code> <code>level</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="mouseevent-deltamode">
+			mouseevent.deltaMode
+			<span><a class="mark" href="#mouseevent-deltamode" id="mouseevent-deltamode">#</a></span>
+		</h3><p>The unit of the wheel delta, either in lines or pixels </p>
+<ul>
+<li><code>@get</code> <code>deltaMode</code>: <a href="#enum-wheeldeltamode"><code>WheelDeltaMode</code></a> </li>
+</ul>
+<h2 id="enum-uistate">
+			Enum: UIState
+			<span><a class="mark" href="#enum-uistate" id="enum-uistate">#</a></span>
+		</h2><h3 id="uistate">
+			UIState
+			<span><a class="mark" href="#uistate" id="uistate">#</a></span>
+		</h3><p>Status type of event <code>UIState</code></p>
+<ul>
+<li><code>None</code><br>No status </li>
+<li><code>Normal</code><br>Normal situation </li>
+<li><code>Hover</code><br>When the mouse moves over the view or the focus switches to the view </li>
+<li><code>Active</code><br>When the mouse is pressed or the OK button is pressed on the remote control </li>
+</ul>
+<h2 id="class-uistateevent">
+			Class: UIStateEvent
+			<span><a class="mark" href="#class-uistateevent" id="class-uistateevent">#</a></span>
+		</h2><h3 id="uistateevent">
+			UIStateEvent
+			<span><a class="mark" href="#uistateevent" id="uistateevent">#</a></span>
+		</h3><p>When this event triggers, <br/>the UI state that the view should enter after triggering certain events.<br/>For example: when the mouse enters the view, the state is <code>Hover</code></p>
+<ul>
+<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="uistateevent-state">
+			uistateevent.state
+			<span><a class="mark" href="#uistateevent-state" id="uistateevent-state">#</a></span>
+		</h3><p>UI state type </p>
+<ul>
+<li><code>@get</code> <code>state</code>: <a href="#enum-uistate"><code>UIState</code></a> </li>
+</ul>
+<h2 id="class-inputevent">
+			Class: InputEvent
+			<span><a class="mark" href="#class-inputevent" id="class-inputevent">#</a></span>
+		</h2><h3 id="inputevent">
+			InputEvent
+			<span><a class="mark" href="#inputevent" id="inputevent">#</a></span>
+		</h3><p>InputEvent payload.<br/>Note: actual semantic is defined by the bound event type.<br/>Receivers should only access the field relevant to the event.</p>
+<ul>
+<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="inputevent-input">
+			inputevent.input
+			<span><a class="mark" href="#inputevent-input" id="inputevent-input">#</a></span>
+		</h3><p>input text that includes input text or marked text or unmarked text </p>
+<ul>
+<li><code>@get</code> <code>input</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="inputevent-inputdelete">
+			inputevent.inputDelete
+			<span><a class="mark" href="#inputevent-inputdelete" id="inputevent-inputdelete">#</a></span>
+		</h3><p>delete char count </p>
+<ul>
+<li><code>@get</code> <code>inputDelete</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="inputevent-cursorindex">
+			inputevent.cursorIndex
+			<span><a class="mark" href="#inputevent-cursorindex" id="inputevent-cursorindex">#</a></span>
+		</h3><p>cursor index after input </p>
+<ul>
+<li><code>@get</code> <code>cursorIndex</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="inputevent-inputcontrol">
+			inputevent.inputControl
+			<span><a class="mark" href="#inputevent-inputcontrol" id="inputevent-inputcontrol">#</a></span>
+		</h3><p>control keycode </p>
+<ul>
+<li><code>@get</code> <code>inputControl</code>: <a href="keyboard.html#keyboardcode"><code>KeyboardCode</code></a> </li>
 </ul>
 <h2 id="interface-touchpoint">
 			Interface: TouchPoint
@@ -623,33 +1043,19 @@
 <ul>
 <li><code>@get</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
-<h3 id="touchpoint-startx">
-			touchpoint.startX
-			<span><a class="mark" href="#touchpoint-startx" id="touchpoint-startx">#</a></span>
-		</h3><p>The position x of the touchpoint in the window when it is first pressed </p>
+<h3 id="touchpoint-startposition">
+			touchpoint.startPosition
+			<span><a class="mark" href="#touchpoint-startposition" id="touchpoint-startposition">#</a></span>
+		</h3><p>The position x/y of the touchpoint in the window when it is first pressed </p>
 <ul>
-<li><code>@get</code> <code>startX</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>startPosition</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
 </ul>
-<h3 id="touchpoint-starty">
-			touchpoint.startY
-			<span><a class="mark" href="#touchpoint-starty" id="touchpoint-starty">#</a></span>
-		</h3><p>The position y of the touchpoint in the window when it is first pressed </p>
+<h3 id="touchpoint-position">
+			touchpoint.position
+			<span><a class="mark" href="#touchpoint-position" id="touchpoint-position">#</a></span>
+		</h3><p>The position of the touchpoint in the window </p>
 <ul>
-<li><code>@get</code> <code>startY</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="touchpoint-x">
-			touchpoint.x
-			<span><a class="mark" href="#touchpoint-x" id="touchpoint-x">#</a></span>
-		</h3><p>The position of the touchpoint in the window x </p>
-<ul>
-<li><code>@get</code> <code>x</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="touchpoint-y">
-			touchpoint.y
-			<span><a class="mark" href="#touchpoint-y" id="touchpoint-y">#</a></span>
-		</h3><p>The position of the touchpoint in the window y </p>
-<ul>
-<li><code>@get</code> <code>y</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
 </ul>
 <h3 id="touchpoint-force">
 			touchpoint.force
@@ -657,13 +1063,6 @@
 		</h3><p>touchpoint pressure strength, value range [0-1] </p>
 <ul>
 <li><code>@get</code> <code>force</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="touchpoint-clickin">
-			touchpoint.clickIn
-			<span><a class="mark" href="#touchpoint-clickin" id="touchpoint-clickin">#</a></span>
-		</h3><p>Whether the touchpoint is still within the click range.<br/>If the touchpoint is within the click range when it is pressed,<br/>the touchpoint may move out of the range later. </p>
-<ul>
-<li><code>@get</code> <code>clickIn</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="touchpoint-view">
 			touchpoint.view
@@ -687,6 +1086,593 @@
 		</h3><p>Touch point collection </p>
 <ul>
 <li><code>@get</code> <code>changedTouches</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a><code>[]</code> </li>
+</ul>
+<h3 id="touchevent-position">
+			touchevent.position
+			<span><a class="mark" href="#touchevent-position" id="touchevent-position">#</a></span>
+		</h3><p>first touch point position </p>
+<ul>
+<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h2 id="class-gesturetouchpoint">
+			Class: GestureTouchPoint
+			<span><a class="mark" href="#class-gesturetouchpoint" id="class-gesturetouchpoint">#</a></span>
+		</h2><h3 id="gesturetouchpoint">
+			GestureTouchPoint
+			<span><a class="mark" href="#gesturetouchpoint" id="gesturetouchpoint">#</a></span>
+		</h3><ul>
+<li><code>@implements</code> <a href="#interface-touchpoint"><code>TouchPoint</code></a></li>
+</ul>
+<h3 id="gesturetouchpoint-touch">
+			gesturetouchpoint.touch
+			<span><a class="mark" href="#gesturetouchpoint-touch" id="gesturetouchpoint-touch">#</a></span>
+		</h3><p>The reference touch point</p>
+<ul>
+<li><code>@get</code> <code>touch</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a> </li>
+</ul>
+<h3 id="gesturetouchpoint-constructor-touch-">
+			gesturetouchpoint.constructor(touch)
+			<span><a class="mark" href="#gesturetouchpoint-constructor-touch-" id="gesturetouchpoint-constructor-touch-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>touch</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a> The reference touch point</li>
+</ul>
+<h3 id="gesturetouchpoint-center">
+			gesturetouchpoint.center
+			<span><a class="mark" href="#gesturetouchpoint-center" id="gesturetouchpoint-center">#</a></span>
+		</h3><p>start and current position mid point</p>
+<ul>
+<li><code>@get</code> <code>center</code>:  </li>
+</ul>
+<h3 id="gesturetouchpoint-distance">
+			gesturetouchpoint.distance
+			<span><a class="mark" href="#gesturetouchpoint-distance" id="gesturetouchpoint-distance">#</a></span>
+		</h3><p>The gesture movement distance, for example, the distance moved by a finger</p>
+<ul>
+<li><code>@get</code> <code>distance</code>:  </li>
+</ul>
+<h2 id="enum-gesturestage">
+			Enum: GestureStage
+			<span><a class="mark" href="#enum-gesturestage" id="enum-gesturestage">#</a></span>
+		</h2><h3 id="gesturestage">
+			GestureStage
+			<span><a class="mark" href="#gesturestage" id="gesturestage">#</a></span>
+		</h3><p>Gesture stage</p>
+<ul>
+<li><code>Start</code><br>The gesture has just started </li>
+<li><code>Change</code><br>The gesture is changing </li>
+<li><code>End</code><br>The gesture has ended </li>
+<li><code>Cancel</code><br>The gesture has been cancelled </li>
+</ul>
+<h2 id="enum-gesturetype">
+			Enum: GestureType
+			<span><a class="mark" href="#enum-gesturetype" id="enum-gesturetype">#</a></span>
+		</h2><h3 id="gesturetype">
+			GestureType
+			<span><a class="mark" href="#gesturetype" id="gesturetype">#</a></span>
+		</h3><p>Gesture event type</p>
+<h2 id="class-gestureevent">
+			Class: GestureEvent
+			<span><a class="mark" href="#class-gestureevent" id="class-gestureevent">#</a></span>
+		</h2><h3 id="gestureevent">
+			GestureEvent
+			<span><a class="mark" href="#gestureevent" id="gestureevent">#</a></span>
+		</h3><p>Gesture event, such as pan, swipe, pinch, rotate, etc.</p>
+<ul>
+<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="gestureevent-expectedfingercount">
+			gestureevent.expectedFingerCount
+			<span><a class="mark" href="#gestureevent-expectedfingercount" id="gestureevent-expectedfingercount">#</a></span>
+		</h3><p>Get or set the expected number of touch points for the gesture event </p>
+<ul>
+<li><code>@get</code> <code>expectedFingerCount</code>:  </li>
+</ul>
+<h3 id="gestureevent-swipedistance">
+			gestureevent.swipeDistance
+			<span><a class="mark" href="#gestureevent-swipedistance" id="gestureevent-swipedistance">#</a></span>
+		</h3><p>Get or set the minimum distance (in points) that a swipe gesture needs to move </p>
+<ul>
+<li><code>@get</code> <code>swipeDistance</code>:  </li>
+</ul>
+<h3 id="gestureevent-swipevelocity">
+			gestureevent.swipeVelocity
+			<span><a class="mark" href="#gestureevent-swipevelocity" id="gestureevent-swipevelocity">#</a></span>
+		</h3><p>Get or set the minimum speed (in points per second) that a swipe gesture needs to move </p>
+<ul>
+<li><code>@get</code> <code>swipeVelocity</code>:  </li>
+</ul>
+<h3 id="gestureevent-inittimestamp">
+			gestureevent.initTimestamp
+			<span><a class="mark" href="#gestureevent-inittimestamp" id="gestureevent-inittimestamp">#</a></span>
+		</h3><p>Get or set the initial velocity calculation time window, in milliseconds </p>
+<ul>
+<li><code>@get</code> <code>initTimestamp</code>:  </li>
+</ul>
+<h3 id="gestureevent-lastvelocityweight">
+			gestureevent.lastVelocityWeight
+			<span><a class="mark" href="#gestureevent-lastvelocityweight" id="gestureevent-lastvelocityweight">#</a></span>
+		</h3><p>Get or set the last velocity smoothing weight, value range [0, 0.95], default is 0.85 </p>
+<ul>
+<li><code>@get</code> <code>lastVelocityWeight</code>:  </li>
+</ul>
+<h3 id="gestureevent-id">
+			gestureevent.id
+			<span><a class="mark" href="#gestureevent-id" id="gestureevent-id">#</a></span>
+		</h3><p>The gesture context number id </p>
+<ul>
+<li><code>@get</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="gestureevent-starttimestamp">
+			gestureevent.startTimestamp
+			<span><a class="mark" href="#gestureevent-starttimestamp" id="gestureevent-starttimestamp">#</a></span>
+		</h3><p>The gesture start timestamp, in milliseconds </p>
+<ul>
+<li><code>@get</code> <code>startTimestamp</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="gestureevent-stage">
+			gestureevent.stage
+			<span><a class="mark" href="#gestureevent-stage" id="gestureevent-stage">#</a></span>
+		</h3><p>The current gesture stage </p>
+<ul>
+<li><code>@get</code> <code>stage</code>: <a href="#enum-gesturestage"><code>GestureStage</code></a> </li>
+</ul>
+<h3 id="gestureevent-initdistance">
+			gestureevent.initDistance
+			<span><a class="mark" href="#gestureevent-initdistance" id="gestureevent-initdistance">#</a></span>
+		</h3><p>The gesture initial distance </p>
+<ul>
+<li><code>@get</code> <code>initDistance</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-initvelocity">
+			gestureevent.initVelocity
+			<span><a class="mark" href="#gestureevent-initvelocity" id="gestureevent-initvelocity">#</a></span>
+		</h3><p>The gesture initial speed, in dp per second </p>
+<ul>
+<li><code>@get</code> <code>initVelocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-distance">
+			gestureevent.distance
+			<span><a class="mark" href="#gestureevent-distance" id="gestureevent-distance">#</a></span>
+		</h3><p>The gesture movement distance </p>
+<ul>
+<li><code>@get</code> <code>distance</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-velocity">
+			gestureevent.velocity
+			<span><a class="mark" href="#gestureevent-velocity" id="gestureevent-velocity">#</a></span>
+		</h3><p>The gesture speed, in dp per second </p>
+<ul>
+<li><code>@get</code> <code>velocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-lastvelocity">
+			gestureevent.lastVelocity
+			<span><a class="mark" href="#gestureevent-lastvelocity" id="gestureevent-lastvelocity">#</a></span>
+		</h3><p>The gesture speed in the last frame, in dp per second </p>
+<ul>
+<li><code>@get</code> <code>lastVelocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-touchs">
+			gestureevent.touchs
+			<span><a class="mark" href="#gestureevent-touchs" id="gestureevent-touchs">#</a></span>
+		</h3><p>The gesture touch points </p>
+<ul>
+<li><code>@get</code> <code>touchs</code>: <a href="#class-gesturetouchpoint"><code>GestureTouchPoint</code></a><code>[]</code> </li>
+</ul>
+<h3 id="gestureevent-sealed">
+			gestureevent.sealed
+			<span><a class="mark" href="#gestureevent-sealed" id="gestureevent-sealed">#</a></span>
+		</h3><p>Whether the gesture is sealed </p>
+<ul>
+<li><code>@get</code> <code>sealed</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="gestureevent-first">
+			gestureevent.first
+			<span><a class="mark" href="#gestureevent-first" id="gestureevent-first">#</a></span>
+		</h3><p>The first gesture touch point </p>
+<ul>
+<li><code>@get</code> <code>first</code>:  </li>
+</ul>
+<h3 id="gestureevent-last">
+			gestureevent.last
+			<span><a class="mark" href="#gestureevent-last" id="gestureevent-last">#</a></span>
+		</h3><p>The last gesture touch point </p>
+<ul>
+<li><code>@get</code> <code>last</code>:  </li>
+</ul>
+<h3 id="gestureevent-length">
+			gestureevent.length
+			<span><a class="mark" href="#gestureevent-length" id="gestureevent-length">#</a></span>
+		</h3><p>The number of gesture touch points </p>
+<ul>
+<li><code>@get</code> <code>length</code>:  </li>
+</ul>
+<h3 id="gestureevent-constructor-origin-id-timestamp-">
+			gestureevent.constructor(origin,id,timestamp)
+			<span><a class="mark" href="#gestureevent-constructor-origin-id-timestamp-" id="gestureevent-constructor-origin-id-timestamp-">#</a></span>
+		</h3><ul>
+<li><code>@param</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> The gesture context number id</li>
+<li><code>@param</code> <code>timestamp</code>: <a href="numbers.html#int"><code>Int</code></a> The gesture start timestamp, in milliseconds</li>
+<li><code>@param</code> <code>origin</code>: <a href="view.html#view"><code>View</code></a> </li>
+</ul>
+<h3 id="gestureevent-isinitialstage-">
+			gestureevent.isInitialStage()
+			<span><a class="mark" href="#gestureevent-isinitialstage-" id="gestureevent-isinitialstage-">#</a></span>
+		</h3><p>Whether the gesture is in the initial stage </p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="gestureevent-isswipetriggered-">
+			gestureevent.isSwipeTriggered()
+			<span><a class="mark" href="#gestureevent-isswipetriggered-" id="gestureevent-isswipetriggered-">#</a></span>
+		</h3><p>Whether the gesture has been triggered </p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="gestureevent-reject-">
+			gestureevent.reject()
+			<span><a class="mark" href="#gestureevent-reject-" id="gestureevent-reject-">#</a></span>
+		</h3><p>Reject the current start point, point will be sent to next gesture event flow.<br/>Only valid in the <code>Start</code> stage, and the temp state will be cleared when the call ends.</p>
+<h3 id="gestureevent-seal-">
+			gestureevent.seal()
+			<span><a class="mark" href="#gestureevent-seal-" id="gestureevent-seal-">#</a></span>
+		</h3><p>Prevent the creation of new gesture contexts for<br/>subsequent new points and close the flow of gestures backwards.</p>
+<h3 id="gestureevent-startposition-">
+			gestureevent.startPosition()
+			<span><a class="mark" href="#gestureevent-startposition-" id="gestureevent-startposition-">#</a></span>
+		</h3><p>Get the mid point of all touch points&#39; start position</p>
+<ul>
+<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-position-">
+			gestureevent.position()
+			<span><a class="mark" href="#gestureevent-position-" id="gestureevent-position-">#</a></span>
+		</h3><p>Get the mid point of all touch points&#39; current position</p>
+<ul>
+<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-center-">
+			gestureevent.center()
+			<span><a class="mark" href="#gestureevent-center-" id="gestureevent-center-">#</a></span>
+		</h3><p>Get the mid point of all touch points&#39; start position and current position</p>
+<ul>
+<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="gestureevent-rotation-isdegree-">
+			gestureevent.rotation(isDegree)
+			<span><a class="mark" href="#gestureevent-rotation-isdegree-" id="gestureevent-rotation-isdegree-">#</a></span>
+		</h3><p>Get the relative rotation angle (radians or degree) between two touch points.<br/>Positive = counter-clockwise, Negative = clockwise.</p>
+<ul>
+<li><code>@param</code> <code>isDegree</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="gestureevent-scale-">
+			gestureevent.scale()
+			<span><a class="mark" href="#gestureevent-scale-" id="gestureevent-scale-">#</a></span>
+		</h3><p>Get the scale of the first two touch points<br/>If there are less than two touch points, 1 is returned</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="gestureevent-distanceoftwofinger-">
+			gestureevent.distanceOfTwoFinger()
+			<span><a class="mark" href="#gestureevent-distanceoftwofinger-" id="gestureevent-distanceoftwofinger-">#</a></span>
+		</h3><p>Get the distance vector between two touch points</p>
+<ul>
+<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h2 id="enum-spineeventtype">
+			Enum: SpineEventType
+			<span><a class="mark" href="#enum-spineeventtype" id="enum-spineeventtype">#</a></span>
+		</h2><h3 id="spineeventtype">
+			SpineEventType
+			<span><a class="mark" href="#spineeventtype" id="spineeventtype">#</a></span>
+		</h3><p>Spine animation event types</p>
+<ul>
+<li><code>Start_Type</code>  Animation started</li>
+<li><code>Interrupt_Type</code>  Animation interrupted</li>
+<li><code>End_Type</code>  Animation reached its end</li>
+<li><code>Complete_Type</code>  Animation completed one loop</li>
+<li><code>Dispose_Type</code>  Animation (TrackEntry) disposed</li>
+<li><code>ExtEvent_Type</code>  Custom extend Spine event</li>
+</ul>
+<h2 id="interface-spineeventdata">
+			Interface: SpineEventData
+			<span><a class="mark" href="#interface-spineeventdata" id="interface-spineeventdata">#</a></span>
+		</h2><h3 id="spineeventdata">
+			SpineEventData
+			<span><a class="mark" href="#spineeventdata" id="spineeventdata">#</a></span>
+		</h3><p>Spine animation event description data</p>
+<h3 id="spineeventdata-name">
+			spineeventdata.name
+			<span><a class="mark" href="#spineeventdata-name" id="spineeventdata-name">#</a></span>
+		</h3><p>The event name </p>
+<ul>
+<li><code>@get</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="spineeventdata-time">
+			spineeventdata.time
+			<span><a class="mark" href="#spineeventdata-time" id="spineeventdata-time">#</a></span>
+		</h3><p>The event time (seconds) </p>
+<ul>
+<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineeventdata-intvalue">
+			spineeventdata.intValue
+			<span><a class="mark" href="#spineeventdata-intvalue" id="spineeventdata-intvalue">#</a></span>
+		</h3><p>The event integer payload </p>
+<ul>
+<li><code>@get</code> <code>intValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineeventdata-floatvalue">
+			spineeventdata.floatValue
+			<span><a class="mark" href="#spineeventdata-floatvalue" id="spineeventdata-floatvalue">#</a></span>
+		</h3><p>The event float payload </p>
+<ul>
+<li><code>@get</code> <code>floatValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineeventdata-stringvalue">
+			spineeventdata.stringValue
+			<span><a class="mark" href="#spineeventdata-stringvalue" id="spineeventdata-stringvalue">#</a></span>
+		</h3><p>The event string payload </p>
+<ul>
+<li><code>@get</code> <code>stringValue</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="spineeventdata-audiopath">
+			spineeventdata.audioPath
+			<span><a class="mark" href="#spineeventdata-audiopath" id="spineeventdata-audiopath">#</a></span>
+		</h3><p>The event audio path </p>
+<ul>
+<li><code>@get</code> <code>audioPath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="spineeventdata-volume">
+			spineeventdata.volume
+			<span><a class="mark" href="#spineeventdata-volume" id="spineeventdata-volume">#</a></span>
+		</h3><p>The event volume </p>
+<ul>
+<li><code>@get</code> <code>volume</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineeventdata-balance">
+			spineeventdata.balance
+			<span><a class="mark" href="#spineeventdata-balance" id="spineeventdata-balance">#</a></span>
+		</h3><p>The event audio balance </p>
+<ul>
+<li><code>@get</code> <code>balance</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="class-spineevent">
+			Class: SpineEvent
+			<span><a class="mark" href="#class-spineevent" id="class-spineevent">#</a></span>
+		</h2><h3 id="spineevent">
+			SpineEvent
+			<span><a class="mark" href="#spineevent" id="spineevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="spineevent-origin">
+			spineevent.origin
+			<span><a class="mark" href="#spineevent-origin" id="spineevent-origin">#</a></span>
+		</h3><p>The origin Spine object of the event </p>
+<ul>
+<li><code>@get</code> <code>origin</code>: <a href="view.html#spine"><code>Spine</code></a> </li>
+</ul>
+<h3 id="spineevent-type">
+			spineevent.type
+			<span><a class="mark" href="#spineevent-type" id="spineevent-type">#</a></span>
+		</h3><p>The event type </p>
+<ul>
+<li><code>@get</code> <code>type</code>: <a href="#enum-spineeventtype"><code>SpineEventType</code></a> </li>
+</ul>
+<h3 id="spineevent-trackindex">
+			spineevent.trackIndex
+			<span><a class="mark" href="#spineevent-trackindex" id="spineevent-trackindex">#</a></span>
+		</h3><p>The animation track index </p>
+<ul>
+<li><code>@get</code> <code>trackIndex</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="spineevent-animationname">
+			spineevent.animationName
+			<span><a class="mark" href="#spineevent-animationname" id="spineevent-animationname">#</a></span>
+		</h3><p>The animation name </p>
+<ul>
+<li><code>@get</code> <code>animationName</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="spineevent-tracktime">
+			spineevent.trackTime
+			<span><a class="mark" href="#spineevent-tracktime" id="spineevent-tracktime">#</a></span>
+		</h3><p>The current time of the track </p>
+<ul>
+<li><code>@get</code> <code>trackTime</code>: <a href="numbers.html#float"><code>Float</code></a> </li>
+</ul>
+<h2 id="class-spineextevent">
+			Class: SpineExtEvent
+			<span><a class="mark" href="#class-spineextevent" id="class-spineextevent">#</a></span>
+		</h2><h3 id="spineextevent">
+			SpineExtEvent
+			<span><a class="mark" href="#spineextevent" id="spineextevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-spineevent"><code>SpineEvent</code></a></li>
+</ul>
+<h3 id="spineextevent-staticdata">
+			spineextevent.staticData
+			<span><a class="mark" href="#spineextevent-staticdata" id="spineextevent-staticdata">#</a></span>
+		</h3><p>Static event description </p>
+<ul>
+<li><code>@get</code> <code>staticData</code>: <a href="#interface-spineeventdata"><code>SpineEventData</code></a> </li>
+</ul>
+<h3 id="spineextevent-time">
+			spineextevent.time
+			<span><a class="mark" href="#spineextevent-time" id="spineextevent-time">#</a></span>
+		</h3><p>Trigger time (seconds) </p>
+<ul>
+<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineextevent-intvalue">
+			spineextevent.intValue
+			<span><a class="mark" href="#spineextevent-intvalue" id="spineextevent-intvalue">#</a></span>
+		</h3><p>Integer payload </p>
+<ul>
+<li><code>@get</code> <code>intValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineextevent-floatvalue">
+			spineextevent.floatValue
+			<span><a class="mark" href="#spineextevent-floatvalue" id="spineextevent-floatvalue">#</a></span>
+		</h3><p>Float payload </p>
+<ul>
+<li><code>@get</code> <code>floatValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineextevent-stringvalue">
+			spineextevent.stringValue
+			<span><a class="mark" href="#spineextevent-stringvalue" id="spineextevent-stringvalue">#</a></span>
+		</h3><p>String payload </p>
+<ul>
+<li><code>@get</code> <code>stringValue</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="spineextevent-volume">
+			spineextevent.volume
+			<span><a class="mark" href="#spineextevent-volume" id="spineextevent-volume">#</a></span>
+		</h3><p>Volume </p>
+<ul>
+<li><code>@get</code> <code>volume</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h3 id="spineextevent-balance">
+			spineextevent.balance
+			<span><a class="mark" href="#spineextevent-balance" id="spineextevent-balance">#</a></span>
+		</h3><p>Audio balance </p>
+<ul>
+<li><code>@get</code> <code>balance</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="class-agentstateevent">
+			Class: AgentStateEvent
+			<span><a class="mark" href="#class-agentstateevent" id="class-agentstateevent">#</a></span>
+		</h2><h3 id="agentstateevent">
+			AgentStateEvent
+			<span><a class="mark" href="#agentstateevent" id="agentstateevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
+</ul>
+<h3 id="agentstateevent-origin">
+			agentstateevent.origin
+			<span><a class="mark" href="#agentstateevent-origin" id="agentstateevent-origin">#</a></span>
+		</h3><p>agent itself </p>
+<ul>
+<li><code>@get</code> <code>origin</code>: <a href="view.html#agent"><code>Agent</code></a> </li>
+</ul>
+<h3 id="agentstateevent-velocity">
+			agentstateevent.velocity
+			<span><a class="mark" href="#agentstateevent-velocity" id="agentstateevent-velocity">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>velocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> Current velocity vector.</li>
+</ul>
+<h3 id="agentstateevent-heading">
+			agentstateevent.heading
+			<span><a class="mark" href="#agentstateevent-heading" id="agentstateevent-heading">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>heading</code>: <a href="types.html#vec2"><code>Vec2</code></a> Current heading vector to along waypoints or follow target.</li>
+</ul>
+<h3 id="agentstateevent-target">
+			agentstateevent.target
+			<span><a class="mark" href="#agentstateevent-target" id="agentstateevent-target">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>target</code>: <a href="types.html#vec2"><code>Vec2</code></a> Current target position.</li>
+</ul>
+<h3 id="agentstateevent-moving">
+			agentstateevent.moving
+			<span><a class="mark" href="#agentstateevent-moving" id="agentstateevent-moving">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>moving</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Following state.</li>
+</ul>
+<h2 id="class-arrivepositionevent">
+			Class: ArrivePositionEvent
+			<span><a class="mark" href="#class-arrivepositionevent" id="class-arrivepositionevent">#</a></span>
+		</h2><h3 id="arrivepositionevent">
+			ArrivePositionEvent
+			<span><a class="mark" href="#arrivepositionevent" id="arrivepositionevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></li>
+</ul>
+<h3 id="arrivepositionevent-tonext">
+			arrivepositionevent.toNext
+			<span><a class="mark" href="#arrivepositionevent-tonext" id="arrivepositionevent-tonext">#</a></span>
+		</h3><p>vector to next waypoint </p>
+<ul>
+<li><code>@get</code> <code>toNext</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="arrivepositionevent-waypointindex">
+			arrivepositionevent.waypointIndex
+			<span><a class="mark" href="#arrivepositionevent-waypointindex" id="arrivepositionevent-waypointindex">#</a></span>
+		</h3><p>waypoint index </p>
+<ul>
+<li><code>@get</code> <code>waypointIndex</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h2 id="enum-movementstate">
+			Enum: MovementState
+			<span><a class="mark" href="#enum-movementstate" id="enum-movementstate">#</a></span>
+		</h2><h3 id="movementstate">
+			MovementState
+			<span><a class="mark" href="#movementstate" id="movementstate">#</a></span>
+		</h3><ul>
+<li><code>Started</code>  Movement started</li>
+<li><code>Arrived</code>  Arrived at target or waypoint</li>
+<li><code>Stopped</code>  Arrived or naturally stopped</li>
+<li><code>Cancelled</code>  Interrupted (follow lost, new target etc.)</li>
+</ul>
+<h2 id="class-agentmovementevent">
+			Class: AgentMovementEvent
+			<span><a class="mark" href="#class-agentmovementevent" id="class-agentmovementevent">#</a></span>
+		</h2><h3 id="agentmovementevent">
+			AgentMovementEvent
+			<span><a class="mark" href="#agentmovementevent" id="agentmovementevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></li>
+</ul>
+<h3 id="agentmovementevent-movementstate">
+			agentmovementevent.movementState
+			<span><a class="mark" href="#agentmovementevent-movementstate" id="agentmovementevent-movementstate">#</a></span>
+		</h3><p>Movement state </p>
+<ul>
+<li><code>@get</code> <code>movementState</code>: <a href="#enum-movementstate"><code>MovementState</code></a> </li>
+</ul>
+<h2 id="class-discoveryagentevent">
+			Class: DiscoveryAgentEvent
+			<span><a class="mark" href="#class-discoveryagentevent" id="class-discoveryagentevent">#</a></span>
+		</h2><h3 id="discoveryagentevent">
+			DiscoveryAgentEvent
+			<span><a class="mark" href="#discoveryagentevent" id="discoveryagentevent">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></li>
+</ul>
+<h3 id="discoveryagentevent-origin">
+			discoveryagentevent.origin
+			<span><a class="mark" href="#discoveryagentevent-origin" id="discoveryagentevent-origin">#</a></span>
+		</h3><p>agent itself </p>
+<ul>
+<li><code>@get</code> <code>origin</code>: <a href="view.html#agent"><code>Agent</code></a> </li>
+</ul>
+<h3 id="discoveryagentevent-agent">
+			discoveryagentevent.agent
+			<span><a class="mark" href="#discoveryagentevent-agent" id="discoveryagentevent-agent">#</a></span>
+		</h3><p>other agent when remove view is null </p>
+<ul>
+<li><code>@get</code> <code>agent</code>: <a href="view.html#agent"><code>Agent</code></a> </li>
+</ul>
+<h3 id="discoveryagentevent-location">
+			discoveryagentevent.location
+			<span><a class="mark" href="#discoveryagentevent-location" id="discoveryagentevent-location">#</a></span>
+		</h3><p>to agent location </p>
+<ul>
+<li><code>@get</code> <code>location</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+</ul>
+<h3 id="discoveryagentevent-level">
+			discoveryagentevent.level
+			<span><a class="mark" href="#discoveryagentevent-level" id="discoveryagentevent-level">#</a></span>
+		</h3><p>discovery level, 0xffffffff means lost all levels </p>
+<ul>
+<li><code>@get</code> <code>level</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="discoveryagentevent-entering">
+			discoveryagentevent.entering
+			<span><a class="mark" href="#discoveryagentevent-entering" id="discoveryagentevent-entering">#</a></span>
+		</h3><p>is leaving or entering </p>
+<ul>
+<li><code>@get</code> <code>entering</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="class-nativenotification">
 			Class: NativeNotification

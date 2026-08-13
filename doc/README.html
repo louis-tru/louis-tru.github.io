@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -116,62 +122,45 @@
 				<ul>
 <li>
 <span><a href="#quark">Quark</a></span>
-</li>
-<li>
-<span><a href="#source-code-build">Source Code Build</a></span>
-</li>
-<li>
-<span><a href="#simple-example">Simple Example</a></span>
-</li>
-<li>
-<span><a href="#getting-started">Getting Started</a></span>
 <ul>
 <li>
-<span><a href="#installing-qkmake-from-npm">Installing qkmake from npm</a></span>
+<span><a href="#core-capabilities">Core capabilities</a></span>
 </li>
 <li>
-<span><a href="#creating-a-new-project-using-the-qkmake-tool">Creating a New Project Using the qkmake Tool</a></span>
+<span><a href="#platform-and-renderer-status">Platform and renderer status</a></span>
 </li>
 <li>
-<span><a href="#building-the-project">Building the Project</a></span>
+<span><a href="#rendering-system">Rendering system</a></span>
 </li>
 <li>
-<span><a href="#export-project">Export Project</a></span>
+<span><a href="#quick-start-with-qkmake">Quick start with qkmake</a></span>
+<ul>
+<li>
+<span><a href="#minimal-application">Minimal application</a></span>
 </li>
 <li>
-<span><a href="#test-http-server">Test HTTP Server</a></span>
+<span><a href="#build-application-code-and-resources">Build application code and resources</a></span>
+</li>
+<li>
+<span><a href="#export-or-open-a-platform-project">Export or open a platform project</a></span>
+</li>
+<li>
+<span><a href="#run-and-debug">Run and debug</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#view-layout">View Layout</a></span>
+<span><a href="#building-quark-from-source">Building Quark from source</a></span>
 </li>
 <li>
-<span><a href="#css-stylesheet">CSS Stylesheet</a></span>
+<span><a href="#documentation">Documentation</a></span>
 </li>
 <li>
-<span><a href="#actions">Actions</a></span>
-<ul>
-<li>
-<span><a href="#how-do-actions-work-">How do actions work?</a></span>
+<span><a href="#project-status-and-contributing">Project status and contributing</a></span>
 </li>
 <li>
-<span><a href="#action-types">Action Types</a></span>
-</li>
-<li>
-<span><a href="#action">Action</a></span>
-</li>
-<li>
-<span><a href="#spawnaction">SpawnAction</a></span>
-</li>
-<li>
-<span><a href="#sequenceaction">SequenceAction</a></span>
+<span><a href="#license">License</a></span>
 </li>
 </ul>
-<li>
-<span><a href="#keyframeaction-and-keyframe">KeyframeAction and Keyframe</a></span>
-</li>
-<li>
-<span><a href="#view-onactionkeyframe-and-view-onactionloop">View.onActionKeyframe and View.onActionLoop</a></span>
 </li>
 </ul>
 			</div>
@@ -180,10 +169,76 @@
 				<h1 id="quark">
 			Quark
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
-		</h1><p>Quark is a cross-platform front-end development framework (<code>Android</code>/<code>iOS</code>/<code>Mac</code>/<code>Linux</code>). Its core code is written in C++, with underlying OpenGL rendering. On top of that, it implements a streamlined layout engine and a JS/JSX runtime environment. Its goal is to develop GUI applications that balance development speed and runtime efficiency.</p>
-<ul>
-<li>From here, <a href="http://quarks.cc/doc/"><code>Go API Index</code></a> takes you to the <code>API Documentation Index</code>.</li>
+		</h1><p><a href="README-cn.html">中文</a> · <a href="docs/guides/README.html">Guides</a> · <a href="https://quarks.cc/doc/">API documentation</a></p>
+<p>Quark is a cross-platform GUI framework for Android, iOS, macOS, and Linux.<br/>It combines a C++ core, a native GPU renderer, a lightweight layout engine,<br/>and an embedded JavaScript/JSX runtime.</p>
+<p>Quark is not a browser runtime. It has its own view tree, style and layout<br/>system, event model, rendering pipeline, and platform integration. Its APIs<br/>favor explicit structure, predictable behavior, and controllable performance.</p>
+<h2 id="core-capabilities">
+			Core capabilities
+			<span><a class="mark" href="#core-capabilities" id="core-capabilities">#</a></span>
+		</h2><ul>
+<li>Native GUI rendering on Android, iOS, macOS, and Linux.</li>
+<li>C++ for performance-sensitive systems, with JavaScript/JSX for application<br/>logic and UI declaration.</li>
+<li>An explicit layout engine with no dependency on a browser DOM or browser CSS.</li>
+<li>A class-driven, CSS-like style subset with continuous class, descendant, and<br/>direct child selectors plus <code>:normal</code>, <code>:hover</code>, and <code>:active</code> states.</li>
+<li>Images, text, gradients, clipping, filters, animation, media, scrolling,<br/>input, and world/entity views in one view and event model.</li>
 </ul>
+<h2 id="platform-and-renderer-status">
+			Platform and renderer status
+			<span><a class="mark" href="#platform-and-renderer-status" id="platform-and-renderer-status">#</a></span>
+		</h2><table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Host/toolchain</th>
+<th>Renderer availability</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS</td>
+<td>macOS + Xcode</td>
+<td>OpenGL ES or Metal</td>
+<td>Metal and GL paths are implemented and used in current test scenes.</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>macOS + Xcode</td>
+<td>OpenGL or Metal</td>
+<td>Both backends are implemented.</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>macOS/Linux + JDK, Android SDK/NDK</td>
+<td>OpenGL ES; optional Vulkan</td>
+<td>Vulkan presentation and Canvas/CAPA encoding are implemented; wider device validation continues.</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>Linux native toolchain</td>
+<td>OpenGL ES; optional Vulkan/Xlib</td>
+<td>Vulkan presentation is implemented; Linux runtime validation continues.</td>
+</tr>
+</tbody>
+</table>
+<p>The current Linux build and runtime test environment is Ubuntu 20.04. Other<br/>Linux distributions have not yet been validated.</p>
+<p>Source configuration currently enables GL by default. Apple builds select<br/>Metal when GL is disabled; Android/Linux builds can enable Vulkan alongside<br/>GL. When both Vulkan and GL are present, Vulkan is attempted first and <code>--gl</code><br/>forces the GL backend. Android Vulkan requires Android 10/API 29 and Vulkan 1.1<br/>or newer; unsupported devices fall back to GL.</p>
+<h2 id="rendering-system">
+			Rendering system
+			<span><a class="mark" href="#rendering-system" id="rendering-system">#</a></span>
+		</h2><p>Quark owns its GPU rendering stack; it does not use browser Canvas, CSS<br/>painting, or Web compositing.</p>
+<pre><code class="undefinedtxt">Canvas API
+  -&gt; GPUCanvas shared state, clipping, path/image/text dispatch
+  -&gt; OpenGL command pack, Metal command encoder, or Vulkan command buffer
+  -&gt; platform surface or offscreen image
+</code></pre>
+<p>The renderer uses two complementary antialiasing strategies:</p>
+<ul>
+<li><strong>AASide</strong> is the fast geometric edge-band path used for text, hairlines,<br/>simple edges, and the GL/GLES compatibility path.</li>
+<li><strong>CAPA</strong> (Coverage Area Pipeline Anti-Aliasing) is the compute path for<br/>complex ordered fills on Metal/Vulkan-class backends. It bins edges into<br/>tiles, computes area coverage, and composites ordered layers without the<br/>background seams caused by independently antialiased adjacent primitives.</li>
+</ul>
+<p>Metal is the established CAPA runtime path. Vulkan CAPA command encoding is<br/>implemented and remains under broader runtime validation.</p>
+<p>At runtime, pass <code>--gl</code> to force the GL renderer, or <code>--aaside</code> to disable<br/>CAPA and force the AASide antialiasing path on Metal/Vulkan.</p>
 <table>
 <thead>
 <tr>
@@ -198,270 +253,97 @@
 </tr>
 </tbody>
 </table>
-<h1 id="source-code-build">
-			Source Code Build
-			<span><a class="mark" href="#source-code-build" id="source-code-build">#</a></span>
-		</h1><ol>
-<li><p>Build the required dependencies <code>Xcode</code> / <code>JDK</code> / <code>Android-SDK</code> / <code>python</code> / <code>nodejs</code></p><br/></li>
-<li><p>Set the <code>ANDROID_SDK</code> and <code>NDK</code> environment variables</p><br/></li>
-<li><p>Pull down the dependent libraries and run <code>make sync</code></p><br/></li>
-</ol>
-<p>Compiling and installing qkmake and running <code>make all</code> or <code>make install</code> will take a long time.</p>
-<p>Get the <a href="https://github.com/louis-tru/quark"><code>Source code</code></a> from <code>Github</code> here.</p>
-<h1 id="simple-example">
-			Simple Example
-			<span><a class="mark" href="#simple-example" id="simple-example">#</a></span>
-		</h1><p>This is a simple program that displays &quot;Hello world&quot; on the screen.</p>
-<pre><code class="undefinedtsx">import { Jsx, Application, Window } from &#39;quark&#39;
-new Application();
-new Window().render(
-    &lt;text value=&quot;Hello world&quot; textSize={48} align=&quot;centerMiddle&quot; /&gt;
-);
+<h2 id="quick-start-with-qkmake">
+			Quick start with qkmake
+			<span><a class="mark" href="#quick-start-with-qkmake" id="quick-start-with-qkmake">#</a></span>
+		</h2><p>The supported host workflows are macOS and Linux. Apple targets require<br/>macOS/Xcode. Windows is not currently supported.</p>
+<p>Install Node.js and Python, then install the published toolkit:</p>
+<pre><code class="undefinedsh">sudo npm install -g qkmake
 </code></pre>
-<p>You can get more detailed <a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></p>
-<h1 id="getting-started">
-			Getting Started
-			<span><a class="mark" href="#getting-started" id="getting-started">#</a></span>
-		</h1><p>If you&#39;ve never used Quark before, you can start here and build your Quark program step by step.</p>
-<h2 id="installing-qkmake-from-npm">
-			Installing qkmake from npm
-			<span><a class="mark" href="#installing-qkmake-from-npm" id="installing-qkmake-from-npm">#</a></span>
-		</h2><p>First, you need to install the Quark toolkit.</p>
-<ul>
-<li>Install <code>qkmake</code> using the nodejs <code>npm</code> command.</li>
-<li>Open Terminal and execute the following command:</li>
-</ul>
-<pre><code class="undefinedsh"># shell
-$ sudo npm install -g qkmake
+<p>Create a project:</p>
+<pre><code class="undefinedsh">mkdir myproj
+cd myproj
+qkmake init
 </code></pre>
-<ul>
-<li><p>Running <code>qkmake</code> requires <code>nodejs</code> and <code>python</code>.</p><br/></li>
-<li><p>Currently not supported on Windows; you need to use it on a Mac.</p><br/></li>
-</ul>
-<h2 id="creating-a-new-project-using-the-qkmake-tool">
-			Creating a New Project Using the qkmake Tool
-			<span><a class="mark" href="#creating-a-new-project-using-the-qkmake-tool" id="creating-a-new-project-using-the-qkmake-tool">#</a></span>
-		</h2><p>Use the following <code>shell</code> command to create a new <code>Quark</code> project:</p>
-<pre><code class="undefinedsh"># shell
-$ mkdir myproj
-$ cd myproj
-$ qkmake init
-</code></pre>
-<h2 id="building-the-project">
-			Building the Project
-			<span><a class="mark" href="#building-the-project" id="building-the-project">#</a></span>
-		</h2><p>This step compresses and packages the JavaScript code and resource files within the project.</p>
-<p>If this is a new project, you can skip this step and proceed directly to the next one.</p>
-<pre><code class="undefinedsh"># shell
-$ qkmake build
-</code></pre>
-<h2 id="export-project">
-			Export Project
-			<span><a class="mark" href="#export-project" id="export-project">#</a></span>
-		</h2><p>This step exports the <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> or <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a> project, as the final release will be a <code>.apk</code> or <code>.ipa</code>.</p>
-<pre><code class="undefinedsh"># shell
-# export xcode ios project
-$ qkmake export ios
-# export android studio project
-$ qkmake export android
-</code></pre>
-<p>After exporting the project, <code>project/ios</code> and <code>project/android</code> will be generated in the project root directory, corresponding to the <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html"><code>Xcode</code></a> and <a href="https://developer.android.com/studio/projects/create-project.html"><code>Android Studio</code></a> projects, respectively.</p>
-<h2 id="test-http-server">
-			Test HTTP Server
-			<span><a class="mark" href="#test-http-server" id="test-http-server">#</a></span>
-		</h2><p><code>qkmake</code> provides a test HTTP server. Every time you modify <code>ts</code> or <code>tsx</code> code, it notifies devices connected to the server and sets the app&#39;s launch address to the debug server address. This allows the interface to automatically update when code changes are made, without having to restart the app.</p>
-<p>When you export a project, the startup address is automatically set to this debug address. In most cases, you don&#39;t need to modify it unless you want to connect to a different location.</p>
-<p>Start the server by executing the following code:</p>
-<pre><code class="undefinedsh"># shell
-$ qkmake watch
-# Start web server:
-# http://192.168.1.200:1026/
-# Watching files change:
-</code></pre>
-<h1 id="view-layout">
-			View Layout
-			<span><a class="mark" href="#view-layout" id="view-layout">#</a></span>
-		</h1><p>Views describe all visible elements on the screen and are also responders to events triggered by the hardware and operating system.</p>
-<p>For detailed API documentation, please visit <a href="https://quarks.cc/doc/view.html#view">View</a>.</p>
-<p>Here are all the <a href="https://quarks.cc/doc/view.html#view">View</a> classes currently available and their inheritance relationships:</p>
-<ul>
-<li><a href="https://quarks.cc/doc/view.html#scrollview">ScrollView</a></li>
-<li><a href="https://quarks.cc/doc/view.html#matrixview">MatrixView</a></li>
-<li><a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a></li>
-<li><a href="https://quarks.cc/doc/view.html#view">View</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#box">Box</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul><br/><li><a href="http://quarks.cc/doc/media.html#class-video">Video</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-input">Input</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollview">ScrollView</a>&gt;</li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a>&lt;<a href="https://quarks.cc/doc/view.html#scrollview">ScrollView</a>&gt;</li><br/><li><a href="https://quarks.cc/doc/view.html#class-text">Text</a>&lt;<a href="https://quarks.cc/doc/view.html#textoptions">TextOptions</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li><br/></ul><br/></li><br/><li><a href="http://quarks.cc/doc/media.html#class-matrix">Matrix</a>&lt;<a href="https://quarks.cc/doc/view.html#matrixview">MatrixView</a>&gt;</li><br/><li><a href="http://quarks.cc/doc/media.html#class-sprite">Sprite</a>&lt;<a href="https://quarks.cc/doc/view.html#matrixview">MatrixView</a>&gt;<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li><br/></ul><br/></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-label">Label</a></li><br/></ul><br/></li>
-</ul>
-<p>This is a bit like HTML layout:</p>
-<pre><code class="undefinedtsx">import {Jsx,Application,Window} from &#39;quark&#39;
+<h3 id="minimal-application">
+			Minimal application
+			<span><a class="mark" href="#minimal-application" id="minimal-application">#</a></span>
+		</h3><pre><code class="undefinedtsx">import { Jsx, Application, Window } from &#39;quark&#39;
+
 new Application()
 new Window().render(
-    &lt;flex width=&quot;100%&quot; height=&quot;50%&quot; itemsAlign=&quot;centerCenter&quot;&gt;
-        &lt;button
-            minWidth=&quot;10%&quot;
-            maxWidth=&quot;40%&quot;
-            height=&quot;100%&quot;
-            paddingLeft={5}
-            textLineHeight={1} // 100%
-            textSize={18}
-            textFamily=&quot;iconfont&quot;
-            backgroundColor=&quot;#f00&quot;
-            textWhiteSpace=&quot;noWrap&quot;
-            textAlign=&quot;center&quot;
-        &gt;
-            &lt;label textFamily=&quot;default&quot; textSize={16} textOverflow=&quot;ellipsis&quot; value=&quot;ABCDEFGHIJKMLNOPQ&quot; /&gt;
-        &lt;/button&gt;
-        &lt;text
-            weight={[0,1]}
-            height=&quot;100%&quot;
-            textColor=&quot;#00f&quot;
-            textLineHeight={1}
-            textSize={16}
-            textWhiteSpace=&quot;noWrap&quot;
-            textWeight=&quot;bold&quot;
-            textOverflow=&quot;ellipsisCenter&quot;
-            textAlign=&quot;center&quot;
-            value=&quot;Title&quot;
-            backgroundColor=&quot;#0f0&quot;
-        /&gt;
-        &lt;text
-            minWidth=&quot;10%&quot;
-            maxWidth=&quot;40%&quot;
-            height=&quot;100%&quot;
-            textColor=&quot;#f0f&quot;
-            textLineHeight={1}
-            backgroundColor=&quot;#0ff&quot;
-            textAlign=&quot;center&quot;
-            value=&quot;A&quot;
-            opacity={0.5}
-        /&gt;
-    &lt;/flex&gt;
+    &lt;text value=&quot;Hello world&quot; fontSize={48} align=&quot;centerMiddle&quot; /&gt;
 )
 </code></pre>
-<h1 id="css-stylesheet">
-			CSS Stylesheet
-			<span><a class="mark" href="#css-stylesheet" id="css-stylesheet">#</a></span>
-		</h1><ul>
-<li><p>This is very similar to <code>HTML/CSS</code> stylesheets, but currently only supports <code>class</code> and not <code>id</code> or <code>tagName</code>.</p><br/></li>
-<li><p>The stylesheet data structure is actually a tree. Each named stylesheet can have child stylesheets, separated by spaces. There is no limit to the number of child stylesheets, but in theory, the more levels there are, the slower the query speed.</p><br/></li>
-<li><p>Each stylesheet can specify a <code>time</code> (in milliseconds) to indicate the transition time to this stylesheet. If not specified, no transition occurs.</p><br/></li>
-</ul>
-<p>When a transition is triggered, an action is created and played.</p>
-<ul>
-<li>The stylesheet now has three pseudo-class states:<ol><br/><li><code>normal</code> (when the cursor or touch leaves the cursor)</li><br/><li><code>hover</code> (when the cursor enters the cursor or the focus enters the cursor)</li><br/><li><code>action</code> (when the cursor is pressed or the touch leaves the cursor)</li><br/></ol><br/></li>
-</ul>
-<p>Here is how to write the stylesheet:</p>
-<pre><code class="undefinedtsx">import { Jsx, createCss } from &#39;quark&#39;;
-createCss({
-    &#39;.a&#39;: {
-        width: &#39;match&#39;,
-        textLineHeight: 45,
-        textWhiteSpace: &#39;pre&#39;,
-        textSize: 16,
-    },
-    &#39;.a:normal&#39;: {
-        textColor: &#39;#0f0&#39;,
-    },
-    &#39;.a:hover&#39;: {
-        textColor: &#39;#f0f&#39;,
-    },
-    &#39;.a:active&#39;: {
-        textColor: &#39;#f00&#39;,
-    },
-    &#39;.a .b&#39;: {
-        textSize: 20,
-    },
-    &#39;.a:normal .b&#39;: {
-        time: 500,  // 设置一个过渡时间
-        textColor: &#39;#000&#39;,
-    },
-    &#39;.a:hover .b&#39;: {
-        time: 500,
-        textColor: &#39;#f00&#39;,
-    },
-    &#39;.a:action .b:action&#39;: { // 这条规则无效，伪类不能存在子伪类
-        time: 500,
-        textColor: &#39;#f0f&#39;,
-    }, 
-});
-const vx = (
-    &lt;text class=&quot;a&quot; &gt;
-        &lt;label value=&quot;Hello A!&quot; /&gt;
-        &lt;label class=&quot;b&quot; value=&quot;Hello B!&quot; /&gt;
-    &lt;/text&gt;
-);
+<p>More complete applications are available in the <a href="https://github.com/louis-tru/quark/tree/master/examples">examples</a>.</p>
+<h3 id="build-application-code-and-resources">
+			Build application code and resources
+			<span><a class="mark" href="#build-application-code-and-resources" id="build-application-code-and-resources">#</a></span>
+		</h3><p><code>qkmake build</code> installs project dependencies, transforms TypeScript/JavaScript,<br/>and packages application resources:</p>
+<pre><code class="undefinedsh">qkmake build
 </code></pre>
-<h1 id="actions">
-			Actions
-			<span><a class="mark" href="#actions" id="actions">#</a></span>
-		</h1><p>What is an action? As the name suggests, it&#39;s the central hub for managing all actions in the runtime environment, or more simply, animations. It&#39;s also one of the core components of the entire framework, providing the ability to create, delete, and insert actions, as well as various operations on keyframes and transitions. Keyframe transitions can use cubic Bezier curves or built-in curves like <code>linear</code>/<code>ease</code>/<code>easeIn</code>/<code>easeOut</code>/<code>easeInOut</code>, similar to most mainstream frameworks and game engines.</p>
-<h2 id="how-do-actions-work-">
-			How do actions work?
-			<span><a class="mark" href="#how-do-actions-work-" id="how-do-actions-work-">#</a></span>
-		</h2><p>How do actions drive smooth view movement? The principle is simple. Think of the action system as an independent system, completely unrelated to the view or rendering. The relationship between them is that changes in the action itself are ultimately reflected in the view. This process is accomplished by calling public methods or properties exposed by the view. It&#39;s a completely one-way process, and the view doesn&#39;t issue any instructions to the action.</p>
-<p>For example, let&#39;s create a new keyframe action with two keyframes, and set the x value to change from 0 to 100 over one second. When an action changes, it calls the bound view&#39;s API to modify the view&#39;s layout properties. In this process, the view is passive, while the action is active.</p>
-<pre><code class="undefinedts">import { Application, Window, Box, KeyframeAction } from &#39;quark&#39;
-var app = new Application();
-var win = new Window();
-var box = new Box(win);
-var act = new KeyframeAction(win);
-act.add({ x: 0, time: 0 });
-act.add({ x: 100, time: 1e3/*milliseconds*/ });
-box.width = 50;
-box.height = 50;
-box.backgroundColor = &#39;#f00&#39;;
-box.action = act;
-box.appendTo(win.root);
-act.loop = 1000;
-act.play();
+<p>A newly initialized project can be exported before running this command; the<br/>export flow builds missing application output when needed.</p>
+<h3 id="export-or-open-a-platform-project">
+			Export or open a platform project
+			<span><a class="mark" href="#export-or-open-a-platform-project" id="export-or-open-a-platform-project">#</a></span>
+		</h3><pre><code class="undefinedsh">qkmake export ios
+qkmake export mac
+qkmake export android
+qkmake export linux
 </code></pre>
-<h2 id="action-types">
-			Action Types
-			<span><a class="mark" href="#action-types" id="action-types">#</a></span>
-		</h2><p>The following are several types provided by the framework and their inheritance relationships.</p>
-<ul>
-<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a><ul><br/><li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a></li><br/><li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a></li><br/><li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a></li><br/></ul><br/></li>
-</ul>
-<h2 id="action">
-			Action
-			<span><a class="mark" href="#action" id="action">#</a></span>
-		</h2><p>This is the base type for all actions. It&#39;s an abstract type and cannot be instantiated directly.</p>
-<p>It provides some basic API operations, such as <code>Play</code>, <code>Stop</code>, and <code>Seek</code>. See the API manual for details.</p>
-<h2 id="spawnaction">
-			SpawnAction
-			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
-		</h2><p>As the name suggests, a parallel action runs its sub-actions in parallel. The duration of the longest sub-action is used as the duration of the action itself, while sub-actions with shorter durations wait for the end of the action or the end of a loop.</p>
-<h2 id="sequenceaction">
-			SequenceAction
-			<span><a class="mark" href="#sequenceaction" id="sequenceaction">#</a></span>
-		</h2><p>Sequential actions are relatively easy to understand. Sub-actions execute one after another, ending or starting a new loop after all of them complete.</p>
-<h1 id="keyframeaction-and-keyframe">
-			KeyframeAction and Keyframe
-			<span><a class="mark" href="#keyframeaction-and-keyframe" id="keyframeaction-and-keyframe">#</a></span>
-		</h1><p>Keyframe actions are the core of the action system. All actions are implemented here, making them the fundamental unit of the action system. The previous <a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> and <a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> only have real meaning when they contain actions of the <a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a> type. Keyframe actions, in turn, contain the more fundamental element <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a>. Keyframe properties have the same names as CSS properties and include all properties that can be changed on a view. For example, <a href="http://quarks.cc/doc/media.html#class-matrix">Matrix</a> has an <code>x</code> property, and <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a> also has an <code>x</code> property. However, if a property on a <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a> doesn&#39;t exist on a view, then that property will have no effect on the view. For example, there&#39;s no <code>width</code> property on a <a href="https://quarks.cc/doc/view.html#view">View</a>, so changes to <code>width</code> won&#39;t affect the <a href="https://quarks.cc/doc/view.html#view">View</a>. However, if the bound view is a <a href="https://quarks.cc/doc/view.html#box">Box</a>, changes to <code>width</code> will affect it, similar to a <code>CSS</code> style sheet.</p>
-<p>See the following example:</p>
-<pre><code class="undefinedjs">// This is a valid action
-var act1 = new KeyframeAction(win);
-var box1 = new Box(win);
-box1.backgroundColor = &#39;#f00&#39;;
-act1.add({ width: 10, height: 10 });
-act1.add({ width: 100, height: 100, time: 1e3 });
-box1.action = act1;
-act1.play();
-// This is invalid
-var act2 = new KeyframeAction(win);
-var view = new View(win);
-act2.add({ width: 10, height: 10 });
-act2.add({ width: 100, height: 100, time: 1e3 });
-view.action = act2;
-act2.play();
+<p>Generated projects are placed under <code>project/&lt;platform&gt;</code>. Apple projects use<br/>Xcode, Android exports use Android Studio/CMake, and Linux exports use the<br/>native Make-based project. Use <code>qkmake open &lt;platform&gt;</code> to generate when needed<br/>and open the project with the host&#39;s available tool.</p>
+<h3 id="run-and-debug">
+			Run and debug
+			<span><a class="mark" href="#run-and-debug" id="run-and-debug">#</a></span>
+		</h3><p>Run an application with:</p>
+<pre><code class="undefinedsh">qkmake start .
+qkmake start . --gl
+qkmake start . --aaside
 </code></pre>
-<h1 id="view-onactionkeyframe-and-view-onactionloop">
-			View.onActionKeyframe and View.onActionLoop
-			<span><a class="mark" href="#view-onactionkeyframe-and-view-onactionloop" id="view-onactionkeyframe-and-view-onactionloop">#</a></span>
-		</h1><p>These two events are generated and sent by actions.</p>
+<p><code>--gl</code> forces the GL renderer. <code>--aaside</code> keeps the selected Metal/Vulkan<br/>renderer but forces its AASide antialiasing path instead of CAPA. These options<br/>are useful for compatibility checks and renderer comparisons.</p>
+<p>Start the development server and file watcher with:</p>
+<pre><code class="undefinedsh">qkmake watch
+</code></pre>
+<p>The watcher serves the application (port <code>1026</code> by default), notifies connected<br/>devices when TS/TSX files change, and lets debug builds reload without a full<br/>application restart.</p>
+<h2 id="building-quark-from-source">
+			Building Quark from source
+			<span><a class="mark" href="#building-quark-from-source" id="building-quark-from-source">#</a></span>
+		</h2><p>Source builds require Node.js and Python plus the selected platform toolchain:</p>
 <ul>
-<li><p><code>View.onActionKeyframe</code> fires when an action reaches a keyframe. Because the rendering frame rate is fixed, the event is always triggered when the frame is rendered, so it may be earlier or later than the ideal time. This delay is stored in the <code>delay</code> field of the event data. Early is a negative number, and late is a positive number.</p><br/></li>
-<li><p><code>View.onActionLoop</code> fires at the beginning of an action loop; it is not triggered for the first time an action is executed. It also has a delay, which is also recorded in <code>delay</code>.</p><br/></li>
+<li>Xcode for iOS and macOS;</li>
+<li>JDK, Android SDK, and Android NDK for Android;</li>
+<li>the native compiler and development packages for Linux.</li>
 </ul>
+<p>Before building Android, set the following three environment variables.<br/><code>configure</code> reads them to locate the Android SDK, NDK, and Java toolchain:</p>
+<pre><code class="undefinedsh">export ANDROID_SDK=$HOME/Install/android-sdk
+export ANDROID_NDK=$ANDROID_SDK/ndk/29.0.13113456
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+</code></pre>
+<p>Adjust the paths for the local installation. On macOS, <code>JAVA_HOME</code> normally<br/>points to the JDK&#39;s <code>Contents/Home</code> directory.</p>
+<p>From an existing checkout, synchronize the current branch and all submodules:</p>
+<pre><code class="undefinedsh">make sync
+</code></pre>
+<p><code>make sync</code> runs both <code>git pull</code> and <code>git submodule update --init --recursive</code>,<br/>so use it only when updating the current checkout is intended.</p>
+<p>The root Makefile provides <code>make ios</code>, <code>make mac</code>, <code>make android</code>, and<br/><code>make linux</code>. <code>make all</code> builds the full product set and may use the configured<br/><code>REMOTE_COMPILE_HOST</code> for targets that cannot be built locally. <code>make install</code><br/>builds that set and installs the local qkmake package; <code>make install-only</code><br/>installs an existing <code>out/qkmake</code> product.</p>
+<h2 id="documentation">
+			Documentation
+			<span><a class="mark" href="#documentation" id="documentation">#</a></span>
+		</h2><ul>
+<li><a href="docs/guides/README.html">User guides</a>: task-oriented tutorials in English and<br/>Chinese. Chinese guide filenames use the <code>-cn.md</code> suffix.</li>
+<li><a href="https://quarks.cc/doc/">Generated API reference</a>: modules, classes,<br/>interfaces, properties, methods, and events generated from <code>libs/quark</code>.</li>
+<li><a href="docs/guides/VIEW_STYLE.html">View layout and styles</a>: view inheritance, JSX<br/>layout, class selectors, pseudo states, and style transitions.</li>
+<li><a href="docs/guides/ACTIONS.html">Actions and keyframes</a>: animation composition,<br/>keyframes, playback, and events.</li>
+</ul>
+<p><code>make doc</code> runs <code>tools/gen_html_doc.js</code>. It generates the API Markdown from<br/>TypeScript sources, validates the bilingual guide pairs, includes both root<br/>READMEs, <code>docs/guides/</code>, guide assets, and the license, then renders the<br/>complete publishable HTML tree under <code>out/doc/html</code>.</p>
+<h2 id="project-status-and-contributing">
+			Project status and contributing
+			<span><a class="mark" href="#project-status-and-contributing" id="project-status-and-contributing">#</a></span>
+		</h2><p>The GL and Metal paths are established, while Vulkan is in its runtime<br/>validation and stabilization phase across Android and Linux drivers. Focused<br/>issues and pull requests are welcome in the <a href="https://github.com/louis-tru/quark">GitHub repository</a>. Keep backend<br/>changes behavior-aligned and include the smallest relevant validation.</p>
+<p>Documentation-only changes should at minimum pass <code>git diff --check</code>; changes<br/>that affect published documentation should also run <code>make doc</code>.</p>
+<h2 id="license">
+			License
+			<span><a class="mark" href="#license" id="license">#</a></span>
+		</h2><p>Quark is distributed under the BSD license. See <a href="LICENSE">LICENSE</a>.</p>
 <script>
     <!--
     var language = (navigator.browserLanguage || navigator.language).toLowerCase();
@@ -480,6 +362,7 @@ act2.play();
     }
     -->
 </script>
+
 			</div>
 
 		</div>

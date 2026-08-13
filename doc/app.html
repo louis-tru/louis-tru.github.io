@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -121,6 +127,25 @@
 <span><a href="#aevent">AEvent</a></span>
 </li>
 <li>
+<span><a href="#interface-clipboard">Interface: Clipboard</a></span>
+<ul>
+<li>
+<span><a href="#clipboard">Clipboard</a></span>
+</li>
+<li>
+<span><a href="#clipboard-gettext-">clipboard.getText()</a></span>
+</li>
+<li>
+<span><a href="#clipboard-settext-text-">clipboard.setText(text)</a></span>
+</li>
+<li>
+<span><a href="#clipboard-hastext-">clipboard.hasText()</a></span>
+</li>
+<li>
+<span><a href="#clipboard-clear-">clipboard.clear()</a></span>
+</li>
+</ul>
+<li>
 <span><a href="#class-nativeapplication">Class: NativeApplication</a></span>
 <ul>
 <li>
@@ -137,6 +162,9 @@
 </li>
 <li>
 <span><a href="#nativeapplication-activewindow">nativeapplication.activeWindow</a></span>
+</li>
+<li>
+<span><a href="#nativeapplication-clipboard">nativeapplication.clipboard</a></span>
 </li>
 <li>
 <span><a href="#nativeapplication-defaulttextoptions">nativeapplication.defaultTextOptions</a></span>
@@ -205,94 +233,147 @@
 		</h2><ul>
 <li><code>@type</code> <code>AEvent</code> = <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-application"><code>Application</code></a>&gt;</li>
 </ul>
+<h2 id="interface-clipboard">
+			Interface: Clipboard
+			<span><a class="mark" href="#interface-clipboard" id="interface-clipboard">#</a></span>
+		</h2><h3 id="clipboard">
+			Clipboard
+			<span><a class="mark" href="#clipboard" id="clipboard">#</a></span>
+		</h3><p>System clipboard interface.<br/>Provides access to the OS clipboard for plain text operations.<br/>This object is owned by {@link NativeApplication} and cannot be constructed directly.<br/>Notes:</p>
+<ul>
+<li>Text is shared with other applications through the system clipboard.</li>
+<li>Operations are safe to call at any time after the application is initialized.</li>
+<li>Only plain text is supported for now.</li>
+</ul>
+<h3 id="clipboard-gettext-">
+			clipboard.getText()
+			<span><a class="mark" href="#clipboard-gettext-" id="clipboard-gettext-">#</a></span>
+		</h3><p>Read text from the system clipboard.<br/>Returns an empty string if no text is available.</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h3 id="clipboard-settext-text-">
+			clipboard.setText(text)
+			<span><a class="mark" href="#clipboard-settext-text-" id="clipboard-settext-text-">#</a></span>
+		</h3><p>Write plain text to the system clipboard.<br/>Replaces existing clipboard contents.</p>
+<ul>
+<li><code>@param</code> <code>text</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
+<h3 id="clipboard-hastext-">
+			clipboard.hasText()
+			<span><a class="mark" href="#clipboard-hastext-" id="clipboard-hastext-">#</a></span>
+		</h3><p>Returns true if the clipboard currently contains text data.</p>
+<ul>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="clipboard-clear-">
+			clipboard.clear()
+			<span><a class="mark" href="#clipboard-clear-" id="clipboard-clear-">#</a></span>
+		</h3><p>Clears current clipboard contents.</p>
+<ul>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+</ul>
 <h2 id="class-nativeapplication">
 			Class: NativeApplication
 			<span><a class="mark" href="#class-nativeapplication" id="class-nativeapplication">#</a></span>
 		</h2><h3 id="nativeapplication">
 			NativeApplication
 			<span><a class="mark" href="#nativeapplication" id="nativeapplication">#</a></span>
-		</h3><ul>
+		</h3><p>Global application object.<br/>Represents the running Qk runtime instance and provides access to<br/>system-level services, global resources and window management.<br/>This object is created by the native runtime and cannot be constructed<br/>manually. It becomes fully available after the <code>onLoad</code> event.</p>
+<ul>
 <li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt;</li>
 </ul>
 <h3 id="nativeapplication-isloaded">
 			nativeapplication.isLoaded
 			<span><a class="mark" href="#nativeapplication-isloaded" id="nativeapplication-isloaded">#</a></span>
-		</h3><p>After onLoad event </p>
+		</h3><p>Indicates whether the application has finished initialization.<br/>Becomes <code>true</code> after the onLoad lifecycle event.</p>
 <ul>
 <li><code>@get</code> <code>isLoaded</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="nativeapplication-screen">
 			nativeapplication.screen
 			<span><a class="mark" href="#nativeapplication-screen" id="nativeapplication-screen">#</a></span>
-		</h3><p>screen Object </p>
+		</h3><p>Screen information and metrics provider.<br/>Exposes display size, scale, and other screen-related properties.</p>
 <ul>
 <li><code>@get</code> <code>screen</code>: <a href="screen.html#screen"><code>Screen</code></a> </li>
 </ul>
 <h3 id="nativeapplication-fontpool">
 			nativeapplication.fontPool
 			<span><a class="mark" href="#nativeapplication-fontpool" id="nativeapplication-fontpool">#</a></span>
-		</h3><p>fontPool Object </p>
+		</h3><p>Global font pool.<br/>Used for font loading, caching, and reuse across all windows.</p>
 <ul>
 <li><code>@get</code> <code>fontPool</code>: <a href="font.html#fontpool"><code>FontPool</code></a> </li>
 </ul>
 <h3 id="nativeapplication-activewindow">
 			nativeapplication.activeWindow
 			<span><a class="mark" href="#nativeapplication-activewindow" id="nativeapplication-activewindow">#</a></span>
-		</h3><p>current active window </p>
+		</h3><p>Currently active (focused) window.<br/>Returns null if no window is focused.</p>
 <ul>
 <li><code>@get</code> <code>activeWindow</code>: <a href="window.html#window"><code>Window</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="nativeapplication-clipboard">
+			nativeapplication.clipboard
+			<span><a class="mark" href="#nativeapplication-clipboard" id="nativeapplication-clipboard">#</a></span>
+		</h3><p>System clipboard instance.<br/>Provides access to the shared OS clipboard for plain text operations.<br/>The instance is owned and managed by the application lifecycle and is<br/>available once the application has initialized.</p>
+<ul>
+<li><code>@get</code> <code>clipboard</code>: <a href="#interface-clipboard"><code>Clipboard</code></a> </li>
 </ul>
 <h3 id="nativeapplication-defaulttextoptions">
 			nativeapplication.defaultTextOptions
 			<span><a class="mark" href="#nativeapplication-defaulttextoptions" id="nativeapplication-defaulttextoptions">#</a></span>
-		</h3><p>default text options </p>
+		</h3><p>Global default text rendering options.<br/>Shared by all windows and used as the base configuration when creating<br/>text views without explicit text settings.</p>
 <ul>
 <li><code>@get</code> <code>defaultTextOptions</code>: <a href="view.html#textoptions"><code>TextOptions</code></a> </li>
 </ul>
 <h3 id="nativeapplication-windows">
 			nativeapplication.windows
 			<span><a class="mark" href="#nativeapplication-windows" id="nativeapplication-windows">#</a></span>
-		</h3><p>all of windows </p>
+		</h3><p>List of all currently existing windows.<br/>Includes visible and hidden windows managed by the application.</p>
 <ul>
 <li><code>@get</code> <code>windows</code>: <a href="window.html#window"><code>Window</code></a><code>[]</code> </li>
 </ul>
 <h3 id="nativeapplication-maxresourcememorylimit">
 			nativeapplication.maxResourceMemoryLimit
 			<span><a class="mark" href="#nativeapplication-maxresourcememorylimit" id="nativeapplication-maxresourcememorylimit">#</a></span>
-		</h3><p>get or set max resource memory limit </p>
+		</h3><p>Maximum memory limit for resource caching (in bytes).<br/>Affects textures, images, fonts and other GPU/CPU resources.</p>
 <ul>
 <li><code>maxResourceMemoryLimit</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="nativeapplication-usedresourcememory-">
 			nativeapplication.usedResourceMemory()
 			<span><a class="mark" href="#nativeapplication-usedresourcememory-" id="nativeapplication-usedresourcememory-">#</a></span>
-		</h3><p>get current used resource memory </p>
+		</h3><p>Returns the current amount of memory used by cached resources.</p>
 <ul>
 <li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="nativeapplication-clear-all-">
 			nativeapplication.clear(all?)
 			<span><a class="mark" href="#nativeapplication-clear-all-" id="nativeapplication-clear-all-">#</a></span>
-		</h3><p>clear resource memory </p>
+		</h3><p>Clear cached resources.</p>
 <ul>
+<li><code>@param</code> <code>all</code>:  If true, aggressively clears all releasable resources.</li>
 <li><code>@param</code> <code>all?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="nativeapplication-openurl-url-">
 			nativeapplication.openURL(url)
 			<span><a class="mark" href="#nativeapplication-openurl-url-" id="nativeapplication-openurl-url-">#</a></span>
-		</h3><p>open uri For: examples openURL(&#39;https://baidu.com&#39;) </p>
+		</h3><p>Open a URI using the system handler.<br/>Examples:</p>
 <ul>
-<li><code>@param</code> <code>url</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li>openURL(&#39;https://example.com&#39;)</li>
+<li>openURL(&#39;mailto:test@example.com&#39;)<ul><br/><li><code>@param</code> <code>url</code>: <a href="$ext.html#string"><code>string</code></a> </li><br/><li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li><br/></ul><br/></li>
 </ul>
 <h3 id="nativeapplication-sendemail-recipient-subject-body-cc-bcc-">
 			nativeapplication.sendEmail(recipient,subject,body?,cc?,bcc?)
 			<span><a class="mark" href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc-" id="nativeapplication-sendemail-recipient-subject-body-cc-bcc-">#</a></span>
-		</h3><p>By parameter open email client</p>
+		</h3><p>Open the system email client with pre-filled fields.</p>
 <ul>
-<li><code>@param</code> <code>recipient</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>subject</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@param</code> <code>recipient</code>: <a href="$ext.html#string"><code>string</code></a> Target email address.</li>
+<li><code>@param</code> <code>subject</code>: <a href="$ext.html#string"><code>string</code></a> Email subject.</li>
+<li><code>@param</code> <code>body</code>:  Optional message body.</li>
+<li><code>@param</code> <code>cc</code>:  Optional CC address.</li>
+<li><code>@param</code> <code>bcc</code>:  Optional BCC address.</li>
 <li><code>@param</code> <code>body?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>cc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>bcc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
@@ -310,37 +391,38 @@
 <h3 id="application-onload">
 			application.onLoad
 			<span><a class="mark" href="#application-onload" id="application-onload">#</a></span>
-		</h3><p>After initialization the application call </p>
+		</h3><p>Fired once after the application has completed initialization.<br/>Safe point to create windows, load resources and start logic.</p>
 <ul>
 <li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onunload">
 			application.onUnload
 			<span><a class="mark" href="#application-onunload" id="application-onunload">#</a></span>
-		</h3><p>Before unload the application call </p>
+		</h3><p>Fired before the application is about to terminate.<br/>Use for saving state, releasing external handles, etc.</p>
 <ul>
 <li><code>@event</code> <code>onUnload</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onpause">
 			application.onPause
 			<span><a class="mark" href="#application-onpause" id="application-onpause">#</a></span>
-		</h3><p>When enter the background call </p>
+		</h3><p>Fired when the application enters background state.<br/>Typically triggered by OS task switching or minimization.</p>
 <ul>
 <li><code>@event</code> <code>onPause</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onresume">
 			application.onResume
 			<span><a class="mark" href="#application-onresume" id="application-onresume">#</a></span>
-		</h3><p>When enter the foreground call </p>
+		</h3><p>Fired when the application returns to foreground state.<br/>Suitable for restoring rendering, timers and IO tasks.</p>
 <ul>
 <li><code>@event</code> <code>onResume</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onmemorywarning">
 			application.onMemoryWarning
 			<span><a class="mark" href="#application-onmemorywarning" id="application-onmemorywarning">#</a></span>
-		</h3><p>Triggered when memory is insufficient. After triggering,<br/>it will automatically call <code>clear</code> to clean up resources and perform <code>js</code> garbage collection</p>
+		</h3><p>Fired when the system reports memory pressure.<br/>After this event, the runtime will automatically:</p>
 <ul>
-<li><code>@event</code> <code>onMemoryWarning</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
+<li>call <code>clear()</code> to release cached resources</li>
+<li>trigger JS garbage collection<br/>Applications can additionally release non-critical data here.<ul><br/><li><code>@event</code> <code>onMemoryWarning</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li><br/></ul><br/></li>
 </ul>
 <h2 id="default">
 			default
@@ -348,7 +430,8 @@
 		</h2><h3 id="default-current">
 			default.current
 			<span><a class="mark" href="#default-current" id="default-current">#</a></span>
-		</h3><ul>
+		</h3><p>Current active application singleton </p>
+<ul>
 <li><code>@get</code> <code>current</code>: <a href="#class-application"><code>Application</code></a> </li>
 </ul>
 

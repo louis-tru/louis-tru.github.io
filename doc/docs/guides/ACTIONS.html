@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'docs/guides/ACTIONS.html';
+		var relative = '../../';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.4.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#actions-and-keyframes">Actions and keyframes</a></span>
+<ul>
+<li>
+<span><a href="#basic-animation">Basic animation</a></span>
+</li>
+<li>
+<span><a href="#action-types">Action types</a></span>
+<ul>
+<li>
+<span><a href="#spawnaction">SpawnAction</a></span>
+</li>
+<li>
+<span><a href="#sequenceaction">SequenceAction</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#keyframeaction-and-keyframe">KeyframeAction and Keyframe</a></span>
+</li>
+<li>
+<span><a href="#action-events">Action events</a></span>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="actions-and-keyframes">
+			Actions and keyframes
+			<span><a class="mark" href="#actions-and-keyframes" id="actions-and-keyframes">#</a></span>
+		</h1><p><a href="ACTIONS-cn.html">中文</a> · <a href="README.html">All guides</a> · <a href="https://quarks.cc/doc/">API index</a></p>
+<p>Quark&#39;s Action system drives animations independently from layout and<br/>rendering. An Action changes supported properties on its bound View over time;<br/>the View receives those values and the normal layout/render pipeline displays<br/>the result.</p>
+<p>Keyframe transitions support cubic Bézier curves and the built-in <code>linear</code>,<br/><code>ease</code>, <code>easeIn</code>, <code>easeOut</code>, and <code>easeInOut</code> curves.</p>
+<h2 id="basic-animation">
+			Basic animation
+			<span><a class="mark" href="#basic-animation" id="basic-animation">#</a></span>
+		</h2><p>This example moves a <code>Box</code> from <code>x = 0</code> to <code>x = 100</code> in one second:</p>
+<pre><code class="undefinedts">import { Application, Window, Morph, KeyframeAction } from &#39;quark&#39;
+
+const app = new Application()
+const win = new Window()
+const view = new Morph(win)
+const action = new KeyframeAction(win)
+
+action.add({ x: 0, time: 0 })
+action.add({ x: 100, time: 1000 })
+
+view.width = 50
+view.height = 50
+view.backgroundColor = &#39;#f00&#39;
+view.action = action
+view.appendTo(win.root)
+
+action.loop = 1000
+action.play()
+</code></pre>
+<h2 id="action-types">
+			Action types
+			<span><a class="mark" href="#action-types" id="action-types">#</a></span>
+		</h2><p>The public Action class hierarchy is:</p>
+<ul>
+<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a> — abstract base class<ul><br/><li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> — runs child actions in parallel</li><br/><li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a> — runs child actions in sequence</li><br/><li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a> — animates View style properties through keyframes</li><br/></ul><br/></li>
+</ul>
+<p><code>Action</code> provides playback and composition operations including <code>play()</code>,<br/><code>stop()</code>, <code>seek()</code>, <code>seekPlay()</code>, <code>seekStop()</code>, <code>append()</code>, and <code>clear()</code>.</p>
+<h3 id="spawnaction">
+			SpawnAction
+			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
+		</h3><p>A <code>SpawnAction</code> runs its child actions in parallel. Its duration is determined<br/>by the longest child; shorter children remain at their completed state until<br/>the group finishes or starts another loop.</p>
+<h3 id="sequenceaction">
+			SequenceAction
+			<span><a class="mark" href="#sequenceaction" id="sequenceaction">#</a></span>
+		</h3><p>A <code>SequenceAction</code> runs its child actions one after another. After the final<br/>child completes, the sequence ends or begins its next configured loop.</p>
+<h2 id="keyframeaction-and-keyframe">
+			KeyframeAction and Keyframe
+			<span><a class="mark" href="#keyframeaction-and-keyframe" id="keyframeaction-and-keyframe">#</a></span>
+		</h2><p><code>KeyframeAction</code> contains <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a> objects. <code>Keyframe</code> extends <code>StyleSheets</code>,<br/>so its properties use the same names and value types as View styles. A property<br/>only has an effect when the bound View supports it: for example, <code>x</code> applies to<br/>a transform-capable View such as <code>Morph</code>, while <code>width</code> applies to <code>Box</code> and its<br/>subclasses.</p>
+<pre><code class="undefinedts">// Valid: Box supports width and height.
+const boxAction = new KeyframeAction(win)
+const box = new Box(win)
+box.backgroundColor = &#39;#f00&#39;
+boxAction.add({ width: 10, height: 10 })
+boxAction.add({ width: 100, height: 100, time: 1000 })
+box.action = boxAction
+boxAction.play()
+
+// View does not expose width or height, so these properties have no effect.
+const viewAction = new KeyframeAction(win)
+const view = new View(win)
+viewAction.add({ width: 10, height: 10 })
+viewAction.add({ width: 100, height: 100, time: 1000 })
+view.action = viewAction
+viewAction.play()
+</code></pre>
+<p>For declarative construction, <a href="https://quarks.cc/doc/action.html#createaction-win-arg-parent-">createAction</a> accepts a keyframe array or an<br/>object containing <code>keyframe</code>, <code>spawn</code>, or <code>seq</code> children.</p>
+<h2 id="action-events">
+			Action events
+			<span><a class="mark" href="#action-events" id="action-events">#</a></span>
+		</h2><p>Views expose two Action events:</p>
+<ul>
+<li><code>View.onActionKeyframe</code> fires when an action reaches a keyframe. Because the<br/>event is delivered on a rendered frame, it may be slightly early or late;<br/><code>ActionEvent.delay</code> contains the difference from the target time.</li>
+<li><code>View.onActionLoop</code> fires when a new loop begins. It does not fire for the<br/>initial run. The event also reports <code>delay</code> and the current <code>looped</code> count.</li>
+</ul>
+<p>The event&#39;s <code>action</code> and <code>frame</code> properties identify the Action and keyframe<br/>that produced it.</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

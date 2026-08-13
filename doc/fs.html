@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -856,7 +862,7 @@
 </code></pre>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="chownsync-path-owner-group-">
@@ -865,8 +871,8 @@
 		</h2><p>Synchronize the <code>owner</code> and <code>group</code> of the configuration file</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>group</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="mkdirsync-path-mode-">
@@ -874,7 +880,7 @@
 			<span><a class="mark" href="#mkdirsync-path-mode-" id="mkdirsync-path-mode-">#</a></span>
 		</h2><p>Create a directory synchronously. If the path already exists, an exception will be thrown.</p>
 <ul>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
@@ -883,7 +889,7 @@
 			<span><a class="mark" href="#mkdirssync-path-mode-" id="mkdirssync-path-mode-">#</a></span>
 		</h2><p>Synchronously recursively create directories,<br/>and no exception is thrown if the directory exists</p>
 <ul>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
@@ -990,7 +996,7 @@
 			<span><a class="mark" href="#chmodrecursionsync-path-mode-" id="chmodrecursionsync-path-mode-">#</a></span>
 		</h2><p>Synchronously recursively set the file permission attribute mode<br/>(TODO: will block the calling thread, please use with caution)</p>
 <ul>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">fs.chmodRecursionSync(mypath, 0755);
@@ -1004,8 +1010,8 @@
 			<span><a class="mark" href="#chownrecursionsync-path-owner-group-" id="chownrecursionsync-path-owner-group-">#</a></span>
 		</h2><p>Synchronously recursively set file <code>owner</code> and <code>group</code> attributes<br/>(TODO: will block the calling thread, please use with caution)</p>
 <ul>
-<li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> System User ID</li>
-<li><code>@param</code> <code>group</code>: <a href="$ext.html#uint"><code>Uint</code></a> System Group ID</li>
+<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> System User ID</li>
+<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> System Group ID</li>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
@@ -1040,10 +1046,10 @@
 			<span><a class="mark" href="#writefilesync-path-data-size-" id="writefilesync-path-data-size-">#</a></span>
 		</h2><p>Synchronously write data to a file</p>
 <ul>
-<li><code>@param</code> <code>size?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Write all data when no parameters are passed</li>
+<li><code>@param</code> <code>size?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Write all data when no parameters are passed</li>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="writefilesync-path-data-encoding-">
 			writeFileSync(path,data,encoding?)
@@ -1053,7 +1059,7 @@
 <li><code>@param</code> <code>encoding?</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> If not passed in, the default encoding is <code>utf-8</code></li>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="readfilesync-path-">
 			readFileSync(path)
@@ -1079,14 +1085,14 @@
 <ul>
 <li><code>@param</code> <code>flags?</code>: <a href="#enum-fileopenflag"><code>FileOpenFlag</code></a> Open file flags mask <strong>Default</strong> as FileOpenFlag.FOPEN_R</li>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="closesync-fd-">
 			closeSync(fd)
 			<span><a class="mark" href="#closesync-fd-" id="closesync-fd-">#</a></span>
 		</h2><p>Close the file handle synchronously</p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="readsync-fd-out-size-offsetfd-">
@@ -1094,43 +1100,43 @@
 			<span><a class="mark" href="#readsync-fd-out-size-offsetfd-" id="readsync-fd-out-size-offsetfd-">#</a></span>
 		</h2><p>Synchronously read the file contents from the file handle</p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
 <li><code>@param</code> <code>out</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> Read the file and save it here</li>
-<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or passed in <code>-1</code>, the length of the <code>out</code> parameter is used</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or -1 is passed,<br/>  the internal offset value of the file handle is used (it will advance after each read)</li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> Returns the size of the data actually read</li>
+<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or passed in <code>-1</code>, the length of the <code>out</code> parameter is used</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or -1 is passed,<br/>  the internal offset value of the file handle is used (it will advance after each read)</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> Returns the size of the data actually read</li>
 </ul>
 <h2 id="writesync-fd-data-size-offsetfd-">
 			writeSync(fd,data,size?,offsetFd?)
 			<span><a class="mark" href="#writesync-fd-data-size-offsetfd-" id="writesync-fd-data-size-offsetfd-">#</a></span>
 		</h2><p>Synchronously write data to a file handle</p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
 <li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> Data to be written</li>
-<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, all data will be written</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, all data will be written</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The actual size of the data written</li>
 </ul>
 <h2 id="writesync-fd-data-offsetfd-">
 			writeSync(fd,data,offsetFd?)
 			<span><a class="mark" href="#writesync-fd-data-offsetfd-" id="writesync-fd-data-offsetfd-">#</a></span>
 		</h2><p>Write data to the file handle synchronously and encode the data using <code>utf-8</code></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> The string to be written</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The actual size of the data written</li>
 </ul>
 <h2 id="writesync-fd-data-encoding-offsetfd-">
 			writeSync(fd,data,encoding,offsetFd?)
 			<span><a class="mark" href="#writesync-fd-data-encoding-offsetfd-" id="writesync-fd-data-encoding-offsetfd-">#</a></span>
 		</h2><p>Synchronously write data to a file handle</p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> Open file handles</li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> Data to be written</li>
 <li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> Encoding Type</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The actual size of the data written</li>
 </ul>
 <h2 id="chmod-path-mode-">
 			chmod(path,mode?)
@@ -1138,7 +1144,7 @@
 		</h2><p>Please ref: sync method <a href="#chmodsync-path-mode-"><code>chmodSync(path,mode?)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="chown-path-owner-group-">
 			chown(path,owner,group)
@@ -1146,8 +1152,8 @@
 		</h2><p>Please ref: sync method <a href="#chownsync-path-owner-group-"><code>chownSync(path,owner,group)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>group</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="chmod-path-mode-">
 			chmod(path,mode?)
@@ -1155,7 +1161,7 @@
 		</h2><p>Please ref: sync method <a href="#mkdirsync-path-mode-"><code>mkdirSync(path,mode?)</code></a></p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="mkdirs-path-mode-">
 			mkdirs(path,mode?)
@@ -1164,7 +1170,7 @@
 <p>Ref: sync method [<code>mkdirsSync(path[,mode])</code>]</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>  </li>
 </ul>
 <p>For example:</p>
@@ -1290,7 +1296,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 		</h2><p>Asynchronously recursively set the <code>mode</code> attribute of a file or directory</p>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 <li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>  </li>
 </ul>
 <p>Example:</p>
@@ -1313,8 +1319,8 @@ fs.abort(task.id); // force abort task
 </code></pre>
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>group</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h2 id="removerecursion-path-">
@@ -1383,7 +1389,7 @@ fs.abort(b.id);
 fs.abort(c.id);
 </code></pre>
 <ul>
-<li><code>@param</code> <code>id</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>id</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="writefile-path-data-size-">
@@ -1393,8 +1399,8 @@ fs.abort(c.id);
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@param</code> <code>size?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@param</code> <code>size?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="writefile-path-data-encoding-">
 			writeFile(path,data,encoding?)
@@ -1404,7 +1410,7 @@ fs.abort(c.id);
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>encoding?</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="readfile-path-">
 			readFile(path)
@@ -1430,14 +1436,14 @@ fs.abort(c.id);
 <ul>
 <li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>flags?</code>: <a href="#enum-fileopenflag"><code>FileOpenFlag</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="close-fd-">
 			close(fd)
 			<span><a class="mark" href="#close-fd-" id="close-fd-">#</a></span>
 		</h2><p>Please ref: sync method <a href="#closesync-fd-"><code>closeSync(fd)</code></a></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h2 id="read-fd-out-size-offsetfd-">
@@ -1445,43 +1451,43 @@ fs.abort(c.id);
 			<span><a class="mark" href="#read-fd-out-size-offsetfd-" id="read-fd-out-size-offsetfd-">#</a></span>
 		</h2><p>Please ref: sync method <a href="#readsync-fd-out-size-offsetfd-"><code>readSync(fd,out,size?,offsetFd?)</code></a></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>out</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="write-fd-data-size-offsetfd-">
 			write(fd,data,size?,offsetFd?)
 			<span><a class="mark" href="#write-fd-data-size-offsetfd-" id="write-fd-data-size-offsetfd-">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-size-offsetfd-"><code>writeSync(fd,data,size?,offsetFd?)</code></a></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@param</code> <code>size?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="write-fd-data-offsetfd-">
 			write(fd,data,offsetFd?)
 			<span><a class="mark" href="#write-fd-data-offsetfd-" id="write-fd-data-offsetfd-">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-offsetfd-"><code>writeSync(fd,data,offsetFd?)</code></a></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="write-fd-data-encoding-offsetfd-">
 			write(fd,data,encoding,offsetFd?)
 			<span><a class="mark" href="#write-fd-data-encoding-offsetfd-" id="write-fd-data-encoding-offsetfd-">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-encoding-offsetfd-"><code>writeSync(fd,data,encoding,offsetFd?)</code></a></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 <li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#uint"><code>Uint</code></a>&gt; </li>
+<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
 </ul>
 <h2 id="interface-reader">
 			Interface: Reader
@@ -1592,7 +1598,7 @@ reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
 			<span><a class="mark" href="#reader-abort-id-" id="reader-abort-id-">#</a></span>
 		</h3><p>Abort an asynchronous task by its id</p>
 <ul>
-<li><code>@param</code> <code>id</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>id</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="reader-clear-">

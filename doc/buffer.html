@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -119,6 +125,9 @@
 <ul>
 <li>
 <span><a href="#encoding">Encoding</a></span>
+</li>
+<li>
+<span><a href="#bytes">Bytes</a></span>
 </li>
 <li>
 <span><a href="#class-buffer">Class: Buffer</a></span>
@@ -164,6 +173,9 @@
 <span><a href="#alloc-size-initfill-">alloc(size,initFill?)</a></span>
 </li>
 <li>
+<span><a href="#allocunsafe-size-">allocUnsafe(size)</a></span>
+</li>
+<li>
 <span><a href="#istypedarray-arr-">isTypedArray(arr)</a></span>
 </li>
 <li>
@@ -174,6 +186,9 @@
 </li>
 <li>
 <span><a href="#compare-a-b-">compare(a,b)</a></span>
+</li>
+<li>
+<span><a href="#encodeutf8length-str-">encodeUTF8Length(str)</a></span>
 </li>
 <li>
 <span><a href="#tostring-src-encoding-start-end-">toString(src,encoding?,start?,end?)</a></span>
@@ -194,7 +209,18 @@
 <span><a href="#from-from-mapfn-">from(from,mapFn?)</a></span>
 </li>
 <li>
+<span><a href="#bytelength-arg-encoding-">byteLength(arg,encoding?)</a></span>
+</li>
+<li>
 <span><a href="#concat-list-length-">concat(list,length?)</a></span>
+</li>
+<li>
+<span><a href="#default">default</a></span>
+<ul>
+<li>
+<span><a href="#default-from">default.from</a></span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -210,7 +236,14 @@
 			<span><a class="mark" href="#encoding" id="encoding">#</a></span>
 		</h2><p>All encoding algorithms of string</p>
 <ul>
-<li><code>@type</code> <code>Encoding</code> = <code>&quot;binary&quot;</code>|<code>&quot;ascii&quot;</code>|<code>&quot;base64&quot;</code>|<code>&quot;hex&quot;</code>|<code>&quot;utf-8&quot;</code>|<code>&quot;utf8&quot;</code>|<code>&quot;utf-16&quot;</code>|<code>&quot;utf16&quot;</code>|<code>&quot;ucs4&quot;</code></li>
+<li><code>@type</code> <code>Encoding</code> = <code>&quot;binary&quot;</code>|<code>&quot;latin1&quot;</code>|<code>&quot;ascii&quot;</code>|<code>&quot;base64&quot;</code>|<code>&quot;hex&quot;</code>|<code>&quot;utf-8&quot;</code>|<code>&quot;utf8&quot;</code>|<code>&quot;utf-16&quot;</code>|<code>&quot;utf16&quot;</code>|<code>&quot;ucs4&quot;</code></li>
+</ul>
+<h2 id="bytes">
+			Bytes
+			<span><a class="mark" href="#bytes" id="bytes">#</a></span>
+		</h2><p>Bytes type</p>
+<ul>
+<li><code>@type</code> <code>Bytes</code> = <code>Uint8ClampedArray</code>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>|<a href="#class-buffer"><code>Buffer</code></a></li>
 </ul>
 <h2 id="class-buffer">
 			Class: Buffer
@@ -228,10 +261,10 @@
 		</h3><p>Copy current buffer data to the target buffer.</p>
 <ul>
 <li><code>@param</code> <code>target</code>: <code>ArrayBufferView</code> The target buffer to copy data into.</li>
-<li><code>@param</code> <code>targetStart?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The starting index in the target buffer, <strong>Default</strong> is 0.</li>
-<li><code>@param</code> <code>sourceStart?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The starting index in the source buffer, <strong>Default</strong> is 0.</li>
-<li><code>@param</code> <code>sourceEnd?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The ending index in the source buffer, <strong>Default</strong> is the length of the source buffer.</li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> The number of bytes copied.</li>
+<li><code>@param</code> <code>targetStart?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The starting index in the target buffer, <strong>Default</strong> is 0.</li>
+<li><code>@param</code> <code>sourceStart?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The starting index in the source buffer, <strong>Default</strong> is 0.</li>
+<li><code>@param</code> <code>sourceEnd?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The ending index in the source buffer, <strong>Default</strong> is the length of the source buffer.</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The number of bytes copied.</li>
 <li><code>@throws</code> {TypeError} If the target is not a valid typed array.</li>
 <li><code>@throws</code> {RangeError} If the target start index is out of range.</li>
 <li><code>@throws</code> {RangeError} If the source start or end index is out of range.</li>
@@ -248,8 +281,8 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 			<span><a class="mark" href="#buffer-slice-start-end-" id="buffer-slice-start-end-">#</a></span>
 		</h3><p>slice the buffer data into a new buffer, shared memory with the original buffer.</p>
 <ul>
-<li><code>@param</code> <code>start?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@param</code> <code>end?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>start?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>end?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="#class-buffer"><code>Buffer</code></a> </li>
 </ul>
 <h3 id="buffer-subarray-begin-end-">
@@ -257,8 +290,8 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 			<span><a class="mark" href="#buffer-subarray-begin-end-" id="buffer-subarray-begin-end-">#</a></span>
 		</h3><p>subarray the buffer data into a new buffer, shared memory with the original buffer.</p>
 <ul>
-<li><code>@param</code> <code>begin?</code>: <a href="$ext.html#int"><code>Int</code></a> </li>
-<li><code>@param</code> <code>end?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>begin?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
+<li><code>@param</code> <code>end?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="#class-buffer"><code>Buffer</code></a> </li>
 </ul>
 <h3 id="buffer-tojson-">
@@ -274,8 +307,8 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 		</h3><p>writing data to self buffer.</p>
 <ul>
 <li><code>@param</code> <code>source</code>: <code>ArrayBufferView</code> </li>
-<li><code>@param</code> <code>offset?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>offset?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="buffer-compare-target-start-end-thisstart-thisend-">
 			buffer.compare(target,start?,end?,thisStart?,thisEnd?)
@@ -283,11 +316,11 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 		</h3><p>Compare this buffer with another buffer or Uint8Array.</p>
 <ul>
 <li><code>@param</code> <code>target</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> The target buffer or Uint8Array to compare with.</li>
-<li><code>@param</code> <code>start?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The starting index in the target buffer, <strong>Default</strong> is 0.</li>
-<li><code>@param</code> <code>end?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The ending index in the target buffer, <strong>Default</strong> is the length of the target buffer.</li>
-<li><code>@param</code> <code>thisStart?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The starting index in this buffer, <strong>Default</strong> is 0.</li>
-<li><code>@param</code> <code>thisEnd?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The ending index in this buffer, <strong>Default</strong> is the length of this buffer.</li>
-<li><code>@return</code> <a href="$ext.html#int"><code>Int</code></a>  Returns 0 if the buffers are equal, a negative number if this buffer is less than the target, or a positive number if this buffer is greater than the target.</li>
+<li><code>@param</code> <code>start?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The starting index in the target buffer, <strong>Default</strong> is 0.</li>
+<li><code>@param</code> <code>end?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The ending index in the target buffer, <strong>Default</strong> is the length of the target buffer.</li>
+<li><code>@param</code> <code>thisStart?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The starting index in this buffer, <strong>Default</strong> is 0.</li>
+<li><code>@param</code> <code>thisEnd?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The ending index in this buffer, <strong>Default</strong> is the length of this buffer.</li>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a>  Returns 0 if the buffers are equal, a negative number if this buffer is less than the target, or a positive number if this buffer is greater than the target.</li>
 <li><code>@throws</code> {TypeError} If the target is not a valid typed array.</li>
 <li><code>@throws</code> {RangeError} If the start or end indices are out of range.</li>
 </ul>
@@ -320,8 +353,8 @@ console.log(buf1.equals(buf3)); // Outputs: false (buf1 is not equal to buf3)
 		</h3><p>Convert the buffer to a string using the specified encoding.</p>
 <ul>
 <li><code>@param</code> <code>encoding?</code>: <a href="#encoding"><code>Encoding</code></a> The encoding to use, <strong>Default</strong> is &#39;utf8&#39;.</li>
-<li><code>@param</code> <code>start?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The starting index, <strong>Default</strong> is 0.</li>
-<li><code>@param</code> <code>end?</code>: <a href="$ext.html#uint"><code>Uint</code></a> The ending index, <strong>Default</strong> is the length of the buffer.</li>
+<li><code>@param</code> <code>start?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The starting index, <strong>Default</strong> is 0.</li>
+<li><code>@param</code> <code>end?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The ending index, <strong>Default</strong> is the length of the buffer.</li>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a>  The string representation of the buffer.</li>
 </ul>
 <p>For example:</p>
@@ -333,16 +366,16 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			<span><a class="mark" href="#buffer-readint8-offset-" id="buffer-readint8-offset-">#</a></span>
 		</h3><p>Read int8 from the buffer at the specified offset.</p>
 <ul>
-<li><code>@param</code> <code>offset?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#int8"><code>Int8</code></a> </li>
+<li><code>@param</code> <code>offset?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#int8"><code>Int8</code></a> </li>
 </ul>
 <h3 id="buffer-readuint8-offset-">
 			buffer.readUInt8(offset?)
 			<span><a class="mark" href="#buffer-readuint8-offset-" id="buffer-readuint8-offset-">#</a></span>
 		</h3><p>Read uint8 from the buffer at the specified offset.</p>
 <ul>
-<li><code>@param</code> <code>offset?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#uint8"><code>Uint8</code></a> </li>
+<li><code>@param</code> <code>offset?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint8"><code>Uint8</code></a> </li>
 </ul>
 <h2 id="zero">
 			Zero
@@ -356,8 +389,16 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			<span><a class="mark" href="#alloc-size-initfill-" id="alloc-size-initfill-">#</a></span>
 		</h2><p>Alloc new buffer</p>
 <ul>
-<li><code>@param</code> <code>size</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>initFill?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>size</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>initFill?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="#class-buffer"><code>Buffer</code></a> </li>
+</ul>
+<h2 id="allocunsafe-size-">
+			allocUnsafe(size)
+			<span><a class="mark" href="#allocunsafe-size-" id="allocunsafe-size-">#</a></span>
+		</h2><p>Alloc unsafe buffer</p>
+<ul>
+<li><code>@param</code> <code>size</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="#class-buffer"><code>Buffer</code></a> </li>
 </ul>
 <h2 id="istypedarray-arr-">
@@ -374,7 +415,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 		</h2><p>Tests whether it is a Uint8Array</p>
 <ul>
 <li><code>@param</code> <code>arr</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <code>arr</code> </li>
 </ul>
 <h2 id="isbuffer-arr-">
 			isBuffer(arr)
@@ -382,7 +423,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 		</h2><p>Tests whether it is a buffer data type</p>
 <ul>
 <li><code>@param</code> <code>arr</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>@return</code> <code>arr</code> </li>
 </ul>
 <h2 id="compare-a-b-">
 			compare(a,b)
@@ -391,7 +432,15 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 <ul>
 <li><code>@param</code> <code>a</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@param</code> <code>b</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#int"><code>Int</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> </li>
+</ul>
+<h2 id="encodeutf8length-str-">
+			encodeUTF8Length(str)
+			<span><a class="mark" href="#encodeutf8length-str-" id="encodeutf8length-str-">#</a></span>
+		</h2><p>Calculate the length of the string after encoding using the specified algorithm</p>
+<ul>
+<li><code>@param</code> <code>str</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h2 id="tostring-src-encoding-start-end-">
 			toString(src,encoding?,start?,end?)
@@ -400,8 +449,8 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 <ul>
 <li><code>@param</code> <code>src</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
 <li><code>@param</code> <code>encoding?</code>: <a href="#encoding"><code>Encoding</code></a> </li>
-<li><code>@param</code> <code>start?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>end?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>start?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>end?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="fromstring-str-targeten-">
@@ -440,8 +489,8 @@ console.log(encoded); // Outputs: Uint8Array(13) [72, 101, 108, 108, 111, 44, 32
 		</h2><p>From ArrayBufferLike create a buffer</p>
 <ul>
 <li><code>@param</code> <code>from</code>: <code>ArrayBufferLike</code> an ArrayBuffer or SharedArrayBuffer to create a buffer from</li>
-<li><code>@param</code> <code>byteOffset?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Optional, the offset in bytes to start from, <strong>Default</strong> is 0.</li>
-<li><code>@param</code> <code>length?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Optional, the length in bytes of the buffer, <strong>Default</strong> is the remaining length of the ArrayBuffer.</li>
+<li><code>@param</code> <code>byteOffset?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Optional, the offset in bytes to start from, <strong>Default</strong> is 0.</li>
+<li><code>@param</code> <code>length?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Optional, the length in bytes of the buffer, <strong>Default</strong> is the remaining length of the ArrayBuffer.</li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">const buffer = from(new ArrayBuffer(10), 0, 10);
@@ -455,7 +504,7 @@ console.log(buffer.byteLength); // Outputs: 10
 			<span><a class="mark" href="#from-from-mapfn-" id="from-from-mapfn-">#</a></span>
 		</h2><p>From Iterable or ArrayLike create a buffer</p>
 <ul>
-<li><code>@param</code> <code>from</code>: <code>Iterable</code>&lt;<a href="$ext.html#int"><code>Int</code></a>&gt;|<code>ArrayLike</code>&lt;<a href="$ext.html#int"><code>Int</code></a>&gt; an iterable or array-like object to create a buffer from</li>
+<li><code>@param</code> <code>from</code>: <code>Iterable</code>&lt;<a href="numbers.html#int"><code>Int</code></a>&gt;|<code>ArrayLike</code>&lt;<a href="numbers.html#int"><code>Int</code></a>&gt; an iterable or array-like object to create a buffer from</li>
 <li><code>@param</code> <code>mapFn?</code>: <code>MapFn</code> Optional, a mapping function to apply to each element.</li>
 </ul>
 <p>For example:</p>
@@ -465,13 +514,26 @@ console.log(buffer); // Outputs: Uint8Array(4) [2, 4, 6, 8]
 <ul>
 <li><code>@return</code> <a href="#class-buffer"><code>Buffer</code></a> </li>
 </ul>
+<h2 id="bytelength-arg-encoding-">
+			byteLength(arg,encoding?)
+			<span><a class="mark" href="#bytelength-arg-encoding-" id="bytelength-arg-encoding-">#</a></span>
+		</h2><p>Calculate the byte length of a string when encoded with the specified encoding.</p>
+<ul>
+<li><code>@param</code> <code>arg</code>: <code>FromArg</code> The string whose byte length is to be calculated.</li>
+<li><code>@param</code> <code>encoding?</code>: <a href="#encoding"><code>Encoding</code></a> Optional, the encoding to use. If not provided, &#39;utf8&#39; is assumed.</li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The byte length of the encoded string.</li>
+</ul>
+<p>For example:</p>
+<pre><code class="undefinedts">const length = byteLength(&quot;Hello, World!&quot;, &quot;utf8&quot;);
+console.log(length); // Outputs: 13
+</code></pre>
 <h2 id="concat-list-length-">
 			concat(list,length?)
 			<span><a class="mark" href="#concat-list-length-" id="concat-list-length-">#</a></span>
 		</h2><p>Concat multiple buffers into a new buffer</p>
 <ul>
-<li><code>@param</code> <code>list</code>: <code>ArrayLike</code>&lt;<a href="$ext.html#int"><code>Int</code></a>&gt;<code>[]</code> An array of byte arrays to concatenate.</li>
-<li><code>@param</code> <code>length?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Optional, the total length of the new buffer. If not provided,<br/>it will be calculated based on the lengths of the byte arrays in the list.</li>
+<li><code>@param</code> <code>list</code>: <code>ArrayLike</code>&lt;<a href="numbers.html#int"><code>Int</code></a>&gt;<code>[]</code> An array of byte arrays to concatenate.</li>
+<li><code>@param</code> <code>length?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Optional, the total length of the new buffer. If not provided,<br/>it will be calculated based on the lengths of the byte arrays in the list.</li>
 <li><code>@return</code> <a href="#class-buffer"><code>Buffer</code></a> A new Buffer containing the concatenated data.</li>
 </ul>
 <p>For example:</p>
@@ -484,6 +546,15 @@ console.log(concatenated); // Outputs: Uint8Array(6) [1, 2, 3, 4, 5, 6]
 <li><code>@throws</code> {TypeError} If the provided list is not an array-like object or if<br/>any of the elements in the list are not of type <code>Uint8Array</code> or <code>Buffer</code>.</li>
 <li><code>@throws</code> {RangeError} If the specified length is negative.</li>
 <li><code>@throws</code> {Error} If the concatenation fails for any reason.</li>
+</ul>
+<h2 id="default">
+			default
+			<span><a class="mark" href="#default" id="default">#</a></span>
+		</h2><h3 id="default-from">
+			default.from
+			<span><a class="mark" href="#default-from" id="default-from">#</a></span>
+		</h3><ul>
+<li><code>from</code>: <code>from</code> </li>
 </ul>
 
 			</div>

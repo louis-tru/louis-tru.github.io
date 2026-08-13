@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -347,115 +353,115 @@
 			stream.type
 			<span><a class="mark" href="#stream-type" id="stream-type">#</a></span>
 		</h3><ul>
-<li><code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> type</li>
+<li><code>@get</code> <code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> type</li>
 </ul>
 <h3 id="stream-mime">
 			stream.mime
 			<span><a class="mark" href="#stream-mime" id="stream-mime">#</a></span>
 		</h3><ul>
-<li><code>mime</code>: <a href="$ext.html#string"><code>string</code></a> mime type</li>
+<li><code>@get</code> <code>mime</code>: <a href="$ext.html#string"><code>string</code></a> mime type</li>
 </ul>
 <h3 id="stream-language">
 			stream.language
 			<span><a class="mark" href="#stream-language" id="stream-language">#</a></span>
 		</h3><ul>
-<li><code>language</code>: <a href="$ext.html#string"><code>string</code></a> language</li>
+<li><code>@get</code> <code>language</code>: <a href="$ext.html#string"><code>string</code></a> language</li>
 </ul>
 <h3 id="stream-codecid">
 			stream.codecId
 			<span><a class="mark" href="#stream-codecid" id="stream-codecid">#</a></span>
 		</h3><ul>
-<li><code>codecId</code>: <a href="$ext.html#number"><code>number</code></a> codec id</li>
+<li><code>@get</code> <code>codecId</code>: <a href="$ext.html#number"><code>number</code></a> codec id</li>
 </ul>
 <h3 id="stream-codectag">
 			stream.codecTag
 			<span><a class="mark" href="#stream-codectag" id="stream-codectag">#</a></span>
 		</h3><ul>
-<li><code>codecTag</code>: <a href="$ext.html#number"><code>number</code></a> codec tag</li>
+<li><code>@get</code> <code>codecTag</code>: <a href="$ext.html#number"><code>number</code></a> codec tag</li>
 </ul>
 <h3 id="stream-format">
 			stream.format
 			<span><a class="mark" href="#stream-format" id="stream-format">#</a></span>
 		</h3><ul>
-<li><code>format</code>: <a href="$ext.html#number"><code>number</code></a> codec av format output</li>
+<li><code>@get</code> <code>format</code>: <a href="$ext.html#number"><code>number</code></a> codec av format output</li>
 </ul>
 <h3 id="stream-profile">
 			stream.profile
 			<span><a class="mark" href="#stream-profile" id="stream-profile">#</a></span>
 		</h3><ul>
-<li><code>profile</code>: <a href="$ext.html#number"><code>number</code></a> profile</li>
+<li><code>@get</code> <code>profile</code>: <a href="$ext.html#number"><code>number</code></a> profile</li>
 </ul>
 <h3 id="stream-level">
 			stream.level
 			<span><a class="mark" href="#stream-level" id="stream-level">#</a></span>
 		</h3><ul>
-<li><code>level</code>: <a href="$ext.html#number"><code>number</code></a> level</li>
+<li><code>@get</code> <code>level</code>: <a href="$ext.html#number"><code>number</code></a> level</li>
 </ul>
 <h3 id="stream-width">
 			stream.width
 			<span><a class="mark" href="#stream-width" id="stream-width">#</a></span>
 		</h3><ul>
-<li><code>width</code>: <a href="$ext.html#number"><code>number</code></a> video width</li>
+<li><code>@get</code> <code>width</code>: <a href="$ext.html#number"><code>number</code></a> video width</li>
 </ul>
 <h3 id="stream-height">
 			stream.height
 			<span><a class="mark" href="#stream-height" id="stream-height">#</a></span>
 		</h3><ul>
-<li><code>height</code>: <a href="$ext.html#number"><code>number</code></a> video height</li>
+<li><code>@get</code> <code>height</code>: <a href="$ext.html#number"><code>number</code></a> video height</li>
 </ul>
 <h3 id="stream-bitrate">
 			stream.bitrate
 			<span><a class="mark" href="#stream-bitrate" id="stream-bitrate">#</a></span>
 		</h3><ul>
-<li><code>bitrate</code>: <a href="$ext.html#number"><code>number</code></a> bit rate</li>
+<li><code>@get</code> <code>bitrate</code>: <a href="$ext.html#number"><code>number</code></a> bit rate</li>
 </ul>
 <h3 id="stream-samplerate">
 			stream.sampleRate
 			<span><a class="mark" href="#stream-samplerate" id="stream-samplerate">#</a></span>
 		</h3><ul>
-<li><code>sampleRate</code>: <a href="$ext.html#number"><code>number</code></a> audio sample rate</li>
+<li><code>@get</code> <code>sampleRate</code>: <a href="$ext.html#number"><code>number</code></a> audio sample rate</li>
 </ul>
 <h3 id="stream-channels">
 			stream.channels
 			<span><a class="mark" href="#stream-channels" id="stream-channels">#</a></span>
 		</h3><ul>
-<li><code>channels</code>: <a href="$ext.html#number"><code>number</code></a> audio channel count</li>
+<li><code>@get</code> <code>channels</code>: <a href="$ext.html#number"><code>number</code></a> audio channel count</li>
 </ul>
 <h3 id="stream-channellayout">
 			stream.channelLayout
 			<span><a class="mark" href="#stream-channellayout" id="stream-channellayout">#</a></span>
 		</h3><ul>
-<li><code>channelLayout</code>: <a href="$ext.html#number"><code>number</code></a> audio channel layout to enum AudioChannelLayoutMask</li>
+<li><code>@get</code> <code>channelLayout</code>: <a href="$ext.html#number"><code>number</code></a> audio channel layout to enum AudioChannelLayoutMask</li>
 </ul>
 <h3 id="stream-duration">
 			stream.duration
 			<span><a class="mark" href="#stream-duration" id="stream-duration">#</a></span>
 		</h3><ul>
-<li><code>duration</code>: <a href="$ext.html#number"><code>number</code></a> duration of the stream, in stream time base.</li>
+<li><code>@get</code> <code>duration</code>: <a href="$ext.html#number"><code>number</code></a> duration of the stream, in stream time base.</li>
 </ul>
 <h3 id="stream-avgframerate">
 			stream.avgFramerate
 			<span><a class="mark" href="#stream-avgframerate" id="stream-avgframerate">#</a></span>
 		</h3><ul>
-<li><code>avgFramerate</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> video frame average framerate</li>
+<li><code>@get</code> <code>avgFramerate</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> video frame average framerate</li>
 </ul>
 <h3 id="stream-timebase">
 			stream.timeBase
 			<span><a class="mark" href="#stream-timebase" id="stream-timebase">#</a></span>
 		</h3><ul>
-<li><code>timeBase</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> Unit of pts,dts on Packet,Frame by Numerator/Denominator (seconds)</li>
+<li><code>@get</code> <code>timeBase</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> Unit of pts,dts on Packet,Frame by Numerator/Denominator (seconds)</li>
 </ul>
 <h3 id="stream-index">
 			stream.index
 			<span><a class="mark" href="#stream-index" id="stream-index">#</a></span>
 		</h3><ul>
-<li><code>index</code>: <a href="$ext.html#number"><code>number</code></a> stream index in source</li>
+<li><code>@get</code> <code>index</code>: <a href="$ext.html#number"><code>number</code></a> stream index in source</li>
 </ul>
 <h3 id="stream-hashcode">
 			stream.hashCode
 			<span><a class="mark" href="#stream-hashcode" id="stream-hashcode">#</a></span>
 		</h3><ul>
-<li><code>hashCode</code>: <a href="$ext.html#number"><code>number</code></a> key params hash code</li>
+<li><code>@get</code> <code>hashCode</code>: <a href="$ext.html#number"><code>number</code></a> key params hash code</li>
 </ul>
 <h2 id="interface-player">
 			Interface: Player
@@ -466,44 +472,44 @@
 		</h3><h3 id="player-pts">
 			player.pts
 			<span><a class="mark" href="#player-pts" id="player-pts">#</a></span>
-		</h3><p>Current the presentation timestamp</p>
+		</h3><p>Presentation timestamp (ms or engine-specific units). </p>
 <ul>
-<li><code>@get</code> <code>pts</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@get</code> <code>pts</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="player-volume">
 			player.volume
 			<span><a class="mark" href="#player-volume" id="player-volume">#</a></span>
-		</h3><p>Get/Set audio volume</p>
+		</h3><p>Playback volume, 0.0–1.0. </p>
 <ul>
 <li><code>volume</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h3 id="player-mute">
 			player.mute
 			<span><a class="mark" href="#player-mute" id="player-mute">#</a></span>
-		</h3><p>Get/Set audio mute</p>
+		</h3><p>Whether audio is currently muted. </p>
 <ul>
 <li><code>mute</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="player-ispause">
 			player.isPause
 			<span><a class="mark" href="#player-ispause" id="player-ispause">#</a></span>
-		</h3><p>Get is paused</p>
+		</h3><p>True if media is currently paused. </p>
 <ul>
 <li><code>@get</code> <code>isPause</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h3 id="player-type">
 			player.type
 			<span><a class="mark" href="#player-type" id="player-type">#</a></span>
-		</h3><p>Get media type</p>
+		</h3><p>Media container type. </p>
 <ul>
 <li><code>@get</code> <code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> </li>
 </ul>
 <h3 id="player-duration">
 			player.duration
 			<span><a class="mark" href="#player-duration" id="player-duration">#</a></span>
-		</h3><p>Media play duration</p>
+		</h3><p>Total duration of the media, in ms. </p>
 <ul>
-<li><code>@get</code> <code>duration</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@get</code> <code>duration</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="player-status">
 			player.status
@@ -521,51 +527,51 @@
 <h3 id="player-video">
 			player.video
 			<span><a class="mark" href="#player-video" id="player-video">#</a></span>
-		</h3><p>The currently playing video stream</p>
+		</h3><p>Active video stream, if any. </p>
 <ul>
 <li><code>@get</code> <code>video</code>: <a href="#interface-stream"><code>Stream</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
 </ul>
 <h3 id="player-audio">
 			player.audio
 			<span><a class="mark" href="#player-audio" id="player-audio">#</a></span>
-		</h3><p>The currently playing audio stream</p>
+		</h3><p>Active audio stream, if any. </p>
 <ul>
 <li><code>@get</code> <code>audio</code>: <a href="#interface-stream"><code>Stream</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
 </ul>
 <h3 id="player-audiostreams">
 			player.audioStreams
 			<span><a class="mark" href="#player-audiostreams" id="player-audiostreams">#</a></span>
-		</h3><p>Get the number of audio tracks in the current media source</p>
+		</h3><p>Get the number of audio tracks in the current media source </p>
 <ul>
-<li><code>@get</code> <code>audioStreams</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@get</code> <code>audioStreams</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="player-play-">
 			player.play()
 			<span><a class="mark" href="#player-play-" id="player-play-">#</a></span>
-		</h3><p>Start play media</p>
+		</h3><p>Begin or resume playback. </p>
 <ul>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="player-pause-">
 			player.pause()
 			<span><a class="mark" href="#player-pause-" id="player-pause-">#</a></span>
-		</h3><p>Pause play media</p>
+		</h3><p>Pause playback. </p>
 <ul>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="player-stop-">
 			player.stop()
 			<span><a class="mark" href="#player-stop-" id="player-stop-">#</a></span>
-		</h3><p>Stop play media</p>
+		</h3><p>Stop playback completely. </p>
 <ul>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="player-seek-timems-">
 			player.seek(timeMs)
 			<span><a class="mark" href="#player-seek-timems-" id="player-seek-timems-">#</a></span>
-		</h3><p>Jump the current media source to the specified position</p>
+		</h3><p>Seek to a new position in the media.</p>
 <ul>
-<li><code>@param</code> <code>timeMs</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>timeMs</code>: <a href="numbers.html#uint"><code>Uint</code></a> Target timestamp in milliseconds.</li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="player-switchaudio-index-">
@@ -573,7 +579,7 @@
 			<span><a class="mark" href="#player-switchaudio-index-" id="player-switchaudio-index-">#</a></span>
 		</h3><p>Switch the currently playing audio by track index</p>
 <ul>
-<li><code>@param</code> <code>index</code>: <a href="$ext.html#uint"><code>Uint</code></a> The index &lt; [<code>Player.audioStreams</code>]</li>
+<li><code>@param</code> <code>index</code>: <a href="numbers.html#uint"><code>Uint</code></a> The index &lt; [<code>Player.audioStreams</code>]</li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="class-audioplayer">

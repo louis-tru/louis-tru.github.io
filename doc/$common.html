@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -151,6 +157,9 @@
 <span><a href="#random-start-end-">random(start?,end?)</a></span>
 </li>
 <li>
+<span><a href="#randomfloat-start-end-">randomFloat(start?,end?)</a></span>
+</li>
+<li>
 <span><a href="#fixrandom-arg0-args-">fixRandom(arg0,...args)</a></span>
 </li>
 <li>
@@ -166,7 +175,7 @@
 <span><a href="#equalsclass-baseclass-subclass-">equalsClass(baseclass,subclass)</a></span>
 </li>
 <li>
-<span><a href="#assert-condition-code-">assert(condition,code?)</a></span>
+<span><a href="#assert-condition-arg-extmsg-">assert(condition,arg?,extMsg?)</a></span>
 </li>
 <li>
 <span><a href="#promise-executor-">promise(executor)</a></span>
@@ -269,6 +278,14 @@
 <li><code>@param</code> <code>start?</code>:  Numbers of begin</li>
 <li><code>@param</code> <code>end?</code>:  Numbers of end</li>
 </ul>
+<h2 id="randomfloat-start-end-">
+			randomFloat(start?,end?)
+			<span><a class="mark" href="#randomfloat-start-end-" id="randomfloat-start-end-">#</a></span>
+		</h2><p>Creating random float numbers</p>
+<ul>
+<li><code>@param</code> <code>start?</code>:  Numbers of begin</li>
+<li><code>@param</code> <code>end?</code>:  Numbers of end</li>
+</ul>
 <h2 id="fixrandom-arg0-args-">
 			fixRandom(arg0,...args)
 			<span><a class="mark" href="#fixrandom-arg0-args-" id="fixrandom-arg0-args-">#</a></span>
@@ -290,7 +307,7 @@ console.log(util.fixRandom(10, 20, 30, 40))
 console.log(util.fixRandom(10, 20, 30, 40))
 </code></pre>
 <ul>
-<li><code>@return</code> <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>arg</code>: <a href="$ext.html#number"><code>number</code></a> </li>
 </ul>
 <h2 id="filter-obj-exp-non-">
@@ -332,13 +349,16 @@ console.log(util.fixRandom(10, 20, 30, 40))
 <li><code>@param</code> <code>subclass</code>: <code>any</code> </li>
 <li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
-<h2 id="assert-condition-code-">
-			assert(condition,code?)
-			<span><a class="mark" href="#assert-condition-code-" id="assert-condition-code-">#</a></span>
-		</h2><ul>
-<li><code>@param</code> <code>condition</code>: <code>any</code> </li>
-<li><code>@param</code> <code>code?</code>: <a href="$ext.html#number"><code>number</code></a>|<code>ErrorNewArg</code> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<h2 id="assert-condition-arg-extmsg-">
+			assert(condition,arg?,extMsg?)
+			<span><a class="mark" href="#assert-condition-arg-extmsg-" id="assert-condition-arg-extmsg-">#</a></span>
+		</h2><p>Asserts that value is not null or undefined.</p>
+<ul>
+<li><code>@param</code> <code>condition</code>: <code>T</code> The value to check.</li>
+<li><code>@param</code> <code>arg?</code>: <a href="$ext.html#number"><code>number</code></a>|<a href="defs.html#errornewarg"><code>ErrorNewArg</code></a> Optional code or message for the error thrown.</li>
+<li><code>@param</code> <code>extMsg?</code>: <a href="$ext.html#string"><code>string</code></a> Optional message for the error thrown.</li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>  nothing</li>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
 </ul>
 <h2 id="promise-executor-">
 			promise(executor)

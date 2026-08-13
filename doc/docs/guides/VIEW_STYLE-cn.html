@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = 'docs/guides/VIEW_STYLE-cn.html';
+		var relative = '../../';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.4.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#-">视图布局与样式</a></span>
+<ul>
+<li>
+<span><a href="#view-">View 类继承关系</a></span>
+</li>
+<li>
+<span><a href="#-">布局示例</a></span>
+</li>
+<li>
+<span><a href="#css-like-">CSS-like 样式</a></span>
+<ul>
+<li>
+<span><a href="#-">支持的选择器语法</a></span>
+</li>
+<li>
+<span><a href="#-">样式过渡</a></span>
+</li>
+<li>
+<span><a href="#-">伪状态</a></span>
+</li>
+<li>
+<span><a href="#-">样式表示例</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="-">
+			视图布局与样式
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h1><p><a href="VIEW_STYLE.html">English</a> · <a href="../../README-cn.html">返回 README</a> · <a href="https://quarks.cc/doc/">API 索引</a></p>
+<p>Quark 的 View 描述屏幕上的可见 UI 元素，并响应硬件和操作系统产生的事件。<br/>View 组成显式的视图树；Quark 不使用浏览器 DOM 或浏览器 CSS 布局引擎。</p>
+<p>完整属性和方法请查阅 <a href="https://quarks.cc/doc/view.html">View API</a>。</p>
+<h2 id="view-">
+			View 类继承关系
+			<span><a class="mark" href="#view-" id="view-">#</a></span>
+		</h2><p><code>libs/quark/view.ts</code> 当前公开类的继承关系如下。<code>MorphView</code>、<code>TextOptions</code>、<br/><code>ScrollView</code> 和 <code>Player</code> 是接口或行为约定，因此以 <code>implements</code> 标注，而不作为<br/>基类节点列出：</p>
+<ul>
+<li><a href="https://quarks.cc/doc/view.html#class-view">View</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-br">Br</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-box">Box</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-video">Video</a> — implements <code>Player</code></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-morph">Morph</a> — implements <a href="https://quarks.cc/doc/view.html#interface-morphview">MorphView</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-world">World</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-text">Text</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-input">Input</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a> — implements <a href="https://quarks.cc/doc/view.html#interface-scrollview">ScrollView</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a> — implements <a href="https://quarks.cc/doc/view.html#interface-scrollview">ScrollView</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-entity">Entity</a> — implements <a href="https://quarks.cc/doc/view.html#interface-morphview">MorphView</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-agent">Agent</a> — 抽象类<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-sprite">Sprite</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-spine">Spine</a></li><br/></ul><br/></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-label">Label</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-inputsink">InputSink</a></li><br/></ul><br/></li>
+</ul>
+<h2 id="-">
+			布局示例
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h2><p>JSX 语法对 Web 开发者可能比较熟悉，但其中的元素和属性实际作用于 Quark<br/>自己的原生 View 与布局系统：</p>
+<pre><code class="undefinedtsx">import { Jsx, Application, Window } from &#39;quark&#39;
+
+new Application()
+new Window().render(
+    &lt;flex width=&quot;100%&quot; height=&quot;50%&quot; itemsAlign=&quot;centerCenter&quot;&gt;
+        &lt;button
+            minWidth=&quot;10%&quot;
+            maxWidth=&quot;40%&quot;
+            height=&quot;100%&quot;
+            paddingLeft={5}
+            lineHeight={1}
+            fontSize={18}
+            fontFamily=&quot;iconfont&quot;
+            backgroundColor=&quot;#f00&quot;
+            whiteSpace=&quot;noWrap&quot;
+            textAlign=&quot;center&quot;
+        &gt;
+            &lt;label
+                fontFamily=&quot;default&quot;
+                fontSize={16}
+                textOverflow=&quot;ellipsis&quot;
+                value=&quot;ABCDEFGHIJKMLNOPQ&quot;
+            /&gt;
+        &lt;/button&gt;
+        &lt;text
+            weight={[0, 1]}
+            height=&quot;100%&quot;
+            textColor=&quot;#00f&quot;
+            lineHeight={1}
+            fontSize={16}
+            whiteSpace=&quot;noWrap&quot;
+            fontWeight=&quot;bold&quot;
+            textOverflow=&quot;ellipsisCenter&quot;
+            textAlign=&quot;center&quot;
+            value=&quot;Title&quot;
+            backgroundColor=&quot;#0f0&quot;
+        /&gt;
+        &lt;text
+            minWidth=&quot;10%&quot;
+            maxWidth=&quot;40%&quot;
+            height=&quot;100%&quot;
+            textColor=&quot;#f0f&quot;
+            lineHeight={1}
+            backgroundColor=&quot;#0ff&quot;
+            textAlign=&quot;center&quot;
+            value=&quot;A&quot;
+            opacity={0.5}
+        /&gt;
+    &lt;/flex&gt;
+)
+</code></pre>
+<h2 id="css-like-">
+			CSS-like 样式
+			<span><a class="mark" href="#css-like-" id="css-like-">#</a></span>
+		</h2><p>Quark 提供了一个受 CSS 启发、面向 GUI 视图层级的 class 驱动样式系统。<br/>它不是完整的浏览器 CSS 选择器引擎；只有 class、受支持的层级操作符和三种<br/>内置伪状态参与匹配。</p>
+<h3 id="-">
+			支持的选择器语法
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h3><ul>
+<li>后代选择器使用空格。<code>.a .b .c</code> 按顺序匹配任意更深层级的 <code>.b</code> 和 <code>.c</code>。</li>
+<li>直接子级选择器使用 <code>&gt;</code>。<code>.a &gt; .b &gt; .c</code> 要求后一个匹配项必须是前一个<br/>匹配项的直接子 View。</li>
+<li>连续 class 选择器之间没有空格。<code>.a.b.c</code> 匹配同时拥有这三个 class 的<br/>同一个 View。</li>
+<li>支持 <code>:normal</code>、<code>:hover</code>、<code>:active</code> 三种伪状态。伪状态必须是当前连续<br/>class 段的最后后缀：<code>.a.b:active .c.d</code> 合法，<code>.a:active.b</code> 非法。</li>
+<li>多个选择器表达式可以使用逗号组合。</li>
+</ul>
+<p>例如，<code>.div_cls.div_cls2:active .aa.bb.cc</code> 会匹配一个同时具有 <code>aa</code>、<code>bb</code>、<br/><code>cc</code> 三个 class 的后代；它的祖先同时具有 <code>div_cls</code>、<code>div_cls2</code>，且处于<br/><code>active</code> 状态。</p>
+<h3 id="-">
+			样式过渡
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h3><p>每个样式规则都可以指定一个以毫秒为单位的 <code>time</code>，表示切换到该规则时的<br/>过渡时长。未指定 <code>time</code> 时，样式立即生效。需要过渡时，Quark 会在内部创建<br/>并播放一个 Action。</p>
+<h3 id="-">
+			伪状态
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h3><p>样式系统支持三种交互状态：</p>
+<ol>
+<li><code>normal</code>：指针或触摸不再停留或按压 View 时应用。</li>
+<li><code>hover</code>：指针进入 View 或 View 获得焦点时应用。</li>
+<li><code>active</code>：指针或触摸按下期间应用。</li>
+</ol>
+<p>伪状态会在运行时根据 View 的交互事件解析。</p>
+<h3 id="-">
+			样式表示例
+			<span><a class="mark" href="#-" id="-">#</a></span>
+		</h3><pre><code class="undefinedtsx">import { Jsx, createCss } from &#39;quark&#39;
+
+createCss({
+    &#39;.a&#39;: {
+        width: &#39;match&#39;,
+        lineHeight: 45,
+        whiteSpace: &#39;pre&#39;,
+        fontSize: 16,
+    },
+    &#39;.a:normal&#39;: {
+        textColor: &#39;#0f0&#39;,
+    },
+    &#39;.a:hover&#39;: {
+        textColor: &#39;#f0f&#39;,
+    },
+    &#39;.a:active&#39;: {
+        textColor: &#39;#f00&#39;,
+    },
+    &#39;.a .b&#39;: {
+        fontSize: 20,
+    },
+    &#39;.a &gt; .c&#39;: {
+        width: 100,
+    },
+    &#39;.a.b:active .c.d&#39;: {
+        opacity: 0.8,
+    },
+    &#39;.a:normal .b&#39;: {
+        time: 500,
+        textColor: &#39;#000&#39;,
+    },
+    &#39;.a:hover .b&#39;: {
+        time: 500,
+        textColor: &#39;#f00&#39;,
+    },
+})
+
+const view = (
+    &lt;text class=&quot;a&quot;&gt;
+        &lt;label value=&quot;Hello A!&quot; /&gt;
+        &lt;label class=&quot;b&quot; value=&quot;Hello B!&quot; /&gt;
+    &lt;/text&gt;
+)
+</code></pre>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

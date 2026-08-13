@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -386,7 +392,7 @@
 			nativesocket.port
 			<span><a class="mark" href="#nativesocket-port" id="nativesocket-port">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>port</code>: <a href="$ext.html#uint"><code>Uint</code></a> Port of the WebSocket server</li>
+<li><code>@get</code> <code>port</code>: <a href="numbers.html#uint"><code>Uint</code></a> Port of the WebSocket server</li>
 </ul>
 <h3 id="nativesocket-ip">
 			nativesocket.ip
@@ -423,7 +429,7 @@
 			<span><a class="mark" href="#nativesocket-setkeepalive-keep_alive-keep_idle-" id="nativesocket-setkeepalive-keep_alive-keep_idle-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>keep_alive</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@param</code> <code>keep_idle?</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>keep_idle?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="nativesocket-setnodelay-nodelay-">
@@ -437,7 +443,7 @@
 			nativesocket.setTimeout(time)
 			<span><a class="mark" href="#nativesocket-settimeout-time-" id="nativesocket-settimeout-time-">#</a></span>
 		</h3><ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h3 id="nativesocket-connect-">
@@ -476,7 +482,7 @@
 			<span><a class="mark" href="#nativesocket-constructor-hostname-port-isssl-" id="nativesocket-constructor-hostname-port-isssl-">#</a></span>
 		</h3><ul>
 <li><code>@param</code> <code>hostname</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>port</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>port</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@param</code> <code>isSSL?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
 </ul>
 <h2 id="class-socket">
@@ -577,7 +583,7 @@ ws.connect();
 			websocket.url
 			<span><a class="mark" href="#websocket-url" id="websocket-url">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>url</code>: <a href="path.html#url"><code>URL</code></a> URL of the WebSocket server</li>
+<li><code>@get</code> <code>url</code>: <a href="uri.html#url"><code>URL</code></a> URL of the WebSocket server</li>
 </ul>
 <h3 id="websocket-hostname">
 			websocket.hostname
@@ -589,7 +595,7 @@ ws.connect();
 			websocket.port
 			<span><a class="mark" href="#websocket-port" id="websocket-port">#</a></span>
 		</h3><ul>
-<li><code>@get</code> <code>port</code>: <a href="$ext.html#uint"><code>Uint</code></a> Port number</li>
+<li><code>@get</code> <code>port</code>: <a href="numbers.html#uint"><code>Uint</code></a> Port number</li>
 </ul>
 <h3 id="websocket-isssl">
 			websocket.isSSL
@@ -720,14 +726,14 @@ ws.connect();
 		</h3><p>Setting keep alive for the socket connection</p>
 <ul>
 <li><code>@param</code> <code>keep_alive</code>: <a href="$ext.html#boolean"><code>boolean</code></a> enable keep alive</li>
-<li><code>@param</code> <code>keep_idle?</code>: <a href="$ext.html#uint"><code>Uint</code></a> <strong>Default</strong> is 0 means 7200 seconds,<br/>  the time in milliseconds to wait before sending keep alive packets</li>
+<li><code>@param</code> <code>keep_idle?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong>Default</strong> is 0 means 7200 seconds,<br/>  the time in milliseconds to wait before sending keep alive packets</li>
 </ul>
 <h3 id="websocket-settimeout-time-">
 			websocket.setTimeout(time)
 			<span><a class="mark" href="#websocket-settimeout-time-" id="websocket-settimeout-time-">#</a></span>
 		</h3><p>Setting timeout time for the socket connection</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 </ul>
 <h3 id="websocket-connect-">
 			websocket.connect()
@@ -773,7 +779,7 @@ ws.connect();
 			<span><a class="mark" href="#websocket-test-timeoutms-" id="websocket-test-timeoutms-">#</a></span>
 		</h3><p>First send the ping message to the remote client then wait for the pong message</p>
 <ul>
-<li><code>@param</code> <code>timeoutMs?</code>: <a href="$ext.html#uint"><code>Uint</code></a> wait for the pong message, default not timeout</li>
+<li><code>@param</code> <code>timeoutMs?</code>: <a href="numbers.html#uint"><code>Uint</code></a> wait for the pong message, default not timeout</li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-disablesslverify-disable-">

@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -118,8 +124,41 @@
 <span><a href="#quark-ctr">quark/ctr</a></span>
 <ul>
 <li>
-<span><a href="#args">Args</a></span>
+<span><a href="#class-invalidset">Class: InvalidSet</a></span>
+<ul>
+<li>
+<span><a href="#invalidset">InvalidSet</a></span>
 </li>
+</ul>
+<li>
+<span><a href="#renderqueue">RenderQueue</a></span>
+</li>
+<li>
+<span><a href="#watchingallctrfordebug">WatchingAllCtrForDebug</a></span>
+</li>
+<li>
+<span><a href="#warnrecord">WarnRecord</a></span>
+</li>
+<li>
+<span><a href="#args">Args</a></span>
+<ul>
+<li>
+<span><a href="#args-window">args.window</a></span>
+</li>
+<li>
+<span><a href="#args-owner">args.owner</a></span>
+</li>
+<li>
+<span><a href="#args-children">args.children</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#interface-domconstructor">Interface: DOMConstructor</a></span>
+<ul>
+<li>
+<span><a href="#domconstructor">DOMConstructor</a></span>
+</li>
+</ul>
 <li>
 <span><a href="#assertdom-subclass-baseclass-args-">assertDom(subclass,baseclass,...args)</a></span>
 </li>
@@ -130,10 +169,76 @@
 <span><a href="#linkacc-target-name-">linkAcc(target,name)</a></span>
 </li>
 <li>
+<span><a href="#getkey-vdom-autokey-">getkey(vdom,autoKey)</a></span>
+</li>
+<li>
+<span><a href="#unref-dom-owner-">unref(dom,owner)</a></span>
+</li>
+<li>
+<span><a href="#setref-dom-owner-value-">setref(dom,owner,value)</a></span>
+</li>
+<li>
+<span><a href="#_rerender-self-">_rerender(Self)</a></span>
+</li>
+<li>
 <span><a href="#class-virtualdom">Class: VirtualDOM</a></span>
 <ul>
 <li>
 <span><a href="#virtualdom">VirtualDOM</a></span>
+</li>
+<li>
+<span><a href="#virtualdom-getprophash-prop-">virtualdom.getPropHash(prop)</a></span>
+</li>
+<li>
+<span><a href="#virtualdom-diffprops-dom-vdomold-">virtualdom.diffProps(dom,vdomOld)</a></span>
+</li>
+<li>
+<span><a href="#virtualdom-diffpropsfor-dom-vdomold-keys-">virtualdom.diffPropsFor(dom,vdomOld,keys)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-virtualdomtext">Class: VirtualDOMText</a></span>
+<ul>
+<li>
+<span><a href="#virtualdomtext">VirtualDOMText</a></span>
+</li>
+<li>
+<span><a href="#virtualdomtext-value">virtualdomtext.value</a></span>
+</li>
+<li>
+<span><a href="#virtualdomtext-fromstring-value-">virtualdomtext.fromString(value)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-virtualdomcollection">Class: VirtualDOMCollection</a></span>
+<ul>
+<li>
+<span><a href="#virtualdomcollection">VirtualDOMCollection</a></span>
+</li>
+<li>
+<span><a href="#virtualdomcollection-collection">virtualdomcollection.collection</a></span>
+</li>
+<li>
+<span><a href="#virtualdomcollection-diffprops-dom-vdomold-">virtualdomcollection.diffProps(dom,vdomOld)</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-domcollection">Class: DOMCollection</a></span>
+<ul>
+<li>
+<span><a href="#domcollection">DOMCollection</a></span>
+</li>
+<li>
+<span><a href="#domcollection-collection">domcollection.collection</a></span>
+</li>
+<li>
+<span><a href="#domcollection-keys">domcollection.keys</a></span>
+</li>
+<li>
+<span><a href="#domcollection-ref">domcollection.ref</a></span>
+</li>
+<li>
+<span><a href="#domcollection-owner">domcollection.owner</a></span>
 </li>
 </ul>
 <li>
@@ -182,10 +287,10 @@
 <span><a href="#viewcontroller-constructor-props-arg-">viewcontroller.constructor(props,arg)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-setstate-newstate-cb-">viewcontroller.setState(newState,cb?)</a></span>
+<span><a href="#viewcontroller-setstate-newstate-">viewcontroller.setState(newState)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-update-cb-">viewcontroller.update(cb?)</a></span>
+<span><a href="#viewcontroller-update-">viewcontroller.update()</a></span>
 </li>
 <li>
 <span><a href="#viewcontroller-triggerload-">viewcontroller.triggerLoad()</a></span>
@@ -197,7 +302,7 @@
 <span><a href="#viewcontroller-triggerupdate-old-vdom-">viewcontroller.triggerUpdate(old,vdom)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-triggerdestroy-">viewcontroller.triggerDestroy()</a></span>
+<span><a href="#viewcontroller-triggerunload-">viewcontroller.triggerUnload()</a></span>
 </li>
 <li>
 <span><a href="#viewcontroller-render-">viewcontroller.render()</a></span>
@@ -236,37 +341,140 @@
 				<h1 id="quark-ctr">
 			quark/ctr
 			<span><a class="mark" href="#quark-ctr" id="quark-ctr">#</a></span>
-		</h1><h2 id="args">
+		</h1><h2 id="class-invalidset">
+			Class: InvalidSet
+			<span><a class="mark" href="#class-invalidset" id="class-invalidset">#</a></span>
+		</h2><h3 id="invalidset">
+			InvalidSet
+			<span><a class="mark" href="#invalidset" id="invalidset">#</a></span>
+		</h3><p>A special Set implementation that ignores all operations.<br/>Used as a no-op placeholder when file-watching is disabled (non-dev mode).</p>
+<ul>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@extends</code> <code>Set</code>&lt;<code>T</code>&gt;</li>
+</ul>
+<h2 id="renderqueue">
+			RenderQueue
+			<span><a class="mark" href="#renderqueue" id="renderqueue">#</a></span>
+		</h2><p>Render Queue:<br/>Holds ViewControllers that are scheduled for re-render.<br/>Key: controller, Value: {missError} whether to suppress re-throwing errors.</p>
+<ul>
+<li><code>@const</code> <code>RenderQueue</code>: </li>
+</ul>
+<h2 id="watchingallctrfordebug">
+			WatchingAllCtrForDebug
+			<span><a class="mark" href="#watchingallctrfordebug" id="watchingallctrfordebug">#</a></span>
+		</h2><p>Debug-only: tracks all controllers with active file-watch subscriptions.</p>
+<ul>
+<li><code>@const</code> <code>WatchingAllCtrForDebug</code>: </li>
+</ul>
+<h2 id="warnrecord">
+			WarnRecord
+			<span><a class="mark" href="#warnrecord" id="warnrecord">#</a></span>
+		</h2><p>Warning system: prevents duplicate warning logs.</p>
+<ul>
+<li><code>@const</code> <code>WarnRecord</code>: </li>
+</ul>
+<h2 id="args">
 			Args
 			<span><a class="mark" href="#args" id="args">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>Args</code> =  {<br/><code>window</code>: <a href="window.html#window"><code>Window</code></a>; <br/><code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a>; <br/><code>children</code>: ; <br/>}</li>
+		</h2><p>Arguments used to construct a VirtualDOM instance.</p>
+<ul>
+<li><code>@type</code> <code>Args</code> = </li>
+</ul>
+<h3 id="args-window">
+			args.window
+			<span><a class="mark" href="#args-window" id="args-window">#</a></span>
+		</h3><ul>
+<li><code>window</code>: <a href="window.html#window"><code>Window</code></a> bound window instance</li>
+</ul>
+<h3 id="args-owner">
+			args.owner
+			<span><a class="mark" href="#args-owner" id="args-owner">#</a></span>
+		</h3><ul>
+<li><code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> parent controller</li>
+</ul>
+<h3 id="args-children">
+			args.children
+			<span><a class="mark" href="#args-children" id="args-children">#</a></span>
+		</h3><ul>
+<li><code>children</code>:  child virtual nodes</li>
+</ul>
+<h2 id="interface-domconstructor">
+			Interface: DOMConstructor
+			<span><a class="mark" href="#interface-domconstructor" id="interface-domconstructor">#</a></span>
+		</h2><h3 id="domconstructor">
+			DOMConstructor
+			<span><a class="mark" href="#domconstructor" id="domconstructor">#</a></span>
+		</h3><p>Constructor type for DOM elements.</p>
+<ul>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
 </ul>
 <h2 id="assertdom-subclass-baseclass-args-">
 			assertDom(subclass,baseclass,...args)
 			<span><a class="mark" href="#assertdom-subclass-baseclass-args-" id="assertdom-subclass-baseclass-args-">#</a></span>
-		</h2><p>Check if it is a valid <code>VirtualDOM</code> type, and the parameter <code>subclass</code> is of type <code>baseclass</code></p>
+		</h2><p>Assert that a VirtualDOM belongs to a specific DOM subclass.</p>
 <ul>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
 <li><code>@param</code> <code>subclass</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<code>T</code>&gt; </li>
-<li><code>@param</code> <code>baseclass</code>: <code>DOMConstructor</code>&lt;<code>T</code>&gt; </li>
+<li><code>@param</code> <code>baseclass</code>: <a href="#interface-domconstructor"><code>DOMConstructor</code></a>&lt;<code>T</code>&gt; </li>
 <li><code>@param</code> <code>args</code>: <code>any`</code>[]` </li>
 </ul>
 <h2 id="link-target-name-">
 			link(target,name)
 			<span><a class="mark" href="#link-target-name-" id="link-target-name-">#</a></span>
-		</h2><p>ViewController prop</p>
+		</h2><p>Decorator to link an external prop to a class field.</p>
 <ul>
+<li>Copies the value from <code>props</code> into the class property when initializing/updating.</li>
+<li><strong>One-way binding only:</strong> changes to props propagate into the class field,<br/>but class field changes do not propagate back to props.</li>
+<li>Useful for simplifying access: instead of <code>this.props.foo</code>, you can use <code>this.foo</code>.</li>
 <li><code>@param</code> <code>target</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 <h2 id="linkacc-target-name-">
 			linkAcc(target,name)
 			<span><a class="mark" href="#linkacc-target-name-" id="linkacc-target-name-">#</a></span>
-		</h2><p>ViewController prop and define prop accessor</p>
+		</h2><p>Decorator to link an external prop with getter/setter accessors.</p>
 <ul>
+<li>Also a <strong>one-way binding</strong> from props to the class field.</li>
+<li>Provides an accessor so that if the field is reassigned inside the class,<br/>it triggers <code>update()</code> automatically (but does not affect props).</li>
 <li><code>@param</code> <code>target</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
 <li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="getkey-vdom-autokey-">
+			getkey(vdom,autoKey)
+			<span><a class="mark" href="#getkey-vdom-autokey-" id="getkey-vdom-autokey-">#</a></span>
+		</h2><p>Get the VirtualDOM key. Falls back to auto-index if not defined.<br/>Warns if no key is provided in a DOM collection.</p>
+<ul>
+<li><code>@param</code> <code>vdom</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
+<li><code>@param</code> <code>autoKey</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a>|<a href="$ext.html#number"><code>number</code></a> </li>
+</ul>
+<h2 id="unref-dom-owner-">
+			unref(dom,owner)
+			<span><a class="mark" href="#unref-dom-owner-" id="unref-dom-owner-">#</a></span>
+		</h2><p>Remove a ref reference from a controller.</p>
+<ul>
+<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@param</code> <code>dom</code>: <a href="view.html#dom"><code>DOM</code></a> </li>
+<li><code>@param</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a>&lt;<code>T</code>&gt; </li>
+</ul>
+<h2 id="setref-dom-owner-value-">
+			setref(dom,owner,value)
+			<span><a class="mark" href="#setref-dom-owner-value-" id="setref-dom-owner-value-">#</a></span>
+		</h2><p>Set or update a ref reference.</p>
+<ul>
+<li><code>@param</code> <code>dom</code>: <a href="view.html#view"><code>View</code></a>|<a href="#class-viewcontroller"><code>ViewController</code></a> </li>
+<li><code>@param</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+</ul>
+<h2 id="_rerender-self-">
+			_rerender(Self)
+			<span><a class="mark" href="#_rerender-self-" id="_rerender-self-">#</a></span>
+		</h2><p>Performs actual re-rendering of a ViewController.</p>
+<ul>
+<li>Runs diff algorithm between old and new VirtualDOM.</li>
+<li>Triggers lifecycle hooks.</li>
+<li>Updates references.</li>
+<li><code>@param</code> <code>Self</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
 </ul>
 <h2 id="class-virtualdom">
 			Class: VirtualDOM
@@ -274,8 +482,123 @@
 		</h2><h3 id="virtualdom">
 			VirtualDOM
 			<span><a class="mark" href="#virtualdom" id="virtualdom">#</a></span>
-		</h3><ul>
+		</h3><p>Represents a Virtual DOM node.<br/>Can be a View, ViewController, or other custom DOM elements.</p>
+<ul>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
+</ul>
+<h3 id="virtualdom-getprophash-prop-">
+			virtualdom.getPropHash(prop)
+			<span><a class="mark" href="#virtualdom-getprophash-prop-" id="virtualdom-getprophash-prop-">#</a></span>
+		</h3><p>Get hash for a specific property.</p>
+<ul>
+<li><code>@param</code> <code>prop</code>: <a href="$ext.html#string"><code>string</code></a> Property name</li>
+<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a> hash value</li>
+</ul>
+<h3 id="virtualdom-diffprops-dom-vdomold-">
+			virtualdom.diffProps(dom,vdomOld)
+			<span><a class="mark" href="#virtualdom-diffprops-dom-vdomold-" id="virtualdom-diffprops-dom-vdomold-">#</a></span>
+		</h3><p>Diff props against old VirtualDOM and update the real DOM as needed.</p>
+<ul>
+<li><code>@param</code> <code>dom</code>: <code>T</code> Real DOM instance</li>
+<li><code>@param</code> <code>vdomOld</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> Previous VirtualDOM</li>
+</ul>
+<h3 id="virtualdom-diffpropsfor-dom-vdomold-keys-">
+			virtualdom.diffPropsFor(dom,vdomOld,keys)
+			<span><a class="mark" href="#virtualdom-diffpropsfor-dom-vdomold-keys-" id="virtualdom-diffpropsfor-dom-vdomold-keys-">#</a></span>
+		</h3><p>Diff a subset of props.</p>
+<ul>
+<li><code>@param</code> <code>dom</code>: <code>T</code> Real DOM instance</li>
+<li><code>@param</code> <code>vdomOld</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> Previous VirtualDOM</li>
+<li><p><code>@param</code> <code>keys</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code> Array of prop names to diff</p><br/></li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
+<li><code>@param</code> <code>vdomOld</code>:  Previous VirtualDOM</li>
+<li><p><code>@param</code> <code>domOld</code>:  Previous real DOM</p><br/></li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
+<li><code>@param</code> <code>opts</code>:  Optional render options</li>
+</ul>
+<h2 id="class-virtualdomtext">
+			Class: VirtualDOMText
+			<span><a class="mark" href="#class-virtualdomtext" id="class-virtualdomtext">#</a></span>
+		</h2><h3 id="virtualdomtext">
+			VirtualDOMText
+			<span><a class="mark" href="#virtualdomtext" id="virtualdomtext">#</a></span>
+		</h3><p>Lightweight VirtualDOM representing text nodes.</p>
+<ul>
+<li><code>@extends</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<a href="view.html#label"><code>Label</code></a>&gt;</li>
+</ul>
+<h3 id="virtualdomtext-value">
+			virtualdomtext.value
+			<span><a class="mark" href="#virtualdomtext-value" id="virtualdomtext-value">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> Text content</li>
+</ul>
+<h3 id="virtualdomtext-fromstring-value-">
+			virtualdomtext.fromString(value)
+			<span><a class="mark" href="#virtualdomtext-fromstring-value-" id="virtualdomtext-fromstring-value-">#</a></span>
+		</h3><p>Creates a VirtualDOMText from a string.</p>
+<ul>
+<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> Text string</li>
+<li><code>@return</code> <a href="#class-virtualdomtext"><code>VirtualDOMText</code></a> </li>
+</ul>
+<h2 id="class-virtualdomcollection">
+			Class: VirtualDOMCollection
+			<span><a class="mark" href="#class-virtualdomcollection" id="class-virtualdomcollection">#</a></span>
+		</h2><h3 id="virtualdomcollection">
+			VirtualDOMCollection
+			<span><a class="mark" href="#virtualdomcollection" id="virtualdomcollection">#</a></span>
+		</h3><p>Represents a collection of VirtualDOM nodes.<br/>Handles keyed diffing and ensures no duplicate keys.</p>
+<ul>
+<li><code>@extends</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<a href="#class-domcollection"><code>DOMCollection</code></a>&gt;</li>
+</ul>
+<h3 id="virtualdomcollection-collection">
+			virtualdomcollection.collection
+			<span><a class="mark" href="#virtualdomcollection-collection" id="virtualdomcollection-collection">#</a></span>
+		</h3><ul>
+<li><code>collection</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a><code>[]</code> Array of child VirtualDOMs</li>
+</ul>
+<h3 id="virtualdomcollection-diffprops-dom-vdomold-">
+			virtualdomcollection.diffProps(dom,vdomOld)
+			<span><a class="mark" href="#virtualdomcollection-diffprops-dom-vdomold-" id="virtualdomcollection-diffprops-dom-vdomold-">#</a></span>
+		</h3><p>Diff and apply collection props to DOMCollection.</p>
+<ul>
+<li><code>@param</code> <code>dom</code>: <a href="#class-domcollection"><code>DOMCollection</code></a> DOMCollection instance</li>
+<li><p><code>@param</code> <code>vdomOld</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> Previous VirtualDOM</p><br/></li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
+</ul>
+<h2 id="class-domcollection">
+			Class: DOMCollection
+			<span><a class="mark" href="#class-domcollection" id="class-domcollection">#</a></span>
+		</h2><h3 id="domcollection">
+			DOMCollection
+			<span><a class="mark" href="#domcollection" id="domcollection">#</a></span>
+		</h3><p>Collection of real DOM elements corresponding to VirtualDOMCollection.</p>
+<ul>
+<li><code>@implements</code> <a href="view.html#dom"><code>DOM</code></a></li>
+</ul>
+<h3 id="domcollection-collection">
+			domcollection.collection
+			<span><a class="mark" href="#domcollection-collection" id="domcollection-collection">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>collection</code>: <a href="view.html#dom"><code>DOM</code></a><code>[]</code> Child DOM elements</li>
+</ul>
+<h3 id="domcollection-keys">
+			domcollection.keys
+			<span><a class="mark" href="#domcollection-keys" id="domcollection-keys">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>keys</code>: <code>Map</code>&lt;<a href="$ext.html#string"><code>string</code></a>|<a href="$ext.html#number"><code>number</code></a>,<code>[DOM,VDom]</code>&gt; Keyed mapping</li>
+</ul>
+<h3 id="domcollection-ref">
+			domcollection.ref
+			<span><a class="mark" href="#domcollection-ref" id="domcollection-ref">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>ref</code>: <a href="$ext.html#string"><code>string</code></a> Ref name in parent</li>
+</ul>
+<h3 id="domcollection-owner">
+			domcollection.owner
+			<span><a class="mark" href="#domcollection-owner" id="domcollection-owner">#</a></span>
+		</h3><ul>
+<li><code>@get</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> Owning ViewController</li>
 </ul>
 <h2 id="class-viewcontroller">
 			Class: ViewController
@@ -283,7 +606,7 @@
 		</h2><h3 id="viewcontroller">
 			ViewController
 			<span><a class="mark" href="#viewcontroller" id="viewcontroller">#</a></span>
-		</h3><p>UI view controller component</p>
+		</h3><p>UI view controller component.<br/>Base class for all ViewControllers.<br/>Handles state, props, children, refs, lifecycle hooks, and rendering.</p>
 <ul>
 <li><code>@implements</code> <a href="view.html#dom"><code>DOM</code></a></li>
 <li><code>@template</code> &lt;<code>P</code>,<code>S</code>&gt;</li>
@@ -291,7 +614,7 @@
 <h3 id="viewcontroller-window">
 			viewcontroller.window
 			<span><a class="mark" href="#viewcontroller-window" id="viewcontroller-window">#</a></span>
-		</h3><p><a href="window.html#window"><code>Window</code></a> object ref </p>
+		</h3><p>Associated Window <a href="window.html#window"><code>Window</code></a> object ref </p>
 <ul>
 <li><code>@get</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
 </ul>
@@ -305,7 +628,7 @@
 <h3 id="viewcontroller-children">
 			viewcontroller.children
 			<span><a class="mark" href="#viewcontroller-children" id="viewcontroller-children">#</a></span>
-		</h3><p>Outer children vdom </p>
+		</h3><p>External children vdom </p>
 <ul>
 <li><code>@get</code> <code>children</code>:  </li>
 </ul>
@@ -374,25 +697,25 @@
 <h3 id="viewcontroller-constructor-props-arg-">
 			viewcontroller.constructor(props,arg)
 			<span><a class="mark" href="#viewcontroller-constructor-props-arg-" id="viewcontroller-constructor-props-arg-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>props</code>:  {Object}</li>
-<li><code>@param</code> <code>arg</code>:  {Args}</li>
+		</h3><p>Constructs a ViewController.</p>
+<ul>
+<li><code>@param</code> <code>props</code>: <a href="$ext.html#object"><code>object</code></a> External props</li>
+<li><code>@param</code> <code>arg</code>: <a href="#args"><code>Args</code></a> Additional args (window, owner, children)</li>
 </ul>
-<h3 id="viewcontroller-setstate-newstate-cb-">
-			viewcontroller.setState(newState,cb?)
-			<span><a class="mark" href="#viewcontroller-setstate-newstate-cb-" id="viewcontroller-setstate-newstate-cb-">#</a></span>
+<h3 id="viewcontroller-setstate-newstate-">
+			viewcontroller.setState(newState)
+			<span><a class="mark" href="#viewcontroller-setstate-newstate-" id="viewcontroller-setstate-newstate-">#</a></span>
 		</h3><p>Update the current ViewController state and re-render if the state does change</p>
 <ul>
-<li><code>@template</code> &lt;<code>K</code>&gt;</li>
-<li><code>@param</code> <code>newState</code>: <a href="$ext.html#object"><code>object</code></a> </li>
-<li><code>@param</code> <code>cb?</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
+<li><code>@param</code> <code>newState</code>:  Partial state to update</li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;  resolves after re-render completes</li>
 </ul>
-<h3 id="viewcontroller-update-cb-">
-			viewcontroller.update(cb?)
-			<span><a class="mark" href="#viewcontroller-update-cb-" id="viewcontroller-update-cb-">#</a></span>
+<h3 id="viewcontroller-update-">
+			viewcontroller.update()
+			<span><a class="mark" href="#viewcontroller-update-" id="viewcontroller-update-">#</a></span>
 		</h3><p>Force re-rendering of the ViewController</p>
 <ul>
-<li><code>@param</code> <code>cb?</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;  resolves after re-render completes</li>
 </ul>
 <h3 id="viewcontroller-triggerload-">
 			viewcontroller.triggerLoad()
@@ -417,10 +740,10 @@
 <li><code>@param</code> <code>vdom</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
-<h3 id="viewcontroller-triggerdestroy-">
-			viewcontroller.triggerDestroy()
-			<span><a class="mark" href="#viewcontroller-triggerdestroy-" id="viewcontroller-triggerdestroy-">#</a></span>
-		</h3><p>Triggered when after calling remove()</p>
+<h3 id="viewcontroller-triggerunload-">
+			viewcontroller.triggerUnload()
+			<span><a class="mark" href="#viewcontroller-triggerunload-" id="viewcontroller-triggerunload-">#</a></span>
+		</h3><p>Triggered when after calling destroy()</p>
 <ul>
 <li><code>@return</code> <code>any</code> </li>
 </ul>
@@ -442,7 +765,8 @@
 <h3 id="viewcontroller-afterto-prev-">
 			viewcontroller.afterTo(prev)
 			<span><a class="mark" href="#viewcontroller-afterto-prev-" id="viewcontroller-afterto-prev-">#</a></span>
-		</h3><ul>
+		</h3><p>Append the rendered DOM to a parent view.</p>
+<ul>
 <li><code>@override</code>  </li>
 <li><code>@param</code> <code>prev</code>: <a href="view.html#view"><code>View</code></a> </li>
 <li><code>@return</code> <a href="view.html#view"><code>View</code></a> </li>
@@ -450,20 +774,20 @@
 <h3 id="viewcontroller-destroy-">
 			viewcontroller.destroy()
 			<span><a class="mark" href="#viewcontroller-destroy-" id="viewcontroller-destroy-">#</a></span>
-		</h3><p>Note: Do not proactively call this method</p>
+		</h3><p>Insert the rendered DOM after a previous view.<br/>Note: Do not proactively call this method</p>
 <ul>
 <li><code>@override</code>  </li>
 </ul>
 <h2 id="createelement-type-props-children-">
 			createElement(Type,props,...children)
 			<span><a class="mark" href="#createelement-type-props-children-" id="createelement-type-props-children-">#</a></span>
-		</h2><p>Create virtual dom by jsx element</p>
+		</h2><p>Creates a virtual DOM element from JSX syntax</p>
 <ul>
+<li><code>@return</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a>  A VirtualDOM instance</li>
 <li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@param</code> <code>Type</code>: <code>DOMConstructor</code>&lt;<code>T</code>&gt;|<code>JSX.IntrinsicElementsName</code> </li>
+<li><code>@param</code> <code>Type</code>: <a href="#interface-domconstructor"><code>DOMConstructor</code></a>&lt;<code>T</code>&gt;|<code>JSX.IntrinsicElementsName</code> </li>
 <li><code>@param</code> <code>props</code>: <code>Dict</code>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
 <li><code>@param</code> <code>children</code>: <code>any`</code>[]` </li>
-<li><code>@return</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
 </ul>
 <h2 id="vdom">
 			VDom

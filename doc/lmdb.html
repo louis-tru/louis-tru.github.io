@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Quark API Documentation</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
+	<script>
+		var src = '.htmlb.md';
+		var relative = '';
+		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
+		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
+	</script>
+
+</head>
+<body class="alt apidoc" id="api-section-documentation">
+
+	<style>  
+		#column1.interior {
+			overflow-wrap: break-word;
+		}
+	
+		.on {
+			color: #43853d !important;
+			border-radius: 0;
+			border-bottom: 1px solid #43853d;
+			background: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+	</style>
+	
+	<div id="content" class="clearfix">
+
+		<div id="column2" class="interior">
+
+			<!--div id="intro" class="interior">
+				<a href="/" id="home2" title="Go back to the home page">
+					quark
+				</a>
+			</div-->
+
+			<h1 id="quark">
+			<a href="http://quarks.cc/"><code>Quark</code></a>
+			<span><a class="mark" href="#quark" id="quark">#</a></span>
+		</h1><ul>
+<li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
+<li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
+<li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
+</ul>
+<h1 id="modules">
+			Modules
+			<span><a class="mark" href="#modules" id="modules">#</a></span>
+		</h1><ul>
+<li><a href="action.html"><code>quark/action</code></a></li>
+<li><a href="app.html"><code>quark/app</code></a></li>
+<li><a href="bubbles.html"><code>quark/bubbles</code></a></li>
+<li><a href="buffer.html"><code>quark/buffer</code></a></li>
+<li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
+<li><a href="css.html"><code>quark/css</code></a></li>
+<li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
+<li><a href="dialog.html"><code>quark/dialog</code></a></li>
+<li><a href="event.html"><code>quark/event</code></a></li>
+<li><a href="font.html"><code>quark/font</code></a></li>
+<li><a href="fs.html"><code>quark/fs</code></a></li>
+<li><a href="hash.html"><code>quark/hash</code></a></li>
+<li><a href="http.html"><code>quark/http</code></a></li>
+<li><a href="index.html"><code>quark/index</code></a></li>
+<li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
+<li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
+<li><a href="media.html"><code>quark/media</code></a></li>
+<li><a href="nav.html"><code>quark/nav</code></a></li>
+<li><a href="net.html"><code>quark/net</code></a></li>
+<li><a href="os.html"><code>quark/os</code></a></li>
+<li><a href="path.html"><code>quark/path</code></a></li>
+<li><a href="pkg.html"><code>quark/pkg</code></a></li>
+<li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
+<li><a href="stepper.html"><code>quark/stepper</code></a></li>
+<li><a href="storage.html"><code>quark/storage</code></a></li>
+<li><a href="test.html"><code>quark/test</code></a></li>
+<li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
+<li><a href="util.html"><code>quark/util</code></a></li>
+<li><a href="view.html"><code>quark/view</code></a></li>
+<li><a href="window.html"><code>quark/window</code></a></li>
+<li><a href="ws.html"><code>quark/ws</code></a></li>
+<li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
+<li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
+<li><a href="$event.html"><code>quark/_event</code></a></li>
+<li><a href="$ext.html"><code>quark/_ext</code></a></li>
+<li><a href="$md5.html"><code>quark/_md5</code></a></li>
+<li><a href="$sha1.html"><code>quark/_sha1</code></a></li>
+<li><a href="$sha256.html"><code>quark/_sha256</code></a></li>
+<li><a href="$util.html"><code>quark/_util</code></a></li>
+<li><a href="$watching.html"><code>quark/_watching</code></a></li>
+</ul>
+
+
+		</div>
+		
+		<div id="column1" data-id="documentation" class="interior">
+			<header>
+				<h1>Quark v1.4.0 Documentation</h1>
+				<div id="gtoc">
+					<p>
+						<a href="/doc" id="index">Documentation Index</a> |
+						<a href="/" id="home">Home</a>
+					</p>
+				</div>
+				<hr>
+			</header>
+
+			<div id="toc">
+				<h2>Table of Contents</h2>
+				<ul>
+<li>
+<span><a href="#quark-lmdb">quark/lmdb</a></span>
+<ul>
+<li>
+<span><a href="#dbi">DBI</a></span>
+</li>
+<li>
+<span><a href="#interface-stat">Interface: Stat</a></span>
+<ul>
+<li>
+<span><a href="#stat">Stat</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#class-lmdb">Class: LMDB</a></span>
+<ul>
+<li>
+<span><a href="#lmdb">LMDB</a></span>
+</li>
+<li>
+<span><a href="#lmdb-constructor-path-max_dbis-map_size-">lmdb.constructor(path,max_dbis?,map_size?)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-opened">lmdb.opened</a></span>
+</li>
+<li>
+<span><a href="#lmdb-open-">lmdb.open()</a></span>
+</li>
+<li>
+<span><a href="#lmdb-close-">lmdb.close()</a></span>
+</li>
+<li>
+<span><a href="#lmdb-flush-">lmdb.flush()</a></span>
+</li>
+<li>
+<span><a href="#lmdb-nextid-dbi-">lmdb.nextId(dbi)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-dbi-table-">lmdb.dbi(table)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-dbistat-dbi-">lmdb.dbiStat(dbi)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-getbuf-dbi-key-">lmdb.getBuf(dbi,key)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-remove-dbi-key-">lmdb.remove(dbi,key)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-has-dbi-key-">lmdb.has(dbi,key)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-fuzzexists-dbi-prefix-">lmdb.fuzzExists(dbi,prefix)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-removeprefix-dbi-">lmdb.removePrefix(dbi)</a></span>
+</li>
+<li>
+<span><a href="#lmdb-clear-dbi-">lmdb.clear(dbi)</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			</div>
+
+			<div id="apicontent">
+				<h1 id="quark-lmdb">
+			quark/lmdb
+			<span><a class="mark" href="#quark-lmdb" id="quark-lmdb">#</a></span>
+		</h1><h2 id="dbi">
+			DBI
+			<span><a class="mark" href="#dbi" id="dbi">#</a></span>
+		</h2><p>Database table Identifier</p>
+<ul>
+<li><code>@type</code> <code>DBI</code> = <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a></li>
+</ul>
+<h2 id="interface-stat">
+			Interface: Stat
+			<span><a class="mark" href="#interface-stat" id="interface-stat">#</a></span>
+		</h2><h3 id="stat">
+			Stat
+			<span><a class="mark" href="#stat" id="stat">#</a></span>
+		</h3><p>LMDB database statistics.</p>
+<h2 id="class-lmdb">
+			Class: LMDB
+			<span><a class="mark" href="#class-lmdb" id="class-lmdb">#</a></span>
+		</h2><h3 id="lmdb">
+			LMDB
+			<span><a class="mark" href="#lmdb" id="lmdb">#</a></span>
+		</h3><p>High-level LMDB wrapper with automatic JSONB encoding.<br/>All values stored by this class are encoded using:<br/>  jsonb.binaryify(value)<br/>All values retrieved are decoded using:<br/>  jsonb.parse(buffer)<br/>This provides type-safe persistent storage:</p>
+<ul>
+<li>numbers keep type</li>
+<li>booleans keep type</li>
+<li>arrays/objects keep structure</li>
+<li>Date, Buffer, BigInt are preserved<br/>Calling setBuf() directly is disabled to avoid bypassing JSONB.</li>
+</ul>
+<h3 id="lmdb-constructor-path-max_dbis-map_size-">
+			lmdb.constructor(path,max_dbis?,map_size?)
+			<span><a class="mark" href="#lmdb-constructor-path-max_dbis-map_size-" id="lmdb-constructor-path-max_dbis-map_size-">#</a></span>
+		</h3><p>Create an LMDB storage wrapper.<br/>Automatically calls NativeLMDB.Make(), so user code never touches<br/>the native factory directly.</p>
+<ul>
+<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> Filesystem directory used to store the LMDB environment.</li>
+<li><p><code>@param</code> <code>max_dbis</code>:  Maximum number of named sub-databases (DBI).</p><br/><pre><code>            Default = 64.  <br/>            Each DBI corresponds to one logical “table”.<br/></code></pre></li>
+<li><p><code>@param</code> <code>map_size</code>:  Initial mmap size in bytes.</p><br/><pre><code>            Default = 10,485,760 bytes (~10 MB).  <br/>            LMDB will grow automatically if needed (OS allowing),<br/>            but a larger initial size can reduce remap operations.<br/></code></pre></li>
+</ul>
+<p>The constructor does NOT open the environment immediately — actual<br/>opening happens lazily on the first dbi/get/set/scan call.</p>
+<ul>
+<li><code>@param</code> <code>max_dbis?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>@param</code> <code>map_size?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
+</ul>
+<h3 id="lmdb-opened">
+			lmdb.opened
+			<span><a class="mark" href="#lmdb-opened" id="lmdb-opened">#</a></span>
+		</h3><p>Whether the LMDB environment is already opened.</p>
+<ul>
+<li><code>@get</code> <code>opened</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="lmdb-open-">
+			lmdb.open()
+			<span><a class="mark" href="#lmdb-open-" id="lmdb-open-">#</a></span>
+		</h3><p>Open the LMDB environment.</p>
+<ul>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> 0 on success, non-zero on error.</li>
+</ul>
+<h3 id="lmdb-close-">
+			lmdb.close()
+			<span><a class="mark" href="#lmdb-close-" id="lmdb-close-">#</a></span>
+		</h3><p>Close the LMDB environment.</p>
+<ul>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> 0 on success.</li>
+</ul>
+<h3 id="lmdb-flush-">
+			lmdb.flush()
+			<span><a class="mark" href="#lmdb-flush-" id="lmdb-flush-">#</a></span>
+		</h3><p>Flush any pending changes to disk.</p>
+<ul>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> 0 on success.</li>
+</ul>
+<h3 id="lmdb-nextid-dbi-">
+			lmdb.nextId(dbi)
+			<span><a class="mark" href="#lmdb-nextid-dbi-" id="lmdb-nextid-dbi-">#</a></span>
+		</h3><p>Internal nextId counter for generating unique keys.</p>
+<ul>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> Next unique integer ID, if &lt; 0 indicates error.</li>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+</ul>
+<h3 id="lmdb-dbi-table-">
+			lmdb.dbi(table)
+			<span><a class="mark" href="#lmdb-dbi-table-" id="lmdb-dbi-table-">#</a></span>
+		</h3><p>Open or create a named database table.<br/>There will be mutex locking when calling, so it is best to cache the returned DBI.</p>
+<ul>
+<li><code>@param</code> <code>table</code>: <a href="$ext.html#string"><code>string</code></a> - Logical table name.</li>
+<li><code>@return</code> <a href="#dbi"><code>DBI</code></a> DBI (opaque binary identifier).</li>
+</ul>
+<h3 id="lmdb-dbistat-dbi-">
+			lmdb.dbiStat(dbi)
+			<span><a class="mark" href="#lmdb-dbistat-dbi-" id="lmdb-dbistat-dbi-">#</a></span>
+		</h3><p>Get database statistics for a given DBI/table.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><code>@return</code> <a href="#interface-stat"><code>Stat</code></a> </li>
+</ul>
+<h3 id="lmdb-getbuf-dbi-key-">
+			lmdb.getBuf(dbi,key)
+			<span><a class="mark" href="#lmdb-getbuf-dbi-key-" id="lmdb-getbuf-dbi-key-">#</a></span>
+		</h3><p>Read raw binary value.<br/>Suitable for JSONB, images, or binary assets.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><code>@param</code> <code>key</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+</ul>
+<h3 id="lmdb-remove-dbi-key-">
+			lmdb.remove(dbi,key)
+			<span><a class="mark" href="#lmdb-remove-dbi-key-" id="lmdb-remove-dbi-key-">#</a></span>
+		</h3><p>Remove a key.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><code>@param</code> <code>key</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="lmdb-has-dbi-key-">
+			lmdb.has(dbi,key)
+			<span><a class="mark" href="#lmdb-has-dbi-key-" id="lmdb-has-dbi-key-">#</a></span>
+		</h3><p>Check if a key exists.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><code>@param</code> <code>key</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="lmdb-fuzzexists-dbi-prefix-">
+			lmdb.fuzzExists(dbi,prefix)
+			<span><a class="mark" href="#lmdb-fuzzexists-dbi-prefix-" id="lmdb-fuzzexists-dbi-prefix-">#</a></span>
+		</h3><p>Check whether any key with the given prefix exists.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><code>@param</code> <code>prefix</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+</ul>
+<h3 id="lmdb-removeprefix-dbi-">
+			lmdb.removePrefix(dbi)
+			<span><a class="mark" href="#lmdb-removeprefix-dbi-" id="lmdb-removeprefix-dbi-">#</a></span>
+		</h3><p>Remove all keys under a prefix.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> </li>
+</ul>
+<h3 id="lmdb-clear-dbi-">
+			lmdb.clear(dbi)
+			<span><a class="mark" href="#lmdb-clear-dbi-" id="lmdb-clear-dbi-">#</a></span>
+		</h3><p>Clear all keys in this DBI/table.</p>
+<ul>
+<li><code>@param</code> <code>dbi</code>: <a href="#dbi"><code>DBI</code></a> </li>
+<li><p><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> </p><br/></li>
+<li><p><code>@template</code> &lt;<code>T</code>&gt;</p><br/></li>
+<li><code>@param</code> <code>dbi</code>:  - Table identifier.</li>
+<li><p><code>@param</code> <code>key</code>:  - Key string.</p><br/></li>
+<li><p><code>@template</code> &lt;<code>T</code>&gt;</p><br/></li>
+<li><p><code>@param</code> <code>limit</code>:  - Maximum number of entries to return. Default = 0 (no limit).</p><br/></li>
+</ul>
+<ul>
+<li><code>@param</code> <code>limit</code>:  - Maximum number of entries to return. Default = 0 (no limit).</li>
+</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
+		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
+	</script>
+
+	<script>
+		highlight(undefined, undefined, 'pre');
+		
+		var column2 = document.getElementById('column2');
+		var a = column2.querySelector('li > a[href="' + src + '"]')
+		if ( a ) {
+			a.className += ' on';
+		}
+		if ( relative ) {
+			column2.querySelectorAll('li > a').forEach(function(a) {
+				var href = a.getAttribute('href');
+				if ( !href.match(/^(\/|https?:\/\/)/) ) {
+					a.setAttribute('href', relative + href);
+				}
+			});
+		}
+		document.getElementById('index').href = relative + '.';
+		document.getElementById('home').href = relative + '..';
+		// document.getElementById('home2').href = relative + '..';
+	</script>
+
+</body>
+</html>

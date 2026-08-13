@@ -47,6 +47,7 @@
 			<span><a class="mark" href="#quark" id="quark">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
+<li><a href="docs/guides/README.html"><code>Guides</code></a></li>
 <li><a href="https://www.npmjs.com/package/qkmake"><code>Tools</code></a></li>
 <li><a href="https://github.com/louis-tru/quark/tree/master/examples"><code>Examples</code></a></li>
 </ul>
@@ -61,6 +62,7 @@
 <li><a href="checkbox.html"><code>quark/checkbox</code></a></li>
 <li><a href="css.html"><code>quark/css</code></a></li>
 <li><a href="ctr.html"><code>quark/ctr</code></a></li>
+<li><a href="defs.html"><code>quark/defs</code></a></li>
 <li><a href="dialog.html"><code>quark/dialog</code></a></li>
 <li><a href="event.html"><code>quark/event</code></a></li>
 <li><a href="font.html"><code>quark/font</code></a></li>
@@ -70,6 +72,7 @@
 <li><a href="index.html"><code>quark/index</code></a></li>
 <li><a href="jsonb.html"><code>quark/jsonb</code></a></li>
 <li><a href="keyboard.html"><code>quark/keyboard</code></a></li>
+<li><a href="lmdb.html"><code>quark/lmdb</code></a></li>
 <li><a href="media.html"><code>quark/media</code></a></li>
 <li><a href="nav.html"><code>quark/nav</code></a></li>
 <li><a href="net.html"><code>quark/net</code></a></li>
@@ -77,16 +80,19 @@
 <li><a href="path.html"><code>quark/path</code></a></li>
 <li><a href="pkg.html"><code>quark/pkg</code></a></li>
 <li><a href="screen.html"><code>quark/screen</code></a></li>
+<li><a href="state.html"><code>quark/state</code></a></li>
 <li><a href="stepper.html"><code>quark/stepper</code></a></li>
 <li><a href="storage.html"><code>quark/storage</code></a></li>
 <li><a href="test.html"><code>quark/test</code></a></li>
 <li><a href="types.html"><code>quark/types</code></a></li>
+<li><a href="uri.html"><code>quark/uri</code></a></li>
 <li><a href="util.html"><code>quark/util</code></a></li>
 <li><a href="view.html"><code>quark/view</code></a></li>
 <li><a href="window.html"><code>quark/window</code></a></li>
 <li><a href="ws.html"><code>quark/ws</code></a></li>
 <li><a href="$buffer.html"><code>quark/_buffer</code></a></li>
 <li><a href="$common.html"><code>quark/_common</code></a></li>
+<li><a href="$decorators.html"><code>quark/_decorators</code></a></li>
 <li><a href="$event.html"><code>quark/_event</code></a></li>
 <li><a href="$ext.html"><code>quark/_ext</code></a></li>
 <li><a href="$md5.html"><code>quark/_md5</code></a></li>
@@ -101,7 +107,7 @@
 		
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.3.0 Documentation</h1>
+				<h1>Quark v1.4.0 Documentation</h1>
 				<div id="gtoc">
 					<p>
 						<a href="/doc" id="index">Documentation Index</a> |
@@ -145,7 +151,7 @@
 <span><a href="#keyframe-apply-view-">keyframe.apply(view)</a></span>
 </li>
 <li>
-<span><a href="#keyframe-fetch-view-">keyframe.fetch(view)</a></span>
+<span><a href="#keyframe-fetch-from-">keyframe.fetch(from)</a></span>
 </li>
 </ul>
 <li>
@@ -246,10 +252,17 @@
 <span><a href="#createaction-win-arg-parent-">createAction(win,arg,parent?)</a></span>
 </li>
 <li>
-<span><a href="#actioncb">ActionCb</a></span>
+<span><a href="#interface-transitionresult">Interface: TransitionResult</a></span>
+<ul>
+<li>
+<span><a href="#transitionresult">TransitionResult</a></span>
 </li>
 <li>
-<span><a href="#transition-view-to-fromorcb-cb-">transition(view,to,fromOrCb?,cb?)</a></span>
+<span><a href="#transitionresult-action">transitionresult.action</a></span>
+</li>
+</ul>
+<li>
+<span><a href="#transition-view-to-from-">transition(view,to,from?)</a></span>
 </li>
 </ul>
 </li>
@@ -264,7 +277,7 @@
 			KeyframeIn
 			<span><a class="mark" href="#keyframein" id="keyframein">#</a></span>
 		</h2><ul>
-<li><code>@type</code> <code>KeyframeIn</code> = <a href="css.html#stylesheet"><code>StyleSheet</code></a>|<a href="css.html#cssnameexp"><code>CSSNameExp</code></a></li>
+<li><code>@type</code> <code>KeyframeIn</code> = <a href="css.html#stylesheets"><code>StyleSheets</code></a>|<a href="css.html#cssnameexp"><code>CSSNameExp</code></a></li>
 </ul>
 <h2 id="actionin">
 			ActionIn
@@ -279,7 +292,7 @@
 			Keyframe
 			<span><a class="mark" href="#keyframe" id="keyframe">#</a></span>
 		</h3><ul>
-<li><code>@extends</code> <a href="css.html#stylesheet"><code>StyleSheet</code></a></li>
+<li><code>@extends</code> <a href="css.html#stylesheets"><code>StyleSheets</code></a></li>
 </ul>
 <h3 id="keyframe-index">
 			keyframe.index
@@ -317,12 +330,12 @@
 <li><code>@param</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
-<h3 id="keyframe-fetch-view-">
-			keyframe.fetch(view)
-			<span><a class="mark" href="#keyframe-fetch-view-" id="keyframe-fetch-view-">#</a></span>
+<h3 id="keyframe-fetch-from-">
+			keyframe.fetch(from)
+			<span><a class="mark" href="#keyframe-fetch-from-" id="keyframe-fetch-from-">#</a></span>
 		</h3><p>fetch style from view </p>
 <ul>
-<li><code>@param</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
+<li><code>@param</code> <code>from</code>: <a href="view.html#view"><code>View</code></a> </li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="class-action">
@@ -382,7 +395,7 @@
 			<span><a class="mark" href="#action-seek-time-" id="action-seek-time-">#</a></span>
 		</h3><p>Jump to target <code>time</code>, after calling it, it will reset the internal <code>looped</code></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="action-seekplay-time-">
@@ -390,7 +403,7 @@
 			<span><a class="mark" href="#action-seekplay-time-" id="action-seekplay-time-">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and start playing. The internal <code>looped</code> will be reset after calling</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="action-seekstop-time-">
@@ -398,7 +411,7 @@
 			<span><a class="mark" href="#action-seekstop-time-" id="action-seekstop-time-">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and stop playing. The internal <code>looped</code> will be reset after calling</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
 <li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
 </ul>
 <h3 id="action-before-action-">
@@ -505,7 +518,7 @@
 			<span><a class="mark" href="#keyframeaction-addframe-time-curve-" id="keyframeaction-addframe-time-curve-">#</a></span>
 		</h3><p>By <code>time</code> and <code>curve</code> add keyframe，and return it</p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="$ext.html#uint"><code>Uint</code></a> Keyframe time point</li>
+<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> Keyframe time point</li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> No <code>curve</code> use <code>&#39;ease&#39;</code> as default</li>
 </ul>
 <p>Can use <code>&#39;linear&#39;</code>、<code>&#39;ease&#39;</code>、<code>&#39;easeIn&#39;</code>、<code>&#39;easeOut&#39;</code>、<code>&#39;easeInOut&#39;</code> as params</p>
@@ -518,7 +531,7 @@
 		</h3><p>Add keyframes by the <code>cssExp</code> stylesheet name expression and return keyframes</p>
 <ul>
 <li><code>@param</code> <code>cssExp</code>: <a href="css.html#cssnameexp"><code>CSSNameExp</code></a> css exp</li>
-<li><code>@param</code> <code>time?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
+<li><code>@param</code> <code>time?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
 <li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
 </ul>
@@ -528,7 +541,7 @@
 		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,<br/>and return keyframes</p>
 <ul>
 <li><code>@param</code> <code>styleOrCssExp</code>: <a href="#keyframein"><code>KeyframeIn</code></a> style sheet or css exp</li>
-<li><code>@param</code> <code>time?</code>: <a href="$ext.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
+<li><code>@param</code> <code>time?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
 <li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
 <li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
 </ul>
@@ -576,40 +589,51 @@ var act2 = createAction(win, {
 <li><code>@param</code> <code>parent?</code>: <a href="#class-action"><code>Action</code></a> </li>
 <li><code>@return</code> <a href="#class-action"><code>Action</code></a> </li>
 </ul>
-<h2 id="actioncb">
-			ActionCb
-			<span><a class="mark" href="#actioncb" id="actioncb">#</a></span>
-		</h2><ul>
-<li><code>@callback</code> <code>ActionCb(e)</code> </li>
-<li><code>@param</code> <code>e</code>: <a href="event.html#actionevent"><code>ActionEvent</code></a> </li>
+<h2 id="interface-transitionresult">
+			Interface: TransitionResult
+			<span><a class="mark" href="#interface-transitionresult" id="interface-transitionresult">#</a></span>
+		</h2><h3 id="transitionresult">
+			TransitionResult
+			<span><a class="mark" href="#transitionresult" id="transitionresult">#</a></span>
+		</h3><ul>
+<li><code>@extends</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="event.html#actionevent"><code>ActionEvent</code></a>&gt;</li>
 </ul>
-<h2 id="transition-view-to-fromorcb-cb-">
-			transition(view,to,fromOrCb?,cb?)
-			<span><a class="mark" href="#transition-view-to-fromorcb-cb-" id="transition-view-to-fromorcb-cb-">#</a></span>
-		</h2><p>Create a view style transition action by the style and play this action,<br/>    and callback after completion<br/>Callback: cb()</p>
+<h3 id="transitionresult-action">
+			transitionresult.action
+			<span><a class="mark" href="#transitionresult-action" id="transitionresult-action">#</a></span>
+		</h3><p>The action instance of this transition</p>
+<ul>
+<li><code>@get</code> <code>action</code>: <a href="#class-keyframeaction"><code>KeyframeAction</code></a> </li>
+</ul>
+<h2 id="transition-view-to-from-">
+			transition(view,to,from?)
+			<span><a class="mark" href="#transition-view-to-from-" id="transition-view-to-from-">#</a></span>
+		</h2><p>Create a view style transition action by the style and play this action</p>
+<ul>
+<li><code>@return</code> <a href="#interface-transitionresult"><code>TransitionResult</code></a>  Promise object, when the transition is completed, the promise is resolved.</li>
+</ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// The transition is completed and callback is made after 1 second
 transition(view, {
     time: 1000,
     y: 100,
     x: 100,
-}, ()={
-    console.log(&#39;view transition end&#39;);
-})
- // Use a linear transition
+}).then((evt)=&gt;{
+    console.log(&#39;transition end&#39;);
+});
+
+// Use an ease-in-out transition
 transition(view, {
     time: 1000,
     curve: &#39;linear&#39;,
     y: 100,
     x: 100,
-}, 1000)
+})
 </code></pre>
 <ul>
 <li><code>@param</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
 <li><code>@param</code> <code>to</code>: <a href="#keyframein"><code>KeyframeIn</code></a> </li>
-<li><code>@param</code> <code>fromOrCb?</code>: <a href="#keyframein"><code>KeyframeIn</code></a>|<a href="#actioncb"><code>ActionCb</code></a> </li>
-<li><code>@param</code> <code>cb?</code>: <a href="#actioncb"><code>ActionCb</code></a> </li>
-<li><code>@return</code> <a href="#class-keyframeaction"><code>KeyframeAction</code></a> </li>
+<li><code>@param</code> <code>from?</code>: <a href="#keyframein"><code>KeyframeIn</code></a> </li>
 </ul>
 
 			</div>
