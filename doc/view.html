@@ -3639,60 +3639,60 @@ but delegates all document, cursor, and rendering logic to external systems.</p>
 <h3 id="inputsink-oninputdelete">
 			inputsink.onInputDelete
 			<span><a class="mark" href="#inputsink-oninputdelete" aria-label="Link to this section">#</a></span>
-		</h3><p>Fired when text is deleted.
-This event represents a semantic delete operation, not a key press.
+		</h3><ul>
+<li><code>@event</code> <code>onInputDelete</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#inputevent"><code>InputEvent</code></a>&gt; </li>
+</ul>
+<p>Fired when text is deleted.</p>
+<p>This event represents a semantic delete operation, not a key press.
 The deletion count is provided via <code>InputEvent.inputDelete</code>.</p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> onInputDelete: <a class="api-type" href="event.html#eventnoticer">EventNoticer</a>&lt;<a class="api-type" href="event.html#inputevent">InputEvent</a>&gt;</code></pre>
-
-
 <h3 id="inputsink-oninputinsert">
 			inputsink.onInputInsert
 			<span><a class="mark" href="#inputsink-oninputinsert" aria-label="Link to this section">#</a></span>
-		</h3><p>Fired when text is inserted.
-This event represents committed text input, including:</p>
+		</h3><ul>
+<li><code>@event</code> <code>onInputInsert</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#inputevent"><code>InputEvent</code></a>&gt; </li>
+</ul>
+<p>Fired when text is inserted.</p>
+<p>This event represents committed text input, including:</p>
 <ul>
 <li>direct keyboard input</li>
-<li>IME commit results
-The inserted text is provided via <code>InputEvent.input</code>.<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> onInputInsert: <a class="api-type" href="event.html#eventnoticer">EventNoticer</a>&lt;<a class="api-type" href="event.html#inputevent">InputEvent</a>&gt;</code></pre>
-
-
-</li>
+<li>IME commit results</li>
 </ul>
+<p>The inserted text is provided via <code>InputEvent.input</code>.</p>
 <h3 id="inputsink-oninputmarked">
 			inputsink.onInputMarked
 			<span><a class="mark" href="#inputsink-oninputmarked" aria-label="Link to this section">#</a></span>
-		</h3><p>Fired when text is in a marked (composing) state.
-This typically corresponds to IME composition updates,
+		</h3><ul>
+<li><code>@event</code> <code>onInputMarked</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#inputevent"><code>InputEvent</code></a>&gt; </li>
+</ul>
+<p>Fired when text is in a marked (composing) state.</p>
+<p>This typically corresponds to IME composition updates,
 where the text is provisional and not yet committed.
 The composing text is provided via <code>InputEvent.input</code>.</p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> onInputMarked: <a class="api-type" href="event.html#eventnoticer">EventNoticer</a>&lt;<a class="api-type" href="event.html#inputevent">InputEvent</a>&gt;</code></pre>
-
-
 <h3 id="inputsink-oninputunmark">
 			inputsink.onInputUnmark
 			<span><a class="mark" href="#inputsink-oninputunmark" aria-label="Link to this section">#</a></span>
-		</h3><p>Fired when marked (composing) text is finalized.
-This indicates the end of an IME composition session.
+		</h3><ul>
+<li><code>@event</code> <code>onInputUnmark</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#inputevent"><code>InputEvent</code></a>&gt; </li>
+</ul>
+<p>Fired when marked (composing) text is finalized.</p>
+<p>This indicates the end of an IME composition session.
 The finalized text (if any) is provided via <code>InputEvent.input</code>,
 and is typically followed by an insertion event.</p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> onInputUnmark: <a class="api-type" href="event.html#eventnoticer">EventNoticer</a>&lt;<a class="api-type" href="event.html#inputevent">InputEvent</a>&gt;</code></pre>
-
-
 <h3 id="inputsink-oninputcontrol">
 			inputsink.onInputControl
 			<span><a class="mark" href="#inputsink-oninputcontrol" aria-label="Link to this section">#</a></span>
-		</h3><p>Fired on non-textual input control actions.
-This includes keys such as:</p>
+		</h3><ul>
+<li><code>@event</code> <code>onInputControl</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#inputevent"><code>InputEvent</code></a>&gt; </li>
+</ul>
+<p>Fired on non-textual input control actions.</p>
+<p>This includes keys such as:</p>
 <ul>
 <li>Enter / Return</li>
 <li>Escape</li>
 <li>Arrow keys</li>
-<li>Other control or navigation commands
-The control key is provided via <code>InputEvent.inputControl</code>.<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> onInputControl: <a class="api-type" href="event.html#eventnoticer">EventNoticer</a>&lt;<a class="api-type" href="event.html#inputevent">InputEvent</a>&gt;</code></pre>
-
-
-</li>
+<li>Other control or navigation commands</li>
 </ul>
+<p>The control key is provided via <code>InputEvent.inputControl</code>.</p>
 <h3 id="inputsink-spotrect">
 			inputsink.spotRect
 			<span><a class="mark" href="#inputsink-spotrect" aria-label="Link to this section">#</a></span>
