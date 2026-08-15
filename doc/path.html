@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'path.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-path">quark/path</a></span>
@@ -145,25 +132,25 @@
 </li>
 </ul>
 <li>
-<span><a href="#oval-rect-ccw-">oval(rect,ccw)</a></span>
+<span><a href="#oval-rect-ccw">oval(rect,ccw)</a></span>
 </li>
 <li>
-<span><a href="#arc-rect-startangle-sweepangle-usecenter-close-">arc(rect,startAngle,sweepAngle,useCenter,close?)</a></span>
+<span><a href="#arc-rect-startangle-sweepangle-usecenter-close">arc(rect,startAngle,sweepAngle,useCenter,close?)</a></span>
 </li>
 <li>
-<span><a href="#rect-rect-ccw-">rect(rect,ccw?)</a></span>
+<span><a href="#rect-rect-ccw">rect(rect,ccw?)</a></span>
 </li>
 <li>
-<span><a href="#circle-center-radius-ccw-">circle(center,radius,ccw?)</a></span>
+<span><a href="#circle-center-radius-ccw">circle(center,radius,ccw?)</a></span>
 </li>
 <li>
-<span><a href="#rrect-rect-radius-">rrect(rect,radius)</a></span>
+<span><a href="#rrect-rect-radius">rrect(rect,radius)</a></span>
 </li>
 <li>
-<span><a href="#rrectoutline-outside-inside-radius-">rrectOutline(outside,inside,radius)</a></span>
+<span><a href="#rrectoutline-outside-inside-radius">rrectOutline(outside,inside,radius)</a></span>
 </li>
 <li>
-<span><a href="#getboundsfrompoints-pts-ptslen-matrix-">getBoundsFromPoints(pts,ptsLen,matrix?)</a></span>
+<span><a href="#getboundsfrompoints-pts-ptslen-matrix">getBoundsFromPoints(pts,ptsLen,matrix?)</a></span>
 </li>
 <li>
 <span><a href="#class-path">Class: Path</a></span>
@@ -184,97 +171,97 @@
 <span><a href="#path-issealed">path.isSealed</a></span>
 </li>
 <li>
-<span><a href="#path-constructor-move-">path.constructor(move?)</a></span>
+<span><a href="#path-constructor-move">path.constructor(move?)</a></span>
 </li>
 <li>
-<span><a href="#path-moveto-to-">path.moveTo(to)</a></span>
+<span><a href="#path-moveto-to">path.moveTo(to)</a></span>
 </li>
 <li>
-<span><a href="#path-lineto-to-">path.lineTo(to)</a></span>
+<span><a href="#path-lineto-to">path.lineTo(to)</a></span>
 </li>
 <li>
-<span><a href="#path-quadto-control-to-">path.quadTo(control,to)</a></span>
+<span><a href="#path-quadto-control-to">path.quadTo(control,to)</a></span>
 </li>
 <li>
-<span><a href="#path-cubicto-control1-control2-to-">path.cubicTo(control1,control2,to)</a></span>
+<span><a href="#path-cubicto-control1-control2-to">path.cubicTo(control1,control2,to)</a></span>
 </li>
 <li>
-<span><a href="#path-ovalto-rect-ccw-">path.ovalTo(rect,ccw?)</a></span>
+<span><a href="#path-ovalto-rect-ccw">path.ovalTo(rect,ccw?)</a></span>
 </li>
 <li>
-<span><a href="#path-rectto-rect-ccw-">path.rectTo(rect,ccw?)</a></span>
+<span><a href="#path-rectto-rect-ccw">path.rectTo(rect,ccw?)</a></span>
 </li>
 <li>
-<span><a href="#path-arcto-rect-startangle-sweepangle-usecenter-">path.arcTo(rect,startAngle,sweepAngle,useCenter)</a></span>
+<span><a href="#path-arcto-rect-startangle-sweepangle-usecenter">path.arcTo(rect,startAngle,sweepAngle,useCenter)</a></span>
 </li>
 <li>
-<span><a href="#path-arc-center-radius-startangle-sweepangle-usecenter-">path.arc(center,radius,startAngle,sweepAngle,useCenter)</a></span>
+<span><a href="#path-arc-center-radius-startangle-sweepangle-usecenter">path.arc(center,radius,startAngle,sweepAngle,useCenter)</a></span>
 </li>
 <li>
-<span><a href="#path-close-">path.close()</a></span>
+<span><a href="#path-close">path.close()</a></span>
 </li>
 <li>
-<span><a href="#path-concat-path-">path.concat(path)</a></span>
+<span><a href="#path-concat-path">path.concat(path)</a></span>
 </li>
 <li>
-<span><a href="#path-ptsat-index-">path.ptsAt(index)</a></span>
+<span><a href="#path-ptsat-index">path.ptsAt(index)</a></span>
 </li>
 <li>
-<span><a href="#path-verbsat-index-">path.verbsAt(index)</a></span>
+<span><a href="#path-verbsat-index">path.verbsAt(index)</a></span>
 </li>
 <li>
-<span><a href="#path-getedgelines-precision-">path.getEdgeLines(precision?)</a></span>
+<span><a href="#path-getedgelines-precision">path.getEdgeLines(precision?)</a></span>
 </li>
 <li>
-<span><a href="#path-gettriangles-precision-z-">path.getTriangles(precision?,z?)</a></span>
+<span><a href="#path-gettriangles-precision-z">path.getTriangles(precision?,z?)</a></span>
 </li>
 <li>
-<span><a href="#path-getaasidetriangles-width-precision-">path.getAASideTriangles(width,precision?)</a></span>
+<span><a href="#path-getaasidetriangles-width-precision">path.getAASideTriangles(width,precision?)</a></span>
 </li>
 <li>
-<span><a href="#path-dashpath-stage-offset-">path.dashPath(stage,offset?)</a></span>
+<span><a href="#path-dashpath-stage-offset">path.dashPath(stage,offset?)</a></span>
 </li>
 <li>
-<span><a href="#path-strokepath-width-cap-join-miterlimit-">path.strokePath(width,cap?,join?,miterLimit?)</a></span>
+<span><a href="#path-strokepath-width-cap-join-miterlimit">path.strokePath(width,cap?,join?,miterLimit?)</a></span>
 </li>
 <li>
-<span><a href="#path-normalizedpath-precision-">path.normalizedPath(precision?)</a></span>
+<span><a href="#path-normalizedpath-precision">path.normalizedPath(precision?)</a></span>
 </li>
 <li>
-<span><a href="#path-transform-matrix-">path.transform(matrix)</a></span>
+<span><a href="#path-transform-matrix">path.transform(matrix)</a></span>
 </li>
 <li>
-<span><a href="#path-scale-scale-">path.scale(scale)</a></span>
+<span><a href="#path-scale-scale">path.scale(scale)</a></span>
 </li>
 <li>
-<span><a href="#path-seal-">path.seal()</a></span>
+<span><a href="#path-seal">path.seal()</a></span>
 </li>
 <li>
-<span><a href="#path-getbounds-matrix-">path.getBounds(matrix?)</a></span>
+<span><a href="#path-getbounds-matrix">path.getBounds(matrix?)</a></span>
 </li>
 <li>
-<span><a href="#path-copy-">path.copy()</a></span>
+<span><a href="#path-copy">path.copy()</a></span>
 </li>
 <li>
-<span><a href="#path-hashcode-">path.hashCode()</a></span>
+<span><a href="#path-hashcode">path.hashCode()</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-path">
 			quark/path
-			<span><a class="mark" href="#quark-path" id="quark-path">#</a></span>
+			<span><a class="mark" href="#quark-path" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-pathverb">
 			Enum: PathVerb
-			<span><a class="mark" href="#enum-pathverb" id="enum-pathverb">#</a></span>
+			<span><a class="mark" href="#enum-pathverb" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="pathverb">
 			PathVerb
-			<span><a class="mark" href="#pathverb" id="pathverb">#</a></span>
+			<span><a class="mark" href="#pathverb" aria-label="Link to this section">#</a></span>
 		</h3><p>Path verb types</p>
 <ul>
 <li><code>kMove</code>  move</li>
@@ -285,10 +272,10 @@
 </ul>
 <h2 id="enum-cap">
 			Enum: Cap
-			<span><a class="mark" href="#enum-cap" id="enum-cap">#</a></span>
+			<span><a class="mark" href="#enum-cap" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="cap">
 			Cap
-			<span><a class="mark" href="#cap" id="cap">#</a></span>
+			<span><a class="mark" href="#cap" aria-label="Link to this section">#</a></span>
 		</h3><p>Line cap style</p>
 <ul>
 <li><code>kButt</code>  no stroke extension</li>
@@ -297,348 +284,410 @@
 </ul>
 <h2 id="enum-join">
 			Enum: Join
-			<span><a class="mark" href="#enum-join" id="enum-join">#</a></span>
+			<span><a class="mark" href="#enum-join" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="join">
 			Join
-			<span><a class="mark" href="#join" id="join">#</a></span>
+			<span><a class="mark" href="#join" aria-label="Link to this section">#</a></span>
 		</h3><p>Line join style </p>
 <ul>
 <li><code>kMiter</code>  extends to miter limit</li>
 <li><code>kRound</code>  adds circle</li>
 <li><code>kBevel</code>  connects outside edges</li>
 </ul>
-<h2 id="oval-rect-ccw-">
+<h2 id="oval-rect-ccw">
 			oval(rect,ccw)
-			<span><a class="mark" href="#oval-rect-ccw-" id="oval-rect-ccw-">#</a></span>
+			<span><a class="mark" href="#oval-rect-ccw" aria-label="Link to this section">#</a></span>
 		</h2><p>Create an oval (ellipse) path.</p>
+<pre class="api-signature sh_none"><code>oval(rect: <a class="api-type" href="types.html#rect">Rect</a>, ccw: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> The bounding rectangle of the oval.</li>
-<li><code>@param</code> <code>ccw</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Whether to draw counter-clockwise (CCW).</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the oval.</li>
+<li><code>rect</code> — The bounding rectangle of the oval.</li>
+<li><code>ccw</code> — Whether to draw counter-clockwise (CCW).</li>
 </ul>
-<h2 id="arc-rect-startangle-sweepangle-usecenter-close-">
+<p><strong>Returns:</strong> A new path representing the oval.</p>
+<h2 id="arc-rect-startangle-sweepangle-usecenter-close">
 			arc(rect,startAngle,sweepAngle,useCenter,close?)
-			<span><a class="mark" href="#arc-rect-startangle-sweepangle-usecenter-close-" id="arc-rect-startangle-sweepangle-usecenter-close-">#</a></span>
+			<span><a class="mark" href="#arc-rect-startangle-sweepangle-usecenter-close" aria-label="Link to this section">#</a></span>
 		</h2><p>Create an arc path.</p>
+<pre class="api-signature sh_none"><code>arc(rect: <a class="api-type" href="types.html#rect">Rect</a>, startAngle: <a class="api-type" href="$ext.html#number">number</a>, sweepAngle: <a class="api-type" href="$ext.html#number">number</a>, useCenter: <a class="api-type" href="$ext.html#boolean">boolean</a>, close: any, close?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> The bounding rectangle of the arc.</li>
-<li><code>@param</code> <code>startAngle</code>: <a href="$ext.html#number"><code>number</code></a> Start angle in radians.</li>
-<li><code>@param</code> <code>sweepAngle</code>: <a href="$ext.html#number"><code>number</code></a> Sweep angle in radians (positive = clockwise, negative = counter-clockwise).</li>
-<li><code>@param</code> <code>useCenter</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Whether to connect the center point to form a pie shape.</li>
-<li><code>@param</code> <code>close</code>:  Whether to close the path. Default is false.</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the arc.</li>
-<li><code>@param</code> <code>close?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>rect</code> — The bounding rectangle of the arc.</li>
+<li><code>startAngle</code> — Start angle in radians.</li>
+<li><code>sweepAngle</code> — Sweep angle in radians (positive = clockwise, negative = counter-clockwise).</li>
+<li><code>useCenter</code> — Whether to connect the center point to form a pie shape.</li>
+<li><code>close</code> — Whether to close the path. Default is false.</li>
 </ul>
-<h2 id="rect-rect-ccw-">
+<p><strong>Returns:</strong> A new path representing the arc.</p>
+<h2 id="rect-rect-ccw">
 			rect(rect,ccw?)
-			<span><a class="mark" href="#rect-rect-ccw-" id="rect-rect-ccw-">#</a></span>
+			<span><a class="mark" href="#rect-rect-ccw" aria-label="Link to this section">#</a></span>
 		</h2><p>Create a rectangular path.</p>
+<pre class="api-signature sh_none"><code>rect(rect: <a class="api-type" href="types.html#rect">Rect</a>, ccw: any, ccw?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> The rectangle bounds.</li>
-<li><code>@param</code> <code>ccw</code>:  Whether to draw counter-clockwise (default: false).</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the rectangle.</li>
-<li><code>@param</code> <code>ccw?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>rect</code> — The rectangle bounds.</li>
+<li><code>ccw</code> — Whether to draw counter-clockwise (default: false).</li>
 </ul>
-<h2 id="circle-center-radius-ccw-">
+<p><strong>Returns:</strong> A new path representing the rectangle.</p>
+<h2 id="circle-center-radius-ccw">
 			circle(center,radius,ccw?)
-			<span><a class="mark" href="#circle-center-radius-ccw-" id="circle-center-radius-ccw-">#</a></span>
+			<span><a class="mark" href="#circle-center-radius-ccw" aria-label="Link to this section">#</a></span>
 		</h2><p>Create a circular path.</p>
+<pre class="api-signature sh_none"><code>circle(center: <a class="api-type" href="types.html#vec2">Vec2</a>, radius: <a class="api-type" href="$ext.html#number">number</a>, ccw: any, ccw?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>center</code>: <a href="types.html#vec2"><code>Vec2</code></a> Center of the circle.</li>
-<li><code>@param</code> <code>radius</code>: <a href="$ext.html#number"><code>number</code></a> Radius of the circle.</li>
-<li><code>@param</code> <code>ccw</code>:  Whether to draw counter-clockwise.</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the circle.</li>
-<li><code>@param</code> <code>ccw?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li><code>center</code> — Center of the circle.</li>
+<li><code>radius</code> — Radius of the circle.</li>
+<li><code>ccw</code> — Whether to draw counter-clockwise.</li>
 </ul>
-<h2 id="rrect-rect-radius-">
+<p><strong>Returns:</strong> A new path representing the circle.</p>
+<h2 id="rrect-rect-radius">
 			rrect(rect,radius)
-			<span><a class="mark" href="#rrect-rect-radius-" id="rrect-rect-radius-">#</a></span>
+			<span><a class="mark" href="#rrect-rect-radius" aria-label="Link to this section">#</a></span>
 		</h2><p>Create a rounded rectangle path.</p>
+<pre class="api-signature sh_none"><code>rrect(rect: <a class="api-type" href="types.html#rect">Rect</a>, radius: <a class="api-type" href="types.html#borderradius">BorderRadius</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> The rectangle bounds.</li>
-<li><code>@param</code> <code>radius</code>: <a href="types.html#borderradius"><code>BorderRadius</code></a> Corner radius values (can define per-corner radii).</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the rounded rectangle.</li>
+<li><code>rect</code> — The rectangle bounds.</li>
+<li><code>radius</code> — Corner radius values (can define per-corner radii).</li>
 </ul>
-<h2 id="rrectoutline-outside-inside-radius-">
+<p><strong>Returns:</strong> A new path representing the rounded rectangle.</p>
+<h2 id="rrectoutline-outside-inside-radius">
 			rrectOutline(outside,inside,radius)
-			<span><a class="mark" href="#rrectoutline-outside-inside-radius-" id="rrectoutline-outside-inside-radius-">#</a></span>
+			<span><a class="mark" href="#rrectoutline-outside-inside-radius" aria-label="Link to this section">#</a></span>
 		</h2><p>Create an outline path between two rounded rectangles (outer and inner).</p>
+<pre class="api-signature sh_none"><code>rrectOutline(outside: <a class="api-type" href="types.html#rect">Rect</a>, inside: <a class="api-type" href="types.html#rect">Rect</a>, radius: <a class="api-type" href="types.html#borderradius">BorderRadius</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>outside</code>: <a href="types.html#rect"><code>Rect</code></a> Outer rectangle.</li>
-<li><code>@param</code> <code>inside</code>: <a href="types.html#rect"><code>Rect</code></a> Inner rectangle.</li>
-<li><code>@param</code> <code>radius</code>: <a href="types.html#borderradius"><code>BorderRadius</code></a> Corner radius values.</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the rounded rectangle outline.</li>
+<li><code>outside</code> — Outer rectangle.</li>
+<li><code>inside</code> — Inner rectangle.</li>
+<li><code>radius</code> — Corner radius values.</li>
 </ul>
-<h2 id="getboundsfrompoints-pts-ptslen-matrix-">
+<p><strong>Returns:</strong> A new path representing the rounded rectangle outline.</p>
+<h2 id="getboundsfrompoints-pts-ptslen-matrix">
 			getBoundsFromPoints(pts,ptsLen,matrix?)
-			<span><a class="mark" href="#getboundsfrompoints-pts-ptslen-matrix-" id="getboundsfrompoints-pts-ptslen-matrix-">#</a></span>
-		</h2><p>Compute the bounding region from a set of points.<br/>Does NOT check if the matrix is an identity matrix.</p>
+			<span><a class="mark" href="#getboundsfrompoints-pts-ptslen-matrix" aria-label="Link to this section">#</a></span>
+		</h2><p>Compute the bounding region from a set of points.
+Does NOT check if the matrix is an identity matrix.</p>
+<pre class="api-signature sh_none"><code>getBoundsFromPoints(pts: <a class="api-type" href="types.html#vec2">Vec2</a>[], ptsLen: <a class="api-type" href="$ext.html#number">number</a>, matrix: any, matrix?: <a class="api-type" href="types.html#mat">Mat</a>): <a class="api-type" href="types.html#range">Range</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>pts</code>: <a href="types.html#vec2"><code>Vec2</code></a><code>[]</code> The point array.</li>
-<li><code>@param</code> <code>ptsLen</code>: <a href="$ext.html#number"><code>number</code></a> Number of points.</li>
-<li><code>@param</code> <code>matrix</code>:  Optional transform matrix.</li>
-<li><code>@return</code> <a href="types.html#range"><code>Range</code></a> The computed region bounds.</li>
-<li><code>@param</code> <code>matrix?</code>: <a href="types.html#mat"><code>Mat</code></a> </li>
+<li><code>pts</code> — The point array.</li>
+<li><code>ptsLen</code> — Number of points.</li>
+<li><code>matrix</code> — Optional transform matrix.</li>
 </ul>
+<p><strong>Returns:</strong> The computed region bounds.</p>
 <h2 id="class-path">
 			Class: Path
-			<span><a class="mark" href="#class-path" id="class-path">#</a></span>
+			<span><a class="mark" href="#class-path" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="path">
 			Path
-			<span><a class="mark" href="#path" id="path">#</a></span>
+			<span><a class="mark" href="#path" aria-label="Link to this section">#</a></span>
 		</h3><p>Represents a geometric path consisting of lines, curves, and shapes.</p>
 <h3 id="path-ptslen">
 			path.ptsLen
-			<span><a class="mark" href="#path-ptslen" id="path-ptslen">#</a></span>
+			<span><a class="mark" href="#path-ptslen" aria-label="Link to this section">#</a></span>
 		</h3><p>Number of points in this path. </p>
-<ul>
-<li><code>@get</code> <code>ptsLen</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ptsLen: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="path-verbslen">
 			path.verbsLen
-			<span><a class="mark" href="#path-verbslen" id="path-verbslen">#</a></span>
+			<span><a class="mark" href="#path-verbslen" aria-label="Link to this section">#</a></span>
 		</h3><p>Number of verbs (path commands) in this path. </p>
-<ul>
-<li><code>@get</code> <code>verbsLen</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> verbsLen: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="path-isnormalized">
 			path.isNormalized
-			<span><a class="mark" href="#path-isnormalized" id="path-isnormalized">#</a></span>
+			<span><a class="mark" href="#path-isnormalized" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether the path is normalized (curves converted to line segments). </p>
-<ul>
-<li><code>@get</code> <code>isNormalized</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isNormalized: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="path-issealed">
 			path.isSealed
-			<span><a class="mark" href="#path-issealed" id="path-issealed">#</a></span>
+			<span><a class="mark" href="#path-issealed" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether the path is sealed (cannot be modified). </p>
-<ul>
-<li><code>@get</code> <code>isSealed</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="path-constructor-move-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isSealed: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="path-constructor-move">
 			path.constructor(move?)
-			<span><a class="mark" href="#path-constructor-move-" id="path-constructor-move-">#</a></span>
+			<span><a class="mark" href="#path-constructor-move" aria-label="Link to this section">#</a></span>
 		</h3><p>Construct a new path.</p>
+<pre class="api-signature sh_none"><code>constructor(move: any, move?: <a class="api-type" href="types.html#vec2">Vec2</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>move</code>:  Optional initial move-to point.</li>
-<li><code>@param</code> <code>move?</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
+<li><code>move</code> — Optional initial move-to point.</li>
 </ul>
-<h3 id="path-moveto-to-">
+<h3 id="path-moveto-to">
 			path.moveTo(to)
-			<span><a class="mark" href="#path-moveto-to-" id="path-moveto-to-">#</a></span>
+			<span><a class="mark" href="#path-moveto-to" aria-label="Link to this section">#</a></span>
 		</h3><p>Move the current point without drawing a line. </p>
-<ul>
-<li><code>@param</code> <code>to</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-lineto-to-">
+<pre class="api-signature sh_none"><code>moveTo(to: <a class="api-type" href="types.html#vec2">Vec2</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-lineto-to">
 			path.lineTo(to)
-			<span><a class="mark" href="#path-lineto-to-" id="path-lineto-to-">#</a></span>
+			<span><a class="mark" href="#path-lineto-to" aria-label="Link to this section">#</a></span>
 		</h3><p>Draw a straight line from the current point to the specified point. </p>
-<ul>
-<li><code>@param</code> <code>to</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-quadto-control-to-">
+<pre class="api-signature sh_none"><code>lineTo(to: <a class="api-type" href="types.html#vec2">Vec2</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-quadto-control-to">
 			path.quadTo(control,to)
-			<span><a class="mark" href="#path-quadto-control-to-" id="path-quadto-control-to-">#</a></span>
+			<span><a class="mark" href="#path-quadto-control-to" aria-label="Link to this section">#</a></span>
 		</h3><p>Draw a quadratic Bézier curve. </p>
-<ul>
-<li><code>@param</code> <code>control</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@param</code> <code>to</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-cubicto-control1-control2-to-">
+<pre class="api-signature sh_none"><code>quadTo(control: <a class="api-type" href="types.html#vec2">Vec2</a>, to: <a class="api-type" href="types.html#vec2">Vec2</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-cubicto-control1-control2-to">
 			path.cubicTo(control1,control2,to)
-			<span><a class="mark" href="#path-cubicto-control1-control2-to-" id="path-cubicto-control1-control2-to-">#</a></span>
+			<span><a class="mark" href="#path-cubicto-control1-control2-to" aria-label="Link to this section">#</a></span>
 		</h3><p>Draw a cubic Bézier curve. </p>
-<ul>
-<li><code>@param</code> <code>control1</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@param</code> <code>control2</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@param</code> <code>to</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-ovalto-rect-ccw-">
+<pre class="api-signature sh_none"><code>cubicTo(control1: <a class="api-type" href="types.html#vec2">Vec2</a>, control2: <a class="api-type" href="types.html#vec2">Vec2</a>, to: <a class="api-type" href="types.html#vec2">Vec2</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-ovalto-rect-ccw">
 			path.ovalTo(rect,ccw?)
-			<span><a class="mark" href="#path-ovalto-rect-ccw-" id="path-ovalto-rect-ccw-">#</a></span>
+			<span><a class="mark" href="#path-ovalto-rect-ccw" aria-label="Link to this section">#</a></span>
 		</h3><p>Add an oval (ellipse) to the path. </p>
-<ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> </li>
-<li><code>@param</code> <code>ccw?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-rectto-rect-ccw-">
+<pre class="api-signature sh_none"><code>ovalTo(rect: <a class="api-type" href="types.html#rect">Rect</a>, ccw?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-rectto-rect-ccw">
 			path.rectTo(rect,ccw?)
-			<span><a class="mark" href="#path-rectto-rect-ccw-" id="path-rectto-rect-ccw-">#</a></span>
+			<span><a class="mark" href="#path-rectto-rect-ccw" aria-label="Link to this section">#</a></span>
 		</h3><p>Add a rectangle to the path. </p>
-<ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> </li>
-<li><code>@param</code> <code>ccw?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-arcto-rect-startangle-sweepangle-usecenter-">
+<pre class="api-signature sh_none"><code>rectTo(rect: <a class="api-type" href="types.html#rect">Rect</a>, ccw?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-arcto-rect-startangle-sweepangle-usecenter">
 			path.arcTo(rect,startAngle,sweepAngle,useCenter)
-			<span><a class="mark" href="#path-arcto-rect-startangle-sweepangle-usecenter-" id="path-arcto-rect-startangle-sweepangle-usecenter-">#</a></span>
+			<span><a class="mark" href="#path-arcto-rect-startangle-sweepangle-usecenter" aria-label="Link to this section">#</a></span>
 		</h3><p>Add an arc defined by a bounding rectangle.</p>
+<pre class="api-signature sh_none"><code>arcTo(rect: <a class="api-type" href="types.html#rect">Rect</a>, startAngle: <a class="api-type" href="$ext.html#number">number</a>, sweepAngle: <a class="api-type" href="$ext.html#number">number</a>, useCenter: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>Rect</code></a> Bounding rectangle.</li>
-<li><code>@param</code> <code>startAngle</code>: <a href="$ext.html#number"><code>number</code></a> Start angle in radians.</li>
-<li><code>@param</code> <code>sweepAngle</code>: <a href="$ext.html#number"><code>number</code></a> Sweep angle in radians.</li>
-<li><code>@param</code> <code>useCenter</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Whether to connect to the center point.</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>rect</code> — Bounding rectangle.</li>
+<li><code>startAngle</code> — Start angle in radians.</li>
+<li><code>sweepAngle</code> — Sweep angle in radians.</li>
+<li><code>useCenter</code> — Whether to connect to the center point.</li>
 </ul>
-<h3 id="path-arc-center-radius-startangle-sweepangle-usecenter-">
+<h3 id="path-arc-center-radius-startangle-sweepangle-usecenter">
 			path.arc(center,radius,startAngle,sweepAngle,useCenter)
-			<span><a class="mark" href="#path-arc-center-radius-startangle-sweepangle-usecenter-" id="path-arc-center-radius-startangle-sweepangle-usecenter-">#</a></span>
+			<span><a class="mark" href="#path-arc-center-radius-startangle-sweepangle-usecenter" aria-label="Link to this section">#</a></span>
 		</h3><p>Add an arc defined by center and radius.</p>
+<pre class="api-signature sh_none"><code>arc(center: <a class="api-type" href="types.html#vec2">Vec2</a>, radius: <a class="api-type" href="types.html#vec2">Vec2</a>, startAngle: <a class="api-type" href="$ext.html#number">number</a>, sweepAngle: <a class="api-type" href="$ext.html#number">number</a>, useCenter: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>center</code>: <a href="types.html#vec2"><code>Vec2</code></a> Center of the arc.</li>
-<li><code>@param</code> <code>radius</code>: <a href="types.html#vec2"><code>Vec2</code></a> Radius or ellipse radii (Vec2 for elliptical arcs).</li>
-<li><code>@param</code> <code>startAngle</code>: <a href="$ext.html#number"><code>number</code></a> Start angle in radians.</li>
-<li><code>@param</code> <code>sweepAngle</code>: <a href="$ext.html#number"><code>number</code></a> Sweep angle in radians.</li>
-<li><code>@param</code> <code>useCenter</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Whether to connect to the center point.</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>center</code> — Center of the arc.</li>
+<li><code>radius</code> — Radius or ellipse radii (Vec2 for elliptical arcs).</li>
+<li><code>startAngle</code> — Start angle in radians.</li>
+<li><code>sweepAngle</code> — Sweep angle in radians.</li>
+<li><code>useCenter</code> — Whether to connect to the center point.</li>
 </ul>
-<h3 id="path-close-">
+<h3 id="path-close">
 			path.close()
-			<span><a class="mark" href="#path-close-" id="path-close-">#</a></span>
+			<span><a class="mark" href="#path-close" aria-label="Link to this section">#</a></span>
 		</h3><p>Close the current contour (connect last point to first point). </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-concat-path-">
+<pre class="api-signature sh_none"><code>close(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-concat-path">
 			path.concat(path)
-			<span><a class="mark" href="#path-concat-path-" id="path-concat-path-">#</a></span>
+			<span><a class="mark" href="#path-concat-path" aria-label="Link to this section">#</a></span>
 		</h3><p>Append another path to the end of this one. </p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="#class-path"><code>Path</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-ptsat-index-">
+<pre class="api-signature sh_none"><code>concat(path: <a class="api-type" href="#class-path">Path</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-ptsat-index">
 			path.ptsAt(index)
-			<span><a class="mark" href="#path-ptsat-index-" id="path-ptsat-index-">#</a></span>
+			<span><a class="mark" href="#path-ptsat-index" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the point at the specified index. </p>
-<ul>
-<li><code>@param</code> <code>index</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
-<h3 id="path-verbsat-index-">
+<pre class="api-signature sh_none"><code>ptsAt(index: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
+
+<h3 id="path-verbsat-index">
 			path.verbsAt(index)
-			<span><a class="mark" href="#path-verbsat-index-" id="path-verbsat-index-">#</a></span>
+			<span><a class="mark" href="#path-verbsat-index" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the verb (command) at the specified index. </p>
-<ul>
-<li><code>@param</code> <code>index</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="#enum-pathverb"><code>PathVerb</code></a> </li>
-</ul>
-<h3 id="path-getedgelines-precision-">
+<pre class="api-signature sh_none"><code>verbsAt(index: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#enum-pathverb">PathVerb</a></code></pre>
+
+
+
+<h3 id="path-getedgelines-precision">
 			path.getEdgeLines(precision?)
-			<span><a class="mark" href="#path-getedgelines-precision-" id="path-getedgelines-precision-">#</a></span>
+			<span><a class="mark" href="#path-getedgelines-precision" aria-label="Link to this section">#</a></span>
 		</h3><p>Convert curves into line segments and return all edge points.</p>
+<pre class="api-signature sh_none"><code>getEdgeLines(precision: any, precision?: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="types.html#vec2">Vec2</a>[]</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>precision</code>:  Approximation tolerance (smaller = higher precision, default = 1.0).</li>
-<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a><code>[]</code> An array of Vec2 representing the edges.</li>
-<li><code>@param</code> <code>precision?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>precision</code> — Approximation tolerance (smaller = higher precision, default = 1.0).</li>
 </ul>
-<h3 id="path-gettriangles-precision-z-">
+<p><strong>Returns:</strong> An array of Vec2 representing the edges.</p>
+<h3 id="path-gettriangles-precision-z">
 			path.getTriangles(precision?,z?)
-			<span><a class="mark" href="#path-gettriangles-precision-z-" id="path-gettriangles-precision-z-">#</a></span>
+			<span><a class="mark" href="#path-gettriangles-precision-z" aria-label="Link to this section">#</a></span>
 		</h3><p>Triangulate the filled region of the path.</p>
+<pre class="api-signature sh_none"><code>getTriangles(precision: any, z: any, precision?: <a class="api-type" href="$ext.html#number">number</a>, z?: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="types.html#vec3">Vec3</a>[]</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>precision</code>:  Approximation tolerance (default = 1.0).</li>
-<li><code>@param</code> <code>z</code>:  Optional Z value for the vertices (default = 0).</li>
-<li><code>@return</code> <a href="types.html#vec3"><code>Vec3</code></a><code>[]</code> An array of Vec3 vertices (each triple = one triangle).</li>
-<li><code>@param</code> <code>precision?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@param</code> <code>z?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>precision</code> — Approximation tolerance (default = 1.0).</li>
+<li><code>z</code> — Optional Z value for the vertices (default = 0).</li>
 </ul>
-<h3 id="path-getaasidetriangles-width-precision-">
+<p><strong>Returns:</strong> An array of Vec3 vertices (each triple = one triangle).</p>
+<h3 id="path-getaasidetriangles-width-precision">
 			path.getAASideTriangles(width,precision?)
-			<span><a class="mark" href="#path-getaasidetriangles-width-precision-" id="path-getaasidetriangles-width-precision-">#</a></span>
+			<span><a class="mark" href="#path-getaasidetriangles-width-precision" aria-label="Link to this section">#</a></span>
 		</h3><p>Generate anti-aliased side triangles and body triangles.</p>
+<pre class="api-signature sh_none"><code>getAASideTriangles(width: <a class="api-type" href="$ext.html#number">number</a>, precision: any, precision?: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="types.html#vec3">Vec3</a>[]</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>width</code>: <a href="$ext.html#number"><code>number</code></a> Stroke width.</li>
-<li><code>@param</code> <code>precision</code>:  Approximation tolerance (default = 1.0).</li>
-<li><code>@return</code> <a href="types.html#vec3"><code>Vec3</code></a><code>[]</code> Array of Vec3 triangles for anti-aliased side and body rendering.</li>
-<li><code>@param</code> <code>precision?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>width</code> — Stroke width.</li>
+<li><code>precision</code> — Approximation tolerance (default = 1.0).</li>
 </ul>
-<h3 id="path-dashpath-stage-offset-">
+<p><strong>Returns:</strong> Array of Vec3 triangles for anti-aliased side and body rendering.</p>
+<h3 id="path-dashpath-stage-offset">
 			path.dashPath(stage,offset?)
-			<span><a class="mark" href="#path-dashpath-stage-offset-" id="path-dashpath-stage-offset-">#</a></span>
+			<span><a class="mark" href="#path-dashpath-stage-offset" aria-label="Link to this section">#</a></span>
 		</h3><p>Convert the path into a dashed path.</p>
+<pre class="api-signature sh_none"><code>dashPath(stage: <a class="api-type" href="$ext.html#number">number</a>[], offset: any, offset?: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>stage</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> An array of segment lengths (e.g. [dash, gap, dash, gap, ...]).<pre><code>       Each value represents a **distance along the path** in the same coordinate units.<br/>       Even indices (0, 2, 4, …) are drawn segments; odd indices are skipped segments.<br/></code></pre></li>
-<li><code>@param</code> <code>offset</code>:  Optional phase offset along the path (default = 0).</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path containing the dashed version.</li>
-<li><code>@param</code> <code>offset?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>stage</code> — An array of segment lengths (e.g. [dash, gap, dash, gap, ...]).<pre><code>       Each value represents a **distance along the path** in the same coordinate units.
+       Even indices (0, 2, 4, …) are drawn segments; odd indices are skipped segments.
+</code></pre></li>
+<li><code>offset</code> — Optional phase offset along the path (default = 0).</li>
 </ul>
-<h3 id="path-strokepath-width-cap-join-miterlimit-">
+<p><strong>Returns:</strong> A new path containing the dashed version.</p>
+<h3 id="path-strokepath-width-cap-join-miterlimit">
 			path.strokePath(width,cap?,join?,miterLimit?)
-			<span><a class="mark" href="#path-strokepath-width-cap-join-miterlimit-" id="path-strokepath-width-cap-join-miterlimit-">#</a></span>
+			<span><a class="mark" href="#path-strokepath-width-cap-join-miterlimit" aria-label="Link to this section">#</a></span>
 		</h3><p>Generate a stroke path from the current shape.</p>
+<pre class="api-signature sh_none"><code>strokePath(width: <a class="api-type" href="$ext.html#number">number</a>, cap: any, join: any, miterLimit: any, cap?: <a class="api-type" href="#enum-cap">Cap</a>, join?: <a class="api-type" href="#enum-join">Join</a>, miterLimit?: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>width</code>: <a href="$ext.html#number"><code>number</code></a> Stroke width.</li>
-<li><code>@param</code> <code>cap</code>:  Line cap style (butt, round, square).</li>
-<li><code>@param</code> <code>join</code>:  Line join style (miter, round, bevel).</li>
-<li><code>@param</code> <code>miterLimit</code>:  Maximum miter ratio.</li>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new path representing the stroked outline.</li>
-<li><code>@param</code> <code>cap?</code>: <a href="#enum-cap"><code>Cap</code></a> </li>
-<li><code>@param</code> <code>join?</code>: <a href="#enum-join"><code>Join</code></a> </li>
-<li><code>@param</code> <code>miterLimit?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>width</code> — Stroke width.</li>
+<li><code>cap</code> — Line cap style (butt, round, square).</li>
+<li><code>join</code> — Line join style (miter, round, bevel).</li>
+<li><code>miterLimit</code> — Maximum miter ratio.</li>
 </ul>
-<h3 id="path-normalizedpath-precision-">
+<p><strong>Returns:</strong> A new path representing the stroked outline.</p>
+<h3 id="path-normalizedpath-precision">
 			path.normalizedPath(precision?)
-			<span><a class="mark" href="#path-normalizedpath-precision-" id="path-normalizedpath-precision-">#</a></span>
+			<span><a class="mark" href="#path-normalizedpath-precision" aria-label="Link to this section">#</a></span>
 		</h3><p>Flatten path, convert bezier to line segments.</p>
+<pre class="api-signature sh_none"><code>normalizedPath(precision: any, precision?: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>precision</code>:  this is the scale of the number of segments,<pre><code>           the larger the value, the more segments (default is 1.0)<br/></code></pre></li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> The flattened path (this).</li>
-<li><code>@param</code> <code>precision?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
+<li><code>precision</code> — this is the scale of the number of segments,<pre><code>           the larger the value, the more segments (default is 1.0)
+</code></pre></li>
 </ul>
-<h3 id="path-transform-matrix-">
+<p><strong>Returns:</strong> The flattened path (this).</p>
+<h3 id="path-transform-matrix">
 			path.transform(matrix)
-			<span><a class="mark" href="#path-transform-matrix-" id="path-transform-matrix-">#</a></span>
+			<span><a class="mark" href="#path-transform-matrix" aria-label="Link to this section">#</a></span>
 		</h3><p>Apply a transformation matrix to the path.</p>
+<pre class="api-signature sh_none"><code>transform(matrix: <a class="api-type" href="types.html#mat">Mat</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>matrix</code>: <a href="types.html#mat"><code>Mat</code></a> Transformation matrix.</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>matrix</code> — Transformation matrix.</li>
 </ul>
-<h3 id="path-scale-scale-">
+<h3 id="path-scale-scale">
 			path.scale(scale)
-			<span><a class="mark" href="#path-scale-scale-" id="path-scale-scale-">#</a></span>
+			<span><a class="mark" href="#path-scale-scale" aria-label="Link to this section">#</a></span>
 		</h3><p>Scale the path by a given factor.</p>
+<pre class="api-signature sh_none"><code>scale(scale: <a class="api-type" href="types.html#vec2">Vec2</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>scale</code>: <a href="types.html#vec2"><code>Vec2</code></a> Scale vector (x, y).</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>scale</code> — Scale vector (x, y).</li>
 </ul>
-<h3 id="path-seal-">
+<h3 id="path-seal">
 			path.seal()
-			<span><a class="mark" href="#path-seal-" id="path-seal-">#</a></span>
+			<span><a class="mark" href="#path-seal" aria-label="Link to this section">#</a></span>
 		</h3><p>seal path, after sealed, path data can not be modified</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="path-getbounds-matrix-">
+<pre class="api-signature sh_none"><code>seal(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="path-getbounds-matrix">
 			path.getBounds(matrix?)
-			<span><a class="mark" href="#path-getbounds-matrix-" id="path-getbounds-matrix-">#</a></span>
+			<span><a class="mark" href="#path-getbounds-matrix" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the path&#39;s bounding box.</p>
+<pre class="api-signature sh_none"><code>getBounds(matrix: any, matrix?: <a class="api-type" href="types.html#mat">Mat</a>): <a class="api-type" href="types.html#range">Range</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>matrix</code>:  Optional transform matrix (fast path if identity).</li>
-<li><code>@return</code> <a href="types.html#range"><code>Range</code></a> The bounding region.</li>
-<li><code>@param</code> <code>matrix?</code>: <a href="types.html#mat"><code>Mat</code></a> </li>
+<li><code>matrix</code> — Optional transform matrix (fast path if identity).</li>
 </ul>
-<h3 id="path-copy-">
+<p><strong>Returns:</strong> The bounding region.</p>
+<h3 id="path-copy">
 			path.copy()
-			<span><a class="mark" href="#path-copy-" id="path-copy-">#</a></span>
+			<span><a class="mark" href="#path-copy" aria-label="Link to this section">#</a></span>
 		</h3><p>Create a copy of this path.</p>
-<ul>
-<li><code>@return</code> <a href="#class-path"><code>Path</code></a> A new Path instance that is a copy of this path.</li>
-</ul>
-<h3 id="path-hashcode-">
+<pre class="api-signature sh_none"><code>copy(): <a class="api-type" href="#class-path">Path</a></code></pre>
+
+
+
+<p><strong>Returns:</strong> A new Path instance that is a copy of this path.</p>
+<h3 id="path-hashcode">
 			path.hashCode()
-			<span><a class="mark" href="#path-hashcode-" id="path-hashcode-">#</a></span>
+			<span><a class="mark" href="#path-hashcode" aria-label="Link to this section">#</a></span>
 		</h3><p>Generate a hash code for the path.</p>
-<ul>
-<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> The hash code as an integer.</li>
-</ul>
+<pre class="api-signature sh_none"><code>hashCode(): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+
+
+
+<p><strong>Returns:</strong> The hash code as an integer.</p>
 
 			</div>
 
@@ -646,19 +695,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'path.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

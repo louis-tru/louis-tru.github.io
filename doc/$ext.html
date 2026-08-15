@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = '_ext.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-_ext">quark/_ext</a></span>
@@ -153,7 +140,7 @@
 <span><a href="#interface-object">Interface: Object</a></span>
 <ul>
 <li>
-<span><a href="#object">Object</a></span>
+<span><a href="#object-2">Object</a></span>
 </li>
 </ul>
 <li>
@@ -202,7 +189,7 @@
 <span><a href="#interface-string">Interface: String</a></span>
 <ul>
 <li>
-<span><a href="#string">String</a></span>
+<span><a href="#string-2">String</a></span>
 </li>
 </ul>
 <li>
@@ -216,20 +203,20 @@
 <span><a href="#interface-number">Interface: Number</a></span>
 <ul>
 <li>
-<span><a href="#number">Number</a></span>
+<span><a href="#number-2">Number</a></span>
 </li>
 <li>
-<span><a href="#number-tofixedbefore-before-after-">number.toFixedBefore(before,after?)</a></span>
+<span><a href="#number-tofixedbefore-before-after">number.toFixedBefore(before,after?)</a></span>
 </li>
 <li>
-<span><a href="#number-tofixedvariable-after-split-symbol-">number.toFixedVariable(after,split?,symbol?)</a></span>
+<span><a href="#number-tofixedvariable-after-split-symbol">number.toFixedVariable(after,split?,symbol?)</a></span>
 </li>
 </ul>
 <li>
 <span><a href="#interface-boolean">Interface: Boolean</a></span>
 <ul>
 <li>
-<span><a href="#boolean">Boolean</a></span>
+<span><a href="#boolean-2">Boolean</a></span>
 </li>
 </ul>
 <li>
@@ -242,10 +229,10 @@
 <span><a href="#dateconstructor-currenttimezone">dateconstructor.currentTimezone</a></span>
 </li>
 <li>
-<span><a href="#dateconstructor-parsedate-date_str-format-timezone-">dateconstructor.parseDate(date_str,format?,timezone?)</a></span>
+<span><a href="#dateconstructor-parsedate-date_str-format-timezone">dateconstructor.parseDate(date_str,format?,timezone?)</a></span>
 </li>
 <li>
-<span><a href="#dateconstructor-formattimespan-ts-format-">dateconstructor.formatTimeSpan(ts,format?)</a></span>
+<span><a href="#dateconstructor-formattimespan-ts-format">dateconstructor.formatTimeSpan(ts,format?)</a></span>
 </li>
 </ul>
 <li>
@@ -255,10 +242,10 @@
 <span><a href="#date">Date</a></span>
 </li>
 <li>
-<span><a href="#date-addmilliseconds-ms-">date.addMilliseconds(ms)</a></span>
+<span><a href="#date-addmilliseconds-ms">date.addMilliseconds(ms)</a></span>
 </li>
 <li>
-<span><a href="#date-tostring-format-timezone-">date.toString(format?,timezone?)</a></span>
+<span><a href="#date-tostring-format-timezone">date.toString(format?,timezone?)</a></span>
 </li>
 </ul>
 <li>
@@ -275,7 +262,7 @@
 <span><a href="#errorconstructor">ErrorConstructor</a></span>
 </li>
 <li>
-<span><a href="#errorconstructor-capturestacktrace-targetobject-constructoropt-">errorconstructor.captureStackTrace(targetObject,constructorOpt?)</a></span>
+<span><a href="#errorconstructor-capturestacktrace-targetobject-constructoropt">errorconstructor.captureStackTrace(targetObject,constructorOpt?)</a></span>
 </li>
 </ul>
 <li>
@@ -289,246 +276,261 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-_ext">
 			quark/_ext
-			<span><a class="mark" href="#quark-_ext" id="quark-_ext">#</a></span>
+			<span><a class="mark" href="#quark-_ext" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="number">
 			number
-			<span><a class="mark" href="#number" id="number">#</a></span>
+			<span><a class="mark" href="#number" aria-label="Link to this section">#</a></span>
 		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> number = <a class="api-type" href="#interface-number">Number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>number</code> = <a href="#interface-number"><code>Number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="boolean">
 			boolean
-			<span><a class="mark" href="#boolean" id="boolean">#</a></span>
+			<span><a class="mark" href="#boolean" aria-label="Link to this section">#</a></span>
 		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> boolean = <a class="api-type" href="#interface-boolean">Boolean</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>boolean</code> = <a href="#interface-boolean"><code>Boolean</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="object">
 			object
-			<span><a class="mark" href="#object" id="object">#</a></span>
+			<span><a class="mark" href="#object" aria-label="Link to this section">#</a></span>
 		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> object = <a class="api-type" href="#interface-object">Object</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>object</code> = <a href="#interface-object"><code>Object</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="string">
 			string
-			<span><a class="mark" href="#string" id="string">#</a></span>
+			<span><a class="mark" href="#string" aria-label="Link to this section">#</a></span>
 		</h2><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> string = <a class="api-type" href="#interface-string">String</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>string</code> = <a href="#interface-string"><code>String</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-numberconstructor">
 			Interface: NumberConstructor
-			<span><a class="mark" href="#interface-numberconstructor" id="interface-numberconstructor">#</a></span>
+			<span><a class="mark" href="#interface-numberconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="numberconstructor">
 			NumberConstructor
-			<span><a class="mark" href="#numberconstructor" id="numberconstructor">#</a></span>
+			<span><a class="mark" href="#numberconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-objectconstructor">
 			Interface: ObjectConstructor
-			<span><a class="mark" href="#interface-objectconstructor" id="interface-objectconstructor">#</a></span>
+			<span><a class="mark" href="#interface-objectconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="objectconstructor">
 			ObjectConstructor
-			<span><a class="mark" href="#objectconstructor" id="objectconstructor">#</a></span>
+			<span><a class="mark" href="#objectconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-object">
 			Interface: Object
-			<span><a class="mark" href="#interface-object" id="interface-object">#</a></span>
-		</h2><h3 id="object">
+			<span><a class="mark" href="#interface-object" aria-label="Link to this section">#</a></span>
+		</h2><h3 id="object-2">
 			Object
-			<span><a class="mark" href="#object" id="object">#</a></span>
+			<span><a class="mark" href="#object-2" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-dict">
 			Interface: Dict
-			<span><a class="mark" href="#interface-dict" id="interface-dict">#</a></span>
+			<span><a class="mark" href="#interface-dict" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="dict">
 			Dict
-			<span><a class="mark" href="#dict" id="dict">#</a></span>
+			<span><a class="mark" href="#dict" aria-label="Link to this section">#</a></span>
 		</h3><p>Dictionaries</p>
 <ul>
-<li><code>@global</code>  </li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@extends</code> <code>Record</code>&lt;<a href="#interface-string"><code>string</code></a>,<code>T</code>&gt;</li>
+<li><code>@global</code><br><strong>Type parameters:</strong> <code>T</code>
+<strong>Extends:</strong> <code>Record</code>&lt;<a href="#interface-string"><code>string</code></a>,<code>T</code>&gt;</li>
 </ul>
 <h2 id="interface-timeoutresult">
 			Interface: TimeoutResult
-			<span><a class="mark" href="#interface-timeoutresult" id="interface-timeoutresult">#</a></span>
+			<span><a class="mark" href="#interface-timeoutresult" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="timeoutresult">
 			TimeoutResult
-			<span><a class="mark" href="#timeoutresult" id="timeoutresult">#</a></span>
+			<span><a class="mark" href="#timeoutresult" aria-label="Link to this section">#</a></span>
 		</h3><ul>
-<li><code>@global</code>  </li>
-<li><code>@extends</code> <a href="defs.html#any"><code>Any</code></a></li>
+<li><code>@global</code><br><strong>Extends:</strong> <a href="defs.html#any"><code>Any</code></a></li>
 </ul>
 <h2 id="interface-console">
 			Interface: Console
-			<span><a class="mark" href="#interface-console" id="interface-console">#</a></span>
+			<span><a class="mark" href="#interface-console" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="console">
 			Console
-			<span><a class="mark" href="#console" id="console">#</a></span>
+			<span><a class="mark" href="#console" aria-label="Link to this section">#</a></span>
 		</h3><p>Console methods provided by the Qk JavaScript runtime.</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-function">
 			Interface: Function
-			<span><a class="mark" href="#interface-function" id="interface-function">#</a></span>
+			<span><a class="mark" href="#interface-function" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="function">
 			Function
-			<span><a class="mark" href="#function" id="function">#</a></span>
+			<span><a class="mark" href="#function" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-array">
 			Interface: Array
-			<span><a class="mark" href="#interface-array" id="interface-array">#</a></span>
+			<span><a class="mark" href="#interface-array" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="array">
 			Array
-			<span><a class="mark" href="#array" id="array">#</a></span>
+			<span><a class="mark" href="#array" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</p>
 <ul>
-<li><code>@global</code>  </li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
+<li><code>@global</code><br><strong>Type parameters:</strong> <code>T</code></li>
 </ul>
 <h2 id="interface-arrayconstructor">
 			Interface: ArrayConstructor
-			<span><a class="mark" href="#interface-arrayconstructor" id="interface-arrayconstructor">#</a></span>
+			<span><a class="mark" href="#interface-arrayconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="arrayconstructor">
 			ArrayConstructor
-			<span><a class="mark" href="#arrayconstructor" id="arrayconstructor">#</a></span>
+			<span><a class="mark" href="#arrayconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-string">
 			Interface: String
-			<span><a class="mark" href="#interface-string" id="interface-string">#</a></span>
-		</h2><h3 id="string">
+			<span><a class="mark" href="#interface-string" aria-label="Link to this section">#</a></span>
+		</h2><h3 id="string-2">
 			String
-			<span><a class="mark" href="#string" id="string">#</a></span>
+			<span><a class="mark" href="#string-2" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-stringconstructor">
 			Interface: StringConstructor
-			<span><a class="mark" href="#interface-stringconstructor" id="interface-stringconstructor">#</a></span>
+			<span><a class="mark" href="#interface-stringconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="stringconstructor">
 			StringConstructor
-			<span><a class="mark" href="#stringconstructor" id="stringconstructor">#</a></span>
+			<span><a class="mark" href="#stringconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-number">
 			Interface: Number
-			<span><a class="mark" href="#interface-number" id="interface-number">#</a></span>
-		</h2><h3 id="number">
+			<span><a class="mark" href="#interface-number" aria-label="Link to this section">#</a></span>
+		</h2><h3 id="number-2">
 			Number
-			<span><a class="mark" href="#number" id="number">#</a></span>
+			<span><a class="mark" href="#number-2" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
-<h3 id="number-tofixedbefore-before-after-">
+<h3 id="number-tofixedbefore-before-after">
 			number.toFixedBefore(before,after?)
-			<span><a class="mark" href="#number-tofixedbefore-before-after-" id="number-tofixedbefore-before-after-">#</a></span>
+			<span><a class="mark" href="#number-tofixedbefore-before-after" aria-label="Link to this section">#</a></span>
 		</h3><p>Convert to a string with a fixed number of digits before and after the decimal point</p>
+<pre class="api-signature sh_none"><code>toFixedBefore(before: <a class="api-type" href="numbers.html#uint">Uint</a>, after?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#string">string</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>before</code>: <a href="numbers.html#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
-<li><code>@param</code> <code>after?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Fixed number of digits after the decimal point</li>
-<li><code>@return</code> <a href="#interface-string"><code>string</code></a> </li>
+<li><code>before</code> — Fixed number of digits before the decimal point</li>
+<li><code>after?</code> — Fixed number of digits after the decimal point</li>
 </ul>
-<h3 id="number-tofixedvariable-after-split-symbol-">
+<h3 id="number-tofixedvariable-after-split-symbol">
 			number.toFixedVariable(after,split?,symbol?)
-			<span><a class="mark" href="#number-tofixedvariable-after-split-symbol-" id="number-tofixedvariable-after-split-symbol-">#</a></span>
+			<span><a class="mark" href="#number-tofixedvariable-after-split-symbol" aria-label="Link to this section">#</a></span>
 		</h3><p>Fixed the number of digits before the decimal point and used symbol separation</p>
+<pre class="api-signature sh_none"><code>toFixedVariable(after: <a class="api-type" href="numbers.html#uint">Uint</a>, split?: <a class="api-type" href="numbers.html#uint">Uint</a>, symbol?: <a class="api-type" href="#string">string</a>): <a class="api-type" href="#string">string</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>after</code>: <a href="numbers.html#uint"><code>Uint</code></a> Fixed number of digits before the decimal point</li>
-<li><code>@param</code> <code>split?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Split unit length</li>
-<li><code>@param</code> <code>symbol?</code>: <a href="#interface-string"><code>string</code></a> Split characters</li>
+<li><code>after</code> — Fixed number of digits before the decimal point</li>
+<li><code>split?</code> — Split unit length</li>
+<li><code>symbol?</code> — Split characters</li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">// Print: 1,000,000.03
 console.log((1000000.03).toFixedVariable(8,3,&#39;,&#39;))
 </code></pre>
-<ul>
-<li><code>@return</code> <a href="#interface-string"><code>string</code></a> </li>
-</ul>
 <h2 id="interface-boolean">
 			Interface: Boolean
-			<span><a class="mark" href="#interface-boolean" id="interface-boolean">#</a></span>
-		</h2><h3 id="boolean">
+			<span><a class="mark" href="#interface-boolean" aria-label="Link to this section">#</a></span>
+		</h2><h3 id="boolean-2">
 			Boolean
-			<span><a class="mark" href="#boolean" id="boolean">#</a></span>
+			<span><a class="mark" href="#boolean-2" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="interface-dateconstructor">
 			Interface: DateConstructor
-			<span><a class="mark" href="#interface-dateconstructor" id="interface-dateconstructor">#</a></span>
+			<span><a class="mark" href="#interface-dateconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="dateconstructor">
 			DateConstructor
-			<span><a class="mark" href="#dateconstructor" id="dateconstructor">#</a></span>
+			<span><a class="mark" href="#dateconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
 <h3 id="dateconstructor-currenttimezone">
 			dateconstructor.currentTimezone
-			<span><a class="mark" href="#dateconstructor-currenttimezone" id="dateconstructor-currenttimezone">#</a></span>
+			<span><a class="mark" href="#dateconstructor-currenttimezone" aria-label="Link to this section">#</a></span>
 		</h3><p>current timezone</p>
+<pre class="api-signature sh_none"><code>currentTimezone: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
 <ul>
-<li><code>currentTimezone</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
 <li><code>@static</code>  </li>
 </ul>
-<h3 id="dateconstructor-parsedate-date_str-format-timezone-">
+<h3 id="dateconstructor-parsedate-date_str-format-timezone">
 			dateconstructor.parseDate(date_str,format?,timezone?)
-			<span><a class="mark" href="#dateconstructor-parsedate-date_str-format-timezone-" id="dateconstructor-parsedate-date_str-format-timezone-">#</a></span>
+			<span><a class="mark" href="#dateconstructor-parsedate-date_str-format-timezone" aria-label="Link to this section">#</a></span>
 		</h3><p>Parse a string as a time</p>
+<pre class="api-signature sh_none"><code>parseDate(str: any, format?: <a class="api-type" href="#string">string</a>, timezone?: <a class="api-type" href="numbers.html#uint">Uint</a>, date_str: <a class="api-type" href="#string">string</a>): <a class="api-type" href="#interface-date">Date</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>str</code>:  The string to parse</li>
-<li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> date format default yyyyMMddhhmmssfff</li>
-<li><code>@param</code> <code>timezone?</code>: <a href="numbers.html#uint"><code>Uint</code></a> The time zone of the time to be parsed, the default is the current time zone</li>
-<li><code>@return</code> <a href="#interface-date"><code>Date</code></a> Retruu Date object</li>
+<li><code>str</code> — The string to parse</li>
+<li><code>format?</code> — date format default yyyyMMddhhmmssfff</li>
+<li><code>timezone?</code> — The time zone of the time to be parsed, the default is the current time zone</li>
+</ul>
+<p><strong>Returns:</strong> Retruu Date object</p>
+<ul>
 <li><code>@static</code>  </li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">let i = &#39;2008-02-13 01:12:13&#39;;
 let date = Date.parseDate(i); // The new time returned
 </code></pre>
-<ul>
-<li><code>@param</code> <code>date_str</code>: <a href="#interface-string"><code>string</code></a> </li>
-</ul>
-<h3 id="dateconstructor-formattimespan-ts-format-">
+<h3 id="dateconstructor-formattimespan-ts-format">
 			dateconstructor.formatTimeSpan(ts,format?)
-			<span><a class="mark" href="#dateconstructor-formattimespan-ts-format-" id="dateconstructor-formattimespan-ts-format-">#</a></span>
+			<span><a class="mark" href="#dateconstructor-formattimespan-ts-format" aria-label="Link to this section">#</a></span>
 		</h3><p>Formatting timestamps</p>
+<pre class="api-signature sh_none"><code>formatTimeSpan(time_span: <a class="api-type" href="numbers.html#uint">Uint</a>, format?: <a class="api-type" href="#string">string</a>, ts: any): <a class="api-type" href="#string">string</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>time_span</code>: <a href="numbers.html#uint"><code>Uint</code></a> The timestamp to format</li>
-<li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> The timestamp format to be formatted</li>
-<li><code>@return</code> <a href="#interface-string"><code>string</code></a> The returned formatted timestamp</li>
+<li><code>time_span</code> — The timestamp to format</li>
+<li><code>format?</code> — The timestamp format to be formatted</li>
+</ul>
+<p><strong>Returns:</strong> The returned formatted timestamp</p>
+<ul>
 <li><code>@static</code>  </li>
 </ul>
 <p>For example:</p>
@@ -543,35 +545,41 @@ str = Date.formatTimeSpan(time_span, format); // str = &#39;2时46分42秒&#39;
 format = &#39;mm分ss秒&#39;;
 str = Date.formatTimeSpan(time_span, format); // str = &#39;166分42秒&#39;
 </code></pre>
-<ul>
-<li><code>@param</code> <code>ts</code>:  </li>
-</ul>
 <h2 id="interface-date">
 			Interface: Date
-			<span><a class="mark" href="#interface-date" id="interface-date">#</a></span>
+			<span><a class="mark" href="#interface-date" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="date">
 			Date
-			<span><a class="mark" href="#date" id="date">#</a></span>
+			<span><a class="mark" href="#date" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
-<h3 id="date-addmilliseconds-ms-">
+<h3 id="date-addmilliseconds-ms">
 			date.addMilliseconds(ms)
-			<span><a class="mark" href="#date-addmilliseconds-ms-" id="date-addmilliseconds-ms-">#</a></span>
+			<span><a class="mark" href="#date-addmilliseconds-ms" aria-label="Link to this section">#</a></span>
 		</h3><p>Add milliseconds to the current Date time and change the time value</p>
+<pre class="api-signature sh_none"><code>addMilliseconds(ms: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>ms</code>: <a href="numbers.html#uint"><code>Uint</code></a> The millisecond value to append</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+<li><code>ms</code> — The millisecond value to append</li>
 </ul>
-<h3 id="date-tostring-format-timezone-">
+<h3 id="date-tostring-format-timezone">
 			date.toString(format?,timezone?)
-			<span><a class="mark" href="#date-tostring-format-timezone-" id="date-tostring-format-timezone-">#</a></span>
+			<span><a class="mark" href="#date-tostring-format-timezone" aria-label="Link to this section">#</a></span>
 		</h3><p>Returns a date string given a date format</p>
+<pre class="api-signature sh_none"><code>toString(format?: <a class="api-type" href="#string">string</a>, timezone?: <a class="api-type" href="#number">number</a>): <a class="api-type" href="#string">string</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>format?</code>: <a href="#interface-string"><code>string</code></a> The format of the string to be converted</li>
-<li><p><code>@return</code> <a href="#interface-string"><code>string</code></a> Returns the formatted time string</p><br/></li>
-<li><p><code>@exmples</code>  </p><br/></li>
+<li><code>format?</code> — The format of the string to be converted</li>
+</ul>
+<p><strong>Returns:</strong> Returns the formatted time string</p>
+<ul>
+<li><code>@exmples</code>  </li>
 </ul>
 <pre><code class="undefinedts">let date = new Date();
 let format = &#39;yyyy-MM-dd hh:mm:ss.fff&#39;;
@@ -583,49 +591,44 @@ dateStr = date.toString(format); // dateStr的值为 &#39;2008/12/10&#39;
 format = &#39;yyyy-MM-dd hh&#39;;
 dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10&#39;
 </code></pre>
-<ul>
-<li><code>@param</code> <code>timezone?</code>: <a href="#interface-number"><code>number</code></a> </li>
-</ul>
 <h2 id="interface-errordescribe">
 			Interface: ErrorDescribe
-			<span><a class="mark" href="#interface-errordescribe" id="interface-errordescribe">#</a></span>
+			<span><a class="mark" href="#interface-errordescribe" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="errordescribe">
 			ErrorDescribe
-			<span><a class="mark" href="#errordescribe" id="errordescribe">#</a></span>
+			<span><a class="mark" href="#errordescribe" aria-label="Link to this section">#</a></span>
 		</h3><ul>
-<li><code>@global</code>  </li>
-<li><code>@extends</code> <a href="#interface-dict"><code>Dict</code></a></li>
+<li><code>@global</code><br><strong>Extends:</strong> <a href="#interface-dict"><code>Dict</code></a></li>
 </ul>
 <h2 id="interface-errorconstructor">
 			Interface: ErrorConstructor
-			<span><a class="mark" href="#interface-errorconstructor" id="interface-errorconstructor">#</a></span>
+			<span><a class="mark" href="#interface-errorconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="errorconstructor">
 			ErrorConstructor
-			<span><a class="mark" href="#errorconstructor" id="errorconstructor">#</a></span>
+			<span><a class="mark" href="#errorconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</p>
 <ul>
 <li><code>@global</code>  </li>
 </ul>
-<h3 id="errorconstructor-capturestacktrace-targetobject-constructoropt-">
+<h3 id="errorconstructor-capturestacktrace-targetobject-constructoropt">
 			errorconstructor.captureStackTrace(targetObject,constructorOpt?)
-			<span><a class="mark" href="#errorconstructor-capturestacktrace-targetobject-constructoropt-" id="errorconstructor-capturestacktrace-targetobject-constructoropt-">#</a></span>
+			<span><a class="mark" href="#errorconstructor-capturestacktrace-targetobject-constructoropt" aria-label="Link to this section">#</a></span>
 		</h3><p>Create .stack property on a target object</p>
+<pre class="api-signature sh_none"><code>captureStackTrace(targetObject: <a class="api-type" href="#interface-object">Object</a>, constructorOpt?: <a class="api-type" href="#interface-function">Function</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
 <ul>
 <li><code>@static</code>  </li>
-<li><code>@param</code> <code>targetObject</code>: <a href="#interface-object"><code>Object</code></a> </li>
-<li><code>@param</code> <code>constructorOpt?</code>: <a href="#interface-function"><code>Function</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
 <h2 id="interface-error">
 			Interface: Error
-			<span><a class="mark" href="#interface-error" id="interface-error">#</a></span>
+			<span><a class="mark" href="#interface-error" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="error">
 			Error
-			<span><a class="mark" href="#error" id="error">#</a></span>
+			<span><a class="mark" href="#error" aria-label="Link to this section">#</a></span>
 		</h3><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</p>
 <ul>
-<li><code>@global</code>  </li>
-<li><code>@extends</code> <a href="#interface-dict"><code>Dict</code></a></li>
+<li><code>@global</code><br><strong>Extends:</strong> <a href="#interface-dict"><code>Dict</code></a></li>
 </ul>
 
 			</div>
@@ -634,19 +637,28 @@ dateStr = date.toString(format); // dateStr的值为 &#39;2008-12-10 10&#39;
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = '$ext.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'docs/guides/VIEW_STYLE.html';
-		var relative = '../../';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="../../assets/style.css">
+	<link rel="stylesheet" href="../../assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#view-layout-and-styles">View layout and styles</a></span>
@@ -149,26 +136,71 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="view-layout-and-styles">
 			View layout and styles
-			<span><a class="mark" href="#view-layout-and-styles" id="view-layout-and-styles">#</a></span>
+			<span><a class="mark" href="#view-layout-and-styles" aria-label="Link to this section">#</a></span>
 		</h1><p><a href="VIEW_STYLE-cn.html">中文</a> · <a href="../../README.html">Back to README</a> · <a href="https://quarks.cc/doc/">API index</a></p>
-<p>Quark views describe visible UI elements and receive events from the hardware<br/>and operating system. They form an explicit view tree; Quark does not use a<br/>browser DOM or browser CSS layout engine.</p>
+<p>Quark views describe visible UI elements and receive events from the hardware
+and operating system. They form an explicit view tree; Quark does not use a
+browser DOM or browser CSS layout engine.</p>
 <p>For complete property and method documentation, see the <a href="https://quarks.cc/doc/view.html">View API</a>.</p>
 <h2 id="view-class-hierarchy">
 			View class hierarchy
-			<span><a class="mark" href="#view-class-hierarchy" id="view-class-hierarchy">#</a></span>
-		</h2><p>The public classes declared in <code>libs/quark/view.ts</code> currently have this<br/>inheritance structure. <code>MorphView</code>, <code>TextOptions</code>, <code>ScrollView</code>, and <code>Player</code><br/>are interfaces or behavior contracts, so they are shown as <code>implements</code><br/>annotations instead of base-class nodes:</p>
+			<span><a class="mark" href="#view-class-hierarchy" aria-label="Link to this section">#</a></span>
+		</h2><p>The public classes declared in <code>libs/quark/view.ts</code> currently have this
+inheritance structure. <code>MorphView</code>, <code>TextOptions</code>, <code>ScrollView</code>, and <code>Player</code>
+are interfaces or behavior contracts, so they are shown as <code>implements</code>
+annotations instead of base-class nodes:</p>
 <ul>
-<li><a href="https://quarks.cc/doc/view.html#class-view">View</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-br">Br</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-box">Box</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-video">Video</a> — implements <code>Player</code></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-morph">Morph</a> — implements <a href="https://quarks.cc/doc/view.html#interface-morphview">MorphView</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-world">World</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-text">Text</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-input">Input</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a> — implements <a href="https://quarks.cc/doc/view.html#interface-scrollview">ScrollView</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a> — implements <a href="https://quarks.cc/doc/view.html#interface-scrollview">ScrollView</a></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-entity">Entity</a> — implements <a href="https://quarks.cc/doc/view.html#interface-morphview">MorphView</a><ul><br/><li><a href="https://quarks.cc/doc/view.html#class-agent">Agent</a> — abstract<ul><br/><li><a href="https://quarks.cc/doc/view.html#class-sprite">Sprite</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-spine">Spine</a></li><br/></ul><br/></li><br/></ul><br/></li><br/><li><a href="https://quarks.cc/doc/view.html#class-label">Label</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a></li><br/><li><a href="https://quarks.cc/doc/view.html#class-inputsink">InputSink</a></li><br/></ul><br/></li>
+<li><a href="https://quarks.cc/doc/view.html#class-view">View</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-br">Br</a></li>
+<li><a href="https://quarks.cc/doc/view.html#class-box">Box</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-flex">Flex</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-flow">Flow</a></li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-free">Free</a></li>
+<li><a href="https://quarks.cc/doc/view.html#class-image">Image</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-video">Video</a> — implements <code>Player</code></li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-morph">Morph</a> — implements <a href="https://quarks.cc/doc/view.html#interface-morphview">MorphView</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-world">World</a></li>
+<li><a href="https://quarks.cc/doc/view.html#class-root">Root</a></li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-text">Text</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-button">Button</a></li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-input">Input</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-textarea">Textarea</a> — implements <a href="https://quarks.cc/doc/view.html#interface-scrollview">ScrollView</a></li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-scroll">Scroll</a> — implements <a href="https://quarks.cc/doc/view.html#interface-scrollview">ScrollView</a></li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-entity">Entity</a> — implements <a href="https://quarks.cc/doc/view.html#interface-morphview">MorphView</a><ul>
+<li><a href="https://quarks.cc/doc/view.html#class-agent">Agent</a> — abstract<ul>
+<li><a href="https://quarks.cc/doc/view.html#class-sprite">Sprite</a></li>
+<li><a href="https://quarks.cc/doc/view.html#class-spine">Spine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://quarks.cc/doc/view.html#class-label">Label</a> — implements <a href="https://quarks.cc/doc/view.html#interface-textoptions">TextOptions</a></li>
+<li><a href="https://quarks.cc/doc/view.html#class-inputsink">InputSink</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="layout-example">
 			Layout example
-			<span><a class="mark" href="#layout-example" id="layout-example">#</a></span>
-		</h2><p>The JSX syntax can look familiar to web developers, but its elements and<br/>properties operate on Quark&#39;s native view and layout system:</p>
+			<span><a class="mark" href="#layout-example" aria-label="Link to this section">#</a></span>
+		</h2><p>The JSX syntax can look familiar to web developers, but its elements and
+properties operate on Quark&#39;s native view and layout system:</p>
 <pre><code class="undefinedtsx">import { Jsx, Application, Window } from &#39;quark&#39;
 
 new Application()
@@ -222,36 +254,50 @@ new Window().render(
 </code></pre>
 <h2 id="css-like-styles">
 			CSS-like styles
-			<span><a class="mark" href="#css-like-styles" id="css-like-styles">#</a></span>
-		</h2><p>Quark provides a class-driven style system inspired by CSS and designed for<br/>GUI view hierarchies. It is not a complete browser CSS selector engine: only<br/>class selectors, the supported hierarchy operators, and the three built-in<br/>pseudo states participate in matching.</p>
+			<span><a class="mark" href="#css-like-styles" aria-label="Link to this section">#</a></span>
+		</h2><p>Quark provides a class-driven style system inspired by CSS and designed for
+GUI view hierarchies. It is not a complete browser CSS selector engine: only
+class selectors, the supported hierarchy operators, and the three built-in
+pseudo states participate in matching.</p>
 <h3 id="supported-selector-syntax">
 			Supported selector syntax
-			<span><a class="mark" href="#supported-selector-syntax" id="supported-selector-syntax">#</a></span>
+			<span><a class="mark" href="#supported-selector-syntax" aria-label="Link to this section">#</a></span>
 		</h3><ul>
-<li>Descendant selectors use spaces. <code>.a .b .c</code> matches <code>.b</code> and <code>.c</code> at any<br/>deeper descendant level in sequence.</li>
-<li>Direct child selectors use <code>&gt;</code>. <code>.a &gt; .b &gt; .c</code> requires each following<br/>match to be an immediate child of the previous one.</li>
-<li>Continuous class selectors have no spaces. <code>.a.b.c</code> matches one View that<br/>has all three classes.</li>
-<li>The supported pseudo states are <code>:normal</code>, <code>:hover</code>, and <code>:active</code>. A pseudo<br/>state must be the final suffix of its continuous class segment:<br/><code>.a.b:active .c.d</code> is valid, while <code>.a:active.b</code> is invalid.</li>
+<li>Descendant selectors use spaces. <code>.a .b .c</code> matches <code>.b</code> and <code>.c</code> at any
+deeper descendant level in sequence.</li>
+<li>Direct child selectors use <code>&gt;</code>. <code>.a &gt; .b &gt; .c</code> requires each following
+match to be an immediate child of the previous one.</li>
+<li>Continuous class selectors have no spaces. <code>.a.b.c</code> matches one View that
+has all three classes.</li>
+<li>The supported pseudo states are <code>:normal</code>, <code>:hover</code>, and <code>:active</code>. A pseudo
+state must be the final suffix of its continuous class segment:
+<code>.a.b:active .c.d</code> is valid, while <code>.a:active.b</code> is invalid.</li>
 <li>Multiple selector expressions may be grouped with commas.</li>
 </ul>
-<p>For example, <code>.div_cls.div_cls2:active .aa.bb.cc</code> selects a descendant with<br/>classes <code>aa</code>, <code>bb</code>, and <code>cc</code> under an active ancestor that has both <code>div_cls</code><br/>and <code>div_cls2</code>.</p>
+<p>For example, <code>.div_cls.div_cls2:active .aa.bb.cc</code> selects a descendant with
+classes <code>aa</code>, <code>bb</code>, and <code>cc</code> under an active ancestor that has both <code>div_cls</code>
+and <code>div_cls2</code>.</p>
 <h3 id="style-transitions">
 			Style transitions
-			<span><a class="mark" href="#style-transitions" id="style-transitions">#</a></span>
-		</h3><p>Each style rule may specify a <code>time</code> value in milliseconds to define the<br/>transition duration when switching into that rule. If <code>time</code> is omitted, the<br/>style change is applied immediately. When a transition is requested, Quark<br/>creates and plays an action internally.</p>
+			<span><a class="mark" href="#style-transitions" aria-label="Link to this section">#</a></span>
+		</h3><p>Each style rule may specify a <code>time</code> value in milliseconds to define the
+transition duration when switching into that rule. If <code>time</code> is omitted, the
+style change is applied immediately. When a transition is requested, Quark
+creates and plays an action internally.</p>
 <h3 id="pseudo-states">
 			Pseudo states
-			<span><a class="mark" href="#pseudo-states" id="pseudo-states">#</a></span>
+			<span><a class="mark" href="#pseudo-states" aria-label="Link to this section">#</a></span>
 		</h3><p>The style system supports three interaction states:</p>
 <ol>
-<li><code>normal</code> applies when the pointer or touch is no longer over or pressing<br/>the view.</li>
+<li><code>normal</code> applies when the pointer or touch is no longer over or pressing
+the view.</li>
 <li><code>hover</code> applies when the pointer enters the view or it gains focus.</li>
 <li><code>active</code> applies while the pointer or touch is pressed.</li>
 </ol>
 <p>Pseudo states are resolved at runtime from view interaction events.</p>
 <h3 id="stylesheet-example">
 			Stylesheet example
-			<span><a class="mark" href="#stylesheet-example" id="stylesheet-example">#</a></span>
+			<span><a class="mark" href="#stylesheet-example" aria-label="Link to this section">#</a></span>
 		</h3><pre><code class="undefinedtsx">import { Jsx, createCss } from &#39;quark&#39;
 
 createCss({
@@ -303,19 +349,28 @@ const view = (
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="../../assets/sh_main.js"></script>
+	<script src="../../assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'docs/guides/VIEW_STYLE.html';
+		var relative = '../../';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

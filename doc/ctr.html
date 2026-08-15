@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'ctr.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,44 +102,17 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-ctr">quark/ctr</a></span>
 <ul>
 <li>
-<span><a href="#class-invalidset">Class: InvalidSet</a></span>
-<ul>
-<li>
-<span><a href="#invalidset">InvalidSet</a></span>
-</li>
-</ul>
-<li>
-<span><a href="#renderqueue">RenderQueue</a></span>
-</li>
-<li>
-<span><a href="#watchingallctrfordebug">WatchingAllCtrForDebug</a></span>
-</li>
-<li>
-<span><a href="#warnrecord">WarnRecord</a></span>
-</li>
-<li>
 <span><a href="#args">Args</a></span>
-<ul>
-<li>
-<span><a href="#args-window">args.window</a></span>
 </li>
-<li>
-<span><a href="#args-owner">args.owner</a></span>
-</li>
-<li>
-<span><a href="#args-children">args.children</a></span>
-</li>
-</ul>
 <li>
 <span><a href="#interface-domconstructor">Interface: DOMConstructor</a></span>
 <ul>
@@ -160,25 +121,13 @@
 </li>
 </ul>
 <li>
-<span><a href="#assertdom-subclass-baseclass-args-">assertDom(subclass,baseclass,...args)</a></span>
+<span><a href="#assertdom-subclass-baseclass-args">assertDom(subclass,baseclass,...args)</a></span>
 </li>
 <li>
-<span><a href="#link-target-name-">link(target,name)</a></span>
+<span><a href="#link-target-name">link(target,name)</a></span>
 </li>
 <li>
-<span><a href="#linkacc-target-name-">linkAcc(target,name)</a></span>
-</li>
-<li>
-<span><a href="#getkey-vdom-autokey-">getkey(vdom,autoKey)</a></span>
-</li>
-<li>
-<span><a href="#unref-dom-owner-">unref(dom,owner)</a></span>
-</li>
-<li>
-<span><a href="#setref-dom-owner-value-">setref(dom,owner,value)</a></span>
-</li>
-<li>
-<span><a href="#_rerender-self-">_rerender(Self)</a></span>
+<span><a href="#linkacc-target-name">linkAcc(target,name)</a></span>
 </li>
 <li>
 <span><a href="#class-virtualdom">Class: VirtualDOM</a></span>
@@ -187,39 +136,10 @@
 <span><a href="#virtualdom">VirtualDOM</a></span>
 </li>
 <li>
-<span><a href="#virtualdom-getprophash-prop-">virtualdom.getPropHash(prop)</a></span>
+<span><a href="#virtualdom-getprophash-prop">virtualdom.getPropHash(prop)</a></span>
 </li>
 <li>
-<span><a href="#virtualdom-diffprops-dom-vdomold-">virtualdom.diffProps(dom,vdomOld)</a></span>
-</li>
-<li>
-<span><a href="#virtualdom-diffpropsfor-dom-vdomold-keys-">virtualdom.diffPropsFor(dom,vdomOld,keys)</a></span>
-</li>
-</ul>
-<li>
-<span><a href="#class-virtualdomtext">Class: VirtualDOMText</a></span>
-<ul>
-<li>
-<span><a href="#virtualdomtext">VirtualDOMText</a></span>
-</li>
-<li>
-<span><a href="#virtualdomtext-value">virtualdomtext.value</a></span>
-</li>
-<li>
-<span><a href="#virtualdomtext-fromstring-value-">virtualdomtext.fromString(value)</a></span>
-</li>
-</ul>
-<li>
-<span><a href="#class-virtualdomcollection">Class: VirtualDOMCollection</a></span>
-<ul>
-<li>
-<span><a href="#virtualdomcollection">VirtualDOMCollection</a></span>
-</li>
-<li>
-<span><a href="#virtualdomcollection-collection">virtualdomcollection.collection</a></span>
-</li>
-<li>
-<span><a href="#virtualdomcollection-diffprops-dom-vdomold-">virtualdomcollection.diffProps(dom,vdomOld)</a></span>
+<span><a href="#virtualdom-diffprops-dom-vdomold">virtualdom.diffProps(dom,vdomOld)</a></span>
 </li>
 </ul>
 <li>
@@ -284,41 +204,41 @@
 <span><a href="#viewcontroller-metaview">viewcontroller.metaView</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-constructor-props-arg-">viewcontroller.constructor(props,arg)</a></span>
+<span><a href="#viewcontroller-constructor-props-arg">viewcontroller.constructor(props,arg)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-setstate-newstate-">viewcontroller.setState(newState)</a></span>
+<span><a href="#viewcontroller-setstate-newstate">viewcontroller.setState(newState)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-update-">viewcontroller.update()</a></span>
+<span><a href="#viewcontroller-update">viewcontroller.update()</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-triggerload-">viewcontroller.triggerLoad()</a></span>
+<span><a href="#viewcontroller-triggerload">viewcontroller.triggerLoad()</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-triggermounted-">viewcontroller.triggerMounted()</a></span>
+<span><a href="#viewcontroller-triggermounted">viewcontroller.triggerMounted()</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-triggerupdate-old-vdom-">viewcontroller.triggerUpdate(old,vdom)</a></span>
+<span><a href="#viewcontroller-triggerupdate-old-vdom">viewcontroller.triggerUpdate(old,vdom)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-triggerunload-">viewcontroller.triggerUnload()</a></span>
+<span><a href="#viewcontroller-triggerunload">viewcontroller.triggerUnload()</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-render-">viewcontroller.render()</a></span>
+<span><a href="#viewcontroller-render">viewcontroller.render()</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-appendto-parent-">viewcontroller.appendTo(parent)</a></span>
+<span><a href="#viewcontroller-appendto-parent">viewcontroller.appendTo(parent)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-afterto-prev-">viewcontroller.afterTo(prev)</a></span>
+<span><a href="#viewcontroller-afterto-prev">viewcontroller.afterTo(prev)</a></span>
 </li>
 <li>
-<span><a href="#viewcontroller-destroy-">viewcontroller.destroy()</a></span>
+<span><a href="#viewcontroller-destroy">viewcontroller.destroy()</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#createelement-type-props-children-">createElement(Type,props,...children)</a></span>
+<span><a href="#createelement-type-props-children">createElement(Type,props,...children)</a></span>
 </li>
 <li>
 <span><a href="#vdom">VDom</a></span>
@@ -335,485 +255,382 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-ctr">
 			quark/ctr
-			<span><a class="mark" href="#quark-ctr" id="quark-ctr">#</a></span>
-		</h1><h2 id="class-invalidset">
-			Class: InvalidSet
-			<span><a class="mark" href="#class-invalidset" id="class-invalidset">#</a></span>
-		</h2><h3 id="invalidset">
-			InvalidSet
-			<span><a class="mark" href="#invalidset" id="invalidset">#</a></span>
-		</h3><p>A special Set implementation that ignores all operations.<br/>Used as a no-op placeholder when file-watching is disabled (non-dev mode).</p>
-<ul>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@extends</code> <code>Set</code>&lt;<code>T</code>&gt;</li>
-</ul>
-<h2 id="renderqueue">
-			RenderQueue
-			<span><a class="mark" href="#renderqueue" id="renderqueue">#</a></span>
-		</h2><p>Render Queue:<br/>Holds ViewControllers that are scheduled for re-render.<br/>Key: controller, Value: {missError} whether to suppress re-throwing errors.</p>
-<ul>
-<li><code>@const</code> <code>RenderQueue</code>: </li>
-</ul>
-<h2 id="watchingallctrfordebug">
-			WatchingAllCtrForDebug
-			<span><a class="mark" href="#watchingallctrfordebug" id="watchingallctrfordebug">#</a></span>
-		</h2><p>Debug-only: tracks all controllers with active file-watch subscriptions.</p>
-<ul>
-<li><code>@const</code> <code>WatchingAllCtrForDebug</code>: </li>
-</ul>
-<h2 id="warnrecord">
-			WarnRecord
-			<span><a class="mark" href="#warnrecord" id="warnrecord">#</a></span>
-		</h2><p>Warning system: prevents duplicate warning logs.</p>
-<ul>
-<li><code>@const</code> <code>WarnRecord</code>: </li>
-</ul>
-<h2 id="args">
+			<span><a class="mark" href="#quark-ctr" aria-label="Link to this section">#</a></span>
+		</h1><h2 id="args">
 			Args
-			<span><a class="mark" href="#args" id="args">#</a></span>
+			<span><a class="mark" href="#args" aria-label="Link to this section">#</a></span>
 		</h2><p>Arguments used to construct a VirtualDOM instance.</p>
-<ul>
-<li><code>@type</code> <code>Args</code> = </li>
-</ul>
-<h3 id="args-window">
-			args.window
-			<span><a class="mark" href="#args-window" id="args-window">#</a></span>
-		</h3><ul>
-<li><code>window</code>: <a href="window.html#window"><code>Window</code></a> bound window instance</li>
-</ul>
-<h3 id="args-owner">
-			args.owner
-			<span><a class="mark" href="#args-owner" id="args-owner">#</a></span>
-		</h3><ul>
-<li><code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> parent controller</li>
-</ul>
-<h3 id="args-children">
-			args.children
-			<span><a class="mark" href="#args-children" id="args-children">#</a></span>
-		</h3><ul>
-<li><code>children</code>:  child virtual nodes</li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Args =
+  {
+    window: <a class="api-type" href="window.html#window">Window</a>; // bound window instance
+    owner: <a class="api-type" href="#class-viewcontroller">ViewController</a>; // parent controller
+    children: (<a class="api-type" href="#class-virtualdom">VirtualDOM</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>)[]; // child virtual nodes
+  }</code></pre>
+
+
 <h2 id="interface-domconstructor">
 			Interface: DOMConstructor
-			<span><a class="mark" href="#interface-domconstructor" id="interface-domconstructor">#</a></span>
+			<span><a class="mark" href="#interface-domconstructor" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="domconstructor">
 			DOMConstructor
-			<span><a class="mark" href="#domconstructor" id="domconstructor">#</a></span>
+			<span><a class="mark" href="#domconstructor" aria-label="Link to this section">#</a></span>
 		</h3><p>Constructor type for DOM elements.</p>
-<ul>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
-<h2 id="assertdom-subclass-baseclass-args-">
+<p><strong>Type parameters:</strong> <code>T</code></p>
+<h2 id="assertdom-subclass-baseclass-args">
 			assertDom(subclass,baseclass,...args)
-			<span><a class="mark" href="#assertdom-subclass-baseclass-args-" id="assertdom-subclass-baseclass-args-">#</a></span>
+			<span><a class="mark" href="#assertdom-subclass-baseclass-args" aria-label="Link to this section">#</a></span>
 		</h2><p>Assert that a VirtualDOM belongs to a specific DOM subclass.</p>
-<ul>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@param</code> <code>subclass</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<code>T</code>&gt; </li>
-<li><code>@param</code> <code>baseclass</code>: <a href="#interface-domconstructor"><code>DOMConstructor</code></a>&lt;<code>T</code>&gt; </li>
-<li><code>@param</code> <code>args</code>: <code>any`</code>[]` </li>
-</ul>
-<h2 id="link-target-name-">
+<pre class="api-signature sh_none"><code>assertDom(subclass: <a class="api-type" href="#class-virtualdom">VirtualDOM</a>&lt;T&gt;, baseclass: <a class="api-type" href="#interface-domconstructor">DOMConstructor</a>&lt;T&gt;, args: any[])</code></pre>
+
+
+<p><strong>Type parameters:</strong> <code>T</code></p>
+<h2 id="link-target-name">
 			link(target,name)
-			<span><a class="mark" href="#link-target-name-" id="link-target-name-">#</a></span>
+			<span><a class="mark" href="#link-target-name" aria-label="Link to this section">#</a></span>
 		</h2><p>Decorator to link an external prop to a class field.</p>
 <ul>
 <li>Copies the value from <code>props</code> into the class property when initializing/updating.</li>
-<li><strong>One-way binding only:</strong> changes to props propagate into the class field,<br/>but class field changes do not propagate back to props.</li>
-<li>Useful for simplifying access: instead of <code>this.props.foo</code>, you can use <code>this.foo</code>.</li>
-<li><code>@param</code> <code>target</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
+<li><strong>One-way binding only:</strong> changes to props propagate into the class field,
+but class field changes do not propagate back to props.</li>
+<li>Useful for simplifying access: instead of <code>this.props.foo</code>, you can use <code>this.foo</code>.<pre class="api-signature sh_none"><code>link(target: <a class="api-type" href="#class-viewcontroller">ViewController</a>, name: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+</li>
 </ul>
-<h2 id="linkacc-target-name-">
+<h2 id="linkacc-target-name">
 			linkAcc(target,name)
-			<span><a class="mark" href="#linkacc-target-name-" id="linkacc-target-name-">#</a></span>
+			<span><a class="mark" href="#linkacc-target-name" aria-label="Link to this section">#</a></span>
 		</h2><p>Decorator to link an external prop with getter/setter accessors.</p>
 <ul>
 <li>Also a <strong>one-way binding</strong> from props to the class field.</li>
-<li>Provides an accessor so that if the field is reassigned inside the class,<br/>it triggers <code>update()</code> automatically (but does not affect props).</li>
-<li><code>@param</code> <code>target</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="getkey-vdom-autokey-">
-			getkey(vdom,autoKey)
-			<span><a class="mark" href="#getkey-vdom-autokey-" id="getkey-vdom-autokey-">#</a></span>
-		</h2><p>Get the VirtualDOM key. Falls back to auto-index if not defined.<br/>Warns if no key is provided in a DOM collection.</p>
-<ul>
-<li><code>@param</code> <code>vdom</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
-<li><code>@param</code> <code>autoKey</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a>|<a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h2 id="unref-dom-owner-">
-			unref(dom,owner)
-			<span><a class="mark" href="#unref-dom-owner-" id="unref-dom-owner-">#</a></span>
-		</h2><p>Remove a ref reference from a controller.</p>
-<ul>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@param</code> <code>dom</code>: <a href="view.html#dom"><code>DOM</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a>&lt;<code>T</code>&gt; </li>
-</ul>
-<h2 id="setref-dom-owner-value-">
-			setref(dom,owner,value)
-			<span><a class="mark" href="#setref-dom-owner-value-" id="setref-dom-owner-value-">#</a></span>
-		</h2><p>Set or update a ref reference.</p>
-<ul>
-<li><code>@param</code> <code>dom</code>: <a href="view.html#view"><code>View</code></a>|<a href="#class-viewcontroller"><code>ViewController</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
-<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="_rerender-self-">
-			_rerender(Self)
-			<span><a class="mark" href="#_rerender-self-" id="_rerender-self-">#</a></span>
-		</h2><p>Performs actual re-rendering of a ViewController.</p>
-<ul>
-<li>Runs diff algorithm between old and new VirtualDOM.</li>
-<li>Triggers lifecycle hooks.</li>
-<li>Updates references.</li>
-<li><code>@param</code> <code>Self</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
+<li>Provides an accessor so that if the field is reassigned inside the class,
+it triggers <code>update()</code> automatically (but does not affect props).<pre class="api-signature sh_none"><code>linkAcc(target: <a class="api-type" href="#class-viewcontroller">ViewController</a>, name: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+</li>
 </ul>
 <h2 id="class-virtualdom">
 			Class: VirtualDOM
-			<span><a class="mark" href="#class-virtualdom" id="class-virtualdom">#</a></span>
+			<span><a class="mark" href="#class-virtualdom" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="virtualdom">
 			VirtualDOM
-			<span><a class="mark" href="#virtualdom" id="virtualdom">#</a></span>
-		</h3><p>Represents a Virtual DOM node.<br/>Can be a View, ViewController, or other custom DOM elements.</p>
-<ul>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
-<h3 id="virtualdom-getprophash-prop-">
+			<span><a class="mark" href="#virtualdom" aria-label="Link to this section">#</a></span>
+		</h3><p>Represents a Virtual DOM node.
+Can be a View, ViewController, or other custom DOM elements.</p>
+<p><strong>Type parameters:</strong> <code>T</code></p>
+<h3 id="virtualdom-getprophash-prop">
 			virtualdom.getPropHash(prop)
-			<span><a class="mark" href="#virtualdom-getprophash-prop-" id="virtualdom-getprophash-prop-">#</a></span>
+			<span><a class="mark" href="#virtualdom-getprophash-prop" aria-label="Link to this section">#</a></span>
 		</h3><p>Get hash for a specific property.</p>
+<pre class="api-signature sh_none"><code>getPropHash(prop: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#number">number</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>prop</code>: <a href="$ext.html#string"><code>string</code></a> Property name</li>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a> hash value</li>
+<li><code>prop</code> — Property name</li>
 </ul>
-<h3 id="virtualdom-diffprops-dom-vdomold-">
+<p><strong>Returns:</strong> hash value</p>
+<h3 id="virtualdom-diffprops-dom-vdomold">
 			virtualdom.diffProps(dom,vdomOld)
-			<span><a class="mark" href="#virtualdom-diffprops-dom-vdomold-" id="virtualdom-diffprops-dom-vdomold-">#</a></span>
+			<span><a class="mark" href="#virtualdom-diffprops-dom-vdomold" aria-label="Link to this section">#</a></span>
 		</h3><p>Diff props against old VirtualDOM and update the real DOM as needed.</p>
+<pre class="api-signature sh_none"><code>diffProps(dom: T, vdomOld: <a class="api-type" href="#class-virtualdom">VirtualDOM</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>dom</code>: <code>T</code> Real DOM instance</li>
-<li><code>@param</code> <code>vdomOld</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> Previous VirtualDOM</li>
-</ul>
-<h3 id="virtualdom-diffpropsfor-dom-vdomold-keys-">
-			virtualdom.diffPropsFor(dom,vdomOld,keys)
-			<span><a class="mark" href="#virtualdom-diffpropsfor-dom-vdomold-keys-" id="virtualdom-diffpropsfor-dom-vdomold-keys-">#</a></span>
-		</h3><p>Diff a subset of props.</p>
-<ul>
-<li><code>@param</code> <code>dom</code>: <code>T</code> Real DOM instance</li>
-<li><code>@param</code> <code>vdomOld</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> Previous VirtualDOM</li>
-<li><p><code>@param</code> <code>keys</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code> Array of prop names to diff</p><br/></li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
+<li><code>dom</code> — Real DOM instance</li>
+<li><p><code>vdomOld</code> — Previous VirtualDOM</p>
+</li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p>
+</li>
 <li><code>@param</code> <code>vdomOld</code>:  Previous VirtualDOM</li>
-<li><p><code>@param</code> <code>domOld</code>:  Previous real DOM</p><br/></li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
+<li><p><code>@param</code> <code>domOld</code>:  Previous real DOM</p>
+</li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p>
+</li>
+<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p>
+</li>
 <li><code>@param</code> <code>opts</code>:  Optional render options</li>
-</ul>
-<h2 id="class-virtualdomtext">
-			Class: VirtualDOMText
-			<span><a class="mark" href="#class-virtualdomtext" id="class-virtualdomtext">#</a></span>
-		</h2><h3 id="virtualdomtext">
-			VirtualDOMText
-			<span><a class="mark" href="#virtualdomtext" id="virtualdomtext">#</a></span>
-		</h3><p>Lightweight VirtualDOM representing text nodes.</p>
-<ul>
-<li><code>@extends</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<a href="view.html#label"><code>Label</code></a>&gt;</li>
-</ul>
-<h3 id="virtualdomtext-value">
-			virtualdomtext.value
-			<span><a class="mark" href="#virtualdomtext-value" id="virtualdomtext-value">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> Text content</li>
-</ul>
-<h3 id="virtualdomtext-fromstring-value-">
-			virtualdomtext.fromString(value)
-			<span><a class="mark" href="#virtualdomtext-fromstring-value-" id="virtualdomtext-fromstring-value-">#</a></span>
-		</h3><p>Creates a VirtualDOMText from a string.</p>
-<ul>
-<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> Text string</li>
-<li><code>@return</code> <a href="#class-virtualdomtext"><code>VirtualDOMText</code></a> </li>
-</ul>
-<h2 id="class-virtualdomcollection">
-			Class: VirtualDOMCollection
-			<span><a class="mark" href="#class-virtualdomcollection" id="class-virtualdomcollection">#</a></span>
-		</h2><h3 id="virtualdomcollection">
-			VirtualDOMCollection
-			<span><a class="mark" href="#virtualdomcollection" id="virtualdomcollection">#</a></span>
-		</h3><p>Represents a collection of VirtualDOM nodes.<br/>Handles keyed diffing and ensures no duplicate keys.</p>
-<ul>
-<li><code>@extends</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<a href="#class-domcollection"><code>DOMCollection</code></a>&gt;</li>
-</ul>
-<h3 id="virtualdomcollection-collection">
-			virtualdomcollection.collection
-			<span><a class="mark" href="#virtualdomcollection-collection" id="virtualdomcollection-collection">#</a></span>
-		</h3><ul>
-<li><code>collection</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a><code>[]</code> Array of child VirtualDOMs</li>
-</ul>
-<h3 id="virtualdomcollection-diffprops-dom-vdomold-">
-			virtualdomcollection.diffProps(dom,vdomOld)
-			<span><a class="mark" href="#virtualdomcollection-diffprops-dom-vdomold-" id="virtualdomcollection-diffprops-dom-vdomold-">#</a></span>
-		</h3><p>Diff and apply collection props to DOMCollection.</p>
-<ul>
-<li><code>@param</code> <code>dom</code>: <a href="#class-domcollection"><code>DOMCollection</code></a> DOMCollection instance</li>
-<li><p><code>@param</code> <code>vdomOld</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> Previous VirtualDOM</p><br/></li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p><br/></li>
 </ul>
 <h2 id="class-domcollection">
 			Class: DOMCollection
-			<span><a class="mark" href="#class-domcollection" id="class-domcollection">#</a></span>
+			<span><a class="mark" href="#class-domcollection" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="domcollection">
 			DOMCollection
-			<span><a class="mark" href="#domcollection" id="domcollection">#</a></span>
-		</h3><p>Collection of real DOM elements corresponding to VirtualDOMCollection.</p>
-<ul>
-<li><code>@implements</code> <a href="view.html#dom"><code>DOM</code></a></li>
-</ul>
+			<span><a class="mark" href="#domcollection" aria-label="Link to this section">#</a></span>
+		</h3><p>Collection of real DOM elements produced from a virtual DOM collection.</p>
+<p><strong>Implements:</strong> <a href="view.html#dom"><code>DOM</code></a></p>
 <h3 id="domcollection-collection">
 			domcollection.collection
-			<span><a class="mark" href="#domcollection-collection" id="domcollection-collection">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>collection</code>: <a href="view.html#dom"><code>DOM</code></a><code>[]</code> Child DOM elements</li>
-</ul>
+			<span><a class="mark" href="#domcollection-collection" aria-label="Link to this section">#</a></span>
+		</h3><p>Child DOM elements</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> collection: <a class="api-type" href="view.html#dom">DOM</a>[]</code></pre>
+
+
 <h3 id="domcollection-keys">
 			domcollection.keys
-			<span><a class="mark" href="#domcollection-keys" id="domcollection-keys">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>keys</code>: <code>Map</code>&lt;<a href="$ext.html#string"><code>string</code></a>|<a href="$ext.html#number"><code>number</code></a>,<code>[DOM,VDom]</code>&gt; Keyed mapping</li>
-</ul>
+			<span><a class="mark" href="#domcollection-keys" aria-label="Link to this section">#</a></span>
+		</h3><p>Keyed mapping</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> keys: Map&lt;<a class="api-type" href="$ext.html#string">string</a> | <a class="api-type" href="$ext.html#number">number</a>,[DOM,VDom]&gt;</code></pre>
+
+
 <h3 id="domcollection-ref">
 			domcollection.ref
-			<span><a class="mark" href="#domcollection-ref" id="domcollection-ref">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>ref</code>: <a href="$ext.html#string"><code>string</code></a> Ref name in parent</li>
-</ul>
+			<span><a class="mark" href="#domcollection-ref" aria-label="Link to this section">#</a></span>
+		</h3><p>Ref name in parent</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ref: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="domcollection-owner">
 			domcollection.owner
-			<span><a class="mark" href="#domcollection-owner" id="domcollection-owner">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> Owning ViewController</li>
-</ul>
+			<span><a class="mark" href="#domcollection-owner" aria-label="Link to this section">#</a></span>
+		</h3><p>Owning ViewController</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> owner: <a class="api-type" href="#class-viewcontroller">ViewController</a></code></pre>
+
+
 <h2 id="class-viewcontroller">
 			Class: ViewController
-			<span><a class="mark" href="#class-viewcontroller" id="class-viewcontroller">#</a></span>
+			<span><a class="mark" href="#class-viewcontroller" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="viewcontroller">
 			ViewController
-			<span><a class="mark" href="#viewcontroller" id="viewcontroller">#</a></span>
-		</h3><p>UI view controller component.<br/>Base class for all ViewControllers.<br/>Handles state, props, children, refs, lifecycle hooks, and rendering.</p>
-<ul>
-<li><code>@implements</code> <a href="view.html#dom"><code>DOM</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>,<code>S</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#viewcontroller" aria-label="Link to this section">#</a></span>
+		</h3><p>UI view controller component.
+Base class for all ViewControllers.
+Handles state, props, children, refs, lifecycle hooks, and rendering.</p>
+<p><strong>Implements:</strong> <a href="view.html#dom"><code>DOM</code></a>
+<strong>Type parameters:</strong> <code>P</code>, <code>S</code></p>
 <h3 id="viewcontroller-window">
 			viewcontroller.window
-			<span><a class="mark" href="#viewcontroller-window" id="viewcontroller-window">#</a></span>
+			<span><a class="mark" href="#viewcontroller-window" aria-label="Link to this section">#</a></span>
 		</h3><p>Associated Window <a href="window.html#window"><code>Window</code></a> object ref </p>
-<ul>
-<li><code>@get</code> <code>window</code>: <a href="window.html#window"><code>Window</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> window: <a class="api-type" href="window.html#window">Window</a></code></pre>
+
+
 <h3 id="viewcontroller-owner">
 			viewcontroller.owner
-			<span><a class="mark" href="#viewcontroller-owner" id="viewcontroller-owner">#</a></span>
+			<span><a class="mark" href="#viewcontroller-owner" aria-label="Link to this section">#</a></span>
 		</h3><p>Parent controller which the current controller belongs </p>
-<ul>
-<li><code>@get</code> <code>owner</code>: <a href="#class-viewcontroller"><code>ViewController</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> owner: <a class="api-type" href="#class-viewcontroller">ViewController</a></code></pre>
+
+
 <h3 id="viewcontroller-children">
 			viewcontroller.children
-			<span><a class="mark" href="#viewcontroller-children" id="viewcontroller-children">#</a></span>
+			<span><a class="mark" href="#viewcontroller-children" aria-label="Link to this section">#</a></span>
 		</h3><p>External children vdom </p>
-<ul>
-<li><code>@get</code> <code>children</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> children: (<a class="api-type" href="#class-virtualdom">VirtualDOM</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>)[]</code></pre>
+
+
 <h3 id="viewcontroller-props">
 			viewcontroller.props
-			<span><a class="mark" href="#viewcontroller-props" id="viewcontroller-props">#</a></span>
+			<span><a class="mark" href="#viewcontroller-props" aria-label="Link to this section">#</a></span>
 		</h3><p>the ViewController external incoming attributes </p>
-<ul>
-<li><code>@get</code> <code>props</code>: <code>Readonly</code>&lt;<code>P</code>&gt; </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> props: Readonly&lt;P&gt;</code></pre>
+
+
 <h3 id="viewcontroller-state">
 			viewcontroller.state
-			<span><a class="mark" href="#viewcontroller-state" id="viewcontroller-state">#</a></span>
+			<span><a class="mark" href="#viewcontroller-state" aria-label="Link to this section">#</a></span>
 		</h3><p>View Controller States </p>
-<ul>
-<li><code>@get</code> <code>state</code>: <code>Readonly</code>&lt;<code>S</code>&gt; </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> state: Readonly&lt;S&gt;</code></pre>
+
+
 <h3 id="viewcontroller-refs">
 			viewcontroller.refs
-			<span><a class="mark" href="#viewcontroller-refs" id="viewcontroller-refs">#</a></span>
+			<span><a class="mark" href="#viewcontroller-refs" aria-label="Link to this section">#</a></span>
 		</h3><p>Subordinate objects referenced by the <code>ref</code> name </p>
-<ul>
-<li><code>@get</code> <code>refs</code>: <code>Readonly</code>&lt;<code>Dict</code>&lt;<a href="#class-viewcontroller"><code>ViewController</code></a>|<a href="view.html#view"><code>View</code></a>&gt;&gt; </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> refs: Readonly&lt;Dict&lt;<a class="api-type" href="#class-viewcontroller">ViewController</a> | <a class="api-type" href="view.html#view">View</a>&gt;&gt;</code></pre>
+
+
 <h3 id="viewcontroller-ref">
 			viewcontroller.ref
-			<span><a class="mark" href="#viewcontroller-ref" id="viewcontroller-ref">#</a></span>
+			<span><a class="mark" href="#viewcontroller-ref" aria-label="Link to this section">#</a></span>
 		</h3><p>The Ref-Name in the <code>owner</code> controller </p>
-<ul>
-<li><code>@get</code> <code>ref</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ref: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="viewcontroller-dom">
 			viewcontroller.dom
-			<span><a class="mark" href="#viewcontroller-dom" id="viewcontroller-dom">#</a></span>
+			<span><a class="mark" href="#viewcontroller-dom" aria-label="Link to this section">#</a></span>
 		</h3><p>The rendered DOM object under the current ViewController </p>
-<ul>
-<li><code>@get</code> <code>dom</code>: <a href="view.html#dom"><code>DOM</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> dom: <a class="api-type" href="view.html#dom">DOM</a></code></pre>
+
+
 <h3 id="viewcontroller-isloaded">
 			viewcontroller.isLoaded
-			<span><a class="mark" href="#viewcontroller-isloaded" id="viewcontroller-isloaded">#</a></span>
+			<span><a class="mark" href="#viewcontroller-isloaded" aria-label="Link to this section">#</a></span>
 		</h3><p>After triggering Load, it will be set to <code>true</code> </p>
-<ul>
-<li><code>@get</code> <code>isLoaded</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isLoaded: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="viewcontroller-ismounted">
 			viewcontroller.isMounted
-			<span><a class="mark" href="#viewcontroller-ismounted" id="viewcontroller-ismounted">#</a></span>
+			<span><a class="mark" href="#viewcontroller-ismounted" aria-label="Link to this section">#</a></span>
 		</h3><p>It will be set to <code>true</code> before triggering Mounted </p>
-<ul>
-<li><code>@get</code> <code>isMounted</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isMounted: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="viewcontroller-isdestroyd">
 			viewcontroller.isDestroyd
-			<span><a class="mark" href="#viewcontroller-isdestroyd" id="viewcontroller-isdestroyd">#</a></span>
+			<span><a class="mark" href="#viewcontroller-isdestroyd" aria-label="Link to this section">#</a></span>
 		</h3><p>It will be set to <code>true</code> before triggering Destroy </p>
-<ul>
-<li><code>@get</code> <code>isDestroyd</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isDestroyd: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="viewcontroller-metaview">
 			viewcontroller.metaView
-			<span><a class="mark" href="#viewcontroller-metaview" id="viewcontroller-metaview">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>metaView</code>: <a href="view.html#view"><code>View</code></a> </li>
-</ul>
-<h3 id="viewcontroller-constructor-props-arg-">
+			<span><a class="mark" href="#viewcontroller-metaview" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> metaView: <a class="api-type" href="view.html#view">View</a></code></pre>
+
+
+<h3 id="viewcontroller-constructor-props-arg">
 			viewcontroller.constructor(props,arg)
-			<span><a class="mark" href="#viewcontroller-constructor-props-arg-" id="viewcontroller-constructor-props-arg-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-constructor-props-arg" aria-label="Link to this section">#</a></span>
 		</h3><p>Constructs a ViewController.</p>
+<pre class="api-signature sh_none"><code>constructor(props: <a class="api-type" href="$ext.html#object">object</a>, arg: <a class="api-type" href="#args">Args</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>props</code>: <a href="$ext.html#object"><code>object</code></a> External props</li>
-<li><code>@param</code> <code>arg</code>: <a href="#args"><code>Args</code></a> Additional args (window, owner, children)</li>
+<li><code>props</code> — External props</li>
+<li><code>arg</code> — Additional args (window, owner, children)</li>
 </ul>
-<h3 id="viewcontroller-setstate-newstate-">
+<h3 id="viewcontroller-setstate-newstate">
 			viewcontroller.setState(newState)
-			<span><a class="mark" href="#viewcontroller-setstate-newstate-" id="viewcontroller-setstate-newstate-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-setstate-newstate" aria-label="Link to this section">#</a></span>
 		</h3><p>Update the current ViewController state and re-render if the state does change</p>
+<pre class="api-signature sh_none"><code>setState(newState: any): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>newState</code>:  Partial state to update</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;  resolves after re-render completes</li>
+<li><code>newState</code> — Partial state to update</li>
 </ul>
-<h3 id="viewcontroller-update-">
+<p><strong>Returns:</strong>  resolves after re-render completes</p>
+<h3 id="viewcontroller-update">
 			viewcontroller.update()
-			<span><a class="mark" href="#viewcontroller-update-" id="viewcontroller-update-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-update" aria-label="Link to this section">#</a></span>
 		</h3><p>Force re-rendering of the ViewController</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;  resolves after re-render completes</li>
-</ul>
-<h3 id="viewcontroller-triggerload-">
+<pre class="api-signature sh_none"><code>update(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<p><strong>Returns:</strong>  resolves after re-render completes</p>
+<h3 id="viewcontroller-triggerload">
 			viewcontroller.triggerLoad()
-			<span><a class="mark" href="#viewcontroller-triggerload-" id="viewcontroller-triggerload-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-triggerload" aria-label="Link to this section">#</a></span>
 		</h3><p>Triggered before the first render call</p>
-<ul>
-<li><code>@return</code> <code>any</code> </li>
-</ul>
-<h3 id="viewcontroller-triggermounted-">
+<pre class="api-signature sh_none"><code>triggerLoad(): any</code></pre>
+
+
+
+<h3 id="viewcontroller-triggermounted">
 			viewcontroller.triggerMounted()
-			<span><a class="mark" href="#viewcontroller-triggermounted-" id="viewcontroller-triggermounted-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-triggermounted" aria-label="Link to this section">#</a></span>
 		</h3><p>Triggered after the first render call completed</p>
-<ul>
-<li><code>@return</code> <code>any</code> </li>
-</ul>
-<h3 id="viewcontroller-triggerupdate-old-vdom-">
+<pre class="api-signature sh_none"><code>triggerMounted(): any</code></pre>
+
+
+
+<h3 id="viewcontroller-triggerupdate-old-vdom">
 			viewcontroller.triggerUpdate(old,vdom)
-			<span><a class="mark" href="#viewcontroller-triggerupdate-old-vdom-" id="viewcontroller-triggerupdate-old-vdom-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-triggerupdate-old-vdom" aria-label="Link to this section">#</a></span>
 		</h3><p>Triggered when the DOM content is updated</p>
-<ul>
-<li><code>@param</code> <code>old</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
-<li><code>@param</code> <code>vdom</code>: <a href="#class-virtualdom"><code>VirtualDOM</code></a> </li>
-<li><code>@return</code> <code>any</code> </li>
-</ul>
-<h3 id="viewcontroller-triggerunload-">
+<pre class="api-signature sh_none"><code>triggerUpdate(old: <a class="api-type" href="#class-virtualdom">VirtualDOM</a>, vdom: <a class="api-type" href="#class-virtualdom">VirtualDOM</a>): any</code></pre>
+
+
+
+<h3 id="viewcontroller-triggerunload">
 			viewcontroller.triggerUnload()
-			<span><a class="mark" href="#viewcontroller-triggerunload-" id="viewcontroller-triggerunload-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-triggerunload" aria-label="Link to this section">#</a></span>
 		</h3><p>Triggered when after calling destroy()</p>
-<ul>
-<li><code>@return</code> <code>any</code> </li>
-</ul>
-<h3 id="viewcontroller-render-">
+<pre class="api-signature sh_none"><code>triggerUnload(): any</code></pre>
+
+
+
+<h3 id="viewcontroller-render">
 			viewcontroller.render()
-			<span><a class="mark" href="#viewcontroller-render-" id="viewcontroller-render-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-render" aria-label="Link to this section">#</a></span>
 		</h3><p>When rendering occurs, call to return the <code>vdom</code> object that needs to be rendered</p>
-<ul>
-<li><code>@return</code> <a href="#renderresult"><code>RenderResult</code></a> </li>
-</ul>
-<h3 id="viewcontroller-appendto-parent-">
+<pre class="api-signature sh_none"><code>render(): <a class="api-type" href="#renderresult">RenderResult</a></code></pre>
+
+
+
+<h3 id="viewcontroller-appendto-parent">
 			viewcontroller.appendTo(parent)
-			<span><a class="mark" href="#viewcontroller-appendto-parent-" id="viewcontroller-appendto-parent-">#</a></span>
-		</h3><ul>
+			<span><a class="mark" href="#viewcontroller-appendto-parent" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>appendTo(parent: <a class="api-type" href="view.html#view">View</a>): <a class="api-type" href="view.html#view">View</a></code></pre>
+
+
+<ul>
 <li><code>@override</code>  </li>
-<li><code>@param</code> <code>parent</code>: <a href="view.html#view"><code>View</code></a> </li>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a> </li>
 </ul>
-<h3 id="viewcontroller-afterto-prev-">
+<h3 id="viewcontroller-afterto-prev">
 			viewcontroller.afterTo(prev)
-			<span><a class="mark" href="#viewcontroller-afterto-prev-" id="viewcontroller-afterto-prev-">#</a></span>
+			<span><a class="mark" href="#viewcontroller-afterto-prev" aria-label="Link to this section">#</a></span>
 		</h3><p>Append the rendered DOM to a parent view.</p>
+<pre class="api-signature sh_none"><code>afterTo(prev: <a class="api-type" href="view.html#view">View</a>): <a class="api-type" href="view.html#view">View</a></code></pre>
+
+
 <ul>
 <li><code>@override</code>  </li>
-<li><code>@param</code> <code>prev</code>: <a href="view.html#view"><code>View</code></a> </li>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a> </li>
 </ul>
-<h3 id="viewcontroller-destroy-">
+<h3 id="viewcontroller-destroy">
 			viewcontroller.destroy()
-			<span><a class="mark" href="#viewcontroller-destroy-" id="viewcontroller-destroy-">#</a></span>
-		</h3><p>Insert the rendered DOM after a previous view.<br/>Note: Do not proactively call this method</p>
+			<span><a class="mark" href="#viewcontroller-destroy" aria-label="Link to this section">#</a></span>
+		</h3><p>Insert the rendered DOM after a previous view.
+Note: Do not proactively call this method</p>
+<pre class="api-signature sh_none"><code>destroy()</code></pre>
+
+
 <ul>
 <li><code>@override</code>  </li>
 </ul>
-<h2 id="createelement-type-props-children-">
+<h2 id="createelement-type-props-children">
 			createElement(Type,props,...children)
-			<span><a class="mark" href="#createelement-type-props-children-" id="createelement-type-props-children-">#</a></span>
+			<span><a class="mark" href="#createelement-type-props-children" aria-label="Link to this section">#</a></span>
 		</h2><p>Creates a virtual DOM element from JSX syntax</p>
-<ul>
-<li><code>@return</code> <a href="#class-virtualdom"><code>VirtualDOM</code></a>  A VirtualDOM instance</li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-<li><code>@param</code> <code>Type</code>: <a href="#interface-domconstructor"><code>DOMConstructor</code></a>&lt;<code>T</code>&gt;|<code>JSX.IntrinsicElementsName</code> </li>
-<li><code>@param</code> <code>props</code>: <code>Dict</code>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-<li><code>@param</code> <code>children</code>: <code>any`</code>[]` </li>
-</ul>
+<pre class="api-signature sh_none"><code>createElement(Type: <a class="api-type" href="#interface-domconstructor">DOMConstructor</a>&lt;T&gt; | JSX.IntrinsicElementsName, props: Dict | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, children: any[]): <a class="api-type" href="#class-virtualdom">VirtualDOM</a></code></pre>
+
+
+
+<p><strong>Returns:</strong>  A VirtualDOM instance
+<strong>Type parameters:</strong> <code>T</code></p>
 <h2 id="vdom">
 			VDom
-			<span><a class="mark" href="#vdom" id="vdom">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>VDom</code> = <a href="#class-virtualdom"><code>VirtualDOM</code></a>&lt;<code>T</code>&gt;</li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#vdom" aria-label="Link to this section">#</a></span>
+		</h2><p>Typed shorthand for a VirtualDOM with a specific DOM implementation. </p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> VDom&lt;T extends DOM = DOM&gt; = <a class="api-type" href="#class-virtualdom">VirtualDOM</a>&lt;T&gt;</code></pre>
+
+
 <h2 id="renderdata">
 			RenderData
-			<span><a class="mark" href="#renderdata" id="renderdata">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>RenderData</code> = <a href="#class-virtualdom"><code>VirtualDOM</code></a>|<a href="$ext.html#string"><code>string</code></a></li>
-</ul>
+			<span><a class="mark" href="#renderdata" aria-label="Link to this section">#</a></span>
+		</h2><p>Data that can produce visible output in a virtual DOM render result. </p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> RenderData = <a class="api-type" href="#class-virtualdom">VirtualDOM</a> | <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h2 id="rendernode">
 			RenderNode
-			<span><a class="mark" href="#rendernode" id="rendernode">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>RenderNode</code> = <a href="#renderdata"><code>RenderData</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a></li>
-</ul>
+			<span><a class="mark" href="#rendernode" aria-label="Link to this section">#</a></span>
+		</h2><p>A renderable value or an empty value that produces no output. </p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> RenderNode = <a class="api-type" href="#renderdata">RenderData</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
 <h2 id="renderresult">
 			RenderResult
-			<span><a class="mark" href="#renderresult" id="renderresult">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>RenderResult</code> = <a href="#rendernode"><code>RenderNode</code></a><code>[]</code>|<a href="#rendernode"><code>RenderNode</code></a></li>
-</ul>
+			<span><a class="mark" href="#renderresult" aria-label="Link to this section">#</a></span>
+		</h2><p>A single render node or a list of sibling render nodes. </p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> RenderResult = <a class="api-type" href="#rendernode">RenderNode</a>[] | <a class="api-type" href="#rendernode">RenderNode</a></code></pre>
+
+
 
 			</div>
 
@@ -821,19 +638,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'ctr.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

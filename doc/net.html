@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'net.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-net">quark/net</a></span>
@@ -157,31 +144,31 @@
 <span><a href="#nativesocket-ispause">nativesocket.isPause</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-setkeepalive-keep_alive-keep_idle-">nativesocket.setKeepAlive(keep_alive,keep_idle?)</a></span>
+<span><a href="#nativesocket-setkeepalive-keep_alive-keep_idle">nativesocket.setKeepAlive(keep_alive,keep_idle?)</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-setnodelay-nodelay-">nativesocket.setNoDelay(noDelay?)</a></span>
+<span><a href="#nativesocket-setnodelay-nodelay">nativesocket.setNoDelay(noDelay?)</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-settimeout-time-">nativesocket.setTimeout(time)</a></span>
+<span><a href="#nativesocket-settimeout-time">nativesocket.setTimeout(time)</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-connect-">nativesocket.connect()</a></span>
+<span><a href="#nativesocket-connect">nativesocket.connect()</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-close-">nativesocket.close()</a></span>
+<span><a href="#nativesocket-close">nativesocket.close()</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-pause-">nativesocket.pause()</a></span>
+<span><a href="#nativesocket-pause">nativesocket.pause()</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-resume-">nativesocket.resume()</a></span>
+<span><a href="#nativesocket-resume">nativesocket.resume()</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-disablesslverify-disable-">nativesocket.disableSslVerify(disable?)</a></span>
+<span><a href="#nativesocket-disablesslverify-disable">nativesocket.disableSslVerify(disable?)</a></span>
 </li>
 <li>
-<span><a href="#nativesocket-constructor-hostname-port-isssl-">nativesocket.constructor(hostname,port,isSSL?)</a></span>
+<span><a href="#nativesocket-constructor-hostname-port-isssl">nativesocket.constructor(hostname,port,isSSL?)</a></span>
 </li>
 </ul>
 <li>
@@ -206,10 +193,7 @@
 <span><a href="#socket-ontimeout">socket.onTimeout</a></span>
 </li>
 <li>
-<span><a href="#socket-write-data-">socket.write(data)</a></span>
-</li>
-<li>
-<span><a href="#socket-error-reason-">socket.error(reason)</a></span>
+<span><a href="#socket-write-data">socket.write(data)</a></span>
 </li>
 </ul>
 <li>
@@ -289,278 +273,272 @@
 <span><a href="#websocket-ontimeout">websocket.onTimeout</a></span>
 </li>
 <li>
-<span><a href="#websocket-constructor-url-">websocket.constructor(url)</a></span>
+<span><a href="#websocket-constructor-url">websocket.constructor(url)</a></span>
 </li>
 <li>
-<span><a href="#websocket-setkeepalive-keep_alive-keep_idle-">websocket.setKeepAlive(keep_alive,keep_idle?)</a></span>
+<span><a href="#websocket-setkeepalive-keep_alive-keep_idle">websocket.setKeepAlive(keep_alive,keep_idle?)</a></span>
 </li>
 <li>
-<span><a href="#websocket-settimeout-time-">websocket.setTimeout(time)</a></span>
+<span><a href="#websocket-settimeout-time">websocket.setTimeout(time)</a></span>
 </li>
 <li>
-<span><a href="#websocket-connect-">websocket.connect()</a></span>
+<span><a href="#websocket-connect">websocket.connect()</a></span>
 </li>
 <li>
-<span><a href="#websocket-close-">websocket.close()</a></span>
+<span><a href="#websocket-close">websocket.close()</a></span>
 </li>
 <li>
-<span><a href="#websocket-pause-">websocket.pause()</a></span>
+<span><a href="#websocket-pause">websocket.pause()</a></span>
 </li>
 <li>
-<span><a href="#websocket-resume-">websocket.resume()</a></span>
+<span><a href="#websocket-resume">websocket.resume()</a></span>
 </li>
 <li>
-<span><a href="#websocket-write-data-">websocket.write(data)</a></span>
+<span><a href="#websocket-write-data">websocket.write(data)</a></span>
 </li>
 <li>
-<span><a href="#websocket-send-data-">websocket.send(data)</a></span>
+<span><a href="#websocket-send-data">websocket.send(data)</a></span>
 </li>
 <li>
-<span><a href="#websocket-ping-">websocket.ping()</a></span>
+<span><a href="#websocket-ping">websocket.ping()</a></span>
 </li>
 <li>
-<span><a href="#websocket-test-timeoutms-">websocket.test(timeoutMs?)</a></span>
+<span><a href="#websocket-test-timeoutms">websocket.test(timeoutMs?)</a></span>
 </li>
 <li>
-<span><a href="#websocket-disablesslverify-disable-">websocket.disableSslVerify(disable)</a></span>
+<span><a href="#websocket-disablesslverify-disable">websocket.disableSslVerify(disable)</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggeropen-">websocket.triggerOpen()</a></span>
+<span><a href="#websocket-triggeropen">websocket.triggerOpen()</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggerclose-">websocket.triggerClose()</a></span>
+<span><a href="#websocket-triggerclose">websocket.triggerClose()</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggererror-err-">websocket.triggerError(err)</a></span>
+<span><a href="#websocket-triggererror-err">websocket.triggerError(err)</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggerping-">websocket.triggerPing()</a></span>
+<span><a href="#websocket-triggerping">websocket.triggerPing()</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggerpong-">websocket.triggerPong()</a></span>
+<span><a href="#websocket-triggerpong">websocket.triggerPong()</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggerdata-data-">websocket.triggerData(data)</a></span>
+<span><a href="#websocket-triggerdata-data">websocket.triggerData(data)</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggertext-text-">websocket.triggerText(text)</a></span>
+<span><a href="#websocket-triggertext-text">websocket.triggerText(text)</a></span>
 </li>
 <li>
-<span><a href="#websocket-triggertimeout-">websocket.triggerTimeout()</a></span>
+<span><a href="#websocket-triggertimeout">websocket.triggerTimeout()</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-net">
 			quark/net
-			<span><a class="mark" href="#quark-net" id="quark-net">#</a></span>
+			<span><a class="mark" href="#quark-net" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="socketevent">
 			SocketEvent
-			<span><a class="mark" href="#socketevent" id="socketevent">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>SocketEvent</code> = <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-socket"><code>Socket</code></a>,<code>T</code>&gt;</li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#socketevent" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">type</span> SocketEvent&lt;T = void&gt; = <a class="api-type" href="event.html#event">Event</a>&lt;<a class="api-type" href="#class-socket">Socket</a>,T&gt;</code></pre>
+
+
 <h2 id="wsocketevent">
 			WSocketEvent
-			<span><a class="mark" href="#wsocketevent" id="wsocketevent">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>WSocketEvent</code> = <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-websocket"><code>WebSocket</code></a>,<code>T</code>&gt;</li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#wsocketevent" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">type</span> WSocketEvent&lt;T = void&gt; = <a class="api-type" href="event.html#event">Event</a>&lt;<a class="api-type" href="#class-websocket">WebSocket</a>,T&gt;</code></pre>
+
+
 <h2 id="class-nativesocket">
 			Class: NativeSocket
-			<span><a class="mark" href="#class-nativesocket" id="class-nativesocket">#</a></span>
+			<span><a class="mark" href="#class-nativesocket" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="nativesocket">
 			NativeSocket
-			<span><a class="mark" href="#nativesocket" id="nativesocket">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt;</li>
-</ul>
+			<span><a class="mark" href="#nativesocket" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt;</p>
 <h3 id="nativesocket-hostname">
 			nativesocket.hostname
-			<span><a class="mark" href="#nativesocket-hostname" id="nativesocket-hostname">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>hostname</code>: <a href="$ext.html#string"><code>string</code></a> Hostname of the WebSocket server</li>
-</ul>
+			<span><a class="mark" href="#nativesocket-hostname" aria-label="Link to this section">#</a></span>
+		</h3><p>Hostname of the WebSocket server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> hostname: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="nativesocket-port">
 			nativesocket.port
-			<span><a class="mark" href="#nativesocket-port" id="nativesocket-port">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>port</code>: <a href="numbers.html#uint"><code>Uint</code></a> Port of the WebSocket server</li>
-</ul>
+			<span><a class="mark" href="#nativesocket-port" aria-label="Link to this section">#</a></span>
+		</h3><p>Port of the WebSocket server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> port: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="nativesocket-ip">
 			nativesocket.ip
-			<span><a class="mark" href="#nativesocket-ip" id="nativesocket-ip">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>ip</code>: <a href="$ext.html#string"><code>string</code></a> IP address for the remote server</li>
-</ul>
+			<span><a class="mark" href="#nativesocket-ip" aria-label="Link to this section">#</a></span>
+		</h3><p>IP address for the remote server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ip: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="nativesocket-ipv6">
 			nativesocket.ipv6
-			<span><a class="mark" href="#nativesocket-ipv6" id="nativesocket-ipv6">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>ipv6</code>: <a href="$ext.html#string"><code>string</code></a> IPv6 address for the remote server</li>
-</ul>
+			<span><a class="mark" href="#nativesocket-ipv6" aria-label="Link to this section">#</a></span>
+		</h3><p>IPv6 address for the remote server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ipv6: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="nativesocket-isopen">
 			nativesocket.isOpen
-			<span><a class="mark" href="#nativesocket-isopen" id="nativesocket-isopen">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isOpen</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means connection is open</li>
-</ul>
+			<span><a class="mark" href="#nativesocket-isopen" aria-label="Link to this section">#</a></span>
+		</h3><p>true means connection is open</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isOpen: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="nativesocket-isconnecting">
 			nativesocket.isConnecting
-			<span><a class="mark" href="#nativesocket-isconnecting" id="nativesocket-isconnecting">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isConnecting</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means socket is connecting</li>
-</ul>
+			<span><a class="mark" href="#nativesocket-isconnecting" aria-label="Link to this section">#</a></span>
+		</h3><p>true means socket is connecting</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isConnecting: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="nativesocket-ispause">
 			nativesocket.isPause
-			<span><a class="mark" href="#nativesocket-ispause" id="nativesocket-ispause">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isPause</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means socket is paused</li>
-</ul>
-<h3 id="nativesocket-setkeepalive-keep_alive-keep_idle-">
+			<span><a class="mark" href="#nativesocket-ispause" aria-label="Link to this section">#</a></span>
+		</h3><p>true means socket is paused</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isPause: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="nativesocket-setkeepalive-keep_alive-keep_idle">
 			nativesocket.setKeepAlive(keep_alive,keep_idle?)
-			<span><a class="mark" href="#nativesocket-setkeepalive-keep_alive-keep_idle-" id="nativesocket-setkeepalive-keep_alive-keep_idle-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>keep_alive</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@param</code> <code>keep_idle?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-setnodelay-nodelay-">
+			<span><a class="mark" href="#nativesocket-setkeepalive-keep_alive-keep_idle" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>setKeepAlive(keep_alive: <a class="api-type" href="$ext.html#boolean">boolean</a>, keep_idle?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-setnodelay-nodelay">
 			nativesocket.setNoDelay(noDelay?)
-			<span><a class="mark" href="#nativesocket-setnodelay-nodelay-" id="nativesocket-setnodelay-nodelay-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>noDelay?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-settimeout-time-">
+			<span><a class="mark" href="#nativesocket-setnodelay-nodelay" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>setNoDelay(noDelay?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-settimeout-time">
 			nativesocket.setTimeout(time)
-			<span><a class="mark" href="#nativesocket-settimeout-time-" id="nativesocket-settimeout-time-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-connect-">
+			<span><a class="mark" href="#nativesocket-settimeout-time" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>setTimeout(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-connect">
 			nativesocket.connect()
-			<span><a class="mark" href="#nativesocket-connect-" id="nativesocket-connect-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-close-">
+			<span><a class="mark" href="#nativesocket-connect" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>connect(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-close">
 			nativesocket.close()
-			<span><a class="mark" href="#nativesocket-close-" id="nativesocket-close-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-pause-">
+			<span><a class="mark" href="#nativesocket-close" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>close(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-pause">
 			nativesocket.pause()
-			<span><a class="mark" href="#nativesocket-pause-" id="nativesocket-pause-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-resume-">
+			<span><a class="mark" href="#nativesocket-pause" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>pause(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-resume">
 			nativesocket.resume()
-			<span><a class="mark" href="#nativesocket-resume-" id="nativesocket-resume-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-disablesslverify-disable-">
+			<span><a class="mark" href="#nativesocket-resume" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>resume(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-disablesslverify-disable">
 			nativesocket.disableSslVerify(disable?)
-			<span><a class="mark" href="#nativesocket-disablesslverify-disable-" id="nativesocket-disablesslverify-disable-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>disable?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativesocket-constructor-hostname-port-isssl-">
+			<span><a class="mark" href="#nativesocket-disablesslverify-disable" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>disableSslVerify(disable?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativesocket-constructor-hostname-port-isssl">
 			nativesocket.constructor(hostname,port,isSSL?)
-			<span><a class="mark" href="#nativesocket-constructor-hostname-port-isssl-" id="nativesocket-constructor-hostname-port-isssl-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>hostname</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>port</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>isSSL?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativesocket-constructor-hostname-port-isssl" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(hostname: <a class="api-type" href="$ext.html#string">string</a>, port: <a class="api-type" href="numbers.html#uint">Uint</a>, isSSL?: <a class="api-type" href="$ext.html#boolean">boolean</a>)</code></pre>
+
+
+
 <h2 id="class-socket">
 			Class: Socket
-			<span><a class="mark" href="#class-socket" id="class-socket">#</a></span>
+			<span><a class="mark" href="#class-socket" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="socket">
 			Socket
-			<span><a class="mark" href="#socket" id="socket">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-nativesocket"><code>NativeSocket</code></a></li>
-</ul>
+			<span><a class="mark" href="#socket" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-nativesocket"><code>NativeSocket</code></a></p>
 <h3 id="socket-onopen">
 			socket.onOpen
-			<span><a class="mark" href="#socket-onopen" id="socket-onopen">#</a></span>
+			<span><a class="mark" href="#socket-onopen" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when opened connection</p>
 <ul>
 <li><code>@event</code> <code>onOpen</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
 <h3 id="socket-onclose">
 			socket.onClose
-			<span><a class="mark" href="#socket-onclose" id="socket-onclose">#</a></span>
+			<span><a class="mark" href="#socket-onclose" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when closed connection</p>
 <ul>
 <li><code>@event</code> <code>onClose</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
 <h3 id="socket-onerror">
 			socket.onError
-			<span><a class="mark" href="#socket-onerror" id="socket-onerror">#</a></span>
+			<span><a class="mark" href="#socket-onerror" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when an error occurs</p>
 <ul>
 <li><code>@event</code> <code>onError</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&lt;<a href="$ext.html#error"><code>Error</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="socket-ondata">
 			socket.onData
-			<span><a class="mark" href="#socket-ondata" id="socket-ondata">#</a></span>
+			<span><a class="mark" href="#socket-ondata" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when accept part of body data, and will be continuous</p>
 <ul>
 <li><code>@event</code> <code>onData</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="socket-ontimeout">
 			socket.onTimeout
-			<span><a class="mark" href="#socket-ontimeout" id="socket-ontimeout">#</a></span>
+			<span><a class="mark" href="#socket-ontimeout" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when a timeout of connection</p>
 <ul>
 <li><code>@event</code> <code>onTimeout</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
-<h3 id="socket-write-data-">
+<h3 id="socket-write-data">
 			socket.write(data)
-			<span><a class="mark" href="#socket-write-data-" id="socket-write-data-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h3 id="socket-error-reason-">
-			socket.error(reason)
-			<span><a class="mark" href="#socket-error-reason-" id="socket-error-reason-">#</a></span>
-		</h3><p>Handles an error</p>
-<ul>
-<li><code>@param</code> <code>reason</code>: <code>any</code> </li>
-</ul>
+			<span><a class="mark" href="#socket-write-data" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>write(data: <a class="api-type" href="$ext.html#string">string</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
 <h2 id="interface-signer">
 			Interface: Signer
-			<span><a class="mark" href="#interface-signer" id="interface-signer">#</a></span>
+			<span><a class="mark" href="#interface-signer" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="signer">
 			Signer
-			<span><a class="mark" href="#signer" id="signer">#</a></span>
+			<span><a class="mark" href="#signer" aria-label="Link to this section">#</a></span>
 		</h3><p>Signer interface for signing data.</p>
 <h2 id="class-websocket">
 			Class: WebSocket
-			<span><a class="mark" href="#class-websocket" id="class-websocket">#</a></span>
+			<span><a class="mark" href="#class-websocket" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="websocket">
 			WebSocket
-			<span><a class="mark" href="#websocket" id="websocket">#</a></span>
+			<span><a class="mark" href="#websocket" aria-label="Link to this section">#</a></span>
 		</h3><p>WebSocket client conversation.</p>
-<ul>
-<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#wsocketevent"><code>WSocketEvent</code></a>&gt;</li>
-<li><code>@implements</code> <a href="fs.html#stream"><code>Stream</code></a></li>
-</ul>
+<p><strong>Extends:</strong> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#wsocketevent"><code>WSocketEvent</code></a>&gt;
+<strong>Implements:</strong> <a href="fs.html#stream"><code>Stream</code></a></p>
 <p>For example:</p>
 <pre><code class="undefinedts">import {WebSocket} from &#39;quark/net&#39;;
 let ws = new WebSocket(&#39;wss://example.com/path&#39;);
@@ -581,267 +559,346 @@ ws.connect();
 </code></pre>
 <h3 id="websocket-url">
 			websocket.url
-			<span><a class="mark" href="#websocket-url" id="websocket-url">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>url</code>: <a href="uri.html#url"><code>URL</code></a> URL of the WebSocket server</li>
-</ul>
+			<span><a class="mark" href="#websocket-url" aria-label="Link to this section">#</a></span>
+		</h3><p>URL of the WebSocket server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> url: <a class="api-type" href="uri.html#url">URL</a></code></pre>
+
+
 <h3 id="websocket-hostname">
 			websocket.hostname
-			<span><a class="mark" href="#websocket-hostname" id="websocket-hostname">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>hostname</code>: <a href="$ext.html#string"><code>string</code></a> Hostname of the WebSocket server</li>
-</ul>
+			<span><a class="mark" href="#websocket-hostname" aria-label="Link to this section">#</a></span>
+		</h3><p>Hostname of the WebSocket server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> hostname: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="websocket-port">
 			websocket.port
-			<span><a class="mark" href="#websocket-port" id="websocket-port">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>port</code>: <a href="numbers.html#uint"><code>Uint</code></a> Port number</li>
-</ul>
+			<span><a class="mark" href="#websocket-port" aria-label="Link to this section">#</a></span>
+		</h3><p>Port number</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> port: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="websocket-isssl">
 			websocket.isSSL
-			<span><a class="mark" href="#websocket-isssl" id="websocket-isssl">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isSSL</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means wss, false means ws</li>
-</ul>
+			<span><a class="mark" href="#websocket-isssl" aria-label="Link to this section">#</a></span>
+		</h3><p>true means wss, false means ws</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isSSL: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="websocket-socket">
 			websocket.socket
-			<span><a class="mark" href="#websocket-socket" id="websocket-socket">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>socket</code>: <a href="#class-socket"><code>Socket</code></a> Socket connection implementation</li>
-</ul>
+			<span><a class="mark" href="#websocket-socket" aria-label="Link to this section">#</a></span>
+		</h3><p>Socket connection implementation</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> socket: <a class="api-type" href="#class-socket">Socket</a></code></pre>
+
+
 <h3 id="websocket-headers">
 			websocket.headers
-			<span><a class="mark" href="#websocket-headers" id="websocket-headers">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>headers</code>: <code>Dict</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; request headers</li>
-</ul>
+			<span><a class="mark" href="#websocket-headers" aria-label="Link to this section">#</a></span>
+		</h3><p>request headers</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> headers: Dict&lt;<a class="api-type" href="$ext.html#string">string</a>&gt;</code></pre>
+
+
 <h3 id="websocket-responseheaders">
 			websocket.responseHeaders
-			<span><a class="mark" href="#websocket-responseheaders" id="websocket-responseheaders">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>responseHeaders</code>: <code>Dict</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; Response headers</li>
-</ul>
+			<span><a class="mark" href="#websocket-responseheaders" aria-label="Link to this section">#</a></span>
+		</h3><p>Response headers</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> responseHeaders: Dict&lt;<a class="api-type" href="$ext.html#string">string</a>&gt;</code></pre>
+
+
 <h3 id="websocket-signer">
 			websocket.signer
-			<span><a class="mark" href="#websocket-signer" id="websocket-signer">#</a></span>
+			<span><a class="mark" href="#websocket-signer" aria-label="Link to this section">#</a></span>
 		</h3><p>A signer, use to sign the request</p>
-<ul>
-<li><code>signer</code>: <a href="#interface-signer"><code>Signer</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>signer: <a class="api-type" href="#interface-signer">Signer</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="websocket-ip">
 			websocket.ip
-			<span><a class="mark" href="#websocket-ip" id="websocket-ip">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>ip</code>: <a href="$ext.html#string"><code>string</code></a> ip address for the remote server</li>
-</ul>
+			<span><a class="mark" href="#websocket-ip" aria-label="Link to this section">#</a></span>
+		</h3><p>ip address for the remote server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ip: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="websocket-ipv6">
 			websocket.ipv6
-			<span><a class="mark" href="#websocket-ipv6" id="websocket-ipv6">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>ipv6</code>: <a href="$ext.html#string"><code>string</code></a> ipv6 address for the remote server</li>
-</ul>
+			<span><a class="mark" href="#websocket-ipv6" aria-label="Link to this section">#</a></span>
+		</h3><p>ipv6 address for the remote server</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ipv6: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="websocket-isopen">
 			websocket.isOpen
-			<span><a class="mark" href="#websocket-isopen" id="websocket-isopen">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isOpen</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means connection is open</li>
-</ul>
+			<span><a class="mark" href="#websocket-isopen" aria-label="Link to this section">#</a></span>
+		</h3><p>true means connection is open</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isOpen: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="websocket-ispause">
 			websocket.isPause
-			<span><a class="mark" href="#websocket-ispause" id="websocket-ispause">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isPause</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means socket is paused</li>
-</ul>
+			<span><a class="mark" href="#websocket-ispause" aria-label="Link to this section">#</a></span>
+		</h3><p>true means socket is paused</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isPause: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="websocket-isconnecting">
 			websocket.isConnecting
-			<span><a class="mark" href="#websocket-isconnecting" id="websocket-isconnecting">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isConnecting</code>: <a href="$ext.html#boolean"><code>boolean</code></a> true means socket is connecting</li>
-</ul>
+			<span><a class="mark" href="#websocket-isconnecting" aria-label="Link to this section">#</a></span>
+		</h3><p>true means socket is connecting</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isConnecting: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="websocket-onopen">
 			websocket.onOpen
-			<span><a class="mark" href="#websocket-onopen" id="websocket-onopen">#</a></span>
+			<span><a class="mark" href="#websocket-onopen" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when opened connection</p>
 <ul>
 <li><code>@event</code> <code>onOpen</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-onclose">
 			websocket.onClose
-			<span><a class="mark" href="#websocket-onclose" id="websocket-onclose">#</a></span>
+			<span><a class="mark" href="#websocket-onclose" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when closed connection</p>
 <ul>
 <li><code>@event</code> <code>onClose</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-onerror">
 			websocket.onError
-			<span><a class="mark" href="#websocket-onerror" id="websocket-onerror">#</a></span>
+			<span><a class="mark" href="#websocket-onerror" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when an error occurs</p>
 <ul>
 <li><code>@event</code> <code>onError</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&lt;<a href="$ext.html#error"><code>Error</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="websocket-onping">
 			websocket.onPing
-			<span><a class="mark" href="#websocket-onping" id="websocket-onping">#</a></span>
+			<span><a class="mark" href="#websocket-onping" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when accept ping message</p>
 <ul>
 <li><code>@event</code> <code>onPing</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-onpong">
 			websocket.onPong
-			<span><a class="mark" href="#websocket-onpong" id="websocket-onpong">#</a></span>
+			<span><a class="mark" href="#websocket-onpong" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when accept pong message</p>
 <ul>
 <li><code>@event</code> <code>onPong</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
 <h3 id="websocket-ondata">
 			websocket.onData
-			<span><a class="mark" href="#websocket-ondata" id="websocket-ondata">#</a></span>
+			<span><a class="mark" href="#websocket-ondata" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when accept buffer data</p>
 <ul>
 <li><code>@event</code> <code>onData</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&lt;<code>Buffer</code>&gt;&gt; </li>
 </ul>
 <h3 id="websocket-ontext">
 			websocket.onText
-			<span><a class="mark" href="#websocket-ontext" id="websocket-ontext">#</a></span>
+			<span><a class="mark" href="#websocket-ontext" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when accept text data</p>
 <ul>
 <li><code>@event</code> <code>onText</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&lt;<a href="$ext.html#string"><code>string</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="websocket-ontimeout">
 			websocket.onTimeout
-			<span><a class="mark" href="#websocket-ontimeout" id="websocket-ontimeout">#</a></span>
+			<span><a class="mark" href="#websocket-ontimeout" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when a timeout of connection</p>
 <ul>
 <li><code>@event</code> <code>onTimeout</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#socketevent"><code>SocketEvent</code></a>&gt; </li>
 </ul>
-<h3 id="websocket-constructor-url-">
+<h3 id="websocket-constructor-url">
 			websocket.constructor(url)
-			<span><a class="mark" href="#websocket-constructor-url-" id="websocket-constructor-url-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>url</code>: <a href="$ext.html#string"><code>string</code></a> <code>wss://xxxx.xx/path</code></li>
+			<span><a class="mark" href="#websocket-constructor-url" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(url: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>url</code> — <code>wss://xxxx.xx/path</code></li>
 </ul>
-<h3 id="websocket-setkeepalive-keep_alive-keep_idle-">
+<h3 id="websocket-setkeepalive-keep_alive-keep_idle">
 			websocket.setKeepAlive(keep_alive,keep_idle?)
-			<span><a class="mark" href="#websocket-setkeepalive-keep_alive-keep_idle-" id="websocket-setkeepalive-keep_alive-keep_idle-">#</a></span>
+			<span><a class="mark" href="#websocket-setkeepalive-keep_alive-keep_idle" aria-label="Link to this section">#</a></span>
 		</h3><p>Setting keep alive for the socket connection</p>
+<pre class="api-signature sh_none"><code>setKeepAlive(keep_alive: <a class="api-type" href="$ext.html#boolean">boolean</a>, keep_idle?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>keep_alive</code>: <a href="$ext.html#boolean"><code>boolean</code></a> enable keep alive</li>
-<li><code>@param</code> <code>keep_idle?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong>Default</strong> is 0 means 7200 seconds,<br/>  the time in milliseconds to wait before sending keep alive packets</li>
+<li><code>keep_alive</code> — enable keep alive</li>
+<li><code>keep_idle?</code> — <strong>Default</strong> is 0 means 7200 seconds,
+  the time in milliseconds to wait before sending keep alive packets</li>
 </ul>
-<h3 id="websocket-settimeout-time-">
+<h3 id="websocket-settimeout-time">
 			websocket.setTimeout(time)
-			<span><a class="mark" href="#websocket-settimeout-time-" id="websocket-settimeout-time-">#</a></span>
+			<span><a class="mark" href="#websocket-settimeout-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Setting timeout time for the socket connection</p>
-<ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h3 id="websocket-connect-">
+<pre class="api-signature sh_none"><code>setTimeout(time: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
+<h3 id="websocket-connect">
 			websocket.connect()
-			<span><a class="mark" href="#websocket-connect-" id="websocket-connect-">#</a></span>
+			<span><a class="mark" href="#websocket-connect" aria-label="Link to this section">#</a></span>
 		</h3><p>Connect to the WebSocket server</p>
-<h3 id="websocket-close-">
+<pre class="api-signature sh_none"><code>connect()</code></pre>
+
+
+
+<h3 id="websocket-close">
 			websocket.close()
-			<span><a class="mark" href="#websocket-close-" id="websocket-close-">#</a></span>
+			<span><a class="mark" href="#websocket-close" aria-label="Link to this section">#</a></span>
 		</h3><p>Close the WebSocket connection</p>
-<h3 id="websocket-pause-">
+<pre class="api-signature sh_none"><code>close()</code></pre>
+
+
+
+<h3 id="websocket-pause">
 			websocket.pause()
-			<span><a class="mark" href="#websocket-pause-" id="websocket-pause-">#</a></span>
+			<span><a class="mark" href="#websocket-pause" aria-label="Link to this section">#</a></span>
 		</h3><p>Pause receiving data from the socket</p>
-<h3 id="websocket-resume-">
+<pre class="api-signature sh_none"><code>pause()</code></pre>
+
+
+
+<h3 id="websocket-resume">
 			websocket.resume()
-			<span><a class="mark" href="#websocket-resume-" id="websocket-resume-">#</a></span>
+			<span><a class="mark" href="#websocket-resume" aria-label="Link to this section">#</a></span>
 		</h3><p>Resuming receiving data from the socket</p>
-<h3 id="websocket-write-data-">
+<pre class="api-signature sh_none"><code>resume()</code></pre>
+
+
+
+<h3 id="websocket-write-data">
 			websocket.write(data)
-			<span><a class="mark" href="#websocket-write-data-" id="websocket-write-data-">#</a></span>
-		</h3><p>Sending the data message.<br/>Frame client-to-server output as a text packet or buffer packet.</p>
-<ul>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h3 id="websocket-send-data-">
+			<span><a class="mark" href="#websocket-write-data" aria-label="Link to this section">#</a></span>
+		</h3><p>Sending the data message.
+Frame client-to-server output as a text packet or buffer packet.</p>
+<pre class="api-signature sh_none"><code>write(data: <a class="api-type" href="$ext.html#string">string</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<h3 id="websocket-send-data">
 			websocket.send(data)
-			<span><a class="mark" href="#websocket-send-data-" id="websocket-send-data-">#</a></span>
+			<span><a class="mark" href="#websocket-send-data" aria-label="Link to this section">#</a></span>
 		</h3><p>alias for write</p>
-<ul>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h3 id="websocket-ping-">
+<pre class="api-signature sh_none"><code>send(data: <a class="api-type" href="$ext.html#string">string</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<h3 id="websocket-ping">
 			websocket.ping()
-			<span><a class="mark" href="#websocket-ping-" id="websocket-ping-">#</a></span>
+			<span><a class="mark" href="#websocket-ping" aria-label="Link to this section">#</a></span>
 		</h3><p>Sending the ping message</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h3 id="websocket-test-timeoutms-">
+<pre class="api-signature sh_none"><code>ping(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<h3 id="websocket-test-timeoutms">
 			websocket.test(timeoutMs?)
-			<span><a class="mark" href="#websocket-test-timeoutms-" id="websocket-test-timeoutms-">#</a></span>
+			<span><a class="mark" href="#websocket-test-timeoutms" aria-label="Link to this section">#</a></span>
 		</h3><p>First send the ping message to the remote client then wait for the pong message</p>
+<pre class="api-signature sh_none"><code>test(timeoutMs?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>timeoutMs?</code>: <a href="numbers.html#uint"><code>Uint</code></a> wait for the pong message, default not timeout</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>timeoutMs?</code> — wait for the pong message, default not timeout</li>
 </ul>
-<h3 id="websocket-disablesslverify-disable-">
+<h3 id="websocket-disablesslverify-disable">
 			websocket.disableSslVerify(disable)
-			<span><a class="mark" href="#websocket-disablesslverify-disable-" id="websocket-disablesslverify-disable-">#</a></span>
+			<span><a class="mark" href="#websocket-disablesslverify-disable" aria-label="Link to this section">#</a></span>
 		</h3><p>Setting if is disable ssl verify</p>
+<pre class="api-signature sh_none"><code>disableSslVerify(disable: <a class="api-type" href="$ext.html#boolean">boolean</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>disable</code>: <a href="$ext.html#boolean"><code>boolean</code></a> True means disable ssl verify</li>
+<li><code>disable</code> — True means disable ssl verify</li>
 </ul>
-<h3 id="websocket-triggeropen-">
+<h3 id="websocket-triggeropen">
 			websocket.triggerOpen()
-			<span><a class="mark" href="#websocket-triggeropen-" id="websocket-triggeropen-">#</a></span>
-		</h3><h3 id="websocket-triggerclose-">
+			<span><a class="mark" href="#websocket-triggeropen" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerOpen()</code></pre>
+
+
+
+<h3 id="websocket-triggerclose">
 			websocket.triggerClose()
-			<span><a class="mark" href="#websocket-triggerclose-" id="websocket-triggerclose-">#</a></span>
-		</h3><h3 id="websocket-triggererror-err-">
+			<span><a class="mark" href="#websocket-triggerclose" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerClose()</code></pre>
+
+
+
+<h3 id="websocket-triggererror-err">
 			websocket.triggerError(err)
-			<span><a class="mark" href="#websocket-triggererror-err-" id="websocket-triggererror-err-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>err</code>: <a href="$ext.html#error"><code>Error</code></a> </li>
-</ul>
-<h3 id="websocket-triggerping-">
+			<span><a class="mark" href="#websocket-triggererror-err" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerError(err: <a class="api-type" href="$ext.html#error">Error</a>)</code></pre>
+
+
+
+<h3 id="websocket-triggerping">
 			websocket.triggerPing()
-			<span><a class="mark" href="#websocket-triggerping-" id="websocket-triggerping-">#</a></span>
-		</h3><h3 id="websocket-triggerpong-">
+			<span><a class="mark" href="#websocket-triggerping" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerPing()</code></pre>
+
+
+
+<h3 id="websocket-triggerpong">
 			websocket.triggerPong()
-			<span><a class="mark" href="#websocket-triggerpong-" id="websocket-triggerpong-">#</a></span>
-		</h3><h3 id="websocket-triggerdata-data-">
+			<span><a class="mark" href="#websocket-triggerpong" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerPong()</code></pre>
+
+
+
+<h3 id="websocket-triggerdata-data">
 			websocket.triggerData(data)
-			<span><a class="mark" href="#websocket-triggerdata-data-" id="websocket-triggerdata-data-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>data</code>: <code>Buffer</code> </li>
-</ul>
-<h3 id="websocket-triggertext-text-">
+			<span><a class="mark" href="#websocket-triggerdata-data" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerData(data: Buffer)</code></pre>
+
+
+
+<h3 id="websocket-triggertext-text">
 			websocket.triggerText(text)
-			<span><a class="mark" href="#websocket-triggertext-text-" id="websocket-triggertext-text-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>text</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="websocket-triggertimeout-">
+			<span><a class="mark" href="#websocket-triggertext-text" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerText(text: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+<h3 id="websocket-triggertimeout">
 			websocket.triggerTimeout()
-			<span><a class="mark" href="#websocket-triggertimeout-" id="websocket-triggertimeout-">#</a></span>
-		</h3>
+			<span><a class="mark" href="#websocket-triggertimeout" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerTimeout()</code></pre>
+
+
+
+
 			</div>
 
 		</div>
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'net.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

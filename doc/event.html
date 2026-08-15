@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'event.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-event">quark/event</a></span>
@@ -149,10 +136,10 @@
 <span><a href="#uievent-isbubble">uievent.isBubble</a></span>
 </li>
 <li>
-<span><a href="#uievent-canceldefault-">uievent.cancelDefault()</a></span>
+<span><a href="#uievent-canceldefault">uievent.cancelDefault()</a></span>
 </li>
 <li>
-<span><a href="#uievent-cancelbubble-">uievent.cancelBubble()</a></span>
+<span><a href="#uievent-cancelbubble">uievent.cancelBubble()</a></span>
 </li>
 </ul>
 <li>
@@ -360,7 +347,7 @@
 <span><a href="#gesturetouchpoint-touch">gesturetouchpoint.touch</a></span>
 </li>
 <li>
-<span><a href="#gesturetouchpoint-constructor-touch-">gesturetouchpoint.constructor(touch)</a></span>
+<span><a href="#gesturetouchpoint-constructor-touch">gesturetouchpoint.constructor(touch)</a></span>
 </li>
 <li>
 <span><a href="#gesturetouchpoint-center">gesturetouchpoint.center</a></span>
@@ -444,37 +431,37 @@
 <span><a href="#gestureevent-length">gestureevent.length</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-constructor-origin-id-timestamp-">gestureevent.constructor(origin,id,timestamp)</a></span>
+<span><a href="#gestureevent-constructor-origin-id-timestamp">gestureevent.constructor(origin,id,timestamp)</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-isinitialstage-">gestureevent.isInitialStage()</a></span>
+<span><a href="#gestureevent-isinitialstage">gestureevent.isInitialStage()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-isswipetriggered-">gestureevent.isSwipeTriggered()</a></span>
+<span><a href="#gestureevent-isswipetriggered">gestureevent.isSwipeTriggered()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-reject-">gestureevent.reject()</a></span>
+<span><a href="#gestureevent-reject">gestureevent.reject()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-seal-">gestureevent.seal()</a></span>
+<span><a href="#gestureevent-seal">gestureevent.seal()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-startposition-">gestureevent.startPosition()</a></span>
+<span><a href="#gestureevent-startposition">gestureevent.startPosition()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-position-">gestureevent.position()</a></span>
+<span><a href="#gestureevent-position">gestureevent.position()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-center-">gestureevent.center()</a></span>
+<span><a href="#gestureevent-center">gestureevent.center()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-rotation-isdegree-">gestureevent.rotation(isDegree)</a></span>
+<span><a href="#gestureevent-rotation-isdegree">gestureevent.rotation(isDegree)</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-scale-">gestureevent.scale()</a></span>
+<span><a href="#gestureevent-scale">gestureevent.scale()</a></span>
 </li>
 <li>
-<span><a href="#gestureevent-distanceoftwofinger-">gestureevent.distanceOfTwoFinger()</a></span>
+<span><a href="#gestureevent-distanceoftwofinger">gestureevent.distanceOfTwoFinger()</a></span>
 </li>
 </ul>
 <li>
@@ -650,18 +637,18 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-event">
 			quark/event
-			<span><a class="mark" href="#quark-event" id="quark-event">#</a></span>
+			<span><a class="mark" href="#quark-event" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-returnvaluemask">
 			Enum: ReturnValueMask
-			<span><a class="mark" href="#enum-returnvaluemask" id="enum-returnvaluemask">#</a></span>
+			<span><a class="mark" href="#enum-returnvaluemask" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="returnvaluemask">
 			ReturnValueMask
-			<span><a class="mark" href="#returnvaluemask" id="returnvaluemask">#</a></span>
+			<span><a class="mark" href="#returnvaluemask" aria-label="Link to this section">#</a></span>
 		</h3><p>Mask function corresponding to event return value (returnValue)</p>
 <ul>
 <li><code>Default</code><br>Enable default actions </li>
@@ -670,206 +657,203 @@
 </ul>
 <h2 id="class-uievent">
 			Class: UIEvent
-			<span><a class="mark" href="#class-uievent" id="class-uievent">#</a></span>
+			<span><a class="mark" href="#class-uievent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="uievent">
 			UIEvent
-			<span><a class="mark" href="#uievent" id="uievent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="$event.html#event"><code>Event</code></a></li>
-<li><code>@template</code> &lt;<code>SendData</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#uievent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="$event.html#event"><code>Event</code></a>
+<strong>Type parameters:</strong> <code>SendData</code></p>
 <h3 id="uievent-origin">
 			uievent.origin
-			<span><a class="mark" href="#uievent-origin" id="uievent-origin">#</a></span>
+			<span><a class="mark" href="#uievent-origin" aria-label="Link to this section">#</a></span>
 		</h3><p>Origin of the event </p>
-<ul>
-<li><code>@get</code> <code>origin</code>: <a href="view.html#view"><code>View</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> origin: <a class="api-type" href="view.html#view">View</a></code></pre>
+
+
 <h3 id="uievent-timestamp">
 			uievent.timestamp
-			<span><a class="mark" href="#uievent-timestamp" id="uievent-timestamp">#</a></span>
+			<span><a class="mark" href="#uievent-timestamp" aria-label="Link to this section">#</a></span>
 		</h3><p>The time when the event is created, in milliseconds </p>
-<ul>
-<li><code>@get</code> <code>timestamp</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> timestamp: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+
+
 <h3 id="uievent-isdefault">
 			uievent.isDefault
-			<span><a class="mark" href="#uievent-isdefault" id="uievent-isdefault">#</a></span>
+			<span><a class="mark" href="#uievent-isdefault" aria-label="Link to this section">#</a></span>
 		</h3><p>Gets whether the default action of an event is enabled </p>
-<ul>
-<li><code>@get</code> <code>isDefault</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isDefault: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="uievent-isbubble">
 			uievent.isBubble
-			<span><a class="mark" href="#uievent-isbubble" id="uievent-isbubble">#</a></span>
+			<span><a class="mark" href="#uievent-isbubble" aria-label="Link to this section">#</a></span>
 		</h3><p>Gets whether event bubbling is enabled </p>
-<ul>
-<li><code>@get</code> <code>isBubble</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="uievent-canceldefault-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isBubble: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="uievent-canceldefault">
 			uievent.cancelDefault()
-			<span><a class="mark" href="#uievent-canceldefault-" id="uievent-canceldefault-">#</a></span>
+			<span><a class="mark" href="#uievent-canceldefault" aria-label="Link to this section">#</a></span>
 		</h3><p>Cancel the default event action, if one exists </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="uievent-cancelbubble-">
+<pre class="api-signature sh_none"><code>cancelDefault(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="uievent-cancelbubble">
 			uievent.cancelBubble()
-			<span><a class="mark" href="#uievent-cancelbubble-" id="uievent-cancelbubble-">#</a></span>
+			<span><a class="mark" href="#uievent-cancelbubble" aria-label="Link to this section">#</a></span>
 		</h3><p>Cancel event bubbling. After calling this method, the event stops propagating upward </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>cancelBubble(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
 <h2 id="class-actionevent">
 			Class: ActionEvent
-			<span><a class="mark" href="#class-actionevent" id="class-actionevent">#</a></span>
+			<span><a class="mark" href="#class-actionevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="actionevent">
 			ActionEvent
-			<span><a class="mark" href="#actionevent" id="actionevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#actionevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="actionevent-action">
 			actionevent.action
-			<span><a class="mark" href="#actionevent-action" id="actionevent-action">#</a></span>
+			<span><a class="mark" href="#actionevent-action" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the action object that triggers the event </p>
-<ul>
-<li><code>@get</code> <code>action</code>: <a href="action.html#action"><code>Action</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> action: <a class="api-type" href="action.html#action">Action</a></code></pre>
+
+
 <h3 id="actionevent-delay">
 			actionevent.delay
-			<span><a class="mark" href="#actionevent-delay" id="actionevent-delay">#</a></span>
+			<span><a class="mark" href="#actionevent-delay" aria-label="Link to this section">#</a></span>
 		</h3><p>The difference between the event triggering time and the target time </p>
-<ul>
-<li><code>@get</code> <code>delay</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> delay: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="actionevent-frame">
 			actionevent.frame
-			<span><a class="mark" href="#actionevent-frame" id="actionevent-frame">#</a></span>
+			<span><a class="mark" href="#actionevent-frame" aria-label="Link to this section">#</a></span>
 		</h3><p>Keyframe Index </p>
-<ul>
-<li><code>@get</code> <code>frame</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> frame: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="actionevent-looped">
 			actionevent.looped
-			<span><a class="mark" href="#actionevent-looped" id="actionevent-looped">#</a></span>
+			<span><a class="mark" href="#actionevent-looped" aria-label="Link to this section">#</a></span>
 		</h3><p>The current number of looped </p>
-<ul>
-<li><code>@get</code> <code>looped</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> looped: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h2 id="enum-keyboardlocation">
 			Enum: KeyboardLocation
-			<span><a class="mark" href="#enum-keyboardlocation" id="enum-keyboardlocation">#</a></span>
+			<span><a class="mark" href="#enum-keyboardlocation" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="keyboardlocation">
 			KeyboardLocation
-			<span><a class="mark" href="#keyboardlocation" id="keyboardlocation">#</a></span>
+			<span><a class="mark" href="#keyboardlocation" aria-label="Link to this section">#</a></span>
 		</h3><p>Keyboard location on the device </p>
 <h2 id="class-keyevent">
 			Class: KeyEvent
-			<span><a class="mark" href="#class-keyevent" id="class-keyevent">#</a></span>
+			<span><a class="mark" href="#class-keyevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="keyevent">
 			KeyEvent
-			<span><a class="mark" href="#keyevent" id="keyevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#keyevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="keyevent-nextfocus">
 			keyevent.nextFocus
-			<span><a class="mark" href="#keyevent-nextfocus" id="keyevent-nextfocus">#</a></span>
+			<span><a class="mark" href="#keyevent-nextfocus" aria-label="Link to this section">#</a></span>
 		</h3><p>The next possible remote focus view </p>
-<ul>
-<li><code>nextFocus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>nextFocus: <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="keyevent-keycode">
 			keyevent.keycode
-			<span><a class="mark" href="#keyevent-keycode" id="keyevent-keycode">#</a></span>
+			<span><a class="mark" href="#keyevent-keycode" aria-label="Link to this section">#</a></span>
 		</h3><p>Keyboard Code </p>
-<ul>
-<li><code>@get</code> <code>keycode</code>: <a href="keyboard.html#keyboardcode"><code>KeyboardCode</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> keycode: <a class="api-type" href="keyboard.html#keyboardcode">KeyboardCode</a></code></pre>
+
+
 <h3 id="keyevent-code">
 			keyevent.code
-			<span><a class="mark" href="#keyevent-code" id="keyevent-code">#</a></span>
+			<span><a class="mark" href="#keyevent-code" aria-label="Link to this section">#</a></span>
 		</h3><p>Keyboard code for physical key </p>
-<ul>
-<li><code>@get</code> <code>code</code>: <a href="keyboard.html#keyboardcode"><code>KeyboardCode</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> code: <a class="api-type" href="keyboard.html#keyboardcode">KeyboardCode</a></code></pre>
+
+
 <h3 id="keyevent-keypress">
 			keyevent.keypress
-			<span><a class="mark" href="#keyevent-keypress" id="keyevent-keypress">#</a></span>
+			<span><a class="mark" href="#keyevent-keypress" aria-label="Link to this section">#</a></span>
 		</h3><p>Ascii code converted from keyboard code </p>
-<ul>
-<li><code>@get</code> <code>keypress</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> keypress: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyevent-location">
 			keyevent.location
-			<span><a class="mark" href="#keyevent-location" id="keyevent-location">#</a></span>
+			<span><a class="mark" href="#keyevent-location" aria-label="Link to this section">#</a></span>
 		</h3><p>The location of the key on the keyboard or device </p>
-<ul>
-<li><code>@get</code> <code>location</code>: <a href="#enum-keyboardlocation"><code>KeyboardLocation</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> location: <a class="api-type" href="#enum-keyboardlocation">KeyboardLocation</a></code></pre>
+
+
 <h3 id="keyevent-repeat">
 			keyevent.repeat
-			<span><a class="mark" href="#keyevent-repeat" id="keyevent-repeat">#</a></span>
-		</h3><p>The number of times the event is triggered repeatedly after the key is pressed<br/>until the key is released </p>
-<ul>
-<li><code>@get</code> <code>repeat</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+			<span><a class="mark" href="#keyevent-repeat" aria-label="Link to this section">#</a></span>
+		</h3><p>The number of times the event is triggered repeatedly after the key is pressed
+until the key is released </p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> repeat: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyevent-shift">
 			keyevent.shift
-			<span><a class="mark" href="#keyevent-shift" id="keyevent-shift">#</a></span>
+			<span><a class="mark" href="#keyevent-shift" aria-label="Link to this section">#</a></span>
 		</h3><p>Is the shift key pressed </p>
-<ul>
-<li><code>@get</code> <code>shift</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> shift: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="keyevent-ctrl">
 			keyevent.ctrl
-			<span><a class="mark" href="#keyevent-ctrl" id="keyevent-ctrl">#</a></span>
+			<span><a class="mark" href="#keyevent-ctrl" aria-label="Link to this section">#</a></span>
 		</h3><p>Is the ctrl key pressed </p>
-<ul>
-<li><code>@get</code> <code>ctrl</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> ctrl: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="keyevent-alt">
 			keyevent.alt
-			<span><a class="mark" href="#keyevent-alt" id="keyevent-alt">#</a></span>
+			<span><a class="mark" href="#keyevent-alt" aria-label="Link to this section">#</a></span>
 		</h3><p>Is the alt key pressed </p>
-<ul>
-<li><code>@get</code> <code>alt</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> alt: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="keyevent-command">
 			keyevent.command
-			<span><a class="mark" href="#keyevent-command" id="keyevent-command">#</a></span>
+			<span><a class="mark" href="#keyevent-command" aria-label="Link to this section">#</a></span>
 		</h3><p>Is the command/meta/windows key pressed </p>
-<ul>
-<li><code>@get</code> <code>command</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> command: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="keyevent-capslock">
 			keyevent.capsLock
-			<span><a class="mark" href="#keyevent-capslock" id="keyevent-capslock">#</a></span>
+			<span><a class="mark" href="#keyevent-capslock" aria-label="Link to this section">#</a></span>
 		</h3><p>Is capsLock enabled </p>
-<ul>
-<li><code>@get</code> <code>capsLock</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> capsLock: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="keyevent-device">
 			keyevent.device
-			<span><a class="mark" href="#keyevent-device" id="keyevent-device">#</a></span>
+			<span><a class="mark" href="#keyevent-device" aria-label="Link to this section">#</a></span>
 		</h3><p>Device id </p>
-<ul>
-<li><code>@get</code> <code>device</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> device: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyevent-source">
 			keyevent.source
-			<span><a class="mark" href="#keyevent-source" id="keyevent-source">#</a></span>
+			<span><a class="mark" href="#keyevent-source" aria-label="Link to this section">#</a></span>
 		</h3><p>Source id </p>
-<ul>
-<li><code>@get</code> <code>source</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> source: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h2 id="enum-clicktype">
 			Enum: ClickType
-			<span><a class="mark" href="#enum-clicktype" id="enum-clicktype">#</a></span>
+			<span><a class="mark" href="#enum-clicktype" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="clicktype">
 			ClickType
-			<span><a class="mark" href="#clicktype" id="clicktype">#</a></span>
+			<span><a class="mark" href="#clicktype" aria-label="Link to this section">#</a></span>
 		</h3><p>The type or device that triggers the click event, such as using a touch screen or a mouse</p>
 <ul>
 <li><code>Mouse</code><br>mouse </li>
@@ -878,95 +862,101 @@
 </ul>
 <h2 id="class-clickevent">
 			Class: ClickEvent
-			<span><a class="mark" href="#class-clickevent" id="class-clickevent">#</a></span>
+			<span><a class="mark" href="#class-clickevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="clickevent">
 			ClickEvent
-			<span><a class="mark" href="#clickevent" id="clickevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#clickevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="clickevent-position">
 			clickevent.position
-			<span><a class="mark" href="#clickevent-position" id="clickevent-position">#</a></span>
+			<span><a class="mark" href="#clickevent-position" aria-label="Link to this section">#</a></span>
 		</h3><p>The cursor position in the window </p>
-<ul>
-<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> position: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="clickevent-multicount">
 			clickevent.multiCount
-			<span><a class="mark" href="#clickevent-multicount" id="clickevent-multicount">#</a></span>
+			<span><a class="mark" href="#clickevent-multicount" aria-label="Link to this section">#</a></span>
 		</h3><p>Number of consecutive clicks, possibly double clicks </p>
-<ul>
-<li><code>@get</code> <code>multiCount</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> multiCount: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="clickevent-type">
 			clickevent.type
-			<span><a class="mark" href="#clickevent-type" id="clickevent-type">#</a></span>
+			<span><a class="mark" href="#clickevent-type" aria-label="Link to this section">#</a></span>
 		</h3><p>Click trigger type </p>
-<ul>
-<li><code>@get</code> <code>type</code>: <a href="#enum-clicktype"><code>ClickType</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> type: <a class="api-type" href="#enum-clicktype">ClickType</a></code></pre>
+
+
 <h3 id="clickevent-ismulticlick">
 			clickevent.isMultiClick
-			<span><a class="mark" href="#clickevent-ismulticlick" id="clickevent-ismulticlick">#</a></span>
+			<span><a class="mark" href="#clickevent-ismulticlick" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether it is a multi-click event </p>
-<ul>
-<li><code>@get</code> <code>isMultiClick</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isMultiClick: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h2 id="enum-wheeldeltamode">
 			Enum: WheelDeltaMode
-			<span><a class="mark" href="#enum-wheeldeltamode" id="enum-wheeldeltamode">#</a></span>
+			<span><a class="mark" href="#enum-wheeldeltamode" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="wheeldeltamode">
 			WheelDeltaMode
-			<span><a class="mark" href="#wheeldeltamode" id="wheeldeltamode">#</a></span>
-		</h3><p>Describes the semantic unit of a mouse wheel delta.<br/>Different input devices report scroll deltas in fundamentally different ways:</p>
+			<span><a class="mark" href="#wheeldeltamode" aria-label="Link to this section">#</a></span>
+		</h3><p>Describes the semantic unit of a mouse wheel delta.
+Different input devices report scroll deltas in fundamentally different ways:</p>
 <ul>
-<li>Line:<br/>Discrete, step-based scrolling typically produced by a physical mouse wheel.<br/>Each event represents one logical &quot;notch&quot; (line step), not a precise distance.<br/>The actual pixel movement should be determined by the application<br/>(e.g. multiply by line height or a fixed step size).</li>
-<li>Pixel:<br/>Continuous, high-precision scrolling produced by devices like trackpads.<br/>The delta represents a true pixel-based movement and can be applied<br/>directly for smooth, inertial scrolling.<br/>This distinction allows scroll views or editors to interpret the same input<br/>differently, providing consistent behavior across mice and touchpads.</li>
+<li>Line:
+Discrete, step-based scrolling typically produced by a physical mouse wheel.
+Each event represents one logical &quot;notch&quot; (line step), not a precise distance.
+The actual pixel movement should be determined by the application
+(e.g. multiply by line height or a fixed step size).</li>
+<li>Pixel:
+Continuous, high-precision scrolling produced by devices like trackpads.
+The delta represents a true pixel-based movement and can be applied
+directly for smooth, inertial scrolling.
+This distinction allows scroll views or editors to interpret the same input
+differently, providing consistent behavior across mice and touchpads.</li>
 </ul>
 <h2 id="class-mouseevent">
 			Class: MouseEvent
-			<span><a class="mark" href="#class-mouseevent" id="class-mouseevent">#</a></span>
+			<span><a class="mark" href="#class-mouseevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="mouseevent">
 			MouseEvent
-			<span><a class="mark" href="#mouseevent" id="mouseevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#mouseevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="mouseevent-position">
 			mouseevent.position
-			<span><a class="mark" href="#mouseevent-position" id="mouseevent-position">#</a></span>
+			<span><a class="mark" href="#mouseevent-position" aria-label="Link to this section">#</a></span>
 		</h3><p>The cursor position in the window </p>
-<ul>
-<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> position: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="mouseevent-delta">
 			mouseevent.delta
-			<span><a class="mark" href="#mouseevent-delta" id="mouseevent-delta">#</a></span>
+			<span><a class="mark" href="#mouseevent-delta" aria-label="Link to this section">#</a></span>
 		</h3><p>The Wheel delta only </p>
-<ul>
-<li><code>@get</code> <code>delta</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> delta: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="mouseevent-level">
 			mouseevent.level
-			<span><a class="mark" href="#mouseevent-level" id="mouseevent-level">#</a></span>
+			<span><a class="mark" href="#mouseevent-level" aria-label="Link to this section">#</a></span>
 		</h3><p>The current view level under the mouse cursor </p>
-<ul>
-<li><code>@get</code> <code>level</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="mouseevent-deltamode">
 			mouseevent.deltaMode
-			<span><a class="mark" href="#mouseevent-deltamode" id="mouseevent-deltamode">#</a></span>
+			<span><a class="mark" href="#mouseevent-deltamode" aria-label="Link to this section">#</a></span>
 		</h3><p>The unit of the wheel delta, either in lines or pixels </p>
-<ul>
-<li><code>@get</code> <code>deltaMode</code>: <a href="#enum-wheeldeltamode"><code>WheelDeltaMode</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> deltaMode: <a class="api-type" href="#enum-wheeldeltamode">WheelDeltaMode</a></code></pre>
+
+
 <h2 id="enum-uistate">
 			Enum: UIState
-			<span><a class="mark" href="#enum-uistate" id="enum-uistate">#</a></span>
+			<span><a class="mark" href="#enum-uistate" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="uistate">
 			UIState
-			<span><a class="mark" href="#uistate" id="uistate">#</a></span>
+			<span><a class="mark" href="#uistate" aria-label="Link to this section">#</a></span>
 		</h3><p>Status type of event <code>UIState</code></p>
 <ul>
 <li><code>None</code><br>No status </li>
@@ -976,166 +966,166 @@
 </ul>
 <h2 id="class-uistateevent">
 			Class: UIStateEvent
-			<span><a class="mark" href="#class-uistateevent" id="class-uistateevent">#</a></span>
+			<span><a class="mark" href="#class-uistateevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="uistateevent">
 			UIStateEvent
-			<span><a class="mark" href="#uistateevent" id="uistateevent">#</a></span>
-		</h3><p>When this event triggers, <br/>the UI state that the view should enter after triggering certain events.<br/>For example: when the mouse enters the view, the state is <code>Hover</code></p>
-<ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#uistateevent" aria-label="Link to this section">#</a></span>
+		</h3><p>When this event triggers,
+the UI state that the view should enter after triggering certain events.
+For example: when the mouse enters the view, the state is <code>Hover</code></p>
+<p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="uistateevent-state">
 			uistateevent.state
-			<span><a class="mark" href="#uistateevent-state" id="uistateevent-state">#</a></span>
+			<span><a class="mark" href="#uistateevent-state" aria-label="Link to this section">#</a></span>
 		</h3><p>UI state type </p>
-<ul>
-<li><code>@get</code> <code>state</code>: <a href="#enum-uistate"><code>UIState</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> state: <a class="api-type" href="#enum-uistate">UIState</a></code></pre>
+
+
 <h2 id="class-inputevent">
 			Class: InputEvent
-			<span><a class="mark" href="#class-inputevent" id="class-inputevent">#</a></span>
+			<span><a class="mark" href="#class-inputevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="inputevent">
 			InputEvent
-			<span><a class="mark" href="#inputevent" id="inputevent">#</a></span>
-		</h3><p>InputEvent payload.<br/>Note: actual semantic is defined by the bound event type.<br/>Receivers should only access the field relevant to the event.</p>
-<ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#inputevent" aria-label="Link to this section">#</a></span>
+		</h3><p>InputEvent payload.
+Note: actual semantic is defined by the bound event type.
+Receivers should only access the field relevant to the event.</p>
+<p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="inputevent-input">
 			inputevent.input
-			<span><a class="mark" href="#inputevent-input" id="inputevent-input">#</a></span>
+			<span><a class="mark" href="#inputevent-input" aria-label="Link to this section">#</a></span>
 		</h3><p>input text that includes input text or marked text or unmarked text </p>
-<ul>
-<li><code>@get</code> <code>input</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> input: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="inputevent-inputdelete">
 			inputevent.inputDelete
-			<span><a class="mark" href="#inputevent-inputdelete" id="inputevent-inputdelete">#</a></span>
+			<span><a class="mark" href="#inputevent-inputdelete" aria-label="Link to this section">#</a></span>
 		</h3><p>delete char count </p>
-<ul>
-<li><code>@get</code> <code>inputDelete</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> inputDelete: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+
+
 <h3 id="inputevent-cursorindex">
 			inputevent.cursorIndex
-			<span><a class="mark" href="#inputevent-cursorindex" id="inputevent-cursorindex">#</a></span>
+			<span><a class="mark" href="#inputevent-cursorindex" aria-label="Link to this section">#</a></span>
 		</h3><p>cursor index after input </p>
-<ul>
-<li><code>@get</code> <code>cursorIndex</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> cursorIndex: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+
+
 <h3 id="inputevent-inputcontrol">
 			inputevent.inputControl
-			<span><a class="mark" href="#inputevent-inputcontrol" id="inputevent-inputcontrol">#</a></span>
+			<span><a class="mark" href="#inputevent-inputcontrol" aria-label="Link to this section">#</a></span>
 		</h3><p>control keycode </p>
-<ul>
-<li><code>@get</code> <code>inputControl</code>: <a href="keyboard.html#keyboardcode"><code>KeyboardCode</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> inputControl: <a class="api-type" href="keyboard.html#keyboardcode">KeyboardCode</a></code></pre>
+
+
 <h2 id="interface-touchpoint">
 			Interface: TouchPoint
-			<span><a class="mark" href="#interface-touchpoint" id="interface-touchpoint">#</a></span>
+			<span><a class="mark" href="#interface-touchpoint" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="touchpoint">
 			TouchPoint
-			<span><a class="mark" href="#touchpoint" id="touchpoint">#</a></span>
+			<span><a class="mark" href="#touchpoint" aria-label="Link to this section">#</a></span>
 		</h3><p>Touch point data of the touch event</p>
 <h3 id="touchpoint-id">
 			touchpoint.id
-			<span><a class="mark" href="#touchpoint-id" id="touchpoint-id">#</a></span>
+			<span><a class="mark" href="#touchpoint-id" aria-label="Link to this section">#</a></span>
 		</h3><p>Touch point id </p>
-<ul>
-<li><code>@get</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> id: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="touchpoint-startposition">
 			touchpoint.startPosition
-			<span><a class="mark" href="#touchpoint-startposition" id="touchpoint-startposition">#</a></span>
+			<span><a class="mark" href="#touchpoint-startposition" aria-label="Link to this section">#</a></span>
 		</h3><p>The position x/y of the touchpoint in the window when it is first pressed </p>
-<ul>
-<li><code>@get</code> <code>startPosition</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> startPosition: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="touchpoint-position">
 			touchpoint.position
-			<span><a class="mark" href="#touchpoint-position" id="touchpoint-position">#</a></span>
+			<span><a class="mark" href="#touchpoint-position" aria-label="Link to this section">#</a></span>
 		</h3><p>The position of the touchpoint in the window </p>
-<ul>
-<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> position: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="touchpoint-force">
 			touchpoint.force
-			<span><a class="mark" href="#touchpoint-force" id="touchpoint-force">#</a></span>
+			<span><a class="mark" href="#touchpoint-force" aria-label="Link to this section">#</a></span>
 		</h3><p>touchpoint pressure strength, value range [0-1] </p>
-<ul>
-<li><code>@get</code> <code>force</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> force: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="touchpoint-view">
 			touchpoint.view
-			<span><a class="mark" href="#touchpoint-view" id="touchpoint-view">#</a></span>
+			<span><a class="mark" href="#touchpoint-view" aria-label="Link to this section">#</a></span>
 		</h3><p>The initial view of the touchpoint </p>
-<ul>
-<li><code>@get</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> view: <a class="api-type" href="view.html#view">View</a></code></pre>
+
+
 <h2 id="class-touchevent">
 			Class: TouchEvent
-			<span><a class="mark" href="#class-touchevent" id="class-touchevent">#</a></span>
+			<span><a class="mark" href="#class-touchevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="touchevent">
 			TouchEvent
-			<span><a class="mark" href="#touchevent" id="touchevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#touchevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="touchevent-changedtouches">
 			touchevent.changedTouches
-			<span><a class="mark" href="#touchevent-changedtouches" id="touchevent-changedtouches">#</a></span>
+			<span><a class="mark" href="#touchevent-changedtouches" aria-label="Link to this section">#</a></span>
 		</h3><p>Touch point collection </p>
-<ul>
-<li><code>@get</code> <code>changedTouches</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a><code>[]</code> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> changedTouches: <a class="api-type" href="#interface-touchpoint">TouchPoint</a>[]</code></pre>
+
+
 <h3 id="touchevent-position">
 			touchevent.position
-			<span><a class="mark" href="#touchevent-position" id="touchevent-position">#</a></span>
+			<span><a class="mark" href="#touchevent-position" aria-label="Link to this section">#</a></span>
 		</h3><p>first touch point position </p>
-<ul>
-<li><code>@get</code> <code>position</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> position: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h2 id="class-gesturetouchpoint">
 			Class: GestureTouchPoint
-			<span><a class="mark" href="#class-gesturetouchpoint" id="class-gesturetouchpoint">#</a></span>
+			<span><a class="mark" href="#class-gesturetouchpoint" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="gesturetouchpoint">
 			GestureTouchPoint
-			<span><a class="mark" href="#gesturetouchpoint" id="gesturetouchpoint">#</a></span>
-		</h3><ul>
-<li><code>@implements</code> <a href="#interface-touchpoint"><code>TouchPoint</code></a></li>
-</ul>
+			<span><a class="mark" href="#gesturetouchpoint" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Implements:</strong> <a href="#interface-touchpoint"><code>TouchPoint</code></a></p>
 <h3 id="gesturetouchpoint-touch">
 			gesturetouchpoint.touch
-			<span><a class="mark" href="#gesturetouchpoint-touch" id="gesturetouchpoint-touch">#</a></span>
+			<span><a class="mark" href="#gesturetouchpoint-touch" aria-label="Link to this section">#</a></span>
 		</h3><p>The reference touch point</p>
-<ul>
-<li><code>@get</code> <code>touch</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a> </li>
-</ul>
-<h3 id="gesturetouchpoint-constructor-touch-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> touch: <a class="api-type" href="#interface-touchpoint">TouchPoint</a></code></pre>
+
+
+<h3 id="gesturetouchpoint-constructor-touch">
 			gesturetouchpoint.constructor(touch)
-			<span><a class="mark" href="#gesturetouchpoint-constructor-touch-" id="gesturetouchpoint-constructor-touch-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>touch</code>: <a href="#interface-touchpoint"><code>TouchPoint</code></a> The reference touch point</li>
+			<span><a class="mark" href="#gesturetouchpoint-constructor-touch" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(touch: <a class="api-type" href="#interface-touchpoint">TouchPoint</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>touch</code> — The reference touch point</li>
 </ul>
 <h3 id="gesturetouchpoint-center">
 			gesturetouchpoint.center
-			<span><a class="mark" href="#gesturetouchpoint-center" id="gesturetouchpoint-center">#</a></span>
+			<span><a class="mark" href="#gesturetouchpoint-center" aria-label="Link to this section">#</a></span>
 		</h3><p>start and current position mid point</p>
-<ul>
-<li><code>@get</code> <code>center</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> center: </code></pre>
+
+
 <h3 id="gesturetouchpoint-distance">
 			gesturetouchpoint.distance
-			<span><a class="mark" href="#gesturetouchpoint-distance" id="gesturetouchpoint-distance">#</a></span>
+			<span><a class="mark" href="#gesturetouchpoint-distance" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture movement distance, for example, the distance moved by a finger</p>
-<ul>
-<li><code>@get</code> <code>distance</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> distance: </code></pre>
+
+
 <h2 id="enum-gesturestage">
 			Enum: GestureStage
-			<span><a class="mark" href="#enum-gesturestage" id="enum-gesturestage">#</a></span>
+			<span><a class="mark" href="#enum-gesturestage" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="gesturestage">
 			GestureStage
-			<span><a class="mark" href="#gesturestage" id="gesturestage">#</a></span>
+			<span><a class="mark" href="#gesturestage" aria-label="Link to this section">#</a></span>
 		</h3><p>Gesture stage</p>
 <ul>
 <li><code>Start</code><br>The gesture has just started </li>
@@ -1145,226 +1135,246 @@
 </ul>
 <h2 id="enum-gesturetype">
 			Enum: GestureType
-			<span><a class="mark" href="#enum-gesturetype" id="enum-gesturetype">#</a></span>
+			<span><a class="mark" href="#enum-gesturetype" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="gesturetype">
 			GestureType
-			<span><a class="mark" href="#gesturetype" id="gesturetype">#</a></span>
+			<span><a class="mark" href="#gesturetype" aria-label="Link to this section">#</a></span>
 		</h3><p>Gesture event type</p>
 <h2 id="class-gestureevent">
 			Class: GestureEvent
-			<span><a class="mark" href="#class-gestureevent" id="class-gestureevent">#</a></span>
+			<span><a class="mark" href="#class-gestureevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="gestureevent">
 			GestureEvent
-			<span><a class="mark" href="#gestureevent" id="gestureevent">#</a></span>
+			<span><a class="mark" href="#gestureevent" aria-label="Link to this section">#</a></span>
 		</h3><p>Gesture event, such as pan, swipe, pinch, rotate, etc.</p>
-<ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+<p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="gestureevent-expectedfingercount">
 			gestureevent.expectedFingerCount
-			<span><a class="mark" href="#gestureevent-expectedfingercount" id="gestureevent-expectedfingercount">#</a></span>
+			<span><a class="mark" href="#gestureevent-expectedfingercount" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the expected number of touch points for the gesture event </p>
-<ul>
-<li><code>@get</code> <code>expectedFingerCount</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> expectedFingerCount: </code></pre>
+
+
 <h3 id="gestureevent-swipedistance">
 			gestureevent.swipeDistance
-			<span><a class="mark" href="#gestureevent-swipedistance" id="gestureevent-swipedistance">#</a></span>
+			<span><a class="mark" href="#gestureevent-swipedistance" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the minimum distance (in points) that a swipe gesture needs to move </p>
-<ul>
-<li><code>@get</code> <code>swipeDistance</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> swipeDistance: </code></pre>
+
+
 <h3 id="gestureevent-swipevelocity">
 			gestureevent.swipeVelocity
-			<span><a class="mark" href="#gestureevent-swipevelocity" id="gestureevent-swipevelocity">#</a></span>
+			<span><a class="mark" href="#gestureevent-swipevelocity" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the minimum speed (in points per second) that a swipe gesture needs to move </p>
-<ul>
-<li><code>@get</code> <code>swipeVelocity</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> swipeVelocity: </code></pre>
+
+
 <h3 id="gestureevent-inittimestamp">
 			gestureevent.initTimestamp
-			<span><a class="mark" href="#gestureevent-inittimestamp" id="gestureevent-inittimestamp">#</a></span>
+			<span><a class="mark" href="#gestureevent-inittimestamp" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the initial velocity calculation time window, in milliseconds </p>
-<ul>
-<li><code>@get</code> <code>initTimestamp</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> initTimestamp: </code></pre>
+
+
 <h3 id="gestureevent-lastvelocityweight">
 			gestureevent.lastVelocityWeight
-			<span><a class="mark" href="#gestureevent-lastvelocityweight" id="gestureevent-lastvelocityweight">#</a></span>
+			<span><a class="mark" href="#gestureevent-lastvelocityweight" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the last velocity smoothing weight, value range [0, 0.95], default is 0.85 </p>
-<ul>
-<li><code>@get</code> <code>lastVelocityWeight</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> lastVelocityWeight: </code></pre>
+
+
 <h3 id="gestureevent-id">
 			gestureevent.id
-			<span><a class="mark" href="#gestureevent-id" id="gestureevent-id">#</a></span>
+			<span><a class="mark" href="#gestureevent-id" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture context number id </p>
-<ul>
-<li><code>@get</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> id: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="gestureevent-starttimestamp">
 			gestureevent.startTimestamp
-			<span><a class="mark" href="#gestureevent-starttimestamp" id="gestureevent-starttimestamp">#</a></span>
+			<span><a class="mark" href="#gestureevent-starttimestamp" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture start timestamp, in milliseconds </p>
-<ul>
-<li><code>@get</code> <code>startTimestamp</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> startTimestamp: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+
+
 <h3 id="gestureevent-stage">
 			gestureevent.stage
-			<span><a class="mark" href="#gestureevent-stage" id="gestureevent-stage">#</a></span>
+			<span><a class="mark" href="#gestureevent-stage" aria-label="Link to this section">#</a></span>
 		</h3><p>The current gesture stage </p>
-<ul>
-<li><code>@get</code> <code>stage</code>: <a href="#enum-gesturestage"><code>GestureStage</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> stage: <a class="api-type" href="#enum-gesturestage">GestureStage</a></code></pre>
+
+
 <h3 id="gestureevent-initdistance">
 			gestureevent.initDistance
-			<span><a class="mark" href="#gestureevent-initdistance" id="gestureevent-initdistance">#</a></span>
+			<span><a class="mark" href="#gestureevent-initdistance" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture initial distance </p>
-<ul>
-<li><code>@get</code> <code>initDistance</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> initDistance: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="gestureevent-initvelocity">
 			gestureevent.initVelocity
-			<span><a class="mark" href="#gestureevent-initvelocity" id="gestureevent-initvelocity">#</a></span>
+			<span><a class="mark" href="#gestureevent-initvelocity" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture initial speed, in dp per second </p>
-<ul>
-<li><code>@get</code> <code>initVelocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> initVelocity: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="gestureevent-distance">
 			gestureevent.distance
-			<span><a class="mark" href="#gestureevent-distance" id="gestureevent-distance">#</a></span>
+			<span><a class="mark" href="#gestureevent-distance" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture movement distance </p>
-<ul>
-<li><code>@get</code> <code>distance</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> distance: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="gestureevent-velocity">
 			gestureevent.velocity
-			<span><a class="mark" href="#gestureevent-velocity" id="gestureevent-velocity">#</a></span>
+			<span><a class="mark" href="#gestureevent-velocity" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture speed, in dp per second </p>
-<ul>
-<li><code>@get</code> <code>velocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> velocity: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="gestureevent-lastvelocity">
 			gestureevent.lastVelocity
-			<span><a class="mark" href="#gestureevent-lastvelocity" id="gestureevent-lastvelocity">#</a></span>
+			<span><a class="mark" href="#gestureevent-lastvelocity" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture speed in the last frame, in dp per second </p>
-<ul>
-<li><code>@get</code> <code>lastVelocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> lastVelocity: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="gestureevent-touchs">
 			gestureevent.touchs
-			<span><a class="mark" href="#gestureevent-touchs" id="gestureevent-touchs">#</a></span>
+			<span><a class="mark" href="#gestureevent-touchs" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture touch points </p>
-<ul>
-<li><code>@get</code> <code>touchs</code>: <a href="#class-gesturetouchpoint"><code>GestureTouchPoint</code></a><code>[]</code> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> touchs: <a class="api-type" href="#class-gesturetouchpoint">GestureTouchPoint</a>[]</code></pre>
+
+
 <h3 id="gestureevent-sealed">
 			gestureevent.sealed
-			<span><a class="mark" href="#gestureevent-sealed" id="gestureevent-sealed">#</a></span>
+			<span><a class="mark" href="#gestureevent-sealed" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether the gesture is sealed </p>
-<ul>
-<li><code>@get</code> <code>sealed</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> sealed: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="gestureevent-first">
 			gestureevent.first
-			<span><a class="mark" href="#gestureevent-first" id="gestureevent-first">#</a></span>
+			<span><a class="mark" href="#gestureevent-first" aria-label="Link to this section">#</a></span>
 		</h3><p>The first gesture touch point </p>
-<ul>
-<li><code>@get</code> <code>first</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> first: </code></pre>
+
+
 <h3 id="gestureevent-last">
 			gestureevent.last
-			<span><a class="mark" href="#gestureevent-last" id="gestureevent-last">#</a></span>
+			<span><a class="mark" href="#gestureevent-last" aria-label="Link to this section">#</a></span>
 		</h3><p>The last gesture touch point </p>
-<ul>
-<li><code>@get</code> <code>last</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> last: </code></pre>
+
+
 <h3 id="gestureevent-length">
 			gestureevent.length
-			<span><a class="mark" href="#gestureevent-length" id="gestureevent-length">#</a></span>
+			<span><a class="mark" href="#gestureevent-length" aria-label="Link to this section">#</a></span>
 		</h3><p>The number of gesture touch points </p>
-<ul>
-<li><code>@get</code> <code>length</code>:  </li>
-</ul>
-<h3 id="gestureevent-constructor-origin-id-timestamp-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> length: </code></pre>
+
+
+<h3 id="gestureevent-constructor-origin-id-timestamp">
 			gestureevent.constructor(origin,id,timestamp)
-			<span><a class="mark" href="#gestureevent-constructor-origin-id-timestamp-" id="gestureevent-constructor-origin-id-timestamp-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>id</code>: <a href="$ext.html#number"><code>number</code></a> The gesture context number id</li>
-<li><code>@param</code> <code>timestamp</code>: <a href="numbers.html#int"><code>Int</code></a> The gesture start timestamp, in milliseconds</li>
-<li><code>@param</code> <code>origin</code>: <a href="view.html#view"><code>View</code></a> </li>
+			<span><a class="mark" href="#gestureevent-constructor-origin-id-timestamp" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(id: <a class="api-type" href="$ext.html#number">number</a>, timestamp: <a class="api-type" href="numbers.html#int">Int</a>, origin: <a class="api-type" href="view.html#view">View</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> — The gesture context number id</li>
+<li><code>timestamp</code> — The gesture start timestamp, in milliseconds</li>
 </ul>
-<h3 id="gestureevent-isinitialstage-">
+<h3 id="gestureevent-isinitialstage">
 			gestureevent.isInitialStage()
-			<span><a class="mark" href="#gestureevent-isinitialstage-" id="gestureevent-isinitialstage-">#</a></span>
+			<span><a class="mark" href="#gestureevent-isinitialstage" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether the gesture is in the initial stage </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="gestureevent-isswipetriggered-">
+<pre class="api-signature sh_none"><code>isInitialStage(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="gestureevent-isswipetriggered">
 			gestureevent.isSwipeTriggered()
-			<span><a class="mark" href="#gestureevent-isswipetriggered-" id="gestureevent-isswipetriggered-">#</a></span>
+			<span><a class="mark" href="#gestureevent-isswipetriggered" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether the gesture has been triggered </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="gestureevent-reject-">
+<pre class="api-signature sh_none"><code>isSwipeTriggered(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="gestureevent-reject">
 			gestureevent.reject()
-			<span><a class="mark" href="#gestureevent-reject-" id="gestureevent-reject-">#</a></span>
-		</h3><p>Reject the current start point, point will be sent to next gesture event flow.<br/>Only valid in the <code>Start</code> stage, and the temp state will be cleared when the call ends.</p>
-<h3 id="gestureevent-seal-">
+			<span><a class="mark" href="#gestureevent-reject" aria-label="Link to this section">#</a></span>
+		</h3><p>Reject the current start point, point will be sent to next gesture event flow.
+Only valid in the <code>Start</code> stage, and the temp state will be cleared when the call ends.</p>
+<pre class="api-signature sh_none"><code>reject()</code></pre>
+
+
+
+<h3 id="gestureevent-seal">
 			gestureevent.seal()
-			<span><a class="mark" href="#gestureevent-seal-" id="gestureevent-seal-">#</a></span>
-		</h3><p>Prevent the creation of new gesture contexts for<br/>subsequent new points and close the flow of gestures backwards.</p>
-<h3 id="gestureevent-startposition-">
+			<span><a class="mark" href="#gestureevent-seal" aria-label="Link to this section">#</a></span>
+		</h3><p>Prevent the creation of new gesture contexts for
+subsequent new points and close the flow of gestures backwards.</p>
+<pre class="api-signature sh_none"><code>seal()</code></pre>
+
+
+
+<h3 id="gestureevent-startposition">
 			gestureevent.startPosition()
-			<span><a class="mark" href="#gestureevent-startposition-" id="gestureevent-startposition-">#</a></span>
+			<span><a class="mark" href="#gestureevent-startposition" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the mid point of all touch points&#39; start position</p>
-<ul>
-<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
-<h3 id="gestureevent-position-">
+<pre class="api-signature sh_none"><code>startPosition(): <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
+
+<h3 id="gestureevent-position">
 			gestureevent.position()
-			<span><a class="mark" href="#gestureevent-position-" id="gestureevent-position-">#</a></span>
+			<span><a class="mark" href="#gestureevent-position" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the mid point of all touch points&#39; current position</p>
-<ul>
-<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
-<h3 id="gestureevent-center-">
+<pre class="api-signature sh_none"><code>position(): <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
+
+<h3 id="gestureevent-center">
 			gestureevent.center()
-			<span><a class="mark" href="#gestureevent-center-" id="gestureevent-center-">#</a></span>
+			<span><a class="mark" href="#gestureevent-center" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the mid point of all touch points&#39; start position and current position</p>
-<ul>
-<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
-<h3 id="gestureevent-rotation-isdegree-">
+<pre class="api-signature sh_none"><code>center(): <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
+
+<h3 id="gestureevent-rotation-isdegree">
 			gestureevent.rotation(isDegree)
-			<span><a class="mark" href="#gestureevent-rotation-isdegree-" id="gestureevent-rotation-isdegree-">#</a></span>
-		</h3><p>Get the relative rotation angle (radians or degree) between two touch points.<br/>Positive = counter-clockwise, Negative = clockwise.</p>
-<ul>
-<li><code>@param</code> <code>isDegree</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="gestureevent-scale-">
+			<span><a class="mark" href="#gestureevent-rotation-isdegree" aria-label="Link to this section">#</a></span>
+		</h3><p>Get the relative rotation angle (radians or degree) between two touch points.
+Positive = counter-clockwise, Negative = clockwise.</p>
+<pre class="api-signature sh_none"><code>rotation(isDegree: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="gestureevent-scale">
 			gestureevent.scale()
-			<span><a class="mark" href="#gestureevent-scale-" id="gestureevent-scale-">#</a></span>
-		</h3><p>Get the scale of the first two touch points<br/>If there are less than two touch points, 1 is returned</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="gestureevent-distanceoftwofinger-">
+			<span><a class="mark" href="#gestureevent-scale" aria-label="Link to this section">#</a></span>
+		</h3><p>Get the scale of the first two touch points
+If there are less than two touch points, 1 is returned</p>
+<pre class="api-signature sh_none"><code>scale(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="gestureevent-distanceoftwofinger">
 			gestureevent.distanceOfTwoFinger()
-			<span><a class="mark" href="#gestureevent-distanceoftwofinger-" id="gestureevent-distanceoftwofinger-">#</a></span>
+			<span><a class="mark" href="#gestureevent-distanceoftwofinger" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the distance vector between two touch points</p>
-<ul>
-<li><code>@return</code> <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>distanceOfTwoFinger(): <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
+
 <h2 id="enum-spineeventtype">
 			Enum: SpineEventType
-			<span><a class="mark" href="#enum-spineeventtype" id="enum-spineeventtype">#</a></span>
+			<span><a class="mark" href="#enum-spineeventtype" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="spineeventtype">
 			SpineEventType
-			<span><a class="mark" href="#spineeventtype" id="spineeventtype">#</a></span>
+			<span><a class="mark" href="#spineeventtype" aria-label="Link to this section">#</a></span>
 		</h3><p>Spine animation event types</p>
 <ul>
 <li><code>Start_Type</code>  Animation started</li>
@@ -1376,238 +1386,234 @@
 </ul>
 <h2 id="interface-spineeventdata">
 			Interface: SpineEventData
-			<span><a class="mark" href="#interface-spineeventdata" id="interface-spineeventdata">#</a></span>
+			<span><a class="mark" href="#interface-spineeventdata" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="spineeventdata">
 			SpineEventData
-			<span><a class="mark" href="#spineeventdata" id="spineeventdata">#</a></span>
+			<span><a class="mark" href="#spineeventdata" aria-label="Link to this section">#</a></span>
 		</h3><p>Spine animation event description data</p>
 <h3 id="spineeventdata-name">
 			spineeventdata.name
-			<span><a class="mark" href="#spineeventdata-name" id="spineeventdata-name">#</a></span>
+			<span><a class="mark" href="#spineeventdata-name" aria-label="Link to this section">#</a></span>
 		</h3><p>The event name </p>
-<ul>
-<li><code>@get</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> name: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="spineeventdata-time">
 			spineeventdata.time
-			<span><a class="mark" href="#spineeventdata-time" id="spineeventdata-time">#</a></span>
+			<span><a class="mark" href="#spineeventdata-time" aria-label="Link to this section">#</a></span>
 		</h3><p>The event time (seconds) </p>
-<ul>
-<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> time: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineeventdata-intvalue">
 			spineeventdata.intValue
-			<span><a class="mark" href="#spineeventdata-intvalue" id="spineeventdata-intvalue">#</a></span>
+			<span><a class="mark" href="#spineeventdata-intvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>The event integer payload </p>
-<ul>
-<li><code>@get</code> <code>intValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> intValue: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineeventdata-floatvalue">
 			spineeventdata.floatValue
-			<span><a class="mark" href="#spineeventdata-floatvalue" id="spineeventdata-floatvalue">#</a></span>
+			<span><a class="mark" href="#spineeventdata-floatvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>The event float payload </p>
-<ul>
-<li><code>@get</code> <code>floatValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> floatValue: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineeventdata-stringvalue">
 			spineeventdata.stringValue
-			<span><a class="mark" href="#spineeventdata-stringvalue" id="spineeventdata-stringvalue">#</a></span>
+			<span><a class="mark" href="#spineeventdata-stringvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>The event string payload </p>
-<ul>
-<li><code>@get</code> <code>stringValue</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> stringValue: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="spineeventdata-audiopath">
 			spineeventdata.audioPath
-			<span><a class="mark" href="#spineeventdata-audiopath" id="spineeventdata-audiopath">#</a></span>
+			<span><a class="mark" href="#spineeventdata-audiopath" aria-label="Link to this section">#</a></span>
 		</h3><p>The event audio path </p>
-<ul>
-<li><code>@get</code> <code>audioPath</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> audioPath: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="spineeventdata-volume">
 			spineeventdata.volume
-			<span><a class="mark" href="#spineeventdata-volume" id="spineeventdata-volume">#</a></span>
+			<span><a class="mark" href="#spineeventdata-volume" aria-label="Link to this section">#</a></span>
 		</h3><p>The event volume </p>
-<ul>
-<li><code>@get</code> <code>volume</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> volume: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineeventdata-balance">
 			spineeventdata.balance
-			<span><a class="mark" href="#spineeventdata-balance" id="spineeventdata-balance">#</a></span>
+			<span><a class="mark" href="#spineeventdata-balance" aria-label="Link to this section">#</a></span>
 		</h3><p>The event audio balance </p>
-<ul>
-<li><code>@get</code> <code>balance</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> balance: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h2 id="class-spineevent">
 			Class: SpineEvent
-			<span><a class="mark" href="#class-spineevent" id="class-spineevent">#</a></span>
+			<span><a class="mark" href="#class-spineevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="spineevent">
 			SpineEvent
-			<span><a class="mark" href="#spineevent" id="spineevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#spineevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="spineevent-origin">
 			spineevent.origin
-			<span><a class="mark" href="#spineevent-origin" id="spineevent-origin">#</a></span>
+			<span><a class="mark" href="#spineevent-origin" aria-label="Link to this section">#</a></span>
 		</h3><p>The origin Spine object of the event </p>
-<ul>
-<li><code>@get</code> <code>origin</code>: <a href="view.html#spine"><code>Spine</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> origin: <a class="api-type" href="view.html#spine">Spine</a></code></pre>
+
+
 <h3 id="spineevent-type">
 			spineevent.type
-			<span><a class="mark" href="#spineevent-type" id="spineevent-type">#</a></span>
+			<span><a class="mark" href="#spineevent-type" aria-label="Link to this section">#</a></span>
 		</h3><p>The event type </p>
-<ul>
-<li><code>@get</code> <code>type</code>: <a href="#enum-spineeventtype"><code>SpineEventType</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> type: <a class="api-type" href="#enum-spineeventtype">SpineEventType</a></code></pre>
+
+
 <h3 id="spineevent-trackindex">
 			spineevent.trackIndex
-			<span><a class="mark" href="#spineevent-trackindex" id="spineevent-trackindex">#</a></span>
+			<span><a class="mark" href="#spineevent-trackindex" aria-label="Link to this section">#</a></span>
 		</h3><p>The animation track index </p>
-<ul>
-<li><code>@get</code> <code>trackIndex</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> trackIndex: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="spineevent-animationname">
 			spineevent.animationName
-			<span><a class="mark" href="#spineevent-animationname" id="spineevent-animationname">#</a></span>
+			<span><a class="mark" href="#spineevent-animationname" aria-label="Link to this section">#</a></span>
 		</h3><p>The animation name </p>
-<ul>
-<li><code>@get</code> <code>animationName</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> animationName: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="spineevent-tracktime">
 			spineevent.trackTime
-			<span><a class="mark" href="#spineevent-tracktime" id="spineevent-tracktime">#</a></span>
+			<span><a class="mark" href="#spineevent-tracktime" aria-label="Link to this section">#</a></span>
 		</h3><p>The current time of the track </p>
-<ul>
-<li><code>@get</code> <code>trackTime</code>: <a href="numbers.html#float"><code>Float</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> trackTime: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+
+
 <h2 id="class-spineextevent">
 			Class: SpineExtEvent
-			<span><a class="mark" href="#class-spineextevent" id="class-spineextevent">#</a></span>
+			<span><a class="mark" href="#class-spineextevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="spineextevent">
 			SpineExtEvent
-			<span><a class="mark" href="#spineextevent" id="spineextevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-spineevent"><code>SpineEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#spineextevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-spineevent"><code>SpineEvent</code></a></p>
 <h3 id="spineextevent-staticdata">
 			spineextevent.staticData
-			<span><a class="mark" href="#spineextevent-staticdata" id="spineextevent-staticdata">#</a></span>
+			<span><a class="mark" href="#spineextevent-staticdata" aria-label="Link to this section">#</a></span>
 		</h3><p>Static event description </p>
-<ul>
-<li><code>@get</code> <code>staticData</code>: <a href="#interface-spineeventdata"><code>SpineEventData</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> staticData: <a class="api-type" href="#interface-spineeventdata">SpineEventData</a></code></pre>
+
+
 <h3 id="spineextevent-time">
 			spineextevent.time
-			<span><a class="mark" href="#spineextevent-time" id="spineextevent-time">#</a></span>
+			<span><a class="mark" href="#spineextevent-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger time (seconds) </p>
-<ul>
-<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> time: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineextevent-intvalue">
 			spineextevent.intValue
-			<span><a class="mark" href="#spineextevent-intvalue" id="spineextevent-intvalue">#</a></span>
+			<span><a class="mark" href="#spineextevent-intvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>Integer payload </p>
-<ul>
-<li><code>@get</code> <code>intValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> intValue: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineextevent-floatvalue">
 			spineextevent.floatValue
-			<span><a class="mark" href="#spineextevent-floatvalue" id="spineextevent-floatvalue">#</a></span>
+			<span><a class="mark" href="#spineextevent-floatvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>Float payload </p>
-<ul>
-<li><code>@get</code> <code>floatValue</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> floatValue: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineextevent-stringvalue">
 			spineextevent.stringValue
-			<span><a class="mark" href="#spineextevent-stringvalue" id="spineextevent-stringvalue">#</a></span>
+			<span><a class="mark" href="#spineextevent-stringvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>String payload </p>
-<ul>
-<li><code>@get</code> <code>stringValue</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> stringValue: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="spineextevent-volume">
 			spineextevent.volume
-			<span><a class="mark" href="#spineextevent-volume" id="spineextevent-volume">#</a></span>
+			<span><a class="mark" href="#spineextevent-volume" aria-label="Link to this section">#</a></span>
 		</h3><p>Volume </p>
-<ul>
-<li><code>@get</code> <code>volume</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> volume: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="spineextevent-balance">
 			spineextevent.balance
-			<span><a class="mark" href="#spineextevent-balance" id="spineextevent-balance">#</a></span>
+			<span><a class="mark" href="#spineextevent-balance" aria-label="Link to this section">#</a></span>
 		</h3><p>Audio balance </p>
-<ul>
-<li><code>@get</code> <code>balance</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> balance: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h2 id="class-agentstateevent">
 			Class: AgentStateEvent
-			<span><a class="mark" href="#class-agentstateevent" id="class-agentstateevent">#</a></span>
+			<span><a class="mark" href="#class-agentstateevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="agentstateevent">
 			AgentStateEvent
-			<span><a class="mark" href="#agentstateevent" id="agentstateevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-uievent"><code>UIEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#agentstateevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-uievent"><code>UIEvent</code></a></p>
 <h3 id="agentstateevent-origin">
 			agentstateevent.origin
-			<span><a class="mark" href="#agentstateevent-origin" id="agentstateevent-origin">#</a></span>
+			<span><a class="mark" href="#agentstateevent-origin" aria-label="Link to this section">#</a></span>
 		</h3><p>agent itself </p>
-<ul>
-<li><code>@get</code> <code>origin</code>: <a href="view.html#agent"><code>Agent</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> origin: <a class="api-type" href="view.html#agent">Agent</a></code></pre>
+
+
 <h3 id="agentstateevent-velocity">
 			agentstateevent.velocity
-			<span><a class="mark" href="#agentstateevent-velocity" id="agentstateevent-velocity">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>velocity</code>: <a href="types.html#vec2"><code>Vec2</code></a> Current velocity vector.</li>
-</ul>
+			<span><a class="mark" href="#agentstateevent-velocity" aria-label="Link to this section">#</a></span>
+		</h3><p>Current velocity vector.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> velocity: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="agentstateevent-heading">
 			agentstateevent.heading
-			<span><a class="mark" href="#agentstateevent-heading" id="agentstateevent-heading">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>heading</code>: <a href="types.html#vec2"><code>Vec2</code></a> Current heading vector to along waypoints or follow target.</li>
-</ul>
+			<span><a class="mark" href="#agentstateevent-heading" aria-label="Link to this section">#</a></span>
+		</h3><p>Current heading vector to along waypoints or follow target.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> heading: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="agentstateevent-target">
 			agentstateevent.target
-			<span><a class="mark" href="#agentstateevent-target" id="agentstateevent-target">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>target</code>: <a href="types.html#vec2"><code>Vec2</code></a> Current target position.</li>
-</ul>
+			<span><a class="mark" href="#agentstateevent-target" aria-label="Link to this section">#</a></span>
+		</h3><p>Current target position.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> target: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="agentstateevent-moving">
 			agentstateevent.moving
-			<span><a class="mark" href="#agentstateevent-moving" id="agentstateevent-moving">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>moving</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Following state.</li>
-</ul>
+			<span><a class="mark" href="#agentstateevent-moving" aria-label="Link to this section">#</a></span>
+		</h3><p>Following state.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> moving: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h2 id="class-arrivepositionevent">
 			Class: ArrivePositionEvent
-			<span><a class="mark" href="#class-arrivepositionevent" id="class-arrivepositionevent">#</a></span>
+			<span><a class="mark" href="#class-arrivepositionevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="arrivepositionevent">
 			ArrivePositionEvent
-			<span><a class="mark" href="#arrivepositionevent" id="arrivepositionevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#arrivepositionevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></p>
 <h3 id="arrivepositionevent-tonext">
 			arrivepositionevent.toNext
-			<span><a class="mark" href="#arrivepositionevent-tonext" id="arrivepositionevent-tonext">#</a></span>
+			<span><a class="mark" href="#arrivepositionevent-tonext" aria-label="Link to this section">#</a></span>
 		</h3><p>vector to next waypoint </p>
-<ul>
-<li><code>@get</code> <code>toNext</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> toNext: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="arrivepositionevent-waypointindex">
 			arrivepositionevent.waypointIndex
-			<span><a class="mark" href="#arrivepositionevent-waypointindex" id="arrivepositionevent-waypointindex">#</a></span>
+			<span><a class="mark" href="#arrivepositionevent-waypointindex" aria-label="Link to this section">#</a></span>
 		</h3><p>waypoint index </p>
-<ul>
-<li><code>@get</code> <code>waypointIndex</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> waypointIndex: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h2 id="enum-movementstate">
 			Enum: MovementState
-			<span><a class="mark" href="#enum-movementstate" id="enum-movementstate">#</a></span>
+			<span><a class="mark" href="#enum-movementstate" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="movementstate">
 			MovementState
-			<span><a class="mark" href="#movementstate" id="movementstate">#</a></span>
+			<span><a class="mark" href="#movementstate" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>Started</code>  Movement started</li>
 <li><code>Arrived</code>  Arrived at target or waypoint</li>
@@ -1616,74 +1622,68 @@
 </ul>
 <h2 id="class-agentmovementevent">
 			Class: AgentMovementEvent
-			<span><a class="mark" href="#class-agentmovementevent" id="class-agentmovementevent">#</a></span>
+			<span><a class="mark" href="#class-agentmovementevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="agentmovementevent">
 			AgentMovementEvent
-			<span><a class="mark" href="#agentmovementevent" id="agentmovementevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#agentmovementevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></p>
 <h3 id="agentmovementevent-movementstate">
 			agentmovementevent.movementState
-			<span><a class="mark" href="#agentmovementevent-movementstate" id="agentmovementevent-movementstate">#</a></span>
+			<span><a class="mark" href="#agentmovementevent-movementstate" aria-label="Link to this section">#</a></span>
 		</h3><p>Movement state </p>
-<ul>
-<li><code>@get</code> <code>movementState</code>: <a href="#enum-movementstate"><code>MovementState</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> movementState: <a class="api-type" href="#enum-movementstate">MovementState</a></code></pre>
+
+
 <h2 id="class-discoveryagentevent">
 			Class: DiscoveryAgentEvent
-			<span><a class="mark" href="#class-discoveryagentevent" id="class-discoveryagentevent">#</a></span>
+			<span><a class="mark" href="#class-discoveryagentevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="discoveryagentevent">
 			DiscoveryAgentEvent
-			<span><a class="mark" href="#discoveryagentevent" id="discoveryagentevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></li>
-</ul>
+			<span><a class="mark" href="#discoveryagentevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-agentstateevent"><code>AgentStateEvent</code></a></p>
 <h3 id="discoveryagentevent-origin">
 			discoveryagentevent.origin
-			<span><a class="mark" href="#discoveryagentevent-origin" id="discoveryagentevent-origin">#</a></span>
+			<span><a class="mark" href="#discoveryagentevent-origin" aria-label="Link to this section">#</a></span>
 		</h3><p>agent itself </p>
-<ul>
-<li><code>@get</code> <code>origin</code>: <a href="view.html#agent"><code>Agent</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> origin: <a class="api-type" href="view.html#agent">Agent</a></code></pre>
+
+
 <h3 id="discoveryagentevent-agent">
 			discoveryagentevent.agent
-			<span><a class="mark" href="#discoveryagentevent-agent" id="discoveryagentevent-agent">#</a></span>
+			<span><a class="mark" href="#discoveryagentevent-agent" aria-label="Link to this section">#</a></span>
 		</h3><p>other agent when remove view is null </p>
-<ul>
-<li><code>@get</code> <code>agent</code>: <a href="view.html#agent"><code>Agent</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> agent: <a class="api-type" href="view.html#agent">Agent</a></code></pre>
+
+
 <h3 id="discoveryagentevent-location">
 			discoveryagentevent.location
-			<span><a class="mark" href="#discoveryagentevent-location" id="discoveryagentevent-location">#</a></span>
+			<span><a class="mark" href="#discoveryagentevent-location" aria-label="Link to this section">#</a></span>
 		</h3><p>to agent location </p>
-<ul>
-<li><code>@get</code> <code>location</code>: <a href="types.html#vec2"><code>Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> location: <a class="api-type" href="types.html#vec2">Vec2</a></code></pre>
+
+
 <h3 id="discoveryagentevent-level">
 			discoveryagentevent.level
-			<span><a class="mark" href="#discoveryagentevent-level" id="discoveryagentevent-level">#</a></span>
+			<span><a class="mark" href="#discoveryagentevent-level" aria-label="Link to this section">#</a></span>
 		</h3><p>discovery level, 0xffffffff means lost all levels </p>
-<ul>
-<li><code>@get</code> <code>level</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="discoveryagentevent-entering">
 			discoveryagentevent.entering
-			<span><a class="mark" href="#discoveryagentevent-entering" id="discoveryagentevent-entering">#</a></span>
+			<span><a class="mark" href="#discoveryagentevent-entering" aria-label="Link to this section">#</a></span>
 		</h3><p>is leaving or entering </p>
-<ul>
-<li><code>@get</code> <code>entering</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> entering: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h2 id="class-nativenotification">
 			Class: NativeNotification
-			<span><a class="mark" href="#class-nativenotification" id="class-nativenotification">#</a></span>
+			<span><a class="mark" href="#class-nativenotification" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="nativenotification">
 			NativeNotification
-			<span><a class="mark" href="#nativenotification" id="nativenotification">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="$event.html#notification"><code>Notification</code></a></li>
-<li><code>@template</code> &lt;<code>E</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#nativenotification" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="$event.html#notification"><code>Notification</code></a>
+<strong>Type parameters:</strong> <code>E</code></p>
 
 			</div>
 
@@ -1691,19 +1691,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'event.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

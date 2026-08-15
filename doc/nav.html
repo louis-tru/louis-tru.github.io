@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'nav.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-nav">quark/nav</a></span>
@@ -140,13 +127,13 @@
 <span><a href="#navigationstatus-navstatus">navigationstatus.navStatus</a></span>
 </li>
 <li>
-<span><a href="#navigationstatus-intoleave-animate-">navigationstatus.intoLeave(animate)</a></span>
+<span><a href="#navigationstatus-intoleave-animate">navigationstatus.intoLeave(animate)</a></span>
 </li>
 <li>
-<span><a href="#navigationstatus-intobackground-animate-">navigationstatus.intoBackground(animate)</a></span>
+<span><a href="#navigationstatus-intobackground-animate">navigationstatus.intoBackground(animate)</a></span>
 </li>
 <li>
-<span><a href="#navigationstatus-intoforeground-animate-">navigationstatus.intoForeground(animate)</a></span>
+<span><a href="#navigationstatus-intoforeground-animate">navigationstatus.intoForeground(animate)</a></span>
 </li>
 </ul>
 <li>
@@ -159,34 +146,34 @@
 <span><a href="#navigation-navstack">navigation.navStack</a></span>
 </li>
 <li>
-<span><a href="#navigation-initfocus-">navigation.initFocus()</a></span>
+<span><a href="#navigation-initfocus">navigation.initFocus()</a></span>
 </li>
 <li>
-<span><a href="#navigation-registernavigation-animate-">navigation.registerNavigation(animate)</a></span>
+<span><a href="#navigation-registernavigation-animate">navigation.registerNavigation(animate)</a></span>
 </li>
 <li>
-<span><a href="#navigation-unregisternavigation-animate-">navigation.unregisterNavigation(animate)</a></span>
+<span><a href="#navigation-unregisternavigation-animate">navigation.unregisterNavigation(animate)</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationback-">navigation.navigationBack()</a></span>
+<span><a href="#navigation-navigationback">navigation.navigationBack()</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationenter-focus-">navigation.navigationEnter(focus)</a></span>
+<span><a href="#navigation-navigationenter-focus">navigation.navigationEnter(focus)</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationtop-focus-">navigation.navigationTop(focus)</a></span>
+<span><a href="#navigation-navigationtop-focus">navigation.navigationTop(focus)</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationdown-focus-">navigation.navigationDown(focus)</a></span>
+<span><a href="#navigation-navigationdown-focus">navigation.navigationDown(focus)</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationleft-focus-">navigation.navigationLeft(focus)</a></span>
+<span><a href="#navigation-navigationleft-focus">navigation.navigationLeft(focus)</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationright-focus-">navigation.navigationRight(focus)</a></span>
+<span><a href="#navigation-navigationright-focus">navigation.navigationRight(focus)</a></span>
 </li>
 <li>
-<span><a href="#navigation-navigationmenu-">navigation.navigationMenu()</a></span>
+<span><a href="#navigation-navigationmenu">navigation.navigationMenu()</a></span>
 </li>
 </ul>
 <li>
@@ -199,13 +186,13 @@
 <span><a href="#navpagecollection-enableanimate">navpagecollection.enableAnimate</a></span>
 </li>
 <li>
-<span><a href="#navpagecollection-iscurrent-page-">navpagecollection.isCurrent(page)</a></span>
+<span><a href="#navpagecollection-iscurrent-page">navpagecollection.isCurrent(page)</a></span>
 </li>
 <li>
-<span><a href="#navpagecollection-push-arg-animate-">navpagecollection.push(arg,animate?)</a></span>
+<span><a href="#navpagecollection-push-arg-animate">navpagecollection.push(arg,animate?)</a></span>
 </li>
 <li>
-<span><a href="#navpagecollection-pop-animate-count-">navpagecollection.pop(animate?,count?)</a></span>
+<span><a href="#navpagecollection-pop-animate-count">navpagecollection.pop(animate?,count?)</a></span>
 </li>
 </ul>
 <li>
@@ -233,10 +220,10 @@
 <span><a href="#navbar-page">navbar.page</a></span>
 </li>
 <li>
-<span><a href="#navbar-setbacktext-value-">navbar.setBackText(value)</a></span>
+<span><a href="#navbar-setbacktext-value">navbar.setBackText(value)</a></span>
 </li>
 <li>
-<span><a href="#navbar-settitletext-value-">navbar.setTitleText(value)</a></span>
+<span><a href="#navbar-settitletext-value">navbar.setTitleText(value)</a></span>
 </li>
 </ul>
 <li>
@@ -283,18 +270,18 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-nav">
 			quark/nav
-			<span><a class="mark" href="#quark-nav" id="quark-nav">#</a></span>
+			<span><a class="mark" href="#quark-nav" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-navstatus">
 			Enum: NavStatus
-			<span><a class="mark" href="#enum-navstatus" id="enum-navstatus">#</a></span>
+			<span><a class="mark" href="#enum-navstatus" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="navstatus">
 			NavStatus
-			<span><a class="mark" href="#navstatus" id="navstatus">#</a></span>
+			<span><a class="mark" href="#navstatus" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>Init</code>  </li>
 <li><code>Foreground</code>  </li>
@@ -302,311 +289,327 @@
 </ul>
 <h2 id="class-navigationstatus">
 			Class: NavigationStatus
-			<span><a class="mark" href="#class-navigationstatus" id="class-navigationstatus">#</a></span>
+			<span><a class="mark" href="#class-navigationstatus" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="navigationstatus">
 			NavigationStatus
-			<span><a class="mark" href="#navigationstatus" id="navigationstatus">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="ctr.html#viewcontroller"><code>ViewController</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#navigationstatus" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="ctr.html#viewcontroller"><code>ViewController</code></a>
+<strong>Type parameters:</strong> <code>P</code> = <code>{}</code>, <code>S</code> = <code>{}</code></p>
 <h3 id="navigationstatus-navstatus">
 			navigationstatus.navStatus
-			<span><a class="mark" href="#navigationstatus-navstatus" id="navigationstatus-navstatus">#</a></span>
+			<span><a class="mark" href="#navigationstatus-navstatus" aria-label="Link to this section">#</a></span>
 		</h3><p>0=init or exit,1=background,2=foreground</p>
-<ul>
-<li><code>@get</code> <code>navStatus</code>: <a href="#enum-navstatus"><code>NavStatus</code></a> </li>
-</ul>
-<h3 id="navigationstatus-intoleave-animate-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> navStatus: <a class="api-type" href="#enum-navstatus">NavStatus</a></code></pre>
+
+
+<h3 id="navigationstatus-intoleave-animate">
 			navigationstatus.intoLeave(animate)
-			<span><a class="mark" href="#navigationstatus-intoleave-animate-" id="navigationstatus-intoleave-animate-">#</a></span>
+			<span><a class="mark" href="#navigationstatus-intoleave-animate" aria-label="Link to this section">#</a></span>
 		</h3><p>When the component leaves</p>
-<ul>
-<li><code>@param</code> <code>animate</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="navigationstatus-intobackground-animate-">
+<pre class="api-signature sh_none"><code>intoLeave(animate: <a class="api-type" href="$ext.html#number">number</a>)</code></pre>
+
+
+
+<h3 id="navigationstatus-intobackground-animate">
 			navigationstatus.intoBackground(animate)
-			<span><a class="mark" href="#navigationstatus-intobackground-animate-" id="navigationstatus-intobackground-animate-">#</a></span>
+			<span><a class="mark" href="#navigationstatus-intobackground-animate" aria-label="Link to this section">#</a></span>
 		</h3><p>When the component enters the background</p>
-<ul>
-<li><code>@param</code> <code>animate</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="navigationstatus-intoforeground-animate-">
+<pre class="api-signature sh_none"><code>intoBackground(animate: <a class="api-type" href="$ext.html#number">number</a>)</code></pre>
+
+
+
+<h3 id="navigationstatus-intoforeground-animate">
 			navigationstatus.intoForeground(animate)
-			<span><a class="mark" href="#navigationstatus-intoforeground-animate-" id="navigationstatus-intoforeground-animate-">#</a></span>
+			<span><a class="mark" href="#navigationstatus-intoforeground-animate" aria-label="Link to this section">#</a></span>
 		</h3><p>When the component enters the foreground</p>
-<ul>
-<li><code>@param</code> <code>animate</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>intoForeground(animate: <a class="api-type" href="$ext.html#number">number</a>)</code></pre>
+
+
+
 <h2 id="class-navigation">
 			Class: Navigation
-			<span><a class="mark" href="#class-navigation" id="class-navigation">#</a></span>
+			<span><a class="mark" href="#class-navigation" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="navigation">
 			Navigation
-			<span><a class="mark" href="#navigation" id="navigation">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-navigationstatus"><code>NavigationStatus</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#navigation" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-navigationstatus"><code>NavigationStatus</code></a>
+<strong>Type parameters:</strong> <code>P</code> = <code>{}</code>, <code>S</code> = <code>{}</code></p>
 <h3 id="navigation-navstack">
 			navigation.navStack
-			<span><a class="mark" href="#navigation-navstack" id="navigation-navstack">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>navStack</code>: <a href="event.html#list"><code>List</code></a>&lt;<a href="#class-navigation"><code>Navigation</code></a>&gt; </li>
-</ul>
-<h3 id="navigation-initfocus-">
+			<span><a class="mark" href="#navigation-navstack" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> navStack: <a class="api-type" href="event.html#list">List</a>&lt;<a class="api-type" href="#class-navigation">Navigation</a>&gt;</code></pre>
+
+
+<h3 id="navigation-initfocus">
 			navigation.initFocus()
-			<span><a class="mark" href="#navigation-initfocus-" id="navigation-initfocus-">#</a></span>
+			<span><a class="mark" href="#navigation-initfocus" aria-label="Link to this section">#</a></span>
 		</h3><p>When initializing navigation, return a focus view</p>
-<ul>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
-<h3 id="navigation-registernavigation-animate-">
+<pre class="api-signature sh_none"><code>initFocus(): <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
+
+<h3 id="navigation-registernavigation-animate">
 			navigation.registerNavigation(animate)
-			<span><a class="mark" href="#navigation-registernavigation-animate-" id="navigation-registernavigation-animate-">#</a></span>
+			<span><a class="mark" href="#navigation-registernavigation-animate" aria-label="Link to this section">#</a></span>
 		</h3><p>Called when a navigation component is created</p>
-<ul>
-<li><code>@param</code> <code>animate?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>animate</code>:  </li>
-</ul>
-<h3 id="navigation-unregisternavigation-animate-">
+<pre class="api-signature sh_none"><code>registerNavigation(animate?: <a class="api-type" href="numbers.html#uint">Uint</a>, animate: any)</code></pre>
+
+
+
+<h3 id="navigation-unregisternavigation-animate">
 			navigation.unregisterNavigation(animate)
-			<span><a class="mark" href="#navigation-unregisternavigation-animate-" id="navigation-unregisternavigation-animate-">#</a></span>
+			<span><a class="mark" href="#navigation-unregisternavigation-animate" aria-label="Link to this section">#</a></span>
 		</h3><p>Called when a navigation component is unmounted</p>
-<ul>
-<li><code>@param</code> <code>animate?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>animate</code>:  </li>
-</ul>
-<h3 id="navigation-navigationback-">
+<pre class="api-signature sh_none"><code>unregisterNavigation(animate?: <a class="api-type" href="numbers.html#uint">Uint</a>, animate: any)</code></pre>
+
+
+
+<h3 id="navigation-navigationback">
 			navigation.navigationBack()
-			<span><a class="mark" href="#navigation-navigationback-" id="navigation-navigationback-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationback" aria-label="Link to this section">#</a></span>
 		</h3><ul>
-<li>When a navigation event occurs, the system will first send the event to the focus view,<br/>  If the event can be successfully transmitted to root,<br/>  The event will ultimately be sent to the top of the current navigation list stack</li>
-<li>If false is returned here,<br/>  it will continue to pass to the bottom of the navigation list stack,<br/>  Until it returns true or reaches the bottom of the stack to exit the application</li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
+<li>When a navigation event occurs, the system will first send the event to the focus view,
+  If the event can be successfully transmitted to root,
+  The event will ultimately be sent to the top of the current navigation list stack</li>
+<li>If false is returned here,
+  it will continue to pass to the bottom of the navigation list stack,
+  Until it returns true or reaches the bottom of the stack to exit the application<pre class="api-signature sh_none"><code>navigationBack(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+</li>
 </ul>
-<h3 id="navigation-navigationenter-focus-">
+<h3 id="navigation-navigationenter-focus">
 			navigation.navigationEnter(focus)
-			<span><a class="mark" href="#navigation-navigationenter-focus-" id="navigation-navigationenter-focus-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationenter-focus" aria-label="Link to this section">#</a></span>
 		</h3><p>Called when the remote control presses OK</p>
-<ul>
-<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a> </li>
-</ul>
-<h3 id="navigation-navigationtop-focus-">
+<pre class="api-signature sh_none"><code>navigationEnter(focus: <a class="api-type" href="view.html#view">View</a>)</code></pre>
+
+
+
+<h3 id="navigation-navigationtop-focus">
 			navigation.navigationTop(focus)
-			<span><a class="mark" href="#navigation-navigationtop-focus-" id="navigation-navigationtop-focus-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationtop-focus" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li>Called when the remote control presses Up</li>
-<li>The focus will not change in any way is returning null</li>
-<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li>The focus will not change in any way is returning null<pre class="api-signature sh_none"><code>navigationTop(focus: <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>): <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
+
+</li>
 </ul>
-<h3 id="navigation-navigationdown-focus-">
+<h3 id="navigation-navigationdown-focus">
 			navigation.navigationDown(focus)
-			<span><a class="mark" href="#navigation-navigationdown-focus-" id="navigation-navigationdown-focus-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationdown-focus" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li>Called when the remote control presses Down</li>
-<li>The focus will not change in any way is returning null</li>
-<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li>The focus will not change in any way is returning null<pre class="api-signature sh_none"><code>navigationDown(focus: <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>): <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
+
+</li>
 </ul>
-<h3 id="navigation-navigationleft-focus-">
+<h3 id="navigation-navigationleft-focus">
 			navigation.navigationLeft(focus)
-			<span><a class="mark" href="#navigation-navigationleft-focus-" id="navigation-navigationleft-focus-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationleft-focus" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li>Called when the remote control presses Left</li>
-<li>The focus will not change in any way is returning null</li>
-<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li>The focus will not change in any way is returning null<pre class="api-signature sh_none"><code>navigationLeft(focus: <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>): <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
+
+</li>
 </ul>
-<h3 id="navigation-navigationright-focus-">
+<h3 id="navigation-navigationright-focus">
 			navigation.navigationRight(focus)
-			<span><a class="mark" href="#navigation-navigationright-focus-" id="navigation-navigationright-focus-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationright-focus" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li>Called when the remote control presses Right</li>
-<li>The focus will not change in any way is returning null</li>
-<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-<li><code>@return</code> <a href="view.html#view"><code>View</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
+<li>The focus will not change in any way is returning null<pre class="api-signature sh_none"><code>navigationRight(focus: <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>): <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
+
+</li>
 </ul>
-<h3 id="navigation-navigationmenu-">
+<h3 id="navigation-navigationmenu">
 			navigation.navigationMenu()
-			<span><a class="mark" href="#navigation-navigationmenu-" id="navigation-navigationmenu-">#</a></span>
+			<span><a class="mark" href="#navigation-navigationmenu" aria-label="Link to this section">#</a></span>
 		</h3><p>When pressing the menu button, it will be called up</p>
+<pre class="api-signature sh_none"><code>navigationMenu()</code></pre>
+
+
+
 <h2 id="class-navpagecollection">
 			Class: NavPageCollection
-			<span><a class="mark" href="#class-navpagecollection" id="class-navpagecollection">#</a></span>
+			<span><a class="mark" href="#class-navpagecollection" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="navpagecollection">
 			NavPageCollection
-			<span><a class="mark" href="#navpagecollection" id="navpagecollection">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-navigation"><code>Navigation</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#navpagecollection" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-navigation"><code>Navigation</code></a>
+<strong>Type parameters:</strong> <code>P</code> = <code>{}</code>, <code>S</code> = <code>{}</code></p>
 <h3 id="navpagecollection-enableanimate">
 			navpagecollection.enableAnimate
-			<span><a class="mark" href="#navpagecollection-enableanimate" id="navpagecollection-enableanimate">#</a></span>
-		</h3><ul>
-<li><code>enableAnimate</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="navpagecollection-iscurrent-page-">
+			<span><a class="mark" href="#navpagecollection-enableanimate" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>enableAnimate: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="navpagecollection-iscurrent-page">
 			navpagecollection.isCurrent(page)
-			<span><a class="mark" href="#navpagecollection-iscurrent-page-" id="navpagecollection-iscurrent-page-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>page</code>: <a href="#class-navpage"><code>NavPage</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="navpagecollection-push-arg-animate-">
+			<span><a class="mark" href="#navpagecollection-iscurrent-page" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>isCurrent(page: <a class="api-type" href="#class-navpage">NavPage</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="navpagecollection-push-arg-animate">
 			navpagecollection.push(arg,animate?)
-			<span><a class="mark" href="#navpagecollection-push-arg-animate-" id="navpagecollection-push-arg-animate-">#</a></span>
+			<span><a class="mark" href="#navpagecollection-push-arg-animate" aria-label="Link to this section">#</a></span>
 		</h3><p>Add a navigation page to the end and display</p>
-<ul>
-<li><code>@param</code> <code>arg</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-navpage"><code>NavPage</code></a>&gt; </li>
-<li><code>@param</code> <code>animate?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="navpagecollection-pop-animate-count-">
+<pre class="api-signature sh_none"><code>push(arg: <a class="api-type" href="ctr.html#vdom">VDom</a>&lt;<a class="api-type" href="#class-navpage">NavPage</a>&gt;, animate?: <a class="api-type" href="$ext.html#boolean">boolean</a>)</code></pre>
+
+
+
+<h3 id="navpagecollection-pop-animate-count">
 			navpagecollection.pop(animate?,count?)
-			<span><a class="mark" href="#navpagecollection-pop-animate-count-" id="navpagecollection-pop-animate-count-">#</a></span>
+			<span><a class="mark" href="#navpagecollection-pop-animate-count" aria-label="Link to this section">#</a></span>
 		</h3><p>Remove pages from the end of the navigation</p>
-<ul>
-<li><code>@param</code> <code>animate?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@param</code> <code>count?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>pop(animate?: <a class="api-type" href="$ext.html#boolean">boolean</a>, count?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
 <h2 id="class-navbar">
 			Class: Navbar
-			<span><a class="mark" href="#class-navbar" id="class-navbar">#</a></span>
+			<span><a class="mark" href="#class-navbar" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="navbar">
 			Navbar
-			<span><a class="mark" href="#navbar" id="navbar">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-navigationstatus"><code>NavigationStatus</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#navbar" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-navigationstatus"><code>NavigationStatus</code></a>
+<strong>Type parameters:</strong> <code>P</code> = <code>{}</code>, <code>S</code> = <code>{}</code></p>
 <h3 id="navbar-hidden">
 			navbar.hidden
-			<span><a class="mark" href="#navbar-hidden" id="navbar-hidden">#</a></span>
-		</h3><ul>
-<li><code>hidden</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navbar-hidden" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>hidden: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navbar-visiblebackicon">
 			navbar.visibleBackIcon
-			<span><a class="mark" href="#navbar-visiblebackicon" id="navbar-visiblebackicon">#</a></span>
-		</h3><ul>
-<li><code>visibleBackIcon</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navbar-visiblebackicon" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>visibleBackIcon: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navbar-visiblebacktext">
 			navbar.visibleBackText
-			<span><a class="mark" href="#navbar-visiblebacktext" id="navbar-visiblebacktext">#</a></span>
-		</h3><ul>
-<li><code>visibleBackText</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navbar-visiblebacktext" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>visibleBackText: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navbar-backtextcolor">
 			navbar.backTextColor
-			<span><a class="mark" href="#navbar-backtextcolor" id="navbar-backtextcolor">#</a></span>
-		</h3><ul>
-<li><code>backTextColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navbar-backtextcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>backTextColor: <a class="api-type" href="types.html#colorstrin">types.ColorStrIn</a></code></pre>
+
+
 <h3 id="navbar-titletextcolor">
 			navbar.titleTextColor
-			<span><a class="mark" href="#navbar-titletextcolor" id="navbar-titletextcolor">#</a></span>
-		</h3><ul>
-<li><code>titleTextColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navbar-titletextcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>titleTextColor: <a class="api-type" href="types.html#colorstrin">types.ColorStrIn</a></code></pre>
+
+
 <h3 id="navbar-page">
 			navbar.page
-			<span><a class="mark" href="#navbar-page" id="navbar-page">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>page</code>: <a href="#class-navpage"><code>NavPage</code></a> </li>
-</ul>
-<h3 id="navbar-setbacktext-value-">
+			<span><a class="mark" href="#navbar-page" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> page: <a class="api-type" href="#class-navpage">NavPage</a></code></pre>
+
+
+<h3 id="navbar-setbacktext-value">
 			navbar.setBackText(value)
-			<span><a class="mark" href="#navbar-setbacktext-value-" id="navbar-setbacktext-value-">#</a></span>
+			<span><a class="mark" href="#navbar-setbacktext-value" aria-label="Link to this section">#</a></span>
 		</h3><p>Set navbar back text</p>
-<ul>
-<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="navbar-settitletext-value-">
+<pre class="api-signature sh_none"><code>setBackText(value: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+<h3 id="navbar-settitletext-value">
 			navbar.setTitleText(value)
-			<span><a class="mark" href="#navbar-settitletext-value-" id="navbar-settitletext-value-">#</a></span>
+			<span><a class="mark" href="#navbar-settitletext-value" aria-label="Link to this section">#</a></span>
 		</h3><p>Set navbar title text</p>
-<ul>
-<li><code>@param</code> <code>value</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>setTitleText(value: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
 <h2 id="class-navpage">
 			Class: NavPage
-			<span><a class="mark" href="#class-navpage" id="class-navpage">#</a></span>
+			<span><a class="mark" href="#class-navpage" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="navpage">
 			NavPage
-			<span><a class="mark" href="#navpage" id="navpage">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-navigation"><code>Navigation</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#navpage" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-navigation"><code>Navigation</code></a>
+<strong>Type parameters:</strong> <code>P</code> = <code>{}</code>, <code>S</code> = <code>{}</code></p>
 <h3 id="navpage-prevpage">
 			navpage.prevPage
-			<span><a class="mark" href="#navpage-prevpage" id="navpage-prevpage">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>prevPage</code>: <a href="#class-navpage"><code>NavPage</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-prevpage" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> prevPage: <a class="api-type" href="#class-navpage">NavPage</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="navpage-nextpage">
 			navpage.nextPage
-			<span><a class="mark" href="#navpage-nextpage" id="navpage-nextpage">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>nextPage</code>: <a href="#class-navpage"><code>NavPage</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-nextpage" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> nextPage: <a class="api-type" href="#class-navpage">NavPage</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="navpage-collection">
 			navpage.collection
-			<span><a class="mark" href="#navpage-collection" id="navpage-collection">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>collection</code>: <a href="#class-navpagecollection"><code>NavPageCollection</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-collection" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> collection: <a class="api-type" href="#class-navpagecollection">NavPageCollection</a></code></pre>
+
+
 <h3 id="navpage-iscurrent">
 			navpage.isCurrent
-			<span><a class="mark" href="#navpage-iscurrent" id="navpage-iscurrent">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isCurrent</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-iscurrent" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isCurrent: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navpage-isfirstpage">
 			navpage.isFirstPage
-			<span><a class="mark" href="#navpage-isfirstpage" id="navpage-isfirstpage">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>isFirstPage</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-isfirstpage" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isFirstPage: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navpage-backgroundcolor">
 			navpage.backgroundColor
-			<span><a class="mark" href="#navpage-backgroundcolor" id="navpage-backgroundcolor">#</a></span>
-		</h3><ul>
-<li><code>backgroundColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-backgroundcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>backgroundColor: <a class="api-type" href="types.html#colorstrin">types.ColorStrIn</a></code></pre>
+
+
 <h3 id="navpage-title">
 			navpage.title
-			<span><a class="mark" href="#navpage-title" id="navpage-title">#</a></span>
-		</h3><ul>
-<li><code>title</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-title" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>title: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="navpage-navbar">
 			navpage.navbar
-			<span><a class="mark" href="#navpage-navbar" id="navpage-navbar">#</a></span>
-		</h3><ul>
-<li><code>navbar</code>: <a href="ctr.html#vdom"><code>VDom</code></a>&lt;<a href="#class-navbar"><code>Navbar</code></a>&gt; </li>
-</ul>
+			<span><a class="mark" href="#navpage-navbar" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>navbar: <a class="api-type" href="ctr.html#vdom">VDom</a>&lt;<a class="api-type" href="#class-navbar">Navbar</a>&gt;</code></pre>
+
+
 <h3 id="navpage-navbarhidden">
 			navpage.navbarHidden
-			<span><a class="mark" href="#navpage-navbarhidden" id="navpage-navbarhidden">#</a></span>
-		</h3><ul>
-<li><code>navbarHidden</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-navbarhidden" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>navbarHidden: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navpage-includenavbarpadding">
 			navpage.includeNavbarPadding
-			<span><a class="mark" href="#navpage-includenavbarpadding" id="navpage-includenavbarpadding">#</a></span>
-		</h3><ul>
-<li><code>includeNavbarPadding</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-includenavbarpadding" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>includeNavbarPadding: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="navpage-navbarheight">
 			navpage.navbarHeight
-			<span><a class="mark" href="#navpage-navbarheight" id="navpage-navbarheight">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>navbarHeight</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+			<span><a class="mark" href="#navpage-navbarheight" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> navbarHeight: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 
 			</div>
 
@@ -614,19 +617,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'nav.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

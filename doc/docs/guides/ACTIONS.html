@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'docs/guides/ACTIONS.html';
-		var relative = '../../';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="../../assets/style.css">
+	<link rel="stylesheet" href="../../assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#actions-and-keyframes">Actions and keyframes</a></span>
@@ -145,18 +132,22 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="actions-and-keyframes">
 			Actions and keyframes
-			<span><a class="mark" href="#actions-and-keyframes" id="actions-and-keyframes">#</a></span>
+			<span><a class="mark" href="#actions-and-keyframes" aria-label="Link to this section">#</a></span>
 		</h1><p><a href="ACTIONS-cn.html">中文</a> · <a href="README.html">All guides</a> · <a href="https://quarks.cc/doc/">API index</a></p>
-<p>Quark&#39;s Action system drives animations independently from layout and<br/>rendering. An Action changes supported properties on its bound View over time;<br/>the View receives those values and the normal layout/render pipeline displays<br/>the result.</p>
-<p>Keyframe transitions support cubic Bézier curves and the built-in <code>linear</code>,<br/><code>ease</code>, <code>easeIn</code>, <code>easeOut</code>, and <code>easeInOut</code> curves.</p>
+<p>Quark&#39;s Action system drives animations independently from layout and
+rendering. An Action changes supported properties on its bound View over time;
+the View receives those values and the normal layout/render pipeline displays
+the result.</p>
+<p>Keyframe transitions support cubic Bézier curves and the built-in <code>linear</code>,
+<code>ease</code>, <code>easeIn</code>, <code>easeOut</code>, and <code>easeInOut</code> curves.</p>
 <h2 id="basic-animation">
 			Basic animation
-			<span><a class="mark" href="#basic-animation" id="basic-animation">#</a></span>
+			<span><a class="mark" href="#basic-animation" aria-label="Link to this section">#</a></span>
 		</h2><p>This example moves a <code>Box</code> from <code>x = 0</code> to <code>x = 100</code> in one second:</p>
 <pre><code class="undefinedts">import { Application, Window, Morph, KeyframeAction } from &#39;quark&#39;
 
@@ -179,24 +170,37 @@ action.play()
 </code></pre>
 <h2 id="action-types">
 			Action types
-			<span><a class="mark" href="#action-types" id="action-types">#</a></span>
+			<span><a class="mark" href="#action-types" aria-label="Link to this section">#</a></span>
 		</h2><p>The public Action class hierarchy is:</p>
 <ul>
-<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a> — abstract base class<ul><br/><li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> — runs child actions in parallel</li><br/><li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a> — runs child actions in sequence</li><br/><li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a> — animates View style properties through keyframes</li><br/></ul><br/></li>
+<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a> — abstract base class<ul>
+<li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> — runs child actions in parallel</li>
+<li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a> — runs child actions in sequence</li>
+<li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a> — animates View style properties through keyframes</li>
 </ul>
-<p><code>Action</code> provides playback and composition operations including <code>play()</code>,<br/><code>stop()</code>, <code>seek()</code>, <code>seekPlay()</code>, <code>seekStop()</code>, <code>append()</code>, and <code>clear()</code>.</p>
+</li>
+</ul>
+<p><code>Action</code> provides playback and composition operations including <code>play()</code>,
+<code>stop()</code>, <code>seek()</code>, <code>seekPlay()</code>, <code>seekStop()</code>, <code>append()</code>, and <code>clear()</code>.</p>
 <h3 id="spawnaction">
 			SpawnAction
-			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
-		</h3><p>A <code>SpawnAction</code> runs its child actions in parallel. Its duration is determined<br/>by the longest child; shorter children remain at their completed state until<br/>the group finishes or starts another loop.</p>
+			<span><a class="mark" href="#spawnaction" aria-label="Link to this section">#</a></span>
+		</h3><p>A <code>SpawnAction</code> runs its child actions in parallel. Its duration is determined
+by the longest child; shorter children remain at their completed state until
+the group finishes or starts another loop.</p>
 <h3 id="sequenceaction">
 			SequenceAction
-			<span><a class="mark" href="#sequenceaction" id="sequenceaction">#</a></span>
-		</h3><p>A <code>SequenceAction</code> runs its child actions one after another. After the final<br/>child completes, the sequence ends or begins its next configured loop.</p>
+			<span><a class="mark" href="#sequenceaction" aria-label="Link to this section">#</a></span>
+		</h3><p>A <code>SequenceAction</code> runs its child actions one after another. After the final
+child completes, the sequence ends or begins its next configured loop.</p>
 <h2 id="keyframeaction-and-keyframe">
 			KeyframeAction and Keyframe
-			<span><a class="mark" href="#keyframeaction-and-keyframe" id="keyframeaction-and-keyframe">#</a></span>
-		</h2><p><code>KeyframeAction</code> contains <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a> objects. <code>Keyframe</code> extends <code>StyleSheets</code>,<br/>so its properties use the same names and value types as View styles. A property<br/>only has an effect when the bound View supports it: for example, <code>x</code> applies to<br/>a transform-capable View such as <code>Morph</code>, while <code>width</code> applies to <code>Box</code> and its<br/>subclasses.</p>
+			<span><a class="mark" href="#keyframeaction-and-keyframe" aria-label="Link to this section">#</a></span>
+		</h2><p><code>KeyframeAction</code> contains <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a> objects. <code>Keyframe</code> extends <code>StyleSheets</code>,
+so its properties use the same names and value types as View styles. A property
+only has an effect when the bound View supports it: for example, <code>x</code> applies to
+a transform-capable View such as <code>Morph</code>, while <code>width</code> applies to <code>Box</code> and its
+subclasses.</p>
 <pre><code class="undefinedts">// Valid: Box supports width and height.
 const boxAction = new KeyframeAction(win)
 const box = new Box(win)
@@ -214,16 +218,21 @@ viewAction.add({ width: 100, height: 100, time: 1000 })
 view.action = viewAction
 viewAction.play()
 </code></pre>
-<p>For declarative construction, <a href="https://quarks.cc/doc/action.html#createaction-win-arg-parent-">createAction</a> accepts a keyframe array or an<br/>object containing <code>keyframe</code>, <code>spawn</code>, or <code>seq</code> children.</p>
+<p>For declarative construction, <a href="https://quarks.cc/doc/action.html#createaction-win-arg-parent-">createAction</a> accepts a keyframe array or an
+object containing <code>keyframe</code>, <code>spawn</code>, or <code>seq</code> children.</p>
 <h2 id="action-events">
 			Action events
-			<span><a class="mark" href="#action-events" id="action-events">#</a></span>
+			<span><a class="mark" href="#action-events" aria-label="Link to this section">#</a></span>
 		</h2><p>Views expose two Action events:</p>
 <ul>
-<li><code>View.onActionKeyframe</code> fires when an action reaches a keyframe. Because the<br/>event is delivered on a rendered frame, it may be slightly early or late;<br/><code>ActionEvent.delay</code> contains the difference from the target time.</li>
-<li><code>View.onActionLoop</code> fires when a new loop begins. It does not fire for the<br/>initial run. The event also reports <code>delay</code> and the current <code>looped</code> count.</li>
+<li><code>View.onActionKeyframe</code> fires when an action reaches a keyframe. Because the
+event is delivered on a rendered frame, it may be slightly early or late;
+<code>ActionEvent.delay</code> contains the difference from the target time.</li>
+<li><code>View.onActionLoop</code> fires when a new loop begins. It does not fire for the
+initial run. The event also reports <code>delay</code> and the current <code>looped</code> count.</li>
 </ul>
-<p>The event&#39;s <code>action</code> and <code>frame</code> properties identify the Action and keyframe<br/>that produced it.</p>
+<p>The event&#39;s <code>action</code> and <code>frame</code> properties identify the Action and keyframe
+that produced it.</p>
 
 			</div>
 
@@ -231,19 +240,28 @@ viewAction.play()
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="../../assets/sh_main.js"></script>
+	<script src="../../assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'docs/guides/ACTIONS.html';
+		var relative = '../../';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

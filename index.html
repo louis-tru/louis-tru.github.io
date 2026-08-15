@@ -1,8 +1,67 @@
 <!doctype html>
-<html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Quark is a cross-platform native GUI framework for Android, iOS, macOS and Linux.">
+	<meta name="theme-color" content="#07111f">
+	<title>Quark · Cross-platform native GUI framework</title>
+	<link rel="stylesheet" href="style.css">
+</head>
 <body>
-	<script>
-		location.href = 'doc/README.html';
-	</script>
+	<div class="container">
+		<header>
+			<a class="brand" href="/" aria-label="Quark home"><span class="mark">Qk</span><span>Quark</span></a>
+			<nav aria-label="Main navigation">
+				<a href="doc/docs/guides/README.html">Guides</a>
+				<a href="index-cn.html" lang="zh-CN">中文</a>
+				<a href="https://github.com/louis-tru/quark">GitHub</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div>
+					<div class="eyebrow">Native UI · GPU Rendering</div>
+					<h1>Quark<span>Cross-platform native GUI framework</span></h1>
+					<p class="lead">
+						A C++ core with JavaScript / JSX for interface development, built for Android,
+						iOS, macOS and Linux. Quark provides its own layout, styling, event and GPU
+						rendering systems without relying on a browser DOM.
+					</p>
+					<div class="actions">
+						<a class="button primary" href="doc/README.html">Read the documentation</a>
+						<a class="button" href="doc/docs/guides/README.html">Explore the guides</a>
+						<a class="button" href="https://github.com/louis-tru/quark">View source</a>
+					</div>
+				</div>
+
+				<div class="stack" aria-label="Quark technology overview">
+					<div class="orbit" aria-hidden="true"></div>
+					<div class="runtime-card">
+						<div class="card-label">Quark Runtime</div>
+						<div class="pipeline">
+							<div><span>JavaScript / JSX</span><small>UI & Logic</small></div>
+							<div><span>C++ Core</span><small>Layout & Events</small></div>
+							<div><span>GPU Renderer</span><small>GL · Metal · Vulkan</small></div>
+						</div>
+						<div class="platforms"><span>Android</span><span>iOS</span><span>macOS</span><span>Linux</span></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features" aria-label="Core capabilities">
+				<article class="feature"><b>Native runtime</b><p>An explicit view tree, event model and resource lifecycle give native applications direct control.</p></article>
+				<article class="feature"><b>Independent UI system</b><p>Build consistent multi-platform interfaces with Quark's own layout and CSS-like styling systems.</p></article>
+				<article class="feature"><b>GPU rendering</b><p>OpenGL, Metal and Vulkan backends provide high-performance graphics across supported platforms.</p></article>
+				<article class="feature"><b>Integrated toolchain</b><p>Use qkmake to initialize, build and export projects, with live updates during development.</p></article>
+			</section>
+		</main>
+
+		<footer>
+			<span>Quark · Built by louis-tru</span>
+			<span><a href="doc/README.html">Documentation</a> · <a href="https://github.com/louis-tru/quark">GitHub</a></span>
+		</footer>
+	</div>
 </body>
 </html>

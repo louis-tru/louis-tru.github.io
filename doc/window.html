@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'window.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,15 +102,17 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-window">quark/window</a></span>
 <ul>
+<li>
+<span><a href="#wevent">WEvent</a></span>
+</li>
 <li>
 <span><a href="#interface-options">Interface: Options</a></span>
 <ul>
@@ -130,22 +120,22 @@
 <span><a href="#options">Options</a></span>
 </li>
 <li>
-<span><a href="#options-frame-">options.frame?</a></span>
+<span><a href="#options-frame">options.frame?</a></span>
 </li>
 <li>
-<span><a href="#options-title-">options.title?</a></span>
+<span><a href="#options-title">options.title?</a></span>
 </li>
 <li>
-<span><a href="#options-backgroundcolor-">options.backgroundColor?</a></span>
+<span><a href="#options-backgroundcolor">options.backgroundColor?</a></span>
 </li>
 <li>
-<span><a href="#options-navigationcolor-">options.navigationColor?</a></span>
+<span><a href="#options-navigationcolor">options.navigationColor?</a></span>
 </li>
 <li>
-<span><a href="#options-enablecapa-">options.enableCAPA?</a></span>
+<span><a href="#options-enablecapa">options.enableCAPA?</a></span>
 </li>
 <li>
-<span><a href="#options-enablecapaquantizecoverage-">options.enableCAPAQuantizeCoverage?</a></span>
+<span><a href="#options-enablecapaquantizecoverage">options.enableCAPAQuantizeCoverage?</a></span>
 </li>
 </ul>
 <li>
@@ -188,25 +178,25 @@
 <span><a href="#nativewindow-debugmode">nativewindow.debugMode</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-nextframe-cb-">nativewindow.nextFrame(cb)</a></span>
+<span><a href="#nativewindow-nextframe-cb">nativewindow.nextFrame(cb)</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-activate-">nativewindow.activate()</a></span>
+<span><a href="#nativewindow-activate">nativewindow.activate()</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-close-">nativewindow.close()</a></span>
+<span><a href="#nativewindow-close">nativewindow.close()</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-pending-">nativewindow.pending()</a></span>
+<span><a href="#nativewindow-pending">nativewindow.pending()</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-requestfullscreen-fullscreen-">nativewindow.requestFullscreen(fullscreen)</a></span>
+<span><a href="#nativewindow-requestfullscreen-fullscreen">nativewindow.requestFullscreen(fullscreen)</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-setcursorstyle-style-">nativewindow.setCursorStyle(style)</a></span>
+<span><a href="#nativewindow-setcursorstyle-style">nativewindow.setCursorStyle(style)</a></span>
 </li>
 <li>
-<span><a href="#nativewindow-constructor-opts-">nativewindow.constructor(opts?)</a></span>
+<span><a href="#nativewindow-constructor-opts">nativewindow.constructor(opts?)</a></span>
 </li>
 </ul>
 <li>
@@ -231,258 +221,274 @@
 <span><a href="#window-rootctr">window.rootCtr</a></span>
 </li>
 <li>
-<span><a href="#window-render-vdom-">window.render(vdom)</a></span>
+<span><a href="#window-render-vdom">window.render(vdom)</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-window">
 			quark/window
-			<span><a class="mark" href="#quark-window" id="quark-window">#</a></span>
-		</h1><h2 id="interface-options">
+			<span><a class="mark" href="#quark-window" aria-label="Link to this section">#</a></span>
+		</h1><h2 id="wevent">
+			WEvent
+			<span><a class="mark" href="#wevent" aria-label="Link to this section">#</a></span>
+		</h2><p>Window lifecycle event.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> WEvent = <a class="api-type" href="event.html#event">Event</a>&lt;<a class="api-type" href="#class-window">Window</a>&gt;</code></pre>
+
+
+<h2 id="interface-options">
 			Interface: Options
-			<span><a class="mark" href="#interface-options" id="interface-options">#</a></span>
+			<span><a class="mark" href="#interface-options" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="options">
 			Options
-			<span><a class="mark" href="#options" id="options">#</a></span>
-		</h3><h3 id="options-frame-">
+			<span><a class="mark" href="#options" aria-label="Link to this section">#</a></span>
+		</h3><h3 id="options-frame">
 			options.frame?
-			<span><a class="mark" href="#options-frame-" id="options-frame-">#</a></span>
+			<span><a class="mark" href="#options-frame" aria-label="Link to this section">#</a></span>
 		</h3><p>init window params </p>
-<ul>
-<li><code>frame?</code>: <a href="types.html#rect"><code>types.Rect</code></a> </li>
-</ul>
-<h3 id="options-title-">
+<pre class="api-signature sh_none"><code>frame?: <a class="api-type" href="types.html#rect">types.Rect</a></code></pre>
+
+
+<h3 id="options-title">
 			options.title?
-			<span><a class="mark" href="#options-title-" id="options-title-">#</a></span>
+			<span><a class="mark" href="#options-title" aria-label="Link to this section">#</a></span>
 		</h3><p>init window title </p>
-<ul>
-<li><code>title?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="options-backgroundcolor-">
+<pre class="api-signature sh_none"><code>title?: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+<h3 id="options-backgroundcolor">
 			options.backgroundColor?
-			<span><a class="mark" href="#options-backgroundcolor-" id="options-backgroundcolor-">#</a></span>
+			<span><a class="mark" href="#options-backgroundcolor" aria-label="Link to this section">#</a></span>
 		</h3><p>init window background color </p>
-<ul>
-<li><code>backgroundColor?</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
-</ul>
-<h3 id="options-navigationcolor-">
+<pre class="api-signature sh_none"><code>backgroundColor?: <a class="api-type" href="types.html#color">types.Color</a></code></pre>
+
+
+<h3 id="options-navigationcolor">
 			options.navigationColor?
-			<span><a class="mark" href="#options-navigationcolor-" id="options-navigationcolor-">#</a></span>
+			<span><a class="mark" href="#options-navigationcolor" aria-label="Link to this section">#</a></span>
 		</h3><p>Is need draw navigation buttons for android. </p>
-<ul>
-<li><code>navigationColor?</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
-</ul>
-<h3 id="options-enablecapa-">
+<pre class="api-signature sh_none"><code>navigationColor?: <a class="api-type" href="types.html#color">types.Color</a></code></pre>
+
+
+<h3 id="options-enablecapa">
 			options.enableCAPA?
-			<span><a class="mark" href="#options-enablecapa-" id="options-enablecapa-">#</a></span>
+			<span><a class="mark" href="#options-enablecapa" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether to enable CAPA for GPU rendering, default is true. </p>
-<ul>
-<li><code>enableCAPA?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="options-enablecapaquantizecoverage-">
+<pre class="api-signature sh_none"><code>enableCAPA?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="options-enablecapaquantizecoverage">
 			options.enableCAPAQuantizeCoverage?
-			<span><a class="mark" href="#options-enablecapaquantizecoverage-" id="options-enablecapaquantizecoverage-">#</a></span>
+			<span><a class="mark" href="#options-enablecapaquantizecoverage" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether to enable CAPA quantized coverage for GPU rendering, default is false. </p>
-<ul>
-<li><code>enableCAPAQuantizeCoverage?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>enableCAPAQuantizeCoverage?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h2 id="class-nativewindow">
 			Class: NativeWindow
-			<span><a class="mark" href="#class-nativewindow" id="class-nativewindow">#</a></span>
+			<span><a class="mark" href="#class-nativewindow" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="nativewindow">
 			NativeWindow
-			<span><a class="mark" href="#nativewindow" id="nativewindow">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a></li>
-</ul>
+			<span><a class="mark" href="#nativewindow" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="event.html#notification"><code>Notification</code></a></p>
 <h3 id="nativewindow-scale">
 			nativewindow.scale
-			<span><a class="mark" href="#nativewindow-scale" id="nativewindow-scale">#</a></span>
+			<span><a class="mark" href="#nativewindow-scale" aria-label="Link to this section">#</a></span>
 		</h3><p>The scaling ratio of the physical pixel size of the window to the drawing size</p>
-<ul>
-<li><code>@get</code> <code>scale</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> scale: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="nativewindow-defaultscale">
 			nativewindow.defaultScale
-			<span><a class="mark" href="#nativewindow-defaultscale" id="nativewindow-defaultscale">#</a></span>
+			<span><a class="mark" href="#nativewindow-defaultscale" aria-label="Link to this section">#</a></span>
 		</h3><p>The default recommended scaling ratio between window physical pixels and drawing size</p>
-<ul>
-<li><code>@get</code> <code>defaultScale</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> defaultScale: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="nativewindow-fsp">
 			nativewindow.fsp
-			<span><a class="mark" href="#nativewindow-fsp" id="nativewindow-fsp">#</a></span>
+			<span><a class="mark" href="#nativewindow-fsp" aria-label="Link to this section">#</a></span>
 		</h3><p>Current drawing frame rate</p>
-<ul>
-<li><code>@get</code> <code>fsp</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> fsp: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="nativewindow-atompixel">
 			nativewindow.atomPixel
-			<span><a class="mark" href="#nativewindow-atompixel" id="nativewindow-atompixel">#</a></span>
+			<span><a class="mark" href="#nativewindow-atompixel" aria-label="Link to this section">#</a></span>
 		</h3><p>Atom pixel size, Exp: 1 / scale</p>
-<ul>
-<li><code>@get</code> <code>atomPixel</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> atomPixel: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="nativewindow-root">
 			nativewindow.root
-			<span><a class="mark" href="#nativewindow-root" id="nativewindow-root">#</a></span>
+			<span><a class="mark" href="#nativewindow-root" aria-label="Link to this section">#</a></span>
 		</h3><p>The only root view in the window</p>
-<ul>
-<li><code>@get</code> <code>root</code>: <a href="view.html#root"><code>Root</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> root: <a class="api-type" href="view.html#root">Root</a></code></pre>
+
+
 <h3 id="nativewindow-activeview">
 			nativewindow.activeView
-			<span><a class="mark" href="#nativewindow-activeview" id="nativewindow-activeview">#</a></span>
+			<span><a class="mark" href="#nativewindow-activeview" aria-label="Link to this section">#</a></span>
 		</h3><p>Current active focus view</p>
-<ul>
-<li><code>@get</code> <code>activeView</code>: <a href="view.html#view"><code>View</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> activeView: <a class="api-type" href="view.html#view">View</a></code></pre>
+
+
 <h3 id="nativewindow-navigationrect">
 			nativewindow.navigationRect
-			<span><a class="mark" href="#nativewindow-navigationrect" id="nativewindow-navigationrect">#</a></span>
+			<span><a class="mark" href="#nativewindow-navigationrect" aria-label="Link to this section">#</a></span>
 		</h3><p>Navigation rect, possibly in the Android bottom navigation button area</p>
-<ul>
-<li><code>@get</code> <code>navigationRect</code>: <a href="types.html#rect"><code>types.Rect</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> navigationRect: <a class="api-type" href="types.html#rect">types.Rect</a></code></pre>
+
+
 <h3 id="nativewindow-size">
 			nativewindow.size
-			<span><a class="mark" href="#nativewindow-size" id="nativewindow-size">#</a></span>
+			<span><a class="mark" href="#nativewindow-size" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li>Set the logical size of the window. When this value changes, the change event will be triggered.</li>
 <li>When both width and height are set to zero, the most comfortable default display size is automatically set.</li>
 <li>If the width is set to non-zero, it means the width is fixed, and the height is automatically set according to the window ratio.</li>
-<li>If the height is set to non-zero, it means the height is fixed, and the width is automatically set according to the window ratio.</li>
-<li><code>size</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
+<li>If the height is set to non-zero, it means the height is fixed, and the width is automatically set according to the window ratio.<pre class="api-signature sh_none"><code>size: <a class="api-type" href="types.html#vec2">types.Vec2</a></code></pre>
+
+
+</li>
 </ul>
 <h3 id="nativewindow-backgroundcolor">
 			nativewindow.backgroundColor
-			<span><a class="mark" href="#nativewindow-backgroundcolor" id="nativewindow-backgroundcolor">#</a></span>
+			<span><a class="mark" href="#nativewindow-backgroundcolor" aria-label="Link to this section">#</a></span>
 		</h3><p>The background color for the window</p>
-<ul>
-<li><code>backgroundColor</code>: <a href="types.html#color"><code>types.Color</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>backgroundColor: <a class="api-type" href="types.html#color">types.Color</a></code></pre>
+
+
 <h3 id="nativewindow-surfacesize">
 			nativewindow.surfaceSize
-			<span><a class="mark" href="#nativewindow-surfacesize" id="nativewindow-surfacesize">#</a></span>
+			<span><a class="mark" href="#nativewindow-surfacesize" aria-label="Link to this section">#</a></span>
 		</h3><p>Window physical surface pixel size</p>
-<ul>
-<li><code>surfaceSize</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>surfaceSize: <a class="api-type" href="types.html#vec2">types.Vec2</a></code></pre>
+
+
 <h3 id="nativewindow-debugmode">
 			nativewindow.debugMode
-			<span><a class="mark" href="#nativewindow-debugmode" id="nativewindow-debugmode">#</a></span>
-		</h3><p>Get or set whether to enable the debug mode,<br/>In debug mode, the view boundary and layout boundary will be drawn</p>
-<ul>
-<li><code>debugMode</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="nativewindow-nextframe-cb-">
+			<span><a class="mark" href="#nativewindow-debugmode" aria-label="Link to this section">#</a></span>
+		</h3><p>Get or set whether to enable the debug mode,
+In debug mode, the view boundary and layout boundary will be drawn</p>
+<pre class="api-signature sh_none"><code>debugMode: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="nativewindow-nextframe-cb">
 			nativewindow.nextFrame(cb)
-			<span><a class="mark" href="#nativewindow-nextframe-cb-" id="nativewindow-nextframe-cb-">#</a></span>
-		</h3><p>When rendering next frame call,<br/>if a frame render is not complete, it will be wait for complete.</p>
-<ul>
-<li><code>@param</code> <code>cb</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
-</ul>
-<h3 id="nativewindow-activate-">
+			<span><a class="mark" href="#nativewindow-nextframe-cb" aria-label="Link to this section">#</a></span>
+		</h3><p>When rendering next frame call,
+if a frame render is not complete, it will be wait for complete.</p>
+<pre class="api-signature sh_none"><code>nextFrame(cb: <a class="api-type" href="$ext.html#function">Function</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+
+<h3 id="nativewindow-activate">
 			nativewindow.activate()
-			<span><a class="mark" href="#nativewindow-activate-" id="nativewindow-activate-">#</a></span>
+			<span><a class="mark" href="#nativewindow-activate" aria-label="Link to this section">#</a></span>
 		</h3><p>Activate the display window or taking the window to the foreground</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
-</ul>
-<h3 id="nativewindow-close-">
+<pre class="api-signature sh_none"><code>activate(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+
+<h3 id="nativewindow-close">
 			nativewindow.close()
-			<span><a class="mark" href="#nativewindow-close-" id="nativewindow-close-">#</a></span>
+			<span><a class="mark" href="#nativewindow-close" aria-label="Link to this section">#</a></span>
 		</h3><p>To close or destroy the window</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativewindow-pending-">
+<pre class="api-signature sh_none"><code>close(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativewindow-pending">
 			nativewindow.pending()
-			<span><a class="mark" href="#nativewindow-pending-" id="nativewindow-pending-">#</a></span>
+			<span><a class="mark" href="#nativewindow-pending" aria-label="Link to this section">#</a></span>
 		</h3><p>Taking window to background and pending</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativewindow-requestfullscreen-fullscreen-">
+<pre class="api-signature sh_none"><code>pending(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativewindow-requestfullscreen-fullscreen">
 			nativewindow.requestFullscreen(fullscreen)
-			<span><a class="mark" href="#nativewindow-requestfullscreen-fullscreen-" id="nativewindow-requestfullscreen-fullscreen-">#</a></span>
+			<span><a class="mark" href="#nativewindow-requestfullscreen-fullscreen" aria-label="Link to this section">#</a></span>
 		</h3><p>Request to enter or exit full screen mode</p>
+<pre class="api-signature sh_none"><code>requestFullscreen(fullscreen: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>fullscreen</code>: <a href="$ext.html#boolean"><code>boolean</code></a> - true: enter full screen, false: exit full screen</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>fullscreen</code> — - true: enter full screen, false: exit full screen</li>
 </ul>
-<h3 id="nativewindow-setcursorstyle-style-">
+<h3 id="nativewindow-setcursorstyle-style">
 			nativewindow.setCursorStyle(style)
-			<span><a class="mark" href="#nativewindow-setcursorstyle-style-" id="nativewindow-setcursorstyle-style-">#</a></span>
+			<span><a class="mark" href="#nativewindow-setcursorstyle-style" aria-label="Link to this section">#</a></span>
 		</h3><p>Setting the mouse cursor style</p>
-<ul>
-<li><code>@param</code> <code>style</code>: <a href="types.html#cursorstyle"><code>types.CursorStyle</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="nativewindow-constructor-opts-">
+<pre class="api-signature sh_none"><code>setCursorStyle(style: <a class="api-type" href="types.html#cursorstyle">types.CursorStyle</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="nativewindow-constructor-opts">
 			nativewindow.constructor(opts?)
-			<span><a class="mark" href="#nativewindow-constructor-opts-" id="nativewindow-constructor-opts-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>opts?</code>: <a href="#interface-options"><code>Options</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativewindow-constructor-opts" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(opts?: <a class="api-type" href="#interface-options">Options</a>)</code></pre>
+
+
+
 <h2 id="class-window">
 			Class: Window
-			<span><a class="mark" href="#class-window" id="class-window">#</a></span>
+			<span><a class="mark" href="#class-window" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="window">
 			Window
-			<span><a class="mark" href="#window" id="window">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-nativewindow"><code>NativeWindow</code></a></li>
-</ul>
+			<span><a class="mark" href="#window" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-nativewindow"><code>NativeWindow</code></a></p>
 <h3 id="window-onchange">
 			window.onChange
-			<span><a class="mark" href="#window-onchange" id="window-onchange">#</a></span>
+			<span><a class="mark" href="#window-onchange" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when to change window size</p>
 <ul>
-<li><code>@event</code> <code>onChange</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+<li><code>@event</code> <code>onChange</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#wevent"><code>WEvent</code></a>&gt; </li>
 </ul>
 <h3 id="window-onbackground">
 			window.onBackground
-			<span><a class="mark" href="#window-onbackground" id="window-onbackground">#</a></span>
+			<span><a class="mark" href="#window-onbackground" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when into background</p>
 <ul>
-<li><code>@event</code> <code>onBackground</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+<li><code>@event</code> <code>onBackground</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#wevent"><code>WEvent</code></a>&gt; </li>
 </ul>
 <h3 id="window-onforeground">
 			window.onForeground
-			<span><a class="mark" href="#window-onforeground" id="window-onforeground">#</a></span>
+			<span><a class="mark" href="#window-onforeground" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when into foreground</p>
 <ul>
-<li><code>@event</code> <code>onForeground</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+<li><code>@event</code> <code>onForeground</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#wevent"><code>WEvent</code></a>&gt; </li>
 </ul>
 <h3 id="window-onclose">
 			window.onClose
-			<span><a class="mark" href="#window-onclose" id="window-onclose">#</a></span>
+			<span><a class="mark" href="#window-onclose" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger when closed window</p>
 <ul>
-<li><code>@event</code> <code>onClose</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<code>WEvent</code>&gt; </li>
+<li><code>@event</code> <code>onClose</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#wevent"><code>WEvent</code></a>&gt; </li>
 </ul>
 <h3 id="window-rootctr">
 			window.rootCtr
-			<span><a class="mark" href="#window-rootctr" id="window-rootctr">#</a></span>
+			<span><a class="mark" href="#window-rootctr" aria-label="Link to this section">#</a></span>
 		</h3><p>The only root view controller in the window</p>
-<ul>
-<li><code>@get</code> <code>rootCtr</code>: <a href="quark.html#viewcontroller"><code>ViewController</code></a> </li>
-</ul>
-<h3 id="window-render-vdom-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> rootCtr: <a class="api-type" href="quark.html#viewcontroller">ViewController</a></code></pre>
+
+
+<h3 id="window-render-vdom">
 			window.render(vdom)
-			<span><a class="mark" href="#window-render-vdom-" id="window-render-vdom-">#</a></span>
+			<span><a class="mark" href="#window-render-vdom" aria-label="Link to this section">#</a></span>
 		</h3><p>Create a view or view controller <code>DOM</code> by <code>vdom</code></p>
-<ul>
-<li><code>@return</code> <code>DOM</code>  </li>
-</ul>
+<pre class="api-signature sh_none"><code>render(vdom: <a class="api-type" href="ctr.html#virtualdom">VirtualDOM</a>): DOM</code></pre>
+
+
+
+<p><strong>Returns:</strong>  </p>
 <p>Example:</p>
 <pre><code class="undefinedtsx">import {Application,Window,ViewController} from &#39;quark&#39;
 import * as http from &#39;quark/http&#39;
@@ -506,9 +512,6 @@ new Window().activate().render(
     &lt;MyCtr param={10} /&gt;
 );
 </code></pre>
-<ul>
-<li><code>@param</code> <code>vdom</code>: <a href="ctr.html#virtualdom"><code>VirtualDOM</code></a> </li>
-</ul>
 
 			</div>
 
@@ -516,19 +519,28 @@ new Window().activate().render(
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'window.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'README.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark">Quark</a></span>
@@ -163,28 +150,35 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark">
 			Quark
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><p><a href="README-cn.html">中文</a> · <a href="docs/guides/README.html">Guides</a> · <a href="https://quarks.cc/doc/">API documentation</a></p>
-<p>Quark is a cross-platform GUI framework for Android, iOS, macOS, and Linux.<br/>It combines a C++ core, a native GPU renderer, a lightweight layout engine,<br/>and an embedded JavaScript/JSX runtime.</p>
-<p>Quark is not a browser runtime. It has its own view tree, style and layout<br/>system, event model, rendering pipeline, and platform integration. Its APIs<br/>favor explicit structure, predictable behavior, and controllable performance.</p>
+<p>Quark is a cross-platform GUI framework for Android, iOS, macOS, and Linux.
+It combines a C++ core, a native GPU renderer, a lightweight layout engine,
+and an embedded JavaScript/JSX runtime.</p>
+<p>Quark is not a browser runtime. It has its own view tree, style and layout
+system, event model, rendering pipeline, and platform integration. Its APIs
+favor explicit structure, predictable behavior, and controllable performance.</p>
 <h2 id="core-capabilities">
 			Core capabilities
-			<span><a class="mark" href="#core-capabilities" id="core-capabilities">#</a></span>
+			<span><a class="mark" href="#core-capabilities" aria-label="Link to this section">#</a></span>
 		</h2><ul>
 <li>Native GUI rendering on Android, iOS, macOS, and Linux.</li>
-<li>C++ for performance-sensitive systems, with JavaScript/JSX for application<br/>logic and UI declaration.</li>
+<li>C++ for performance-sensitive systems, with JavaScript/JSX for application
+logic and UI declaration.</li>
 <li>An explicit layout engine with no dependency on a browser DOM or browser CSS.</li>
-<li>A class-driven, CSS-like style subset with continuous class, descendant, and<br/>direct child selectors plus <code>:normal</code>, <code>:hover</code>, and <code>:active</code> states.</li>
-<li>Images, text, gradients, clipping, filters, animation, media, scrolling,<br/>input, and world/entity views in one view and event model.</li>
+<li>A class-driven, CSS-like style subset with continuous class, descendant, and
+direct child selectors plus <code>:normal</code>, <code>:hover</code>, and <code>:active</code> states.</li>
+<li>Images, text, gradients, clipping, filters, animation, media, scrolling,
+input, and world/entity views in one view and event model.</li>
 </ul>
 <h2 id="platform-and-renderer-status">
 			Platform and renderer status
-			<span><a class="mark" href="#platform-and-renderer-status" id="platform-and-renderer-status">#</a></span>
+			<span><a class="mark" href="#platform-and-renderer-status" aria-label="Link to this section">#</a></span>
 		</h2><table>
 <thead>
 <tr>
@@ -199,34 +193,40 @@
 <td>iOS</td>
 <td>macOS + Xcode</td>
 <td>OpenGL ES or Metal</td>
-<td>Metal and GL paths are implemented and used in current test scenes.</td>
+<td>Metal and GL are established runtime paths.</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>macOS + Xcode</td>
 <td>OpenGL or Metal</td>
-<td>Both backends are implemented.</td>
+<td>Metal and GL are established runtime paths.</td>
 </tr>
 <tr>
 <td>Android</td>
 <td>macOS/Linux + JDK, Android SDK/NDK</td>
 <td>OpenGL ES; optional Vulkan</td>
-<td>Vulkan presentation and Canvas/CAPA encoding are implemented; wider device validation continues.</td>
+<td>Vulkan presentation and Canvas/CAPA are available; device coverage continues to expand.</td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>Linux native toolchain</td>
 <td>OpenGL ES; optional Vulkan/Xlib</td>
-<td>Vulkan presentation is implemented; Linux runtime validation continues.</td>
+<td>Vulkan/Xlib presentation and Canvas/CAPA are available; driver coverage continues to expand.</td>
 </tr>
 </tbody>
 </table>
-<p>The current Linux build and runtime test environment is Ubuntu 20.04. Other<br/>Linux distributions have not yet been validated.</p>
-<p>Source configuration currently enables GL by default. Apple builds select<br/>Metal when GL is disabled; Android/Linux builds can enable Vulkan alongside<br/>GL. When both Vulkan and GL are present, Vulkan is attempted first and <code>--gl</code><br/>forces the GL backend. Android Vulkan requires Android 10/API 29 and Vulkan 1.1<br/>or newer; unsupported devices fall back to GL.</p>
+<p>The current verified Linux build and runtime environment is Ubuntu 20.04;
+coverage of other Linux distributions is outside the current release scope.</p>
+<p>Source configuration currently enables GL by default. Apple builds select
+Metal when GL is disabled; Android/Linux builds can enable Vulkan alongside
+GL. When both Vulkan and GL are present, Vulkan is attempted first and <code>--gl</code>
+forces the GL backend. Android Vulkan requires Android 10/API 29 and Vulkan 1.1
+or newer; unsupported devices fall back to GL.</p>
 <h2 id="rendering-system">
 			Rendering system
-			<span><a class="mark" href="#rendering-system" id="rendering-system">#</a></span>
-		</h2><p>Quark owns its GPU rendering stack; it does not use browser Canvas, CSS<br/>painting, or Web compositing.</p>
+			<span><a class="mark" href="#rendering-system" aria-label="Link to this section">#</a></span>
+		</h2><p>Quark owns its GPU rendering stack; it does not use browser Canvas, CSS
+painting, or Web compositing.</p>
 <pre><code class="undefinedtxt">Canvas API
   -&gt; GPUCanvas shared state, clipping, path/image/text dispatch
   -&gt; OpenGL command pack, Metal command encoder, or Vulkan command buffer
@@ -234,11 +234,17 @@
 </code></pre>
 <p>The renderer uses two complementary antialiasing strategies:</p>
 <ul>
-<li><strong>AASide</strong> is the fast geometric edge-band path used for text, hairlines,<br/>simple edges, and the GL/GLES compatibility path.</li>
-<li><strong>CAPA</strong> (Coverage Area Pipeline Anti-Aliasing) is the compute path for<br/>complex ordered fills on Metal/Vulkan-class backends. It bins edges into<br/>tiles, computes area coverage, and composites ordered layers without the<br/>background seams caused by independently antialiased adjacent primitives.</li>
+<li><strong>AASide</strong> is the fast geometric edge-band path used for text, hairlines,
+simple edges, and the GL/GLES compatibility path.</li>
+<li><strong>CAPA</strong> (Coverage Area Pipeline Anti-Aliasing) is the compute path for
+complex ordered fills on Metal/Vulkan-class backends. It bins edges into
+tiles, computes area coverage, and composites ordered layers without the
+background seams caused by independently antialiased adjacent primitives.</li>
 </ul>
-<p>Metal is the established CAPA runtime path. Vulkan CAPA command encoding is<br/>implemented and remains under broader runtime validation.</p>
-<p>At runtime, pass <code>--gl</code> to force the GL renderer, or <code>--aaside</code> to disable<br/>CAPA and force the AASide antialiasing path on Metal/Vulkan.</p>
+<p>Metal is the established CAPA runtime path. Vulkan CAPA is also available on
+supported targets, with device and driver coverage continuing to expand.</p>
+<p>At runtime, pass <code>--gl</code> to force the GL renderer, or <code>--aaside</code> to disable
+CAPA and force the AASide antialiasing path on Metal/Vulkan.</p>
 <table>
 <thead>
 <tr>
@@ -255,8 +261,9 @@
 </table>
 <h2 id="quick-start-with-qkmake">
 			Quick start with qkmake
-			<span><a class="mark" href="#quick-start-with-qkmake" id="quick-start-with-qkmake">#</a></span>
-		</h2><p>The supported host workflows are macOS and Linux. Apple targets require<br/>macOS/Xcode. Windows is not currently supported.</p>
+			<span><a class="mark" href="#quick-start-with-qkmake" aria-label="Link to this section">#</a></span>
+		</h2><p>The supported host workflows are macOS and Linux. Apple targets require
+macOS/Xcode. Windows is not currently supported.</p>
 <p>Install Node.js and Python, then install the published toolkit:</p>
 <pre><code class="undefinedsh">sudo npm install -g qkmake
 </code></pre>
@@ -267,7 +274,7 @@ qkmake init
 </code></pre>
 <h3 id="minimal-application">
 			Minimal application
-			<span><a class="mark" href="#minimal-application" id="minimal-application">#</a></span>
+			<span><a class="mark" href="#minimal-application" aria-label="Link to this section">#</a></span>
 		</h3><pre><code class="undefinedtsx">import { Jsx, Application, Window } from &#39;quark&#39;
 
 new Application()
@@ -278,71 +285,99 @@ new Window().render(
 <p>More complete applications are available in the <a href="https://github.com/louis-tru/quark/tree/master/examples">examples</a>.</p>
 <h3 id="build-application-code-and-resources">
 			Build application code and resources
-			<span><a class="mark" href="#build-application-code-and-resources" id="build-application-code-and-resources">#</a></span>
-		</h3><p><code>qkmake build</code> installs project dependencies, transforms TypeScript/JavaScript,<br/>and packages application resources:</p>
+			<span><a class="mark" href="#build-application-code-and-resources" aria-label="Link to this section">#</a></span>
+		</h3><p><code>qkmake build</code> installs project dependencies, transforms TypeScript/JavaScript,
+and packages application resources:</p>
 <pre><code class="undefinedsh">qkmake build
 </code></pre>
-<p>A newly initialized project can be exported before running this command; the<br/>export flow builds missing application output when needed.</p>
+<p>A newly initialized project can be exported before running this command; the
+export flow builds missing application output when needed.</p>
 <h3 id="export-or-open-a-platform-project">
 			Export or open a platform project
-			<span><a class="mark" href="#export-or-open-a-platform-project" id="export-or-open-a-platform-project">#</a></span>
+			<span><a class="mark" href="#export-or-open-a-platform-project" aria-label="Link to this section">#</a></span>
 		</h3><pre><code class="undefinedsh">qkmake export ios
 qkmake export mac
 qkmake export android
 qkmake export linux
 </code></pre>
-<p>Generated projects are placed under <code>project/&lt;platform&gt;</code>. Apple projects use<br/>Xcode, Android exports use Android Studio/CMake, and Linux exports use the<br/>native Make-based project. Use <code>qkmake open &lt;platform&gt;</code> to generate when needed<br/>and open the project with the host&#39;s available tool.</p>
+<p>Generated projects are placed under <code>project/&lt;platform&gt;</code>. Apple projects use
+Xcode, Android exports use Android Studio/CMake, and Linux exports use the
+native Make-based project. Use <code>qkmake open &lt;platform&gt;</code> to generate when needed
+and open the project with the host&#39;s available tool.</p>
 <h3 id="run-and-debug">
 			Run and debug
-			<span><a class="mark" href="#run-and-debug" id="run-and-debug">#</a></span>
+			<span><a class="mark" href="#run-and-debug" aria-label="Link to this section">#</a></span>
 		</h3><p>Run an application with:</p>
 <pre><code class="undefinedsh">qkmake start .
 qkmake start . --gl
 qkmake start . --aaside
 </code></pre>
-<p><code>--gl</code> forces the GL renderer. <code>--aaside</code> keeps the selected Metal/Vulkan<br/>renderer but forces its AASide antialiasing path instead of CAPA. These options<br/>are useful for compatibility checks and renderer comparisons.</p>
+<p><code>--gl</code> forces the GL renderer. <code>--aaside</code> keeps the selected Metal/Vulkan
+renderer but forces its AASide antialiasing path instead of CAPA. These options
+are useful for compatibility checks and renderer comparisons.</p>
 <p>Start the development server and file watcher with:</p>
 <pre><code class="undefinedsh">qkmake watch
 </code></pre>
-<p>The watcher serves the application (port <code>1026</code> by default), notifies connected<br/>devices when TS/TSX files change, and lets debug builds reload without a full<br/>application restart.</p>
+<p>The watcher serves the application (port <code>1026</code> by default), notifies connected
+devices when TS/TSX files change, and lets debug builds reload without a full
+application restart.</p>
 <h2 id="building-quark-from-source">
 			Building Quark from source
-			<span><a class="mark" href="#building-quark-from-source" id="building-quark-from-source">#</a></span>
+			<span><a class="mark" href="#building-quark-from-source" aria-label="Link to this section">#</a></span>
 		</h2><p>Source builds require Node.js and Python plus the selected platform toolchain:</p>
 <ul>
 <li>Xcode for iOS and macOS;</li>
 <li>JDK, Android SDK, and Android NDK for Android;</li>
 <li>the native compiler and development packages for Linux.</li>
 </ul>
-<p>Before building Android, set the following three environment variables.<br/><code>configure</code> reads them to locate the Android SDK, NDK, and Java toolchain:</p>
+<p>Before building Android, set the following three environment variables.
+<code>configure</code> reads them to locate the Android SDK, NDK, and Java toolchain:</p>
 <pre><code class="undefinedsh">export ANDROID_SDK=$HOME/Install/android-sdk
 export ANDROID_NDK=$ANDROID_SDK/ndk/29.0.13113456
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 </code></pre>
-<p>Adjust the paths for the local installation. On macOS, <code>JAVA_HOME</code> normally<br/>points to the JDK&#39;s <code>Contents/Home</code> directory.</p>
+<p>Adjust the paths for the local installation. On macOS, <code>JAVA_HOME</code> normally
+points to the JDK&#39;s <code>Contents/Home</code> directory.</p>
 <p>From an existing checkout, synchronize the current branch and all submodules:</p>
 <pre><code class="undefinedsh">make sync
 </code></pre>
-<p><code>make sync</code> runs both <code>git pull</code> and <code>git submodule update --init --recursive</code>,<br/>so use it only when updating the current checkout is intended.</p>
-<p>The root Makefile provides <code>make ios</code>, <code>make mac</code>, <code>make android</code>, and<br/><code>make linux</code>. <code>make all</code> builds the full product set and may use the configured<br/><code>REMOTE_COMPILE_HOST</code> for targets that cannot be built locally. <code>make install</code><br/>builds that set and installs the local qkmake package; <code>make install-only</code><br/>installs an existing <code>out/qkmake</code> product.</p>
+<p><code>make sync</code> runs both <code>git pull</code> and <code>git submodule update --init --recursive</code>,
+so use it only when updating the current checkout is intended.</p>
+<p>The root Makefile provides <code>make ios</code>, <code>make mac</code>, <code>make android</code>, and
+<code>make linux</code>. <code>make all</code> builds the full product set and may use the configured
+<code>REMOTE_COMPILE_HOST</code> for targets that cannot be built locally. <code>make install</code>
+builds that set and installs the local qkmake package; <code>make install-only</code>
+installs an existing <code>out/qkmake</code> product.</p>
 <h2 id="documentation">
 			Documentation
-			<span><a class="mark" href="#documentation" id="documentation">#</a></span>
+			<span><a class="mark" href="#documentation" aria-label="Link to this section">#</a></span>
 		</h2><ul>
-<li><a href="docs/guides/README.html">User guides</a>: task-oriented tutorials in English and<br/>Chinese. Chinese guide filenames use the <code>-cn.md</code> suffix.</li>
-<li><a href="https://quarks.cc/doc/">Generated API reference</a>: modules, classes,<br/>interfaces, properties, methods, and events generated from <code>libs/quark</code>.</li>
-<li><a href="docs/guides/VIEW_STYLE.html">View layout and styles</a>: view inheritance, JSX<br/>layout, class selectors, pseudo states, and style transitions.</li>
-<li><a href="docs/guides/ACTIONS.html">Actions and keyframes</a>: animation composition,<br/>keyframes, playback, and events.</li>
+<li><a href="docs/guides/README.html">User guides</a>: task-oriented tutorials in English and
+Chinese. Chinese guide filenames use the <code>-cn.md</code> suffix.</li>
+<li><a href="https://quarks.cc/doc/">Generated API reference</a>: modules, classes,
+interfaces, properties, methods, and events generated from <code>libs/quark</code>.</li>
+<li><a href="docs/guides/VIEW_STYLE.html">View layout and styles</a>: view inheritance, JSX
+layout, class selectors, pseudo states, and style transitions.</li>
+<li><a href="docs/guides/ACTIONS.html">Actions and keyframes</a>: animation composition,
+keyframes, playback, and events.</li>
 </ul>
-<p><code>make doc</code> runs <code>tools/gen_html_doc.js</code>. It generates the API Markdown from<br/>TypeScript sources, validates the bilingual guide pairs, includes both root<br/>READMEs, <code>docs/guides/</code>, guide assets, and the license, then renders the<br/>complete publishable HTML tree under <code>out/doc/html</code>.</p>
+<p><code>make doc</code> runs <code>tools/gen_html_doc.js</code>. It generates the API Markdown from
+TypeScript sources, validates the bilingual guide pairs, includes both root
+READMEs, <code>docs/guides/</code>, guide assets, and the license, then renders the
+complete publishable HTML tree under <code>out/doc/html</code>.</p>
 <h2 id="project-status-and-contributing">
 			Project status and contributing
-			<span><a class="mark" href="#project-status-and-contributing" id="project-status-and-contributing">#</a></span>
-		</h2><p>The GL and Metal paths are established, while Vulkan is in its runtime<br/>validation and stabilization phase across Android and Linux drivers. Focused<br/>issues and pull requests are welcome in the <a href="https://github.com/louis-tru/quark">GitHub repository</a>. Keep backend<br/>changes behavior-aligned and include the smallest relevant validation.</p>
-<p>Documentation-only changes should at minimum pass <code>git diff --check</code>; changes<br/>that affect published documentation should also run <code>make doc</code>.</p>
+			<span><a class="mark" href="#project-status-and-contributing" aria-label="Link to this section">#</a></span>
+		</h2><p>The GL and Metal paths are established, and Vulkan is available on Android and
+Linux. Current Vulkan work focuses on expanding device and driver coverage and
+continuing refinement. Focused issues and pull requests are welcome in the
+<a href="https://github.com/louis-tru/quark">GitHub repository</a>. Keep backend changes behavior-aligned and include the
+smallest relevant validation.</p>
+<p>Documentation-only changes should at minimum pass <code>git diff --check</code>; changes
+that affect published documentation should also run <code>make doc</code>.</p>
 <h2 id="license">
 			License
-			<span><a class="mark" href="#license" id="license">#</a></span>
+			<span><a class="mark" href="#license" aria-label="Link to this section">#</a></span>
 		</h2><p>Quark is distributed under the BSD license. See <a href="LICENSE">LICENSE</a>.</p>
 <script>
     <!--
@@ -369,19 +404,28 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'README.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

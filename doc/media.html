@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'media.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-media">quark/media</a></span>
@@ -248,19 +235,19 @@
 <span><a href="#player-audiostreams">player.audioStreams</a></span>
 </li>
 <li>
-<span><a href="#player-play-">player.play()</a></span>
+<span><a href="#player-play">player.play()</a></span>
 </li>
 <li>
-<span><a href="#player-pause-">player.pause()</a></span>
+<span><a href="#player-pause">player.pause()</a></span>
 </li>
 <li>
-<span><a href="#player-stop-">player.stop()</a></span>
+<span><a href="#player-stop">player.stop()</a></span>
 </li>
 <li>
-<span><a href="#player-seek-timems-">player.seek(timeMs)</a></span>
+<span><a href="#player-seek-timems">player.seek(timeMs)</a></span>
 </li>
 <li>
-<span><a href="#player-switchaudio-index-">player.switchAudio(index)</a></span>
+<span><a href="#player-switchaudio-index">player.switchAudio(index)</a></span>
 </li>
 </ul>
 <li>
@@ -286,28 +273,28 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-media">
 			quark/media
-			<span><a class="mark" href="#quark-media" id="quark-media">#</a></span>
+			<span><a class="mark" href="#quark-media" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-mediatype">
 			Enum: MediaType
-			<span><a class="mark" href="#enum-mediatype" id="enum-mediatype">#</a></span>
+			<span><a class="mark" href="#enum-mediatype" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="mediatype">
 			MediaType
-			<span><a class="mark" href="#mediatype" id="mediatype">#</a></span>
+			<span><a class="mark" href="#mediatype" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>kVideo</code><br>Video type </li>
 <li><code>kAudio</code><br>Audio type </li>
 </ul>
 <h2 id="enum-mediasourcestatus">
 			Enum: MediaSourceStatus
-			<span><a class="mark" href="#enum-mediasourcestatus" id="enum-mediasourcestatus">#</a></span>
+			<span><a class="mark" href="#enum-mediasourcestatus" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="mediasourcestatus">
 			MediaSourceStatus
-			<span><a class="mark" href="#mediasourcestatus" id="mediasourcestatus">#</a></span>
+			<span><a class="mark" href="#mediasourcestatus" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>kNormal</code><br>Normal status, Uninitialized </li>
 <li><code>kOpening</code><br>Opening status </li>
@@ -318,10 +305,10 @@
 </ul>
 <h2 id="enum-audiochannellayoutmask">
 			Enum: AudioChannelLayoutMask
-			<span><a class="mark" href="#enum-audiochannellayoutmask" id="enum-audiochannellayoutmask">#</a></span>
+			<span><a class="mark" href="#enum-audiochannellayoutmask" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="audiochannellayoutmask">
 			AudioChannelLayoutMask
-			<span><a class="mark" href="#audiochannellayoutmask" id="audiochannellayoutmask">#</a></span>
+			<span><a class="mark" href="#audiochannellayoutmask" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>kInvalid</code><br>none </li>
 <li><code>kFront_Left</code><br>front left </li>
@@ -345,274 +332,301 @@
 </ul>
 <h2 id="interface-stream">
 			Interface: Stream
-			<span><a class="mark" href="#interface-stream" id="interface-stream">#</a></span>
+			<span><a class="mark" href="#interface-stream" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="stream">
 			Stream
-			<span><a class="mark" href="#stream" id="stream">#</a></span>
+			<span><a class="mark" href="#stream" aria-label="Link to this section">#</a></span>
 		</h3><h3 id="stream-type">
 			stream.type
-			<span><a class="mark" href="#stream-type" id="stream-type">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> type</li>
-</ul>
+			<span><a class="mark" href="#stream-type" aria-label="Link to this section">#</a></span>
+		</h3><p>type</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> type: <a class="api-type" href="#enum-mediatype">MediaType</a></code></pre>
+
+
 <h3 id="stream-mime">
 			stream.mime
-			<span><a class="mark" href="#stream-mime" id="stream-mime">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>mime</code>: <a href="$ext.html#string"><code>string</code></a> mime type</li>
-</ul>
+			<span><a class="mark" href="#stream-mime" aria-label="Link to this section">#</a></span>
+		</h3><p>mime type</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> mime: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="stream-language">
 			stream.language
-			<span><a class="mark" href="#stream-language" id="stream-language">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>language</code>: <a href="$ext.html#string"><code>string</code></a> language</li>
-</ul>
+			<span><a class="mark" href="#stream-language" aria-label="Link to this section">#</a></span>
+		</h3><p>language</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> language: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="stream-codecid">
 			stream.codecId
-			<span><a class="mark" href="#stream-codecid" id="stream-codecid">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>codecId</code>: <a href="$ext.html#number"><code>number</code></a> codec id</li>
-</ul>
+			<span><a class="mark" href="#stream-codecid" aria-label="Link to this section">#</a></span>
+		</h3><p>codec id</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> codecId: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-codectag">
 			stream.codecTag
-			<span><a class="mark" href="#stream-codectag" id="stream-codectag">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>codecTag</code>: <a href="$ext.html#number"><code>number</code></a> codec tag</li>
-</ul>
+			<span><a class="mark" href="#stream-codectag" aria-label="Link to this section">#</a></span>
+		</h3><p>codec tag</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> codecTag: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-format">
 			stream.format
-			<span><a class="mark" href="#stream-format" id="stream-format">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>format</code>: <a href="$ext.html#number"><code>number</code></a> codec av format output</li>
-</ul>
+			<span><a class="mark" href="#stream-format" aria-label="Link to this section">#</a></span>
+		</h3><p>codec av format output</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> format: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-profile">
 			stream.profile
-			<span><a class="mark" href="#stream-profile" id="stream-profile">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>profile</code>: <a href="$ext.html#number"><code>number</code></a> profile</li>
-</ul>
+			<span><a class="mark" href="#stream-profile" aria-label="Link to this section">#</a></span>
+		</h3><p>profile</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> profile: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-level">
 			stream.level
-			<span><a class="mark" href="#stream-level" id="stream-level">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>level</code>: <a href="$ext.html#number"><code>number</code></a> level</li>
-</ul>
+			<span><a class="mark" href="#stream-level" aria-label="Link to this section">#</a></span>
+		</h3><p>level</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-width">
 			stream.width
-			<span><a class="mark" href="#stream-width" id="stream-width">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>width</code>: <a href="$ext.html#number"><code>number</code></a> video width</li>
-</ul>
+			<span><a class="mark" href="#stream-width" aria-label="Link to this section">#</a></span>
+		</h3><p>video width</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> width: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-height">
 			stream.height
-			<span><a class="mark" href="#stream-height" id="stream-height">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>height</code>: <a href="$ext.html#number"><code>number</code></a> video height</li>
-</ul>
+			<span><a class="mark" href="#stream-height" aria-label="Link to this section">#</a></span>
+		</h3><p>video height</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> height: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-bitrate">
 			stream.bitrate
-			<span><a class="mark" href="#stream-bitrate" id="stream-bitrate">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>bitrate</code>: <a href="$ext.html#number"><code>number</code></a> bit rate</li>
-</ul>
+			<span><a class="mark" href="#stream-bitrate" aria-label="Link to this section">#</a></span>
+		</h3><p>bit rate</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> bitrate: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-samplerate">
 			stream.sampleRate
-			<span><a class="mark" href="#stream-samplerate" id="stream-samplerate">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>sampleRate</code>: <a href="$ext.html#number"><code>number</code></a> audio sample rate</li>
-</ul>
+			<span><a class="mark" href="#stream-samplerate" aria-label="Link to this section">#</a></span>
+		</h3><p>audio sample rate</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> sampleRate: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-channels">
 			stream.channels
-			<span><a class="mark" href="#stream-channels" id="stream-channels">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>channels</code>: <a href="$ext.html#number"><code>number</code></a> audio channel count</li>
-</ul>
+			<span><a class="mark" href="#stream-channels" aria-label="Link to this section">#</a></span>
+		</h3><p>audio channel count</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> channels: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-channellayout">
 			stream.channelLayout
-			<span><a class="mark" href="#stream-channellayout" id="stream-channellayout">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>channelLayout</code>: <a href="$ext.html#number"><code>number</code></a> audio channel layout to enum AudioChannelLayoutMask</li>
-</ul>
+			<span><a class="mark" href="#stream-channellayout" aria-label="Link to this section">#</a></span>
+		</h3><p>audio channel layout to enum AudioChannelLayoutMask</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> channelLayout: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-duration">
 			stream.duration
-			<span><a class="mark" href="#stream-duration" id="stream-duration">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>duration</code>: <a href="$ext.html#number"><code>number</code></a> duration of the stream, in stream time base.</li>
-</ul>
+			<span><a class="mark" href="#stream-duration" aria-label="Link to this section">#</a></span>
+		</h3><p>duration of the stream, in stream time base.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> duration: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-avgframerate">
 			stream.avgFramerate
-			<span><a class="mark" href="#stream-avgframerate" id="stream-avgframerate">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>avgFramerate</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> video frame average framerate</li>
-</ul>
+			<span><a class="mark" href="#stream-avgframerate" aria-label="Link to this section">#</a></span>
+		</h3><p>video frame average framerate</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> avgFramerate: <a class="api-type" href="$ext.html#number">number</a>[]</code></pre>
+
+
 <h3 id="stream-timebase">
 			stream.timeBase
-			<span><a class="mark" href="#stream-timebase" id="stream-timebase">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>timeBase</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code> Unit of pts,dts on Packet,Frame by Numerator/Denominator (seconds)</li>
-</ul>
+			<span><a class="mark" href="#stream-timebase" aria-label="Link to this section">#</a></span>
+		</h3><p>Unit of pts,dts on Packet,Frame by Numerator/Denominator (seconds)</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> timeBase: <a class="api-type" href="$ext.html#number">number</a>[]</code></pre>
+
+
 <h3 id="stream-index">
 			stream.index
-			<span><a class="mark" href="#stream-index" id="stream-index">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>index</code>: <a href="$ext.html#number"><code>number</code></a> stream index in source</li>
-</ul>
+			<span><a class="mark" href="#stream-index" aria-label="Link to this section">#</a></span>
+		</h3><p>stream index in source</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> index: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="stream-hashcode">
 			stream.hashCode
-			<span><a class="mark" href="#stream-hashcode" id="stream-hashcode">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>hashCode</code>: <a href="$ext.html#number"><code>number</code></a> key params hash code</li>
-</ul>
+			<span><a class="mark" href="#stream-hashcode" aria-label="Link to this section">#</a></span>
+		</h3><p>key params hash code</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> hashCode: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h2 id="interface-player">
 			Interface: Player
-			<span><a class="mark" href="#interface-player" id="interface-player">#</a></span>
+			<span><a class="mark" href="#interface-player" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="player">
 			Player
-			<span><a class="mark" href="#player" id="player">#</a></span>
+			<span><a class="mark" href="#player" aria-label="Link to this section">#</a></span>
 		</h3><h3 id="player-pts">
 			player.pts
-			<span><a class="mark" href="#player-pts" id="player-pts">#</a></span>
+			<span><a class="mark" href="#player-pts" aria-label="Link to this section">#</a></span>
 		</h3><p>Presentation timestamp (ms or engine-specific units). </p>
-<ul>
-<li><code>@get</code> <code>pts</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> pts: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="player-volume">
 			player.volume
-			<span><a class="mark" href="#player-volume" id="player-volume">#</a></span>
+			<span><a class="mark" href="#player-volume" aria-label="Link to this section">#</a></span>
 		</h3><p>Playback volume, 0.0–1.0. </p>
-<ul>
-<li><code>volume</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>volume: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="player-mute">
 			player.mute
-			<span><a class="mark" href="#player-mute" id="player-mute">#</a></span>
+			<span><a class="mark" href="#player-mute" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether audio is currently muted. </p>
-<ul>
-<li><code>mute</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>mute: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="player-ispause">
 			player.isPause
-			<span><a class="mark" href="#player-ispause" id="player-ispause">#</a></span>
+			<span><a class="mark" href="#player-ispause" aria-label="Link to this section">#</a></span>
 		</h3><p>True if media is currently paused. </p>
-<ul>
-<li><code>@get</code> <code>isPause</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isPause: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="player-type">
 			player.type
-			<span><a class="mark" href="#player-type" id="player-type">#</a></span>
+			<span><a class="mark" href="#player-type" aria-label="Link to this section">#</a></span>
 		</h3><p>Media container type. </p>
-<ul>
-<li><code>@get</code> <code>type</code>: <a href="#enum-mediatype"><code>MediaType</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> type: <a class="api-type" href="#enum-mediatype">MediaType</a></code></pre>
+
+
 <h3 id="player-duration">
 			player.duration
-			<span><a class="mark" href="#player-duration" id="player-duration">#</a></span>
+			<span><a class="mark" href="#player-duration" aria-label="Link to this section">#</a></span>
 		</h3><p>Total duration of the media, in ms. </p>
-<ul>
-<li><code>@get</code> <code>duration</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> duration: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="player-status">
 			player.status
-			<span><a class="mark" href="#player-status" id="player-status">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>status</code>: <a href="#enum-mediasourcestatus"><code>MediaSourceStatus</code></a> The playback status of the current media source</li>
-</ul>
+			<span><a class="mark" href="#player-status" aria-label="Link to this section">#</a></span>
+		</h3><p>The playback status of the current media source</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> status: <a class="api-type" href="#enum-mediasourcestatus">MediaSourceStatus</a></code></pre>
+
+
 <h3 id="player-src">
 			player.src
-			<span><a class="mark" href="#player-src" id="player-src">#</a></span>
+			<span><a class="mark" href="#player-src" aria-label="Link to this section">#</a></span>
 		</h3><p>set/get media source path</p>
-<ul>
-<li><code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>src: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="player-video">
 			player.video
-			<span><a class="mark" href="#player-video" id="player-video">#</a></span>
+			<span><a class="mark" href="#player-video" aria-label="Link to this section">#</a></span>
 		</h3><p>Active video stream, if any. </p>
-<ul>
-<li><code>@get</code> <code>video</code>: <a href="#interface-stream"><code>Stream</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> video: <a class="api-type" href="#interface-stream">Stream</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="player-audio">
 			player.audio
-			<span><a class="mark" href="#player-audio" id="player-audio">#</a></span>
+			<span><a class="mark" href="#player-audio" aria-label="Link to this section">#</a></span>
 		</h3><p>Active audio stream, if any. </p>
-<ul>
-<li><code>@get</code> <code>audio</code>: <a href="#interface-stream"><code>Stream</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> audio: <a class="api-type" href="#interface-stream">Stream</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="player-audiostreams">
 			player.audioStreams
-			<span><a class="mark" href="#player-audiostreams" id="player-audiostreams">#</a></span>
+			<span><a class="mark" href="#player-audiostreams" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the number of audio tracks in the current media source </p>
-<ul>
-<li><code>@get</code> <code>audioStreams</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h3 id="player-play-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> audioStreams: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<h3 id="player-play">
 			player.play()
-			<span><a class="mark" href="#player-play-" id="player-play-">#</a></span>
+			<span><a class="mark" href="#player-play" aria-label="Link to this section">#</a></span>
 		</h3><p>Begin or resume playback. </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="player-pause-">
+<pre class="api-signature sh_none"><code>play(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="player-pause">
 			player.pause()
-			<span><a class="mark" href="#player-pause-" id="player-pause-">#</a></span>
+			<span><a class="mark" href="#player-pause" aria-label="Link to this section">#</a></span>
 		</h3><p>Pause playback. </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="player-stop-">
+<pre class="api-signature sh_none"><code>pause(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="player-stop">
 			player.stop()
-			<span><a class="mark" href="#player-stop-" id="player-stop-">#</a></span>
+			<span><a class="mark" href="#player-stop" aria-label="Link to this section">#</a></span>
 		</h3><p>Stop playback completely. </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="player-seek-timems-">
+<pre class="api-signature sh_none"><code>stop(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="player-seek-timems">
 			player.seek(timeMs)
-			<span><a class="mark" href="#player-seek-timems-" id="player-seek-timems-">#</a></span>
+			<span><a class="mark" href="#player-seek-timems" aria-label="Link to this section">#</a></span>
 		</h3><p>Seek to a new position in the media.</p>
+<pre class="api-signature sh_none"><code>seek(timeMs: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>timeMs</code>: <a href="numbers.html#uint"><code>Uint</code></a> Target timestamp in milliseconds.</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>timeMs</code> — Target timestamp in milliseconds.</li>
 </ul>
-<h3 id="player-switchaudio-index-">
+<h3 id="player-switchaudio-index">
 			player.switchAudio(index)
-			<span><a class="mark" href="#player-switchaudio-index-" id="player-switchaudio-index-">#</a></span>
+			<span><a class="mark" href="#player-switchaudio-index" aria-label="Link to this section">#</a></span>
 		</h3><p>Switch the currently playing audio by track index</p>
+<pre class="api-signature sh_none"><code>switchAudio(index: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>index</code>: <a href="numbers.html#uint"><code>Uint</code></a> The index &lt; [<code>Player.audioStreams</code>]</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>index</code> — The index &lt; [<code>Player.audioStreams</code>]</li>
 </ul>
 <h2 id="class-audioplayer">
 			Class: AudioPlayer
-			<span><a class="mark" href="#class-audioplayer" id="class-audioplayer">#</a></span>
+			<span><a class="mark" href="#class-audioplayer" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="audioplayer">
 			AudioPlayer
-			<span><a class="mark" href="#audioplayer" id="audioplayer">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a></li>
-<li><code>@implements</code> <a href="#interface-player"><code>Player</code></a></li>
-</ul>
+			<span><a class="mark" href="#audioplayer" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="event.html#notification"><code>Notification</code></a>
+<strong>Implements:</strong> <a href="#interface-player"><code>Player</code></a></p>
 <h3 id="audioplayer-onload">
 			audioplayer.onLoad
-			<span><a class="mark" href="#audioplayer-onload" id="audioplayer-onload">#</a></span>
+			<span><a class="mark" href="#audioplayer-onload" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="audioplayer-onstop">
 			audioplayer.onStop
-			<span><a class="mark" href="#audioplayer-onstop" id="audioplayer-onstop">#</a></span>
+			<span><a class="mark" href="#audioplayer-onstop" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>@event</code> <code>onStop</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="audioplayer-onerror">
 			audioplayer.onError
-			<span><a class="mark" href="#audioplayer-onerror" id="audioplayer-onerror">#</a></span>
+			<span><a class="mark" href="#audioplayer-onerror" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>@event</code> <code>onError</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="$ext.html#error"><code>Error</code></a>&gt;&gt; </li>
 </ul>
 <h3 id="audioplayer-onbuffering">
 			audioplayer.onBuffering
-			<span><a class="mark" href="#audioplayer-onbuffering" id="audioplayer-onbuffering">#</a></span>
+			<span><a class="mark" href="#audioplayer-onbuffering" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>@event</code> <code>onBuffering</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-audioplayer"><code>AudioPlayer</code></a>,<a href="$ext.html#number"><code>number</code></a>&gt;&gt; </li>
 </ul>
@@ -623,19 +637,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'media.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

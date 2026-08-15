@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Quark 是一个面向 Android、iOS、macOS 与 Linux 的跨平台原生 GUI 框架。">
+	<meta name="theme-color" content="#0b0d0e">
+	<title>Quark · 原生 GUI 运行时</title>
+	<link rel="stylesheet" href="style-engineer.css">
+</head>
+<body>
+	<div class="shell">
+		<header>
+			<a class="logo" href="index-engineer-cn.html"><span>Qk</span> quark/runtime</a>
+			<nav aria-label="主导航">
+				<a href="doc/README-cn.html">文档</a>
+				<a href="doc/docs/guides/README-cn.html">指南</a>
+				<a href="index-engineer.html" lang="en">English</a>
+				<a href="https://github.com/louis-tru/quark">github ↗</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="intro">
+					<p class="prompt"><span>quark@native</span>:~$ inspect runtime</p>
+					<h1>Quark<span>跨平台原生 GUI 框架</span></h1>
+					<p class="summary">
+						以 C++ 构建核心运行时，用 JavaScript / JSX 描述界面，面向 Android、iOS、macOS 与 Linux。
+						Quark 提供独立布局、样式、事件和 GPU 渲染系统，不依赖浏览器 DOM。
+					</p>
+					<div class="actions">
+						<a class="primary" href="doc/README-cn.html">阅读文档 →</a>
+						<a href="https://github.com/louis-tru/quark">浏览源码</a>
+					</div>
+				</div>
+
+				<aside class="spec" aria-label="运行时规格">
+					<div class="spec-head"><span>runtime.info</span><span class="status">stable</span></div>
+					<dl>
+						<div><dt>core</dt><dd>C++</dd></div>
+						<div><dt>interface</dt><dd>JavaScript / JSX</dd></div>
+						<div><dt>platforms</dt><dd>Android · iOS · macOS · Linux</dd></div>
+						<div><dt>renderers</dt><dd>OpenGL · Metal · Vulkan</dd></div>
+						<div><dt>layout</dt><dd>native / independent</dd></div>
+						<div><dt>browser DOM</dt><dd>false</dd></div>
+					</dl>
+					<pre><code><span>$</span> qkmake build
+<span class="muted">→ compiling native runtime
+→ packaging application
+✓ build complete</span></code></pre>
+				</aside>
+			</section>
+
+			<section class="modules" aria-label="核心模块">
+				<div class="section-title"><span>01</span> architecture</div>
+				<article><b>native.runtime</b><p>明确的视图树、事件模型与资源生命周期，保持原生应用需要的控制力。</p><small>ui / event</small></article>
+				<article><b>style.engine</b><p>自有布局与类 CSS 样式系统，用一致的模型构建多平台界面。</p><small>style / layout</small></article>
+				<article><b>gpu.canvas</b><p>覆盖 OpenGL、Metal 与 Vulkan 后端，支持跨平台高性能图形绘制。</p><small>render / gpu</small></article>
+				<article><b>qkmake</b><p>通过 qkmake 完成项目初始化、构建、导出以及开发期热更新。</p><small>tooling / package</small></article>
+			</section>
+
+			<section class="principle">
+				<div class="section-title"><span>02</span> principle</div>
+				<p>不是浏览器兼容层。</p>
+				<p class="muted">这是一个系统明确、性能可控的原生运行时。</p>
+			</section>
+		</main>
+
+		<footer><span>quark / louis-tru</span><span>source available on <a href="https://github.com/louis-tru/quark">github ↗</a></span></footer>
+	</div>
+</body>
+</html>

@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'ws.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-ws">quark/ws</a></span>
@@ -150,18 +137,15 @@
 <span><a href="#wsconversation-autoreconnect">wsconversation.autoReconnect</a></span>
 </li>
 <li>
-<span><a href="#wsconversation-connect-">wsconversation.connect()</a></span>
+<span><a href="#wsconversation-connect">wsconversation.connect()</a></span>
 </li>
 <li>
-<span><a href="#wsconversation-close-">wsconversation.close()</a></span>
+<span><a href="#wsconversation-close">wsconversation.close()</a></span>
 </li>
 <li>
-<span><a href="#wsconversation-sendpacket-p-">wsconversation.sendPacket(p)</a></span>
+<span><a href="#wsconversation-sendpacket-p">wsconversation.sendPacket(p)</a></span>
 </li>
 </ul>
-<li>
-<span><a href="#method_call_timeout">METHOD_CALL_TIMEOUT</a></span>
-</li>
 <li>
 <span><a href="#class-wscevent">Class: WSCEvent</a></span>
 <ul>
@@ -172,7 +156,7 @@
 <span><a href="#wscevent-remotesender">wscevent.remoteSender</a></span>
 </li>
 <li>
-<span><a href="#wscevent-constructor-data-sender-">wscevent.constructor(data?,sender?)</a></span>
+<span><a href="#wscevent-constructor-data-sender">wscevent.constructor(data?,sender?)</a></span>
 </li>
 </ul>
 <li>
@@ -191,184 +175,191 @@
 <span><a href="#wsclient-onload">wsclient.onLoad</a></span>
 </li>
 <li>
-<span><a href="#wsclient-constructor-servicename-conv-">wsclient.constructor(serviceName,conv)</a></span>
+<span><a href="#wsclient-constructor-servicename-conv">wsclient.constructor(serviceName,conv)</a></span>
 </li>
 <li>
-<span><a href="#wsclient-receivemessage-packet-">wsclient.receiveMessage(packet)</a></span>
+<span><a href="#wsclient-receivemessage-packet">wsclient.receiveMessage(packet)</a></span>
 </li>
 <li>
-<span><a href="#wsclient-callmethod-method-data-sender-">wsclient.callMethod(method,data,sender)</a></span>
+<span><a href="#wsclient-callmethod-method-data-sender">wsclient.callMethod(method,data,sender)</a></span>
 </li>
 <li>
-<span><a href="#wsclient-send-method-data-sender-">wsclient.send(method,data?,sender?)</a></span>
+<span><a href="#wsclient-send-method-data-sender">wsclient.send(method,data?,sender?)</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-ws">
 			quark/ws
-			<span><a class="mark" href="#quark-ws" id="quark-ws">#</a></span>
+			<span><a class="mark" href="#quark-ws" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-packettype">
 			Enum: PacketType
-			<span><a class="mark" href="#enum-packettype" id="enum-packettype">#</a></span>
+			<span><a class="mark" href="#enum-packettype" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="packettype">
 			PacketType
-			<span><a class="mark" href="#packettype" id="packettype">#</a></span>
+			<span><a class="mark" href="#packettype" aria-label="Link to this section">#</a></span>
 		</h3><p>Defines the types of packets used in WSClient communication.</p>
 <h2 id="interface-packet">
 			Interface: Packet
-			<span><a class="mark" href="#interface-packet" id="interface-packet">#</a></span>
+			<span><a class="mark" href="#interface-packet" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="packet">
 			Packet
-			<span><a class="mark" href="#packet" id="packet">#</a></span>
+			<span><a class="mark" href="#packet" aria-label="Link to this section">#</a></span>
 		</h3><p>Represents a packet structure used in WSClient communication.</p>
 <h2 id="class-wsconversation">
 			Class: WSConversation
-			<span><a class="mark" href="#class-wsconversation" id="class-wsconversation">#</a></span>
+			<span><a class="mark" href="#class-wsconversation" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="wsconversation">
 			WSConversation
-			<span><a class="mark" href="#wsconversation" id="wsconversation">#</a></span>
+			<span><a class="mark" href="#wsconversation" aria-label="Link to this section">#</a></span>
 		</h3><p>WSConversation is extended from WebSocket to provide a WSClient connection.</p>
-<ul>
-<li><code>@extends</code> <a href="net.html#websocket"><code>WebSocket</code></a></li>
-</ul>
+<p><strong>Extends:</strong> <a href="net.html#websocket"><code>WebSocket</code></a></p>
 <h3 id="wsconversation-token">
 			wsconversation.token
-			<span><a class="mark" href="#wsconversation-token" id="wsconversation-token">#</a></span>
+			<span><a class="mark" href="#wsconversation-token" aria-label="Link to this section">#</a></span>
 		</h3><p>Session token</p>
-<ul>
-<li><code>@get</code> <code>token</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> token: </code></pre>
+
+
 <h3 id="wsconversation-autoreconnect">
 			wsconversation.autoReconnect
-			<span><a class="mark" href="#wsconversation-autoreconnect" id="wsconversation-autoreconnect">#</a></span>
-		</h3><ul>
-<li><code>autoReconnect</code>:  </li>
-</ul>
-<h3 id="wsconversation-connect-">
+			<span><a class="mark" href="#wsconversation-autoreconnect" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>autoReconnect: </code></pre>
+
+
+<h3 id="wsconversation-connect">
 			wsconversation.connect()
-			<span><a class="mark" href="#wsconversation-connect-" id="wsconversation-connect-">#</a></span>
-		</h3><ul>
+			<span><a class="mark" href="#wsconversation-connect" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>connect(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<ul>
 <li><code>@override</code><br>Connect to the WebSocket server.</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
 </ul>
-<h3 id="wsconversation-close-">
+<h3 id="wsconversation-close">
 			wsconversation.close()
-			<span><a class="mark" href="#wsconversation-close-" id="wsconversation-close-">#</a></span>
-		</h3><ul>
+			<span><a class="mark" href="#wsconversation-close" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>close()</code></pre>
+
+
+<ul>
 <li><code>@override</code><br>Close the conversation connection.</li>
 </ul>
-<h3 id="wsconversation-sendpacket-p-">
+<h3 id="wsconversation-sendpacket-p">
 			wsconversation.sendPacket(p)
-			<span><a class="mark" href="#wsconversation-sendpacket-p-" id="wsconversation-sendpacket-p-">#</a></span>
+			<span><a class="mark" href="#wsconversation-sendpacket-p" aria-label="Link to this section">#</a></span>
 		</h3><p>Send a packet to the server.</p>
+<pre class="api-signature sh_none"><code>sendPacket(data: any, p: <a class="api-type" href="#interface-packet">Packet</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>data</code>:  Packet data to send</li>
-<li><code>@param</code> <code>p</code>: <a href="#interface-packet"><code>Packet</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h2 id="method_call_timeout">
-			METHOD_CALL_TIMEOUT
-			<span><a class="mark" href="#method_call_timeout" id="method_call_timeout">#</a></span>
-		</h2><p>120s</p>
-<ul>
-<li><code>@const</code> <code>METHOD_CALL_TIMEOUT</code>: </li>
+<li><code>data</code> — Packet data to send</li>
 </ul>
 <h2 id="class-wscevent">
 			Class: WSCEvent
-			<span><a class="mark" href="#class-wscevent" id="class-wscevent">#</a></span>
+			<span><a class="mark" href="#class-wscevent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="wscevent">
 			WSCEvent
-			<span><a class="mark" href="#wscevent" id="wscevent">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-wsclient"><code>WSClient</code></a>&gt;</li>
-</ul>
+			<span><a class="mark" href="#wscevent" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-wsclient"><code>WSClient</code></a>&gt;</p>
 <h3 id="wscevent-remotesender">
 			wscevent.remoteSender
-			<span><a class="mark" href="#wscevent-remotesender" id="wscevent-remotesender">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>remoteSender</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="wscevent-constructor-data-sender-">
+			<span><a class="mark" href="#wscevent-remotesender" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> remoteSender: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+<h3 id="wscevent-constructor-data-sender">
 			wscevent.constructor(data?,sender?)
-			<span><a class="mark" href="#wscevent-constructor-data-sender-" id="wscevent-constructor-data-sender-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>data?</code>: <code>any</code> Event data</li>
-<li><code>@param</code> <code>sender?</code>: <a href="$ext.html#string"><code>string</code></a> Remote sender id</li>
+			<span><a class="mark" href="#wscevent-constructor-data-sender" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(data?: any, sender?: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data?</code> — Event data</li>
+<li><code>sender?</code> — Remote sender id</li>
 </ul>
 <h2 id="class-wsclient">
 			Class: WSClient
-			<span><a class="mark" href="#class-wsclient" id="class-wsclient">#</a></span>
+			<span><a class="mark" href="#class-wsclient" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="wsclient">
 			WSClient
-			<span><a class="mark" href="#wsclient" id="wsclient">#</a></span>
+			<span><a class="mark" href="#wsclient" aria-label="Link to this section">#</a></span>
 		</h3><p>WSClient is Qktool&#39;s WebSocket service client.</p>
 <p>Through it, you can call the service methods of server provided or listen to the service events.</p>
-<ul>
-<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#class-wscevent"><code>WSCEvent</code></a>&gt;</li>
-</ul>
+<p><strong>Extends:</strong> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#class-wscevent"><code>WSCEvent</code></a>&gt;</p>
 <h3 id="wsclient-name">
 			wsclient.name
-			<span><a class="mark" href="#wsclient-name" id="wsclient-name">#</a></span>
+			<span><a class="mark" href="#wsclient-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Service name on the server</p>
-<ul>
-<li><code>@get</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> name: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="wsclient-conv">
 			wsclient.conv
-			<span><a class="mark" href="#wsclient-conv" id="wsclient-conv">#</a></span>
+			<span><a class="mark" href="#wsclient-conv" aria-label="Link to this section">#</a></span>
 		</h3><p>Conversation instance</p>
-<ul>
-<li><code>@get</code> <code>conv</code>: <a href="#class-wsconversation"><code>WSConversation</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> conv: <a class="api-type" href="#class-wsconversation">WSConversation</a></code></pre>
+
+
 <h3 id="wsclient-onload">
 			wsclient.onLoad
-			<span><a class="mark" href="#wsclient-onload" id="wsclient-onload">#</a></span>
+			<span><a class="mark" href="#wsclient-onload" aria-label="Link to this section">#</a></span>
 		</h3><p>Triggered when the client is loaded and ready to use.</p>
 <ul>
 <li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#class-wscevent"><code>WSCEvent</code></a>&gt; </li>
 </ul>
-<h3 id="wsclient-constructor-servicename-conv-">
+<h3 id="wsclient-constructor-servicename-conv">
 			wsclient.constructor(serviceName,conv)
-			<span><a class="mark" href="#wsclient-constructor-servicename-conv-" id="wsclient-constructor-servicename-conv-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>serviceName</code>: <a href="$ext.html#string"><code>string</code></a> Service name on the server</li>
-<li><code>@param</code> <code>conv</code>: <a href="#class-wsconversation"><code>WSConversation</code></a> Conversation instance</li>
+			<span><a class="mark" href="#wsclient-constructor-servicename-conv" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(serviceName: <a class="api-type" href="$ext.html#string">string</a>, conv: <a class="api-type" href="#class-wsconversation">WSConversation</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>serviceName</code> — Service name on the server</li>
+<li><code>conv</code> — Conversation instance</li>
 </ul>
-<h3 id="wsclient-receivemessage-packet-">
+<h3 id="wsclient-receivemessage-packet">
 			wsclient.receiveMessage(packet)
-			<span><a class="mark" href="#wsclient-receivemessage-packet-" id="wsclient-receivemessage-packet-">#</a></span>
+			<span><a class="mark" href="#wsclient-receivemessage-packet" aria-label="Link to this section">#</a></span>
 		</h3><p>To handle received messages from the server.</p>
-<ul>
-<li><code>@param</code> <code>packet</code>: <a href="#interface-packet"><code>Packet</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h3 id="wsclient-callmethod-method-data-sender-">
+<pre class="api-signature sh_none"><code>receiveMessage(packet: <a class="api-type" href="#interface-packet">Packet</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<h3 id="wsclient-callmethod-method-data-sender">
 			wsclient.callMethod(method,data,sender)
-			<span><a class="mark" href="#wsclient-callmethod-method-data-sender-" id="wsclient-callmethod-method-data-sender-">#</a></span>
+			<span><a class="mark" href="#wsclient-callmethod-method-data-sender" aria-label="Link to this section">#</a></span>
 		</h3><p>The remote service calls a method on the client by the method name.</p>
+<pre class="api-signature sh_none"><code>callMethod(method: <a class="api-type" href="$ext.html#string">string</a>, data: any, sender: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
 <ul>
-<li><code>@param</code> <code>method</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <code>any</code> </li>
-<li><p><code>@param</code> <code>sender</code>: <a href="$ext.html#string"><code>string</code></a> </p><br/></li>
-<li><p><code>@param</code> <code>method</code>:  Method name to call</p><br/></li>
+<li><code>@param</code> <code>method</code>:  Method name to call</li>
 <li><code>@param</code> <code>data?</code>:  Data to send</li>
 <li><code>@param</code> <code>timeout?</code>:  Timeout in milliseconds, default 120s</li>
 <li><code>@param</code> <code>sender?</code>:  Sender name, default this service name</li>
 </ul>
-<h3 id="wsclient-send-method-data-sender-">
+<h3 id="wsclient-send-method-data-sender">
 			wsclient.send(method,data?,sender?)
-			<span><a class="mark" href="#wsclient-send-method-data-sender-" id="wsclient-send-method-data-sender-">#</a></span>
+			<span><a class="mark" href="#wsclient-send-method-data-sender" aria-label="Link to this section">#</a></span>
 		</h3><p>To call a method on the server but there will be no callback.</p>
+<pre class="api-signature sh_none"><code>send(method: <a class="api-type" href="$ext.html#string">string</a>, data?: any, sender?: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>method</code>: <a href="$ext.html#string"><code>string</code></a> Method name to call</li>
-<li><code>@param</code> <code>data?</code>: <code>any</code> Data to send</li>
-<li><code>@param</code> <code>sender?</code>: <a href="$ext.html#string"><code>string</code></a> Sender name, default this service name</li>
+<li><code>method</code> — Method name to call</li>
+<li><code>data?</code> — Data to send</li>
+<li><code>sender?</code> — Sender name, default this service name</li>
 </ul>
 
 			</div>
@@ -377,19 +368,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'ws.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'hash.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-hash">quark/hash</a></span>
@@ -133,75 +120,71 @@
 <span><a href="#sha256">sha256</a></span>
 </li>
 <li>
-<span><a href="#rng-len-">rng(len)</a></span>
+<span><a href="#rng-len">rng(len)</a></span>
 </li>
 <li>
-<span><a href="#rng16-">rng16()</a></span>
+<span><a href="#rng16">rng16()</a></span>
 </li>
 <li>
-<span><a href="#bytetohex">byteToHex</a></span>
-</li>
-<li>
-<span><a href="#uuid_v4-random-">uuid_v4(random?)</a></span>
+<span><a href="#uuid_v4-random">uuid_v4(random?)</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-hash">
 			quark/hash
-			<span><a class="mark" href="#quark-hash" id="quark-hash">#</a></span>
+			<span><a class="mark" href="#quark-hash" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="md5">
 			md5
-			<span><a class="mark" href="#md5" id="md5">#</a></span>
-		</h2><ul>
-<li><code>@const</code> <code>md5</code>: </li>
-</ul>
+			<span><a class="mark" href="#md5" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">const</span> md5</code></pre>
+
+
 <h2 id="sha1">
 			sha1
-			<span><a class="mark" href="#sha1" id="sha1">#</a></span>
-		</h2><ul>
-<li><code>@const</code> <code>sha1</code>: </li>
-</ul>
+			<span><a class="mark" href="#sha1" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">const</span> sha1</code></pre>
+
+
 <h2 id="sha256">
 			sha256
-			<span><a class="mark" href="#sha256" id="sha256">#</a></span>
-		</h2><ul>
-<li><code>@const</code> <code>sha256</code>: </li>
-</ul>
-<h2 id="rng-len-">
+			<span><a class="mark" href="#sha256" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">const</span> sha256</code></pre>
+
+
+<h2 id="rng-len">
 			rng(len)
-			<span><a class="mark" href="#rng-len-" id="rng-len-">#</a></span>
-		</h2><p>Math.random()-based (RNG)<br/>If all else fails, use Math.random().  It&#39;s fast, but is of unspecified<br/>quality.</p>
-<ul>
-<li><code>@param</code> <code>len</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="buffer.html#buffer"><code>Buffer</code></a> </li>
-</ul>
-<h2 id="rng16-">
+			<span><a class="mark" href="#rng-len" aria-label="Link to this section">#</a></span>
+		</h2><p>Math.random()-based (RNG)
+If all else fails, use Math.random().  It&#39;s fast, but is of unspecified
+quality.</p>
+<pre class="api-signature sh_none"><code>rng(len: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="buffer.html#buffer">Buffer</a></code></pre>
+
+
+
+<h2 id="rng16">
 			rng16()
-			<span><a class="mark" href="#rng16-" id="rng16-">#</a></span>
+			<span><a class="mark" href="#rng16" aria-label="Link to this section">#</a></span>
 		</h2><p>Generate a 16-byte random number.</p>
-<ul>
-<li><code>@return</code> <a href="buffer.html#buffer"><code>Buffer</code></a> </li>
-</ul>
-<h2 id="bytetohex">
-			byteToHex
-			<span><a class="mark" href="#bytetohex" id="bytetohex">#</a></span>
-		</h2><p>Convert array of 16 byte values to UUID string format of the form:<br/>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
-<ul>
-<li><code>@const</code> <code>byteToHex</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code></li>
-</ul>
-<h2 id="uuid_v4-random-">
+<pre class="api-signature sh_none"><code>rng16(): <a class="api-type" href="buffer.html#buffer">Buffer</a></code></pre>
+
+
+
+<h2 id="uuid_v4-random">
 			uuid_v4(random?)
-			<span><a class="mark" href="#uuid_v4-random-" id="uuid_v4-random-">#</a></span>
+			<span><a class="mark" href="#uuid_v4-random" aria-label="Link to this section">#</a></span>
 		</h2><p>Generate a version 4 (random) UUID.</p>
+<pre class="api-signature sh_none"><code>uuid_v4(random: any, random?: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>random</code>:  Optional 16-byte array to use as random data.</li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> A version 4 UUID string.</li>
-<li><code>@param</code> <code>random?</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
+<li><code>random</code> — Optional 16-byte array to use as random data.</li>
 </ul>
+<p><strong>Returns:</strong> A version 4 UUID string.</p>
 
 			</div>
 
@@ -209,19 +192,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'hash.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

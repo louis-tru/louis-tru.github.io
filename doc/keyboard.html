@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'keyboard.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-keyboard">quark/keyboard</a></span>
@@ -134,38 +121,213 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-keyboard">
 			quark/keyboard
-			<span><a class="mark" href="#quark-keyboard" id="quark-keyboard">#</a></span>
+			<span><a class="mark" href="#quark-keyboard" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-keyboardcode">
 			Enum: KeyboardCode
-			<span><a class="mark" href="#enum-keyboardcode" id="enum-keyboardcode">#</a></span>
+			<span><a class="mark" href="#enum-keyboardcode" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="keyboardcode">
 			KeyboardCode
-			<span><a class="mark" href="#keyboardcode" id="keyboardcode">#</a></span>
-		</h3>
+			<span><a class="mark" href="#keyboardcode" aria-label="Link to this section">#</a></span>
+		</h3><p>Platform-independent keyboard, mouse, media, and device key codes.</p>
+<ul>
+<li><code>NONE</code>  = <code>0</code> No key.</li>
+<li><code>BACK_SPACE</code>  = <code>8</code> Backspace key.</li>
+<li><code>TAB</code>  = <code>9</code> Tab key.</li>
+<li><code>CLEAR</code>  = <code>12</code> Clear key.</li>
+<li><code>ENTER</code>  = <code>13</code> Enter or Return key.</li>
+<li><code>SHIFT</code>  = <code>16</code> Shift or left Shift key.</li>
+<li><code>CTRL</code>  = <code>17</code> Control or left Control key.</li>
+<li><code>ALT</code>  = <code>18</code> Alt or left Alt key.</li>
+<li><code>BREAK</code>  = <code>19</code> Break or Pause key.</li>
+<li><code>CAPS_LOCK</code>  = <code>20</code> Caps Lock key.</li>
+<li><code>ESC</code>  = <code>27</code> Escape key.</li>
+<li><code>SPACE</code>  = <code>32</code> Space key.</li>
+<li><code>PAGE_UP</code>  = <code>33</code> Page Up key.</li>
+<li><code>PAGE_DOWN</code>  = <code>34</code> Page Down key.</li>
+<li><code>MOVE_END</code>  = <code>35</code> End key.</li>
+<li><code>MOVE_HOME</code>  = <code>36</code> Home navigation key.</li>
+<li><code>LEFT</code>  = <code>37</code> Left Arrow key.</li>
+<li><code>UP</code>  = <code>38</code> Up Arrow key.</li>
+<li><code>RIGHT</code>  = <code>39</code> Right Arrow key.</li>
+<li><code>DOWN</code>  = <code>40</code> Down Arrow key.</li>
+<li><code>SYSRQ</code>  = <code>42</code> System Request or Print Screen key.</li>
+<li><code>INSERT</code>  = <code>45</code> Insert key.</li>
+<li><code>DELETE</code>  = <code>46</code> Delete key.</li>
+<li><code>HELP</code>  = <code>47</code> Help key.</li>
+<li><code>NUM_0</code>  = <code>48</code> Main keyboard 0 key.</li>
+<li><code>NUM_1</code>  = <code>49</code> Main keyboard 1 key.</li>
+<li><code>NUM_2</code>  = <code>50</code> Main keyboard 2 key.</li>
+<li><code>NUM_3</code>  = <code>51</code> Main keyboard 3 key.</li>
+<li><code>NUM_4</code>  = <code>52</code> Main keyboard 4 key.</li>
+<li><code>NUM_5</code>  = <code>53</code> Main keyboard 5 key.</li>
+<li><code>NUM_6</code>  = <code>54</code> Main keyboard 6 key.</li>
+<li><code>NUM_7</code>  = <code>55</code> Main keyboard 7 key.</li>
+<li><code>NUM_8</code>  = <code>56</code> Main keyboard 8 key.</li>
+<li><code>NUM_9</code>  = <code>57</code> Main keyboard 9 key.</li>
+<li><code>A</code>  = <code>65</code> A key.</li>
+<li><code>B</code>  = <code>66</code> B key.</li>
+<li><code>C</code>  = <code>67</code> C key.</li>
+<li><code>D</code>  = <code>68</code> D key.</li>
+<li><code>E</code>  = <code>69</code> E key.</li>
+<li><code>F</code>  = <code>70</code> F key.</li>
+<li><code>G</code>  = <code>71</code> G key.</li>
+<li><code>H</code>  = <code>72</code> H key.</li>
+<li><code>I</code>  = <code>73</code> I key.</li>
+<li><code>J</code>  = <code>74</code> J key.</li>
+<li><code>K</code>  = <code>75</code> K key.</li>
+<li><code>L</code>  = <code>76</code> L key.</li>
+<li><code>M</code>  = <code>77</code> M key.</li>
+<li><code>N</code>  = <code>78</code> N key.</li>
+<li><code>O</code>  = <code>79</code> O key.</li>
+<li><code>P</code>  = <code>80</code> P key.</li>
+<li><code>Q</code>  = <code>81</code> Q key.</li>
+<li><code>R</code>  = <code>82</code> R key.</li>
+<li><code>S</code>  = <code>83</code> S key.</li>
+<li><code>T</code>  = <code>84</code> T key.</li>
+<li><code>U</code>  = <code>85</code> U key.</li>
+<li><code>V</code>  = <code>86</code> V key.</li>
+<li><code>W</code>  = <code>87</code> W key.</li>
+<li><code>X</code>  = <code>88</code> X key.</li>
+<li><code>Y</code>  = <code>89</code> Y key.</li>
+<li><code>Z</code>  = <code>90</code> Z key.</li>
+<li><code>COMMAND</code>  = <code>91</code> Command or left Command key.</li>
+<li><code>MENU</code>  = <code>92</code> Menu key.</li>
+<li><code>COMMAND_RIGHT</code>  = <code>93</code> Right Command key.</li>
+<li><code>NUMPAD_EQUALS</code>  = <code>94</code> Numeric keypad Equals key.</li>
+<li><code>NUMPAD_0</code>  = <code>96</code> Numeric keypad 0 key.</li>
+<li><code>NUMPAD_1</code>  = <code>97</code> Numeric keypad 1 key.</li>
+<li><code>NUMPAD_2</code>  = <code>98</code> Numeric keypad 2 key.</li>
+<li><code>NUMPAD_3</code>  = <code>99</code> Numeric keypad 3 key.</li>
+<li><code>NUMPAD_4</code>  = <code>100</code> Numeric keypad 4 key.</li>
+<li><code>NUMPAD_5</code>  = <code>101</code> Numeric keypad 5 key.</li>
+<li><code>NUMPAD_6</code>  = <code>102</code> Numeric keypad 6 key.</li>
+<li><code>NUMPAD_7</code>  = <code>103</code> Numeric keypad 7 key.</li>
+<li><code>NUMPAD_8</code>  = <code>104</code> Numeric keypad 8 key.</li>
+<li><code>NUMPAD_9</code>  = <code>105</code> Numeric keypad 9 key.</li>
+<li><code>NUMPAD_MULTIPLY</code>  = <code>106</code> Numeric keypad Multiply key.</li>
+<li><code>NUMPAD_ADD</code>  = <code>107</code> Numeric keypad Add key.</li>
+<li><code>NUMPAD_ENTER</code>  = <code>108</code> Numeric keypad Enter key.</li>
+<li><code>NUMPAD_SUBTRACT</code>  = <code>109</code> Numeric keypad Subtract key.</li>
+<li><code>NUMPAD_DOT</code>  = <code>110</code> Numeric keypad Decimal key.</li>
+<li><code>NUMPAD_DIVIDE</code>  = <code>111</code> Numeric keypad Divide key.</li>
+<li><code>F1</code>  = <code>112</code> F1 function key.</li>
+<li><code>F2</code>  = <code>113</code> F2 function key.</li>
+<li><code>F3</code>  = <code>114</code> F3 function key.</li>
+<li><code>F4</code>  = <code>115</code> F4 function key.</li>
+<li><code>F5</code>  = <code>116</code> F5 function key.</li>
+<li><code>F6</code>  = <code>117</code> F6 function key.</li>
+<li><code>F7</code>  = <code>118</code> F7 function key.</li>
+<li><code>F8</code>  = <code>119</code> F8 function key.</li>
+<li><code>F9</code>  = <code>120</code> F9 function key.</li>
+<li><code>F10</code>  = <code>121</code> F10 function key.</li>
+<li><code>F11</code>  = <code>122</code> F11 function key.</li>
+<li><code>F12</code>  = <code>123</code> F12 function key.</li>
+<li><code>F13</code>  = <code>124</code> F13 function key.</li>
+<li><code>F14</code>  = <code>125</code> F14 function key.</li>
+<li><code>F15</code>  = <code>126</code> F15 function key.</li>
+<li><code>F16</code>  = <code>127</code> F16 function key.</li>
+<li><code>F17</code>  = <code>128</code> F17 function key.</li>
+<li><code>F18</code>  = <code>129</code> F18 function key.</li>
+<li><code>F19</code>  = <code>130</code> F19 function key.</li>
+<li><code>F20</code>  = <code>131</code> F20 function key.</li>
+<li><code>F21</code>  = <code>132</code> F21 function key.</li>
+<li><code>F22</code>  = <code>133</code> F22 function key.</li>
+<li><code>F23</code>  = <code>134</code> F23 function key.</li>
+<li><code>F24</code>  = <code>135</code> F24 function key.</li>
+<li><code>NUM_LOCK</code>  = <code>144</code> Num Lock key.</li>
+<li><code>SCROLL_LOCK</code>  = <code>145</code> Scroll Lock key.</li>
+<li><code>SHIFT_RIGHT</code>  = <code>160</code> Right Shift key.</li>
+<li><code>CTRL_RIGHT</code>  = <code>161</code> Right Control key.</li>
+<li><code>ALT_RIGHT</code>  = <code>162</code> Right Alt key.</li>
+<li><code>SEMICOLON</code>  = <code>186</code> Semicolon key.</li>
+<li><code>EQUALS</code>  = <code>187</code> Equals key.</li>
+<li><code>MINUS</code>  = <code>189</code> Minus key.</li>
+<li><code>COMMA</code>  = <code>188</code> Comma key.</li>
+<li><code>PERIOD</code>  = <code>190</code> Period key.</li>
+<li><code>SLASH</code>  = <code>191</code> Slash key.</li>
+<li><code>GRAVE</code>  = <code>192</code> Grave Accent key.</li>
+<li><code>FUN</code>  = <code>209</code> Function key; support depends on the platform.</li>
+<li><code>LEFT_BRACKET</code>  = <code>219</code> Left Bracket key.</li>
+<li><code>BACK_SLASH</code>  = <code>220</code> Backslash key.</li>
+<li><code>RIGHT_BRACKET</code>  = <code>221</code> Right Bracket key.</li>
+<li><code>APOSTROPHE</code>  = <code>222</code> Apostrophe key.</li>
+<li><code>MOUSE_LEFT</code>  = <code>256</code> Left mouse button.</li>
+<li><code>MOUSE_CENTER</code>  = <code>257</code> Middle mouse button.</li>
+<li><code>MOUSE_RIGHT</code>  = <code>258</code> Right mouse button.</li>
+<li><code>MOUSE_WHEEL_UP</code>  = <code>259</code> Mouse wheel up.</li>
+<li><code>MOUSE_WHEEL_DOWN</code>  = <code>260</code> Mouse wheel down.</li>
+<li><code>MOUSE_WHEEL_LEFT</code>  = <code>261</code> Mouse wheel left.</li>
+<li><code>MOUSE_WHEEL_RIGHT</code>  = <code>262</code> Mouse wheel right.</li>
+<li><code>HOME</code>  = <code>300</code> Device Home key.</li>
+<li><code>BACK</code>  = <code>301</code> Device Back key.</li>
+<li><code>CALL</code>  = <code>302</code> Call key.</li>
+<li><code>ENDCALL</code>  = <code>303</code> End Call key.</li>
+<li><code>STAR</code>  = <code>304</code> Star key.</li>
+<li><code>POUND</code>  = <code>305</code> Pound key.</li>
+<li><code>CENTER</code>  = <code>306</code> Center navigation or Confirm key.</li>
+<li><code>VOLUME_UP</code>  = <code>307</code> Volume Up key.</li>
+<li><code>VOLUME_DOWN</code>  = <code>308</code> Volume Down key.</li>
+<li><code>POWER</code>  = <code>309</code> Power key.</li>
+<li><code>CAMERA</code>  = <code>310</code> Camera shutter key.</li>
+<li><code>FOCUS</code>  = <code>311</code> Camera focus key.</li>
+<li><code>MENU_1</code>  = <code>312</code> Device Menu key.</li>
+<li><code>SEARCH</code>  = <code>313</code> Search key.</li>
+<li><code>MEDIA_PLAY_PAUSE</code>  = <code>314</code> Media Play/Pause key.</li>
+<li><code>MEDIA_STOP</code>  = <code>315</code> Media Stop key.</li>
+<li><code>MEDIA_NEXT</code>  = <code>316</code> Media Next key.</li>
+<li><code>MEDIA_PREVIOUS</code>  = <code>317</code> Media Previous key.</li>
+<li><code>MEDIA_REWIND</code>  = <code>318</code> Media Rewind key.</li>
+<li><code>MEDIA_FAST_FORWARD</code>  = <code>319</code> Media Fast Forward key.</li>
+<li><code>MUTE</code>  = <code>320</code> Microphone Mute key.</li>
+<li><code>CHANNEL_UP</code>  = <code>321</code> Channel Up key.</li>
+<li><code>CHANNEL_DOWN</code>  = <code>322</code> Channel Down key.</li>
+<li><code>MEDIA_PLAY</code>  = <code>323</code> Media Play key.</li>
+<li><code>MEDIA_PAUSE</code>  = <code>324</code> Media Pause key.</li>
+<li><code>MEDIA_CLOSE</code>  = <code>325</code> Media Close key.</li>
+<li><code>MEDIA_EJECT</code>  = <code>326</code> Media Eject key.</li>
+<li><code>MEDIA_RECORD</code>  = <code>327</code> Media Record key.</li>
+<li><code>VOLUME_MUTE</code>  = <code>328</code> Speaker Mute key.</li>
+<li><code>MUSIC</code>  = <code>329</code> Music key.</li>
+<li><code>EXPLORER</code>  = <code>330</code> Explorer key.</li>
+<li><code>ENVELOPE</code>  = <code>331</code> Mail key.</li>
+<li><code>BOOKMARK</code>  = <code>332</code> Bookmark key.</li>
+<li><code>ZOOM_IN</code>  = <code>333</code> Zoom In key.</li>
+<li><code>ZOOM_OUT</code>  = <code>334</code> Zoom Out key.</li>
+</ul>
+
 			</div>
 
 		</div>
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'keyboard.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

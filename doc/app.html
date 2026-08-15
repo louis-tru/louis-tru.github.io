@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'app.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-app">quark/app</a></span>
@@ -133,16 +120,16 @@
 <span><a href="#clipboard">Clipboard</a></span>
 </li>
 <li>
-<span><a href="#clipboard-gettext-">clipboard.getText()</a></span>
+<span><a href="#clipboard-gettext">clipboard.getText()</a></span>
 </li>
 <li>
-<span><a href="#clipboard-settext-text-">clipboard.setText(text)</a></span>
+<span><a href="#clipboard-settext-text">clipboard.setText(text)</a></span>
 </li>
 <li>
-<span><a href="#clipboard-hastext-">clipboard.hasText()</a></span>
+<span><a href="#clipboard-hastext">clipboard.hasText()</a></span>
 </li>
 <li>
-<span><a href="#clipboard-clear-">clipboard.clear()</a></span>
+<span><a href="#clipboard-clear">clipboard.clear()</a></span>
 </li>
 </ul>
 <li>
@@ -176,16 +163,16 @@
 <span><a href="#nativeapplication-maxresourcememorylimit">nativeapplication.maxResourceMemoryLimit</a></span>
 </li>
 <li>
-<span><a href="#nativeapplication-usedresourcememory-">nativeapplication.usedResourceMemory()</a></span>
+<span><a href="#nativeapplication-usedresourcememory">nativeapplication.usedResourceMemory()</a></span>
 </li>
 <li>
-<span><a href="#nativeapplication-clear-all-">nativeapplication.clear(all?)</a></span>
+<span><a href="#nativeapplication-clear-all">nativeapplication.clear(all?)</a></span>
 </li>
 <li>
-<span><a href="#nativeapplication-openurl-url-">nativeapplication.openURL(url)</a></span>
+<span><a href="#nativeapplication-openurl-url">nativeapplication.openURL(url)</a></span>
 </li>
 <li>
-<span><a href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc-">nativeapplication.sendEmail(recipient,subject,body?,cc?,bcc?)</a></span>
+<span><a href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc">nativeapplication.sendEmail(recipient,subject,body?,cc?,bcc?)</a></span>
 </li>
 </ul>
 <li>
@@ -221,219 +208,255 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-app">
 			quark/app
-			<span><a class="mark" href="#quark-app" id="quark-app">#</a></span>
+			<span><a class="mark" href="#quark-app" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="aevent">
 			AEvent
-			<span><a class="mark" href="#aevent" id="aevent">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>AEvent</code> = <a href="event.html#event"><code>Event</code></a>&lt;<a href="#class-application"><code>Application</code></a>&gt;</li>
-</ul>
+			<span><a class="mark" href="#aevent" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">type</span> AEvent = <a class="api-type" href="event.html#event">Event</a>&lt;<a class="api-type" href="#class-application">Application</a>&gt;</code></pre>
+
+
 <h2 id="interface-clipboard">
 			Interface: Clipboard
-			<span><a class="mark" href="#interface-clipboard" id="interface-clipboard">#</a></span>
+			<span><a class="mark" href="#interface-clipboard" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="clipboard">
 			Clipboard
-			<span><a class="mark" href="#clipboard" id="clipboard">#</a></span>
-		</h3><p>System clipboard interface.<br/>Provides access to the OS clipboard for plain text operations.<br/>This object is owned by {@link NativeApplication} and cannot be constructed directly.<br/>Notes:</p>
+			<span><a class="mark" href="#clipboard" aria-label="Link to this section">#</a></span>
+		</h3><p>System clipboard interface.
+Provides access to the OS clipboard for plain text operations.
+This object is owned by {@link NativeApplication} and cannot be constructed directly.
+Notes:</p>
 <ul>
 <li>Text is shared with other applications through the system clipboard.</li>
 <li>Operations are safe to call at any time after the application is initialized.</li>
 <li>Only plain text is supported for now.</li>
 </ul>
-<h3 id="clipboard-gettext-">
+<h3 id="clipboard-gettext">
 			clipboard.getText()
-			<span><a class="mark" href="#clipboard-gettext-" id="clipboard-gettext-">#</a></span>
-		</h3><p>Read text from the system clipboard.<br/>Returns an empty string if no text is available.</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="clipboard-settext-text-">
+			<span><a class="mark" href="#clipboard-gettext" aria-label="Link to this section">#</a></span>
+		</h3><p>Read text from the system clipboard.
+Returns an empty string if no text is available.</p>
+<pre class="api-signature sh_none"><code>getText(): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h3 id="clipboard-settext-text">
 			clipboard.setText(text)
-			<span><a class="mark" href="#clipboard-settext-text-" id="clipboard-settext-text-">#</a></span>
-		</h3><p>Write plain text to the system clipboard.<br/>Replaces existing clipboard contents.</p>
-<ul>
-<li><code>@param</code> <code>text</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="clipboard-hastext-">
+			<span><a class="mark" href="#clipboard-settext-text" aria-label="Link to this section">#</a></span>
+		</h3><p>Write plain text to the system clipboard.
+Replaces existing clipboard contents.</p>
+<pre class="api-signature sh_none"><code>setText(text: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="clipboard-hastext">
 			clipboard.hasText()
-			<span><a class="mark" href="#clipboard-hastext-" id="clipboard-hastext-">#</a></span>
+			<span><a class="mark" href="#clipboard-hastext" aria-label="Link to this section">#</a></span>
 		</h3><p>Returns true if the clipboard currently contains text data.</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="clipboard-clear-">
+<pre class="api-signature sh_none"><code>hasText(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="clipboard-clear">
 			clipboard.clear()
-			<span><a class="mark" href="#clipboard-clear-" id="clipboard-clear-">#</a></span>
+			<span><a class="mark" href="#clipboard-clear" aria-label="Link to this section">#</a></span>
 		</h3><p>Clears current clipboard contents.</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>clear(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
 <h2 id="class-nativeapplication">
 			Class: NativeApplication
-			<span><a class="mark" href="#class-nativeapplication" id="class-nativeapplication">#</a></span>
+			<span><a class="mark" href="#class-nativeapplication" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="nativeapplication">
 			NativeApplication
-			<span><a class="mark" href="#nativeapplication" id="nativeapplication">#</a></span>
-		</h3><p>Global application object.<br/>Represents the running Qk runtime instance and provides access to<br/>system-level services, global resources and window management.<br/>This object is created by the native runtime and cannot be constructed<br/>manually. It becomes fully available after the <code>onLoad</code> event.</p>
-<ul>
-<li><code>@extends</code> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt;</li>
-</ul>
+			<span><a class="mark" href="#nativeapplication" aria-label="Link to this section">#</a></span>
+		</h3><p>Global application object.
+Represents the running Qk runtime instance and provides access to
+system-level services, global resources and window management.
+This object is created by the native runtime and cannot be constructed
+manually. It becomes fully available after the <code>onLoad</code> event.</p>
+<p><strong>Extends:</strong> <a href="event.html#notification"><code>Notification</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt;</p>
 <h3 id="nativeapplication-isloaded">
 			nativeapplication.isLoaded
-			<span><a class="mark" href="#nativeapplication-isloaded" id="nativeapplication-isloaded">#</a></span>
-		</h3><p>Indicates whether the application has finished initialization.<br/>Becomes <code>true</code> after the onLoad lifecycle event.</p>
-<ul>
-<li><code>@get</code> <code>isLoaded</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-isloaded" aria-label="Link to this section">#</a></span>
+		</h3><p>Indicates whether the application has finished initialization.
+Becomes <code>true</code> after the onLoad lifecycle event.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> isLoaded: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="nativeapplication-screen">
 			nativeapplication.screen
-			<span><a class="mark" href="#nativeapplication-screen" id="nativeapplication-screen">#</a></span>
-		</h3><p>Screen information and metrics provider.<br/>Exposes display size, scale, and other screen-related properties.</p>
-<ul>
-<li><code>@get</code> <code>screen</code>: <a href="screen.html#screen"><code>Screen</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-screen" aria-label="Link to this section">#</a></span>
+		</h3><p>Screen information and metrics provider.
+Exposes display size, scale, and other screen-related properties.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> screen: <a class="api-type" href="screen.html#screen">Screen</a></code></pre>
+
+
 <h3 id="nativeapplication-fontpool">
 			nativeapplication.fontPool
-			<span><a class="mark" href="#nativeapplication-fontpool" id="nativeapplication-fontpool">#</a></span>
-		</h3><p>Global font pool.<br/>Used for font loading, caching, and reuse across all windows.</p>
-<ul>
-<li><code>@get</code> <code>fontPool</code>: <a href="font.html#fontpool"><code>FontPool</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-fontpool" aria-label="Link to this section">#</a></span>
+		</h3><p>Global font pool.
+Used for font loading, caching, and reuse across all windows.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> fontPool: <a class="api-type" href="font.html#fontpool">FontPool</a></code></pre>
+
+
 <h3 id="nativeapplication-activewindow">
 			nativeapplication.activeWindow
-			<span><a class="mark" href="#nativeapplication-activewindow" id="nativeapplication-activewindow">#</a></span>
-		</h3><p>Currently active (focused) window.<br/>Returns null if no window is focused.</p>
-<ul>
-<li><code>@get</code> <code>activeWindow</code>: <a href="window.html#window"><code>Window</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-activewindow" aria-label="Link to this section">#</a></span>
+		</h3><p>Currently active (focused) window.
+Returns null if no window is focused.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> activeWindow: <a class="api-type" href="window.html#window">Window</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h3 id="nativeapplication-clipboard">
 			nativeapplication.clipboard
-			<span><a class="mark" href="#nativeapplication-clipboard" id="nativeapplication-clipboard">#</a></span>
-		</h3><p>System clipboard instance.<br/>Provides access to the shared OS clipboard for plain text operations.<br/>The instance is owned and managed by the application lifecycle and is<br/>available once the application has initialized.</p>
-<ul>
-<li><code>@get</code> <code>clipboard</code>: <a href="#interface-clipboard"><code>Clipboard</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-clipboard" aria-label="Link to this section">#</a></span>
+		</h3><p>System clipboard instance.
+Provides access to the shared OS clipboard for plain text operations.
+The instance is owned and managed by the application lifecycle and is
+available once the application has initialized.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> clipboard: <a class="api-type" href="#interface-clipboard">Clipboard</a></code></pre>
+
+
 <h3 id="nativeapplication-defaulttextoptions">
 			nativeapplication.defaultTextOptions
-			<span><a class="mark" href="#nativeapplication-defaulttextoptions" id="nativeapplication-defaulttextoptions">#</a></span>
-		</h3><p>Global default text rendering options.<br/>Shared by all windows and used as the base configuration when creating<br/>text views without explicit text settings.</p>
-<ul>
-<li><code>@get</code> <code>defaultTextOptions</code>: <a href="view.html#textoptions"><code>TextOptions</code></a> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-defaulttextoptions" aria-label="Link to this section">#</a></span>
+		</h3><p>Global default text rendering options.
+Shared by all windows and used as the base configuration when creating
+text views without explicit text settings.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> defaultTextOptions: <a class="api-type" href="view.html#textoptions">TextOptions</a></code></pre>
+
+
 <h3 id="nativeapplication-windows">
 			nativeapplication.windows
-			<span><a class="mark" href="#nativeapplication-windows" id="nativeapplication-windows">#</a></span>
-		</h3><p>List of all currently existing windows.<br/>Includes visible and hidden windows managed by the application.</p>
-<ul>
-<li><code>@get</code> <code>windows</code>: <a href="window.html#window"><code>Window</code></a><code>[]</code> </li>
-</ul>
+			<span><a class="mark" href="#nativeapplication-windows" aria-label="Link to this section">#</a></span>
+		</h3><p>List of all currently existing windows.
+Includes visible and hidden windows managed by the application.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> windows: <a class="api-type" href="window.html#window">Window</a>[]</code></pre>
+
+
 <h3 id="nativeapplication-maxresourcememorylimit">
 			nativeapplication.maxResourceMemoryLimit
-			<span><a class="mark" href="#nativeapplication-maxresourcememorylimit" id="nativeapplication-maxresourcememorylimit">#</a></span>
-		</h3><p>Maximum memory limit for resource caching (in bytes).<br/>Affects textures, images, fonts and other GPU/CPU resources.</p>
-<ul>
-<li><code>maxResourceMemoryLimit</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="nativeapplication-usedresourcememory-">
+			<span><a class="mark" href="#nativeapplication-maxresourcememorylimit" aria-label="Link to this section">#</a></span>
+		</h3><p>Maximum memory limit for resource caching (in bytes).
+Affects textures, images, fonts and other GPU/CPU resources.</p>
+<pre class="api-signature sh_none"><code>maxResourceMemoryLimit: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="nativeapplication-usedresourcememory">
 			nativeapplication.usedResourceMemory()
-			<span><a class="mark" href="#nativeapplication-usedresourcememory-" id="nativeapplication-usedresourcememory-">#</a></span>
+			<span><a class="mark" href="#nativeapplication-usedresourcememory" aria-label="Link to this section">#</a></span>
 		</h3><p>Returns the current amount of memory used by cached resources.</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="nativeapplication-clear-all-">
+<pre class="api-signature sh_none"><code>usedResourceMemory(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="nativeapplication-clear-all">
 			nativeapplication.clear(all?)
-			<span><a class="mark" href="#nativeapplication-clear-all-" id="nativeapplication-clear-all-">#</a></span>
+			<span><a class="mark" href="#nativeapplication-clear-all" aria-label="Link to this section">#</a></span>
 		</h3><p>Clear cached resources.</p>
+<pre class="api-signature sh_none"><code>clear(all: any, all?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>all</code>:  If true, aggressively clears all releasable resources.</li>
-<li><code>@param</code> <code>all?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>all</code> — If true, aggressively clears all releasable resources.</li>
 </ul>
-<h3 id="nativeapplication-openurl-url-">
+<h3 id="nativeapplication-openurl-url">
 			nativeapplication.openURL(url)
-			<span><a class="mark" href="#nativeapplication-openurl-url-" id="nativeapplication-openurl-url-">#</a></span>
-		</h3><p>Open a URI using the system handler.<br/>Examples:</p>
+			<span><a class="mark" href="#nativeapplication-openurl-url" aria-label="Link to this section">#</a></span>
+		</h3><p>Open a URI using the system handler.
+Examples:</p>
 <ul>
 <li>openURL(&#39;https://example.com&#39;)</li>
-<li>openURL(&#39;mailto:test@example.com&#39;)<ul><br/><li><code>@param</code> <code>url</code>: <a href="$ext.html#string"><code>string</code></a> </li><br/><li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li><br/></ul><br/></li>
+<li>openURL(&#39;mailto:test@example.com&#39;)<pre class="api-signature sh_none"><code>openURL(url: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+</li>
 </ul>
-<h3 id="nativeapplication-sendemail-recipient-subject-body-cc-bcc-">
+<h3 id="nativeapplication-sendemail-recipient-subject-body-cc-bcc">
 			nativeapplication.sendEmail(recipient,subject,body?,cc?,bcc?)
-			<span><a class="mark" href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc-" id="nativeapplication-sendemail-recipient-subject-body-cc-bcc-">#</a></span>
+			<span><a class="mark" href="#nativeapplication-sendemail-recipient-subject-body-cc-bcc" aria-label="Link to this section">#</a></span>
 		</h3><p>Open the system email client with pre-filled fields.</p>
+<pre class="api-signature sh_none"><code>sendEmail(recipient: <a class="api-type" href="$ext.html#string">string</a>, subject: <a class="api-type" href="$ext.html#string">string</a>, body: any, cc: any, bcc: any, body?: <a class="api-type" href="$ext.html#string">string</a>, cc?: <a class="api-type" href="$ext.html#string">string</a>, bcc?: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>recipient</code>: <a href="$ext.html#string"><code>string</code></a> Target email address.</li>
-<li><code>@param</code> <code>subject</code>: <a href="$ext.html#string"><code>string</code></a> Email subject.</li>
-<li><code>@param</code> <code>body</code>:  Optional message body.</li>
-<li><code>@param</code> <code>cc</code>:  Optional CC address.</li>
-<li><code>@param</code> <code>bcc</code>:  Optional BCC address.</li>
-<li><code>@param</code> <code>body?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>cc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>bcc?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>recipient</code> — Target email address.</li>
+<li><code>subject</code> — Email subject.</li>
+<li><code>body</code> — Optional message body.</li>
+<li><code>cc</code> — Optional CC address.</li>
+<li><code>bcc</code> — Optional BCC address.</li>
 </ul>
 <h2 id="class-application">
 			Class: Application
-			<span><a class="mark" href="#class-application" id="class-application">#</a></span>
+			<span><a class="mark" href="#class-application" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="application">
 			Application
-			<span><a class="mark" href="#application" id="application">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-nativeapplication"><code>NativeApplication</code></a></li>
-</ul>
+			<span><a class="mark" href="#application" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-nativeapplication"><code>NativeApplication</code></a></p>
 <h3 id="application-onload">
 			application.onLoad
-			<span><a class="mark" href="#application-onload" id="application-onload">#</a></span>
-		</h3><p>Fired once after the application has completed initialization.<br/>Safe point to create windows, load resources and start logic.</p>
+			<span><a class="mark" href="#application-onload" aria-label="Link to this section">#</a></span>
+		</h3><p>Fired once after the application has completed initialization.
+Safe point to create windows, load resources and start logic.</p>
 <ul>
 <li><code>@event</code> <code>onLoad</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onunload">
 			application.onUnload
-			<span><a class="mark" href="#application-onunload" id="application-onunload">#</a></span>
-		</h3><p>Fired before the application is about to terminate.<br/>Use for saving state, releasing external handles, etc.</p>
+			<span><a class="mark" href="#application-onunload" aria-label="Link to this section">#</a></span>
+		</h3><p>Fired before the application is about to terminate.
+Use for saving state, releasing external handles, etc.</p>
 <ul>
 <li><code>@event</code> <code>onUnload</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onpause">
 			application.onPause
-			<span><a class="mark" href="#application-onpause" id="application-onpause">#</a></span>
-		</h3><p>Fired when the application enters background state.<br/>Typically triggered by OS task switching or minimization.</p>
+			<span><a class="mark" href="#application-onpause" aria-label="Link to this section">#</a></span>
+		</h3><p>Fired when the application enters background state.
+Typically triggered by OS task switching or minimization.</p>
 <ul>
 <li><code>@event</code> <code>onPause</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onresume">
 			application.onResume
-			<span><a class="mark" href="#application-onresume" id="application-onresume">#</a></span>
-		</h3><p>Fired when the application returns to foreground state.<br/>Suitable for restoring rendering, timers and IO tasks.</p>
+			<span><a class="mark" href="#application-onresume" aria-label="Link to this section">#</a></span>
+		</h3><p>Fired when the application returns to foreground state.
+Suitable for restoring rendering, timers and IO tasks.</p>
 <ul>
 <li><code>@event</code> <code>onResume</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
 </ul>
 <h3 id="application-onmemorywarning">
 			application.onMemoryWarning
-			<span><a class="mark" href="#application-onmemorywarning" id="application-onmemorywarning">#</a></span>
-		</h3><p>Fired when the system reports memory pressure.<br/>After this event, the runtime will automatically:</p>
+			<span><a class="mark" href="#application-onmemorywarning" aria-label="Link to this section">#</a></span>
+		</h3><p>Fired when the system reports memory pressure.
+After this event, the runtime will automatically:</p>
 <ul>
 <li>call <code>clear()</code> to release cached resources</li>
-<li>trigger JS garbage collection<br/>Applications can additionally release non-critical data here.<ul><br/><li><code>@event</code> <code>onMemoryWarning</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li><br/></ul><br/></li>
+<li>trigger JS garbage collection
+Applications can additionally release non-critical data here.<ul>
+<li><code>@event</code> <code>onMemoryWarning</code>: <a href="event.html#eventnoticer"><code>EventNoticer</code></a>&lt;<a href="#aevent"><code>AEvent</code></a>&gt; </li>
+</ul>
+</li>
 </ul>
 <h2 id="default">
 			default
-			<span><a class="mark" href="#default" id="default">#</a></span>
+			<span><a class="mark" href="#default" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="default-current">
 			default.current
-			<span><a class="mark" href="#default-current" id="default-current">#</a></span>
+			<span><a class="mark" href="#default-current" aria-label="Link to this section">#</a></span>
 		</h3><p>Current active application singleton </p>
-<ul>
-<li><code>@get</code> <code>current</code>: <a href="#class-application"><code>Application</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> current: <a class="api-type" href="#class-application">Application</a></code></pre>
+
+
 
 			</div>
 
@@ -441,19 +464,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'app.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

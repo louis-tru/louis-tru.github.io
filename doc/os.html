@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'os.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-os">quark/os</a></span>
@@ -131,71 +118,71 @@
 </li>
 </ul>
 <li>
-<span><a href="#arch-">arch()</a></span>
+<span><a href="#arch">arch()</a></span>
 </li>
 <li>
-<span><a href="#name-">name()</a></span>
+<span><a href="#name">name()</a></span>
 </li>
 <li>
-<span><a href="#version-">version()</a></span>
+<span><a href="#version">version()</a></span>
 </li>
 <li>
-<span><a href="#brand-">brand()</a></span>
+<span><a href="#brand">brand()</a></span>
 </li>
 <li>
-<span><a href="#model-">model()</a></span>
+<span><a href="#model">model()</a></span>
 </li>
 <li>
-<span><a href="#info-">info()</a></span>
+<span><a href="#info">info()</a></span>
 </li>
 <li>
-<span><a href="#languages-">languages()</a></span>
+<span><a href="#languages">languages()</a></span>
 </li>
 <li>
-<span><a href="#iswifi-">isWifi()</a></span>
+<span><a href="#iswifi">isWifi()</a></span>
 </li>
 <li>
-<span><a href="#ismobile-">isMobile()</a></span>
+<span><a href="#ismobile">isMobile()</a></span>
 </li>
 <li>
-<span><a href="#networkinterface-">networkInterface()</a></span>
+<span><a href="#networkinterface-2">networkInterface()</a></span>
 </li>
 <li>
-<span><a href="#isacpower-">isAcPower()</a></span>
+<span><a href="#isacpower">isAcPower()</a></span>
 </li>
 <li>
-<span><a href="#isbattery-">isBattery()</a></span>
+<span><a href="#isbattery">isBattery()</a></span>
 </li>
 <li>
-<span><a href="#batterylevel-">batteryLevel()</a></span>
+<span><a href="#batterylevel">batteryLevel()</a></span>
 </li>
 <li>
-<span><a href="#memory-">memory()</a></span>
+<span><a href="#memory">memory()</a></span>
 </li>
 <li>
-<span><a href="#usedmemory-">usedMemory()</a></span>
+<span><a href="#usedmemory">usedMemory()</a></span>
 </li>
 <li>
-<span><a href="#availablememory-">availableMemory()</a></span>
+<span><a href="#availablememory">availableMemory()</a></span>
 </li>
 <li>
-<span><a href="#cpuusage-">cpuUsage()</a></span>
+<span><a href="#cpuusage">cpuUsage()</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-os">
 			quark/os
-			<span><a class="mark" href="#quark-os" id="quark-os">#</a></span>
+			<span><a class="mark" href="#quark-os" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-networkinterface">
 			Enum: NetworkInterface
-			<span><a class="mark" href="#enum-networkinterface" id="enum-networkinterface">#</a></span>
+			<span><a class="mark" href="#enum-networkinterface" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="networkinterface">
 			NetworkInterface
-			<span><a class="mark" href="#networkinterface" id="networkinterface">#</a></span>
+			<span><a class="mark" href="#networkinterface" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>kNone</code>  None</li>
 <li><code>kETH</code>  Ethernet</li>
@@ -205,69 +192,177 @@
 <li><code>k4G</code>  Mobile 4G</li>
 <li><code>k5G</code>  Mobile 5G</li>
 </ul>
-<h2 id="arch-">
+<h2 id="arch">
 			arch()
-			<span><a class="mark" href="#arch-" id="arch-">#</a></span>
-		</h2><p>Get CPU architecture type of the current device.<br/>Possible values:</p>
+			<span><a class="mark" href="#arch" aria-label="Link to this section">#</a></span>
+		</h2><p>Get CPU architecture type of the current device.
+Possible values:</p>
 <ul>
 <li>&quot;arm64&quot;   64-bit ARM architecture</li>
 <li>&quot;x64&quot;     64-bit x86 architecture</li>
 <li>&quot;arm&quot;     32-bit ARM architecture</li>
 <li>&quot;x86&quot;     32-bit x86 architecture</li>
 <li>&quot;mips&quot;    32-bit MIPS architecture</li>
-<li>&quot;mips64&quot;  64-bit MIPS architecture<br/>Notes:<ul><br/><li>The returned value reflects the runtime CPU architecture,<br/>not the ABI or instruction set availability.</li><br/><li>On emulators or compatibility layers, the value may differ<br/>from the physical hardware.</li><br/><li><code>@return</code>  </li><br/></ul><br/></li>
+<li>&quot;mips64&quot;  64-bit MIPS architecture
+Notes:<ul>
+<li>The returned value reflects the runtime CPU architecture,
+not the ABI or instruction set availability.</li>
+<li>On emulators or compatibility layers, the value may differ
+from the physical hardware.<pre class="api-signature sh_none"><code>arch(): |</code></pre>
+
+
+
+</li>
 </ul>
-<h2 id="name-">
+</li>
+</ul>
+<h2 id="name">
 			name()
-			<span><a class="mark" href="#name-" id="name-">#</a></span>
-		</h2><p>Get operating system name.<br/>Possible values:</p>
+			<span><a class="mark" href="#name" aria-label="Link to this section">#</a></span>
+		</h2><p>Get operating system name.
+Possible values:</p>
 <ul>
 <li>&quot;Android&quot;</li>
 <li>&quot;iOS&quot;</li>
 <li>&quot;MacOSX&quot;</li>
-<li>&quot;Linux&quot;<br/>Notes:<ul><br/><li>The returned value represents the operating system family,<br/>not a specific distribution or version.</li><br/><li>For Apple platforms, iOS and macOS are reported separately.</li><br/><li><code>@return</code>  </li><br/></ul><br/></li>
+<li>&quot;Linux&quot;
+Notes:<ul>
+<li>The returned value represents the operating system family,
+not a specific distribution or version.</li>
+<li>For Apple platforms, iOS and macOS are reported separately.<pre class="api-signature sh_none"><code>name(): |</code></pre>
+
+
+
+</li>
 </ul>
-<h2 id="version-">
+</li>
+</ul>
+<h2 id="version">
 			version()
-			<span><a class="mark" href="#version-" id="version-">#</a></span>
-		</h2><p>Get operating system version information.<br/>Platform-specific behavior:</p>
+			<span><a class="mark" href="#version" aria-label="Link to this section">#</a></span>
+		</h2><p>Get operating system version information.
+Platform-specific behavior:</p>
 <ul>
-<li>iOS / macOS:<br/>Returns the system version string.<br/>Example:<ul><br/><li>&quot;17.1.2&quot;</li><br/><li>&quot;14.2&quot;</li><br/></ul><br/></li>
-<li>Android:<br/>Returns the Android OS version.<br/>Example:<ul><br/><li>&quot;14&quot;</li><br/><li>&quot;13&quot;</li><br/></ul><br/></li>
-<li>Linux:<br/>Returns the kernel release version.<br/>Example:<ul><br/><li>&quot;6.6.12-arch1-1&quot;</li><br/><li>&quot;5.15.0-89-generic&quot;<br/>Notes:</li><br/></ul><br/></li>
+<li>iOS / macOS:
+Returns the system version string.
+Example:<ul>
+<li>&quot;17.1.2&quot;</li>
+<li>&quot;14.2&quot;</li>
+</ul>
+</li>
+<li>Android:
+Returns the Android OS version.
+Example:<ul>
+<li>&quot;14&quot;</li>
+<li>&quot;13&quot;</li>
+</ul>
+</li>
+<li>Linux:
+Returns the kernel release version.
+Example:<ul>
+<li>&quot;6.6.12-arch1-1&quot;</li>
+<li>&quot;5.15.0-89-generic&quot;
+Notes:</li>
+</ul>
+</li>
 <li>The format of the returned string is platform-dependent.</li>
-<li>This value is intended for informational and compatibility<br/>checks, not strict semantic version comparison.</li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li>This value is intended for informational and compatibility
+checks, not strict semantic version comparison.<pre class="api-signature sh_none"><code>version(): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+</li>
 </ul>
-<h2 id="brand-">
+<h2 id="brand">
 			brand()
-			<span><a class="mark" href="#brand-" id="brand-">#</a></span>
-		</h2><p>Get device or operating system brand.<br/>Platform-specific behavior:</p>
+			<span><a class="mark" href="#brand" aria-label="Link to this section">#</a></span>
+		</h2><p>Get device or operating system brand.
+Platform-specific behavior:</p>
 <ul>
-<li>Apple platforms (iOS / macOS):<br/>Returns &quot;Apple&quot;.</li>
-<li>Android:<br/>Returns the device manufacturer.<br/>Examples:<ul><br/><li>&quot;google&quot;</li><br/><li>&quot;samsung&quot;</li><br/><li>&quot;Xiaomi&quot;</li><br/><li>&quot;HUAWEI&quot;</li><br/><li>&quot;OPPO&quot;</li><br/><li>&quot;vivo&quot;</li><br/><li>&quot;OnePlus&quot;</li><br/></ul><br/></li>
-<li>Linux:<br/>Returns the distribution name if available.<br/>Examples:<ul><br/><li>&quot;Ubuntu&quot;</li><br/><li>&quot;Arch Linux&quot;</li><br/><li>&quot;Debian GNU/Linux&quot;<br/>Notes:</li><br/></ul><br/></li>
-<li>On some platforms or environments, this value may be empty<br/>or unavailable.</li>
-<li>The returned string should be treated as informational only.</li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li>Apple platforms (iOS / macOS):
+Returns &quot;Apple&quot;.</li>
+<li>Android:
+Returns the device manufacturer.
+Examples:<ul>
+<li>&quot;google&quot;</li>
+<li>&quot;samsung&quot;</li>
+<li>&quot;Xiaomi&quot;</li>
+<li>&quot;HUAWEI&quot;</li>
+<li>&quot;OPPO&quot;</li>
+<li>&quot;vivo&quot;</li>
+<li>&quot;OnePlus&quot;</li>
 </ul>
-<h2 id="model-">
+</li>
+<li>Linux:
+Returns the distribution name if available.
+Examples:<ul>
+<li>&quot;Ubuntu&quot;</li>
+<li>&quot;Arch Linux&quot;</li>
+<li>&quot;Debian GNU/Linux&quot;
+Notes:</li>
+</ul>
+</li>
+<li>On some platforms or environments, this value may be empty
+or unavailable.</li>
+<li>The returned string should be treated as informational only.<pre class="api-signature sh_none"><code>brand(): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+</li>
+</ul>
+<h2 id="model">
 			model()
-			<span><a class="mark" href="#model-" id="model-">#</a></span>
-		</h2><p>Get device model / platform model identifier.<br/>Platform-specific behavior:</p>
+			<span><a class="mark" href="#model" aria-label="Link to this section">#</a></span>
+		</h2><p>Get device model / platform model identifier.
+Platform-specific behavior:</p>
 <ul>
-<li>iOS:<br/>Returns device family name.<br/>Possible values:<ul><br/><li>&quot;iPhone&quot;</li><br/><li>&quot;iPad&quot;</li><br/><li>&quot;iPod touch&quot;</li><br/></ul><br/></li>
-<li>macOS:<br/>Returns Apple hardware model identifier.<br/>Example:<ul><br/><li>&quot;Mac16,10&quot;</li><br/></ul><br/></li>
-<li>Android:<br/>Returns OEM device model string (<code>Build.MODEL</code>).<br/>Examples:<ul><br/><li>&quot;Pixel 7&quot;</li><br/><li>&quot;Pixel 8 Pro&quot;</li><br/><li>&quot;SM-S9110&quot;</li><br/><li>&quot;2304FPN6DC&quot;</li><br/><li>&quot;ALN-AL00&quot;</li><br/><li>&quot;sdk_gphone64_arm64&quot; (emulator)</li><br/></ul><br/></li>
-<li>Linux:<br/>No standard device model exists.<br/>Returns an empty string.<br/>Notes:</li>
-<li>The returned value is platform-dependent and not guaranteed<br/>to be comparable across different operating systems.</li>
-<li>This API is intended for identification, logging, and<br/>platform-specific behavior selection, not for strict<br/>device classification.</li>
-<li><code>@return</code>  </li>
+<li>iOS:
+Returns device family name.
+Possible values:<ul>
+<li>&quot;iPhone&quot;</li>
+<li>&quot;iPad&quot;</li>
+<li>&quot;iPod touch&quot;</li>
 </ul>
-<h2 id="info-">
+</li>
+<li>macOS:
+Returns Apple hardware model identifier.
+Example:<ul>
+<li>&quot;Mac16,10&quot;</li>
+</ul>
+</li>
+<li>Android:
+Returns OEM device model string (<code>Build.MODEL</code>).
+Examples:<ul>
+<li>&quot;Pixel 7&quot;</li>
+<li>&quot;Pixel 8 Pro&quot;</li>
+<li>&quot;SM-S9110&quot;</li>
+<li>&quot;2304FPN6DC&quot;</li>
+<li>&quot;ALN-AL00&quot;</li>
+<li>&quot;sdk_gphone64_arm64&quot; (emulator)</li>
+</ul>
+</li>
+<li>Linux:
+No standard device model exists.
+Returns an empty string.
+Notes:</li>
+<li>The returned value is platform-dependent and not guaranteed
+to be comparable across different operating systems.</li>
+<li>This API is intended for identification, logging, and
+platform-specific behavior selection, not for strict
+device classification.<pre class="api-signature sh_none"><code>model(): </code></pre>
+
+
+
+</li>
+</ul>
+<h2 id="info">
 			info()
-			<span><a class="mark" href="#info-" id="info-">#</a></span>
+			<span><a class="mark" href="#info" aria-label="Link to this section">#</a></span>
 		</h2><p>Get OS information</p>
+<pre class="api-signature sh_none"><code>info(): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints:
 // sysname: Louis-iPhone
@@ -278,86 +373,95 @@
 // release: 16.6.0
 console.log(os.info());
 </code></pre>
-<ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="languages-">
+<h2 id="languages">
 			languages()
-			<span><a class="mark" href="#languages-" id="languages-">#</a></span>
+			<span><a class="mark" href="#languages" aria-label="Link to this section">#</a></span>
 		</h2><p>Get List of OS supported languages, May value is <code>&#39;en-us&#39;</code>|<code>&#39;zh-cn&#39;</code>|<code>&#39;zh-tw&#39;</code></p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a><code>[]</code> </li>
-</ul>
-<h2 id="iswifi-">
+<pre class="api-signature sh_none"><code>languages(): <a class="api-type" href="$ext.html#string">string</a>[]</code></pre>
+
+
+
+<h2 id="iswifi">
 			isWifi()
-			<span><a class="mark" href="#iswifi-" id="iswifi-">#</a></span>
+			<span><a class="mark" href="#iswifi" aria-label="Link to this section">#</a></span>
 		</h2><p>Is it a wifi network type?</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="ismobile-">
+<pre class="api-signature sh_none"><code>isWifi(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="ismobile">
 			isMobile()
-			<span><a class="mark" href="#ismobile-" id="ismobile-">#</a></span>
+			<span><a class="mark" href="#ismobile" aria-label="Link to this section">#</a></span>
 		</h2><p>Is it a mobile network type?</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="networkinterface-">
+<pre class="api-signature sh_none"><code>isMobile(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="networkinterface-2">
 			networkInterface()
-			<span><a class="mark" href="#networkinterface-" id="networkinterface-">#</a></span>
+			<span><a class="mark" href="#networkinterface-2" aria-label="Link to this section">#</a></span>
 		</h2><p>Get the network interface</p>
-<ul>
-<li><code>@return</code> <a href="#enum-networkinterface"><code>NetworkInterface</code></a> </li>
-</ul>
-<h2 id="isacpower-">
+<pre class="api-signature sh_none"><code>networkInterface(): <a class="api-type" href="#enum-networkinterface">NetworkInterface</a></code></pre>
+
+
+
+<h2 id="isacpower">
 			isAcPower()
-			<span><a class="mark" href="#isacpower-" id="isacpower-">#</a></span>
+			<span><a class="mark" href="#isacpower" aria-label="Link to this section">#</a></span>
 		</h2><p>Is there an external power supply connected?</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="isbattery-">
+<pre class="api-signature sh_none"><code>isAcPower(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="isbattery">
 			isBattery()
-			<span><a class="mark" href="#isbattery-" id="isbattery-">#</a></span>
+			<span><a class="mark" href="#isbattery" aria-label="Link to this section">#</a></span>
 		</h2><p>Is there a battery device?</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="batterylevel-">
+<pre class="api-signature sh_none"><code>isBattery(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="batterylevel">
 			batteryLevel()
-			<span><a class="mark" href="#batterylevel-" id="batterylevel-">#</a></span>
+			<span><a class="mark" href="#batterylevel" aria-label="Link to this section">#</a></span>
 		</h2><p>Get battery power percentage if have a battery</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> range 0 to 1</li>
-</ul>
-<h2 id="memory-">
+<pre class="api-signature sh_none"><code>batteryLevel(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<p><strong>Returns:</strong> range 0 to 1</p>
+<h2 id="memory">
 			memory()
-			<span><a class="mark" href="#memory-" id="memory-">#</a></span>
+			<span><a class="mark" href="#memory" aria-label="Link to this section">#</a></span>
 		</h2><p>Get the memory total</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h2 id="usedmemory-">
+<pre class="api-signature sh_none"><code>memory(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h2 id="usedmemory">
 			usedMemory()
-			<span><a class="mark" href="#usedmemory-" id="usedmemory-">#</a></span>
+			<span><a class="mark" href="#usedmemory" aria-label="Link to this section">#</a></span>
 		</h2><p>Get the used memory size</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h2 id="availablememory-">
+<pre class="api-signature sh_none"><code>usedMemory(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h2 id="availablememory">
 			availableMemory()
-			<span><a class="mark" href="#availablememory-" id="availablememory-">#</a></span>
+			<span><a class="mark" href="#availablememory" aria-label="Link to this section">#</a></span>
 		</h2><p>Get the available memory size</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h2 id="cpuusage-">
+<pre class="api-signature sh_none"><code>availableMemory(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h2 id="cpuusage">
 			cpuUsage()
-			<span><a class="mark" href="#cpuusage-" id="cpuusage-">#</a></span>
+			<span><a class="mark" href="#cpuusage" aria-label="Link to this section">#</a></span>
 		</h2><p>Get CPU usage percentage</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>cpuUsage(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
 
 			</div>
 
@@ -365,19 +469,28 @@ console.log(os.info());
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'os.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

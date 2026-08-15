@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'action.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-action">quark/action</a></span>
@@ -148,10 +135,10 @@
 <span><a href="#keyframe-itemscount">keyframe.itemsCount</a></span>
 </li>
 <li>
-<span><a href="#keyframe-apply-view-">keyframe.apply(view)</a></span>
+<span><a href="#keyframe-apply-view">keyframe.apply(view)</a></span>
 </li>
 <li>
-<span><a href="#keyframe-fetch-from-">keyframe.fetch(from)</a></span>
+<span><a href="#keyframe-fetch-from">keyframe.fetch(from)</a></span>
 </li>
 </ul>
 <li>
@@ -173,37 +160,37 @@
 <span><a href="#action-speed">action.speed</a></span>
 </li>
 <li>
-<span><a href="#action-play-">action.play()</a></span>
+<span><a href="#action-play">action.play()</a></span>
 </li>
 <li>
-<span><a href="#action-stop-">action.stop()</a></span>
+<span><a href="#action-stop">action.stop()</a></span>
 </li>
 <li>
-<span><a href="#action-seek-time-">action.seek(time)</a></span>
+<span><a href="#action-seek-time">action.seek(time)</a></span>
 </li>
 <li>
-<span><a href="#action-seekplay-time-">action.seekPlay(time)</a></span>
+<span><a href="#action-seekplay-time">action.seekPlay(time)</a></span>
 </li>
 <li>
-<span><a href="#action-seekstop-time-">action.seekStop(time)</a></span>
+<span><a href="#action-seekstop-time">action.seekStop(time)</a></span>
 </li>
 <li>
-<span><a href="#action-before-action-">action.before(action)</a></span>
+<span><a href="#action-before-action">action.before(action)</a></span>
 </li>
 <li>
-<span><a href="#action-after-action-">action.after(action)</a></span>
+<span><a href="#action-after-action">action.after(action)</a></span>
 </li>
 <li>
-<span><a href="#action-remove-">action.remove()</a></span>
+<span><a href="#action-remove">action.remove()</a></span>
 </li>
 <li>
-<span><a href="#action-append-child-">action.append(child)</a></span>
+<span><a href="#action-append-child">action.append(child)</a></span>
 </li>
 <li>
-<span><a href="#action-clear-">action.clear()</a></span>
+<span><a href="#action-clear">action.clear()</a></span>
 </li>
 <li>
-<span><a href="#action-constructor-win-">action.constructor(win)</a></span>
+<span><a href="#action-constructor-win">action.constructor(win)</a></span>
 </li>
 </ul>
 <li>
@@ -239,17 +226,17 @@
 <span><a href="#keyframeaction-indexed">keyframeaction.indexed</a></span>
 </li>
 <li>
-<span><a href="#keyframeaction-addframe-time-curve-">keyframeaction.addFrame(time,curve?)</a></span>
+<span><a href="#keyframeaction-addframe-time-curve">keyframeaction.addFrame(time,curve?)</a></span>
 </li>
 <li>
-<span><a href="#keyframeaction-addframewithcss-cssexp-time-curve-">keyframeaction.addFrameWithCss(cssExp,time?,curve?)</a></span>
+<span><a href="#keyframeaction-addframewithcss-cssexp-time-curve">keyframeaction.addFrameWithCss(cssExp,time?,curve?)</a></span>
 </li>
 <li>
-<span><a href="#keyframeaction-add-styleorcssexp-time-curve-">keyframeaction.add(styleOrCssExp,time?,curve?)</a></span>
+<span><a href="#keyframeaction-add-styleorcssexp-time-curve">keyframeaction.add(styleOrCssExp,time?,curve?)</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#createaction-win-arg-parent-">createAction(win,arg,parent?)</a></span>
+<span><a href="#createaction-win-arg-parent">createAction(win,arg,parent?)</a></span>
 </li>
 <li>
 <span><a href="#interface-transitionresult">Interface: TransitionResult</a></span>
@@ -262,298 +249,331 @@
 </li>
 </ul>
 <li>
-<span><a href="#transition-view-to-from-">transition(view,to,from?)</a></span>
+<span><a href="#transition-view-to-from">transition(view,to,from?)</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-action">
 			quark/action
-			<span><a class="mark" href="#quark-action" id="quark-action">#</a></span>
+			<span><a class="mark" href="#quark-action" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="keyframein">
 			KeyframeIn
-			<span><a class="mark" href="#keyframein" id="keyframein">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>KeyframeIn</code> = <a href="css.html#stylesheets"><code>StyleSheets</code></a>|<a href="css.html#cssnameexp"><code>CSSNameExp</code></a></li>
-</ul>
+			<span><a class="mark" href="#keyframein" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">type</span> KeyframeIn = <a class="api-type" href="css.html#stylesheets">StyleSheets</a> | <a class="api-type" href="css.html#cssnameexp">CSSNameExp</a></code></pre>
+
+
 <h2 id="actionin">
 			ActionIn
-			<span><a class="mark" href="#actionin" id="actionin">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>ActionIn</code> = <a href="#class-action"><code>Action</code></a>|<a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>| {<br/><code>playing?</code>: <a href="$ext.html#boolean"><code>boolean</code></a>; <br/><code>loop?</code>: <a href="$ext.html#number"><code>number</code></a>; <br/><code>speed?</code>: <a href="$ext.html#number"><code>number</code></a>; <br/><code>spawn?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>seq?</code>: <a href="#actionin"><code>ActionIn</code></a><code>[]</code>; <br/><code>keyframe?</code>: <a href="#keyframein"><code>KeyframeIn</code></a><code>[]</code>; <br/>}</li>
-</ul>
+			<span><a class="mark" href="#actionin" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">type</span> <a class="api-type" href="#actionin">ActionIn</a> =
+  <a class="api-type" href="#class-action">Action</a>
+  | <a class="api-type" href="#keyframein">KeyframeIn</a>[]
+  | {
+    playing?: <a class="api-type" href="$ext.html#boolean">boolean</a>;
+    loop?: <a class="api-type" href="$ext.html#number">number</a>;
+    speed?: <a class="api-type" href="$ext.html#number">number</a>;
+    spawn?: <a class="api-type" href="#actionin">ActionIn</a>[];
+    seq?: <a class="api-type" href="#actionin">ActionIn</a>[];
+    keyframe?: <a class="api-type" href="#keyframein">KeyframeIn</a>[];
+  }</code></pre>
+
+
 <h2 id="class-keyframe">
 			Class: Keyframe
-			<span><a class="mark" href="#class-keyframe" id="class-keyframe">#</a></span>
+			<span><a class="mark" href="#class-keyframe" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="keyframe">
 			Keyframe
-			<span><a class="mark" href="#keyframe" id="keyframe">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="css.html#stylesheets"><code>StyleSheets</code></a></li>
-</ul>
+			<span><a class="mark" href="#keyframe" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="css.html#stylesheets"><code>StyleSheets</code></a></p>
 <h3 id="keyframe-index">
 			keyframe.index
-			<span><a class="mark" href="#keyframe-index" id="keyframe-index">#</a></span>
+			<span><a class="mark" href="#keyframe-index" aria-label="Link to this section">#</a></span>
 		</h3><p>Get Keyframe index in the keyframe action </p>
-<ul>
-<li><code>@get</code> <code>index</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> index: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyframe-time">
 			keyframe.time
-			<span><a class="mark" href="#keyframe-time" id="keyframe-time">#</a></span>
+			<span><a class="mark" href="#keyframe-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Get Keyframe time poing </p>
-<ul>
-<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> time: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyframe-curve">
 			keyframe.curve
-			<span><a class="mark" href="#keyframe-curve" id="keyframe-curve">#</a></span>
+			<span><a class="mark" href="#keyframe-curve" aria-label="Link to this section">#</a></span>
 		</h3><p>Get transition curve </p>
-<ul>
-<li><code>@get</code> <code>curve</code>: <a href="types.html#curve"><code>types.Curve</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> curve: <a class="api-type" href="types.html#curve">types.Curve</a></code></pre>
+
+
 <h3 id="keyframe-itemscount">
 			keyframe.itemsCount
-			<span><a class="mark" href="#keyframe-itemscount" id="keyframe-itemscount">#</a></span>
+			<span><a class="mark" href="#keyframe-itemscount" aria-label="Link to this section">#</a></span>
 		</h3><p>Get StyleSheet items count </p>
-<ul>
-<li><code>@get</code> <code>itemsCount</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="keyframe-apply-view-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> itemsCount: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="keyframe-apply-view">
 			keyframe.apply(view)
-			<span><a class="mark" href="#keyframe-apply-view-" id="keyframe-apply-view-">#</a></span>
+			<span><a class="mark" href="#keyframe-apply-view" aria-label="Link to this section">#</a></span>
 		</h3><p>apply style to view </p>
-<ul>
-<li><code>@param</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="keyframe-fetch-from-">
+<pre class="api-signature sh_none"><code>apply(view: <a class="api-type" href="view.html#view">View</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="keyframe-fetch-from">
 			keyframe.fetch(from)
-			<span><a class="mark" href="#keyframe-fetch-from-" id="keyframe-fetch-from-">#</a></span>
+			<span><a class="mark" href="#keyframe-fetch-from" aria-label="Link to this section">#</a></span>
 		</h3><p>fetch style from view </p>
-<ul>
-<li><code>@param</code> <code>from</code>: <a href="view.html#view"><code>View</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>fetch(from: <a class="api-type" href="view.html#view">View</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
 <h2 id="class-action">
 			Class: Action
-			<span><a class="mark" href="#class-action" id="class-action">#</a></span>
+			<span><a class="mark" href="#class-action" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="action">
 			Action
-			<span><a class="mark" href="#action" id="action">#</a></span>
+			<span><a class="mark" href="#action" aria-label="Link to this section">#</a></span>
 		</h3><p>Action base type, this is an abstract type without a constructor</p>
 <ul>
 <li><code>@abstract</code>  </li>
 </ul>
 <h3 id="action-duration">
 			action.duration
-			<span><a class="mark" href="#action-duration" id="action-duration">#</a></span>
+			<span><a class="mark" href="#action-duration" aria-label="Link to this section">#</a></span>
 		</h3><p>Get action playtime long </p>
-<ul>
-<li><code>@get</code> <code>duration</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> duration: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="action-playing">
 			action.playing
-			<span><a class="mark" href="#action-playing" id="action-playing">#</a></span>
+			<span><a class="mark" href="#action-playing" aria-label="Link to this section">#</a></span>
 		</h3><p>Set/Get action playing state, if set then play() or stop() is called </p>
-<ul>
-<li><code>playing</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>playing: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="action-loop">
 			action.loop
-			<span><a class="mark" href="#action-loop" id="action-loop">#</a></span>
+			<span><a class="mark" href="#action-loop" aria-label="Link to this section">#</a></span>
 		</h3><p>Set/Get action loop, the zero means not loop </p>
-<ul>
-<li><code>loop</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>loop: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="action-speed">
 			action.speed
-			<span><a class="mark" href="#action-speed" id="action-speed">#</a></span>
+			<span><a class="mark" href="#action-speed" aria-label="Link to this section">#</a></span>
 		</h3><p>Set/Get action speed </p>
-<ul>
-<li><code>speed</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="action-play-">
+<pre class="api-signature sh_none"><code>speed: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="action-play">
 			action.play()
-			<span><a class="mark" href="#action-play-" id="action-play-">#</a></span>
+			<span><a class="mark" href="#action-play" aria-label="Link to this section">#</a></span>
 		</h3><p>To play action </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
-</ul>
-<h3 id="action-stop-">
+<pre class="api-signature sh_none"><code>play(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+
+<h3 id="action-stop">
 			action.stop()
-			<span><a class="mark" href="#action-stop-" id="action-stop-">#</a></span>
+			<span><a class="mark" href="#action-stop" aria-label="Link to this section">#</a></span>
 		</h3><p>To stop action </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
-</ul>
-<h3 id="action-seek-time-">
+<pre class="api-signature sh_none"><code>stop(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+
+<h3 id="action-seek-time">
 			action.seek(time)
-			<span><a class="mark" href="#action-seek-time-" id="action-seek-time-">#</a></span>
+			<span><a class="mark" href="#action-seek-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Jump to target <code>time</code>, after calling it, it will reset the internal <code>looped</code></p>
+<pre class="api-signature sh_none"><code>seek(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+<li><code>time</code> — unit as <code>ms</code></li>
 </ul>
-<h3 id="action-seekplay-time-">
+<h3 id="action-seekplay-time">
 			action.seekPlay(time)
-			<span><a class="mark" href="#action-seekplay-time-" id="action-seekplay-time-">#</a></span>
+			<span><a class="mark" href="#action-seekplay-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and start playing. The internal <code>looped</code> will be reset after calling</p>
+<pre class="api-signature sh_none"><code>seekPlay(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+<li><code>time</code> — unit as <code>ms</code></li>
 </ul>
-<h3 id="action-seekstop-time-">
+<h3 id="action-seekstop-time">
 			action.seekStop(time)
-			<span><a class="mark" href="#action-seekstop-time-" id="action-seekstop-time-">#</a></span>
+			<span><a class="mark" href="#action-seekstop-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and stop playing. The internal <code>looped</code> will be reset after calling</p>
+<pre class="api-signature sh_none"><code>seekStop(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> unit as <code>ms</code></li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> </li>
+<li><code>time</code> — unit as <code>ms</code></li>
 </ul>
-<h3 id="action-before-action-">
+<h3 id="action-before-action">
 			action.before(action)
-			<span><a class="mark" href="#action-before-action-" id="action-before-action-">#</a></span>
-		</h3><p>Add a sibling action to the front of itself.<br/>The current action needs to have a parent action else it will be invalid.</p>
-<ul>
-<li><code>@param</code> <code>action</code>: <a href="#class-action"><code>Action</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="action-after-action-">
+			<span><a class="mark" href="#action-before-action" aria-label="Link to this section">#</a></span>
+		</h3><p>Add a sibling action to the front of itself.
+The current action needs to have a parent action else it will be invalid.</p>
+<pre class="api-signature sh_none"><code>before(action: <a class="api-type" href="#class-action">Action</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="action-after-action">
 			action.after(action)
-			<span><a class="mark" href="#action-after-action-" id="action-after-action-">#</a></span>
-		</h3><p>Add a sibling action to the back of itself.<br/>The current action needs to have a parent action, otherwise it will be invalid.</p>
-<ul>
-<li><code>@param</code> <code>action</code>: <a href="#class-action"><code>Action</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="action-remove-">
+			<span><a class="mark" href="#action-after-action" aria-label="Link to this section">#</a></span>
+		</h3><p>Add a sibling action to the back of itself.
+The current action needs to have a parent action, otherwise it will be invalid.</p>
+<pre class="api-signature sh_none"><code>after(action: <a class="api-type" href="#class-action">Action</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="action-remove">
 			action.remove()
-			<span><a class="mark" href="#action-remove-" id="action-remove-">#</a></span>
+			<span><a class="mark" href="#action-remove" aria-label="Link to this section">#</a></span>
 		</h3><p>Deleting myself from the parent</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="action-append-child-">
+<pre class="api-signature sh_none"><code>remove(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="action-append-child">
 			action.append(child)
-			<span><a class="mark" href="#action-append-child-" id="action-append-child-">#</a></span>
+			<span><a class="mark" href="#action-append-child" aria-label="Link to this section">#</a></span>
 		</h3><p>Add sub-actions to the end. Note: {KeyframeAction} cannot add sub-actions</p>
-<ul>
-<li><code>@param</code> <code>child</code>: <a href="#class-action"><code>Action</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="action-clear-">
+<pre class="api-signature sh_none"><code>append(child: <a class="api-type" href="#class-action">Action</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="action-clear">
 			action.clear()
-			<span><a class="mark" href="#action-clear-" id="action-clear-">#</a></span>
+			<span><a class="mark" href="#action-clear" aria-label="Link to this section">#</a></span>
 		</h3><p>Clear all sub-actions or keyframes. After clearing, the action will stop immediately.</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="action-constructor-win-">
+<pre class="api-signature sh_none"><code>clear(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="action-constructor-win">
 			action.constructor(win)
-			<span><a class="mark" href="#action-constructor-win-" id="action-constructor-win-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>win</code>: <a href="window.html#window"><code>Window</code></a> </li>
-</ul>
+			<span><a class="mark" href="#action-constructor-win" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(win: <a class="api-type" href="window.html#window">Window</a>)</code></pre>
+
+
+
 <h2 id="class-spawnaction">
 			Class: SpawnAction
-			<span><a class="mark" href="#class-spawnaction" id="class-spawnaction">#</a></span>
+			<span><a class="mark" href="#class-spawnaction" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="spawnaction">
 			SpawnAction
-			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-action"><code>Action</code></a></li>
-</ul>
+			<span><a class="mark" href="#spawnaction" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-action"><code>Action</code></a></p>
 <h2 id="class-sequenceaction">
 			Class: SequenceAction
-			<span><a class="mark" href="#class-sequenceaction" id="class-sequenceaction">#</a></span>
+			<span><a class="mark" href="#class-sequenceaction" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="sequenceaction">
 			SequenceAction
-			<span><a class="mark" href="#sequenceaction" id="sequenceaction">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-action"><code>Action</code></a></li>
-</ul>
+			<span><a class="mark" href="#sequenceaction" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-action"><code>Action</code></a></p>
 <h2 id="class-keyframeaction">
 			Class: KeyframeAction
-			<span><a class="mark" href="#class-keyframeaction" id="class-keyframeaction">#</a></span>
+			<span><a class="mark" href="#class-keyframeaction" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="keyframeaction">
 			KeyframeAction
-			<span><a class="mark" href="#keyframeaction" id="keyframeaction">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="#class-action"><code>Action</code></a></li>
-</ul>
+			<span><a class="mark" href="#keyframeaction" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="#class-action"><code>Action</code></a></p>
 <h3 id="keyframeaction-time">
 			keyframeaction.time
-			<span><a class="mark" href="#keyframeaction-time" id="keyframeaction-time">#</a></span>
+			<span><a class="mark" href="#keyframeaction-time" aria-label="Link to this section">#</a></span>
 		</h3><p>get play time  </p>
-<ul>
-<li><code>@get</code> <code>time</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> time: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyframeaction-frame">
 			keyframeaction.frame
-			<span><a class="mark" href="#keyframeaction-frame" id="keyframeaction-frame">#</a></span>
+			<span><a class="mark" href="#keyframeaction-frame" aria-label="Link to this section">#</a></span>
 		</h3><p>get playing frame index </p>
-<ul>
-<li><code>@get</code> <code>frame</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> frame: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyframeaction-length">
 			keyframeaction.length
-			<span><a class="mark" href="#keyframeaction-length" id="keyframeaction-length">#</a></span>
+			<span><a class="mark" href="#keyframeaction-length" aria-label="Link to this section">#</a></span>
 		</h3><p>get count of frames </p>
-<ul>
-<li><code>@get</code> <code>length</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> length: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="keyframeaction-indexed">
 			keyframeaction.indexed
-			<span><a class="mark" href="#keyframeaction-indexed" id="keyframeaction-indexed">#</a></span>
+			<span><a class="mark" href="#keyframeaction-indexed" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the {Keyframe} for index</p>
-<ul>
-<li><code>@get</code> <code>indexed</code>: <a href="#class-keyframe"><code>Keyframe</code></a> </li>
-</ul>
-<h3 id="keyframeaction-addframe-time-curve-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> indexed: <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+
+
+<h3 id="keyframeaction-addframe-time-curve">
 			keyframeaction.addFrame(time,curve?)
-			<span><a class="mark" href="#keyframeaction-addframe-time-curve-" id="keyframeaction-addframe-time-curve-">#</a></span>
+			<span><a class="mark" href="#keyframeaction-addframe-time-curve" aria-label="Link to this section">#</a></span>
 		</h3><p>By <code>time</code> and <code>curve</code> add keyframe，and return it</p>
+<pre class="api-signature sh_none"><code>addFrame(time: <a class="api-type" href="numbers.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> Keyframe time point</li>
-<li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> No <code>curve</code> use <code>&#39;ease&#39;</code> as default</li>
+<li><code>time</code> — Keyframe time point</li>
+<li><code>curve?</code> — No <code>curve</code> use <code>&#39;ease&#39;</code> as default</li>
 </ul>
 <p>Can use <code>&#39;linear&#39;</code>、<code>&#39;ease&#39;</code>、<code>&#39;easeIn&#39;</code>、<code>&#39;easeOut&#39;</code>、<code>&#39;easeInOut&#39;</code> as params</p>
-<ul>
-<li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
-</ul>
-<h3 id="keyframeaction-addframewithcss-cssexp-time-curve-">
+<h3 id="keyframeaction-addframewithcss-cssexp-time-curve">
 			keyframeaction.addFrameWithCss(cssExp,time?,curve?)
-			<span><a class="mark" href="#keyframeaction-addframewithcss-cssexp-time-curve-" id="keyframeaction-addframewithcss-cssexp-time-curve-">#</a></span>
+			<span><a class="mark" href="#keyframeaction-addframewithcss-cssexp-time-curve" aria-label="Link to this section">#</a></span>
 		</h3><p>Add keyframes by the <code>cssExp</code> stylesheet name expression and return keyframes</p>
+<pre class="api-signature sh_none"><code>addFrameWithCss(cssExp: <a class="api-type" href="css.html#cssnameexp">CSSNameExp</a>, time?: <a class="api-type" href="numbers.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>cssExp</code>: <a href="css.html#cssnameexp"><code>CSSNameExp</code></a> css exp</li>
-<li><code>@param</code> <code>time?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
-<li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
-<li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
+<li><code>cssExp</code> — css exp</li>
+<li><code>time?</code> — Keyframe time point, <strong>Default</strong> as zero</li>
+<li><code>curve?</code> — If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
 </ul>
-<h3 id="keyframeaction-add-styleorcssexp-time-curve-">
+<h3 id="keyframeaction-add-styleorcssexp-time-curve">
 			keyframeaction.add(styleOrCssExp,time?,curve?)
-			<span><a class="mark" href="#keyframeaction-add-styleorcssexp-time-curve-" id="keyframeaction-add-styleorcssexp-time-curve-">#</a></span>
-		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,<br/>and return keyframes</p>
+			<span><a class="mark" href="#keyframeaction-add-styleorcssexp-time-curve" aria-label="Link to this section">#</a></span>
+		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,
+and return keyframes</p>
+<pre class="api-signature sh_none"><code>add(styleOrCssExp: <a class="api-type" href="#keyframein">KeyframeIn</a>, time?: <a class="api-type" href="numbers.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>styleOrCssExp</code>: <a href="#keyframein"><code>KeyframeIn</code></a> style sheet or css exp</li>
-<li><code>@param</code> <code>time?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Keyframe time point, <strong>Default</strong> as zero</li>
-<li><code>@param</code> <code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
-<li><code>@return</code> <a href="#class-keyframe"><code>Keyframe</code></a> </li>
+<li><code>styleOrCssExp</code> — style sheet or css exp</li>
+<li><code>time?</code> — Keyframe time point, <strong>Default</strong> as zero</li>
+<li><code>curve?</code> — If not passed, <code>curve</code> <strong>Default</strong> as <code>&#39;ease&#39;</code></li>
 </ul>
-<h2 id="createaction-win-arg-parent-">
+<h2 id="createaction-win-arg-parent">
 			createAction(win,arg,parent?)
-			<span><a class="mark" href="#createaction-win-arg-parent-" id="createaction-win-arg-parent-">#</a></span>
+			<span><a class="mark" href="#createaction-win-arg-parent" aria-label="Link to this section">#</a></span>
 		</h2><ul>
-<li>Create an action through the <code>json</code> parameter. If the <code>arg</code> passed in is <a href="#class-action"><code>Action</code></a>,<br/>  skip the creation process and return directly.<br/>  If the parent action is passed in, append the newly created action to the end of <code>parent</code> after creation.</li>
+<li>Create an action through the <code>json</code> parameter. If the <code>arg</code> passed in is <a href="#class-action"><code>Action</code></a>,
+  skip the creation process and return directly.
+  If the parent action is passed in, append the newly created action to the end of <code>parent</code> after creation.</li>
 <li>If the passed in parameter is an <a href="$ext.html#array"><code>Array</code></a>, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a> and use this <a href="$ext.html#array"><code>Array</code></a> to create the corresponding <a href="#class-keyframe"><code>Keyframe</code></a></li>
 <li>If the passed in parameter has a <code>seq</code> attribute, create a <a href="#class-sequenceaction"><code>SequenceAction</code></a></li>
 <li>If the passed in parameter has a <code>spawn</code> attribute, create a <a href="#class-spawnaction"><code>SpawnAction</code></a></li>
-<li>If there is no <code>seq</code> or <code>spawn</code> in the passed in parameter, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a><br/>  If the object&#39;s internal attribute <code>keyframe</code> is <a href="$ext.html#array"><code>Array</code></a>, use this <a href="$ext.html#array"><code>Array</code></a> to create a <a href="#class-keyframe"><code>Keyframe</code></a></li>
+<li>If there is no <code>seq</code> or <code>spawn</code> in the passed in parameter, create a <a href="#class-keyframeaction"><code>KeyframeAction</code></a>
+  If the object&#39;s internal attribute <code>keyframe</code> is <a href="$ext.html#array"><code>Array</code></a>, use this <a href="$ext.html#array"><code>Array</code></a> to create a <a href="#class-keyframe"><code>Keyframe</code></a><pre class="api-signature sh_none"><code>createAction(win: <a class="api-type" href="window.html#window">Window</a>, arg: <a class="api-type" href="#actionin">ActionIn</a>, parent?: <a class="api-type" href="#class-action">Action</a>): <a class="api-type" href="#class-action">Action</a></code></pre>
+
+
+
+</li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">var act1 = createAction(win, [
@@ -583,35 +603,29 @@ var act2 = createAction(win, {
     ]
 })
 </code></pre>
-<ul>
-<li><code>@param</code> <code>win</code>: <a href="window.html#window"><code>Window</code></a> </li>
-<li><code>@param</code> <code>arg</code>: <a href="#actionin"><code>ActionIn</code></a> </li>
-<li><code>@param</code> <code>parent?</code>: <a href="#class-action"><code>Action</code></a> </li>
-<li><code>@return</code> <a href="#class-action"><code>Action</code></a> </li>
-</ul>
 <h2 id="interface-transitionresult">
 			Interface: TransitionResult
-			<span><a class="mark" href="#interface-transitionresult" id="interface-transitionresult">#</a></span>
+			<span><a class="mark" href="#interface-transitionresult" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="transitionresult">
 			TransitionResult
-			<span><a class="mark" href="#transitionresult" id="transitionresult">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="event.html#actionevent"><code>ActionEvent</code></a>&gt;</li>
-</ul>
+			<span><a class="mark" href="#transitionresult" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="event.html#actionevent"><code>ActionEvent</code></a>&gt;</p>
 <h3 id="transitionresult-action">
 			transitionresult.action
-			<span><a class="mark" href="#transitionresult-action" id="transitionresult-action">#</a></span>
+			<span><a class="mark" href="#transitionresult-action" aria-label="Link to this section">#</a></span>
 		</h3><p>The action instance of this transition</p>
-<ul>
-<li><code>@get</code> <code>action</code>: <a href="#class-keyframeaction"><code>KeyframeAction</code></a> </li>
-</ul>
-<h2 id="transition-view-to-from-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> action: <a class="api-type" href="#class-keyframeaction">KeyframeAction</a></code></pre>
+
+
+<h2 id="transition-view-to-from">
 			transition(view,to,from?)
-			<span><a class="mark" href="#transition-view-to-from-" id="transition-view-to-from-">#</a></span>
+			<span><a class="mark" href="#transition-view-to-from" aria-label="Link to this section">#</a></span>
 		</h2><p>Create a view style transition action by the style and play this action</p>
-<ul>
-<li><code>@return</code> <a href="#interface-transitionresult"><code>TransitionResult</code></a>  Promise object, when the transition is completed, the promise is resolved.</li>
-</ul>
+<pre class="api-signature sh_none"><code>transition(view: <a class="api-type" href="view.html#view">View</a>, to: <a class="api-type" href="#keyframein">KeyframeIn</a>, from?: <a class="api-type" href="#keyframein">KeyframeIn</a>): <a class="api-type" href="#interface-transitionresult">TransitionResult</a></code></pre>
+
+
+
+<p><strong>Returns:</strong>  Promise object, when the transition is completed, the promise is resolved.</p>
 <p>For example:</p>
 <pre><code class="undefinedts">// The transition is completed and callback is made after 1 second
 transition(view, {
@@ -630,11 +644,6 @@ transition(view, {
     x: 100,
 })
 </code></pre>
-<ul>
-<li><code>@param</code> <code>view</code>: <a href="view.html#view"><code>View</code></a> </li>
-<li><code>@param</code> <code>to</code>: <a href="#keyframein"><code>KeyframeIn</code></a> </li>
-<li><code>@param</code> <code>from?</code>: <a href="#keyframein"><code>KeyframeIn</code></a> </li>
-</ul>
 
 			</div>
 
@@ -642,19 +651,28 @@ transition(view, {
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'action.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

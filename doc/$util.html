@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = '_util.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,23 +102,22 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-_util">quark/_util</a></span>
 <ul>
 <li>
-<span><a href="#stripbom-content-">stripBOM(content)</a></span>
+<span><a href="#stripbom-content">stripBOM(content)</a></span>
 </li>
 <li>
-<span><a href="#stripshebang-content-">stripShebang(content)</a></span>
+<span><a href="#stripshebang-content">stripShebang(content)</a></span>
 </li>
 <li>
-<span><a href="#assert-value-message-">assert(value,message?)</a></span>
+<span><a href="#assert-value-message">assert(value,message?)</a></span>
 </li>
 <li>
 <span><a href="#class-hash">Class: Hash</a></span>
@@ -139,28 +126,28 @@
 <span><a href="#hash">Hash</a></span>
 </li>
 <li>
-<span><a href="#hash-hashcode-">hash.hashCode()</a></span>
+<span><a href="#hash-hashcode">hash.hashCode()</a></span>
 </li>
 <li>
-<span><a href="#hash-hashstr-">hash.hashStr()</a></span>
+<span><a href="#hash-hashstr">hash.hashStr()</a></span>
 </li>
 <li>
-<span><a href="#hash-update-data-">hash.update(data)</a></span>
+<span><a href="#hash-update-data">hash.update(data)</a></span>
 </li>
 <li>
-<span><a href="#hash-update1f-f1-">hash.update1f(f1)</a></span>
+<span><a href="#hash-update1f-f1">hash.update1f(f1)</a></span>
 </li>
 <li>
-<span><a href="#hash-update2f-f1-f2-">hash.update2f(f1,f2)</a></span>
+<span><a href="#hash-update2f-f1-f2">hash.update2f(f1,f2)</a></span>
 </li>
 <li>
-<span><a href="#hash-update4f-f1-f2-f3-f4-">hash.update4f(f1,f2,f3,f4)</a></span>
+<span><a href="#hash-update4f-f1-f2-f3-f4">hash.update4f(f1,f2,f3,f4)</a></span>
 </li>
 <li>
-<span><a href="#hash-equals-other-">hash.equals(other)</a></span>
+<span><a href="#hash-equals-other">hash.equals(other)</a></span>
 </li>
 <li>
-<span><a href="#hash-clear-">hash.clear()</a></span>
+<span><a href="#hash-clear">hash.clear()</a></span>
 </li>
 </ul>
 <li>
@@ -185,217 +172,227 @@
 <span><a href="#default-options">default.options</a></span>
 </li>
 <li>
-<span><a href="#default-nexttick-cb-">default.nextTick(cb)</a></span>
+<span><a href="#default-nexttick-cb">default.nextTick(cb)</a></span>
 </li>
 <li>
-<span><a href="#default-sleep-time-">default.sleep(time)</a></span>
+<span><a href="#default-sleep-time">default.sleep(time)</a></span>
 </li>
 <li>
-<span><a href="#default-gc-">default.gc()</a></span>
+<span><a href="#default-gc">default.gc()</a></span>
 </li>
 <li>
-<span><a href="#default-runscript-source-name-sandbox-">default.runScript(source,name?,sandbox?)</a></span>
+<span><a href="#default-runscript-source-name-sandbox">default.runScript(source,name?,sandbox?)</a></span>
 </li>
 <li>
-<span><a href="#default-hashcode-obj-">default.hashCode(obj)</a></span>
+<span><a href="#default-hashcode-obj">default.hashCode(obj)</a></span>
 </li>
 <li>
-<span><a href="#default-hash-obj-">default.hash(obj)</a></span>
+<span><a href="#default-hash-obj">default.hash(obj)</a></span>
 </li>
 <li>
-<span><a href="#default-debuglog-tag-">default.debugLog(TAG?)</a></span>
+<span><a href="#default-debuglog-tag">default.debugLog(TAG?)</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-_util">
 			quark/_util
-			<span><a class="mark" href="#quark-_util" id="quark-_util">#</a></span>
-		</h1><h2 id="stripbom-content-">
+			<span><a class="mark" href="#quark-_util" aria-label="Link to this section">#</a></span>
+		</h1><h2 id="stripbom-content">
 			stripBOM(content)
-			<span><a class="mark" href="#stripbom-content-" id="stripbom-content-">#</a></span>
-		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)<br/>because the buffer-to-string conversion in <code>fs.readFileSync()</code><br/>translates it to FEFF, the UTF-16 BOM.</p>
-<ul>
-<li><code>@param</code> <code>content</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="stripshebang-content-">
+			<span><a class="mark" href="#stripbom-content" aria-label="Link to this section">#</a></span>
+		</h2><p>Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+because the buffer-to-string conversion in <code>fs.readFileSync()</code>
+translates it to FEFF, the UTF-16 BOM.</p>
+<pre class="api-signature sh_none"><code>stripBOM(content: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h2 id="stripshebang-content">
 			stripShebang(content)
-			<span><a class="mark" href="#stripshebang-content-" id="stripshebang-content-">#</a></span>
+			<span><a class="mark" href="#stripshebang-content" aria-label="Link to this section">#</a></span>
 		</h2><p>Find end of shebang line and slice it off</p>
-<ul>
-<li><code>@param</code> <code>content</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="assert-value-message-">
+<pre class="api-signature sh_none"><code>stripShebang(content: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h2 id="assert-value-message">
 			assert(value,message?)
-			<span><a class="mark" href="#assert-value-message-" id="assert-value-message-">#</a></span>
+			<span><a class="mark" href="#assert-value-message" aria-label="Link to this section">#</a></span>
 		</h2><p>Asserts that value is not null or undefined.</p>
-<ul>
-<li><code>@param</code> <code>value</code>: <code>any</code> </li>
-<li><code>@param</code> <code>message?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>assert(value: any, message?: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
 <h2 id="class-hash">
 			Class: Hash
-			<span><a class="mark" href="#class-hash" id="class-hash">#</a></span>
+			<span><a class="mark" href="#class-hash" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="hash">
 			Hash
-			<span><a class="mark" href="#hash" id="hash">#</a></span>
-		</h3><h3 id="hash-hashcode-">
+			<span><a class="mark" href="#hash" aria-label="Link to this section">#</a></span>
+		</h3><h3 id="hash-hashcode">
 			hash.hashCode()
-			<span><a class="mark" href="#hash-hashcode-" id="hash-hashcode-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="numbers.html#int"><code>Int</code></a> </li>
-</ul>
-<h3 id="hash-hashstr-">
+			<span><a class="mark" href="#hash-hashcode" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>hashCode(): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+
+
+
+<h3 id="hash-hashstr">
 			hash.hashStr()
-			<span><a class="mark" href="#hash-hashstr-" id="hash-hashstr-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="hash-update-data-">
+			<span><a class="mark" href="#hash-hashstr" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>hashStr(): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h3 id="hash-update-data">
 			hash.update(data)
-			<span><a class="mark" href="#hash-update-data-" id="hash-update-data-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="hash-update1f-f1-">
+			<span><a class="mark" href="#hash-update-data" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>update(data: <a class="api-type" href="$ext.html#string">string</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="hash-update1f-f1">
 			hash.update1f(f1)
-			<span><a class="mark" href="#hash-update1f-f1-" id="hash-update1f-f1-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>f1</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="hash-update2f-f1-f2-">
+			<span><a class="mark" href="#hash-update1f-f1" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>update1f(f1: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="hash-update2f-f1-f2">
 			hash.update2f(f1,f2)
-			<span><a class="mark" href="#hash-update2f-f1-f2-" id="hash-update2f-f1-f2-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>f1</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@param</code> <code>f2</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="hash-update4f-f1-f2-f3-f4-">
+			<span><a class="mark" href="#hash-update2f-f1-f2" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>update2f(f1: <a class="api-type" href="$ext.html#number">number</a>, f2: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="hash-update4f-f1-f2-f3-f4">
 			hash.update4f(f1,f2,f3,f4)
-			<span><a class="mark" href="#hash-update4f-f1-f2-f3-f4-" id="hash-update4f-f1-f2-f3-f4-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>f1</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@param</code> <code>f2</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@param</code> <code>f3</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@param</code> <code>f4</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="hash-equals-other-">
+			<span><a class="mark" href="#hash-update4f-f1-f2-f3-f4" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>update4f(f1: <a class="api-type" href="$ext.html#number">number</a>, f2: <a class="api-type" href="$ext.html#number">number</a>, f3: <a class="api-type" href="$ext.html#number">number</a>, f4: <a class="api-type" href="$ext.html#number">number</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="hash-equals-other">
 			hash.equals(other)
-			<span><a class="mark" href="#hash-equals-other-" id="hash-equals-other-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>other</code>: <a href="#class-hash"><code>Hash</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="hash-clear-">
+			<span><a class="mark" href="#hash-equals-other" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>equals(other: <a class="api-type" href="#class-hash">Hash</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="hash-clear">
 			hash.clear()
-			<span><a class="mark" href="#hash-clear-" id="hash-clear-">#</a></span>
-		</h3><ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
+			<span><a class="mark" href="#hash-clear" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>clear(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
 <h2 id="platform">
 			Platform
-			<span><a class="mark" href="#platform" id="platform">#</a></span>
-		</h2><ul>
-<li><code>@type</code> <code>Platform</code> = <code>&quot;darwin&quot;</code>|<code>&quot;android&quot;</code>|<code>&quot;linux&quot;</code>|<code>&quot;win32&quot;</code></li>
-</ul>
+			<span><a class="mark" href="#platform" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Platform = "darwin" | "android" | "linux" | "win32"</code></pre>
+
+
 <h2 id="default">
 			default
-			<span><a class="mark" href="#default" id="default">#</a></span>
+			<span><a class="mark" href="#default" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="default-debug">
 			default.debug
-			<span><a class="mark" href="#default-debug" id="default-debug">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>debug</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+			<span><a class="mark" href="#default-debug" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> debug: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="default-version-string">
 			default.version()string
-			<span><a class="mark" href="#default-version-string" id="default-version-string">#</a></span>
+			<span><a class="mark" href="#default-version-string" aria-label="Link to this section">#</a></span>
 		</h3><p>Get <code>quark</code> framework version</p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>undefined(): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
 <h3 id="default-platform">
 			default.platform
-			<span><a class="mark" href="#default-platform" id="default-platform">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>platform</code>: <a href="#platform"><code>Platform</code></a> </li>
-</ul>
+			<span><a class="mark" href="#default-platform" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> platform: <a class="api-type" href="#platform">Platform</a></code></pre>
+
+
 <h3 id="default-argv">
 			default.argv
-			<span><a class="mark" href="#default-argv" id="default-argv">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>argv</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code> </li>
-</ul>
+			<span><a class="mark" href="#default-argv" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> argv: <a class="api-type" href="$ext.html#string">string</a>[]</code></pre>
+
+
 <h3 id="default-options">
 			default.options
-			<span><a class="mark" href="#default-options" id="default-options">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>options</code>: <a href="$ext.html#object"><code>object</code></a> </li>
-</ul>
-<h3 id="default-nexttick-cb-">
+			<span><a class="mark" href="#default-options" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> options: <a class="api-type" href="$ext.html#object">object</a></code></pre>
+
+
+<h3 id="default-nexttick-cb">
 			default.nextTick(cb)
-			<span><a class="mark" href="#default-nexttick-cb-" id="default-nexttick-cb-">#</a></span>
+			<span><a class="mark" href="#default-nexttick-cb" aria-label="Link to this section">#</a></span>
 		</h3><p>Wait for the next tick of the message loop to call the callback function</p>
-<ul>
-<li><code>@param</code> <code>cb</code>: <a href="$ext.html#function"><code>Function</code></a> </li>
-</ul>
-<h3 id="default-sleep-time-">
+<pre class="api-signature sh_none"><code>nextTick(cb: <a class="api-type" href="$ext.html#function">Function</a>)</code></pre>
+
+
+
+<h3 id="default-sleep-time">
 			default.sleep(time)
-			<span><a class="mark" href="#default-sleep-time-" id="default-sleep-time-">#</a></span>
+			<span><a class="mark" href="#default-sleep-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Asynchronous sleep, equivalent to calling <code>setTimeout</code></p>
-<ul>
-<li><code>@param</code> <code>time</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h3 id="default-gc-">
+<pre class="api-signature sh_none"><code>sleep(time: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
+<h3 id="default-gc">
 			default.gc()
-			<span><a class="mark" href="#default-gc-" id="default-gc-">#</a></span>
+			<span><a class="mark" href="#default-gc" aria-label="Link to this section">#</a></span>
 		</h3><p>Manually let the JavaScript engine perform <code>GC</code> actions</p>
-<h3 id="default-runscript-source-name-sandbox-">
+<pre class="api-signature sh_none"><code>undefined()</code></pre>
+
+
+
+<h3 id="default-runscript-source-name-sandbox">
 			default.runScript(source,name?,sandbox?)
-			<span><a class="mark" href="#default-runscript-source-name-sandbox-" id="default-runscript-source-name-sandbox-">#</a></span>
-		</h3><p>Compile and run a piece of javascript code and return the running result.<br/>    You can specify a name and a running context object.</p>
+			<span><a class="mark" href="#default-runscript-source-name-sandbox" aria-label="Link to this section">#</a></span>
+		</h3><p>Compile and run a piece of javascript code and return the running result.
+    You can specify a name and a running context object.</p>
 <p>The name is very useful when debugging code or program exceptions. It is usually a file name.</p>
 <p>If you do not pass this sandbox <code>sandbox</code> context, the default is to use the <code>global</code> object.</p>
+<pre class="api-signature sh_none"><code>runScript(source: <a class="api-type" href="$ext.html#string">string</a>, name?: <a class="api-type" href="$ext.html#string">string</a>, sandbox?: <a class="api-type" href="$ext.html#object">object</a>): any</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>source</code>: <a href="$ext.html#string"><code>string</code></a> javascript source code</li>
-<li><code>@param</code> <code>name?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>sandbox?</code>: <a href="$ext.html#object"><code>object</code></a> </li>
-<li><code>@return</code> <code>any</code> </li>
+<li><code>source</code> — javascript source code</li>
 </ul>
-<h3 id="default-hashcode-obj-">
+<h3 id="default-hashcode-obj">
 			default.hashCode(obj)
-			<span><a class="mark" href="#default-hashcode-obj-" id="default-hashcode-obj-">#</a></span>
+			<span><a class="mark" href="#default-hashcode-obj" aria-label="Link to this section">#</a></span>
 		</h3><p>Read the hash value of a data object</p>
-<ul>
-<li><code>@param</code> <code>obj</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h3 id="default-hash-obj-">
+<pre class="api-signature sh_none"><code>hashCode(obj: any): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+
+<h3 id="default-hash-obj">
 			default.hash(obj)
-			<span><a class="mark" href="#default-hash-obj-" id="default-hash-obj-">#</a></span>
+			<span><a class="mark" href="#default-hash-obj" aria-label="Link to this section">#</a></span>
 		</h3><p>Read the hash value of a data object, and convert the value to a string</p>
-<ul>
-<li><code>@param</code> <code>obj</code>: <code>any</code> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="default-debuglog-tag-">
+<pre class="api-signature sh_none"><code>hash(obj: any): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h3 id="default-debuglog-tag">
 			default.debugLog(TAG?)
-			<span><a class="mark" href="#default-debuglog-tag-" id="default-debuglog-tag-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>TAG?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#function"><code>Function</code></a> </li>
-</ul>
+			<span><a class="mark" href="#default-debuglog-tag" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>debugLog(TAG?: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#function">Function</a></code></pre>
+
+
+
 
 			</div>
 
@@ -403,19 +400,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = '$util.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

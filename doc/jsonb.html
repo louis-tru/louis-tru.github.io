@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'jsonb.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-jsonb">quark/jsonb</a></span>
@@ -127,33 +114,37 @@
 <span><a href="#default">default</a></span>
 <ul>
 <li>
-<span><a href="#default-binaryify-obj-">default.binaryify(obj)</a></span>
+<span><a href="#default-binaryify-obj">default.binaryify(obj)</a></span>
 </li>
 <li>
-<span><a href="#default-parse-buf-">default.parse(buf)</a></span>
+<span><a href="#default-parse-buf">default.parse(buf)</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-jsonb">
 			quark/jsonb
-			<span><a class="mark" href="#quark-jsonb" id="quark-jsonb">#</a></span>
+			<span><a class="mark" href="#quark-jsonb" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="default">
 			default
-			<span><a class="mark" href="#default" id="default">#</a></span>
-		</h2><h3 id="default-binaryify-obj-">
+			<span><a class="mark" href="#default" aria-label="Link to this section">#</a></span>
+		</h2><h3 id="default-binaryify-obj">
 			default.binaryify(obj)
-			<span><a class="mark" href="#default-binaryify-obj-" id="default-binaryify-obj-">#</a></span>
+			<span><a class="mark" href="#default-binaryify-obj" aria-label="Link to this section">#</a></span>
 		</h3><p>Convert a JSON object to binary format.</p>
+<pre class="api-signature sh_none"><code>binaryify(obj: any): <a class="api-type" href="buffer.html#buffer">Buffer</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>obj</code>: <code>any</code> - The object to convert.</li>
-<li><code>@return</code> <a href="buffer.html#buffer"><code>Buffer</code></a>  - The binary representation of the object.</li>
+<li><code>obj</code> — - The object to convert.</li>
 </ul>
+<p><strong>Returns:</strong>  - The binary representation of the object.</p>
 <p>For example:</p>
 <pre><code class="undefinedts">const jsonb = require(&#39;quark/jsonb&#39;);
 const binaryData = jsonb.binaryify({ key: &#39;value&#39; });
@@ -162,14 +153,18 @@ console.log(binaryData); // Outputs the binary data.
 <ul>
 <li><code>@throws</code> {Error} - If the object cannot be serialized.</li>
 </ul>
-<h3 id="default-parse-buf-">
+<h3 id="default-parse-buf">
 			default.parse(buf)
-			<span><a class="mark" href="#default-parse-buf-" id="default-parse-buf-">#</a></span>
+			<span><a class="mark" href="#default-parse-buf" aria-label="Link to this section">#</a></span>
 		</h3><p>Parse a binary buffer back to a JSON object.</p>
+<pre class="api-signature sh_none"><code>parse(buf: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): any</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>buf</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> - The binary data to parse.</li>
-<li><code>@return</code> <code>any</code>  - The parsed JSON object.</li>
+<li><code>buf</code> — - The binary data to parse.</li>
 </ul>
+<p><strong>Returns:</strong>  - The parsed JSON object.</p>
 <p>For example:</p>
 <pre><code class="undefinedts">const jsonb = require(&#39;quark/jsonb&#39;);
 const jsonData = jsonb.parse(binaryData);
@@ -185,19 +180,28 @@ console.log(jsonData); // Outputs the original JSON object.
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'jsonb.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

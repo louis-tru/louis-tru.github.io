@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'docs/guides/README.html';
-		var relative = '../../';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="../../assets/style.css">
+	<link rel="stylesheet" href="../../assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,29 +102,34 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-guides">Quark guides</a></span>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-guides">
 			Quark guides
-			<span><a class="mark" href="#quark-guides" id="quark-guides">#</a></span>
+			<span><a class="mark" href="#quark-guides" aria-label="Link to this section">#</a></span>
 		</h1><p><a href="README-cn.html">中文</a> · <a href="../../README.html">Back to project README</a> · <a href="https://quarks.cc/doc/">API index</a></p>
-<p>These guides explain how to use Quark features in application code. They<br/>complement the generated API reference, which documents individual modules,<br/>classes, properties, and methods.</p>
+<p>These guides explain how to use Quark features in application code. They
+complement the generated API reference, which documents individual modules,
+classes, properties, and methods.</p>
 <ul>
-<li><a href="VIEW_STYLE.html">View layout and styles</a>: the public View hierarchy, JSX<br/>layout, class selectors, pseudo states, and style transitions.</li>
-<li><a href="ACTIONS.html">Actions and keyframes</a>: action composition, keyframe animation,<br/>playback control, and action events.</li>
+<li><a href="VIEW_STYLE.html">View layout and styles</a>: the public View hierarchy, JSX
+layout, class selectors, pseudo states, and style transitions.</li>
+<li><a href="ACTIONS.html">Actions and keyframes</a>: action composition, keyframe animation,
+playback control, and action events.</li>
 </ul>
-<p>Every guide has an English file and a Chinese <code>-cn.md</code> counterpart. The API<br/>documentation generator publishes this directory together with the generated<br/>module reference.</p>
+<p>Every guide has an English file and a Chinese <code>-cn.md</code> counterpart. The API
+documentation generator publishes this directory together with the generated
+module reference.</p>
 
 			</div>
 
@@ -144,19 +137,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="../../assets/sh_main.js"></script>
+	<script src="../../assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'docs/guides/README.html';
+		var relative = '../../';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

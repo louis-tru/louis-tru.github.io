@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'fs.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-fs">quark/fs</a></span>
@@ -166,70 +153,70 @@
 <span><a href="#filestat">FileStat</a></span>
 </li>
 <li>
-<span><a href="#filestat-isvalid-">filestat.isValid()</a></span>
+<span><a href="#filestat-isvalid">filestat.isValid()</a></span>
 </li>
 <li>
-<span><a href="#filestat-isfile-">filestat.isFile()</a></span>
+<span><a href="#filestat-isfile">filestat.isFile()</a></span>
 </li>
 <li>
-<span><a href="#filestat-isdir-">filestat.isDir()</a></span>
+<span><a href="#filestat-isdir">filestat.isDir()</a></span>
 </li>
 <li>
-<span><a href="#filestat-islink-">filestat.isLink()</a></span>
+<span><a href="#filestat-islink">filestat.isLink()</a></span>
 </li>
 <li>
-<span><a href="#filestat-issock-">filestat.isSock()</a></span>
+<span><a href="#filestat-issock">filestat.isSock()</a></span>
 </li>
 <li>
-<span><a href="#filestat-mode-">filestat.mode()</a></span>
+<span><a href="#filestat-mode">filestat.mode()</a></span>
 </li>
 <li>
-<span><a href="#filestat-type-">filestat.type()</a></span>
+<span><a href="#filestat-type">filestat.type()</a></span>
 </li>
 <li>
-<span><a href="#filestat-group-">filestat.group()</a></span>
+<span><a href="#filestat-group">filestat.group()</a></span>
 </li>
 <li>
-<span><a href="#filestat-owner-">filestat.owner()</a></span>
+<span><a href="#filestat-owner">filestat.owner()</a></span>
 </li>
 <li>
-<span><a href="#filestat-size-">filestat.size()</a></span>
+<span><a href="#filestat-size">filestat.size()</a></span>
 </li>
 <li>
-<span><a href="#filestat-nlink-">filestat.nlink()</a></span>
+<span><a href="#filestat-nlink">filestat.nlink()</a></span>
 </li>
 <li>
-<span><a href="#filestat-ino-">filestat.ino()</a></span>
+<span><a href="#filestat-ino">filestat.ino()</a></span>
 </li>
 <li>
-<span><a href="#filestat-blksize-">filestat.blksize()</a></span>
+<span><a href="#filestat-blksize">filestat.blksize()</a></span>
 </li>
 <li>
-<span><a href="#filestat-blocks-">filestat.blocks()</a></span>
+<span><a href="#filestat-blocks">filestat.blocks()</a></span>
 </li>
 <li>
-<span><a href="#filestat-flags-">filestat.flags()</a></span>
+<span><a href="#filestat-flags">filestat.flags()</a></span>
 </li>
 <li>
-<span><a href="#filestat-gen-">filestat.gen()</a></span>
+<span><a href="#filestat-gen">filestat.gen()</a></span>
 </li>
 <li>
-<span><a href="#filestat-dev-">filestat.dev()</a></span>
+<span><a href="#filestat-dev">filestat.dev()</a></span>
 </li>
 <li>
-<span><a href="#filestat-rdev-">filestat.rdev()</a></span>
+<span><a href="#filestat-rdev">filestat.rdev()</a></span>
 </li>
 <li>
-<span><a href="#filestat-atime-">filestat.atime()</a></span>
+<span><a href="#filestat-atime">filestat.atime()</a></span>
 </li>
 <li>
-<span><a href="#filestat-mtime-">filestat.mtime()</a></span>
+<span><a href="#filestat-mtime">filestat.mtime()</a></span>
 </li>
 <li>
-<span><a href="#filestat-ctime-">filestat.ctime()</a></span>
+<span><a href="#filestat-ctime">filestat.ctime()</a></span>
 </li>
 <li>
-<span><a href="#filestat-birthtime-">filestat.birthtime()</a></span>
+<span><a href="#filestat-birthtime">filestat.birthtime()</a></span>
 </li>
 </ul>
 <li>
@@ -239,10 +226,10 @@
 <span><a href="#stream">Stream</a></span>
 </li>
 <li>
-<span><a href="#stream-pause-">stream.pause()</a></span>
+<span><a href="#stream-pause">stream.pause()</a></span>
 </li>
 <li>
-<span><a href="#stream-resume-">stream.resume()</a></span>
+<span><a href="#stream-resume">stream.resume()</a></span>
 </li>
 </ul>
 <li>
@@ -277,200 +264,200 @@
 <span><a href="#asynctask-complete">asynctask.complete</a></span>
 </li>
 <li>
-<span><a href="#asynctask-abort-reason-">asynctask.abort(reason?)</a></span>
+<span><a href="#asynctask-abort-reason">asynctask.abort(reason?)</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#chmodsync-path-mode-">chmodSync(path,mode?)</a></span>
+<span><a href="#chmodsync-path-mode">chmodSync(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#chownsync-path-owner-group-">chownSync(path,owner,group)</a></span>
+<span><a href="#chownsync-path-owner-group">chownSync(path,owner,group)</a></span>
 </li>
 <li>
-<span><a href="#mkdirsync-path-mode-">mkdirSync(path,mode?)</a></span>
+<span><a href="#mkdirsync-path-mode">mkdirSync(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#mkdirssync-path-mode-">mkdirsSync(path,mode?)</a></span>
+<span><a href="#mkdirssync-path-mode">mkdirsSync(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#renamesync-name-newname-">renameSync(name,newName)</a></span>
+<span><a href="#renamesync-name-newname">renameSync(name,newName)</a></span>
 </li>
 <li>
-<span><a href="#linksync-src-target-">linkSync(src,target)</a></span>
+<span><a href="#linksync-src-target">linkSync(src,target)</a></span>
 </li>
 <li>
-<span><a href="#unlinksync-path-">unlinkSync(path)</a></span>
+<span><a href="#unlinksync-path">unlinkSync(path)</a></span>
 </li>
 <li>
-<span><a href="#rmdirsync-path-">rmdirSync(path)</a></span>
+<span><a href="#rmdirsync-path">rmdirSync(path)</a></span>
 </li>
 <li>
-<span><a href="#readdirsync-path-">readdirSync(path)</a></span>
+<span><a href="#readdirsync-path">readdirSync(path)</a></span>
 </li>
 <li>
-<span><a href="#statsync-path-">statSync(path)</a></span>
+<span><a href="#statsync-path">statSync(path)</a></span>
 </li>
 <li>
-<span><a href="#existssync-path-">existsSync(path)</a></span>
+<span><a href="#existssync-path">existsSync(path)</a></span>
 </li>
 <li>
-<span><a href="#isfilesync-path-">isFileSync(path)</a></span>
+<span><a href="#isfilesync-path">isFileSync(path)</a></span>
 </li>
 <li>
-<span><a href="#isdirectorysync-path-">isDirectorySync(path)</a></span>
+<span><a href="#isdirectorysync-path">isDirectorySync(path)</a></span>
 </li>
 <li>
-<span><a href="#readablesync-path-">readableSync(path)</a></span>
+<span><a href="#readablesync-path">readableSync(path)</a></span>
 </li>
 <li>
-<span><a href="#writablesync-path-">writableSync(path)</a></span>
+<span><a href="#writablesync-path">writableSync(path)</a></span>
 </li>
 <li>
-<span><a href="#executablesync-path-">executableSync(path)</a></span>
+<span><a href="#executablesync-path">executableSync(path)</a></span>
 </li>
 <li>
-<span><a href="#chmodrecursionsync-path-mode-">chmodRecursionSync(path,mode?)</a></span>
+<span><a href="#chmodrecursionsync-path-mode">chmodRecursionSync(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#chownrecursionsync-path-owner-group-">chownRecursionSync(path,owner,group)</a></span>
+<span><a href="#chownrecursionsync-path-owner-group">chownRecursionSync(path,owner,group)</a></span>
 </li>
 <li>
-<span><a href="#removerecursionsync-path-">removeRecursionSync(path)</a></span>
+<span><a href="#removerecursionsync-path">removeRecursionSync(path)</a></span>
 </li>
 <li>
-<span><a href="#copyrecursionsync-path-target-">copyRecursionSync(path,target)</a></span>
+<span><a href="#copyrecursionsync-path-target">copyRecursionSync(path,target)</a></span>
 </li>
 <li>
-<span><a href="#copysync-path-target-">copySync(path,target)</a></span>
+<span><a href="#copysync-path-target">copySync(path,target)</a></span>
 </li>
 <li>
-<span><a href="#writefilesync-path-data-size-">writeFileSync(path,data,size?)</a></span>
+<span><a href="#writefilesync-path-data-size">writeFileSync(path,data,size?)</a></span>
 </li>
 <li>
-<span><a href="#writefilesync-path-data-encoding-">writeFileSync(path,data,encoding?)</a></span>
+<span><a href="#writefilesync-path-data-encoding">writeFileSync(path,data,encoding?)</a></span>
 </li>
 <li>
-<span><a href="#readfilesync-path-">readFileSync(path)</a></span>
+<span><a href="#readfilesync-path">readFileSync(path)</a></span>
 </li>
 <li>
-<span><a href="#readfilesync-path-encoding-">readFileSync(path,encoding)</a></span>
+<span><a href="#readfilesync-path-encoding">readFileSync(path,encoding)</a></span>
 </li>
 <li>
-<span><a href="#opensync-path-flags-">openSync(path,flags?)</a></span>
+<span><a href="#opensync-path-flags">openSync(path,flags?)</a></span>
 </li>
 <li>
-<span><a href="#closesync-fd-">closeSync(fd)</a></span>
+<span><a href="#closesync-fd">closeSync(fd)</a></span>
 </li>
 <li>
-<span><a href="#readsync-fd-out-size-offsetfd-">readSync(fd,out,size?,offsetFd?)</a></span>
+<span><a href="#readsync-fd-out-size-offsetfd">readSync(fd,out,size?,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#writesync-fd-data-size-offsetfd-">writeSync(fd,data,size?,offsetFd?)</a></span>
+<span><a href="#writesync-fd-data-size-offsetfd">writeSync(fd,data,size?,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#writesync-fd-data-offsetfd-">writeSync(fd,data,offsetFd?)</a></span>
+<span><a href="#writesync-fd-data-offsetfd">writeSync(fd,data,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#writesync-fd-data-encoding-offsetfd-">writeSync(fd,data,encoding,offsetFd?)</a></span>
+<span><a href="#writesync-fd-data-encoding-offsetfd">writeSync(fd,data,encoding,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#chmod-path-mode-">chmod(path,mode?)</a></span>
+<span><a href="#chmod-path-mode">chmod(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#chown-path-owner-group-">chown(path,owner,group)</a></span>
+<span><a href="#chown-path-owner-group">chown(path,owner,group)</a></span>
 </li>
 <li>
-<span><a href="#chmod-path-mode-">chmod(path,mode?)</a></span>
+<span><a href="#chmod-path-mode-2">chmod(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#mkdirs-path-mode-">mkdirs(path,mode?)</a></span>
+<span><a href="#mkdirs-path-mode">mkdirs(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#rename-name-newname-">rename(name,newName)</a></span>
+<span><a href="#rename-name-newname">rename(name,newName)</a></span>
 </li>
 <li>
-<span><a href="#link-src-target-">link(src,target)</a></span>
+<span><a href="#link-src-target">link(src,target)</a></span>
 </li>
 <li>
-<span><a href="#unlink-path-">unlink(path)</a></span>
+<span><a href="#unlink-path">unlink(path)</a></span>
 </li>
 <li>
-<span><a href="#rmdir-path-">rmdir(path)</a></span>
+<span><a href="#rmdir-path">rmdir(path)</a></span>
 </li>
 <li>
-<span><a href="#readdir-path-">readdir(path)</a></span>
+<span><a href="#readdir-path">readdir(path)</a></span>
 </li>
 <li>
-<span><a href="#stat-path-">stat(path)</a></span>
+<span><a href="#stat-path">stat(path)</a></span>
 </li>
 <li>
-<span><a href="#exists-path-">exists(path)</a></span>
+<span><a href="#exists-path">exists(path)</a></span>
 </li>
 <li>
-<span><a href="#isfile-path-">isFile(path)</a></span>
+<span><a href="#isfile-path">isFile(path)</a></span>
 </li>
 <li>
-<span><a href="#isdirectory-path-">isDirectory(path)</a></span>
+<span><a href="#isdirectory-path">isDirectory(path)</a></span>
 </li>
 <li>
-<span><a href="#readable-path-">readable(path)</a></span>
+<span><a href="#readable-path">readable(path)</a></span>
 </li>
 <li>
-<span><a href="#writable-path-">writable(path)</a></span>
+<span><a href="#writable-path">writable(path)</a></span>
 </li>
 <li>
-<span><a href="#executable-path-">executable(path)</a></span>
+<span><a href="#executable-path">executable(path)</a></span>
 </li>
 <li>
-<span><a href="#chmodrecursion-path-mode-">chmodRecursion(path,mode?)</a></span>
+<span><a href="#chmodrecursion-path-mode">chmodRecursion(path,mode?)</a></span>
 </li>
 <li>
-<span><a href="#chownrecursion-path-owner-group-">chownRecursion(path,owner,group)</a></span>
+<span><a href="#chownrecursion-path-owner-group">chownRecursion(path,owner,group)</a></span>
 </li>
 <li>
-<span><a href="#removerecursion-path-">removeRecursion(path)</a></span>
+<span><a href="#removerecursion-path">removeRecursion(path)</a></span>
 </li>
 <li>
-<span><a href="#copyrecursion-path-target-">copyRecursion(path,target)</a></span>
+<span><a href="#copyrecursion-path-target">copyRecursion(path,target)</a></span>
 </li>
 <li>
-<span><a href="#copy-path-target-">copy(path,target)</a></span>
+<span><a href="#copy-path-target">copy(path,target)</a></span>
 </li>
 <li>
-<span><a href="#readstream-path-cb-">readStream(path,cb)</a></span>
+<span><a href="#readstream-path-cb">readStream(path,cb)</a></span>
 </li>
 <li>
-<span><a href="#abort-id-">abort(id)</a></span>
+<span><a href="#abort-id">abort(id)</a></span>
 </li>
 <li>
-<span><a href="#writefile-path-data-size-">writeFile(path,data,size?)</a></span>
+<span><a href="#writefile-path-data-size">writeFile(path,data,size?)</a></span>
 </li>
 <li>
-<span><a href="#writefile-path-data-encoding-">writeFile(path,data,encoding?)</a></span>
+<span><a href="#writefile-path-data-encoding">writeFile(path,data,encoding?)</a></span>
 </li>
 <li>
-<span><a href="#readfile-path-">readFile(path)</a></span>
+<span><a href="#readfile-path">readFile(path)</a></span>
 </li>
 <li>
-<span><a href="#readfile-path-encoding-">readFile(path,encoding)</a></span>
+<span><a href="#readfile-path-encoding">readFile(path,encoding)</a></span>
 </li>
 <li>
-<span><a href="#open-path-flags-">open(path,flags?)</a></span>
+<span><a href="#open-path-flags">open(path,flags?)</a></span>
 </li>
 <li>
-<span><a href="#close-fd-">close(fd)</a></span>
+<span><a href="#close-fd">close(fd)</a></span>
 </li>
 <li>
-<span><a href="#read-fd-out-size-offsetfd-">read(fd,out,size?,offsetFd?)</a></span>
+<span><a href="#read-fd-out-size-offsetfd">read(fd,out,size?,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#write-fd-data-size-offsetfd-">write(fd,data,size?,offsetFd?)</a></span>
+<span><a href="#write-fd-data-size-offsetfd">write(fd,data,size?,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#write-fd-data-offsetfd-">write(fd,data,offsetFd?)</a></span>
+<span><a href="#write-fd-data-offsetfd">write(fd,data,offsetFd?)</a></span>
 </li>
 <li>
-<span><a href="#write-fd-data-encoding-offsetfd-">write(fd,data,encoding,offsetFd?)</a></span>
+<span><a href="#write-fd-data-encoding-offsetfd">write(fd,data,encoding,offsetFd?)</a></span>
 </li>
 <li>
 <span><a href="#interface-reader">Interface: Reader</a></span>
@@ -479,57 +466,57 @@
 <span><a href="#reader">Reader</a></span>
 </li>
 <li>
-<span><a href="#reader-readfile-path-">reader.readFile(path)</a></span>
+<span><a href="#reader-readfile-path">reader.readFile(path)</a></span>
 </li>
 <li>
-<span><a href="#reader-readfile-path-encoding-">reader.readFile(path,encoding)</a></span>
+<span><a href="#reader-readfile-path-encoding">reader.readFile(path,encoding)</a></span>
 </li>
 <li>
-<span><a href="#reader-readstream-path-cb-">reader.readStream(path,cb)</a></span>
+<span><a href="#reader-readstream-path-cb">reader.readStream(path,cb)</a></span>
 </li>
 <li>
-<span><a href="#reader-readfilesync-path-">reader.readFileSync(path)</a></span>
+<span><a href="#reader-readfilesync-path">reader.readFileSync(path)</a></span>
 </li>
 <li>
-<span><a href="#reader-readfilesync-path-encoding-">reader.readFileSync(path,encoding)</a></span>
+<span><a href="#reader-readfilesync-path-encoding">reader.readFileSync(path,encoding)</a></span>
 </li>
 <li>
-<span><a href="#reader-existssync-path-">reader.existsSync(path)</a></span>
+<span><a href="#reader-existssync-path">reader.existsSync(path)</a></span>
 </li>
 <li>
-<span><a href="#reader-isfilesync-path-">reader.isFileSync(path)</a></span>
+<span><a href="#reader-isfilesync-path">reader.isFileSync(path)</a></span>
 </li>
 <li>
-<span><a href="#reader-isdirectorysync-path-">reader.isDirectorySync(path)</a></span>
+<span><a href="#reader-isdirectorysync-path">reader.isDirectorySync(path)</a></span>
 </li>
 <li>
-<span><a href="#reader-readdirsync-path-">reader.readdirSync(path)</a></span>
+<span><a href="#reader-readdirsync-path">reader.readdirSync(path)</a></span>
 </li>
 <li>
-<span><a href="#reader-abort-id-">reader.abort(id)</a></span>
+<span><a href="#reader-abort-id">reader.abort(id)</a></span>
 </li>
 <li>
-<span><a href="#reader-clear-">reader.clear()</a></span>
+<span><a href="#reader-clear">reader.clear()</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#reader">reader</a></span>
+<span><a href="#reader-2">reader</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-fs">
 			quark/fs
-			<span><a class="mark" href="#quark-fs" id="quark-fs">#</a></span>
+			<span><a class="mark" href="#quark-fs" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-fileopenflag">
 			Enum: FileOpenFlag
-			<span><a class="mark" href="#enum-fileopenflag" id="enum-fileopenflag">#</a></span>
+			<span><a class="mark" href="#enum-fileopenflag" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="fileopenflag">
 			FileOpenFlag
-			<span><a class="mark" href="#fileopenflag" id="fileopenflag">#</a></span>
+			<span><a class="mark" href="#fileopenflag" aria-label="Link to this section">#</a></span>
 		</h3><p>Opening file Flags</p>
 <ul>
 <li><code>FOPEN_ACCMODE</code>  </li>
@@ -543,18 +530,26 @@
 <li><code>FOPEN_APPEND</code><br>Move the file read cursor to the end if the file exists </li>
 <li><code>FOPEN_NONBLOCK</code><br>Blocking mode, usually using the open function </li>
 <li><code>FOPEN_R</code><br>r, open the file for reading only, the file must exist </li>
-<li><code>FOPEN_W</code><br>w, Open a write-only file. If the file exists, the file length is cleared to zero, that is,<br/>the file content will disappear. If the file does not exist, it will be created. </li>
-<li><code>FOPEN_A</code><br>a, Open a write-only file in append mode. If the file does not exist, it will be created.<br/>If the file exists, the written data will be added to the end of the file, that is, <br/>the original content of the file will be retained.</li>
-<li><code>FOPEN_RP</code><br>r+,<br/>Open a file for reading and writing. The file must exist.</li>
-<li><code>FOPEN_WP</code><br>w+, Open the file for reading and writing. If the file exists,<br/>the file length will be cleared to zero, that is, the file content will disappear.<br/>If the file does not exist, it will be created.</li>
-<li><code>FOPEN_AP</code><br>a+, Open a readable and writable file in append mode. If the file does not exist,<br/>it will be created. If the file exists, the written data will be added to the end of the file,<br/>that is, the original content of the file will be retained.</li>
+<li><code>FOPEN_W</code><br>w, Open a write-only file. If the file exists, the file length is cleared to zero, that is,
+the file content will disappear. If the file does not exist, it will be created. </li>
+<li><code>FOPEN_A</code><br>a, Open a write-only file in append mode. If the file does not exist, it will be created.
+If the file exists, the written data will be added to the end of the file, that is,
+the original content of the file will be retained.</li>
+<li><code>FOPEN_RP</code><br>r+,
+Open a file for reading and writing. The file must exist.</li>
+<li><code>FOPEN_WP</code><br>w+, Open the file for reading and writing. If the file exists,
+the file length will be cleared to zero, that is, the file content will disappear.
+If the file does not exist, it will be created.</li>
+<li><code>FOPEN_AP</code><br>a+, Open a readable and writable file in append mode. If the file does not exist,
+it will be created. If the file exists, the written data will be added to the end of the file,
+that is, the original content of the file will be retained.</li>
 </ul>
 <h2 id="enum-filetype">
 			Enum: FileType
-			<span><a class="mark" href="#enum-filetype" id="enum-filetype">#</a></span>
+			<span><a class="mark" href="#enum-filetype" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="filetype">
 			FileType
-			<span><a class="mark" href="#filetype" id="filetype">#</a></span>
+			<span><a class="mark" href="#filetype" aria-label="Link to this section">#</a></span>
 		</h3><p>File type</p>
 <ul>
 <li><code>FTYPE_UNKNOWN</code><br>Unknown Type </li>
@@ -564,615 +559,681 @@
 <li><code>FTYPE_FIFO</code><br>Named pipes, a special type of file used for interprocess communication (IPC) </li>
 <li><code>FTYPE_SOCKET</code><br>Socket </li>
 <li><code>FTYPE_CHAR</code><br>Unbuffered character devices, such as keyboard and mouse (/dev/input/<em>), terminal (/dev/tty</em>)</li>
-<li><code>FTYPE_BLOCK</code><br>Provides buffered, block-oriented (fixed-size data blocks) I/O access,<br/>such as hard disk drives (/dev/sda, /dev/sda1, /dev/nvme0n1p1)</li>
+<li><code>FTYPE_BLOCK</code><br>Provides buffered, block-oriented (fixed-size data blocks) I/O access,
+such as hard disk drives (/dev/sda, /dev/sda1, /dev/nvme0n1p1)</li>
 </ul>
 <h2 id="defaultmode">
 			defaultMode
-			<span><a class="mark" href="#defaultmode" id="defaultmode">#</a></span>
-		</h2><p>Create and set the default <code>mode</code> value of the file, <br/>which is related to the file&#39;s permissions. This is an <code>int</code> integer type value</p>
-<ul>
-<li><code>@const</code> <code>defaultMode</code>: </li>
-</ul>
+			<span><a class="mark" href="#defaultmode" aria-label="Link to this section">#</a></span>
+		</h2><p>Create and set the default <code>mode</code> value of the file,
+which is related to the file&#39;s permissions. This is an <code>int</code> integer type value</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">const</span> defaultMode</code></pre>
+
+
 <h2 id="streamresponsecallback">
 			StreamResponseCallback
-			<span><a class="mark" href="#streamresponsecallback" id="streamresponsecallback">#</a></span>
+			<span><a class="mark" href="#streamresponsecallback" aria-label="Link to this section">#</a></span>
 		</h2><ul>
 <li><code>@callback</code> <code>StreamResponseCallback(stream)</code> </li>
 <li><code>@param</code> <code>stream</code>:  {StreamResponse}</li>
 </ul>
 <h2 id="interface-dirent">
 			Interface: Dirent
-			<span><a class="mark" href="#interface-dirent" id="interface-dirent">#</a></span>
+			<span><a class="mark" href="#interface-dirent" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="dirent">
 			Dirent
-			<span><a class="mark" href="#dirent" id="dirent">#</a></span>
+			<span><a class="mark" href="#dirent" aria-label="Link to this section">#</a></span>
 		</h3><p>The result returned by calling readdir/readdirSync</p>
 <h3 id="dirent-name">
 			dirent.name
-			<span><a class="mark" href="#dirent-name" id="dirent-name">#</a></span>
+			<span><a class="mark" href="#dirent-name" aria-label="Link to this section">#</a></span>
 		</h3><p>File name </p>
-<ul>
-<li><code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>name: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="dirent-pathname">
 			dirent.pathname
-			<span><a class="mark" href="#dirent-pathname" id="dirent-pathname">#</a></span>
+			<span><a class="mark" href="#dirent-pathname" aria-label="Link to this section">#</a></span>
 		</h3><p>The full path to the file </p>
-<ul>
-<li><code>pathname</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>pathname: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="dirent-type">
 			dirent.type
-			<span><a class="mark" href="#dirent-type" id="dirent-type">#</a></span>
+			<span><a class="mark" href="#dirent-type" aria-label="Link to this section">#</a></span>
 		</h3><p>File Type </p>
-<ul>
-<li><code>type</code>: <a href="#enum-filetype"><code>FileType</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span>: <a class="api-type" href="#enum-filetype">FileType</a></code></pre>
+
+
 <h2 id="class-filestat">
 			Class: FileStat
-			<span><a class="mark" href="#class-filestat" id="class-filestat">#</a></span>
+			<span><a class="mark" href="#class-filestat" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="filestat">
 			FileStat
-			<span><a class="mark" href="#filestat" id="filestat">#</a></span>
-		</h3><h3 id="filestat-isvalid-">
+			<span><a class="mark" href="#filestat" aria-label="Link to this section">#</a></span>
+		</h3><h3 id="filestat-isvalid">
 			filestat.isValid()
-			<span><a class="mark" href="#filestat-isvalid-" id="filestat-isvalid-">#</a></span>
+			<span><a class="mark" href="#filestat-isvalid" aria-label="Link to this section">#</a></span>
 		</h3><p>Is the file valid? </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="filestat-isfile-">
+<pre class="api-signature sh_none"><code>isValid(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="filestat-isfile">
 			filestat.isFile()
-			<span><a class="mark" href="#filestat-isfile-" id="filestat-isfile-">#</a></span>
+			<span><a class="mark" href="#filestat-isfile" aria-label="Link to this section">#</a></span>
 		</h3><p>Is it a normal file? </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="filestat-isdir-">
+<pre class="api-signature sh_none"><code>isFile(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="filestat-isdir">
 			filestat.isDir()
-			<span><a class="mark" href="#filestat-isdir-" id="filestat-isdir-">#</a></span>
+			<span><a class="mark" href="#filestat-isdir" aria-label="Link to this section">#</a></span>
 		</h3><p>Is it a directory? </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="filestat-islink-">
+<pre class="api-signature sh_none"><code>isDir(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="filestat-islink">
 			filestat.isLink()
-			<span><a class="mark" href="#filestat-islink-" id="filestat-islink-">#</a></span>
+			<span><a class="mark" href="#filestat-islink" aria-label="Link to this section">#</a></span>
 		</h3><p>Is it a symbolic link? </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="filestat-issock-">
+<pre class="api-signature sh_none"><code>isLink(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="filestat-issock">
 			filestat.isSock()
-			<span><a class="mark" href="#filestat-issock-" id="filestat-issock-">#</a></span>
+			<span><a class="mark" href="#filestat-issock" aria-label="Link to this section">#</a></span>
 		</h3><p>Is it a socket? </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="filestat-mode-">
+<pre class="api-signature sh_none"><code>isSock(): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="filestat-mode">
 			filestat.mode()
-			<span><a class="mark" href="#filestat-mode-" id="filestat-mode-">#</a></span>
+			<span><a class="mark" href="#filestat-mode" aria-label="Link to this section">#</a></span>
 		</h3><p>File permission mask </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-type-">
+<pre class="api-signature sh_none"><code>mode(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-type">
 			filestat.type()
-			<span><a class="mark" href="#filestat-type-" id="filestat-type-">#</a></span>
+			<span><a class="mark" href="#filestat-type" aria-label="Link to this section">#</a></span>
 		</h3><p>File type </p>
-<ul>
-<li><code>@return</code> <a href="#enum-filetype"><code>FileType</code></a> </li>
-</ul>
-<h3 id="filestat-group-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span>(): <a class="api-type" href="#enum-filetype">FileType</a></code></pre>
+
+
+
+<h3 id="filestat-group">
 			filestat.group()
-			<span><a class="mark" href="#filestat-group-" id="filestat-group-">#</a></span>
+			<span><a class="mark" href="#filestat-group" aria-label="Link to this section">#</a></span>
 		</h3><p>System Group ID </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-owner-">
+<pre class="api-signature sh_none"><code>group(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-owner">
 			filestat.owner()
-			<span><a class="mark" href="#filestat-owner-" id="filestat-owner-">#</a></span>
+			<span><a class="mark" href="#filestat-owner" aria-label="Link to this section">#</a></span>
 		</h3><p>System User ID  </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-size-">
+<pre class="api-signature sh_none"><code>owner(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-size">
 			filestat.size()
-			<span><a class="mark" href="#filestat-size-" id="filestat-size-">#</a></span>
+			<span><a class="mark" href="#filestat-size" aria-label="Link to this section">#</a></span>
 		</h3><p>File size </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-nlink-">
+<pre class="api-signature sh_none"><code>size(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-nlink">
 			filestat.nlink()
-			<span><a class="mark" href="#filestat-nlink-" id="filestat-nlink-">#</a></span>
+			<span><a class="mark" href="#filestat-nlink" aria-label="Link to this section">#</a></span>
 		</h3><p>Number of hard links to the file </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-ino-">
+<pre class="api-signature sh_none"><code>nlink(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-ino">
 			filestat.ino()
-			<span><a class="mark" href="#filestat-ino-" id="filestat-ino-">#</a></span>
+			<span><a class="mark" href="#filestat-ino" aria-label="Link to this section">#</a></span>
 		</h3><p>The file system specific &quot;Inode&quot; number of the file </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-blksize-">
+<pre class="api-signature sh_none"><code>ino(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-blksize">
 			filestat.blksize()
-			<span><a class="mark" href="#filestat-blksize-" id="filestat-blksize-">#</a></span>
+			<span><a class="mark" href="#filestat-blksize" aria-label="Link to this section">#</a></span>
 		</h3><p>The file system block size used for I/O operations </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-blocks-">
+<pre class="api-signature sh_none"><code>blksize(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-blocks">
 			filestat.blocks()
-			<span><a class="mark" href="#filestat-blocks-" id="filestat-blocks-">#</a></span>
+			<span><a class="mark" href="#filestat-blocks" aria-label="Link to this section">#</a></span>
 		</h3><p>The number of blocks allocated for this file </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-flags-">
+<pre class="api-signature sh_none"><code>blocks(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-flags">
 			filestat.flags()
-			<span><a class="mark" href="#filestat-flags-" id="filestat-flags-">#</a></span>
+			<span><a class="mark" href="#filestat-flags" aria-label="Link to this section">#</a></span>
 		</h3><p>flags </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-gen-">
+<pre class="api-signature sh_none"><code>flags(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-gen">
 			filestat.gen()
-			<span><a class="mark" href="#filestat-gen-" id="filestat-gen-">#</a></span>
+			<span><a class="mark" href="#filestat-gen" aria-label="Link to this section">#</a></span>
 		</h3><p>gen </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-dev-">
+<pre class="api-signature sh_none"><code>gen(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-dev">
 			filestat.dev()
-			<span><a class="mark" href="#filestat-dev-" id="filestat-dev-">#</a></span>
+			<span><a class="mark" href="#filestat-dev" aria-label="Link to this section">#</a></span>
 		</h3><p>The device ID that contains the file </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-rdev-">
+<pre class="api-signature sh_none"><code>dev(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-rdev">
 			filestat.rdev()
-			<span><a class="mark" href="#filestat-rdev-" id="filestat-rdev-">#</a></span>
+			<span><a class="mark" href="#filestat-rdev" aria-label="Link to this section">#</a></span>
 		</h3><p>If the file represents a device, the numeric device identifier </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-atime-">
+<pre class="api-signature sh_none"><code>rdev(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-atime">
 			filestat.atime()
-			<span><a class="mark" href="#filestat-atime-" id="filestat-atime-">#</a></span>
+			<span><a class="mark" href="#filestat-atime" aria-label="Link to this section">#</a></span>
 		</h3><p>Timestamp indicating the last time this file was accessed </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-mtime-">
+<pre class="api-signature sh_none"><code>atime(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-mtime">
 			filestat.mtime()
-			<span><a class="mark" href="#filestat-mtime-" id="filestat-mtime-">#</a></span>
+			<span><a class="mark" href="#filestat-mtime" aria-label="Link to this section">#</a></span>
 		</h3><p>A timestamp indicating when this file was last modified </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-ctime-">
+<pre class="api-signature sh_none"><code>mtime(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-ctime">
 			filestat.ctime()
-			<span><a class="mark" href="#filestat-ctime-" id="filestat-ctime-">#</a></span>
+			<span><a class="mark" href="#filestat-ctime" aria-label="Link to this section">#</a></span>
 		</h3><p>Timestamp indicating the last time the file&#39;s status changed </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="filestat-birthtime-">
+<pre class="api-signature sh_none"><code>ctime(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
+<h3 id="filestat-birthtime">
 			filestat.birthtime()
-			<span><a class="mark" href="#filestat-birthtime-" id="filestat-birthtime-">#</a></span>
+			<span><a class="mark" href="#filestat-birthtime" aria-label="Link to this section">#</a></span>
 		</h3><p>A timestamp indicating when this file was created </p>
-<ul>
-<li><code>@return</code> <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>birthtime(): <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+
 <h2 id="interface-stream">
 			Interface: Stream
-			<span><a class="mark" href="#interface-stream" id="interface-stream">#</a></span>
+			<span><a class="mark" href="#interface-stream" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="stream">
 			Stream
-			<span><a class="mark" href="#stream" id="stream">#</a></span>
-		</h3><h3 id="stream-pause-">
+			<span><a class="mark" href="#stream" aria-label="Link to this section">#</a></span>
+		</h3><h3 id="stream-pause">
 			stream.pause()
-			<span><a class="mark" href="#stream-pause-" id="stream-pause-">#</a></span>
+			<span><a class="mark" href="#stream-pause" aria-label="Link to this section">#</a></span>
 		</h3><p>Pause stream reading </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="stream-resume-">
+<pre class="api-signature sh_none"><code>pause(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="stream-resume">
 			stream.resume()
-			<span><a class="mark" href="#stream-resume-" id="stream-resume-">#</a></span>
+			<span><a class="mark" href="#stream-resume" aria-label="Link to this section">#</a></span>
 		</h3><p>Resume stream reading </p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>resume(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
 <h2 id="interface-streamresponse">
 			Interface: StreamResponse
-			<span><a class="mark" href="#interface-streamresponse" id="interface-streamresponse">#</a></span>
+			<span><a class="mark" href="#interface-streamresponse" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="streamresponse">
 			StreamResponse
-			<span><a class="mark" href="#streamresponse" id="streamresponse">#</a></span>
+			<span><a class="mark" href="#streamresponse" aria-label="Link to this section">#</a></span>
 		</h3><h3 id="streamresponse-size">
 			streamresponse.size
-			<span><a class="mark" href="#streamresponse-size" id="streamresponse-size">#</a></span>
+			<span><a class="mark" href="#streamresponse-size" aria-label="Link to this section">#</a></span>
 		</h3><p>Data size </p>
-<ul>
-<li><code>size</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>size: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="streamresponse-total">
 			streamresponse.total
-			<span><a class="mark" href="#streamresponse-total" id="streamresponse-total">#</a></span>
+			<span><a class="mark" href="#streamresponse-total" aria-label="Link to this section">#</a></span>
 		</h3><p>Total data size </p>
-<ul>
-<li><code>total</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>total: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h3 id="streamresponse-data">
 			streamresponse.data
-			<span><a class="mark" href="#streamresponse-data" id="streamresponse-data">#</a></span>
+			<span><a class="mark" href="#streamresponse-data" aria-label="Link to this section">#</a></span>
 		</h3><p>It is Data </p>
-<ul>
-<li><code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code></pre>
+
+
 <h3 id="streamresponse-ended">
 			streamresponse.ended
-			<span><a class="mark" href="#streamresponse-ended" id="streamresponse-ended">#</a></span>
+			<span><a class="mark" href="#streamresponse-ended" aria-label="Link to this section">#</a></span>
 		</h3><p>Is it over </p>
-<ul>
-<li><code>ended</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>ended: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h2 id="class-asynctask">
 			Class: AsyncTask
-			<span><a class="mark" href="#class-asynctask" id="class-asynctask">#</a></span>
+			<span><a class="mark" href="#class-asynctask" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="asynctask">
 			AsyncTask
-			<span><a class="mark" href="#asynctask" id="asynctask">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a></li>
-<li><code>@template</code> &lt;<code>T</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#asynctask" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>
+<strong>Type parameters:</strong> <code>T</code></p>
 <h3 id="asynctask-id">
 			asynctask.id
-			<span><a class="mark" href="#asynctask-id" id="asynctask-id">#</a></span>
+			<span><a class="mark" href="#asynctask-id" aria-label="Link to this section">#</a></span>
 		</h3><p>Asynchronous I/O task id</p>
-<ul>
-<li><code>@get</code> <code>id</code>:  </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> id: </code></pre>
+
+
 <h3 id="asynctask-complete">
 			asynctask.complete
-			<span><a class="mark" href="#asynctask-complete" id="asynctask-complete">#</a></span>
+			<span><a class="mark" href="#asynctask-complete" aria-label="Link to this section">#</a></span>
 		</h3><p>Whether the asynchronous task is completed</p>
-<ul>
-<li><code>@get</code> <code>complete</code>:  </li>
-</ul>
-<h3 id="asynctask-abort-reason-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> complete: </code></pre>
+
+
+<h3 id="asynctask-abort-reason">
 			asynctask.abort(reason?)
-			<span><a class="mark" href="#asynctask-abort-reason-" id="asynctask-abort-reason-">#</a></span>
+			<span><a class="mark" href="#asynctask-abort-reason" aria-label="Link to this section">#</a></span>
 		</h3><p>Abort I/O task</p>
+<pre class="api-signature sh_none"><code>abort(reason?: <a class="api-type" href="$ext.html#error">Error</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>reason?</code>: <a href="$ext.html#error"><code>Error</code></a> If the parameter is passed in, an exception will be thrown</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>reason?</code> — If the parameter is passed in, an exception will be thrown</li>
 </ul>
-<h2 id="chmodsync-path-mode-">
+<h2 id="chmodsync-path-mode">
 			chmodSync(path,mode?)
-			<span><a class="mark" href="#chmodsync-path-mode-" id="chmodsync-path-mode-">#</a></span>
+			<span><a class="mark" href="#chmodsync-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously change file permissions</p>
 <pre><code class="undefinedts">chmodSync(&#39;my_file.txt&#39;, 0o775)
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="chownsync-path-owner-group-">
+<pre class="api-signature sh_none"><code>chmodSync(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="chownsync-path-owner-group">
 			chownSync(path,owner,group)
-			<span><a class="mark" href="#chownsync-path-owner-group-" id="chownsync-path-owner-group-">#</a></span>
+			<span><a class="mark" href="#chownsync-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronize the <code>owner</code> and <code>group</code> of the configuration file</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="mkdirsync-path-mode-">
+<pre class="api-signature sh_none"><code>chownSync(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="mkdirsync-path-mode">
 			mkdirSync(path,mode?)
-			<span><a class="mark" href="#mkdirsync-path-mode-" id="mkdirsync-path-mode-">#</a></span>
+			<span><a class="mark" href="#mkdirsync-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Create a directory synchronously. If the path already exists, an exception will be thrown.</p>
+<pre class="api-signature sh_none"><code>mkdirSync(mode?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>mode?</code> — <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 </ul>
-<h2 id="mkdirssync-path-mode-">
+<h2 id="mkdirssync-path-mode">
 			mkdirsSync(path,mode?)
-			<span><a class="mark" href="#mkdirssync-path-mode-" id="mkdirssync-path-mode-">#</a></span>
-		</h2><p>Synchronously recursively create directories,<br/>and no exception is thrown if the directory exists</p>
+			<span><a class="mark" href="#mkdirssync-path-mode" aria-label="Link to this section">#</a></span>
+		</h2><p>Synchronously recursively create directories,
+and no exception is thrown if the directory exists</p>
+<pre class="api-signature sh_none"><code>mkdirsSync(mode?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>mode?</code> — <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 </ul>
-<h2 id="renamesync-name-newname-">
+<h2 id="renamesync-name-newname">
 			renameSync(name,newName)
-			<span><a class="mark" href="#renamesync-name-newname-" id="renamesync-name-newname-">#</a></span>
+			<span><a class="mark" href="#renamesync-name-newname" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously rename files and directories</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>newName</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="linksync-src-target-">
+<pre class="api-signature sh_none"><code>renameSync(name: <a class="api-type" href="$ext.html#string">string</a>, newName: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="linksync-src-target">
 			linkSync(src,target)
-			<span><a class="mark" href="#linksync-src-target-" id="linksync-src-target-">#</a></span>
+			<span><a class="mark" href="#linksync-src-target" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously create file hard links</p>
+<pre class="api-signature sh_none"><code>linkSync(src: <a class="api-type" href="$ext.html#string">string</a>, target: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>src</code>: <a href="$ext.html#string"><code>string</code></a> Original file path</li>
-<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> Link target path</li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>src</code> — Original file path</li>
+<li><code>target</code> — Link target path</li>
 </ul>
-<h2 id="unlinksync-path-">
+<h2 id="unlinksync-path">
 			unlinkSync(path)
-			<span><a class="mark" href="#unlinksync-path-" id="unlinksync-path-">#</a></span>
-		</h2><p>Synchronously delete the file hard link.<br/>If the file has only one link, the file will be physically deleted.</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="rmdirsync-path-">
+			<span><a class="mark" href="#unlinksync-path" aria-label="Link to this section">#</a></span>
+		</h2><p>Synchronously delete the file hard link.
+If the file has only one link, the file will be physically deleted.</p>
+<pre class="api-signature sh_none"><code>unlinkSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="rmdirsync-path">
 			rmdirSync(path)
-			<span><a class="mark" href="#rmdirsync-path-" id="rmdirsync-path-">#</a></span>
+			<span><a class="mark" href="#rmdirsync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously delete the file directory, the file directory must be empty</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="readdirsync-path-">
+<pre class="api-signature sh_none"><code>rmdirSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="readdirsync-path">
 			readdirSync(path)
-			<span><a class="mark" href="#readdirsync-path-" id="readdirsync-path-">#</a></span>
+			<span><a class="mark" href="#readdirsync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously read the file directory file list</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#interface-dirent"><code>Dirent</code></a><code>[]</code> </li>
-</ul>
-<h2 id="statsync-path-">
+<pre class="api-signature sh_none"><code>readdirSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#interface-dirent">Dirent</a>[]</code></pre>
+
+
+
+<h2 id="statsync-path">
 			statSync(path)
-			<span><a class="mark" href="#statsync-path-" id="statsync-path-">#</a></span>
+			<span><a class="mark" href="#statsync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously read file status information</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-filestat"><code>FileStat</code></a> </li>
-</ul>
-<h2 id="existssync-path-">
+<pre class="api-signature sh_none"><code>statSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#class-filestat">FileStat</a></code></pre>
+
+
+
+<h2 id="existssync-path">
 			existsSync(path)
-			<span><a class="mark" href="#existssync-path-" id="existssync-path-">#</a></span>
+			<span><a class="mark" href="#existssync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously check if a file exists</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="isfilesync-path-">
+<pre class="api-signature sh_none"><code>existsSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="isfilesync-path">
 			isFileSync(path)
-			<span><a class="mark" href="#isfilesync-path-" id="isfilesync-path-">#</a></span>
+			<span><a class="mark" href="#isfilesync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously checks if the path is a file, and returns <code>false</code> if the path does not exist</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="isdirectorysync-path-">
+<pre class="api-signature sh_none"><code>isFileSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="isdirectorysync-path">
 			isDirectorySync(path)
-			<span><a class="mark" href="#isdirectorysync-path-" id="isdirectorysync-path-">#</a></span>
+			<span><a class="mark" href="#isdirectorysync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously checks if the path is a directory, and returns <code>false</code> if the path does not exist</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="readablesync-path-">
+<pre class="api-signature sh_none"><code>isDirectorySync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="readablesync-path">
 			readableSync(path)
-			<span><a class="mark" href="#readablesync-path-" id="readablesync-path-">#</a></span>
+			<span><a class="mark" href="#readablesync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously checks if the path is readable, returning <code>false</code> if the path does not exist</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="writablesync-path-">
+<pre class="api-signature sh_none"><code>readableSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="writablesync-path">
 			writableSync(path)
-			<span><a class="mark" href="#writablesync-path-" id="writablesync-path-">#</a></span>
+			<span><a class="mark" href="#writablesync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously checks if the path is writable, returning <code>false</code> if the path does not exist</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="executablesync-path-">
+<pre class="api-signature sh_none"><code>writableSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="executablesync-path">
 			executableSync(path)
-			<span><a class="mark" href="#executablesync-path-" id="executablesync-path-">#</a></span>
+			<span><a class="mark" href="#executablesync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously checks if it is executable, returns <code>false</code> if the path does not exist</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h2 id="chmodrecursionsync-path-mode-">
+<pre class="api-signature sh_none"><code>executableSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h2 id="chmodrecursionsync-path-mode">
 			chmodRecursionSync(path,mode?)
-			<span><a class="mark" href="#chmodrecursionsync-path-mode-" id="chmodrecursionsync-path-mode-">#</a></span>
-		</h2><p>Synchronously recursively set the file permission attribute mode<br/>(TODO: will block the calling thread, please use with caution)</p>
+			<span><a class="mark" href="#chmodrecursionsync-path-mode" aria-label="Link to this section">#</a></span>
+		</h2><p>Synchronously recursively set the file permission attribute mode
+(TODO: will block the calling thread, please use with caution)</p>
+<pre class="api-signature sh_none"><code>chmodRecursionSync(mode?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
+<li><code>mode?</code> — <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">fs.chmodRecursionSync(mypath, 0755);
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="chownrecursionsync-path-owner-group-">
+<h2 id="chownrecursionsync-path-owner-group">
 			chownRecursionSync(path,owner,group)
-			<span><a class="mark" href="#chownrecursionsync-path-owner-group-" id="chownrecursionsync-path-owner-group-">#</a></span>
-		</h2><p>Synchronously recursively set file <code>owner</code> and <code>group</code> attributes<br/>(TODO: will block the calling thread, please use with caution)</p>
+			<span><a class="mark" href="#chownrecursionsync-path-owner-group" aria-label="Link to this section">#</a></span>
+		</h2><p>Synchronously recursively set file <code>owner</code> and <code>group</code> attributes
+(TODO: will block the calling thread, please use with caution)</p>
+<pre class="api-signature sh_none"><code>chownRecursionSync(owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> System User ID</li>
-<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> System Group ID</li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
+<li><code>owner</code> — System User ID</li>
+<li><code>group</code> — System Group ID</li>
 </ul>
-<h2 id="removerecursionsync-path-">
+<h2 id="removerecursionsync-path">
 			removeRecursionSync(path)
-			<span><a class="mark" href="#removerecursionsync-path-" id="removerecursionsync-path-">#</a></span>
-		</h2><p>Synchronous recursive deletion of directories or files,<br/>use this method with caution, it may cause the thread to be blocked for a long time</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="copyrecursionsync-path-target-">
+			<span><a class="mark" href="#removerecursionsync-path" aria-label="Link to this section">#</a></span>
+		</h2><p>Synchronous recursive deletion of directories or files,
+use this method with caution, it may cause the thread to be blocked for a long time</p>
+<pre class="api-signature sh_none"><code>removeRecursionSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="copyrecursionsync-path-target">
 			copyRecursionSync(path,target)
-			<span><a class="mark" href="#copyrecursionsync-path-target-" id="copyrecursionsync-path-target-">#</a></span>
-		</h2><p>Synchronous recursive copy of files,<br/>use this method with caution, it may cause the thread to be blocked for a long time</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="copysync-path-target-">
+			<span><a class="mark" href="#copyrecursionsync-path-target" aria-label="Link to this section">#</a></span>
+		</h2><p>Synchronous recursive copy of files,
+use this method with caution, it may cause the thread to be blocked for a long time</p>
+<pre class="api-signature sh_none"><code>copyRecursionSync(path: <a class="api-type" href="$ext.html#string">string</a>, target: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="copysync-path-target">
 			copySync(path,target)
-			<span><a class="mark" href="#copysync-path-target-" id="copysync-path-target-">#</a></span>
-		</h2><p>Copy files synchronously (TODO: will block the calling thread, please use with caution)<br/>Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><code>copyRecursionSync(path,target)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="writefilesync-path-data-size-">
+			<span><a class="mark" href="#copysync-path-target" aria-label="Link to this section">#</a></span>
+		</h2><p>Copy files synchronously (TODO: will block the calling thread, please use with caution)
+Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><code>copyRecursionSync(path,target)</code></a></p>
+<pre class="api-signature sh_none"><code>copySync(path: <a class="api-type" href="$ext.html#string">string</a>, target: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="writefilesync-path-data-size">
 			writeFileSync(path,data,size?)
-			<span><a class="mark" href="#writefilesync-path-data-size-" id="writefilesync-path-data-size-">#</a></span>
+			<span><a class="mark" href="#writefilesync-path-data-size" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write data to a file</p>
+<pre class="api-signature sh_none"><code>writeFileSync(size?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>size?</code>: <a href="numbers.html#uint"><code>Uint</code></a> Write all data when no parameters are passed</li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>size?</code> — Write all data when no parameters are passed</li>
 </ul>
-<h2 id="writefilesync-path-data-encoding-">
+<h2 id="writefilesync-path-data-encoding">
 			writeFileSync(path,data,encoding?)
-			<span><a class="mark" href="#writefilesync-path-data-encoding-" id="writefilesync-path-data-encoding-">#</a></span>
+			<span><a class="mark" href="#writefilesync-path-data-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write a string to a file</p>
+<pre class="api-signature sh_none"><code>writeFileSync(encoding?: <a class="api-type" href="buffer.html#encoding">Encoding</a>, path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>encoding?</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> If not passed in, the default encoding is <code>utf-8</code></li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>encoding?</code> — If not passed in, the default encoding is <code>utf-8</code></li>
 </ul>
-<h2 id="readfilesync-path-">
+<h2 id="readfilesync-path">
 			readFileSync(path)
-			<span><a class="mark" href="#readfilesync-path-" id="readfilesync-path-">#</a></span>
+			<span><a class="mark" href="#readfilesync-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Reading files synchronously</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-</ul>
-<h2 id="readfilesync-path-encoding-">
+<pre class="api-signature sh_none"><code>readFileSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code></pre>
+
+
+
+<h2 id="readfilesync-path-encoding">
 			readFileSync(path,encoding)
-			<span><a class="mark" href="#readfilesync-path-encoding-" id="readfilesync-path-encoding-">#</a></span>
+			<span><a class="mark" href="#readfilesync-path-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously read a file as a string</p>
+<pre class="api-signature sh_none"><code>readFileSync(encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> Decode data to string encoding</li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
+<li><code>encoding</code> — Decode data to string encoding</li>
 </ul>
-<h2 id="opensync-path-flags-">
+<h2 id="opensync-path-flags">
 			openSync(path,flags?)
-			<span><a class="mark" href="#opensync-path-flags-" id="opensync-path-flags-">#</a></span>
+			<span><a class="mark" href="#opensync-path-flags" aria-label="Link to this section">#</a></span>
 		</h2><p>Opens a file by path synchronously and returns an open file handle</p>
+<pre class="api-signature sh_none"><code>openSync(flags?: <a class="api-type" href="#enum-fileopenflag">FileOpenFlag</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>flags?</code>: <a href="#enum-fileopenflag"><code>FileOpenFlag</code></a> Open file flags mask <strong>Default</strong> as FileOpenFlag.FOPEN_R</li>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
+<li><code>flags?</code> — Open file flags mask <strong>Default</strong> as FileOpenFlag.FOPEN_R</li>
 </ul>
-<h2 id="closesync-fd-">
+<h2 id="closesync-fd">
 			closeSync(fd)
-			<span><a class="mark" href="#closesync-fd-" id="closesync-fd-">#</a></span>
+			<span><a class="mark" href="#closesync-fd" aria-label="Link to this section">#</a></span>
 		</h2><p>Close the file handle synchronously</p>
-<ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="readsync-fd-out-size-offsetfd-">
+<pre class="api-signature sh_none"><code>closeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="readsync-fd-out-size-offsetfd">
 			readSync(fd,out,size?,offsetFd?)
-			<span><a class="mark" href="#readsync-fd-out-size-offsetfd-" id="readsync-fd-out-size-offsetfd-">#</a></span>
+			<span><a class="mark" href="#readsync-fd-out-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously read the file contents from the file handle</p>
+<pre class="api-signature sh_none"><code>readSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, out: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
-<li><code>@param</code> <code>out</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> Read the file and save it here</li>
-<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or passed in <code>-1</code>, the length of the <code>out</code> parameter is used</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or -1 is passed,<br/>  the internal offset value of the file handle is used (it will advance after each read)</li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> Returns the size of the data actually read</li>
+<li><code>fd</code> — Open file handles</li>
+<li><code>out</code> — Read the file and save it here</li>
+<li><code>size?</code> — If not passed or passed in <code>-1</code>, the length of the <code>out</code> parameter is used</li>
+<li><code>offsetFd?</code> — If not passed or -1 is passed,
+  the internal offset value of the file handle is used (it will advance after each read)</li>
 </ul>
-<h2 id="writesync-fd-data-size-offsetfd-">
+<p><strong>Returns:</strong> Returns the size of the data actually read</p>
+<h2 id="writesync-fd-data-size-offsetfd">
 			writeSync(fd,data,size?,offsetFd?)
-			<span><a class="mark" href="#writesync-fd-data-size-offsetfd-" id="writesync-fd-data-size-offsetfd-">#</a></span>
+			<span><a class="mark" href="#writesync-fd-data-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write data to a file handle</p>
+<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
-<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> Data to be written</li>
-<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, all data will be written</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+<li><code>fd</code> — Open file handles</li>
+<li><code>data</code> — Data to be written</li>
+<li><code>size?</code> — If not passed or <code>-1</code> is passed, all data will be written</li>
+<li><code>offsetFd?</code> — If not passed or <code>-1</code> is passed, the internal offset value of
+  the file handle is used (it will advance after each write)</li>
 </ul>
-<h2 id="writesync-fd-data-offsetfd-">
+<p><strong>Returns:</strong> The actual size of the data written</p>
+<h2 id="writesync-fd-data-offsetfd">
 			writeSync(fd,data,offsetFd?)
-			<span><a class="mark" href="#writesync-fd-data-offsetfd-" id="writesync-fd-data-offsetfd-">#</a></span>
+			<span><a class="mark" href="#writesync-fd-data-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Write data to the file handle synchronously and encode the data using <code>utf-8</code></p>
+<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> The string to be written</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+<li><code>fd</code> — Open file handles</li>
+<li><code>data</code> — The string to be written</li>
+<li><code>offsetFd?</code> — If not passed or <code>-1</code> is passed, the internal offset value of
+  the file handle is used (it will advance after each write)</li>
 </ul>
-<h2 id="writesync-fd-data-encoding-offsetfd-">
+<p><strong>Returns:</strong> The actual size of the data written</p>
+<h2 id="writesync-fd-data-encoding-offsetfd">
 			writeSync(fd,data,encoding,offsetFd?)
-			<span><a class="mark" href="#writesync-fd-data-encoding-offsetfd-" id="writesync-fd-data-encoding-offsetfd-">#</a></span>
+			<span><a class="mark" href="#writesync-fd-data-encoding-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write data to a file handle</p>
+<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> Open file handles</li>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> Data to be written</li>
-<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> Encoding Type</li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> If not passed or <code>-1</code> is passed, the internal offset value of <br/>  the file handle is used (it will advance after each write)</li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> The actual size of the data written</li>
+<li><code>fd</code> — Open file handles</li>
+<li><code>data</code> — Data to be written</li>
+<li><code>encoding</code> — Encoding Type</li>
+<li><code>offsetFd?</code> — If not passed or <code>-1</code> is passed, the internal offset value of
+  the file handle is used (it will advance after each write)</li>
 </ul>
-<h2 id="chmod-path-mode-">
+<p><strong>Returns:</strong> The actual size of the data written</p>
+<h2 id="chmod-path-mode">
 			chmod(path,mode?)
-			<span><a class="mark" href="#chmod-path-mode-" id="chmod-path-mode-">#</a></span>
+			<span><a class="mark" href="#chmod-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#chmodsync-path-mode-"><code>chmodSync(path,mode?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h2 id="chown-path-owner-group-">
+<pre class="api-signature sh_none"><code>chmod(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
+<h2 id="chown-path-owner-group">
 			chown(path,owner,group)
-			<span><a class="mark" href="#chown-path-owner-group-" id="chown-path-owner-group-">#</a></span>
+			<span><a class="mark" href="#chown-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#chownsync-path-owner-group-"><code>chownSync(path,owner,group)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h2 id="chmod-path-mode-">
+<pre class="api-signature sh_none"><code>chown(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
+<h2 id="chmod-path-mode-2">
 			chmod(path,mode?)
-			<span><a class="mark" href="#chmod-path-mode-" id="chmod-path-mode-">#</a></span>
+			<span><a class="mark" href="#chmod-path-mode-2" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#mkdirsync-path-mode-"><code>mkdirSync(path,mode?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h2 id="mkdirs-path-mode-">
+<pre class="api-signature sh_none"><code>chmod(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
+<h2 id="mkdirs-path-mode">
 			mkdirs(path,mode?)
-			<span><a class="mark" href="#mkdirs-path-mode-" id="mkdirs-path-mode-">#</a></span>
-		</h2><p>Recursively create directories. This method will create <br/>    a directory tree in sequence, and will not throw an exception if the directory exists.</p>
+			<span><a class="mark" href="#mkdirs-path-mode" aria-label="Link to this section">#</a></span>
+		</h2><p>Recursively create directories. This method will create
+    a directory tree in sequence, and will not throw an exception if the directory exists.</p>
 <p>Ref: sync method [<code>mkdirsSync(path[,mode])</code>]</p>
+<pre class="api-signature sh_none"><code>mkdirs(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>  </li>
+<li><code>mode?</code> — <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 </ul>
+<p><strong>Returns:</strong>  </p>
 <p>For example:</p>
 <pre><code class="undefinedts">fs.mkdirs(mypath).then(()=&gt;{
     // Success
@@ -1180,40 +1241,47 @@
     // Fail
 });
 </code></pre>
-<h2 id="rename-name-newname-">
+<h2 id="rename-name-newname">
 			rename(name,newName)
-			<span><a class="mark" href="#rename-name-newname-" id="rename-name-newname-">#</a></span>
+			<span><a class="mark" href="#rename-name-newname" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#renamesync-name-newname-"><code>renameSync(name,newName)</code></a></p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>newName</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="link-src-target-">
+<pre class="api-signature sh_none"><code>rename(name: <a class="api-type" href="$ext.html#string">string</a>, newName: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+<h2 id="link-src-target">
 			link(src,target)
-			<span><a class="mark" href="#link-src-target-" id="link-src-target-">#</a></span>
+			<span><a class="mark" href="#link-src-target" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#linksync-src-target-"><code>linkSync(src,target)</code></a></p>
-<ul>
-<li><code>@param</code> <code>src</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="unlink-path-">
+<pre class="api-signature sh_none"><code>link(src: <a class="api-type" href="$ext.html#string">string</a>, target: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+<h2 id="unlink-path">
 			unlink(path)
-			<span><a class="mark" href="#unlink-path-" id="unlink-path-">#</a></span>
+			<span><a class="mark" href="#unlink-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#unlinksync-path-"><code>unlinkSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="rmdir-path-">
+<pre class="api-signature sh_none"><code>unlink(path: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+<h2 id="rmdir-path">
 			rmdir(path)
-			<span><a class="mark" href="#rmdir-path-" id="rmdir-path-">#</a></span>
+			<span><a class="mark" href="#rmdir-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#rmdirsync-path-"><code>rmdirSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h2 id="readdir-path-">
+<pre class="api-signature sh_none"><code>rmdir(path: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
+
+<h2 id="readdir-path">
 			readdir(path)
-			<span><a class="mark" href="#readdir-path-" id="readdir-path-">#</a></span>
-		</h2><p>Read directory listing information. Throws an exception if failed. <br/>    Returns an <a href="$ext.html#array"><code>Array</code></a> of <a href="#interface-dirent"><code>Dirent</code></a> if successful.</p>
+			<span><a class="mark" href="#readdir-path" aria-label="Link to this section">#</a></span>
+		</h2><p>Read directory listing information. Throws an exception if failed.
+    Returns an <a href="$ext.html#array"><code>Array</code></a> of <a href="#interface-dirent"><code>Dirent</code></a> if successful.</p>
+<pre class="api-signature sh_none"><code>readdir(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="#interface-dirent">Dirent</a>[]&gt;</code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">// Prints:
 // {
@@ -1230,75 +1298,74 @@ fs.readdir(mydir).then(dirents=&gt;{
     // Fail
 });
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="#interface-dirent"><code>Dirent</code></a><code>[]</code>&gt; </li>
-</ul>
-<h2 id="stat-path-">
+<h2 id="stat-path">
 			stat(path)
-			<span><a class="mark" href="#stat-path-" id="stat-path-">#</a></span>
+			<span><a class="mark" href="#stat-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#statsync-path-"><code>statSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="#class-filestat"><code>FileStat</code></a>&gt; </li>
-</ul>
-<h2 id="exists-path-">
+<pre class="api-signature sh_none"><code>stat(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="#class-filestat">FileStat</a>&gt;</code></pre>
+
+
+
+<h2 id="exists-path">
 			exists(path)
-			<span><a class="mark" href="#exists-path-" id="exists-path-">#</a></span>
+			<span><a class="mark" href="#exists-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#existssync-path-"><code>existsSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
-</ul>
-<h2 id="isfile-path-">
+<pre class="api-signature sh_none"><code>exists(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#boolean">boolean</a>&gt;</code></pre>
+
+
+
+<h2 id="isfile-path">
 			isFile(path)
-			<span><a class="mark" href="#isfile-path-" id="isfile-path-">#</a></span>
+			<span><a class="mark" href="#isfile-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#isfilesync-path-"><code>isFileSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
-</ul>
-<h2 id="isdirectory-path-">
+<pre class="api-signature sh_none"><code>isFile(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#boolean">boolean</a>&gt;</code></pre>
+
+
+
+<h2 id="isdirectory-path">
 			isDirectory(path)
-			<span><a class="mark" href="#isdirectory-path-" id="isdirectory-path-">#</a></span>
+			<span><a class="mark" href="#isdirectory-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#isdirectorysync-path-"><code>isDirectorySync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
-</ul>
-<h2 id="readable-path-">
+<pre class="api-signature sh_none"><code>isDirectory(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#boolean">boolean</a>&gt;</code></pre>
+
+
+
+<h2 id="readable-path">
 			readable(path)
-			<span><a class="mark" href="#readable-path-" id="readable-path-">#</a></span>
+			<span><a class="mark" href="#readable-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#readablesync-path-"><code>readableSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
-</ul>
-<h2 id="writable-path-">
+<pre class="api-signature sh_none"><code>readable(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#boolean">boolean</a>&gt;</code></pre>
+
+
+
+<h2 id="writable-path">
 			writable(path)
-			<span><a class="mark" href="#writable-path-" id="writable-path-">#</a></span>
+			<span><a class="mark" href="#writable-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writablesync-path-"><code>writableSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
-</ul>
-<h2 id="executable-path-">
+<pre class="api-signature sh_none"><code>writable(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#boolean">boolean</a>&gt;</code></pre>
+
+
+
+<h2 id="executable-path">
 			executable(path)
-			<span><a class="mark" href="#executable-path-" id="executable-path-">#</a></span>
+			<span><a class="mark" href="#executable-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#executablesync-path-"><code>executableSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#boolean"><code>boolean</code></a>&gt; </li>
-</ul>
-<h2 id="chmodrecursion-path-mode-">
+<pre class="api-signature sh_none"><code>executable(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#boolean">boolean</a>&gt;</code></pre>
+
+
+
+<h2 id="chmodrecursion-path-mode">
 			chmodRecursion(path,mode?)
-			<span><a class="mark" href="#chmodrecursion-path-mode-" id="chmodrecursion-path-mode-">#</a></span>
+			<span><a class="mark" href="#chmodrecursion-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Asynchronously recursively set the <code>mode</code> attribute of a file or directory</p>
+<pre class="api-signature sh_none"><code>chmodRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>mode?</code>: <a href="numbers.html#uint"><code>Uint</code></a> <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>  </li>
+<li><code>mode?</code> — <strong><a href="#defaultmode"><code>defaultMode</code></a></strong></li>
 </ul>
+<p><strong>Returns:</strong>  </p>
 <p>Example:</p>
 <pre><code class="undefinedts">// `mypath`For the file path, it can be a file or a directory
 fs.chmodR(mypath, 0755).then(function() {
@@ -1309,24 +1376,26 @@ fs.chmodR(mypath, 0755).then(function() {
 var id = fs.chmodR(mydir, 0775);
 fs.abort(id);
 </code></pre>
-<h2 id="chownrecursion-path-owner-group-">
+<h2 id="chownrecursion-path-owner-group">
 			chownRecursion(path,owner,group)
-			<span><a class="mark" href="#chownrecursion-path-owner-group-" id="chownrecursion-path-owner-group-">#</a></span>
+			<span><a class="mark" href="#chownrecursion-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Asynchronously recursively set the <code>owner</code> and <code>group</code> attributes of files or directories</p>
+<pre class="api-signature sh_none"><code>chownRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">var task = chownRecursion(mypath, 501, 501);
 fs.abort(task.id); // force abort task
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>owner</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>group</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h2 id="removerecursion-path-">
+<h2 id="removerecursion-path">
 			removeRecursion(path)
-			<span><a class="mark" href="#removerecursion-path-" id="removerecursion-path-">#</a></span>
+			<span><a class="mark" href="#removerecursion-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Recursively delete files and directories</p>
+<pre class="api-signature sh_none"><code>removeRecursion(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">var task = fs.removeRecursion(mypath);
 task.then(()=&gt;{
@@ -1337,14 +1406,15 @@ task.then(()=&gt;{
 // The deletion task can be aborted by id
 fs.abort(task.id);
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h2 id="copyrecursion-path-target-">
+<h2 id="copyrecursion-path-target">
 			copyRecursion(path,target)
-			<span><a class="mark" href="#copyrecursion-path-target-" id="copyrecursion-path-target-">#</a></span>
-		</h2><p>Recursively copy files<br/>The difference between <code>copyRecursion()</code> and <code>copy()</code> is that <code>copy()</code> can only copy a single file</p>
+			<span><a class="mark" href="#copyrecursion-path-target" aria-label="Link to this section">#</a></span>
+		</h2><p>Recursively copy files
+The difference between <code>copyRecursion()</code> and <code>copy()</code> is that <code>copy()</code> can only copy a single file</p>
+<pre class="api-signature sh_none"><code>copyRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, target: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">fs.copy(source, target).then(()=&gt;{
     // Success
@@ -1352,33 +1422,37 @@ fs.abort(task.id);
     // Fail
 });
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h2 id="copy-path-target-">
+<h2 id="copy-path-target">
 			copy(path,target)
-			<span><a class="mark" href="#copy-path-target-" id="copy-path-target-">#</a></span>
-		</h2><p>Copy a single file<br/>Ref: <a href="#copyrecursion-path-target-"><code>copyRecursion(path,target)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>target</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h2 id="readstream-path-cb-">
+			<span><a class="mark" href="#copy-path-target" aria-label="Link to this section">#</a></span>
+		</h2><p>Copy a single file
+Ref: <a href="#copyrecursion-path-target-"><code>copyRecursion(path,target)</code></a></p>
+<pre class="api-signature sh_none"><code>copy(path: <a class="api-type" href="$ext.html#string">string</a>, target: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<h2 id="readstream-path-cb">
 			readStream(path,cb)
-			<span><a class="mark" href="#readstream-path-cb-" id="readstream-path-cb-">#</a></span>
+			<span><a class="mark" href="#readstream-path-cb" aria-label="Link to this section">#</a></span>
 		</h2><p>Read file contents using asynchronous streaming</p>
+<pre class="api-signature sh_none"><code>readStream(path: <a class="api-type" href="$ext.html#string">string</a>, cb: <a class="api-type" href="#streamresponsecallback">StreamResponseCallback</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> Read the target path</li>
-<li><code>@param</code> <code>cb</code>: <a href="#streamresponsecallback"><code>StreamResponseCallback</code></a> Asynchronous stream callback function</li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
+<li><code>path</code> — Read the target path</li>
+<li><code>cb</code> — Asynchronous stream callback function</li>
 </ul>
-<h2 id="abort-id-">
+<h2 id="abort-id">
 			abort(id)
-			<span><a class="mark" href="#abort-id-" id="abort-id-">#</a></span>
-		</h2><p>Force abort a running asynchronous task by <code>id</code><br/>If a meaningless <code>id</code> is passed in or the task to which <br/>    the <code>id</code> belongs has been completed, no processing will be done</p>
+			<span><a class="mark" href="#abort-id" aria-label="Link to this section">#</a></span>
+		</h2><p>Force abort a running asynchronous task by <code>id</code>
+If a meaningless <code>id</code> is passed in or the task to which
+    the <code>id</code> belongs has been completed, no processing will be done</p>
+<pre class="api-signature sh_none"><code>abort(id: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">var a = fs.chmod(mypath, 0o755);
 var b = fs.chown(mypath, 501, 501);
@@ -1388,124 +1462,112 @@ fs.abort(a.id);
 fs.abort(b.id);
 fs.abort(c.id);
 </code></pre>
-<ul>
-<li><code>@param</code> <code>id</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="writefile-path-data-size-">
+<h2 id="writefile-path-data-size">
 			writeFile(path,data,size?)
-			<span><a class="mark" href="#writefile-path-data-size-" id="writefile-path-data-size-">#</a></span>
+			<span><a class="mark" href="#writefile-path-data-size" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writefilesync-path-data-size-"><code>writeFileSync(path,data,size?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@param</code> <code>size?</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
-<h2 id="writefile-path-data-encoding-">
+<pre class="api-signature sh_none"><code>writeFile(path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
+<h2 id="writefile-path-data-encoding">
 			writeFile(path,data,encoding?)
-			<span><a class="mark" href="#writefile-path-data-encoding-" id="writefile-path-data-encoding-">#</a></span>
+			<span><a class="mark" href="#writefile-path-data-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writefilesync-path-data-encoding-"><code>writeFileSync(path,data,encoding?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>encoding?</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
-<h2 id="readfile-path-">
+<pre class="api-signature sh_none"><code>writeFile(path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding?: <a class="api-type" href="buffer.html#encoding">Encoding</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
+<h2 id="readfile-path">
 			readFile(path)
-			<span><a class="mark" href="#readfile-path-" id="readfile-path-">#</a></span>
+			<span><a class="mark" href="#readfile-path" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#readfilesync-path-"><code>readFileSync(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>&gt; </li>
-</ul>
-<h2 id="readfile-path-encoding-">
+<pre class="api-signature sh_none"><code>readFile(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>&gt;</code></pre>
+
+
+
+<h2 id="readfile-path-encoding">
 			readFile(path,encoding)
-			<span><a class="mark" href="#readfile-path-encoding-" id="readfile-path-encoding-">#</a></span>
+			<span><a class="mark" href="#readfile-path-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#readfilesync-path-encoding-"><code>readFileSync(path,encoding)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
-</ul>
-<h2 id="open-path-flags-">
+<pre class="api-signature sh_none"><code>readFile(path: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="$ext.html#string">string</a>&gt;</code></pre>
+
+
+
+<h2 id="open-path-flags">
 			open(path,flags?)
-			<span><a class="mark" href="#open-path-flags-" id="open-path-flags-">#</a></span>
+			<span><a class="mark" href="#open-path-flags" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#opensync-path-flags-"><code>openSync(path,flags?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>flags?</code>: <a href="#enum-fileopenflag"><code>FileOpenFlag</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
-<h2 id="close-fd-">
+<pre class="api-signature sh_none"><code>open(path: <a class="api-type" href="$ext.html#string">string</a>, flags?: <a class="api-type" href="#enum-fileopenflag">FileOpenFlag</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
+<h2 id="close-fd">
 			close(fd)
-			<span><a class="mark" href="#close-fd-" id="close-fd-">#</a></span>
+			<span><a class="mark" href="#close-fd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#closesync-fd-"><code>closeSync(fd)</code></a></p>
-<ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h2 id="read-fd-out-size-offsetfd-">
+<pre class="api-signature sh_none"><code>close(fd: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
+<h2 id="read-fd-out-size-offsetfd">
 			read(fd,out,size?,offsetFd?)
-			<span><a class="mark" href="#read-fd-out-size-offsetfd-" id="read-fd-out-size-offsetfd-">#</a></span>
+			<span><a class="mark" href="#read-fd-out-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#readsync-fd-out-size-offsetfd-"><code>readSync(fd,out,size?,offsetFd?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>out</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
-<h2 id="write-fd-data-size-offsetfd-">
+<pre class="api-signature sh_none"><code>read(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, out: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
+<h2 id="write-fd-data-size-offsetfd">
 			write(fd,data,size?,offsetFd?)
-			<span><a class="mark" href="#write-fd-data-size-offsetfd-" id="write-fd-data-size-offsetfd-">#</a></span>
+			<span><a class="mark" href="#write-fd-data-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-size-offsetfd-"><code>writeSync(fd,data,size?,offsetFd?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-<li><code>@param</code> <code>size?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
-<h2 id="write-fd-data-offsetfd-">
+<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
+<h2 id="write-fd-data-offsetfd">
 			write(fd,data,offsetFd?)
-			<span><a class="mark" href="#write-fd-data-offsetfd-" id="write-fd-data-offsetfd-">#</a></span>
+			<span><a class="mark" href="#write-fd-data-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-offsetfd-"><code>writeSync(fd,data,offsetFd?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
-<h2 id="write-fd-data-encoding-offsetfd-">
+<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
+<h2 id="write-fd-data-encoding-offsetfd">
 			write(fd,data,encoding,offsetFd?)
-			<span><a class="mark" href="#write-fd-data-encoding-offsetfd-" id="write-fd-data-encoding-offsetfd-">#</a></span>
+			<span><a class="mark" href="#write-fd-data-encoding-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-encoding-offsetfd-"><code>writeSync(fd,data,encoding,offsetFd?)</code></a></p>
-<ul>
-<li><code>@param</code> <code>fd</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>data</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@param</code> <code>offsetFd?</code>: <a href="numbers.html#int"><code>Int</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>&lt;<a href="numbers.html#uint"><code>Uint</code></a>&gt; </li>
-</ul>
+<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+
+
+
 <h2 id="interface-reader">
 			Interface: Reader
-			<span><a class="mark" href="#interface-reader" id="interface-reader">#</a></span>
+			<span><a class="mark" href="#interface-reader" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="reader">
 			Reader
-			<span><a class="mark" href="#reader" id="reader">#</a></span>
+			<span><a class="mark" href="#reader" aria-label="Link to this section">#</a></span>
 		</h3><p>The methods provided here can perform basic read operations on URI paths of different protocols</p>
 <p>Currently supported path types:</p>
 <ul>
-<li><p><code>http://</code> or <code>https://</code> - can be read synchronously or asynchronously, but cannot read directories or test existence,<br/><code>readdirSync()</code> returns an empty array and <code>isFileSync()</code> always returns <code>false</code>.</p><br/></li>
-<li><p><code>file://</code> local file path. <code>/var/data</code> or <code>var/data</code> can be used as local paths without error.</p><br/></li>
-<li><p><code>zip://</code> This is a way to represent the path in the <code>zip</code> package, <code>zip:///var/data/test.zip@/a.txt</code><br/>This path represents the <code>a.txt</code> file in <code>zip:///var/data/test.zip</code>. Note that this path must exist in the local file system</p><br/></li>
+<li><p><code>http://</code> or <code>https://</code> - can be read synchronously or asynchronously, but cannot read directories or test existence,
+<code>readdirSync()</code> returns an empty array and <code>isFileSync()</code> always returns <code>false</code>.</p>
+</li>
+<li><p><code>file://</code> local file path. <code>/var/data</code> or <code>var/data</code> can be used as local paths without error.</p>
+</li>
+<li><p><code>zip://</code> This is a way to represent the path in the <code>zip</code> package, <code>zip:///var/data/test.zip@/a.txt</code>
+This path represents the <code>a.txt</code> file in <code>zip:///var/data/test.zip</code>. Note that this path must exist in the local file system</p>
+</li>
 </ul>
-<h3 id="reader-readfile-path-">
+<h3 id="reader-readfile-path">
 			reader.readFile(path)
-			<span><a class="mark" href="#reader-readfile-path-" id="reader-readfile-path-">#</a></span>
+			<span><a class="mark" href="#reader-readfile-path" aria-label="Link to this section">#</a></span>
 		</h3><p>Reading file data</p>
+<pre class="api-signature sh_none"><code>readFile(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>&gt;</code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">reader.readFile(&#39;http://xxx.com/test.txt&#39;).then(()=&gt;{
     // Success
@@ -1513,25 +1575,24 @@ fs.abort(c.id);
     // Fail
 })
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a>&gt; </li>
-</ul>
-<h3 id="reader-readfile-path-encoding-">
+<h3 id="reader-readfile-path-encoding">
 			reader.readFile(path,encoding)
-			<span><a class="mark" href="#reader-readfile-path-encoding-" id="reader-readfile-path-encoding-">#</a></span>
+			<span><a class="mark" href="#reader-readfile-path-encoding" aria-label="Link to this section">#</a></span>
 		</h3><p>Read file data and decode it into a string</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
-</ul>
-<h3 id="reader-readstream-path-cb-">
+<pre class="api-signature sh_none"><code>readFile(path: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="$ext.html#string">string</a>&gt;</code></pre>
+
+
+
+<h3 id="reader-readstream-path-cb">
 			reader.readStream(path,cb)
-			<span><a class="mark" href="#reader-readstream-path-cb-" id="reader-readstream-path-cb-">#</a></span>
+			<span><a class="mark" href="#reader-readstream-path-cb" aria-label="Link to this section">#</a></span>
 		</h3><p>Read file data by asynchronous streaming</p>
+<pre class="api-signature sh_none"><code>readStream(path: <a class="api-type" href="$ext.html#string">string</a>, cb: <a class="api-type" href="#streamresponsecallback">StreamResponseCallback</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+
+
+
 <p>For example:</p>
-<pre><code class="undefinedts">// async read file stream 
+<pre><code class="undefinedts">// async read file stream
 reader.readStream(&#39;http://www.baidu.com&#39;, function(d){}));
 reader.readStream(&#39;file:///var/data/test.txt&#39;, function(d){}));
 reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
@@ -1539,81 +1600,90 @@ reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
     console.log(d.data.length, d.ended);
 });
 </code></pre>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>cb</code>: <a href="#streamresponsecallback"><code>StreamResponseCallback</code></a> </li>
-<li><code>@return</code> <a href="#class-asynctask"><code>AsyncTask</code></a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a>&gt; </li>
-</ul>
-<h3 id="reader-readfilesync-path-">
+<h3 id="reader-readfilesync-path">
 			reader.readFileSync(path)
-			<span><a class="mark" href="#reader-readfilesync-path-" id="reader-readfilesync-path-">#</a></span>
+			<span><a class="mark" href="#reader-readfilesync-path" aria-label="Link to this section">#</a></span>
 		</h3><p>Please ref: method <a href="#reader-readfile-path-"><code>Reader.readFile(path)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a> </li>
-</ul>
-<h3 id="reader-readfilesync-path-encoding-">
+<pre class="api-signature sh_none"><code>readFileSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code></pre>
+
+
+
+<h3 id="reader-readfilesync-path-encoding">
 			reader.readFileSync(path,encoding)
-			<span><a class="mark" href="#reader-readfilesync-path-encoding-" id="reader-readfilesync-path-encoding-">#</a></span>
+			<span><a class="mark" href="#reader-readfilesync-path-encoding" aria-label="Link to this section">#</a></span>
 		</h3><p>Please ref: method <a href="#reader-readfile-path-encoding-"><code>Reader.readFile(path,encoding)</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>encoding</code>: <a href="buffer.html#encoding"><code>Encoding</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="reader-existssync-path-">
+<pre class="api-signature sh_none"><code>readFileSync(path: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h3 id="reader-existssync-path">
 			reader.existsSync(path)
-			<span><a class="mark" href="#reader-existssync-path-" id="reader-existssync-path-">#</a></span>
-		</h3><p>同步测试文件或目录是否存在，如果文件存在会返回<code>false</code><br/>这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code><br/>Synchronously test whether a file or directory exists. If the file exists, it will return <code>false</code><br/>This method cannot handle paths of the <code>http://</code> and <code>https://</code> type. If such a path is passed, it will immediately return <code>false</code></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="reader-isfilesync-path-">
+			<span><a class="mark" href="#reader-existssync-path" aria-label="Link to this section">#</a></span>
+		</h3><p>同步测试文件或目录是否存在，如果文件存在会返回<code>false</code>
+这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code>
+Synchronously test whether a file or directory exists. If the file exists, it will return <code>false</code>
+This method cannot handle paths of the <code>http://</code> and <code>https://</code> type. If such a path is passed, it will immediately return <code>false</code></p>
+<pre class="api-signature sh_none"><code>existsSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="reader-isfilesync-path">
 			reader.isFileSync(path)
-			<span><a class="mark" href="#reader-isfilesync-path-" id="reader-isfilesync-path-">#</a></span>
-		</h3><p>同步检查路径是否为文件，如果路径不存在返回 <code>false</code><br/>这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code><br/>Synchronously check if the path is a file, and return <code>false</code> if the path does not exist<br/>This method cannot handle <code>http://</code> and <code>https://</code> type paths, and immediately returns <code>false</code> if such a path is passed</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="reader-isdirectorysync-path-">
+			<span><a class="mark" href="#reader-isfilesync-path" aria-label="Link to this section">#</a></span>
+		</h3><p>同步检查路径是否为文件，如果路径不存在返回 <code>false</code>
+这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code>
+Synchronously check if the path is a file, and return <code>false</code> if the path does not exist
+This method cannot handle <code>http://</code> and <code>https://</code> type paths, and immediately returns <code>false</code> if such a path is passed</p>
+<pre class="api-signature sh_none"><code>isFileSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="reader-isdirectorysync-path">
 			reader.isDirectorySync(path)
-			<span><a class="mark" href="#reader-isdirectorysync-path-" id="reader-isdirectorysync-path-">#</a></span>
-		</h3><p>同步检查路径是否为目录，如果路径不存在返回 <code>false</code><br/>这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code><br/>Synchronously check if the path is a directory, and return <code>false</code> if the path does not exist<br/>This method cannot handle <code>http://</code> and <code>https://</code> type paths, and immediately returns <code>false</code> if such a path is passed in</p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="reader-readdirsync-path-">
+			<span><a class="mark" href="#reader-isdirectorysync-path" aria-label="Link to this section">#</a></span>
+		</h3><p>同步检查路径是否为目录，如果路径不存在返回 <code>false</code>
+这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回<code>false</code>
+Synchronously check if the path is a directory, and return <code>false</code> if the path does not exist
+This method cannot handle <code>http://</code> and <code>https://</code> type paths, and immediately returns <code>false</code> if such a path is passed in</p>
+<pre class="api-signature sh_none"><code>isDirectorySync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="reader-readdirsync-path">
 			reader.readdirSync(path)
-			<span><a class="mark" href="#reader-readdirsync-path-" id="reader-readdirsync-path-">#</a></span>
-		</h3><p>同步读取目录文件列表,<br/>这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回一个空数组<a href="$ext.html#array"><code>Array</code></a>,<br/>这个方法也不会抛出异常，如果不能读取路径，只会返回空数组<a href="$ext.html#array"><code>Array</code></a><br/>Synchronously read the directory file list,<br/>This method cannot handle <code>http://</code> and <code>https://</code> type paths. If such a path is passed, an empty array <a href="$ext.html#array"><code>Array</code></a> will be immediately returned.<br/>This method will not throw an exception. If the path cannot be read, it will only return an empty array <a href="$ext.html#array"><code>Array</code></a></p>
-<ul>
-<li><code>@param</code> <code>path</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#interface-dirent"><code>Dirent</code></a><code>[]</code> </li>
-</ul>
-<h3 id="reader-abort-id-">
+			<span><a class="mark" href="#reader-readdirsync-path" aria-label="Link to this section">#</a></span>
+		</h3><p>同步读取目录文件列表,
+这个方法不能处理<code>http://</code>与<code>https://</code>类型的路径,如果传入这种路径立即返回一个空数组<a href="$ext.html#array"><code>Array</code></a>,
+这个方法也不会抛出异常，如果不能读取路径，只会返回空数组<a href="$ext.html#array"><code>Array</code></a>
+Synchronously read the directory file list,
+This method cannot handle <code>http://</code> and <code>https://</code> type paths. If such a path is passed, an empty array <a href="$ext.html#array"><code>Array</code></a> will be immediately returned.
+This method will not throw an exception. If the path cannot be read, it will only return an empty array <a href="$ext.html#array"><code>Array</code></a></p>
+<pre class="api-signature sh_none"><code>readdirSync(path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#interface-dirent">Dirent</a>[]</code></pre>
+
+
+
+<h3 id="reader-abort-id">
 			reader.abort(id)
-			<span><a class="mark" href="#reader-abort-id-" id="reader-abort-id-">#</a></span>
+			<span><a class="mark" href="#reader-abort-id" aria-label="Link to this section">#</a></span>
 		</h3><p>Abort an asynchronous task by its id</p>
-<ul>
-<li><code>@param</code> <code>id</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="reader-clear-">
+<pre class="api-signature sh_none"><code>abort(id: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="reader-clear">
 			reader.clear()
-			<span><a class="mark" href="#reader-clear-" id="reader-clear-">#</a></span>
+			<span><a class="mark" href="#reader-clear" aria-label="Link to this section">#</a></span>
 		</h3><p>To clear cache of reader</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h2 id="reader">
+<pre class="api-signature sh_none"><code>clear(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h2 id="reader-2">
 			reader
-			<span><a class="mark" href="#reader" id="reader">#</a></span>
-		</h2><ul>
-<li><code>@const</code> <code>reader</code>: <a href="#interface-reader"><code>Reader</code></a></li>
-</ul>
+			<span><a class="mark" href="#reader-2" aria-label="Link to this section">#</a></span>
+		</h2><pre class="api-signature sh_none"><code><span class="api-keyword">const</span> reader: <a class="api-type" href="#interface-reader">Reader</a></code></pre>
+
+
 
 			</div>
 
@@ -1621,19 +1691,28 @@ reader.readStream(&#39;zip:///var/data/test.zip@aa.txt&#39;, function(d){
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'fs.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

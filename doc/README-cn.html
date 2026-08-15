@@ -1,29 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-	<meta charset="utf-8"/>
-	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'README-cn.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quark API 文档</title>
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,58 +92,57 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.4.0 Documentation</h1>
+				<h1>Quark v1.4.0 文档</h1>
 				<div id="gtoc">
 					<p>
-						<a href="/doc" id="index">Documentation Index</a> |
-						<a href="/" id="home">Home</a>
+						<a href="/doc" id="index">文档目录</a> |
+						<a href="/" id="home">主页</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>本页目录</summary>
 				<ul>
 <li>
 <span><a href="#quark">Quark</a></span>
 <ul>
 <li>
-<span><a href="#-">核心能力</a></span>
+<span><a href="#核心能力">核心能力</a></span>
 </li>
 <li>
-<span><a href="#-">平台与渲染器状态</a></span>
+<span><a href="#平台与渲染器状态">平台与渲染器状态</a></span>
 </li>
 <li>
-<span><a href="#-">渲染系统</a></span>
+<span><a href="#渲染系统">渲染系统</a></span>
 </li>
 <li>
-<span><a href="#-qkmake-">使用 qkmake 快速开始</a></span>
+<span><a href="#使用-qkmake-快速开始">使用 qkmake 快速开始</a></span>
 <ul>
 <li>
-<span><a href="#-">最小应用</a></span>
+<span><a href="#最小应用">最小应用</a></span>
 </li>
 <li>
-<span><a href="#-">构建应用代码与资源</a></span>
+<span><a href="#构建应用代码与资源">构建应用代码与资源</a></span>
 </li>
 <li>
-<span><a href="#-">导出或打开平台工程</a></span>
+<span><a href="#导出或打开平台工程">导出或打开平台工程</a></span>
 </li>
 <li>
-<span><a href="#-">运行与调试</a></span>
+<span><a href="#运行与调试">运行与调试</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#-quark">从源码构建 Quark</a></span>
+<span><a href="#从源码构建-quark">从源码构建 Quark</a></span>
 </li>
 <li>
-<span><a href="#-">文档</a></span>
+<span><a href="#文档">文档</a></span>
 </li>
 <li>
-<span><a href="#-">项目状态与参与贡献</a></span>
+<span><a href="#项目状态与参与贡献">项目状态与参与贡献</a></span>
 </li>
 <li>
 <span><a href="#license">License</a></span>
@@ -163,28 +150,32 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark">
 			Quark
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><p><a href="README.html">English</a> · <a href="docs/guides/README-cn.html">使用教程</a> · <a href="https://quarks.cc/doc/">API 文档</a></p>
-<p>Quark 是一个支持 Android、iOS、macOS 和 Linux 的跨平台 GUI 框架，核心由<br/>C++、自研 GPU 渲染器、轻量级布局引擎和嵌入式 JavaScript/JSX 运行时组成。</p>
-<p>Quark 不是浏览器运行时。它拥有独立的 View 树、样式与布局系统、事件模型、<br/>渲染管线和平台集成，API 强调显式结构、可预测行为和可控性能。</p>
-<h2 id="-">
+<p>Quark 是一个支持 Android、iOS、macOS 和 Linux 的跨平台 GUI 框架，核心由
+C++、自研 GPU 渲染器、轻量级布局引擎和嵌入式 JavaScript/JSX 运行时组成。</p>
+<p>Quark 不是浏览器运行时。它拥有独立的 View 树、样式与布局系统、事件模型、
+渲染管线和平台集成，API 强调显式结构、可预测行为和可控性能。</p>
+<h2 id="核心能力">
 			核心能力
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#核心能力" aria-label="Link to this section">#</a></span>
 		</h2><ul>
 <li>在 Android、iOS、macOS 和 Linux 上进行原生 GUI 渲染。</li>
 <li>使用 C++ 实现性能敏感系统，使用 JavaScript/JSX 编写应用逻辑和声明 UI。</li>
 <li>使用显式布局引擎，不依赖浏览器 DOM 或浏览器 CSS。</li>
-<li>支持连续 class、后代和直接子级选择器，以及 <code>:normal</code>、<code>:hover</code>、<br/><code>:active</code> 状态的 CSS-like 样式子集。</li>
-<li>在统一 View 与事件模型中提供图片、文本、渐变、裁剪、滤镜、动画、媒体、<br/>滚动、输入以及 World/Entity View。</li>
+<li>支持连续 class、后代和直接子级选择器，以及 <code>:normal</code>、<code>:hover</code>、
+<code>:active</code> 状态的 CSS-like 样式子集。</li>
+<li>在统一 View 与事件模型中提供图片、文本、渐变、裁剪、滤镜、动画、媒体、
+滚动、输入以及 World/Entity View。</li>
 </ul>
-<h2 id="-">
+<h2 id="平台与渲染器状态">
 			平台与渲染器状态
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#平台与渲染器状态" aria-label="Link to this section">#</a></span>
 		</h2><table>
 <thead>
 <tr>
@@ -199,33 +190,37 @@
 <td>iOS</td>
 <td>macOS + Xcode</td>
 <td>OpenGL ES 或 Metal</td>
-<td>Metal 与 GL 路径均已实现，并用于当前测试场景。</td>
+<td>Metal 与 GL 均为已经稳定使用的运行时路径。</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>macOS + Xcode</td>
 <td>OpenGL 或 Metal</td>
-<td>两个后端均已实现。</td>
+<td>Metal 与 GL 均为已经稳定使用的运行时路径。</td>
 </tr>
 <tr>
 <td>Android</td>
 <td>macOS/Linux + JDK、Android SDK/NDK</td>
 <td>OpenGL ES；可选 Vulkan</td>
-<td>Vulkan 呈现和 Canvas/CAPA 编码已实现，仍在扩大设备验证。</td>
+<td>Vulkan 呈现和 Canvas/CAPA 已可用，设备覆盖仍在持续扩大。</td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>Linux 原生工具链</td>
 <td>OpenGL ES；可选 Vulkan/Xlib</td>
-<td>Vulkan 呈现已实现，仍需继续 Linux 运行时验证。</td>
+<td>Vulkan/Xlib 呈现和 Canvas/CAPA 已可用，驱动覆盖仍在持续扩大。</td>
 </tr>
 </tbody>
 </table>
-<p>当前 Linux 构建与运行测试环境为 Ubuntu 20.04，其他 Linux 发行版尚未完成验证。</p>
-<p>源码配置当前默认启用 GL。Apple 构建在关闭 GL 时选择 Metal；Android/Linux<br/>可以在保留 GL 的同时启用 Vulkan。当 Vulkan 与 GL 同时存在时会优先尝试<br/>Vulkan，使用 <code>--gl</code> 可强制选择 GL。Android Vulkan 要求 Android 10/API 29<br/>和 Vulkan 1.1 或更高版本；不支持的设备会回退到 GL。</p>
-<h2 id="-">
+<p>当前确认可用的 Linux 构建与运行环境为 Ubuntu 20.04；其他 Linux 发行版不在
+当前版本的验证范围内。</p>
+<p>源码配置当前默认启用 GL。Apple 构建在关闭 GL 时选择 Metal；Android/Linux
+可以在保留 GL 的同时启用 Vulkan。当 Vulkan 与 GL 同时存在时会优先尝试
+Vulkan，使用 <code>--gl</code> 可强制选择 GL。Android Vulkan 要求 Android 10/API 29
+和 Vulkan 1.1 或更高版本；不支持的设备会回退到 GL。</p>
+<h2 id="渲染系统">
 			渲染系统
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#渲染系统" aria-label="Link to this section">#</a></span>
 		</h2><p>Quark 拥有自己的 GPU 渲染栈，不使用浏览器 Canvas、CSS 绘制或 Web 合成。</p>
 <pre><code class="undefinedtxt">Canvas API
   -&gt; GPUCanvas 共享状态、裁剪、path/image/text 分发
@@ -234,11 +229,16 @@
 </code></pre>
 <p>渲染器组合使用两种互补的反走样策略：</p>
 <ul>
-<li><strong>AASide</strong> 是快速几何边沿带路径，用于文字、hairline、简单边缘以及<br/>GL/GLES 兼容路径。</li>
-<li><strong>CAPA</strong>（Coverage Area Pipeline Anti-Aliasing）是 Metal/Vulkan-class<br/>后端处理复杂有序填充的 compute 路径。它把边分配到 tile，计算面积<br/>coverage，并按顺序合成 layer，避免相邻图元独立反走样时产生背景漏光。</li>
+<li><strong>AASide</strong> 是快速几何边沿带路径，用于文字、hairline、简单边缘以及
+GL/GLES 兼容路径。</li>
+<li><strong>CAPA</strong>（Coverage Area Pipeline Anti-Aliasing）是 Metal/Vulkan-class
+后端处理复杂有序填充的 compute 路径。它把边分配到 tile，计算面积
+coverage，并按顺序合成 layer，避免相邻图元独立反走样时产生背景漏光。</li>
 </ul>
-<p>Metal 是已经稳定使用的 CAPA 运行时路径。Vulkan CAPA 命令编码已经实现，<br/>仍在进行更广泛的运行时验证。</p>
-<p>运行时可传入 <code>--gl</code> 强制使用 GL 渲染器；也可传入 <code>--aaside</code>，在<br/>Metal/Vulkan 上禁用 CAPA 并强制使用 AASide 反走样路径。</p>
+<p>Metal 是已经稳定使用的 CAPA 运行时路径。Vulkan CAPA 在支持的目标平台上也
+已经可用，设备与驱动覆盖仍在持续扩大。</p>
+<p>运行时可传入 <code>--gl</code> 强制使用 GL 渲染器；也可传入 <code>--aaside</code>，在
+Metal/Vulkan 上禁用 CAPA 并强制使用 AASide 反走样路径。</p>
 <table>
 <thead>
 <tr>
@@ -253,10 +253,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="-qkmake-">
+<h2 id="使用-qkmake-快速开始">
 			使用 qkmake 快速开始
-			<span><a class="mark" href="#-qkmake-" id="-qkmake-">#</a></span>
-		</h2><p>当前支持的宿主工作流是 macOS 和 Linux；Apple 目标需要 macOS/Xcode。<br/>Windows 暂不支持。</p>
+			<span><a class="mark" href="#使用-qkmake-快速开始" aria-label="Link to this section">#</a></span>
+		</h2><p>当前支持的宿主工作流是 macOS 和 Linux；Apple 目标需要 macOS/Xcode。
+Windows 暂不支持。</p>
 <p>安装 Node.js 和 Python，然后安装已发布的工具包：</p>
 <pre><code class="undefinedsh">sudo npm install -g qkmake
 </code></pre>
@@ -265,9 +266,9 @@
 cd myproj
 qkmake init
 </code></pre>
-<h3 id="-">
+<h3 id="最小应用">
 			最小应用
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#最小应用" aria-label="Link to this section">#</a></span>
 		</h3><pre><code class="undefinedtsx">import { Jsx, Application, Window } from &#39;quark&#39;
 
 new Application()
@@ -276,73 +277,94 @@ new Window().render(
 )
 </code></pre>
 <p>更多完整应用可查看<a href="https://github.com/louis-tru/quark/tree/master/examples">示例代码</a>。</p>
-<h3 id="-">
+<h3 id="构建应用代码与资源">
 			构建应用代码与资源
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#构建应用代码与资源" aria-label="Link to this section">#</a></span>
 		</h3><p><code>qkmake build</code> 会安装项目依赖、转换 TypeScript/JavaScript 并打包应用资源：</p>
 <pre><code class="undefinedsh">qkmake build
 </code></pre>
 <p>新初始化的项目也可以先导出；导出流程会在需要时构建缺失的应用产物。</p>
-<h3 id="-">
+<h3 id="导出或打开平台工程">
 			导出或打开平台工程
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#导出或打开平台工程" aria-label="Link to this section">#</a></span>
 		</h3><pre><code class="undefinedsh">qkmake export ios
 qkmake export mac
 qkmake export android
 qkmake export linux
 </code></pre>
-<p>生成的工程位于 <code>project/&lt;platform&gt;</code>。Apple 工程使用 Xcode，Android 导出<br/>使用 Android Studio/CMake，Linux 导出使用原生 Make 工程。执行<br/><code>qkmake open &lt;platform&gt;</code> 可以在需要时先生成工程，再使用宿主机可用工具打开。</p>
-<h3 id="-">
+<p>生成的工程位于 <code>project/&lt;platform&gt;</code>。Apple 工程使用 Xcode，Android 导出
+使用 Android Studio/CMake，Linux 导出使用原生 Make 工程。执行
+<code>qkmake open &lt;platform&gt;</code> 可以在需要时先生成工程，再使用宿主机可用工具打开。</p>
+<h3 id="运行与调试">
 			运行与调试
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#运行与调试" aria-label="Link to this section">#</a></span>
 		</h3><p>运行应用：</p>
 <pre><code class="undefinedsh">qkmake start .
 qkmake start . --gl
 qkmake start . --aaside
 </code></pre>
-<p><code>--gl</code> 用于强制选择 GL 渲染器。<code>--aaside</code> 不改变已经选择的 Metal/Vulkan<br/>渲染器，但会禁用 CAPA，强制使用 AASide 反走样路径。这两个参数适合用于<br/>兼容性检查和渲染效果对比。</p>
+<p><code>--gl</code> 用于强制选择 GL 渲染器。<code>--aaside</code> 不改变已经选择的 Metal/Vulkan
+渲染器，但会禁用 CAPA，强制使用 AASide 反走样路径。这两个参数适合用于
+兼容性检查和渲染效果对比。</p>
 <p>启动开发服务器和文件监听：</p>
 <pre><code class="undefinedsh">qkmake watch
 </code></pre>
-<p>watcher 默认在 <code>1026</code> 端口提供应用服务，在 TS/TSX 文件变化时通知已连接设备，<br/>使调试构建可以更新界面而无需完整重启应用。</p>
-<h2 id="-quark">
+<p>watcher 默认在 <code>1026</code> 端口提供应用服务，在 TS/TSX 文件变化时通知已连接设备，
+使调试构建可以更新界面而无需完整重启应用。</p>
+<h2 id="从源码构建-quark">
 			从源码构建 Quark
-			<span><a class="mark" href="#-quark" id="-quark">#</a></span>
+			<span><a class="mark" href="#从源码构建-quark" aria-label="Link to this section">#</a></span>
 		</h2><p>源码构建需要 Node.js、Python 和目标平台对应的工具链：</p>
 <ul>
 <li>iOS/macOS 需要 Xcode；</li>
 <li>Android 需要 JDK、Android SDK 和 Android NDK；</li>
 <li>Linux 需要本机编译器和开发包。</li>
 </ul>
-<p>构建 Android 前，需要设置以下三个环境变量；<code>configure</code> 会读取它们来定位<br/>Android SDK、NDK 和 Java 工具链：</p>
+<p>构建 Android 前，需要设置以下三个环境变量；<code>configure</code> 会读取它们来定位
+Android SDK、NDK 和 Java 工具链：</p>
 <pre><code class="undefinedsh">export ANDROID_SDK=$HOME/Install/android-sdk
 export ANDROID_NDK=$ANDROID_SDK/ndk/29.0.13113456
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 </code></pre>
-<p>路径按实际安装位置调整；macOS 的 <code>JAVA_HOME</code> 通常指向 JDK 的<br/><code>Contents/Home</code> 目录。</p>
+<p>路径按实际安装位置调整；macOS 的 <code>JAVA_HOME</code> 通常指向 JDK 的
+<code>Contents/Home</code> 目录。</p>
 <p>在已有 checkout 中同步当前分支和全部 submodule：</p>
 <pre><code class="undefinedsh">make sync
 </code></pre>
-<p><code>make sync</code> 会同时执行 <code>git pull</code> 和<br/><code>git submodule update --init --recursive</code>，因此只应在确实准备更新当前 checkout<br/>时使用。</p>
-<p>根 Makefile 提供 <code>make ios</code>、<code>make mac</code>、<code>make android</code> 和 <code>make linux</code>。<br/><code>make all</code> 会构建完整平台产物，并可能通过配置的 <code>REMOTE_COMPILE_HOST</code> 构建<br/>本机无法构建的目标。<code>make install</code> 会构建这些产物并安装本地 qkmake；<br/><code>make install-only</code> 则安装已有的 <code>out/qkmake</code> 产物。</p>
-<h2 id="-">
+<p><code>make sync</code> 会同时执行 <code>git pull</code> 和
+<code>git submodule update --init --recursive</code>，因此只应在确实准备更新当前 checkout
+时使用。</p>
+<p>根 Makefile 提供 <code>make ios</code>、<code>make mac</code>、<code>make android</code> 和 <code>make linux</code>。
+<code>make all</code> 会构建完整平台产物，并可能通过配置的 <code>REMOTE_COMPILE_HOST</code> 构建
+本机无法构建的目标。<code>make install</code> 会构建这些产物并安装本地 qkmake；
+<code>make install-only</code> 则安装已有的 <code>out/qkmake</code> 产物。</p>
+<h2 id="文档">
 			文档
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#文档" aria-label="Link to this section">#</a></span>
 		</h2><ul>
-<li><a href="docs/guides/README-cn.html">使用教程</a>：面向任务的中英文教程，中文文件统一<br/>使用 <code>-cn.md</code> 后缀。</li>
-<li><a href="https://quarks.cc/doc/">自动生成的 API reference</a>：从 <code>libs/quark</code> 生成的<br/>模块、类、接口、属性、方法与事件文档。</li>
-<li><a href="docs/guides/VIEW_STYLE-cn.html">视图布局与样式</a>：View 继承、JSX 布局、class<br/>选择器、伪状态和样式过渡。</li>
+<li><a href="docs/guides/README-cn.html">使用教程</a>：面向任务的中英文教程，中文文件统一
+使用 <code>-cn.md</code> 后缀。</li>
+<li><a href="https://quarks.cc/doc/">自动生成的 API reference</a>：从 <code>libs/quark</code> 生成的
+模块、类、接口、属性、方法与事件文档。</li>
+<li><a href="docs/guides/VIEW_STYLE-cn.html">视图布局与样式</a>：View 继承、JSX 布局、class
+选择器、伪状态和样式过渡。</li>
 <li><a href="docs/guides/ACTIONS-cn.html">Action 与关键帧</a>：动画组合、关键帧、播放和事件。</li>
 </ul>
-<p><code>make doc</code> 会运行 <code>tools/gen_html_doc.js</code>，从 TypeScript 源码生成 API Markdown，<br/>校验中英文教程是否成对，并加入两份根 README、<code>docs/guides/</code>、教程资源文件和<br/>License，最终把完整的可发布 HTML 树输出到 <code>out/doc/html</code>。</p>
-<h2 id="-">
+<p><code>make doc</code> 会运行 <code>tools/gen_html_doc.js</code>，从 TypeScript 源码生成 API Markdown，
+校验中英文教程是否成对，并加入两份根 README、<code>docs/guides/</code>、教程资源文件和
+License，最终把完整的可发布 HTML 树输出到 <code>out/doc/html</code>。</p>
+<h2 id="项目状态与参与贡献">
 			项目状态与参与贡献
-			<span><a class="mark" href="#-" id="-">#</a></span>
-		</h2><p>GL 与 Metal 路径已经建立，Vulkan 正处于跨 Android/Linux 驱动的运行时验证<br/>和稳定化阶段。欢迎在 <a href="https://github.com/louis-tru/quark">GitHub 仓库</a>提交范围明确的 issue 和 pull request。<br/>后端改动应保持 Canvas 行为对齐，并附带最小且相关的验证。</p>
-<p>纯文档改动至少应通过 <code>git diff --check</code>；影响发布文档的改动还应运行<br/><code>make doc</code>。</p>
+			<span><a class="mark" href="#项目状态与参与贡献" aria-label="Link to this section">#</a></span>
+		</h2><p>GL 与 Metal 路径已经稳定，Vulkan 也已可用于 Android 和 Linux。当前 Vulkan
+工作重点是继续扩大设备与驱动覆盖，并持续完善实现。欢迎在 <a href="https://github.com/louis-tru/quark">GitHub 仓库</a>
+提交范围明确的 issue 和 pull request。后端改动应保持 Canvas 行为对齐，
+并附带最小且相关的验证。</p>
+<p>纯文档改动至少应通过 <code>git diff --check</code>；影响发布文档的改动还应运行
+<code>make doc</code>。</p>
 <h2 id="license">
 			License
-			<span><a class="mark" href="#license" id="license">#</a></span>
+			<span><a class="mark" href="#license" aria-label="Link to this section">#</a></span>
 		</h2><p>Quark 使用 BSD License 分发，详见 <a href="LICENSE">LICENSE</a>。</p>
 <script>
     <!--
@@ -369,19 +391,28 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'README-cn.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

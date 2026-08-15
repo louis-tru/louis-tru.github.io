@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Quark 是一个面向 Android、iOS、macOS 与 Linux 的跨平台原生 GUI 框架。">
+	<meta name="theme-color" content="#07111f">
+	<title>Quark · 跨平台原生 GUI 框架</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<a class="brand" href="index-cn.html" aria-label="Quark 首页"><span class="mark">Qk</span><span>Quark</span></a>
+			<nav aria-label="主导航">
+				<a href="doc/docs/guides/README-cn.html">使用指南</a>
+				<a href="index.html" lang="en">English</a>
+				<a href="https://github.com/louis-tru/quark">GitHub</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div>
+					<div class="eyebrow">Native UI · GPU Rendering</div>
+					<h1>Quark<span>跨平台原生 GUI 框架</span></h1>
+					<p class="lead">
+						以 C++ 构建核心运行时，用 JavaScript / JSX 描述界面，面向 Android、iOS、macOS 与 Linux。
+						Quark 提供独立布局、样式、事件和 GPU 渲染系统，不依赖浏览器 DOM。
+					</p>
+					<div class="actions">
+						<a class="button primary" href="doc/README-cn.html">阅读中文文档</a>
+						<a class="button" href="doc/docs/guides/README-cn.html">查看使用指南</a>
+						<a class="button" href="https://github.com/louis-tru/quark">查看源码</a>
+					</div>
+				</div>
+
+				<div class="stack" aria-label="Quark 技术栈概览">
+					<div class="orbit" aria-hidden="true"></div>
+					<div class="runtime-card">
+						<div class="card-label">Quark Runtime</div>
+						<div class="pipeline">
+							<div><span>JavaScript / JSX</span><small>UI & Logic</small></div>
+							<div><span>C++ Core</span><small>Layout & Events</small></div>
+							<div><span>GPU Renderer</span><small>GL · Metal · Vulkan</small></div>
+						</div>
+						<div class="platforms"><span>Android</span><span>iOS</span><span>macOS</span><span>Linux</span></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features" aria-label="核心能力">
+				<article class="feature"><b>原生运行时</b><p>明确的视图树、事件模型与资源生命周期，保持原生应用需要的控制力。</p></article>
+				<article class="feature"><b>独立 UI 系统</b><p>自有布局与类 CSS 样式系统，用一致的模型构建多平台界面。</p></article>
+				<article class="feature"><b>GPU 渲染</b><p>覆盖 OpenGL、Metal 与 Vulkan 后端，支持跨平台高性能图形绘制。</p></article>
+				<article class="feature"><b>完整工具链</b><p>通过 qkmake 完成项目初始化、构建、导出以及开发期热更新。</p></article>
+			</section>
+		</main>
+
+		<footer>
+			<span>Quark · Built by louis-tru</span>
+			<span><a href="doc/README-cn.html">中文文档</a> · <a href="https://github.com/louis-tru/quark">GitHub</a></span>
+		</footer>
+	</div>
+</body>
+</html>

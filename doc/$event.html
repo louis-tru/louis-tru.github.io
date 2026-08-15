@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = '_event.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-_event">quark/_event</a></span>
@@ -139,7 +126,7 @@
 <span><a href="#event-sender">event.sender</a></span>
 </li>
 <li>
-<span><a href="#event-constructor-data-">event.constructor(data)</a></span>
+<span><a href="#event-constructor-data">event.constructor(data)</a></span>
 </li>
 </ul>
 <li>
@@ -164,22 +151,22 @@
 <span><a href="#eventnoticer-length">eventnoticer.length</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-constructor-name-sender-">eventnoticer.constructor(name,sender)</a></span>
+<span><a href="#eventnoticer-constructor-name-sender">eventnoticer.constructor(name,sender)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-forward-noticer-id-">eventnoticer.forward(noticer,id?)</a></span>
+<span><a href="#eventnoticer-forward-noticer-id">eventnoticer.forward(noticer,id?)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-trigger-data-">eventnoticer.trigger(data)</a></span>
+<span><a href="#eventnoticer-trigger-data">eventnoticer.trigger(data)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-triggerwithevent-e-">eventnoticer.triggerWithEvent(e)</a></span>
+<span><a href="#eventnoticer-triggerwithevent-e">eventnoticer.triggerWithEvent(e)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-off-listen-ctx-">eventnoticer.off(listen?,ctx?)</a></span>
+<span><a href="#eventnoticer-off-listen-ctx">eventnoticer.off(listen?,ctx?)</a></span>
 </li>
 <li>
-<span><a href="#eventnoticer-offbyctx-ctx-">eventnoticer.offByCtx(ctx)</a></span>
+<span><a href="#eventnoticer-offbyctx-ctx">eventnoticer.offByCtx(ctx)</a></span>
 </li>
 </ul>
 <li>
@@ -189,136 +176,141 @@
 <span><a href="#notification">Notification</a></span>
 </li>
 <li>
-<span><a href="#notification-getnoticer-name-">notification.getNoticer(name)</a></span>
+<span><a href="#notification-getnoticer-name">notification.getNoticer(name)</a></span>
 </li>
 <li>
-<span><a href="#notification-hasnoticer-name-">notification.hasNoticer(name)</a></span>
+<span><a href="#notification-hasnoticer-name">notification.hasNoticer(name)</a></span>
 </li>
 <li>
-<span><a href="#notification-adddefaultlistener-name-listen-">notification.addDefaultListener(name,listen)</a></span>
+<span><a href="#notification-adddefaultlistener-name-listen">notification.addDefaultListener(name,listen)</a></span>
 </li>
 <li>
-<span><a href="#notification-trigger-name-data-">notification.trigger(name,data)</a></span>
+<span><a href="#notification-trigger-name-data">notification.trigger(name,data)</a></span>
 </li>
 <li>
-<span><a href="#notification-triggerwithevent-name-event-">notification.triggerWithEvent(name,event)</a></span>
+<span><a href="#notification-triggerwithevent-name-event">notification.triggerWithEvent(name,event)</a></span>
 </li>
 <li>
-<span><a href="#notification-removeeventlistener-name-listen-ctx-">notification.removeEventListener(name,listen?,ctx?)</a></span>
+<span><a href="#notification-removeeventlistener-name-listen-ctx">notification.removeEventListener(name,listen?,ctx?)</a></span>
 </li>
 <li>
-<span><a href="#notification-removeeventlistenerbyctx-ctx-">notification.removeEventListenerByCtx(ctx)</a></span>
+<span><a href="#notification-removeeventlistenerbyctx-ctx">notification.removeEventListenerByCtx(ctx)</a></span>
 </li>
 <li>
-<span><a href="#notification-allnoticers-">notification.allNoticers()</a></span>
+<span><a href="#notification-allnoticers">notification.allNoticers()</a></span>
 </li>
 <li>
-<span><a href="#notification-triggerlistenerchange-name-count-change-">notification.triggerListenerChange(name,count,change)</a></span>
+<span><a href="#notification-triggerlistenerchange-name-count-change">notification.triggerListenerChange(name,count,change)</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#event-target-name-">event(target,name)</a></span>
+<span><a href="#event-target-name">event(target,name)</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-_event">
 			quark/_event
-			<span><a class="mark" href="#quark-_event" id="quark-_event">#</a></span>
+			<span><a class="mark" href="#quark-_event" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="class-event">
 			Class: Event
-			<span><a class="mark" href="#class-event" id="class-event">#</a></span>
+			<span><a class="mark" href="#class-event" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="event">
 			Event
-			<span><a class="mark" href="#event" id="event">#</a></span>
+			<span><a class="mark" href="#event" aria-label="Link to this section">#</a></span>
 		</h3><p>The event data</p>
-<ul>
-<li><code>@template</code> &lt;<code>Sender</code>,<code>SendData</code>&gt;</li>
-</ul>
+<p><strong>Type parameters:</strong> <code>Sender</code>, <code>SendData</code></p>
 <h3 id="event-returnvalue">
 			event.returnValue
-			<span><a class="mark" href="#event-returnvalue" id="event-returnvalue">#</a></span>
+			<span><a class="mark" href="#event-returnvalue" aria-label="Link to this section">#</a></span>
 		</h3><p>The return value </p>
-<ul>
-<li><code>returnValue</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>returnValue: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
 <h3 id="event-data">
 			event.data
-			<span><a class="mark" href="#event-data" id="event-data">#</a></span>
+			<span><a class="mark" href="#event-data" aria-label="Link to this section">#</a></span>
 		</h3><p>The Data </p>
-<ul>
-<li><code>@get</code> <code>data</code>: <code>SendData</code> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> data: SendData</code></pre>
+
+
 <h3 id="event-sender">
 			event.sender
-			<span><a class="mark" href="#event-sender" id="event-sender">#</a></span>
+			<span><a class="mark" href="#event-sender" aria-label="Link to this section">#</a></span>
 		</h3><p>The sender </p>
-<ul>
-<li><code>@get</code> <code>sender</code>: <code>Sender</code> </li>
-</ul>
-<h3 id="event-constructor-data-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> sender: Sender</code></pre>
+
+
+<h3 id="event-constructor-data">
 			event.constructor(data)
-			<span><a class="mark" href="#event-constructor-data-" id="event-constructor-data-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>data</code>: <code>SendData</code> </li>
-</ul>
+			<span><a class="mark" href="#event-constructor-data" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(data: SendData)</code></pre>
+
+
+
 <h2 id="listen">
 			Listen
-			<span><a class="mark" href="#listen" id="listen">#</a></span>
+			<span><a class="mark" href="#listen" aria-label="Link to this section">#</a></span>
 		</h2><ul>
-<li><code>@callback</code> <code>Listen(this,evt)</code> </li>
-<li><code>@template</code> &lt;<code>E</code>,<code>Ctx</code>&gt;</li>
+<li><code>@callback</code> <code>Listen(this,evt)</code>
+<strong>Type parameters:</strong> <code>E</code>, <code>Ctx</code></li>
 <li><code>@param</code> <code>this</code>: <code>Ctx</code> </li>
 <li><code>@param</code> <code>evt</code>: <code>E</code> </li>
 </ul>
 <h2 id="listen2">
 			Listen2
-			<span><a class="mark" href="#listen2" id="listen2">#</a></span>
+			<span><a class="mark" href="#listen2" aria-label="Link to this section">#</a></span>
 		</h2><ul>
-<li><code>@callback</code> <code>Listen2(self,evt)</code> </li>
-<li><code>@template</code> &lt;<code>E</code>,<code>Ctx</code>&gt;</li>
+<li><code>@callback</code> <code>Listen2(self,evt)</code>
+<strong>Type parameters:</strong> <code>E</code>, <code>Ctx</code></li>
 <li><code>@param</code> <code>self</code>: <code>Ctx</code> </li>
 <li><code>@param</code> <code>evt</code>: <code>E</code> </li>
 </ul>
 <h2 id="class-eventnoticer">
 			Class: EventNoticer
-			<span><a class="mark" href="#class-eventnoticer" id="class-eventnoticer">#</a></span>
+			<span><a class="mark" href="#class-eventnoticer" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="eventnoticer">
 			EventNoticer
-			<span><a class="mark" href="#eventnoticer" id="eventnoticer">#</a></span>
+			<span><a class="mark" href="#eventnoticer" aria-label="Link to this section">#</a></span>
 		</h3><p>Event notifier, the core of event listener adding, deleting, triggering and notification</p>
-<ul>
-<li><code>@template</code> &lt;<code>E</code>&gt;</li>
-</ul>
+<p><strong>Type parameters:</strong> <code>E</code></p>
 <h3 id="eventnoticer-name">
 			eventnoticer.name
-			<span><a class="mark" href="#eventnoticer-name" id="eventnoticer-name">#</a></span>
+			<span><a class="mark" href="#eventnoticer-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Event name </p>
-<ul>
-<li><code>@get</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> name: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
 <h3 id="eventnoticer-sender">
 			eventnoticer.sender
-			<span><a class="mark" href="#eventnoticer-sender" id="eventnoticer-sender">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>sender</code>: <code>any</code> Event sender</li>
-</ul>
+			<span><a class="mark" href="#eventnoticer-sender" aria-label="Link to this section">#</a></span>
+		</h3><p>Event sender</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> sender: any</code></pre>
+
+
 <h3 id="eventnoticer-length">
 			eventnoticer.length
-			<span><a class="mark" href="#eventnoticer-length" id="eventnoticer-length">#</a></span>
-		</h3><ul>
-<li><code>@get</code> <code>length</code>:  Number of event listeners</li>
-</ul>
-<h3 id="eventnoticer-constructor-name-sender-">
+			<span><a class="mark" href="#eventnoticer-length" aria-label="Link to this section">#</a></span>
+		</h3><p>Number of event listeners</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> length: </code></pre>
+
+
+<h3 id="eventnoticer-constructor-name-sender">
 			eventnoticer.constructor(name,sender)
-			<span><a class="mark" href="#eventnoticer-constructor-name-sender-" id="eventnoticer-constructor-name-sender-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> Event name</li>
-<li><p><code>@param</code> <code>sender</code>: <code>SenderOf</code>&lt;<code>E</code>&gt; Event sender</p><br/></li>
-<li><p><code>@param</code> <code>listen</code>:  Listening Function</p><br/></li>
+			<span><a class="mark" href="#eventnoticer-constructor-name-sender" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>constructor(name: <a class="api-type" href="$ext.html#string">string</a>, sender: SenderOf&lt;E&gt;)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> — Event name</li>
+<li><p><code>sender</code> — Event sender</p>
+</li>
+<li><p><code>@param</code> <code>listen</code>:  Listening Function</p>
+</li>
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
 <li><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</li>
 </ul>
@@ -339,108 +331,122 @@ screen.onChange.on(function(ev) {
 <li><code>@param</code> <code>ctxOrId?</code>:  Specify the listener function this or id alias</li>
 <li><code>@param</code> <code>id?</code>:  Listener alias, can be deleted by id</li>
 </ul>
-<h3 id="eventnoticer-forward-noticer-id-">
+<h3 id="eventnoticer-forward-noticer-id">
 			eventnoticer.forward(noticer,id?)
-			<span><a class="mark" href="#eventnoticer-forward-noticer-id-" id="eventnoticer-forward-noticer-id-">#</a></span>
+			<span><a class="mark" href="#eventnoticer-forward-noticer-id" aria-label="Link to this section">#</a></span>
 		</h3><p>Forward the event to another noticer </p>
-<ul>
-<li><code>@param</code> <code>noticer</code>: <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
-<li><code>@param</code> <code>id?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="eventnoticer-trigger-data-">
+<pre class="api-signature sh_none"><code>forward(noticer: <a class="api-type" href="#class-eventnoticer">EventNoticer</a>&lt;E&gt;, id?: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+
+<h3 id="eventnoticer-trigger-data">
 			eventnoticer.trigger(data)
-			<span><a class="mark" href="#eventnoticer-trigger-data-" id="eventnoticer-trigger-data-">#</a></span>
+			<span><a class="mark" href="#eventnoticer-trigger-data" aria-label="Link to this section">#</a></span>
 		</h3><p>Notify all observers</p>
-<ul>
-<li><code>@param</code> <code>data</code>: <code>DataOf</code>&lt;<code>E</code>&gt; </li>
-</ul>
-<h3 id="eventnoticer-triggerwithevent-e-">
+<pre class="api-signature sh_none"><code>trigger(data: DataOf&lt;E&gt;)</code></pre>
+
+
+
+<h3 id="eventnoticer-triggerwithevent-e">
 			eventnoticer.triggerWithEvent(e)
-			<span><a class="mark" href="#eventnoticer-triggerwithevent-e-" id="eventnoticer-triggerwithevent-e-">#</a></span>
+			<span><a class="mark" href="#eventnoticer-triggerwithevent-e" aria-label="Link to this section">#</a></span>
 		</h3><p>Notify all observers</p>
-<ul>
-<li><code>@param</code> <code>e</code>: <code>E</code> </li>
-</ul>
-<h3 id="eventnoticer-off-listen-ctx-">
+<pre class="api-signature sh_none"><code>triggerWithEvent(e: E)</code></pre>
+
+
+
+<h3 id="eventnoticer-off-listen-ctx">
 			eventnoticer.off(listen?,ctx?)
-			<span><a class="mark" href="#eventnoticer-off-listen-ctx-" id="eventnoticer-off-listen-ctx-">#</a></span>
+			<span><a class="mark" href="#eventnoticer-off-listen-ctx" aria-label="Link to this section">#</a></span>
 		</h3><p>Remove listener function</p>
+<pre class="api-signature sh_none"><code>off(listen?: <a class="api-type" href="$ext.html#function">Function</a> | <a class="api-type" href="$ext.html#string">string</a>, ctx?: <a class="api-type" href="$ext.html#object">object</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>listen?</code>: <a href="$ext.html#function"><code>Function</code></a>|<a href="$ext.html#string"><code>string</code></a> <br/>  It can be a listener function/id alias.<br/>  If no parameter is passed, all listeners will be uninstalled.</li>
-<li><code>@param</code> <code>ctx?</code>: <a href="$ext.html#object"><code>object</code></a> Context object, only valid when <code>listen</code> is a function</li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a>  Returns the number of deleted listeners</li>
+<li><code>listen?</code>
+  It can be a listener function/id alias.
+  If no parameter is passed, all listeners will be uninstalled.</li>
+<li><code>ctx?</code> — Context object, only valid when <code>listen</code> is a function</li>
 </ul>
-<h3 id="eventnoticer-offbyctx-ctx-">
+<p><strong>Returns:</strong>  Returns the number of deleted listeners</p>
+<h3 id="eventnoticer-offbyctx-ctx">
 			eventnoticer.offByCtx(ctx)
-			<span><a class="mark" href="#eventnoticer-offbyctx-ctx-" id="eventnoticer-offbyctx-ctx-">#</a></span>
+			<span><a class="mark" href="#eventnoticer-offbyctx-ctx" aria-label="Link to this section">#</a></span>
 		</h3><p>Remove all listeners related to <code>ctx</code> on this noticer</p>
-<ul>
-<li><code>@param</code> <code>ctx</code>: <a href="$ext.html#object"><code>object</code></a> </li>
-<li><code>@return</code> <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>offByCtx(ctx: <a class="api-type" href="$ext.html#object">object</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+
 <h2 id="class-notification">
 			Class: Notification
-			<span><a class="mark" href="#class-notification" id="class-notification">#</a></span>
+			<span><a class="mark" href="#class-notification" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="notification">
 			Notification
-			<span><a class="mark" href="#notification" id="notification">#</a></span>
+			<span><a class="mark" href="#notification" aria-label="Link to this section">#</a></span>
 		</h3><p>This is a collection of events <code>EventNoticer</code>, event triggering and response center</p>
 <p>Derived types inherited from it can use the <code>@event</code> keyword to declare member events</p>
-<ul>
-<li><code>@template</code> &lt;<code>E</code>&gt;</li>
-</ul>
-<h3 id="notification-getnoticer-name-">
+<p><strong>Type parameters:</strong> <code>E</code></p>
+<h3 id="notification-getnoticer-name">
 			notification.getNoticer(name)
-			<span><a class="mark" href="#notification-getnoticer-name-" id="notification-getnoticer-name-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt; </li>
-</ul>
-<h3 id="notification-hasnoticer-name-">
+			<span><a class="mark" href="#notification-getnoticer-name" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>getNoticer(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="#class-eventnoticer">EventNoticer</a>&lt;E&gt;</code></pre>
+
+
+
+<h3 id="notification-hasnoticer-name">
 			notification.hasNoticer(name)
-			<span><a class="mark" href="#notification-hasnoticer-name-" id="notification-hasnoticer-name-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <code>bool</code> </li>
-</ul>
-<h3 id="notification-adddefaultlistener-name-listen-">
+			<span><a class="mark" href="#notification-hasnoticer-name" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>hasNoticer(name: <a class="api-type" href="$ext.html#string">string</a>): bool</code></pre>
+
+
+
+<h3 id="notification-adddefaultlistener-name-listen">
 			notification.addDefaultListener(name,listen)
-			<span><a class="mark" href="#notification-adddefaultlistener-name-listen-" id="notification-adddefaultlistener-name-listen-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>listen</code>: <a href="#listen"><code>Listen</code></a>&lt;<code>E2</code>&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> </li>
-<li><code>@template</code> &lt;<code>E2</code>&gt;</li>
-</ul>
-<h3 id="notification-trigger-name-data-">
+			<span><a class="mark" href="#notification-adddefaultlistener-name-listen" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>addDefaultListener(name: <a class="api-type" href="$ext.html#string">string</a>, listen: <a class="api-type" href="#listen">Listen</a>&lt;E2&gt; | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>)</code></pre>
+
+
+<p><strong>Type parameters:</strong> <code>E2</code></p>
+<h3 id="notification-trigger-name-data">
 			notification.trigger(name,data)
-			<span><a class="mark" href="#notification-trigger-name-data-" id="notification-trigger-name-data-">#</a></span>
+			<span><a class="mark" href="#notification-trigger-name-data" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger an event by event name --&gt; <a href="#eventnoticer-trigger-data-"><code>EventNoticer.trigger(data)</code></a></p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>data</code>: <code>DataOf</code>&lt;<code>E</code>&gt; </li>
-</ul>
-<h3 id="notification-triggerwithevent-name-event-">
+<pre class="api-signature sh_none"><code>trigger(name: <a class="api-type" href="$ext.html#string">string</a>, data: DataOf&lt;E&gt;)</code></pre>
+
+
+
+<h3 id="notification-triggerwithevent-name-event">
 			notification.triggerWithEvent(name,event)
-			<span><a class="mark" href="#notification-triggerwithevent-name-event-" id="notification-triggerwithevent-name-event-">#</a></span>
+			<span><a class="mark" href="#notification-triggerwithevent-name-event" aria-label="Link to this section">#</a></span>
 		</h3><p>Trigger an event by name and <a href="#class-event"><code>Event</code></a> --&gt; [<code>EventNoticer.triggerWithEvent(event)</code>]</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>event</code>: <code>E</code> </li>
-</ul>
-<h3 id="notification-removeeventlistener-name-listen-ctx-">
+<pre class="api-signature sh_none"><code>triggerWithEvent(name: <a class="api-type" href="$ext.html#string">string</a>, event: E)</code></pre>
+
+
+
+<h3 id="notification-removeeventlistener-name-listen-ctx">
 			notification.removeEventListener(name,listen?,ctx?)
-			<span><a class="mark" href="#notification-removeeventlistener-name-listen-ctx-" id="notification-removeeventlistener-name-listen-ctx-">#</a></span>
+			<span><a class="mark" href="#notification-removeeventlistener-name-listen-ctx" aria-label="Link to this section">#</a></span>
 		</h3><p>Remove listener function</p>
+<pre class="api-signature sh_none"><code>removeEventListener(name: <a class="api-type" href="$ext.html#string">string</a>, listen?: <a class="api-type" href="$ext.html#function">Function</a> | <a class="api-type" href="$ext.html#string">string</a>, ctx?: <a class="api-type" href="$ext.html#object">object</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> Event name</li>
-<li><code>@param</code> <code>listen?</code>: <a href="$ext.html#function"><code>Function</code></a>|<a href="$ext.html#string"><code>string</code></a> It can be a listener function/id alias.<pre><code>            If no parameter is passed, all listeners will be uninstalled.<br/></code></pre></li>
-<li><code>@param</code> <code>ctx?</code>: <a href="$ext.html#object"><code>object</code></a> Context object, only valid when <code>listen</code> is a function</li>
+<li><code>name</code> — Event name</li>
+<li><code>listen?</code> — It can be a listener function/id alias.<pre><code>            If no parameter is passed, all listeners will be uninstalled.
+</code></pre></li>
+<li><code>ctx?</code> — Context object, only valid when <code>listen</code> is a function</li>
 </ul>
-<h3 id="notification-removeeventlistenerbyctx-ctx-">
+<h3 id="notification-removeeventlistenerbyctx-ctx">
 			notification.removeEventListenerByCtx(ctx)
-			<span><a class="mark" href="#notification-removeeventlistenerbyctx-ctx-" id="notification-removeeventlistenerbyctx-ctx-">#</a></span>
-		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code><br/>Actually traverse and call the <a href="#eventnoticer-offbyctx-ctx-"><code>EventNoticer.offByCtx(ctx)</code></a> method</p>
+			<span><a class="mark" href="#notification-removeeventlistenerbyctx-ctx" aria-label="Link to this section">#</a></span>
+		</h3><p>Delete all listeners related to <code>ctx</code> on <code>notification</code>
+Actually traverse and call the <a href="#eventnoticer-offbyctx-ctx-"><code>EventNoticer.offByCtx(ctx)</code></a> method</p>
+<pre class="api-signature sh_none"><code>removeEventListenerByCtx(ctx: <a class="api-type" href="$ext.html#object">object</a>)</code></pre>
+
+
+
 <p>For example:</p>
 <pre><code class="undefinedts">import event from &#39;quark/event&#39;;
 
@@ -455,7 +461,7 @@ notification.onChange = function(ev) { // add default listener
 }
 notification.triggerChange(100);
 
-// Prints: 
+// Prints:
 // responseonChange 0 200
 // responseonChange 1
 notification.onChange.on(function(ev) {
@@ -469,32 +475,30 @@ noticer.off(0) // delete default listener
 notification.triggerChange();
 
 </code></pre>
-<ul>
-<li><code>@param</code> <code>ctx</code>: <a href="$ext.html#object"><code>object</code></a> </li>
-</ul>
-<h3 id="notification-allnoticers-">
+<h3 id="notification-allnoticers">
 			notification.allNoticers()
-			<span><a class="mark" href="#notification-allnoticers-" id="notification-allnoticers-">#</a></span>
+			<span><a class="mark" href="#notification-allnoticers" aria-label="Link to this section">#</a></span>
 		</h3><p>Get all of <a href="#class-eventnoticer"><code>EventNoticer</code></a></p>
-<ul>
-<li><code>@return</code> <a href="#class-eventnoticer"><code>EventNoticer</code></a>&lt;<code>E</code>&gt;<code>[]</code> </li>
-</ul>
-<h3 id="notification-triggerlistenerchange-name-count-change-">
+<pre class="api-signature sh_none"><code>allNoticers(): <a class="api-type" href="#class-eventnoticer">EventNoticer</a>&lt;E&gt;[]</code></pre>
+
+
+
+<h3 id="notification-triggerlistenerchange-name-count-change">
 			notification.triggerListenerChange(name,count,change)
-			<span><a class="mark" href="#notification-triggerlistenerchange-name-count-change-" id="notification-triggerlistenerchange-name-count-change-">#</a></span>
-		</h3><ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@param</code> <code>count</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-<li><code>@param</code> <code>change</code>: <a href="numbers.html#uint"><code>Uint</code></a> </li>
-</ul>
-<h2 id="event-target-name-">
+			<span><a class="mark" href="#notification-triggerlistenerchange-name-count-change" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>triggerListenerChange(name: <a class="api-type" href="$ext.html#string">string</a>, count: <a class="api-type" href="numbers.html#uint">Uint</a>, change: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+
+
+
+<h2 id="event-target-name">
 			event(target,name)
-			<span><a class="mark" href="#event-target-name-" id="event-target-name-">#</a></span>
+			<span><a class="mark" href="#event-target-name" aria-label="Link to this section">#</a></span>
 		</h2><p>Typescript decorator</p>
+<pre class="api-signature sh_none"><code>event(target: any, name: <a class="api-type" href="$ext.html#string">string</a>)</code></pre>
+
+
 <ul>
 <li><code>@decorator</code>  </li>
-<li><code>@param</code> <code>target</code>: <code>any</code> </li>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
 </ul>
 
 			</div>
@@ -503,19 +507,28 @@ notification.triggerChange();
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = '$event.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

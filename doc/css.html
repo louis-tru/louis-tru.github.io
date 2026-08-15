@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'css.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-css">quark/css</a></span>
@@ -133,298 +120,298 @@
 <span><a href="#stylesheets">StyleSheets</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-time-">stylesheets.time?</a></span>
+<span><a href="#stylesheets-time">stylesheets.time?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-curve-">stylesheets.curve?</a></span>
+<span><a href="#stylesheets-curve">stylesheets.curve?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-color-">stylesheets.color?</a></span>
+<span><a href="#stylesheets-color">stylesheets.color?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-cascadecolor-">stylesheets.cascadeColor?</a></span>
+<span><a href="#stylesheets-cascadecolor">stylesheets.cascadeColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-cursor-">stylesheets.cursor?</a></span>
+<span><a href="#stylesheets-cursor">stylesheets.cursor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-zindex-">stylesheets.zIndex?</a></span>
+<span><a href="#stylesheets-zindex">stylesheets.zIndex?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-opacity-">stylesheets.opacity?</a></span>
+<span><a href="#stylesheets-opacity">stylesheets.opacity?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-visible-">stylesheets.visible?</a></span>
+<span><a href="#stylesheets-visible">stylesheets.visible?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-receive-">stylesheets.receive?</a></span>
+<span><a href="#stylesheets-receive">stylesheets.receive?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-aa-">stylesheets.aa?</a></span>
+<span><a href="#stylesheets-aa">stylesheets.aa?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-clip-">stylesheets.clip?</a></span>
+<span><a href="#stylesheets-clip">stylesheets.clip?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-layout-">stylesheets.layout?</a></span>
+<span><a href="#stylesheets-layout">stylesheets.layout?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-align-">stylesheets.align?</a></span>
+<span><a href="#stylesheets-align">stylesheets.align?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-boxsizing-">stylesheets.boxSizing?</a></span>
+<span><a href="#stylesheets-boxsizing">stylesheets.boxSizing?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-width-">stylesheets.width?</a></span>
+<span><a href="#stylesheets-width">stylesheets.width?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-height-">stylesheets.height?</a></span>
+<span><a href="#stylesheets-height">stylesheets.height?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-minwidth-">stylesheets.minWidth?</a></span>
+<span><a href="#stylesheets-minwidth">stylesheets.minWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-minheight-">stylesheets.minHeight?</a></span>
+<span><a href="#stylesheets-minheight">stylesheets.minHeight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-maxwidth-">stylesheets.maxWidth?</a></span>
+<span><a href="#stylesheets-maxwidth">stylesheets.maxWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-maxheight-">stylesheets.maxHeight?</a></span>
+<span><a href="#stylesheets-maxheight">stylesheets.maxHeight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-margin-">stylesheets.margin?</a></span>
+<span><a href="#stylesheets-margin">stylesheets.margin?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-margintop-">stylesheets.marginTop?</a></span>
+<span><a href="#stylesheets-margintop">stylesheets.marginTop?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-marginright-">stylesheets.marginRight?</a></span>
+<span><a href="#stylesheets-marginright">stylesheets.marginRight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-marginbottom-">stylesheets.marginBottom?</a></span>
+<span><a href="#stylesheets-marginbottom">stylesheets.marginBottom?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-marginleft-">stylesheets.marginLeft?</a></span>
+<span><a href="#stylesheets-marginleft">stylesheets.marginLeft?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-padding-">stylesheets.padding?</a></span>
+<span><a href="#stylesheets-padding">stylesheets.padding?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-paddingtop-">stylesheets.paddingTop?</a></span>
+<span><a href="#stylesheets-paddingtop">stylesheets.paddingTop?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-paddingright-">stylesheets.paddingRight?</a></span>
+<span><a href="#stylesheets-paddingright">stylesheets.paddingRight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-paddingbottom-">stylesheets.paddingBottom?</a></span>
+<span><a href="#stylesheets-paddingbottom">stylesheets.paddingBottom?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-paddingleft-">stylesheets.paddingLeft?</a></span>
+<span><a href="#stylesheets-paddingleft">stylesheets.paddingLeft?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderradius-">stylesheets.borderRadius?</a></span>
+<span><a href="#stylesheets-borderradius">stylesheets.borderRadius?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-bordertopleftradius-">stylesheets.borderTopLeftRadius?</a></span>
+<span><a href="#stylesheets-bordertopleftradius">stylesheets.borderTopLeftRadius?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-bordertoprightradius-">stylesheets.borderTopRightRadius?</a></span>
+<span><a href="#stylesheets-bordertoprightradius">stylesheets.borderTopRightRadius?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderbottomrightradius-">stylesheets.borderBottomRightRadius?</a></span>
+<span><a href="#stylesheets-borderbottomrightradius">stylesheets.borderBottomRightRadius?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderbottomleftradius-">stylesheets.borderBottomLeftRadius?</a></span>
+<span><a href="#stylesheets-borderbottomleftradius">stylesheets.borderBottomLeftRadius?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-border-">stylesheets.border?</a></span>
+<span><a href="#stylesheets-border">stylesheets.border?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-bordertop-">stylesheets.borderTop?</a></span>
+<span><a href="#stylesheets-bordertop">stylesheets.borderTop?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderright-">stylesheets.borderRight?</a></span>
+<span><a href="#stylesheets-borderright">stylesheets.borderRight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderbottom-">stylesheets.borderBottom?</a></span>
+<span><a href="#stylesheets-borderbottom">stylesheets.borderBottom?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderleft-">stylesheets.borderLeft?</a></span>
+<span><a href="#stylesheets-borderleft">stylesheets.borderLeft?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderwidth-">stylesheets.borderWidth?</a></span>
+<span><a href="#stylesheets-borderwidth">stylesheets.borderWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-bordercolor-">stylesheets.borderColor?</a></span>
+<span><a href="#stylesheets-bordercolor">stylesheets.borderColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-bordertopwidth-">stylesheets.borderTopWidth?</a></span>
+<span><a href="#stylesheets-bordertopwidth">stylesheets.borderTopWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderrightwidth-">stylesheets.borderRightWidth?</a></span>
+<span><a href="#stylesheets-borderrightwidth">stylesheets.borderRightWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderbottomwidth-">stylesheets.borderBottomWidth?</a></span>
+<span><a href="#stylesheets-borderbottomwidth">stylesheets.borderBottomWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderleftwidth-">stylesheets.borderLeftWidth?</a></span>
+<span><a href="#stylesheets-borderleftwidth">stylesheets.borderLeftWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-bordertopcolor-">stylesheets.borderTopColor?</a></span>
+<span><a href="#stylesheets-bordertopcolor">stylesheets.borderTopColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderrightcolor-">stylesheets.borderRightColor?</a></span>
+<span><a href="#stylesheets-borderrightcolor">stylesheets.borderRightColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderbottomcolor-">stylesheets.borderBottomColor?</a></span>
+<span><a href="#stylesheets-borderbottomcolor">stylesheets.borderBottomColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-borderleftcolor-">stylesheets.borderLeftColor?</a></span>
+<span><a href="#stylesheets-borderleftcolor">stylesheets.borderLeftColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-backgroundcolor-">stylesheets.backgroundColor?</a></span>
+<span><a href="#stylesheets-backgroundcolor">stylesheets.backgroundColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-background-">stylesheets.background?</a></span>
+<span><a href="#stylesheets-background">stylesheets.background?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-boxshadow-">stylesheets.boxShadow?</a></span>
+<span><a href="#stylesheets-boxshadow">stylesheets.boxShadow?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-weight-">stylesheets.weight?</a></span>
+<span><a href="#stylesheets-weight">stylesheets.weight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-direction-">stylesheets.direction?</a></span>
+<span><a href="#stylesheets-direction">stylesheets.direction?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-itemsalign-">stylesheets.itemsAlign?</a></span>
+<span><a href="#stylesheets-itemsalign">stylesheets.itemsAlign?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-crossalign-">stylesheets.crossAlign?</a></span>
+<span><a href="#stylesheets-crossalign">stylesheets.crossAlign?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-wrap-">stylesheets.wrap?</a></span>
+<span><a href="#stylesheets-wrap">stylesheets.wrap?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-wrapalign-">stylesheets.wrapAlign?</a></span>
+<span><a href="#stylesheets-wrapalign">stylesheets.wrapAlign?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-src-">stylesheets.src?</a></span>
+<span><a href="#stylesheets-src">stylesheets.src?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textalign-">stylesheets.textAlign?</a></span>
+<span><a href="#stylesheets-textalign">stylesheets.textAlign?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-fontweight-">stylesheets.fontWeight?</a></span>
+<span><a href="#stylesheets-fontweight">stylesheets.fontWeight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-fontslant-">stylesheets.fontSlant?</a></span>
+<span><a href="#stylesheets-fontslant">stylesheets.fontSlant?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textdecoration-">stylesheets.textDecoration?</a></span>
+<span><a href="#stylesheets-textdecoration">stylesheets.textDecoration?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textoverflow-">stylesheets.textOverflow?</a></span>
+<span><a href="#stylesheets-textoverflow">stylesheets.textOverflow?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-whitespace-">stylesheets.whiteSpace?</a></span>
+<span><a href="#stylesheets-whitespace">stylesheets.whiteSpace?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-wordbreak-">stylesheets.wordBreak?</a></span>
+<span><a href="#stylesheets-wordbreak">stylesheets.wordBreak?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-fontsize-">stylesheets.fontSize?</a></span>
+<span><a href="#stylesheets-fontsize">stylesheets.fontSize?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textbackgroundcolor-">stylesheets.textBackgroundColor?</a></span>
+<span><a href="#stylesheets-textbackgroundcolor">stylesheets.textBackgroundColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textstroke-">stylesheets.textStroke?</a></span>
+<span><a href="#stylesheets-textstroke">stylesheets.textStroke?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textcolor-">stylesheets.textColor?</a></span>
+<span><a href="#stylesheets-textcolor">stylesheets.textColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-lineheight-">stylesheets.lineHeight?</a></span>
+<span><a href="#stylesheets-lineheight">stylesheets.lineHeight?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-textshadow-">stylesheets.textShadow?</a></span>
+<span><a href="#stylesheets-textshadow">stylesheets.textShadow?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-fontfamily-">stylesheets.fontFamily?</a></span>
+<span><a href="#stylesheets-fontfamily">stylesheets.fontFamily?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-security-">stylesheets.security?</a></span>
+<span><a href="#stylesheets-security">stylesheets.security?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-readonly-">stylesheets.readonly?</a></span>
+<span><a href="#stylesheets-readonly">stylesheets.readonly?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-keyboardtype-">stylesheets.keyboardType?</a></span>
+<span><a href="#stylesheets-keyboardtype">stylesheets.keyboardType?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-returntype-">stylesheets.returnType?</a></span>
+<span><a href="#stylesheets-returntype">stylesheets.returnType?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-placeholdercolor-">stylesheets.placeholderColor?</a></span>
+<span><a href="#stylesheets-placeholdercolor">stylesheets.placeholderColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-cursorcolor-">stylesheets.cursorColor?</a></span>
+<span><a href="#stylesheets-cursorcolor">stylesheets.cursorColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-maxlength-">stylesheets.maxLength?</a></span>
+<span><a href="#stylesheets-maxlength">stylesheets.maxLength?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-placeholder-">stylesheets.placeholder?</a></span>
+<span><a href="#stylesheets-placeholder">stylesheets.placeholder?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-scrollbarcolor-">stylesheets.scrollbarColor?</a></span>
+<span><a href="#stylesheets-scrollbarcolor">stylesheets.scrollbarColor?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-scrollbarwidth-">stylesheets.scrollbarWidth?</a></span>
+<span><a href="#stylesheets-scrollbarwidth">stylesheets.scrollbarWidth?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-scrollbarmargin-">stylesheets.scrollbarMargin?</a></span>
+<span><a href="#stylesheets-scrollbarmargin">stylesheets.scrollbarMargin?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-translate-">stylesheets.translate?</a></span>
+<span><a href="#stylesheets-translate">stylesheets.translate?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-scale-">stylesheets.scale?</a></span>
+<span><a href="#stylesheets-scale">stylesheets.scale?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-skew-">stylesheets.skew?</a></span>
+<span><a href="#stylesheets-skew">stylesheets.skew?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-origin-">stylesheets.origin?</a></span>
+<span><a href="#stylesheets-origin">stylesheets.origin?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-originx-">stylesheets.originX?</a></span>
+<span><a href="#stylesheets-originx">stylesheets.originX?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-originy-">stylesheets.originY?</a></span>
+<span><a href="#stylesheets-originy">stylesheets.originY?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-x-">stylesheets.x?</a></span>
+<span><a href="#stylesheets-x">stylesheets.x?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-y-">stylesheets.y?</a></span>
+<span><a href="#stylesheets-y">stylesheets.y?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-scalex-">stylesheets.scaleX?</a></span>
+<span><a href="#stylesheets-scalex">stylesheets.scaleX?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-scaley-">stylesheets.scaleY?</a></span>
+<span><a href="#stylesheets-scaley">stylesheets.scaleY?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-skewx-">stylesheets.skewX?</a></span>
+<span><a href="#stylesheets-skewx">stylesheets.skewX?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-skewy-">stylesheets.skewY?</a></span>
+<span><a href="#stylesheets-skewy">stylesheets.skewY?</a></span>
 </li>
 <li>
-<span><a href="#stylesheets-rotatez-">stylesheets.rotateZ?</a></span>
+<span><a href="#stylesheets-rotatez">stylesheets.rotateZ?</a></span>
 </li>
 </ul>
 <li>
@@ -434,655 +421,675 @@
 <span><a href="#cstylesheetsclass">CStyleSheetsClass</a></span>
 </li>
 <li>
-<span><a href="#cstylesheetsclass-set-name-">cstylesheetsclass.set(name)</a></span>
+<span><a href="#cstylesheetsclass-set-name">cstylesheetsclass.set(name)</a></span>
 </li>
 <li>
-<span><a href="#cstylesheetsclass-add-name-">cstylesheetsclass.add(name)</a></span>
+<span><a href="#cstylesheetsclass-add-name">cstylesheetsclass.add(name)</a></span>
 </li>
 <li>
-<span><a href="#cstylesheetsclass-remove-name-">cstylesheetsclass.remove(name)</a></span>
+<span><a href="#cstylesheetsclass-remove-name">cstylesheetsclass.remove(name)</a></span>
 </li>
 <li>
-<span><a href="#cstylesheetsclass-toggle-name-">cstylesheetsclass.toggle(name)</a></span>
+<span><a href="#cstylesheetsclass-toggle-name">cstylesheetsclass.toggle(name)</a></span>
 </li>
 <li>
-<span><a href="#cstylesheetsclass-clear-">cstylesheetsclass.clear()</a></span>
+<span><a href="#cstylesheetsclass-clear">cstylesheetsclass.clear()</a></span>
 </li>
 <li>
-<span><a href="#cstylesheetsclass-has-name-">cstylesheetsclass.has(name)</a></span>
+<span><a href="#cstylesheetsclass-has-name">cstylesheetsclass.has(name)</a></span>
 </li>
 <li>
 <span><a href="#cstylesheetsclass-names">cstylesheetsclass.names</a></span>
 </li>
 </ul>
 <li>
-<span><a href="#createcss-sheets-">createCss(sheets)</a></span>
+<span><a href="#createcss-sheets">createCss(sheets)</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-css">
 			quark/css
-			<span><a class="mark" href="#quark-css" id="quark-css">#</a></span>
+			<span><a class="mark" href="#quark-css" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="cssnameexp">
 			CSSNameExp
-			<span><a class="mark" href="#cssnameexp" id="cssnameexp">#</a></span>
+			<span><a class="mark" href="#cssnameexp" aria-label="Link to this section">#</a></span>
 		</h2><p>Represents a class-based selector expression.</p>
 <p>IMPORTANT:</p>
 <ul>
 <li>Only class selectors are supported.</li>
 <li>This does NOT represent a full CSS selector grammar.</li>
 </ul>
-<p>Example:<br/>  &#39;.button&#39;<br/>  &#39;.button.primary&#39;</p>
-<ul>
-<li><code>@type</code> <code>CSSNameExp</code> = <code>&quot;.className&quot;</code></li>
-</ul>
+<p>Example:
+  &#39;.button&#39;
+  &#39;.button.primary&#39;</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> CSSNameExp = ".className"</code></pre>
+
+
 <h2 id="class-stylesheets">
 			Class: StyleSheets
-			<span><a class="mark" href="#class-stylesheets" id="class-stylesheets">#</a></span>
+			<span><a class="mark" href="#class-stylesheets" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="stylesheets">
 			StyleSheets
-			<span><a class="mark" href="#stylesheets" id="stylesheets">#</a></span>
+			<span><a class="mark" href="#stylesheets" aria-label="Link to this section">#</a></span>
 		</h3><p>Represents a collection of style properties applied to a View.</p>
-<p>This class does NOT describe selector logic.<br/>Selector matching and propagation are handled separately by<br/><code>CStyleSheetsClass</code>.</p>
-<p>Properties defined here are inspired by CSS,<br/>but semantics are adapted for Qk&#39;s GUI layout and rendering model.</p>
-<h3 id="stylesheets-time-">
+<p>This class does NOT describe selector logic.
+Selector matching and propagation are handled separately by
+<code>CStyleSheetsClass</code>.</p>
+<p>Properties defined here are inspired by CSS,
+but semantics are adapted for Qk&#39;s GUI layout and rendering model.</p>
+<h3 id="stylesheets-time">
 			stylesheets.time?
-			<span><a class="mark" href="#stylesheets-time-" id="stylesheets-time-">#</a></span>
-		</h3><ul>
-<li><code>time?</code>: <a href="numbers.html#uint"><code>Uint</code></a> keyframe time or css transition time in milliseconds</li>
-</ul>
-<h3 id="stylesheets-curve-">
+			<span><a class="mark" href="#stylesheets-time" aria-label="Link to this section">#</a></span>
+		</h3><p>keyframe time or css transition time in milliseconds</p>
+<pre class="api-signature sh_none"><code>time?: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<h3 id="stylesheets-curve">
 			stylesheets.curve?
-			<span><a class="mark" href="#stylesheets-curve-" id="stylesheets-curve-">#</a></span>
-		</h3><ul>
-<li><code>curve?</code>: <a href="types.html#curvein"><code>types.CurveIn</code></a> keyframe curve or css transition curve</li>
-</ul>
-<h3 id="stylesheets-color-">
+			<span><a class="mark" href="#stylesheets-curve" aria-label="Link to this section">#</a></span>
+		</h3><p>keyframe curve or css transition curve</p>
+<pre class="api-signature sh_none"><code>curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a></code></pre>
+
+
+<h3 id="stylesheets-color">
 			stylesheets.color?
-			<span><a class="mark" href="#stylesheets-color-" id="stylesheets-color-">#</a></span>
-		</h3><ul>
-<li><code>color?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> view color</li>
-</ul>
-<h3 id="stylesheets-cascadecolor-">
+			<span><a class="mark" href="#stylesheets-color" aria-label="Link to this section">#</a></span>
+		</h3><p>view color</p>
+<pre class="api-signature sh_none"><code>color?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-cascadecolor">
 			stylesheets.cascadeColor?
-			<span><a class="mark" href="#stylesheets-cascadecolor-" id="stylesheets-cascadecolor-">#</a></span>
-		</h3><ul>
-<li><code>cascadeColor?</code>: <a href="types.html#cascadecolorin"><code>types.CascadeColorIn</code></a> cascade color</li>
-</ul>
-<h3 id="stylesheets-cursor-">
+			<span><a class="mark" href="#stylesheets-cascadecolor" aria-label="Link to this section">#</a></span>
+		</h3><p>cascade color</p>
+<pre class="api-signature sh_none"><code>cascadeColor?: <a class="api-type" href="types.html#cascadecolorin">types.CascadeColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-cursor">
 			stylesheets.cursor?
-			<span><a class="mark" href="#stylesheets-cursor-" id="stylesheets-cursor-">#</a></span>
-		</h3><ul>
-<li><code>cursor?</code>: <a href="types.html#cursorstylein"><code>types.CursorStyleIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-zindex-">
+			<span><a class="mark" href="#stylesheets-cursor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>cursor?: <a class="api-type" href="types.html#cursorstylein">types.CursorStyleIn</a></code></pre>
+
+
+<h3 id="stylesheets-zindex">
 			stylesheets.zIndex?
-			<span><a class="mark" href="#stylesheets-zindex-" id="stylesheets-zindex-">#</a></span>
-		</h3><ul>
-<li><code>zIndex?</code>: <a href="numbers.html#uint"><code>Uint</code></a> z index in global view tree</li>
-</ul>
-<h3 id="stylesheets-opacity-">
+			<span><a class="mark" href="#stylesheets-zindex" aria-label="Link to this section">#</a></span>
+		</h3><p>z index in global view tree</p>
+<pre class="api-signature sh_none"><code>zIndex?: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+
+
+<h3 id="stylesheets-opacity">
 			stylesheets.opacity?
-			<span><a class="mark" href="#stylesheets-opacity-" id="stylesheets-opacity-">#</a></span>
-		</h3><ul>
-<li><code>opacity?</code>: <a href="numbers.html#float"><code>Float</code></a> opacity 0.0 ~ 1.0, color.a alias, opacity = color.a / 255.0</li>
-</ul>
-<h3 id="stylesheets-visible-">
+			<span><a class="mark" href="#stylesheets-opacity" aria-label="Link to this section">#</a></span>
+		</h3><p>opacity 0.0 ~ 1.0, color.a alias, opacity = color.a / 255.0</p>
+<pre class="api-signature sh_none"><code>opacity?: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+
+
+<h3 id="stylesheets-visible">
 			stylesheets.visible?
-			<span><a class="mark" href="#stylesheets-visible-" id="stylesheets-visible-">#</a></span>
-		</h3><ul>
-<li><code>visible?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> view visible</li>
-</ul>
-<h3 id="stylesheets-receive-">
+			<span><a class="mark" href="#stylesheets-visible" aria-label="Link to this section">#</a></span>
+		</h3><p>view visible</p>
+<pre class="api-signature sh_none"><code>visible?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="stylesheets-receive">
 			stylesheets.receive?
-			<span><a class="mark" href="#stylesheets-receive-" id="stylesheets-receive-">#</a></span>
-		</h3><ul>
-<li><code>receive?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> view receive events</li>
-</ul>
-<h3 id="stylesheets-aa-">
+			<span><a class="mark" href="#stylesheets-receive" aria-label="Link to this section">#</a></span>
+		</h3><p>view receive events</p>
+<pre class="api-signature sh_none"><code>receive?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="stylesheets-aa">
 			stylesheets.aa?
-			<span><a class="mark" href="#stylesheets-aa-" id="stylesheets-aa-">#</a></span>
-		</h3><ul>
-<li><code>aa?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> view anti-aliasing</li>
-</ul>
-<h3 id="stylesheets-clip-">
+			<span><a class="mark" href="#stylesheets-aa" aria-label="Link to this section">#</a></span>
+		</h3><p>view anti-aliasing</p>
+<pre class="api-signature sh_none"><code>aa?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="stylesheets-clip">
 			stylesheets.clip?
-			<span><a class="mark" href="#stylesheets-clip-" id="stylesheets-clip-">#</a></span>
-		</h3><ul>
-<li><code>clip?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> view clip children</li>
-</ul>
-<h3 id="stylesheets-layout-">
+			<span><a class="mark" href="#stylesheets-clip" aria-label="Link to this section">#</a></span>
+		</h3><p>view clip children</p>
+<pre class="api-signature sh_none"><code>clip?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="stylesheets-layout">
 			stylesheets.layout?
-			<span><a class="mark" href="#stylesheets-layout-" id="stylesheets-layout-">#</a></span>
-		</h3><ul>
-<li><code>layout?</code>: <a href="types.html#layouttypein"><code>types.LayoutTypeIn</code></a> view layout type</li>
-</ul>
-<h3 id="stylesheets-align-">
+			<span><a class="mark" href="#stylesheets-layout" aria-label="Link to this section">#</a></span>
+		</h3><p>view layout type</p>
+<pre class="api-signature sh_none"><code>layout?: <a class="api-type" href="types.html#layouttypein">types.LayoutTypeIn</a></code></pre>
+
+
+<h3 id="stylesheets-align">
 			stylesheets.align?
-			<span><a class="mark" href="#stylesheets-align-" id="stylesheets-align-">#</a></span>
-		</h3><ul>
-<li><code>align?</code>: <a href="types.html#alignin"><code>types.AlignIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-boxsizing-">
+			<span><a class="mark" href="#stylesheets-align" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>align?: <a class="api-type" href="types.html#alignin">types.AlignIn</a></code></pre>
+
+
+<h3 id="stylesheets-boxsizing">
 			stylesheets.boxSizing?
-			<span><a class="mark" href="#stylesheets-boxsizing-" id="stylesheets-boxsizing-">#</a></span>
-		</h3><ul>
-<li><code>boxSizing?</code>: <a href="types.html#boxsizingin"><code>types.BoxSizingIn</code></a> box sizing model</li>
-</ul>
-<h3 id="stylesheets-width-">
+			<span><a class="mark" href="#stylesheets-boxsizing" aria-label="Link to this section">#</a></span>
+		</h3><p>box sizing model</p>
+<pre class="api-signature sh_none"><code>boxSizing?: <a class="api-type" href="types.html#boxsizingin">types.BoxSizingIn</a></code></pre>
+
+
+<h3 id="stylesheets-width">
 			stylesheets.width?
-			<span><a class="mark" href="#stylesheets-width-" id="stylesheets-width-">#</a></span>
-		</h3><ul>
-<li><code>width?</code>: <a href="types.html#boxsizein"><code>types.BoxSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-height-">
+			<span><a class="mark" href="#stylesheets-width" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>width?: <a class="api-type" href="types.html#boxsizein">types.BoxSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-height">
 			stylesheets.height?
-			<span><a class="mark" href="#stylesheets-height-" id="stylesheets-height-">#</a></span>
-		</h3><ul>
-<li><code>height?</code>: <a href="types.html#boxsizein"><code>types.BoxSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-minwidth-">
+			<span><a class="mark" href="#stylesheets-height" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>height?: <a class="api-type" href="types.html#boxsizein">types.BoxSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-minwidth">
 			stylesheets.minWidth?
-			<span><a class="mark" href="#stylesheets-minwidth-" id="stylesheets-minwidth-">#</a></span>
-		</h3><ul>
-<li><code>minWidth?</code>: <a href="types.html#boxsizein"><code>types.BoxSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-minheight-">
+			<span><a class="mark" href="#stylesheets-minwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>minWidth?: <a class="api-type" href="types.html#boxsizein">types.BoxSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-minheight">
 			stylesheets.minHeight?
-			<span><a class="mark" href="#stylesheets-minheight-" id="stylesheets-minheight-">#</a></span>
-		</h3><ul>
-<li><code>minHeight?</code>: <a href="types.html#boxsizein"><code>types.BoxSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-maxwidth-">
+			<span><a class="mark" href="#stylesheets-minheight" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>minHeight?: <a class="api-type" href="types.html#boxsizein">types.BoxSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-maxwidth">
 			stylesheets.maxWidth?
-			<span><a class="mark" href="#stylesheets-maxwidth-" id="stylesheets-maxwidth-">#</a></span>
-		</h3><ul>
-<li><code>maxWidth?</code>: <a href="types.html#boxsizein"><code>types.BoxSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-maxheight-">
+			<span><a class="mark" href="#stylesheets-maxwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>maxWidth?: <a class="api-type" href="types.html#boxsizein">types.BoxSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-maxheight">
 			stylesheets.maxHeight?
-			<span><a class="mark" href="#stylesheets-maxheight-" id="stylesheets-maxheight-">#</a></span>
-		</h3><ul>
-<li><code>maxHeight?</code>: <a href="types.html#boxsizein"><code>types.BoxSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-margin-">
+			<span><a class="mark" href="#stylesheets-maxheight" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>maxHeight?: <a class="api-type" href="types.html#boxsizein">types.BoxSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-margin">
 			stylesheets.margin?
-			<span><a class="mark" href="#stylesheets-margin-" id="stylesheets-margin-">#</a></span>
-		</h3><ul>
-<li><code>margin?</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code>|<a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-margintop-">
+			<span><a class="mark" href="#stylesheets-margin" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>margin?: <a class="api-type" href="$ext.html#number">number</a>[] | <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-margintop">
 			stylesheets.marginTop?
-			<span><a class="mark" href="#stylesheets-margintop-" id="stylesheets-margintop-">#</a></span>
-		</h3><ul>
-<li><code>marginTop?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-marginright-">
+			<span><a class="mark" href="#stylesheets-margintop" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>marginTop?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-marginright">
 			stylesheets.marginRight?
-			<span><a class="mark" href="#stylesheets-marginright-" id="stylesheets-marginright-">#</a></span>
-		</h3><ul>
-<li><code>marginRight?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-marginbottom-">
+			<span><a class="mark" href="#stylesheets-marginright" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>marginRight?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-marginbottom">
 			stylesheets.marginBottom?
-			<span><a class="mark" href="#stylesheets-marginbottom-" id="stylesheets-marginbottom-">#</a></span>
-		</h3><ul>
-<li><code>marginBottom?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-marginleft-">
+			<span><a class="mark" href="#stylesheets-marginbottom" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>marginBottom?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-marginleft">
 			stylesheets.marginLeft?
-			<span><a class="mark" href="#stylesheets-marginleft-" id="stylesheets-marginleft-">#</a></span>
-		</h3><ul>
-<li><code>marginLeft?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-padding-">
+			<span><a class="mark" href="#stylesheets-marginleft" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>marginLeft?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-padding">
 			stylesheets.padding?
-			<span><a class="mark" href="#stylesheets-padding-" id="stylesheets-padding-">#</a></span>
-		</h3><ul>
-<li><code>padding?</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code>|<a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-paddingtop-">
+			<span><a class="mark" href="#stylesheets-padding" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>padding?: <a class="api-type" href="$ext.html#number">number</a>[] | <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-paddingtop">
 			stylesheets.paddingTop?
-			<span><a class="mark" href="#stylesheets-paddingtop-" id="stylesheets-paddingtop-">#</a></span>
-		</h3><ul>
-<li><code>paddingTop?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-paddingright-">
+			<span><a class="mark" href="#stylesheets-paddingtop" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>paddingTop?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-paddingright">
 			stylesheets.paddingRight?
-			<span><a class="mark" href="#stylesheets-paddingright-" id="stylesheets-paddingright-">#</a></span>
-		</h3><ul>
-<li><code>paddingRight?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-paddingbottom-">
+			<span><a class="mark" href="#stylesheets-paddingright" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>paddingRight?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-paddingbottom">
 			stylesheets.paddingBottom?
-			<span><a class="mark" href="#stylesheets-paddingbottom-" id="stylesheets-paddingbottom-">#</a></span>
-		</h3><ul>
-<li><code>paddingBottom?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-paddingleft-">
+			<span><a class="mark" href="#stylesheets-paddingbottom" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>paddingBottom?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-paddingleft">
 			stylesheets.paddingLeft?
-			<span><a class="mark" href="#stylesheets-paddingleft-" id="stylesheets-paddingleft-">#</a></span>
-		</h3><ul>
-<li><code>paddingLeft?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderradius-">
+			<span><a class="mark" href="#stylesheets-paddingleft" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>paddingLeft?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-borderradius">
 			stylesheets.borderRadius?
-			<span><a class="mark" href="#stylesheets-borderradius-" id="stylesheets-borderradius-">#</a></span>
-		</h3><ul>
-<li><code>borderRadius?</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code>|<a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-bordertopleftradius-">
+			<span><a class="mark" href="#stylesheets-borderradius" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderRadius?: <a class="api-type" href="$ext.html#number">number</a>[] | <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-bordertopleftradius">
 			stylesheets.borderTopLeftRadius?
-			<span><a class="mark" href="#stylesheets-bordertopleftradius-" id="stylesheets-bordertopleftradius-">#</a></span>
-		</h3><ul>
-<li><code>borderTopLeftRadius?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-bordertoprightradius-">
+			<span><a class="mark" href="#stylesheets-bordertopleftradius" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderTopLeftRadius?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-bordertoprightradius">
 			stylesheets.borderTopRightRadius?
-			<span><a class="mark" href="#stylesheets-bordertoprightradius-" id="stylesheets-bordertoprightradius-">#</a></span>
-		</h3><ul>
-<li><code>borderTopRightRadius?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderbottomrightradius-">
+			<span><a class="mark" href="#stylesheets-bordertoprightradius" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderTopRightRadius?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-borderbottomrightradius">
 			stylesheets.borderBottomRightRadius?
-			<span><a class="mark" href="#stylesheets-borderbottomrightradius-" id="stylesheets-borderbottomrightradius-">#</a></span>
-		</h3><ul>
-<li><code>borderBottomRightRadius?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderbottomleftradius-">
+			<span><a class="mark" href="#stylesheets-borderbottomrightradius" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderBottomRightRadius?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-borderbottomleftradius">
 			stylesheets.borderBottomLeftRadius?
-			<span><a class="mark" href="#stylesheets-borderbottomleftradius-" id="stylesheets-borderbottomleftradius-">#</a></span>
-		</h3><ul>
-<li><code>borderBottomLeftRadius?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-border-">
+			<span><a class="mark" href="#stylesheets-borderbottomleftradius" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderBottomLeftRadius?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-border">
 			stylesheets.border?
-			<span><a class="mark" href="#stylesheets-border-" id="stylesheets-border-">#</a></span>
-		</h3><ul>
-<li><code>border?</code>: <a href="types.html#borderin"><code>types.BorderIn</code></a><code>[]</code>|<a href="types.html#borderin"><code>types.BorderIn</code></a> border</li>
-</ul>
-<h3 id="stylesheets-bordertop-">
+			<span><a class="mark" href="#stylesheets-border" aria-label="Link to this section">#</a></span>
+		</h3><p>border</p>
+<pre class="api-signature sh_none"><code>border?: <a class="api-type" href="types.html#borderin">types.BorderIn</a>[] | <a class="api-type" href="types.html#borderin">types.BorderIn</a></code></pre>
+
+
+<h3 id="stylesheets-bordertop">
 			stylesheets.borderTop?
-			<span><a class="mark" href="#stylesheets-bordertop-" id="stylesheets-bordertop-">#</a></span>
-		</h3><ul>
-<li><code>borderTop?</code>: <a href="types.html#borderin"><code>types.BorderIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderright-">
+			<span><a class="mark" href="#stylesheets-bordertop" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderTop?: <a class="api-type" href="types.html#borderin">types.BorderIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderright">
 			stylesheets.borderRight?
-			<span><a class="mark" href="#stylesheets-borderright-" id="stylesheets-borderright-">#</a></span>
-		</h3><ul>
-<li><code>borderRight?</code>: <a href="types.html#borderin"><code>types.BorderIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderbottom-">
+			<span><a class="mark" href="#stylesheets-borderright" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderRight?: <a class="api-type" href="types.html#borderin">types.BorderIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderbottom">
 			stylesheets.borderBottom?
-			<span><a class="mark" href="#stylesheets-borderbottom-" id="stylesheets-borderbottom-">#</a></span>
-		</h3><ul>
-<li><code>borderBottom?</code>: <a href="types.html#borderin"><code>types.BorderIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderleft-">
+			<span><a class="mark" href="#stylesheets-borderbottom" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderBottom?: <a class="api-type" href="types.html#borderin">types.BorderIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderleft">
 			stylesheets.borderLeft?
-			<span><a class="mark" href="#stylesheets-borderleft-" id="stylesheets-borderleft-">#</a></span>
-		</h3><ul>
-<li><code>borderLeft?</code>: <a href="types.html#borderin"><code>types.BorderIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderwidth-">
+			<span><a class="mark" href="#stylesheets-borderleft" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderLeft?: <a class="api-type" href="types.html#borderin">types.BorderIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderwidth">
 			stylesheets.borderWidth?
-			<span><a class="mark" href="#stylesheets-borderwidth-" id="stylesheets-borderwidth-">#</a></span>
-		</h3><ul>
-<li><code>borderWidth?</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code>|<a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-bordercolor-">
+			<span><a class="mark" href="#stylesheets-borderwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderWidth?: <a class="api-type" href="$ext.html#number">number</a>[] | <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-bordercolor">
 			stylesheets.borderColor?
-			<span><a class="mark" href="#stylesheets-bordercolor-" id="stylesheets-bordercolor-">#</a></span>
-		</h3><ul>
-<li><code>borderColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a><code>[]</code>|<a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-bordertopwidth-">
+			<span><a class="mark" href="#stylesheets-bordercolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a>[] | <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-bordertopwidth">
 			stylesheets.borderTopWidth?
-			<span><a class="mark" href="#stylesheets-bordertopwidth-" id="stylesheets-bordertopwidth-">#</a></span>
-		</h3><ul>
-<li><code>borderTopWidth?</code>: <a href="$ext.html#number"><code>number</code></a> border width</li>
-</ul>
-<h3 id="stylesheets-borderrightwidth-">
+			<span><a class="mark" href="#stylesheets-bordertopwidth" aria-label="Link to this section">#</a></span>
+		</h3><p>border width</p>
+<pre class="api-signature sh_none"><code>borderTopWidth?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-borderrightwidth">
 			stylesheets.borderRightWidth?
-			<span><a class="mark" href="#stylesheets-borderrightwidth-" id="stylesheets-borderrightwidth-">#</a></span>
-		</h3><ul>
-<li><code>borderRightWidth?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderbottomwidth-">
+			<span><a class="mark" href="#stylesheets-borderrightwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderRightWidth?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-borderbottomwidth">
 			stylesheets.borderBottomWidth?
-			<span><a class="mark" href="#stylesheets-borderbottomwidth-" id="stylesheets-borderbottomwidth-">#</a></span>
-		</h3><ul>
-<li><code>borderBottomWidth?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderleftwidth-">
+			<span><a class="mark" href="#stylesheets-borderbottomwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderBottomWidth?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-borderleftwidth">
 			stylesheets.borderLeftWidth?
-			<span><a class="mark" href="#stylesheets-borderleftwidth-" id="stylesheets-borderleftwidth-">#</a></span>
-		</h3><ul>
-<li><code>borderLeftWidth?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-bordertopcolor-">
+			<span><a class="mark" href="#stylesheets-borderleftwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderLeftWidth?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-bordertopcolor">
 			stylesheets.borderTopColor?
-			<span><a class="mark" href="#stylesheets-bordertopcolor-" id="stylesheets-bordertopcolor-">#</a></span>
-		</h3><ul>
-<li><code>borderTopColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> border color</li>
-</ul>
-<h3 id="stylesheets-borderrightcolor-">
+			<span><a class="mark" href="#stylesheets-bordertopcolor" aria-label="Link to this section">#</a></span>
+		</h3><p>border color</p>
+<pre class="api-signature sh_none"><code>borderTopColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderrightcolor">
 			stylesheets.borderRightColor?
-			<span><a class="mark" href="#stylesheets-borderrightcolor-" id="stylesheets-borderrightcolor-">#</a></span>
-		</h3><ul>
-<li><code>borderRightColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderbottomcolor-">
+			<span><a class="mark" href="#stylesheets-borderrightcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderRightColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderbottomcolor">
 			stylesheets.borderBottomColor?
-			<span><a class="mark" href="#stylesheets-borderbottomcolor-" id="stylesheets-borderbottomcolor-">#</a></span>
-		</h3><ul>
-<li><code>borderBottomColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-borderleftcolor-">
+			<span><a class="mark" href="#stylesheets-borderbottomcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderBottomColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-borderleftcolor">
 			stylesheets.borderLeftColor?
-			<span><a class="mark" href="#stylesheets-borderleftcolor-" id="stylesheets-borderleftcolor-">#</a></span>
-		</h3><ul>
-<li><code>borderLeftColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-backgroundcolor-">
+			<span><a class="mark" href="#stylesheets-borderleftcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderLeftColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-backgroundcolor">
 			stylesheets.backgroundColor?
-			<span><a class="mark" href="#stylesheets-backgroundcolor-" id="stylesheets-backgroundcolor-">#</a></span>
-		</h3><ul>
-<li><code>backgroundColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-background-">
+			<span><a class="mark" href="#stylesheets-backgroundcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>backgroundColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-background">
 			stylesheets.background?
-			<span><a class="mark" href="#stylesheets-background-" id="stylesheets-background-">#</a></span>
-		</h3><ul>
-<li><code>background?</code>: <a href="types.html#boxfilterin"><code>types.BoxFilterIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-boxshadow-">
+			<span><a class="mark" href="#stylesheets-background" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>background?: <a class="api-type" href="types.html#boxfilterin">types.BoxFilterIn</a></code></pre>
+
+
+<h3 id="stylesheets-boxshadow">
 			stylesheets.boxShadow?
-			<span><a class="mark" href="#stylesheets-boxshadow-" id="stylesheets-boxshadow-">#</a></span>
-		</h3><ul>
-<li><code>boxShadow?</code>: <a href="types.html#boxshadowin"><code>types.BoxShadowIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-weight-">
+			<span><a class="mark" href="#stylesheets-boxshadow" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>boxShadow?: <a class="api-type" href="types.html#boxshadowin">types.BoxShadowIn</a></code></pre>
+
+
+<h3 id="stylesheets-weight">
 			stylesheets.weight?
-			<span><a class="mark" href="#stylesheets-weight-" id="stylesheets-weight-">#</a></span>
-		</h3><ul>
-<li><code>weight?</code>: <a href="$ext.html#number"><code>number</code></a><code>[]</code>|<a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-direction-">
+			<span><a class="mark" href="#stylesheets-weight" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>weight?: <a class="api-type" href="$ext.html#number">number</a>[] | <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-direction">
 			stylesheets.direction?
-			<span><a class="mark" href="#stylesheets-direction-" id="stylesheets-direction-">#</a></span>
-		</h3><ul>
-<li><code>direction?</code>: <a href="types.html#directionin"><code>types.DirectionIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-itemsalign-">
+			<span><a class="mark" href="#stylesheets-direction" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>direction?: <a class="api-type" href="types.html#directionin">types.DirectionIn</a></code></pre>
+
+
+<h3 id="stylesheets-itemsalign">
 			stylesheets.itemsAlign?
-			<span><a class="mark" href="#stylesheets-itemsalign-" id="stylesheets-itemsalign-">#</a></span>
-		</h3><ul>
-<li><code>itemsAlign?</code>: <a href="types.html#itemsalignin"><code>types.ItemsAlignIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-crossalign-">
+			<span><a class="mark" href="#stylesheets-itemsalign" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>itemsAlign?: <a class="api-type" href="types.html#itemsalignin">types.ItemsAlignIn</a></code></pre>
+
+
+<h3 id="stylesheets-crossalign">
 			stylesheets.crossAlign?
-			<span><a class="mark" href="#stylesheets-crossalign-" id="stylesheets-crossalign-">#</a></span>
-		</h3><ul>
-<li><code>crossAlign?</code>: <a href="types.html#crossalignin"><code>types.CrossAlignIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-wrap-">
+			<span><a class="mark" href="#stylesheets-crossalign" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>crossAlign?: <a class="api-type" href="types.html#crossalignin">types.CrossAlignIn</a></code></pre>
+
+
+<h3 id="stylesheets-wrap">
 			stylesheets.wrap?
-			<span><a class="mark" href="#stylesheets-wrap-" id="stylesheets-wrap-">#</a></span>
-		</h3><ul>
-<li><code>wrap?</code>: <a href="types.html#wrapin"><code>types.WrapIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-wrapalign-">
+			<span><a class="mark" href="#stylesheets-wrap" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>wrap?: <a class="api-type" href="types.html#wrapin">types.WrapIn</a></code></pre>
+
+
+<h3 id="stylesheets-wrapalign">
 			stylesheets.wrapAlign?
-			<span><a class="mark" href="#stylesheets-wrapalign-" id="stylesheets-wrapalign-">#</a></span>
-		</h3><ul>
-<li><code>wrapAlign?</code>: <a href="types.html#wrapalignin"><code>types.WrapAlignIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-src-">
+			<span><a class="mark" href="#stylesheets-wrapalign" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>wrapAlign?: <a class="api-type" href="types.html#wrapalignin">types.WrapAlignIn</a></code></pre>
+
+
+<h3 id="stylesheets-src">
 			stylesheets.src?
-			<span><a class="mark" href="#stylesheets-src-" id="stylesheets-src-">#</a></span>
-		</h3><ul>
-<li><code>src?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="stylesheets-textalign-">
+			<span><a class="mark" href="#stylesheets-src" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>src?: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+<h3 id="stylesheets-textalign">
 			stylesheets.textAlign?
-			<span><a class="mark" href="#stylesheets-textalign-" id="stylesheets-textalign-">#</a></span>
-		</h3><ul>
-<li><code>textAlign?</code>: <a href="types.html#textalignin"><code>types.TextAlignIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-fontweight-">
+			<span><a class="mark" href="#stylesheets-textalign" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textAlign?: <a class="api-type" href="types.html#textalignin">types.TextAlignIn</a></code></pre>
+
+
+<h3 id="stylesheets-fontweight">
 			stylesheets.fontWeight?
-			<span><a class="mark" href="#stylesheets-fontweight-" id="stylesheets-fontweight-">#</a></span>
-		</h3><ul>
-<li><code>fontWeight?</code>: <a href="types.html#fontweightin"><code>types.FontWeightIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-fontslant-">
+			<span><a class="mark" href="#stylesheets-fontweight" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>fontWeight?: <a class="api-type" href="types.html#fontweightin">types.FontWeightIn</a></code></pre>
+
+
+<h3 id="stylesheets-fontslant">
 			stylesheets.fontSlant?
-			<span><a class="mark" href="#stylesheets-fontslant-" id="stylesheets-fontslant-">#</a></span>
-		</h3><ul>
-<li><code>fontSlant?</code>: <a href="types.html#fontslantin"><code>types.FontSlantIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-textdecoration-">
+			<span><a class="mark" href="#stylesheets-fontslant" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>fontSlant?: <a class="api-type" href="types.html#fontslantin">types.FontSlantIn</a></code></pre>
+
+
+<h3 id="stylesheets-textdecoration">
 			stylesheets.textDecoration?
-			<span><a class="mark" href="#stylesheets-textdecoration-" id="stylesheets-textdecoration-">#</a></span>
-		</h3><ul>
-<li><code>textDecoration?</code>: <a href="types.html#textdecorationin"><code>types.TextDecorationIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-textoverflow-">
+			<span><a class="mark" href="#stylesheets-textdecoration" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textDecoration?: <a class="api-type" href="types.html#textdecorationin">types.TextDecorationIn</a></code></pre>
+
+
+<h3 id="stylesheets-textoverflow">
 			stylesheets.textOverflow?
-			<span><a class="mark" href="#stylesheets-textoverflow-" id="stylesheets-textoverflow-">#</a></span>
-		</h3><ul>
-<li><code>textOverflow?</code>: <a href="types.html#textoverflowin"><code>types.TextOverflowIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-whitespace-">
+			<span><a class="mark" href="#stylesheets-textoverflow" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textOverflow?: <a class="api-type" href="types.html#textoverflowin">types.TextOverflowIn</a></code></pre>
+
+
+<h3 id="stylesheets-whitespace">
 			stylesheets.whiteSpace?
-			<span><a class="mark" href="#stylesheets-whitespace-" id="stylesheets-whitespace-">#</a></span>
-		</h3><ul>
-<li><code>whiteSpace?</code>: <a href="types.html#whitespacein"><code>types.WhiteSpaceIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-wordbreak-">
+			<span><a class="mark" href="#stylesheets-whitespace" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>whiteSpace?: <a class="api-type" href="types.html#whitespacein">types.WhiteSpaceIn</a></code></pre>
+
+
+<h3 id="stylesheets-wordbreak">
 			stylesheets.wordBreak?
-			<span><a class="mark" href="#stylesheets-wordbreak-" id="stylesheets-wordbreak-">#</a></span>
-		</h3><ul>
-<li><code>wordBreak?</code>: <a href="types.html#wordbreakin"><code>types.WordBreakIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-fontsize-">
+			<span><a class="mark" href="#stylesheets-wordbreak" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>wordBreak?: <a class="api-type" href="types.html#wordbreakin">types.WordBreakIn</a></code></pre>
+
+
+<h3 id="stylesheets-fontsize">
 			stylesheets.fontSize?
-			<span><a class="mark" href="#stylesheets-fontsize-" id="stylesheets-fontsize-">#</a></span>
-		</h3><ul>
-<li><code>fontSize?</code>: <a href="types.html#fontsizein"><code>types.FontSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-textbackgroundcolor-">
+			<span><a class="mark" href="#stylesheets-fontsize" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>fontSize?: <a class="api-type" href="types.html#fontsizein">types.FontSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-textbackgroundcolor">
 			stylesheets.textBackgroundColor?
-			<span><a class="mark" href="#stylesheets-textbackgroundcolor-" id="stylesheets-textbackgroundcolor-">#</a></span>
-		</h3><ul>
-<li><code>textBackgroundColor?</code>: <a href="types.html#textcolorin"><code>types.TextColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-textstroke-">
+			<span><a class="mark" href="#stylesheets-textbackgroundcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textBackgroundColor?: <a class="api-type" href="types.html#textcolorin">types.TextColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-textstroke">
 			stylesheets.textStroke?
-			<span><a class="mark" href="#stylesheets-textstroke-" id="stylesheets-textstroke-">#</a></span>
-		</h3><ul>
-<li><code>textStroke?</code>: <a href="types.html#textstrokein"><code>types.TextStrokeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-textcolor-">
+			<span><a class="mark" href="#stylesheets-textstroke" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textStroke?: <a class="api-type" href="types.html#textstrokein">types.TextStrokeIn</a></code></pre>
+
+
+<h3 id="stylesheets-textcolor">
 			stylesheets.textColor?
-			<span><a class="mark" href="#stylesheets-textcolor-" id="stylesheets-textcolor-">#</a></span>
-		</h3><ul>
-<li><code>textColor?</code>: <a href="types.html#textcolorin"><code>types.TextColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-lineheight-">
+			<span><a class="mark" href="#stylesheets-textcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textColor?: <a class="api-type" href="types.html#textcolorin">types.TextColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-lineheight">
 			stylesheets.lineHeight?
-			<span><a class="mark" href="#stylesheets-lineheight-" id="stylesheets-lineheight-">#</a></span>
-		</h3><ul>
-<li><code>lineHeight?</code>: <a href="types.html#fontsizein"><code>types.FontSizeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-textshadow-">
+			<span><a class="mark" href="#stylesheets-lineheight" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>lineHeight?: <a class="api-type" href="types.html#fontsizein">types.FontSizeIn</a></code></pre>
+
+
+<h3 id="stylesheets-textshadow">
 			stylesheets.textShadow?
-			<span><a class="mark" href="#stylesheets-textshadow-" id="stylesheets-textshadow-">#</a></span>
-		</h3><ul>
-<li><code>textShadow?</code>: <a href="types.html#textshadowin"><code>types.TextShadowIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-fontfamily-">
+			<span><a class="mark" href="#stylesheets-textshadow" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>textShadow?: <a class="api-type" href="types.html#textshadowin">types.TextShadowIn</a></code></pre>
+
+
+<h3 id="stylesheets-fontfamily">
 			stylesheets.fontFamily?
-			<span><a class="mark" href="#stylesheets-fontfamily-" id="stylesheets-fontfamily-">#</a></span>
-		</h3><ul>
-<li><code>fontFamily?</code>: <a href="types.html#fontfamilyin"><code>types.FontFamilyIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-security-">
+			<span><a class="mark" href="#stylesheets-fontfamily" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>fontFamily?: <a class="api-type" href="types.html#fontfamilyin">types.FontFamilyIn</a></code></pre>
+
+
+<h3 id="stylesheets-security">
 			stylesheets.security?
-			<span><a class="mark" href="#stylesheets-security-" id="stylesheets-security-">#</a></span>
-		</h3><ul>
-<li><code>security?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="stylesheets-readonly-">
+			<span><a class="mark" href="#stylesheets-security" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>security?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="stylesheets-readonly">
 			stylesheets.readonly?
-			<span><a class="mark" href="#stylesheets-readonly-" id="stylesheets-readonly-">#</a></span>
-		</h3><ul>
-<li><code>readonly?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="stylesheets-keyboardtype-">
+			<span><a class="mark" href="#stylesheets-readonly" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span>?: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+<h3 id="stylesheets-keyboardtype">
 			stylesheets.keyboardType?
-			<span><a class="mark" href="#stylesheets-keyboardtype-" id="stylesheets-keyboardtype-">#</a></span>
-		</h3><ul>
-<li><code>keyboardType?</code>: <a href="types.html#keyboardtypein"><code>types.KeyboardTypeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-returntype-">
+			<span><a class="mark" href="#stylesheets-keyboardtype" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>keyboardType?: <a class="api-type" href="types.html#keyboardtypein">types.KeyboardTypeIn</a></code></pre>
+
+
+<h3 id="stylesheets-returntype">
 			stylesheets.returnType?
-			<span><a class="mark" href="#stylesheets-returntype-" id="stylesheets-returntype-">#</a></span>
-		</h3><ul>
-<li><code>returnType?</code>: <a href="types.html#keyboardreturntypein"><code>types.KeyboardReturnTypeIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-placeholdercolor-">
+			<span><a class="mark" href="#stylesheets-returntype" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>returnType?: <a class="api-type" href="types.html#keyboardreturntypein">types.KeyboardReturnTypeIn</a></code></pre>
+
+
+<h3 id="stylesheets-placeholdercolor">
 			stylesheets.placeholderColor?
-			<span><a class="mark" href="#stylesheets-placeholdercolor-" id="stylesheets-placeholdercolor-">#</a></span>
-		</h3><ul>
-<li><code>placeholderColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-cursorcolor-">
+			<span><a class="mark" href="#stylesheets-placeholdercolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>placeholderColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-cursorcolor">
 			stylesheets.cursorColor?
-			<span><a class="mark" href="#stylesheets-cursorcolor-" id="stylesheets-cursorcolor-">#</a></span>
-		</h3><ul>
-<li><code>cursorColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-maxlength-">
+			<span><a class="mark" href="#stylesheets-cursorcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>cursorColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-maxlength">
 			stylesheets.maxLength?
-			<span><a class="mark" href="#stylesheets-maxlength-" id="stylesheets-maxlength-">#</a></span>
-		</h3><ul>
-<li><code>maxLength?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-placeholder-">
+			<span><a class="mark" href="#stylesheets-maxlength" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>maxLength?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-placeholder">
 			stylesheets.placeholder?
-			<span><a class="mark" href="#stylesheets-placeholder-" id="stylesheets-placeholder-">#</a></span>
-		</h3><ul>
-<li><code>placeholder?</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-</ul>
-<h3 id="stylesheets-scrollbarcolor-">
+			<span><a class="mark" href="#stylesheets-placeholder" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>placeholder?: <a class="api-type" href="$ext.html#string">string</a></code></pre>
+
+
+<h3 id="stylesheets-scrollbarcolor">
 			stylesheets.scrollbarColor?
-			<span><a class="mark" href="#stylesheets-scrollbarcolor-" id="stylesheets-scrollbarcolor-">#</a></span>
-		</h3><ul>
-<li><code>scrollbarColor?</code>: <a href="types.html#colorin"><code>types.ColorIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-scrollbarwidth-">
+			<span><a class="mark" href="#stylesheets-scrollbarcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>scrollbarColor?: <a class="api-type" href="types.html#colorin">types.ColorIn</a></code></pre>
+
+
+<h3 id="stylesheets-scrollbarwidth">
 			stylesheets.scrollbarWidth?
-			<span><a class="mark" href="#stylesheets-scrollbarwidth-" id="stylesheets-scrollbarwidth-">#</a></span>
-		</h3><ul>
-<li><code>scrollbarWidth?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-scrollbarmargin-">
+			<span><a class="mark" href="#stylesheets-scrollbarwidth" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>scrollbarWidth?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-scrollbarmargin">
 			stylesheets.scrollbarMargin?
-			<span><a class="mark" href="#stylesheets-scrollbarmargin-" id="stylesheets-scrollbarmargin-">#</a></span>
-		</h3><ul>
-<li><code>scrollbarMargin?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-translate-">
+			<span><a class="mark" href="#stylesheets-scrollbarmargin" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>scrollbarMargin?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-translate">
 			stylesheets.translate?
-			<span><a class="mark" href="#stylesheets-translate-" id="stylesheets-translate-">#</a></span>
-		</h3><ul>
-<li><code>translate?</code>: <a href="types.html#vec2in"><code>types.Vec2In</code></a> </li>
-</ul>
-<h3 id="stylesheets-scale-">
+			<span><a class="mark" href="#stylesheets-translate" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>translate?: <a class="api-type" href="types.html#vec2in">types.Vec2In</a></code></pre>
+
+
+<h3 id="stylesheets-scale">
 			stylesheets.scale?
-			<span><a class="mark" href="#stylesheets-scale-" id="stylesheets-scale-">#</a></span>
-		</h3><ul>
-<li><code>scale?</code>: <a href="types.html#vec2in"><code>types.Vec2In</code></a> </li>
-</ul>
-<h3 id="stylesheets-skew-">
+			<span><a class="mark" href="#stylesheets-scale" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>scale?: <a class="api-type" href="types.html#vec2in">types.Vec2In</a></code></pre>
+
+
+<h3 id="stylesheets-skew">
 			stylesheets.skew?
-			<span><a class="mark" href="#stylesheets-skew-" id="stylesheets-skew-">#</a></span>
-		</h3><ul>
-<li><code>skew?</code>: <a href="types.html#vec2in"><code>types.Vec2In</code></a> </li>
-</ul>
-<h3 id="stylesheets-origin-">
+			<span><a class="mark" href="#stylesheets-skew" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>skew?: <a class="api-type" href="types.html#vec2in">types.Vec2In</a></code></pre>
+
+
+<h3 id="stylesheets-origin">
 			stylesheets.origin?
-			<span><a class="mark" href="#stylesheets-origin-" id="stylesheets-origin-">#</a></span>
-		</h3><ul>
-<li><code>origin?</code>: <a href="types.html#boxoriginin"><code>types.BoxOriginIn</code></a><code>[]</code>|<a href="types.html#boxoriginin"><code>types.BoxOriginIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-originx-">
+			<span><a class="mark" href="#stylesheets-origin" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>origin?: <a class="api-type" href="types.html#boxoriginin">types.BoxOriginIn</a>[] | <a class="api-type" href="types.html#boxoriginin">types.BoxOriginIn</a></code></pre>
+
+
+<h3 id="stylesheets-originx">
 			stylesheets.originX?
-			<span><a class="mark" href="#stylesheets-originx-" id="stylesheets-originx-">#</a></span>
-		</h3><ul>
-<li><code>originX?</code>: <a href="types.html#boxoriginin"><code>types.BoxOriginIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-originy-">
+			<span><a class="mark" href="#stylesheets-originx" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>originX?: <a class="api-type" href="types.html#boxoriginin">types.BoxOriginIn</a></code></pre>
+
+
+<h3 id="stylesheets-originy">
 			stylesheets.originY?
-			<span><a class="mark" href="#stylesheets-originy-" id="stylesheets-originy-">#</a></span>
-		</h3><ul>
-<li><code>originY?</code>: <a href="types.html#boxoriginin"><code>types.BoxOriginIn</code></a> </li>
-</ul>
-<h3 id="stylesheets-x-">
+			<span><a class="mark" href="#stylesheets-originy" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>originY?: <a class="api-type" href="types.html#boxoriginin">types.BoxOriginIn</a></code></pre>
+
+
+<h3 id="stylesheets-x">
 			stylesheets.x?
-			<span><a class="mark" href="#stylesheets-x-" id="stylesheets-x-">#</a></span>
-		</h3><ul>
-<li><code>x?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-y-">
+			<span><a class="mark" href="#stylesheets-x" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>x?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-y">
 			stylesheets.y?
-			<span><a class="mark" href="#stylesheets-y-" id="stylesheets-y-">#</a></span>
-		</h3><ul>
-<li><code>y?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-scalex-">
+			<span><a class="mark" href="#stylesheets-y" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>y?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-scalex">
 			stylesheets.scaleX?
-			<span><a class="mark" href="#stylesheets-scalex-" id="stylesheets-scalex-">#</a></span>
-		</h3><ul>
-<li><code>scaleX?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-scaley-">
+			<span><a class="mark" href="#stylesheets-scalex" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>scaleX?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-scaley">
 			stylesheets.scaleY?
-			<span><a class="mark" href="#stylesheets-scaley-" id="stylesheets-scaley-">#</a></span>
-		</h3><ul>
-<li><code>scaleY?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-skewx-">
+			<span><a class="mark" href="#stylesheets-scaley" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>scaleY?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-skewx">
 			stylesheets.skewX?
-			<span><a class="mark" href="#stylesheets-skewx-" id="stylesheets-skewx-">#</a></span>
-		</h3><ul>
-<li><code>skewX?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-skewy-">
+			<span><a class="mark" href="#stylesheets-skewx" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>skewX?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-skewy">
 			stylesheets.skewY?
-			<span><a class="mark" href="#stylesheets-skewy-" id="stylesheets-skewy-">#</a></span>
-		</h3><ul>
-<li><code>skewY?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="stylesheets-rotatez-">
+			<span><a class="mark" href="#stylesheets-skewy" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>skewY?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="stylesheets-rotatez">
 			stylesheets.rotateZ?
-			<span><a class="mark" href="#stylesheets-rotatez-" id="stylesheets-rotatez-">#</a></span>
-		</h3><ul>
-<li><code>rotateZ?</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
+			<span><a class="mark" href="#stylesheets-rotatez" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>rotateZ?: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
 <h2 id="class-cstylesheetsclass">
 			Class: CStyleSheetsClass
-			<span><a class="mark" href="#class-cstylesheetsclass" id="class-cstylesheetsclass">#</a></span>
+			<span><a class="mark" href="#class-cstylesheetsclass" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="cstylesheetsclass">
 			CStyleSheetsClass
-			<span><a class="mark" href="#cstylesheetsclass" id="cstylesheetsclass">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass" aria-label="Link to this section">#</a></span>
 		</h3><p>Runtime stylesheet class collection bound to a View.</p>
 <p>This object:</p>
 <ul>
@@ -1095,65 +1102,68 @@
 <li>Only class names participate in selector matching.</li>
 <li>No attribute, tag, or structural selectors are involved.</li>
 </ul>
-<h3 id="cstylesheetsclass-set-name-">
+<h3 id="cstylesheetsclass-set-name">
 			cstylesheetsclass.set(name)
-			<span><a class="mark" href="#cstylesheetsclass-set-name-" id="cstylesheetsclass-set-name-">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-set-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Set Style Collection</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a><code>[]</code>|<a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="cstylesheetsclass-add-name-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">set</span>(name: <a class="api-type" href="$ext.html#string">string</a>[] | <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="cstylesheetsclass-add-name">
 			cstylesheetsclass.add(name)
-			<span><a class="mark" href="#cstylesheetsclass-add-name-" id="cstylesheetsclass-add-name-">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-add-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Add a stylesheet class selector name</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="cstylesheetsclass-remove-name-">
+<pre class="api-signature sh_none"><code>add(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="cstylesheetsclass-remove-name">
 			cstylesheetsclass.remove(name)
-			<span><a class="mark" href="#cstylesheetsclass-remove-name-" id="cstylesheetsclass-remove-name-">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-remove-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Delete a stylesheet class selector name</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="cstylesheetsclass-toggle-name-">
+<pre class="api-signature sh_none"><code>remove(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="cstylesheetsclass-toggle-name">
 			cstylesheetsclass.toggle(name)
-			<span><a class="mark" href="#cstylesheetsclass-toggle-name-" id="cstylesheetsclass-toggle-name-">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-toggle-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Toggle between Add and Delete</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
-<h3 id="cstylesheetsclass-clear-">
+<pre class="api-signature sh_none"><code>toggle(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
+<h3 id="cstylesheetsclass-clear">
 			cstylesheetsclass.clear()
-			<span><a class="mark" href="#cstylesheetsclass-clear-" id="cstylesheetsclass-clear-">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-clear" aria-label="Link to this section">#</a></span>
 		</h3><p>Clear all stylesheet class selector names</p>
-<ul>
-<li><code>@return</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a> </li>
-</ul>
-<h3 id="cstylesheetsclass-has-name-">
+<pre class="api-signature sh_none"><code>clear(): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+
+
+
+<h3 id="cstylesheetsclass-has-name">
 			cstylesheetsclass.has(name)
-			<span><a class="mark" href="#cstylesheetsclass-has-name-" id="cstylesheetsclass-has-name-">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-has-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Check if a stylesheet class selector name exists</p>
-<ul>
-<li><code>@param</code> <code>name</code>: <a href="$ext.html#string"><code>string</code></a> </li>
-<li><code>@return</code> <a href="$ext.html#boolean"><code>boolean</code></a> </li>
-</ul>
+<pre class="api-signature sh_none"><code>has(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
+
 <h3 id="cstylesheetsclass-names">
 			cstylesheetsclass.names
-			<span><a class="mark" href="#cstylesheetsclass-names" id="cstylesheetsclass-names">#</a></span>
+			<span><a class="mark" href="#cstylesheetsclass-names" aria-label="Link to this section">#</a></span>
 		</h3><p>get all stylesheet class selector names</p>
-<ul>
-<li><code>@get</code> <code>names</code>: <code>Set</code>&lt;<a href="$ext.html#string"><code>string</code></a>&gt; </li>
-</ul>
-<h2 id="createcss-sheets-">
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> names: Set&lt;<a class="api-type" href="$ext.html#string">string</a>&gt;</code></pre>
+
+
+<h2 id="createcss-sheets">
 			createCss(sheets)
-			<span><a class="mark" href="#createcss-sheets-" id="createcss-sheets-">#</a></span>
+			<span><a class="mark" href="#createcss-sheets" aria-label="Link to this section">#</a></span>
 		</h2><p>Creates style rules using a CSS-inspired, class-driven syntax.</p>
-<p>IMPORTANT:<br/>This API intentionally supports ONLY a constrained subset of CSS.<br/>It is designed for GUI view styling in Qk, not for full web CSS compatibility.</p>
+<p>IMPORTANT:
+This API intentionally supports ONLY a constrained subset of CSS.
+It is designed for GUI view styling in Qk, not for full web CSS compatibility.</p>
 <p>Supported:</p>
 <ul>
 <li>Class selectors only (e.g. <code>.a</code>, <code>.a.b</code>, <code>.a .b</code>, <code>.a &gt; .b</code>)</li>
@@ -1171,17 +1181,24 @@
 </ul>
 <p>Pseudo state mapping:</p>
 <ul>
-<li><code>:normal</code> → [<code>HighlightedStatus.Normal</code>]</li>
-<li><code>:hover</code>  → [<code>HighlightedStatus.Hover</code>]</li>
-<li><code>:active</code> → [<code>HighlightedStatus.Active</code>]</li>
+<li><code>:normal</code> → <a href="event.html#enum-uistate"><code>UIState.Normal</code></a></li>
+<li><code>:hover</code>  → <a href="event.html#enum-uistater"><code>UIState.Hover</code></a></li>
+<li><code>:active</code> → <a href="event.html#enum-uistate"><code>UIState.Active</code></a></li>
 </ul>
 <p>Notes:</p>
 <ul>
 <li>Selector semantics are resolved at creation time, not at runtime.</li>
 <li>This method mutates global style state.</li>
-<li><p>All rendering threads are automatically paused and resumed internally<br/>while stylesheets are being created or modified.</p><br/></li>
-<li><p><code>@param</code> <code>sheets</code>: <a href="$ext.html#object"><code>object</code></a> Style rule definitions keyed by class selectors</p><br/></li>
-<li><code>@param</code> <code>apply?</code>: <a href="$ext.html#boolean"><code>boolean</code></a> Whether to apply the created styles to all views, <strong>default false</strong></li>
+<li>All rendering threads are automatically paused and resumed internally
+while stylesheets are being created or modified.</li>
+</ul>
+<pre class="api-signature sh_none"><code>createCss(sheets: <a class="api-type" href="$ext.html#object">object</a>, apply?: <a class="api-type" href="$ext.html#boolean">boolean</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sheets</code> — Style rule definitions keyed by class selectors</li>
+<li><code>apply?</code> — Whether to apply the created styles to all views, <strong>default false</strong></li>
 </ul>
 <p>For example:</p>
 <pre><code class="undefinedts">createCss({
@@ -1222,19 +1239,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'css.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'defs.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-defs">quark/defs</a></span>
@@ -156,89 +143,96 @@
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-defs">
 			quark/defs
-			<span><a class="mark" href="#quark-defs" id="quark-defs">#</a></span>
+			<span><a class="mark" href="#quark-defs" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="any">
 			Any
-			<span><a class="mark" href="#any" id="any">#</a></span>
+			<span><a class="mark" href="#any" aria-label="Link to this section">#</a></span>
 		</h2><p>Any type</p>
-<ul>
-<li><code>@type</code> <code>Any</code> = <code>any</code></li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Any = any</code></pre>
+
+
 <h2 id="int">
 			Int
-			<span><a class="mark" href="#int" id="int">#</a></span>
+			<span><a class="mark" href="#int" aria-label="Link to this section">#</a></span>
 		</h2><p>32-bit integer, Range: -2147483648 to 2147483647</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Int = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Int</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="uint">
 			Uint
-			<span><a class="mark" href="#uint" id="uint">#</a></span>
+			<span><a class="mark" href="#uint" aria-label="Link to this section">#</a></span>
 		</h2><p>32-bit signed integer, Range: 0 to 4294967295</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Uint = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Uint</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="uint16">
 			Uint16
-			<span><a class="mark" href="#uint16" id="uint16">#</a></span>
+			<span><a class="mark" href="#uint16" aria-label="Link to this section">#</a></span>
 		</h2><p>16-bit signed integer, Range: 0 to 65535</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Uint16 = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Uint16</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="int16">
 			Int16
-			<span><a class="mark" href="#int16" id="int16">#</a></span>
+			<span><a class="mark" href="#int16" aria-label="Link to this section">#</a></span>
 		</h2><p>16-bit integer, Range: -32768 to 32767</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Int16 = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Int16</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="uint8">
 			Uint8
-			<span><a class="mark" href="#uint8" id="uint8">#</a></span>
+			<span><a class="mark" href="#uint8" aria-label="Link to this section">#</a></span>
 		</h2><p>8-bit signed integer, Range: 0 to 255</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Uint8 = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Uint8</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="int8">
 			Int8
-			<span><a class="mark" href="#int8" id="int8">#</a></span>
+			<span><a class="mark" href="#int8" aria-label="Link to this section">#</a></span>
 		</h2><p>8-bit integer, Range: -128 to 127</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Int8 = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Int8</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="float">
 			Float
-			<span><a class="mark" href="#float" id="float">#</a></span>
+			<span><a class="mark" href="#float" aria-label="Link to this section">#</a></span>
 		</h2><p>32-bit floating point， Range: -3.402823466E+38 to 3.402823466E+38</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> Float = <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
 <ul>
-<li><code>@type</code> <code>Float</code> = <a href="$ext.html#number"><code>number</code></a></li>
 <li><code>@global</code>  </li>
 </ul>
 <h2 id="errnocode">
 			ErrnoCode
-			<span><a class="mark" href="#errnocode" id="errnocode">#</a></span>
+			<span><a class="mark" href="#errnocode" aria-label="Link to this section">#</a></span>
 		</h2><p>The [errno,message,description] of Array</p>
-<ul>
-<li><code>@type</code> <code>ErrnoCode</code> = <code>[number,string,string?]</code></li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> ErrnoCode = [number,string,string?]</code></pre>
+
+
 <h2 id="errornewarg">
 			ErrorNewArg
-			<span><a class="mark" href="#errornewarg" id="errornewarg">#</a></span>
+			<span><a class="mark" href="#errornewarg" aria-label="Link to this section">#</a></span>
 		</h2><p>The argument type of Error.new</p>
-<ul>
-<li><code>@type</code> <code>ErrorNewArg</code> = <a href="#errnocode"><code>ErrnoCode</code></a>|<a href="$ext.html#error"><code>Error</code></a>|<a href="$ext.html#string"><code>string</code></a>|<code>ErrorDescribe</code></li>
-</ul>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> ErrorNewArg = <a class="api-type" href="#errnocode">ErrnoCode</a> | <a class="api-type" href="$ext.html#error">Error</a> | <a class="api-type" href="$ext.html#string">string</a> | ErrorDescribe</code></pre>
+
+
 
 			</div>
 
@@ -246,19 +240,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'defs.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

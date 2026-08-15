@@ -1,29 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-	<meta charset="utf-8"/>
-	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'docs/guides/ACTIONS-cn.html';
-		var relative = '../../';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quark API 文档</title>
+	<link rel="stylesheet" href="../../assets/style.css">
+	<link rel="stylesheet" href="../../assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,30 +92,29 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
-				<h1>Quark v1.4.0 Documentation</h1>
+				<h1>Quark v1.4.0 文档</h1>
 				<div id="gtoc">
 					<p>
-						<a href="/doc" id="index">Documentation Index</a> |
-						<a href="/" id="home">Home</a>
+						<a href="/doc" id="index">文档目录</a> |
+						<a href="/" id="home">主页</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>本页目录</summary>
 				<ul>
 <li>
-<span><a href="#action-">Action 与关键帧</a></span>
+<span><a href="#action-与关键帧">Action 与关键帧</a></span>
 <ul>
 <li>
-<span><a href="#-">基础动画</a></span>
+<span><a href="#基础动画">基础动画</a></span>
 </li>
 <li>
-<span><a href="#action-">Action 类型</a></span>
+<span><a href="#action-类型">Action 类型</a></span>
 <ul>
 <li>
 <span><a href="#spawnaction">SpawnAction</a></span>
@@ -137,26 +124,29 @@
 </li>
 </ul>
 <li>
-<span><a href="#keyframeaction-keyframe">KeyframeAction 与 Keyframe</a></span>
+<span><a href="#keyframeaction-与-keyframe">KeyframeAction 与 Keyframe</a></span>
 </li>
 <li>
-<span><a href="#action-">Action 事件</a></span>
+<span><a href="#action-事件">Action 事件</a></span>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
-				<h1 id="action-">
+				<h1 id="action-与关键帧">
 			Action 与关键帧
-			<span><a class="mark" href="#action-" id="action-">#</a></span>
+			<span><a class="mark" href="#action-与关键帧" aria-label="Link to this section">#</a></span>
 		</h1><p><a href="ACTIONS.html">English</a> · <a href="README-cn.html">全部教程</a> · <a href="https://quarks.cc/doc/">API 索引</a></p>
-<p>Quark 的 Action 系统独立驱动动画，不依赖具体布局或渲染后端。Action 随时间<br/>改变绑定 View 所支持的属性，View 接收这些值，再由正常的布局和渲染流程显示<br/>结果。</p>
-<p>关键帧过渡支持三次贝塞尔曲线，以及 <code>linear</code>、<code>ease</code>、<code>easeIn</code>、<code>easeOut</code>、<br/><code>easeInOut</code> 等内置曲线。</p>
-<h2 id="-">
+<p>Quark 的 Action 系统独立驱动动画，不依赖具体布局或渲染后端。Action 随时间
+改变绑定 View 所支持的属性，View 接收这些值，再由正常的布局和渲染流程显示
+结果。</p>
+<p>关键帧过渡支持三次贝塞尔曲线，以及 <code>linear</code>、<code>ease</code>、<code>easeIn</code>、<code>easeOut</code>、
+<code>easeInOut</code> 等内置曲线。</p>
+<h2 id="基础动画">
 			基础动画
-			<span><a class="mark" href="#-" id="-">#</a></span>
+			<span><a class="mark" href="#基础动画" aria-label="Link to this section">#</a></span>
 		</h2><p>下面的示例让 <code>Box</code> 在一秒内从 <code>x = 0</code> 移动到 <code>x = 100</code>：</p>
 <pre><code class="undefinedts">import { Application, Window, Morph, KeyframeAction } from &#39;quark&#39;
 
@@ -177,26 +167,36 @@ view.appendTo(win.root)
 action.loop = 1000
 action.play()
 </code></pre>
-<h2 id="action-">
+<h2 id="action-类型">
 			Action 类型
-			<span><a class="mark" href="#action-" id="action-">#</a></span>
+			<span><a class="mark" href="#action-类型" aria-label="Link to this section">#</a></span>
 		</h2><p>公开的 Action 类继承关系如下：</p>
 <ul>
-<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a> — 抽象基类<ul><br/><li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> — 并行执行子 Action</li><br/><li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a> — 串行执行子 Action</li><br/><li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a> — 使用关键帧改变 View 样式属性</li><br/></ul><br/></li>
+<li><a href="https://quarks.cc/doc/action.html#class-action">Action</a> — 抽象基类<ul>
+<li><a href="https://quarks.cc/doc/action.html#class-spawnaction">SpawnAction</a> — 并行执行子 Action</li>
+<li><a href="https://quarks.cc/doc/action.html#class-sequenceaction">SequenceAction</a> — 串行执行子 Action</li>
+<li><a href="https://quarks.cc/doc/action.html#class-keyframeaction">KeyframeAction</a> — 使用关键帧改变 View 样式属性</li>
 </ul>
-<p><code>Action</code> 提供 <code>play()</code>、<code>stop()</code>、<code>seek()</code>、<code>seekPlay()</code>、<code>seekStop()</code>、<br/><code>append()</code>、<code>clear()</code> 等播放与组合操作。</p>
+</li>
+</ul>
+<p><code>Action</code> 提供 <code>play()</code>、<code>stop()</code>、<code>seek()</code>、<code>seekPlay()</code>、<code>seekStop()</code>、
+<code>append()</code>、<code>clear()</code> 等播放与组合操作。</p>
 <h3 id="spawnaction">
 			SpawnAction
-			<span><a class="mark" href="#spawnaction" id="spawnaction">#</a></span>
-		</h3><p><code>SpawnAction</code> 并行执行所有子 Action，并以最长子 Action 的时长作为自身时长。<br/>较短的子 Action 完成后会保持完成状态，直到整个组合结束或进入下一次循环。</p>
+			<span><a class="mark" href="#spawnaction" aria-label="Link to this section">#</a></span>
+		</h3><p><code>SpawnAction</code> 并行执行所有子 Action，并以最长子 Action 的时长作为自身时长。
+较短的子 Action 完成后会保持完成状态，直到整个组合结束或进入下一次循环。</p>
 <h3 id="sequenceaction">
 			SequenceAction
-			<span><a class="mark" href="#sequenceaction" id="sequenceaction">#</a></span>
-		</h3><p><code>SequenceAction</code> 按顺序逐个执行子 Action。最后一个子 Action 完成后，序列结束<br/>或按配置开始下一次循环。</p>
-<h2 id="keyframeaction-keyframe">
+			<span><a class="mark" href="#sequenceaction" aria-label="Link to this section">#</a></span>
+		</h3><p><code>SequenceAction</code> 按顺序逐个执行子 Action。最后一个子 Action 完成后，序列结束
+或按配置开始下一次循环。</p>
+<h2 id="keyframeaction-与-keyframe">
 			KeyframeAction 与 Keyframe
-			<span><a class="mark" href="#keyframeaction-keyframe" id="keyframeaction-keyframe">#</a></span>
-		</h2><p><code>KeyframeAction</code> 包含多个 <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a>。<code>Keyframe</code> 继承 <code>StyleSheets</code>，因此<br/>属性名和值类型与 View 样式一致。属性只有在绑定的 View 支持时才有效：例如<br/><code>x</code> 适用于 <code>Morph</code> 等支持变换的 View，<code>width</code> 适用于 <code>Box</code> 及其子类。</p>
+			<span><a class="mark" href="#keyframeaction-与-keyframe" aria-label="Link to this section">#</a></span>
+		</h2><p><code>KeyframeAction</code> 包含多个 <a href="https://quarks.cc/doc/action.html#class-keyframe">Keyframe</a>。<code>Keyframe</code> 继承 <code>StyleSheets</code>，因此
+属性名和值类型与 View 样式一致。属性只有在绑定的 View 支持时才有效：例如
+<code>x</code> 适用于 <code>Morph</code> 等支持变换的 View，<code>width</code> 适用于 <code>Box</code> 及其子类。</p>
 <pre><code class="undefinedts">// 有效：Box 支持 width 和 height。
 const boxAction = new KeyframeAction(win)
 const box = new Box(win)
@@ -214,14 +214,17 @@ viewAction.add({ width: 100, height: 100, time: 1000 })
 view.action = viewAction
 viewAction.play()
 </code></pre>
-<p>如果需要声明式创建，<a href="https://quarks.cc/doc/action.html#createaction-win-arg-parent-">createAction</a> 可以接收关键帧数组，也可以接收包含<br/><code>keyframe</code>、<code>spawn</code> 或 <code>seq</code> 子项的对象。</p>
-<h2 id="action-">
+<p>如果需要声明式创建，<a href="https://quarks.cc/doc/action.html#createaction-win-arg-parent-">createAction</a> 可以接收关键帧数组，也可以接收包含
+<code>keyframe</code>、<code>spawn</code> 或 <code>seq</code> 子项的对象。</p>
+<h2 id="action-事件">
 			Action 事件
-			<span><a class="mark" href="#action-" id="action-">#</a></span>
+			<span><a class="mark" href="#action-事件" aria-label="Link to this section">#</a></span>
 		</h2><p>View 提供两个 Action 事件：</p>
 <ul>
-<li><code>View.onActionKeyframe</code> 在 Action 到达关键帧时触发。事件在实际渲染帧上派发，<br/>因此可能比目标时间略早或略晚；<code>ActionEvent.delay</code> 保存与目标时间的差值。</li>
-<li><code>View.onActionLoop</code> 在新循环开始时触发，首次执行不会触发。事件同样提供<br/><code>delay</code> 和当前 <code>looped</code> 次数。</li>
+<li><code>View.onActionKeyframe</code> 在 Action 到达关键帧时触发。事件在实际渲染帧上派发，
+因此可能比目标时间略早或略晚；<code>ActionEvent.delay</code> 保存与目标时间的差值。</li>
+<li><code>View.onActionLoop</code> 在新循环开始时触发，首次执行不会触发。事件同样提供
+<code>delay</code> 和当前 <code>looped</code> 次数。</li>
 </ul>
 <p>事件中的 <code>action</code> 和 <code>frame</code> 属性用于识别触发事件的 Action 与关键帧。</p>
 
@@ -231,19 +234,28 @@ viewAction.play()
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="../../assets/sh_main.js"></script>
+	<script src="../../assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'docs/guides/ACTIONS-cn.html';
+		var relative = '../../';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');

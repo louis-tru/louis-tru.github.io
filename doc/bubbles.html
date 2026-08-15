@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quark API Documentation</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" />
-	<script>
-		var src = 'bubbles.html';
-		var relative = '';
-		document.write('<link rel="stylesheet" href="'+relative+'assets/style.css" />');
-		document.write('<link rel="stylesheet" href="'+relative+'assets/sh.css" />');
-	</script>
-
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/sh.css">
 </head>
 <body class="alt apidoc" id="api-section-documentation">
 
-	<style>  
+	<style>
 		#column1.interior {
 			overflow-wrap: break-word;
-		}
-	
-		.on {
-			color: #43853d !important;
-			border-radius: 0;
-			border-bottom: 1px solid #43853d;
-			background: none;
 		}
 
 		img {
@@ -31,7 +19,7 @@
 		}
 
 	</style>
-	
+
 	<div id="content" class="clearfix">
 
 		<div id="column2" class="interior">
@@ -44,7 +32,7 @@
 
 			<h1 id="quark">
 			<a href="http://quarks.cc/"><code>Quark</code></a>
-			<span><a class="mark" href="#quark" id="quark">#</a></span>
+			<span><a class="mark" href="#quark" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="README.html"><code>About</code></a></li>
 <li><a href="docs/guides/README.html"><code>Guides</code></a></li>
@@ -53,7 +41,7 @@
 </ul>
 <h1 id="modules">
 			Modules
-			<span><a class="mark" href="#modules" id="modules">#</a></span>
+			<span><a class="mark" href="#modules" aria-label="Link to this section">#</a></span>
 		</h1><ul>
 <li><a href="action.html"><code>quark/action</code></a></li>
 <li><a href="app.html"><code>quark/app</code></a></li>
@@ -104,7 +92,7 @@
 
 
 		</div>
-		
+
 		<div id="column1" data-id="documentation" class="interior">
 			<header>
 				<h1>Quark v1.4.0 Documentation</h1>
@@ -114,11 +102,10 @@
 						<a href="/" id="home">Home</a>
 					</p>
 				</div>
-				<hr>
 			</header>
 
-			<div id="toc">
-				<h2>Table of Contents</h2>
+			<details id="toc">
+				<summary>Contents</summary>
 				<ul>
 <li>
 <span><a href="#quark-bubbles">quark/bubbles</a></span>
@@ -149,37 +136,37 @@
 <span><a href="#bubbles-borderradius">bubbles.borderRadius</a></span>
 </li>
 <li>
-<span><a href="#bubbles-showfrom-from-offset-">bubbles.showFrom(from,offset?)</a></span>
+<span><a href="#bubbles-showfrom-from-offset">bubbles.showFrom(from,offset?)</a></span>
 </li>
 <li>
-<span><a href="#bubbles-show-rect-">bubbles.show(rect)</a></span>
+<span><a href="#bubbles-show-rect">bubbles.show(rect)</a></span>
 </li>
 <li>
-<span><a href="#bubbles-reset-">bubbles.reset()</a></span>
+<span><a href="#bubbles-reset">bubbles.reset()</a></span>
 </li>
 <li>
-<span><a href="#bubbles-navigationback-">bubbles.navigationBack()</a></span>
+<span><a href="#bubbles-navigationback">bubbles.navigationBack()</a></span>
 </li>
 <li>
-<span><a href="#bubbles-navigationenter-focus-">bubbles.navigationEnter(focus)</a></span>
+<span><a href="#bubbles-navigationenter-focus">bubbles.navigationEnter(focus)</a></span>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-			</div>
+			</details>
 
 			<div id="apicontent">
 				<h1 id="quark-bubbles">
 			quark/bubbles
-			<span><a class="mark" href="#quark-bubbles" id="quark-bubbles">#</a></span>
+			<span><a class="mark" href="#quark-bubbles" aria-label="Link to this section">#</a></span>
 		</h1><h2 id="enum-priority">
 			Enum: Priority
-			<span><a class="mark" href="#enum-priority" id="enum-priority">#</a></span>
+			<span><a class="mark" href="#enum-priority" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="priority">
 			Priority
-			<span><a class="mark" href="#priority" id="priority">#</a></span>
+			<span><a class="mark" href="#priority" aria-label="Link to this section">#</a></span>
 		</h3><ul>
 <li><code>Auto</code>  </li>
 <li><code>Top</code>  </li>
@@ -189,69 +176,83 @@
 </ul>
 <h2 id="class-bubbles">
 			Class: Bubbles
-			<span><a class="mark" href="#class-bubbles" id="class-bubbles">#</a></span>
+			<span><a class="mark" href="#class-bubbles" aria-label="Link to this section">#</a></span>
 		</h2><h3 id="bubbles">
 			Bubbles
-			<span><a class="mark" href="#bubbles" id="bubbles">#</a></span>
-		</h3><ul>
-<li><code>@extends</code> <a href="nav.html#navigation"><code>Navigation</code></a></li>
-<li><code>@template</code> &lt;<code>P</code>=<code>{}</code>,<code>S</code>=<code>{}</code>&gt;</li>
-</ul>
+			<span><a class="mark" href="#bubbles" aria-label="Link to this section">#</a></span>
+		</h3><p><strong>Extends:</strong> <a href="nav.html#navigation"><code>Navigation</code></a>
+<strong>Type parameters:</strong> <code>P</code> = <code>{}</code>, <code>S</code> = <code>{}</code></p>
 <h3 id="bubbles-frail">
 			bubbles.frail
-			<span><a class="mark" href="#bubbles-frail" id="bubbles-frail">#</a></span>
-		</h3><ul>
-<li><code>frail</code>: <a href="$ext.html#boolean"><code>boolean</code></a> By default clicking anywhere on the screen will disappear</li>
-</ul>
+			<span><a class="mark" href="#bubbles-frail" aria-label="Link to this section">#</a></span>
+		</h3><p>By default clicking anywhere on the screen will disappear</p>
+<pre class="api-signature sh_none"><code>frail: <a class="api-type" href="$ext.html#boolean">boolean</a></code></pre>
+
+
 <h3 id="bubbles-priority">
 			bubbles.priority
-			<span><a class="mark" href="#bubbles-priority" id="bubbles-priority">#</a></span>
-		</h3><ul>
-<li><code>priority</code>: <a href="#enum-priority"><code>Priority</code></a> display location</li>
-</ul>
+			<span><a class="mark" href="#bubbles-priority" aria-label="Link to this section">#</a></span>
+		</h3><p>display location</p>
+<pre class="api-signature sh_none"><code>priority: <a class="api-type" href="#enum-priority">Priority</a></code></pre>
+
+
 <h3 id="bubbles-backgroundcolor">
 			bubbles.backgroundColor
-			<span><a class="mark" href="#bubbles-backgroundcolor" id="bubbles-backgroundcolor">#</a></span>
-		</h3><ul>
-<li><code>backgroundColor</code>: <a href="types.html#colorstrin"><code>types.ColorStrIn</code></a> </li>
-</ul>
+			<span><a class="mark" href="#bubbles-backgroundcolor" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>backgroundColor: <a class="api-type" href="types.html#colorstrin">types.ColorStrIn</a></code></pre>
+
+
 <h3 id="bubbles-borderradius">
 			bubbles.borderRadius
-			<span><a class="mark" href="#bubbles-borderradius" id="bubbles-borderradius">#</a></span>
-		</h3><ul>
-<li><code>borderRadius</code>: <a href="$ext.html#number"><code>number</code></a> </li>
-</ul>
-<h3 id="bubbles-showfrom-from-offset-">
+			<span><a class="mark" href="#bubbles-borderradius" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>borderRadius: <a class="api-type" href="$ext.html#number">number</a></code></pre>
+
+
+<h3 id="bubbles-showfrom-from-offset">
 			bubbles.showFrom(from,offset?)
-			<span><a class="mark" href="#bubbles-showfrom-from-offset-" id="bubbles-showfrom-from-offset-">#</a></span>
+			<span><a class="mark" href="#bubbles-showfrom-from-offset" aria-label="Link to this section">#</a></span>
 		</h3><p>Showing Bubbles by Target View</p>
+<pre class="api-signature sh_none"><code>showFrom(from: <a class="api-type" href="view.html#view">View</a>, offset?: <a class="api-type" href="types.html#vec2">types.Vec2</a>)</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>@param</code> <code>from</code>: <a href="view.html#view"><code>View</code></a> Parameters provide the location information to be displayed</li>
-<li><code>@param</code> <code>offset?</code>: <a href="types.html#vec2"><code>types.Vec2</code></a> Displays the offset of the target position</li>
+<li><code>from</code> — Parameters provide the location information to be displayed</li>
+<li><code>offset?</code> — Displays the offset of the target position</li>
 </ul>
-<h3 id="bubbles-show-rect-">
+<h3 id="bubbles-show-rect">
 			bubbles.show(rect)
-			<span><a class="mark" href="#bubbles-show-rect-" id="bubbles-show-rect-">#</a></span>
+			<span><a class="mark" href="#bubbles-show-rect" aria-label="Link to this section">#</a></span>
 		</h3><p>Show by rect</p>
-<ul>
-<li><code>@param</code> <code>rect</code>: <a href="types.html#rect"><code>types.Rect</code></a> </li>
-</ul>
-<h3 id="bubbles-reset-">
+<pre class="api-signature sh_none"><code>show(rect: <a class="api-type" href="types.html#rect">types.Rect</a>)</code></pre>
+
+
+
+<h3 id="bubbles-reset">
 			bubbles.reset()
-			<span><a class="mark" href="#bubbles-reset-" id="bubbles-reset-">#</a></span>
+			<span><a class="mark" href="#bubbles-reset" aria-label="Link to this section">#</a></span>
 		</h3><p>Reset and Reshow</p>
-<h3 id="bubbles-navigationback-">
+<pre class="api-signature sh_none"><code>reset()</code></pre>
+
+
+
+<h3 id="bubbles-navigationback">
 			bubbles.navigationBack()
-			<span><a class="mark" href="#bubbles-navigationback-" id="bubbles-navigationback-">#</a></span>
-		</h3><ul>
+			<span><a class="mark" href="#bubbles-navigationback" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>navigationBack()</code></pre>
+
+
+<ul>
 <li><code>@overwrite</code>  </li>
 </ul>
-<h3 id="bubbles-navigationenter-focus-">
+<h3 id="bubbles-navigationenter-focus">
 			bubbles.navigationEnter(focus)
-			<span><a class="mark" href="#bubbles-navigationenter-focus-" id="bubbles-navigationenter-focus-">#</a></span>
-		</h3><ul>
+			<span><a class="mark" href="#bubbles-navigationenter-focus" aria-label="Link to this section">#</a></span>
+		</h3><pre class="api-signature sh_none"><code>navigationEnter(focus: <a class="api-type" href="view.html#view">View</a>)</code></pre>
+
+
+<ul>
 <li><code>@overwrite</code>  </li>
-<li><code>@param</code> <code>focus</code>: <a href="view.html#view"><code>View</code></a> </li>
 </ul>
 
 			</div>
@@ -260,19 +261,28 @@
 
 	</div>
 
-	<script>
-		document.write('<script src="'+relative+'assets/sh_main.js"><\/script>');
-		document.write('<script src="'+relative+'assets/sh_javascript.min.js"><\/script>');
-	</script>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
 
 	<script>
 		highlight(undefined, undefined, 'pre');
-		
+		var src = 'bubbles.html';
+		var relative = '';
 		var column2 = document.getElementById('column2');
 		var a = column2.querySelector('li > a[href="' + src + '"]')
 		if ( a ) {
-			a.className += ' on';
+			a.classList.add('on');
 		}
+		var sidebarScrollKey = 'quark-doc-sidebar-scroll';
+		var sidebarScroll = sessionStorage.getItem(sidebarScrollKey);
+		if ( sidebarScroll !== null ) {
+			column2.scrollTop = Number(sidebarScroll) || 0;
+		} else if ( a ) {
+			a.scrollIntoView({ block: 'center' });
+		}
+		window.addEventListener('pagehide', function() {
+			sessionStorage.setItem(sidebarScrollKey, String(column2.scrollTop));
+		});
 		if ( relative ) {
 			column2.querySelectorAll('li > a').forEach(function(a) {
 				var href = a.getAttribute('href');
