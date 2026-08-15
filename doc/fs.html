@@ -882,7 +882,7 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 		</h2><p>Synchronously change file permissions</p>
 <pre><code class="undefinedts">chmodSync(&#39;my_file.txt&#39;, 0o775)
 </code></pre>
-<pre class="api-signature sh_none"><code>chmodSync(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>chmodSync(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 
@@ -890,7 +890,7 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 			chownSync(path,owner,group)
 			<span><a class="mark" href="#chownsync-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronize the <code>owner</code> and <code>group</code> of the configuration file</p>
-<pre class="api-signature sh_none"><code>chownSync(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>chownSync(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="defs.html#uint">Uint</a>, group: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 
@@ -898,7 +898,7 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 			mkdirSync(path,mode?)
 			<span><a class="mark" href="#mkdirsync-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Create a directory synchronously. If the path already exists, an exception will be thrown.</p>
-<pre class="api-signature sh_none"><code>mkdirSync(mode?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>mkdirSync(mode?: <a class="api-type" href="defs.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -910,7 +910,7 @@ which is related to the file&#39;s permissions. This is an <code>int</code> inte
 			<span><a class="mark" href="#mkdirssync-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously recursively create directories,
 and no exception is thrown if the directory exists</p>
-<pre class="api-signature sh_none"><code>mkdirsSync(mode?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>mkdirsSync(mode?: <a class="api-type" href="defs.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1023,7 +1023,7 @@ If the file has only one link, the file will be physically deleted.</p>
 			<span><a class="mark" href="#chmodrecursionsync-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously recursively set the file permission attribute mode
 (TODO: will block the calling thread, please use with caution)</p>
-<pre class="api-signature sh_none"><code>chmodRecursionSync(mode?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>chmodRecursionSync(mode?: <a class="api-type" href="defs.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1038,7 +1038,7 @@ If the file has only one link, the file will be physically deleted.</p>
 			<span><a class="mark" href="#chownrecursionsync-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously recursively set file <code>owner</code> and <code>group</code> attributes
 (TODO: will block the calling thread, please use with caution)</p>
-<pre class="api-signature sh_none"><code>chownRecursionSync(owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>chownRecursionSync(owner: <a class="api-type" href="defs.html#uint">Uint</a>, group: <a class="api-type" href="defs.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1077,7 +1077,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			writeFileSync(path,data,size?)
 			<span><a class="mark" href="#writefilesync-path-data-size" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write data to a file</p>
-<pre class="api-signature sh_none"><code>writeFileSync(size?: <a class="api-type" href="numbers.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>writeFileSync(size?: <a class="api-type" href="defs.html#uint">Uint</a>, path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1088,7 +1088,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			writeFileSync(path,data,encoding?)
 			<span><a class="mark" href="#writefilesync-path-data-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write a string to a file</p>
-<pre class="api-signature sh_none"><code>writeFileSync(encoding?: <a class="api-type" href="buffer.html#encoding">Encoding</a>, path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>writeFileSync(encoding?: <a class="api-type" href="buffer.html#encoding">Encoding</a>, path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1118,7 +1118,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			openSync(path,flags?)
 			<span><a class="mark" href="#opensync-path-flags" aria-label="Link to this section">#</a></span>
 		</h2><p>Opens a file by path synchronously and returns an open file handle</p>
-<pre class="api-signature sh_none"><code>openSync(flags?: <a class="api-type" href="#enum-fileopenflag">FileOpenFlag</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>openSync(flags?: <a class="api-type" href="#enum-fileopenflag">FileOpenFlag</a>, path: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1129,7 +1129,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			closeSync(fd)
 			<span><a class="mark" href="#closesync-fd" aria-label="Link to this section">#</a></span>
 		</h2><p>Close the file handle synchronously</p>
-<pre class="api-signature sh_none"><code>closeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>closeSync(fd: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 
@@ -1137,7 +1137,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			readSync(fd,out,size?,offsetFd?)
 			<span><a class="mark" href="#readsync-fd-out-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously read the file contents from the file handle</p>
-<pre class="api-signature sh_none"><code>readSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, out: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>readSync(fd: <a class="api-type" href="defs.html#uint">Uint</a>, out: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="defs.html#int">Int</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1153,7 +1153,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			writeSync(fd,data,size?,offsetFd?)
 			<span><a class="mark" href="#writesync-fd-data-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write data to a file handle</p>
-<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="defs.html#uint">Uint</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="defs.html#int">Int</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1169,7 +1169,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			writeSync(fd,data,offsetFd?)
 			<span><a class="mark" href="#writesync-fd-data-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Write data to the file handle synchronously and encode the data using <code>utf-8</code></p>
-<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="defs.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1184,7 +1184,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			writeSync(fd,data,encoding,offsetFd?)
 			<span><a class="mark" href="#writesync-fd-data-encoding-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Synchronously write data to a file handle</p>
-<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>writeSync(fd: <a class="api-type" href="defs.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1200,7 +1200,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			chmod(path,mode?)
 			<span><a class="mark" href="#chmod-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#chmodsync-path-mode-"><code>chmodSync(path,mode?)</code></a></p>
-<pre class="api-signature sh_none"><code>chmod(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+<pre class="api-signature sh_none"><code>chmod(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="defs.html#uint">Uint</a>)</code></pre>
 
 
 
@@ -1208,7 +1208,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			chown(path,owner,group)
 			<span><a class="mark" href="#chown-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#chownsync-path-owner-group-"><code>chownSync(path,owner,group)</code></a></p>
-<pre class="api-signature sh_none"><code>chown(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+<pre class="api-signature sh_none"><code>chown(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="defs.html#uint">Uint</a>, group: <a class="api-type" href="defs.html#uint">Uint</a>)</code></pre>
 
 
 
@@ -1216,7 +1216,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 			chmod(path,mode?)
 			<span><a class="mark" href="#chmod-path-mode-2" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#mkdirsync-path-mode-"><code>mkdirSync(path,mode?)</code></a></p>
-<pre class="api-signature sh_none"><code>chmod(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+<pre class="api-signature sh_none"><code>chmod(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="defs.html#uint">Uint</a>)</code></pre>
 
 
 
@@ -1226,7 +1226,7 @@ Same as: copy files and directories<a href="#copyrecursionsync-path-target-"><co
 		</h2><p>Recursively create directories. This method will create
     a directory tree in sequence, and will not throw an exception if the directory exists.</p>
 <p>Ref: sync method [<code>mkdirsSync(path[,mode])</code>]</p>
-<pre class="api-signature sh_none"><code>mkdirs(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></pre>
+<pre class="api-signature sh_none"><code>mkdirs(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1358,7 +1358,7 @@ fs.readdir(mydir).then(dirents=&gt;{
 			chmodRecursion(path,mode?)
 			<span><a class="mark" href="#chmodrecursion-path-mode" aria-label="Link to this section">#</a></span>
 		</h2><p>Asynchronously recursively set the <code>mode</code> attribute of a file or directory</p>
-<pre class="api-signature sh_none"><code>chmodRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a></code></pre>
+<pre class="api-signature sh_none"><code>chmodRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, mode?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1380,7 +1380,7 @@ fs.abort(id);
 			chownRecursion(path,owner,group)
 			<span><a class="mark" href="#chownrecursion-path-owner-group" aria-label="Link to this section">#</a></span>
 		</h2><p>Asynchronously recursively set the <code>owner</code> and <code>group</code> attributes of files or directories</p>
-<pre class="api-signature sh_none"><code>chownRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="numbers.html#uint">Uint</a>, group: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>chownRecursion(path: <a class="api-type" href="$ext.html#string">string</a>, owner: <a class="api-type" href="defs.html#uint">Uint</a>, group: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-asynctask">AsyncTask</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
 
 
 
@@ -1449,7 +1449,7 @@ Ref: <a href="#copyrecursion-path-target-"><code>copyRecursion(path,target)</cod
 		</h2><p>Force abort a running asynchronous task by <code>id</code>
 If a meaningless <code>id</code> is passed in or the task to which
     the <code>id</code> belongs has been completed, no processing will be done</p>
-<pre class="api-signature sh_none"><code>abort(id: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>abort(id: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 
@@ -1466,7 +1466,7 @@ fs.abort(c.id);
 			writeFile(path,data,size?)
 			<span><a class="mark" href="#writefile-path-data-size" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writefilesync-path-data-size-"><code>writeFileSync(path,data,size?)</code></a></p>
-<pre class="api-signature sh_none"><code>writeFile(path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>writeFile(path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1474,7 +1474,7 @@ fs.abort(c.id);
 			writeFile(path,data,encoding?)
 			<span><a class="mark" href="#writefile-path-data-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writefilesync-path-data-encoding-"><code>writeFileSync(path,data,encoding?)</code></a></p>
-<pre class="api-signature sh_none"><code>writeFile(path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding?: <a class="api-type" href="buffer.html#encoding">Encoding</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>writeFile(path: <a class="api-type" href="$ext.html#string">string</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding?: <a class="api-type" href="buffer.html#encoding">Encoding</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1498,7 +1498,7 @@ fs.abort(c.id);
 			open(path,flags?)
 			<span><a class="mark" href="#open-path-flags" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#opensync-path-flags-"><code>openSync(path,flags?)</code></a></p>
-<pre class="api-signature sh_none"><code>open(path: <a class="api-type" href="$ext.html#string">string</a>, flags?: <a class="api-type" href="#enum-fileopenflag">FileOpenFlag</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>open(path: <a class="api-type" href="$ext.html#string">string</a>, flags?: <a class="api-type" href="#enum-fileopenflag">FileOpenFlag</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1506,7 +1506,7 @@ fs.abort(c.id);
 			close(fd)
 			<span><a class="mark" href="#close-fd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#closesync-fd-"><code>closeSync(fd)</code></a></p>
-<pre class="api-signature sh_none"><code>close(fd: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>close(fd: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a>&gt;</code></pre>
 
 
 
@@ -1514,7 +1514,7 @@ fs.abort(c.id);
 			read(fd,out,size?,offsetFd?)
 			<span><a class="mark" href="#read-fd-out-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#readsync-fd-out-size-offsetfd-"><code>readSync(fd,out,size?,offsetFd?)</code></a></p>
-<pre class="api-signature sh_none"><code>read(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, out: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>read(fd: <a class="api-type" href="defs.html#uint">Uint</a>, out: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="defs.html#int">Int</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1522,7 +1522,7 @@ fs.abort(c.id);
 			write(fd,data,size?,offsetFd?)
 			<span><a class="mark" href="#write-fd-data-size-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-size-offsetfd-"><code>writeSync(fd,data,size?,offsetFd?)</code></a></p>
-<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="numbers.html#int">Int</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="defs.html#uint">Uint</a>, data: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, size?: <a class="api-type" href="defs.html#int">Int</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1530,7 +1530,7 @@ fs.abort(c.id);
 			write(fd,data,offsetFd?)
 			<span><a class="mark" href="#write-fd-data-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-offsetfd-"><code>writeSync(fd,data,offsetFd?)</code></a></p>
-<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="defs.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1538,7 +1538,7 @@ fs.abort(c.id);
 			write(fd,data,encoding,offsetFd?)
 			<span><a class="mark" href="#write-fd-data-encoding-offsetfd" aria-label="Link to this section">#</a></span>
 		</h2><p>Please ref: sync method <a href="#writesync-fd-data-encoding-offsetfd-"><code>writeSync(fd,data,encoding,offsetFd?)</code></a></p>
-<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="numbers.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, offsetFd?: <a class="api-type" href="numbers.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="numbers.html#uint">Uint</a>&gt;</code></pre>
+<pre class="api-signature sh_none"><code>write(fd: <a class="api-type" href="defs.html#uint">Uint</a>, data: <a class="api-type" href="$ext.html#string">string</a>, encoding: <a class="api-type" href="buffer.html#encoding">Encoding</a>, offsetFd?: <a class="api-type" href="defs.html#int">Int</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a class="api-type" href="defs.html#uint">Uint</a>&gt;</code></pre>
 
 
 
@@ -1666,7 +1666,7 @@ This method will not throw an exception. If the path cannot be read, it will onl
 			reader.abort(id)
 			<span><a class="mark" href="#reader-abort-id" aria-label="Link to this section">#</a></span>
 		</h3><p>Abort an asynchronous task by its id</p>
-<pre class="api-signature sh_none"><code>abort(id: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>abort(id: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 

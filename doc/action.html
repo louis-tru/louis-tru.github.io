@@ -391,7 +391,7 @@
 			action.seek(time)
 			<span><a class="mark" href="#action-seek-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Jump to target <code>time</code>, after calling it, it will reset the internal <code>looped</code></p>
-<pre class="api-signature sh_none"><code>seek(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+<pre class="api-signature sh_none"><code>seek(time: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -402,7 +402,7 @@
 			action.seekPlay(time)
 			<span><a class="mark" href="#action-seekplay-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and start playing. The internal <code>looped</code> will be reset after calling</p>
-<pre class="api-signature sh_none"><code>seekPlay(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+<pre class="api-signature sh_none"><code>seekPlay(time: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -413,7 +413,7 @@
 			action.seekStop(time)
 			<span><a class="mark" href="#action-seekstop-time" aria-label="Link to this section">#</a></span>
 		</h3><p>Jump to the target <code>time</code> and stop playing. The internal <code>looped</code> will be reset after calling</p>
-<pre class="api-signature sh_none"><code>seekStop(time: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
+<pre class="api-signature sh_none"><code>seekStop(time: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -522,7 +522,7 @@ The current action needs to have a parent action, otherwise it will be invalid.<
 			keyframeaction.addFrame(time,curve?)
 			<span><a class="mark" href="#keyframeaction-addframe-time-curve" aria-label="Link to this section">#</a></span>
 		</h3><p>By <code>time</code> and <code>curve</code> add keyframe，and return it</p>
-<pre class="api-signature sh_none"><code>addFrame(time: <a class="api-type" href="numbers.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+<pre class="api-signature sh_none"><code>addFrame(time: <a class="api-type" href="defs.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -535,7 +535,7 @@ The current action needs to have a parent action, otherwise it will be invalid.<
 			keyframeaction.addFrameWithCss(cssExp,time?,curve?)
 			<span><a class="mark" href="#keyframeaction-addframewithcss-cssexp-time-curve" aria-label="Link to this section">#</a></span>
 		</h3><p>Add keyframes by the <code>cssExp</code> stylesheet name expression and return keyframes</p>
-<pre class="api-signature sh_none"><code>addFrameWithCss(cssExp: <a class="api-type" href="css.html#cssnameexp">CSSNameExp</a>, time?: <a class="api-type" href="numbers.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+<pre class="api-signature sh_none"><code>addFrameWithCss(cssExp: <a class="api-type" href="css.html#cssnameexp">CSSNameExp</a>, time?: <a class="api-type" href="defs.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -549,7 +549,7 @@ The current action needs to have a parent action, otherwise it will be invalid.<
 			<span><a class="mark" href="#keyframeaction-add-styleorcssexp-time-curve" aria-label="Link to this section">#</a></span>
 		</h3><p>Add keyframes through <code>cssExp</code> stylesheet name expression or target property table,
 and return keyframes</p>
-<pre class="api-signature sh_none"><code>add(styleOrCssExp: <a class="api-type" href="#keyframein">KeyframeIn</a>, time?: <a class="api-type" href="numbers.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
+<pre class="api-signature sh_none"><code>add(styleOrCssExp: <a class="api-type" href="#keyframein">KeyframeIn</a>, time?: <a class="api-type" href="defs.html#uint">Uint</a>, curve?: <a class="api-type" href="types.html#curvein">types.CurveIn</a>): <a class="api-type" href="#class-keyframe">Keyframe</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>

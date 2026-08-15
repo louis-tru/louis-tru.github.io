@@ -674,7 +674,7 @@
 			uievent.timestamp
 			<span><a class="mark" href="#uievent-timestamp" aria-label="Link to this section">#</a></span>
 		</h3><p>The time when the event is created, in milliseconds </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> timestamp: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> timestamp: <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 <h3 id="uievent-isdefault">
@@ -941,7 +941,7 @@ differently, providing consistent behavior across mice and touchpads.</li>
 			mouseevent.level
 			<span><a class="mark" href="#mouseevent-level" aria-label="Link to this section">#</a></span>
 		</h3><p>The current view level under the mouse cursor </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="mouseevent-deltamode">
@@ -1002,14 +1002,14 @@ Receivers should only access the field relevant to the event.</p>
 			inputevent.inputDelete
 			<span><a class="mark" href="#inputevent-inputdelete" aria-label="Link to this section">#</a></span>
 		</h3><p>delete char count </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> inputDelete: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> inputDelete: <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 <h3 id="inputevent-cursorindex">
 			inputevent.cursorIndex
 			<span><a class="mark" href="#inputevent-cursorindex" aria-label="Link to this section">#</a></span>
 		</h3><p>cursor index after input </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> cursorIndex: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> cursorIndex: <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 <h3 id="inputevent-inputcontrol">
@@ -1194,7 +1194,7 @@ Receivers should only access the field relevant to the event.</p>
 			gestureevent.startTimestamp
 			<span><a class="mark" href="#gestureevent-starttimestamp" aria-label="Link to this section">#</a></span>
 		</h3><p>The gesture start timestamp, in milliseconds </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> startTimestamp: <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> startTimestamp: <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 <h3 id="gestureevent-stage">
@@ -1277,7 +1277,7 @@ Receivers should only access the field relevant to the event.</p>
 <h3 id="gestureevent-constructor-origin-id-timestamp">
 			gestureevent.constructor(origin,id,timestamp)
 			<span><a class="mark" href="#gestureevent-constructor-origin-id-timestamp" aria-label="Link to this section">#</a></span>
-		</h3><pre class="api-signature sh_none"><code>constructor(id: <a class="api-type" href="$ext.html#number">number</a>, timestamp: <a class="api-type" href="numbers.html#int">Int</a>, origin: <a class="api-type" href="view.html#view">View</a>)</code></pre>
+		</h3><pre class="api-signature sh_none"><code>constructor(id: <a class="api-type" href="$ext.html#number">number</a>, timestamp: <a class="api-type" href="defs.html#int">Int</a>, origin: <a class="api-type" href="view.html#view">View</a>)</code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -1472,7 +1472,7 @@ If there are less than two touch points, 1 is returned</p>
 			spineevent.trackIndex
 			<span><a class="mark" href="#spineevent-trackindex" aria-label="Link to this section">#</a></span>
 		</h3><p>The animation track index </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> trackIndex: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> trackIndex: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="spineevent-animationname">
@@ -1486,7 +1486,7 @@ If there are less than two touch points, 1 is returned</p>
 			spineevent.trackTime
 			<span><a class="mark" href="#spineevent-tracktime" aria-label="Link to this section">#</a></span>
 		</h3><p>The current time of the track </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> trackTime: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> trackTime: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h2 id="class-spineextevent">
@@ -1605,7 +1605,7 @@ If there are less than two touch points, 1 is returned</p>
 			arrivepositionevent.waypointIndex
 			<span><a class="mark" href="#arrivepositionevent-waypointindex" aria-label="Link to this section">#</a></span>
 		</h3><p>waypoint index </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> waypointIndex: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> waypointIndex: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h2 id="enum-movementstate">
@@ -1666,7 +1666,7 @@ If there are less than two touch points, 1 is returned</p>
 			discoveryagentevent.level
 			<span><a class="mark" href="#discoveryagentevent-level" aria-label="Link to this section">#</a></span>
 		</h3><p>discovery level, 0xffffffff means lost all levels </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> level: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="discoveryagentevent-entering">

@@ -1876,7 +1876,7 @@ Default: CascadeColor::Both</p>
 			view.zIndex
 			<span><a class="mark" href="#view-zindex" aria-label="Link to this section">#</a></span>
 		</h3><p>Z index in global view tree. </p>
-<pre class="api-signature sh_none"><code>zIndex: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>zIndex: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="view-opacity">
@@ -1884,7 +1884,7 @@ Default: CascadeColor::Both</p>
 			<span><a class="mark" href="#view-opacity" aria-label="Link to this section">#</a></span>
 		</h3><p>Visual opacity.
 0.0 ~ 1.0. Often mirrors color.a / 255.0.</p>
-<pre class="api-signature sh_none"><code>opacity: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>opacity: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="view-visible">
@@ -2043,7 +2043,7 @@ this view and every ancestor are visible.</p>
 			view.hashCode()
 			<span><a class="mark" href="#view-hashcode" aria-label="Link to this section">#</a></span>
 		</h3><p>Returns a hash code / unique runtime identifier.</p>
-<pre class="api-signature sh_none"><code>hashCode(): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>hashCode(): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -2878,14 +2878,14 @@ Not necessarily equal to velocity direction and does not jitter.</p>
 			agent.velocityMax
 			<span><a class="mark" href="#agent-velocitymax" aria-label="Link to this section">#</a></span>
 		</h3><p>Maximum allowed movement speed. </p>
-<pre class="api-signature sh_none"><code>velocityMax: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>velocityMax: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="agent-currentwaypoint">
 			agent.currentWaypoint
 			<span><a class="mark" href="#agent-currentwaypoint" aria-label="Link to this section">#</a></span>
 		</h3><p>Index of the current waypoint along the path. </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> currentWaypoint: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> currentWaypoint: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="agent-discoverydistances">
@@ -2893,7 +2893,7 @@ Not necessarily equal to velocity direction and does not jitter.</p>
 			<span><a class="mark" href="#agent-discoverydistances" aria-label="Link to this section">#</a></span>
 		</h3><p>Discovery radii for proximity checks.
 Each element is a threshold band for detection.</p>
-<pre class="api-signature sh_none"><code>discoveryDistances: <a class="api-type" href="numbers.html#float">Float</a>[]</code></pre>
+<pre class="api-signature sh_none"><code>discoveryDistances: <a class="api-type" href="defs.html#float">Float</a>[]</code></pre>
 
 
 <h3 id="agent-safetybuffer">
@@ -2901,7 +2901,7 @@ Each element is a threshold band for detection.</p>
 			<span><a class="mark" href="#agent-safetybuffer" aria-label="Link to this section">#</a></span>
 		</h3><p>Safety buffer distance for local avoidance.
 Higher = keep more distance from obstacles/agents.</p>
-<pre class="api-signature sh_none"><code>safetyBuffer: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>safetyBuffer: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="agent-avoidancefactor">
@@ -2909,7 +2909,7 @@ Higher = keep more distance from obstacles/agents.</p>
 			<span><a class="mark" href="#agent-avoidancefactor" aria-label="Link to this section">#</a></span>
 		</h3><p>Avoidance strength multiplier during collision resolution.
 Default is 1.0f, range [0.0, 10.0].</p>
-<pre class="api-signature sh_none"><code>avoidanceFactor: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>avoidanceFactor: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="agent-avoidancevelocityfactor">
@@ -2917,21 +2917,21 @@ Default is 1.0f, range [0.0, 10.0].</p>
 			<span><a class="mark" href="#agent-avoidancevelocityfactor" aria-label="Link to this section">#</a></span>
 		</h3><p>Maximum avoidance velocity applied when steering away from obstacles.
 Default is 0.8f, range [0.0, 3.0], recommended range [0.0, 1.0].</p>
-<pre class="api-signature sh_none"><code>avoidanceVelocityFactor: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>avoidanceVelocityFactor: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="agent-followmindistance">
 			agent.followMinDistance
 			<span><a class="mark" href="#agent-followmindistance" aria-label="Link to this section">#</a></span>
 		</h3><p>Distance min range maintained while following a target agent.</p>
-<pre class="api-signature sh_none"><code>followMinDistance: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>followMinDistance: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="agent-followmaxdistance">
 			agent.followMaxDistance
 			<span><a class="mark" href="#agent-followmaxdistance" aria-label="Link to this section">#</a></span>
 		</h3><p>Distance max range maintained while following a target agent.</p>
-<pre class="api-signature sh_none"><code>followMaxDistance: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>followMaxDistance: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="agent-followtarget">
@@ -3023,56 +3023,56 @@ Features:</p>
 			sprite.width
 			<span><a class="mark" href="#sprite-width" aria-label="Link to this section">#</a></span>
 		</h3><p>Rendered width of the sprite (px / world units). </p>
-<pre class="api-signature sh_none"><code>width: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>width: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="sprite-height">
 			sprite.height
 			<span><a class="mark" href="#sprite-height" aria-label="Link to this section">#</a></span>
 		</h3><p>Rendered height of the sprite. </p>
-<pre class="api-signature sh_none"><code>height: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>height: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="sprite-frame">
 			sprite.frame
 			<span><a class="mark" href="#sprite-frame" aria-label="Link to this section">#</a></span>
 		</h3><p>Current frame index. </p>
-<pre class="api-signature sh_none"><code>frame: <a class="api-type" href="numbers.html#uint16">Uint16</a></code></pre>
+<pre class="api-signature sh_none"><code>frame: <a class="api-type" href="defs.html#uint16">Uint16</a></code></pre>
 
 
 <h3 id="sprite-frames">
 			sprite.frames
 			<span><a class="mark" href="#sprite-frames" aria-label="Link to this section">#</a></span>
 		</h3><p>Total frame count in the animation grid. </p>
-<pre class="api-signature sh_none"><code>frames: <a class="api-type" href="numbers.html#uint16">Uint16</a></code></pre>
+<pre class="api-signature sh_none"><code>frames: <a class="api-type" href="defs.html#uint16">Uint16</a></code></pre>
 
 
 <h3 id="sprite-set">
 			sprite.set
 			<span><a class="mark" href="#sprite-set" aria-label="Link to this section">#</a></span>
 		</h3><p>The current set of the sprite animation, default 0. </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">set</span>: <a class="api-type" href="numbers.html#uint16">Uint16</a></code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">set</span>: <a class="api-type" href="defs.html#uint16">Uint16</a></code></pre>
 
 
 <h3 id="sprite-sets">
 			sprite.sets
 			<span><a class="mark" href="#sprite-sets" aria-label="Link to this section">#</a></span>
 		</h3><p>The number of sets in the sprite animation, default 1. </p>
-<pre class="api-signature sh_none"><code>sets: <a class="api-type" href="numbers.html#uint16">Uint16</a></code></pre>
+<pre class="api-signature sh_none"><code>sets: <a class="api-type" href="defs.html#uint16">Uint16</a></code></pre>
 
 
 <h3 id="sprite-spacing">
 			sprite.spacing
 			<span><a class="mark" href="#sprite-spacing" aria-label="Link to this section">#</a></span>
 		</h3><p>Spacing between frames in the sprite sheet (px).</p>
-<pre class="api-signature sh_none"><code>spacing: <a class="api-type" href="numbers.html#uint8">Uint8</a></code></pre>
+<pre class="api-signature sh_none"><code>spacing: <a class="api-type" href="defs.html#uint8">Uint8</a></code></pre>
 
 
 <h3 id="sprite-frequency">
 			sprite.frequency
 			<span><a class="mark" href="#sprite-frequency" aria-label="Link to this section">#</a></span>
 		</h3><p>Animation playback frequency (frames per second). </p>
-<pre class="api-signature sh_none"><code>frequency: <a class="api-type" href="numbers.html#uint8">Uint8</a></code></pre>
+<pre class="api-signature sh_none"><code>frequency: <a class="api-type" href="defs.html#uint8">Uint8</a></code></pre>
 
 
 <h3 id="sprite-direction">
@@ -3173,14 +3173,14 @@ Features:</p>
 			spine.speed
 			<span><a class="mark" href="#spine-speed" aria-label="Link to this section">#</a></span>
 		</h3><p>Global playback speed scale. </p>
-<pre class="api-signature sh_none"><code>speed: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>speed: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="spine-defaultmix">
 			spine.defaultMix
 			<span><a class="mark" href="#spine-defaultmix" aria-label="Link to this section">#</a></span>
 		</h3><p>Default crossfade/mix duration between animations. </p>
-<pre class="api-signature sh_none"><code>defaultMix: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>defaultMix: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="spine-animation">
@@ -3218,7 +3218,7 @@ Features:</p>
 			spine.getAnimationDuration(name)
 			<span><a class="mark" href="#spine-getanimationduration-name" aria-label="Link to this section">#</a></span>
 		</h3><p>Get the duration of a specific animation by name. </p>
-<pre class="api-signature sh_none"><code>getAnimationDuration(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>getAnimationDuration(name: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 
@@ -3238,7 +3238,7 @@ Features:</p>
 			spine.setMix(fromName,toName,duration)
 			<span><a class="mark" href="#spine-setmix-fromname-toname-duration" aria-label="Link to this section">#</a></span>
 		</h3><p>Define mix duration when transitioning from one animation to another.</p>
-<pre class="api-signature sh_none"><code>setMix(fromName: <a class="api-type" href="$ext.html#string">string</a>, toName: <a class="api-type" href="$ext.html#string">string</a>, duration: <a class="api-type" href="numbers.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>setMix(fromName: <a class="api-type" href="$ext.html#string">string</a>, toName: <a class="api-type" href="$ext.html#string">string</a>, duration: <a class="api-type" href="defs.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3251,7 +3251,7 @@ Features:</p>
 			spine.setAnimation(trackIndex,name,loop?)
 			<span><a class="mark" href="#spine-setanimation-trackindex-name-loop" aria-label="Link to this section">#</a></span>
 		</h3><p>Set an animation on a given track.</p>
-<pre class="api-signature sh_none"><code>setAnimation(trackIndex: <a class="api-type" href="numbers.html#uint">Uint</a>, name: <a class="api-type" href="$ext.html#string">string</a>, loop: any, loop?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>setAnimation(trackIndex: <a class="api-type" href="defs.html#uint">Uint</a>, name: <a class="api-type" href="$ext.html#string">string</a>, loop: any, loop?: <a class="api-type" href="$ext.html#boolean">boolean</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3264,7 +3264,7 @@ Features:</p>
 			spine.addAnimation(trackIndex,name,loop?,delay?)
 			<span><a class="mark" href="#spine-addanimation-trackindex-name-loop-delay" aria-label="Link to this section">#</a></span>
 		</h3><p>Queue another animation after the current one.</p>
-<pre class="api-signature sh_none"><code>addAnimation(trackIndex: <a class="api-type" href="numbers.html#uint">Uint</a>, name: <a class="api-type" href="$ext.html#string">string</a>, loop: any, delay: any, loop?: <a class="api-type" href="$ext.html#boolean">boolean</a>, delay?: <a class="api-type" href="numbers.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>addAnimation(trackIndex: <a class="api-type" href="defs.html#uint">Uint</a>, name: <a class="api-type" href="$ext.html#string">string</a>, loop: any, delay: any, loop?: <a class="api-type" href="$ext.html#boolean">boolean</a>, delay?: <a class="api-type" href="defs.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3278,7 +3278,7 @@ Features:</p>
 			spine.setEmptyAnimation(trackIndex,mixDuration)
 			<span><a class="mark" href="#spine-setemptyanimation-trackindex-mixduration" aria-label="Link to this section">#</a></span>
 		</h3><p>Set an &quot;empty&quot; animation (used to smoothly fade out pose).</p>
-<pre class="api-signature sh_none"><code>setEmptyAnimation(trackIndex: <a class="api-type" href="numbers.html#uint">Uint</a>, mixDuration: <a class="api-type" href="numbers.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>setEmptyAnimation(trackIndex: <a class="api-type" href="defs.html#uint">Uint</a>, mixDuration: <a class="api-type" href="defs.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3291,7 +3291,7 @@ Features:</p>
 			<span><a class="mark" href="#spine-setemptyanimations-mixduration" aria-label="Link to this section">#</a></span>
 		</h3><p>Apply &quot;empty&quot; animation to all tracks with default mix.
 Used to smoothly clear pose.</p>
-<pre class="api-signature sh_none"><code>setEmptyAnimations(mixDuration: <a class="api-type" href="numbers.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>setEmptyAnimations(mixDuration: <a class="api-type" href="defs.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3302,7 +3302,7 @@ Used to smoothly clear pose.</p>
 			spine.addEmptyAnimation(trackIndex,mixDuration,delay?)
 			<span><a class="mark" href="#spine-addemptyanimation-trackindex-mixduration-delay" aria-label="Link to this section">#</a></span>
 		</h3><p>Queue an empty animation after current.</p>
-<pre class="api-signature sh_none"><code>addEmptyAnimation(trackIndex: <a class="api-type" href="numbers.html#uint">Uint</a>, mixDuration: <a class="api-type" href="numbers.html#float">Float</a>, delay: any, delay?: <a class="api-type" href="numbers.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>addEmptyAnimation(trackIndex: <a class="api-type" href="defs.html#uint">Uint</a>, mixDuration: <a class="api-type" href="defs.html#float">Float</a>, delay: any, delay?: <a class="api-type" href="defs.html#float">Float</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3323,7 +3323,7 @@ Used to smoothly clear pose.</p>
 			spine.clearTrack(trackIndex?)
 			<span><a class="mark" href="#spine-cleartrack-trackindex" aria-label="Link to this section">#</a></span>
 		</h3><p>Clear a specific animation track.</p>
-<pre class="api-signature sh_none"><code>clearTrack(trackIndex: any, trackIndex?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
+<pre class="api-signature sh_none"><code>clearTrack(trackIndex: any, trackIndex?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -3360,7 +3360,7 @@ If false, agents remain visible but do not update or move.</p>
 		</h3><p>Number of physics / navigation sub-steps per frame.
 Higher values improve stability at high speeds.
 Typical range: 1–5.</p>
-<pre class="api-signature sh_none"><code>subSteps: <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>subSteps: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="world-timescale">
@@ -3368,7 +3368,7 @@ Typical range: 1–5.</p>
 			<span><a class="mark" href="#world-timescale" aria-label="Link to this section">#</a></span>
 		</h3><p>Global time scaling factor.
 1.0 = realtime, &lt;1.0 = slow motion, &gt;1.0 = fast-forward.</p>
-<pre class="api-signature sh_none"><code>timeScale: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>timeScale: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="world-predictiontime">
@@ -3376,7 +3376,7 @@ Typical range: 1–5.</p>
 			<span><a class="mark" href="#world-predictiontime" aria-label="Link to this section">#</a></span>
 		</h3><p>Prediction horizon (in seconds) used for avoidance.
 Agents steer based on projected future positions in this time window.</p>
-<pre class="api-signature sh_none"><code>predictionTime: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>predictionTime: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="world-discoverythresholdbuffer">
@@ -3384,7 +3384,7 @@ Agents steer based on projected future positions in this time window.</p>
 			<span><a class="mark" href="#world-discoverythresholdbuffer" aria-label="Link to this section">#</a></span>
 		</h3><p>Buffer distance added to discovery thresholds to prevent flicker.
 Helps avoid repeated enter/leave spam when agents hover near edge.</p>
-<pre class="api-signature sh_none"><code>discoveryThresholdBuffer: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>discoveryThresholdBuffer: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h3 id="world-waypointradius">
@@ -3392,7 +3392,7 @@ Helps avoid repeated enter/leave spam when agents hover near edge.</p>
 			<span><a class="mark" href="#world-waypointradius" aria-label="Link to this section">#</a></span>
 		</h3><p>Radius (in world units) around waypoints that counts as &quot;reached&quot;.<br>When an agent comes within this distance of a waypoint, it will proceed to the next one.
 Default: 0.0f</p>
-<pre class="api-signature sh_none"><code>waypointRadius: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>waypointRadius: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h2 id="class-root">
@@ -4287,7 +4287,7 @@ audio track switching, mute/volume control, and metadata such as duration.</p>
 			minimumtranslationvector.overlap
 			<span><a class="mark" href="#minimumtranslationvector-overlap" aria-label="Link to this section">#</a></span>
 		</h3><p>The magnitude of the overlap along the axis. </p>
-<pre class="api-signature sh_none"><code>overlap: <a class="api-type" href="numbers.html#float">Float</a></code></pre>
+<pre class="api-signature sh_none"><code>overlap: <a class="api-type" href="defs.html#float">Float</a></code></pre>
 
 
 <h2 id="mtv">

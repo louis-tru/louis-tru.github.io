@@ -254,7 +254,7 @@
 			buffer.copy(target,targetStart?,sourceStart?,sourceEnd?)
 			<span><a class="mark" href="#buffer-copy-target-targetstart-sourcestart-sourceend" aria-label="Link to this section">#</a></span>
 		</h3><p>Copy current buffer data to the target buffer.</p>
-<pre class="api-signature sh_none"><code>copy(target: ArrayBufferView, targetStart?: <a class="api-type" href="numbers.html#uint">Uint</a>, sourceStart?: <a class="api-type" href="numbers.html#uint">Uint</a>, sourceEnd?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>copy(target: ArrayBufferView, targetStart?: <a class="api-type" href="defs.html#uint">Uint</a>, sourceStart?: <a class="api-type" href="defs.html#uint">Uint</a>, sourceEnd?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -281,7 +281,7 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 			buffer.slice(start?,end?)
 			<span><a class="mark" href="#buffer-slice-start-end" aria-label="Link to this section">#</a></span>
 		</h3><p>slice the buffer data into a new buffer, shared memory with the original buffer.</p>
-<pre class="api-signature sh_none"><code>slice(start?: <a class="api-type" href="numbers.html#int">Int</a>, end?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>slice(start?: <a class="api-type" href="defs.html#int">Int</a>, end?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 
@@ -289,7 +289,7 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 			buffer.subarray(begin?,end?)
 			<span><a class="mark" href="#buffer-subarray-begin-end" aria-label="Link to this section">#</a></span>
 		</h3><p>subarray the buffer data into a new buffer, shared memory with the original buffer.</p>
-<pre class="api-signature sh_none"><code>subarray(begin?: <a class="api-type" href="numbers.html#int">Int</a>, end?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>subarray(begin?: <a class="api-type" href="defs.html#int">Int</a>, end?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 
@@ -305,7 +305,7 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 			buffer.write(source,offset?)
 			<span><a class="mark" href="#buffer-write-source-offset" aria-label="Link to this section">#</a></span>
 		</h3><p>writing data to self buffer.</p>
-<pre class="api-signature sh_none"><code>write(source: ArrayBufferView, offset?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>write(source: ArrayBufferView, offset?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 
@@ -313,7 +313,7 @@ console.log(target); // Outputs: Uint8Array(3) [2, 3, 4]
 			buffer.compare(target,start?,end?,thisStart?,thisEnd?)
 			<span><a class="mark" href="#buffer-compare-target-start-end-thisstart-thisend" aria-label="Link to this section">#</a></span>
 		</h3><p>Compare this buffer with another buffer or Uint8Array.</p>
-<pre class="api-signature sh_none"><code>compare(target: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, start?: <a class="api-type" href="numbers.html#uint">Uint</a>, end?: <a class="api-type" href="numbers.html#uint">Uint</a>, thisStart?: <a class="api-type" href="numbers.html#uint">Uint</a>, thisEnd?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>compare(target: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, start?: <a class="api-type" href="defs.html#uint">Uint</a>, end?: <a class="api-type" href="defs.html#uint">Uint</a>, thisStart?: <a class="api-type" href="defs.html#uint">Uint</a>, thisEnd?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -362,7 +362,7 @@ console.log(buf1.equals(buf3)); // Outputs: false (buf1 is not equal to buf3)
 			buffer.toString(encoding?,start?,end?)
 			<span><a class="mark" href="#buffer-tostring-encoding-start-end" aria-label="Link to this section">#</a></span>
 		</h3><p>Convert the buffer to a string using the specified encoding.</p>
-<pre class="api-signature sh_none"><code>toString(encoding?: <a class="api-type" href="#encoding">Encoding</a>, start?: <a class="api-type" href="numbers.html#uint">Uint</a>, end?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+<pre class="api-signature sh_none"><code>toString(encoding?: <a class="api-type" href="#encoding">Encoding</a>, start?: <a class="api-type" href="defs.html#uint">Uint</a>, end?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -380,7 +380,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			buffer.readInt8(offset?)
 			<span><a class="mark" href="#buffer-readint8-offset" aria-label="Link to this section">#</a></span>
 		</h3><p>Read int8 from the buffer at the specified offset.</p>
-<pre class="api-signature sh_none"><code>readInt8(offset?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="numbers.html#int8">Int8</a></code></pre>
+<pre class="api-signature sh_none"><code>readInt8(offset?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="defs.html#int8">Int8</a></code></pre>
 
 
 
@@ -388,7 +388,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			buffer.readUInt8(offset?)
 			<span><a class="mark" href="#buffer-readuint8-offset" aria-label="Link to this section">#</a></span>
 		</h3><p>Read uint8 from the buffer at the specified offset.</p>
-<pre class="api-signature sh_none"><code>readUInt8(offset?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="numbers.html#uint8">Uint8</a></code></pre>
+<pre class="api-signature sh_none"><code>readUInt8(offset?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="defs.html#uint8">Uint8</a></code></pre>
 
 
 
@@ -403,7 +403,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			alloc(size,initFill?)
 			<span><a class="mark" href="#alloc-size-initfill" aria-label="Link to this section">#</a></span>
 		</h2><p>Alloc new buffer</p>
-<pre class="api-signature sh_none"><code>alloc(size: <a class="api-type" href="numbers.html#uint">Uint</a>, initFill?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>alloc(size: <a class="api-type" href="defs.html#uint">Uint</a>, initFill?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 
@@ -411,7 +411,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			allocUnsafe(size)
 			<span><a class="mark" href="#allocunsafe-size" aria-label="Link to this section">#</a></span>
 		</h2><p>Alloc unsafe buffer</p>
-<pre class="api-signature sh_none"><code>allocUnsafe(size: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>allocUnsafe(size: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 
@@ -443,7 +443,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			compare(a,b)
 			<span><a class="mark" href="#compare-a-b" aria-label="Link to this section">#</a></span>
 		</h2><p>Compare sizes of two buffers</p>
-<pre class="api-signature sh_none"><code>compare(a: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, b: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>compare(a: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, b: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -451,7 +451,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			encodeUTF8Length(str)
 			<span><a class="mark" href="#encodeutf8length-str" aria-label="Link to this section">#</a></span>
 		</h2><p>Calculate the length of the string after encoding using the specified algorithm</p>
-<pre class="api-signature sh_none"><code>encodeUTF8Length(str: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>encodeUTF8Length(str: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 
@@ -459,7 +459,7 @@ console.log(buf.toString(&#39;utf8&#39;)); // Outputs: Hello
 			toString(src,encoding?,start?,end?)
 			<span><a class="mark" href="#tostring-src-encoding-start-end" aria-label="Link to this section">#</a></span>
 		</h2><p>Decode data into a string using the specified algorithm</p>
-<pre class="api-signature sh_none"><code>toString(src: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, encoding?: <a class="api-type" href="#encoding">Encoding</a>, start?: <a class="api-type" href="numbers.html#uint">Uint</a>, end?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
+<pre class="api-signature sh_none"><code>toString(src: <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, encoding?: <a class="api-type" href="#encoding">Encoding</a>, start?: <a class="api-type" href="defs.html#uint">Uint</a>, end?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="$ext.html#string">string</a></code></pre>
 
 
 
@@ -507,7 +507,7 @@ console.log(encoded); // Outputs: Uint8Array(13) [72, 101, 108, 108, 111, 44, 32
 			from(from,byteOffset?,length?)
 			<span><a class="mark" href="#from-from-byteoffset-length" aria-label="Link to this section">#</a></span>
 		</h2><p>From ArrayBufferLike create a buffer</p>
-<pre class="api-signature sh_none"><code>from(from: ArrayBufferLike, byteOffset?: <a class="api-type" href="numbers.html#uint">Uint</a>, length?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>from(from: ArrayBufferLike, byteOffset?: <a class="api-type" href="defs.html#uint">Uint</a>, length?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -524,7 +524,7 @@ console.log(buffer.byteLength); // Outputs: 10
 			from(from,mapFn?)
 			<span><a class="mark" href="#from-from-mapfn" aria-label="Link to this section">#</a></span>
 		</h2><p>From Iterable or ArrayLike create a buffer</p>
-<pre class="api-signature sh_none"><code>from(from: Iterable&lt;<a class="api-type" href="numbers.html#int">Int</a>&gt; | ArrayLike&lt;<a class="api-type" href="numbers.html#int">Int</a>&gt;, mapFn?: MapFn): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>from(from: Iterable&lt;<a class="api-type" href="defs.html#int">Int</a>&gt; | ArrayLike&lt;<a class="api-type" href="defs.html#int">Int</a>&gt;, mapFn?: MapFn): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -540,7 +540,7 @@ console.log(buffer); // Outputs: Uint8Array(4) [2, 4, 6, 8]
 			byteLength(arg,encoding?)
 			<span><a class="mark" href="#bytelength-arg-encoding" aria-label="Link to this section">#</a></span>
 		</h2><p>Calculate the byte length of a string when encoded with the specified encoding.</p>
-<pre class="api-signature sh_none"><code>byteLength(arg: FromArg, encoding?: <a class="api-type" href="#encoding">Encoding</a>): <a class="api-type" href="numbers.html#uint">Uint</a></code></pre>
+<pre class="api-signature sh_none"><code>byteLength(arg: FromArg, encoding?: <a class="api-type" href="#encoding">Encoding</a>): <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -557,7 +557,7 @@ console.log(length); // Outputs: 13
 			concat(list,length?)
 			<span><a class="mark" href="#concat-list-length" aria-label="Link to this section">#</a></span>
 		</h2><p>Concat multiple buffers into a new buffer</p>
-<pre class="api-signature sh_none"><code>concat(list: ArrayLike&lt;<a class="api-type" href="numbers.html#int">Int</a>&gt;[], length?: <a class="api-type" href="numbers.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
+<pre class="api-signature sh_none"><code>concat(list: ArrayLike&lt;<a class="api-type" href="defs.html#int">Int</a>&gt;[], length?: <a class="api-type" href="defs.html#uint">Uint</a>): <a class="api-type" href="#class-buffer">Buffer</a></code></pre>
 
 
 <p><strong>Parameters:</strong></p>

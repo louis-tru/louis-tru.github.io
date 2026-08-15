@@ -218,7 +218,7 @@ Calling setBuf() directly is disabled to avoid bypassing JSONB.</li>
 		</h3><p>Create an LMDB storage wrapper.
 Automatically calls NativeLMDB.Make(), so user code never touches
 the native factory directly.</p>
-<pre class="api-signature sh_none"><code>constructor(path: <a class="api-type" href="$ext.html#string">string</a>, max_dbis: any, map_size: any, max_dbis?: <a class="api-type" href="numbers.html#uint">Uint</a>, map_size?: <a class="api-type" href="numbers.html#uint">Uint</a>)</code></pre>
+<pre class="api-signature sh_none"><code>constructor(path: <a class="api-type" href="$ext.html#string">string</a>, max_dbis: any, map_size: any, max_dbis?: <a class="api-type" href="defs.html#uint">Uint</a>, map_size?: <a class="api-type" href="defs.html#uint">Uint</a>)</code></pre>
 
 
 <p><strong>Parameters:</strong></p>
@@ -247,7 +247,7 @@ opening happens lazily on the first dbi/get/set/scan call.</p>
 			lmdb.open()
 			<span><a class="mark" href="#lmdb-open" aria-label="Link to this section">#</a></span>
 		</h3><p>Open the LMDB environment.</p>
-<pre class="api-signature sh_none"><code>open(): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>open(): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -256,7 +256,7 @@ opening happens lazily on the first dbi/get/set/scan call.</p>
 			lmdb.close()
 			<span><a class="mark" href="#lmdb-close" aria-label="Link to this section">#</a></span>
 		</h3><p>Close the LMDB environment.</p>
-<pre class="api-signature sh_none"><code>close(): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>close(): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -265,7 +265,7 @@ opening happens lazily on the first dbi/get/set/scan call.</p>
 			lmdb.flush()
 			<span><a class="mark" href="#lmdb-flush" aria-label="Link to this section">#</a></span>
 		</h3><p>Flush any pending changes to disk.</p>
-<pre class="api-signature sh_none"><code>flush(): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>flush(): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -274,7 +274,7 @@ opening happens lazily on the first dbi/get/set/scan call.</p>
 			lmdb.nextId(dbi)
 			<span><a class="mark" href="#lmdb-nextid-dbi" aria-label="Link to this section">#</a></span>
 		</h3><p>Internal nextId counter for generating unique keys.</p>
-<pre class="api-signature sh_none"><code>nextId(dbi: <a class="api-type" href="#dbi">DBI</a>): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>nextId(dbi: <a class="api-type" href="#dbi">DBI</a>): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -313,7 +313,7 @@ Suitable for JSONB, images, or binary assets.</p>
 			lmdb.remove(dbi,key)
 			<span><a class="mark" href="#lmdb-remove-dbi-key" aria-label="Link to this section">#</a></span>
 		</h3><p>Remove a key.</p>
-<pre class="api-signature sh_none"><code>remove(dbi: <a class="api-type" href="#dbi">DBI</a>, key: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>remove(dbi: <a class="api-type" href="#dbi">DBI</a>, key: <a class="api-type" href="$ext.html#string">string</a>): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -337,7 +337,7 @@ Suitable for JSONB, images, or binary assets.</p>
 			lmdb.removePrefix(dbi)
 			<span><a class="mark" href="#lmdb-removeprefix-dbi" aria-label="Link to this section">#</a></span>
 		</h3><p>Remove all keys under a prefix.</p>
-<pre class="api-signature sh_none"><code>removePrefix(dbi: <a class="api-type" href="#dbi">DBI</a>): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>removePrefix(dbi: <a class="api-type" href="#dbi">DBI</a>): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
@@ -345,7 +345,7 @@ Suitable for JSONB, images, or binary assets.</p>
 			lmdb.clear(dbi)
 			<span><a class="mark" href="#lmdb-clear-dbi" aria-label="Link to this section">#</a></span>
 		</h3><p>Clear all keys in this DBI/table.</p>
-<pre class="api-signature sh_none"><code>clear(dbi: <a class="api-type" href="#dbi">DBI</a>): <a class="api-type" href="numbers.html#int">Int</a></code></pre>
+<pre class="api-signature sh_none"><code>clear(dbi: <a class="api-type" href="#dbi">DBI</a>): <a class="api-type" href="defs.html#int">Int</a></code></pre>
 
 
 
