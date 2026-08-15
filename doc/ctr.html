@@ -114,6 +114,9 @@
 <span><a href="#args">Args</a></span>
 </li>
 <li>
+<span><a href="#renderopts">RenderOpts</a></span>
+</li>
+<li>
 <span><a href="#interface-domconstructor">Interface: DOMConstructor</a></span>
 <ul>
 <li>
@@ -140,6 +143,15 @@
 </li>
 <li>
 <span><a href="#virtualdom-diffprops-dom-vdomold">virtualdom.diffProps(dom,vdomOld)</a></span>
+</li>
+<li>
+<span><a href="#virtualdom-diff-owner-vdomold-domold">virtualdom.diff(owner,vdomOld,domOld)</a></span>
+</li>
+<li>
+<span><a href="#virtualdom-newdom-owner">virtualdom.newDom(owner)</a></span>
+</li>
+<li>
+<span><a href="#virtualdom-render-owner-opts">virtualdom.render(owner,opts?)</a></span>
 </li>
 </ul>
 <li>
@@ -273,6 +285,17 @@
   }</code></pre>
 
 
+<h2 id="renderopts">
+			RenderOpts
+			<span><a class="mark" href="#renderopts" aria-label="Link to this section">#</a></span>
+		</h2><p>Options for rendering a VirtualDOM.</p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> RenderOpts =
+  {
+    parent?: <a class="api-type" href="view.html#view">View</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>; // optional parent view to append to
+    replace?: <a class="api-type" href="$ext.html#object">object</a>; // replace:?{vdom?: <a class="api-type" href="#class-virtualdom">VirtualDOM</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>,dom?: DOM | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>}
+  }</code></pre>
+
+
 <h2 id="interface-domconstructor">
 			Interface: DOMConstructor
 			<span><a class="mark" href="#interface-domconstructor" aria-label="Link to this section">#</a></span>
@@ -347,19 +370,50 @@ Can be a View, ViewController, or other custom DOM elements.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>dom</code> — Real DOM instance</li>
-<li><p><code>vdomOld</code> — Previous VirtualDOM</p>
-</li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p>
-</li>
-<li><code>@param</code> <code>vdomOld</code>:  Previous VirtualDOM</li>
-<li><p><code>@param</code> <code>domOld</code>:  Previous real DOM</p>
-</li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p>
-</li>
-<li><p><code>@param</code> <code>owner</code>:  Owning ViewController</p>
-</li>
-<li><code>@param</code> <code>opts</code>:  Optional render options</li>
+<li><code>vdomOld</code> — Previous VirtualDOM</li>
 </ul>
+<h3 id="virtualdom-diff-owner-vdomold-domold">
+			virtualdom.diff(owner,vdomOld,domOld)
+			<span><a class="mark" href="#virtualdom-diff-owner-vdomold-domold" aria-label="Link to this section">#</a></span>
+		</h3><p>Diff this VirtualDOM with a previous one and update the real DOM.</p>
+<pre class="api-signature sh_none"><code>diff(owner: <a class="api-type" href="#class-viewcontroller">ViewController</a>, vdomOld: <a class="api-type" href="#class-virtualdom">VirtualDOM</a>, domOld: <a class="api-type" href="view.html#dom">DOM</a>): T</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>owner</code> — Owning ViewController</li>
+<li><code>vdomOld</code> — Previous VirtualDOM</li>
+<li><code>domOld</code> — Previous real DOM</li>
+</ul>
+<p><strong>Returns:</strong>  Updated DOM
+<strong>Type parameters:</strong> <code>P</code>, <code>S</code></p>
+<h3 id="virtualdom-newdom-owner">
+			virtualdom.newDom(owner)
+			<span><a class="mark" href="#virtualdom-newdom-owner" aria-label="Link to this section">#</a></span>
+		</h3><p>Creates a new real DOM instance from this VirtualDOM.</p>
+<pre class="api-signature sh_none"><code>newDom(owner: <a class="api-type" href="#class-viewcontroller">ViewController</a>): T</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>owner</code> — Owning ViewController</li>
+</ul>
+<p><strong>Returns:</strong>  New DOM instance
+<strong>Type parameters:</strong> <code>P</code>, <code>S</code></p>
+<h3 id="virtualdom-render-owner-opts">
+			virtualdom.render(owner,opts?)
+			<span><a class="mark" href="#virtualdom-render-owner-opts" aria-label="Link to this section">#</a></span>
+		</h3><p>Renders the VirtualDOM, optionally diffing against previous DOM.</p>
+<pre class="api-signature sh_none"><code>render(owner: <a class="api-type" href="#class-viewcontroller">ViewController</a>, opts?: <a class="api-type" href="#renderopts">RenderOpts</a>): T</code></pre>
+
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>owner</code> — Owning ViewController</li>
+<li><code>opts?</code> — Optional render options</li>
+</ul>
+<p><strong>Returns:</strong>  The rendered DOM
+<strong>Type parameters:</strong> <code>P</code>, <code>S</code></p>
 <h2 id="class-domcollection">
 			Class: DOMCollection
 			<span><a class="mark" href="#class-domcollection" aria-label="Link to this section">#</a></span>
