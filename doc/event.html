@@ -921,6 +921,8 @@ The delta represents a true pixel-based movement and can be applied
 directly for smooth, inertial scrolling.
 This distinction allows scroll views or editors to interpret the same input
 differently, providing consistent behavior across mice and touchpads.</li>
+<li><code>Line</code>  discrete wheel step (mouse)</li>
+<li><code>Pixel</code>  precise pixel delta (trackpad)</li>
 </ul>
 <h2 id="class-mouseevent">
 			Class: MouseEvent
@@ -1158,35 +1160,35 @@ Receivers should only access the field relevant to the event.</p>
 			gestureevent.expectedFingerCount
 			<span><a class="mark" href="#gestureevent-expectedfingercount" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the expected number of touch points for the gesture event </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> expectedFingerCount: </code></pre>
+<pre class="api-signature sh_none"><code>expectedFingerCount: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="gestureevent-swipedistance">
 			gestureevent.swipeDistance
 			<span><a class="mark" href="#gestureevent-swipedistance" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the minimum distance (in points) that a swipe gesture needs to move </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> swipeDistance: </code></pre>
+<pre class="api-signature sh_none"><code>swipeDistance: <a class="api-type" href="$ext.html#number">number</a></code></pre>
 
 
 <h3 id="gestureevent-swipevelocity">
 			gestureevent.swipeVelocity
 			<span><a class="mark" href="#gestureevent-swipevelocity" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the minimum speed (in points per second) that a swipe gesture needs to move </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> swipeVelocity: </code></pre>
+<pre class="api-signature sh_none"><code>swipeVelocity: <a class="api-type" href="$ext.html#number">number</a></code></pre>
 
 
 <h3 id="gestureevent-inittimestamp">
 			gestureevent.initTimestamp
 			<span><a class="mark" href="#gestureevent-inittimestamp" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the initial velocity calculation time window, in milliseconds </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> initTimestamp: </code></pre>
+<pre class="api-signature sh_none"><code>initTimestamp: <a class="api-type" href="$ext.html#number">number</a></code></pre>
 
 
 <h3 id="gestureevent-lastvelocityweight">
 			gestureevent.lastVelocityWeight
 			<span><a class="mark" href="#gestureevent-lastvelocityweight" aria-label="Link to this section">#</a></span>
 		</h3><p>Get or set the last velocity smoothing weight, value range [0, 0.95], default is 0.85 </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> lastVelocityWeight: </code></pre>
+<pre class="api-signature sh_none"><code>lastVelocityWeight: <a class="api-type" href="$ext.html#number">number</a></code></pre>
 
 
 <h3 id="gestureevent-id">
@@ -1263,21 +1265,21 @@ Receivers should only access the field relevant to the event.</p>
 			gestureevent.first
 			<span><a class="mark" href="#gestureevent-first" aria-label="Link to this section">#</a></span>
 		</h3><p>The first gesture touch point </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> first: </code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> first: <a class="api-type" href="#class-gesturetouchpoint">GestureTouchPoint</a></code></pre>
 
 
 <h3 id="gestureevent-last">
 			gestureevent.last
 			<span><a class="mark" href="#gestureevent-last" aria-label="Link to this section">#</a></span>
 		</h3><p>The last gesture touch point </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> last: </code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> last: <a class="api-type" href="#class-gesturetouchpoint">GestureTouchPoint</a></code></pre>
 
 
 <h3 id="gestureevent-length">
 			gestureevent.length
 			<span><a class="mark" href="#gestureevent-length" aria-label="Link to this section">#</a></span>
 		</h3><p>The number of gesture touch points </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> length: </code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> length: <a class="api-type" href="defs.html#uint">Uint</a></code></pre>
 
 
 <h3 id="gestureevent-constructor-origin-id-timestamp">
