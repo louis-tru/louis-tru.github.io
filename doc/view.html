@@ -143,6 +143,9 @@
 </li>
 </ul>
 <li>
+<span><a href="#childdom">ChildDOM</a></span>
+</li>
+<li>
 <span><a href="#class-view">Class: View</a></span>
 <ul>
 <li>
@@ -1435,6 +1438,13 @@ A DOM can be appended into the view tree, moved, and destroyed from its owner.</
 <ul>
 <li><code>owner</code> — The controller / owner that manages this DOM node.</li>
 </ul>
+<h2 id="childdom">
+			ChildDOM
+			<span><a class="mark" href="#childdom" aria-label="Link to this section">#</a></span>
+		</h2><p>Internal JSX child node handle (may be null for holes/conditional children). </p>
+<pre class="api-signature sh_none"><code><span class="api-keyword">type</span> ChildDOM = <a class="api-type" href="#interface-dom">DOM</a> | <a class="api-type" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code></pre>
+
+
 <h2 id="class-view">
 			Class: View
 			<span><a class="mark" href="#class-view" aria-label="Link to this section">#</a></span>
@@ -1457,7 +1467,7 @@ A <code>View</code> participates in:</p>
 			view.childDoms
 			<span><a class="mark" href="#view-childdoms" aria-label="Link to this section">#</a></span>
 		</h3><p>Internal JSX child DOM nodes (virtual children for VDOM/JSX diffing). </p>
-<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> childDoms: ChildDOM[]</code></pre>
+<pre class="api-signature sh_none"><code><span class="api-keyword">readonly</span> childDoms: <a class="api-type" href="#childdom">ChildDOM</a>[]</code></pre>
 
 
 <h3 id="view-owner">
